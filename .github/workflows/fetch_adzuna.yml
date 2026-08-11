@@ -1,0 +1,39 @@
+name: Daily Adzuna Job Pull
+
+# This section decides WHEN this runs automatically:
+# - every day at 6:00 AM UTC (the "cron" line below)
+# - or any time you want to trigger it by hand from GitHub's website
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  fetch-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the packages this script needs
+        run: pip install requests python-dotenv
+
+      - name: Run the Adzuna fetch script
+        working-directory: scripts
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: python fetch_adzuna_jobs.py
+
+      - name: Save the updated data back to the repository
+        run: |
+          git config user.name "AlignED Bot"
+          git config user.email "actions@github.com"
+          git add data/sample_adzuna_pull.json
+          git commit -m "Automated daily job data update" || echo "No changes to commit"
+          git push
