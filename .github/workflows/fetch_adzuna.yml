@@ -8,6 +8,11 @@ on:
     - cron: "0 6 * * *"
   workflow_dispatch:
 
+# Gives this workflow permission to push commits back to the repo
+# (GitHub's default token is read-only unless we say otherwise).
+permissions:
+  contents: write
+
 jobs:
   fetch-jobs:
     runs-on: ubuntu-latest
