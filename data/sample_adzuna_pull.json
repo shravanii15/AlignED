@@ -1,0 +1,165 @@
+[
+  {
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Thomson Reuters"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5835878942?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=399C03CBE71CCE6D23DA56B1E86E90E62C7B2FAD",
+    "location": {
+      "area": [
+        "US",
+        "Virginia",
+        "Fairfax County",
+        "Mc Lean"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Mc Lean, Fairfax County"
+    },
+    "id": "5835878942",
+    "title": "Data Scientist",
+    "created": "2026-08-10T15:09:32Z",
+    "salary_max": 142871.56,
+    "longitude": -77.23,
+    "salary_min": 142871.56,
+    "description": "Summary and Description Thomson Reuters Special Services (TRSS) is looking for a Data Scientist to support our Federal Law Enforcement customers. TRSS Data Scientists serve several Federal Law Enforcement agencies by collecting, integrating, resolving, analyzing, modeling, and explaining large data in support of complex investigations. Success in this role requires strong technical depth, the initiative to operate with minimal direction, creativity to develop novel solutions, and a mission-focu\u2026",
+    "contract_time": "full_time",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNTg3ODk0MiIsInMiOiJndGg0MmJXVjhSR05WLTJEcFlxYkNBIn0.Fth-3hzlOKKd8d0aUcH9TvNClhVr9N_Jj-QQl-O_WNA",
+    "latitude": 38.97,
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
+    "salary_is_predicted": "1"
+  },
+  {
+    "company": {
+      "display_name": "Booz Allen Hamilton",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5835892991?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=81FEA1B8FC0AE04E6FA287631EBF1C4E8FAC2299",
+    "id": "5835892991",
+    "location": {
+      "area": [
+        "US",
+        "Virginia",
+        "Alexandria City",
+        "Alexandria"
+      ],
+      "display_name": "Alexandria, Alexandria City",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "created": "2026-08-10T15:21:35Z",
+    "title": "Data Scientist",
+    "salary_max": 134564.53,
+    "longitude": -77.059325,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "contract_time": "part_time",
+    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private and pu\u2026",
+    "salary_min": 134564.53,
+    "latitude": 38.818947,
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNTg5Mjk5MSIsInMiOiJndGg0MmJXVjhSR05WLTJEcFlxYkNBIn0.1maarBAjoUHCPTCd8QuOJweXOKFp6hUoJmhPIImVsB0",
+    "salary_is_predicted": "1"
+  },
+  {
+    "salary_is_predicted": "1",
+    "salary_max": 83189.98,
+    "title": "Data Scientist",
+    "created": "2026-08-10T15:41:53Z",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZ3RoNDJiV1Y4UkdOVi0yRHBZcWJDQSIsImkiOiI1ODM1OTA5NzY0In0.Shp1Amxe1KRQuUJgRWOYa7tUBzHvUqojCKF3lqu0JIQ",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
+    },
+    "location": {
+      "area": [
+        "US"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "US"
+    },
+    "description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you\u2019d like, where you\u2019ll be supported and inspired by a collaborative community of colleagues around the world, and where you\u2019ll be able to reimagine what\u2019s possible. Join us and help the world\u2019s leading organizations unlock the value of technology and build a more sustainable, more inclusive world.Location Denver COYour Role The GenAI Engineer / Data Scientist role focuses on developing, dep\u2026",
+    "salary_min": 83189.98,
+    "id": "5835909764",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "contract_time": "full_time",
+    "redirect_url": "https://www.adzuna.com/land/ad/5835909764?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=69AC37285F920BB42B63F0645233106B69DAD93E",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Capgemini"
+    }
+  },
+  {
+    "redirect_url": "https://www.adzuna.com/land/ad/5835890965?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=3932278ED24B65A33F8E54498F95F7E76F7AA63E",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "PayPal"
+    },
+    "location": {
+      "display_name": "Chicago, Cook County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Illinois",
+        "Cook County",
+        "Chicago"
+      ]
+    },
+    "description": "The Company PayPal has been revolutionizing commerce globally for more than 25 years. Creating innovative experiences that make moving money, selling, and shopping simple, personalized, and secure, PayPal empowers consumers and businesses in approximately 200 markets to join and thrive in the global economy. We operate a global, two-sided network at scale that connects hundreds of millions of merchants and consumers. We help merchants and consumers connect, transact, and complete payments, whet\u2026",
+    "salary_min": 115683.6,
+    "id": "5835890965",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNTg5MDk2NSIsInMiOiJndGg0MmJXVjhSR05WLTJEcFlxYkNBIn0.k6JRnKp9MMhqJVI6juLIzzk8psn2MtArlv6qy9RyACM",
+    "salary_is_predicted": "1",
+    "salary_max": 115683.6,
+    "created": "2026-08-10T15:19:03Z",
+    "title": "Data Scientist"
+  },
+  {
+    "id": "5835910617",
+    "contract_type": "permanent",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Torrance, Los Angeles County",
+      "area": [
+        "US",
+        "California",
+        "Los Angeles County",
+        "Torrance"
+      ]
+    },
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Hadrian Automation"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5835910617?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=4DF5A71AA73D8270EC592BDFDC3D17E4A2936D9A",
+    "created": "2026-08-10T15:44:35Z",
+    "title": "Data Scientist",
+    "salary_max": 128748.66,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "contract_time": "full_time",
+    "salary_min": 128748.66,
+    "description": "Hadrian - Manufacturing the Future Hadrian is building autonomous factories to reindustrialize America. By combining AI, advanced software, robotics, and full-stack manufacturing, we help aerospace and defense companies build rockets, satellites, aircraft, ships, and other mission-critical systems up to 10x faster and at significantly lower cost. Following our $1.37B Series D at a $7.87B valuation, Hadrian is rapidly expanding our manufacturing footprint, launching new capabilities across weldi\u2026",
+    "longitude": -118.316971,
+    "salary_is_predicted": "1",
+    "category": {
+      "tag": "engineering-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "Engineering Jobs"
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNTkxMDYxNyIsInMiOiJndGg0MmJXVjhSR05WLTJEcFlxYkNBIn0.CaWdoqccqhtbf67T-OHQPZcDJGqTNlybI_6aliuUpd0",
+    "latitude": 33.829187
+  }
+]
