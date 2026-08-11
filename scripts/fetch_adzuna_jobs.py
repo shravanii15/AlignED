@@ -56,7 +56,12 @@ for job in jobs:
 
 # Save the full, raw results to the data/ folder so later scripts
 # (the ones that extract skills from this text) can read them.
-output_path = os.path.join(os.path.dirname(__file__), "..", "data", "sample_adzuna_pull.json")
+# On a fresh checkout (like GitHub Actions), the data/ folder doesn't
+# exist yet - Git doesn't track empty folders - so we create it here
+# if needed, instead of assuming it's already there.
+data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
+os.makedirs(data_dir, exist_ok=True)
+output_path = os.path.join(data_dir, "sample_adzuna_pull.json")
 with open(output_path, "w") as f:
     json.dump(jobs, f, indent=2)
 
