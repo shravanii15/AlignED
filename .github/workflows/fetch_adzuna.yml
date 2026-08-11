@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name "AlignED Bot"
           git config user.email "actions@github.com"
-          git add data/sample_adzuna_pull.json
+          git add -f data/sample_adzuna_pull.json
           git commit -m "Automated daily job data update" || echo "No changes to commit"
           git push
