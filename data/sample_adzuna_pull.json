@@ -1,165 +1,167 @@
 [
   {
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Thomson Reuters"
+    "redirect_url": "https://www.adzuna.com/land/ad/5812147554?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=503411EA760E03C836518E570A31C30C6BC46662",
+    "title": "Data Scientist",
+    "created": "2026-07-23T05:48:54Z",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5835878942?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=399C03CBE71CCE6D23DA56B1E86E90E62C7B2FAD",
+    "salary_min": 120000,
+    "company": {
+      "display_name": "ManTech International",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "id": "5812147554",
+    "salary_max": 160000,
+    "latitude": 38.776903,
+    "longitude": -77.187169,
+    "salary_is_predicted": "0",
+    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMjE0NzU1NCIsInMiOiI0R0UyLVIyVzhSRzJ4ZmN0NU55dkF3In0.qR3HAubtgWhoN79wVuqyz0K91E_bl6Q-d7IOESTpFJo",
     "location": {
       "area": [
         "US",
         "Virginia",
         "Fairfax County",
-        "Mc Lean"
+        "West Springfield"
       ],
       "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Mc Lean, Fairfax County"
+      "display_name": "West Springfield, Fairfax County"
     },
-    "id": "5835878942",
-    "title": "Data Scientist",
-    "created": "2026-08-10T15:09:32Z",
-    "salary_max": 142871.56,
-    "longitude": -77.23,
-    "salary_min": 142871.56,
-    "description": "Summary and Description Thomson Reuters Special Services (TRSS) is looking for a Data Scientist to support our Federal Law Enforcement customers. TRSS Data Scientists serve several Federal Law Enforcement agencies by collecting, integrating, resolving, analyzing, modeling, and explaining large data in support of complex investigations. Success in this role requires strong technical depth, the initiative to operate with minimal direction, creativity to develop novel solutions, and a mission-focu\u2026",
-    "contract_time": "full_time",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNTg3ODk0MiIsInMiOiJndGg0MmJXVjhSR05WLTJEcFlxYkNBIn0.Fth-3hzlOKKd8d0aUcH9TvNClhVr9N_Jj-QQl-O_WNA",
-    "latitude": 38.97,
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "salary_is_predicted": "1"
+    "__CLASS__": "Adzuna::API::Response::Job"
   },
   {
-    "company": {
-      "display_name": "Booz Allen Hamilton",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5835892991?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=81FEA1B8FC0AE04E6FA287631EBF1C4E8FAC2299",
-    "id": "5835892991",
-    "location": {
-      "area": [
-        "US",
-        "Virginia",
-        "Alexandria City",
-        "Alexandria"
-      ],
-      "display_name": "Alexandria, Alexandria City",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "created": "2026-08-10T15:21:35Z",
-    "title": "Data Scientist",
-    "salary_max": 134564.53,
-    "longitude": -77.059325,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "contract_time": "part_time",
-    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private and pu\u2026",
-    "salary_min": 134564.53,
-    "latitude": 38.818947,
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNTg5Mjk5MSIsInMiOiJndGg0MmJXVjhSR05WLTJEcFlxYkNBIn0.1maarBAjoUHCPTCd8QuOJweXOKFp6hUoJmhPIImVsB0",
-    "salary_is_predicted": "1"
-  },
-  {
-    "salary_is_predicted": "1",
-    "salary_max": 83189.98,
-    "title": "Data Scientist",
-    "created": "2026-08-10T15:41:53Z",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZ3RoNDJiV1Y4UkdOVi0yRHBZcWJDQSIsImkiOiI1ODM1OTA5NzY0In0.Shp1Amxe1KRQuUJgRWOYa7tUBzHvUqojCKF3lqu0JIQ",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs",
-      "label": "IT Jobs"
-    },
-    "location": {
-      "area": [
-        "US"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "US"
-    },
-    "description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you\u2019d like, where you\u2019ll be supported and inspired by a collaborative community of colleagues around the world, and where you\u2019ll be able to reimagine what\u2019s possible. Join us and help the world\u2019s leading organizations unlock the value of technology and build a more sustainable, more inclusive world.Location Denver COYour Role The GenAI Engineer / Data Scientist role focuses on developing, dep\u2026",
-    "salary_min": 83189.98,
-    "id": "5835909764",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "contract_time": "full_time",
-    "redirect_url": "https://www.adzuna.com/land/ad/5835909764?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=69AC37285F920BB42B63F0645233106B69DAD93E",
+    "salary_max": 104652.35,
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Capgemini"
+      "display_name": "Procter & Gamble"
+    },
+    "id": "5835035362",
+    "created": "2026-08-09T18:59:43Z",
+    "salary_min": 104652.35,
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "title": "Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5835035362?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=3FDD5A73BB2203615FC47C3FF54C0DA1AB6455D2",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiNEdFMi1SMlc4UkcyeGZjdDVOeXZBdyIsImkiOiI1ODM1MDM1MzYyIn0.TXhKe94_mB_JwWe-eUrN1sMvHi3Bc-hXXipH7eq2Gqw",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "location": {
+      "display_name": "Cincinnati, Hamilton County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Ohio",
+        "Hamilton County",
+        "Cincinnati"
+      ]
+    },
+    "longitude": -84.502154,
+    "salary_is_predicted": "1",
+    "description": "Job Location CINCINNATI GENERAL OFFICES Job Description Do you enjoy solving billion-dollar data science problems across trillions of data points? Are you passionate about working at the cutting edge of interdisciplinary boundaries, where computer science meets hard science? If you like turning untidy data into nonobvious insights and surprising business leaders with the transformative power of Artificial Intelligence (AI), including Generative and Agentic AI, we want you on our team at P&G. As\u2026",
+    "latitude": 39.105431
+  },
+  {
+    "location": {
+      "display_name": "Bedford, Middlesex County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Massachusetts",
+        "Middlesex County",
+        "Bedford"
+      ]
+    },
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNzIwNTYzOCIsInMiOiI0R0UyLVIyVzhSRzJ4ZmN0NU55dkF3In0.5sV7Q1EC4QAHkv9KdQlCxi42Cbk7CHThfl_w3nlO6zE",
+    "latitude": 42.491671,
+    "description": "Our client is seeking a talented Data Scientist to join their team as an independent remote employee. Our team brings data science and machine learning to the private equity investment process, providing unparalleled access to alternative data sources and proprietary data from portfolio companies. You'll be at the forefront of high-value tactical workflows that drive all aspects of the investment process. As a Data Scientist with our client, you'll have the opportunity to own due diligence proc\u2026",
+    "salary_is_predicted": "1",
+    "longitude": -71.275992,
+    "id": "5837205638",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "The Hollister Group"
+    },
+    "salary_max": 198688.84,
+    "redirect_url": "https://www.adzuna.com/land/ad/5837205638?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=3030861C83D819E6AEA9E54DD46692659BA42E8B",
+    "title": "Data Scientist - NYC",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "Accounting & Finance Jobs",
+      "tag": "accounting-finance-jobs"
+    },
+    "salary_min": 198688.84,
+    "created": "2026-08-11T17:32:12Z"
+  },
+  {
+    "redirect_url": "https://www.adzuna.com/land/ad/5837204114?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=C17FBBF8E9C99F228E6E3D4FAE96A02C4F4CEA04",
+    "title": "Data Scientist - NYC",
+    "created": "2026-08-11T17:31:42Z",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "Accounting & Finance Jobs",
+      "tag": "accounting-finance-jobs"
+    },
+    "salary_min": 170635.36,
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "The Hollister Group"
+    },
+    "id": "5837204114",
+    "salary_max": 170635.36,
+    "latitude": 42.3575,
+    "longitude": -71.0691,
+    "salary_is_predicted": "1",
+    "description": "Our client is seeking a talented Data Scientist to join their team as an independent remote employee. Our team brings data science and machine learning to the private equity investment process, providing unparalleled access to alternative data sources and proprietary data from portfolio companies. You'll be at the forefront of high-value tactical workflows that drive all aspects of the investment process. As a Data Scientist with our client, you'll have the opportunity to own due diligence proc\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiNEdFMi1SMlc4UkcyeGZjdDVOeXZBdyIsImkiOiI1ODM3MjA0MTE0In0.tgKWsAs1k_pe6to7Pf2SfAoQO9s2FwP-ZIn7ELwJ4Tw",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Boston, Suffolk County",
+      "area": [
+        "US",
+        "Massachusetts",
+        "Suffolk County",
+        "Boston"
+      ]
     }
   },
   {
-    "redirect_url": "https://www.adzuna.com/land/ad/5835890965?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=3932278ED24B65A33F8E54498F95F7E76F7AA63E",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "PayPal"
-    },
+    "longitude": -70.962548,
+    "description": "Our client is seeking a talented Data Scientist to join their team as an independent remote employee. Our team brings data science and machine learning to the private equity investment process, providing unparalleled access to alternative data sources and proprietary data from portfolio companies. You'll be at the forefront of high-value tactical workflows that drive all aspects of the investment process. As a Data Scientist with our client, you'll have the opportunity to own due diligence proc\u2026",
+    "salary_is_predicted": "1",
+    "latitude": 42.474167,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiNEdFMi1SMlc4UkcyeGZjdDVOeXZBdyIsImkiOiI1ODM3MTk3MjkzIn0.mtmSRVqXn00WLYiHF4h47pJNzwk0NX43O0y6Sj-mZ_I",
+    "__CLASS__": "Adzuna::API::Response::Job",
     "location": {
-      "display_name": "Chicago, Cook County",
+      "display_name": "Lynn, Essex County",
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Illinois",
-        "Cook County",
-        "Chicago"
+        "Massachusetts",
+        "Essex County",
+        "Lynn"
       ]
     },
-    "description": "The Company PayPal has been revolutionizing commerce globally for more than 25 years. Creating innovative experiences that make moving money, selling, and shopping simple, personalized, and secure, PayPal empowers consumers and businesses in approximately 200 markets to join and thrive in the global economy. We operate a global, two-sided network at scale that connects hundreds of millions of merchants and consumers. We help merchants and consumers connect, transact, and complete payments, whet\u2026",
-    "salary_min": 115683.6,
-    "id": "5835890965",
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "created": "2026-08-11T17:28:46Z",
     "category": {
-      "tag": "it-jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
+      "label": "Accounting & Finance Jobs",
+      "tag": "accounting-finance-jobs"
     },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNTg5MDk2NSIsInMiOiJndGg0MmJXVjhSR05WLTJEcFlxYkNBIn0.k6JRnKp9MMhqJVI6juLIzzk8psn2MtArlv6qy9RyACM",
-    "salary_is_predicted": "1",
-    "salary_max": 115683.6,
-    "created": "2026-08-10T15:19:03Z",
-    "title": "Data Scientist"
-  },
-  {
-    "id": "5835910617",
-    "contract_type": "permanent",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Torrance, Los Angeles County",
-      "area": [
-        "US",
-        "California",
-        "Los Angeles County",
-        "Torrance"
-      ]
-    },
+    "salary_min": 115849.76,
+    "redirect_url": "https://www.adzuna.com/land/ad/5837197293?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=42945193C0E8F9B8AD72E3F7CA3F4C14779C98C0",
+    "title": "Data Scientist - NYC",
+    "salary_max": 115849.76,
+    "id": "5837197293",
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Hadrian Automation"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5835910617?se=gth42bWV8RGNV-2DpYqbCA&utm_medium=api&utm_source=851bf6c5&v=4DF5A71AA73D8270EC592BDFDC3D17E4A2936D9A",
-    "created": "2026-08-10T15:44:35Z",
-    "title": "Data Scientist",
-    "salary_max": 128748.66,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "contract_time": "full_time",
-    "salary_min": 128748.66,
-    "description": "Hadrian - Manufacturing the Future Hadrian is building autonomous factories to reindustrialize America. By combining AI, advanced software, robotics, and full-stack manufacturing, we help aerospace and defense companies build rockets, satellites, aircraft, ships, and other mission-critical systems up to 10x faster and at significantly lower cost. Following our $1.37B Series D at a $7.87B valuation, Hadrian is rapidly expanding our manufacturing footprint, launching new capabilities across weldi\u2026",
-    "longitude": -118.316971,
-    "salary_is_predicted": "1",
-    "category": {
-      "tag": "engineering-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Engineering Jobs"
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNTkxMDYxNyIsInMiOiJndGg0MmJXVjhSR05WLTJEcFlxYkNBIn0.CaWdoqccqhtbf67T-OHQPZcDJGqTNlybI_6aliuUpd0",
-    "latitude": 33.829187
+      "display_name": "The Hollister Group",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    }
   }
 ]
