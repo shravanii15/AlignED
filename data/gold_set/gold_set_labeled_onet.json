@@ -1,0 +1,3220 @@
+[
+  {
+    "id": "C001",
+    "source_type": "course",
+    "identifying_info": "Cybersecurity (ENPM catalog) - ENPM691: Hacking of C programs and Unix Binaries",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "C",
+        "hot_technology": true
+      },
+      {
+        "title": "UNIX",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Troubleshooting",
+        "type": "skill"
+      },
+      {
+        "name_or_title": "Public Safety and Security",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Course centers on writing and exploiting C programs on Unix systems, so it's fundamentally about low-level programming and computer security."
+  },
+  {
+    "id": "C002",
+    "source_type": "course",
+    "identifying_info": "Cybersecurity (ENPM catalog) - ENPM652: Applied Finite Element Methods",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Science",
+        "id": "2.A.1.f",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Engineering and Technology",
+        "type": "knowledge"
+      },
+      {
+        "name_or_title": "Physics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "A mechanical/structural engineering course on finite element analysis; it barely touches the O*NET computing taxonomy beyond math and science."
+  },
+  {
+    "id": "C003",
+    "source_type": "course",
+    "identifying_info": "Cybersecurity (ENPM catalog) - ENPM701: Autonomous Robotics",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "id": "2.B.2.i",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Engineering and Technology",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Hands-on robotics course applying autonomy algorithms through a semester project explicitly using Python."
+  },
+  {
+    "id": "C004",
+    "source_type": "course",
+    "identifying_info": "Cybersecurity (ENPM catalog) - ENPM625: Heating, Ventilation and Air Conditioning of Buildings",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Science",
+        "id": "2.A.1.f",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Purely a mechanical/HVAC engineering course with essentially no overlap with computing skills or technologies."
+  },
+  {
+    "id": "C005",
+    "source_type": "course",
+    "identifying_info": "MS Analytics (OMS Analytics) - ISYE 6740: Computational Data Analysis",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      },
+      {
+        "name_or_title": "Programming",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Graduate machine-learning theory course grounded in statistics and rigorous reasoning; some coding expected but no specific tools named."
+  },
+  {
+    "id": "C006",
+    "source_type": "course",
+    "identifying_info": "MS Analytics (OMS Analytics) - CSE 6040: Introduction for Computing for Data Analytics",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Mathematics",
+        "type": "knowledge"
+      },
+      {
+        "name_or_title": "Design",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Covers programming, database access, and visualization fundamentals for data analytics without naming specific tools."
+  },
+  {
+    "id": "C007",
+    "source_type": "course",
+    "identifying_info": "MS Analytics (OMS Analytics) - CS 6601: Artificial Intelligence",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Complex Problem Solving",
+        "id": "2.B.2.i",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Broad survey of AI theory and algorithms; conceptual rather than tool-specific."
+  },
+  {
+    "id": "C008",
+    "source_type": "course",
+    "identifying_info": "MS Analytics (OMS Analytics) - CS 7642: Reinforcement Learning",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Reinforcement learning course focused on algorithms and automated decision-making theory."
+  },
+  {
+    "id": "C009",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (Align / CS catalog) - CS 6650: Building Scalable Distributed Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      },
+      {
+        "name_or_title": "Troubleshooting",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Engineering course on building distributed, concurrent, scalable systems."
+  },
+  {
+    "id": "C010",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (Align / CS catalog) - CS 4810: Advanced Algorithms",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Advanced algorithms course rooted in math and programming paradigms, no named tools."
+  },
+  {
+    "id": "C011",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (Align / CS catalog) - CS 6180: Foundations for Generative AI",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Covers generative AI/LLM concepts (transformers, prompt engineering, RAG) conceptually without naming specific frameworks."
+  },
+  {
+    "id": "C012",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (Align / CS catalog) - CS 3100: Program Design and Implementation 2",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Technology Design",
+        "id": "2.B.3.b",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Quality Control Analysis",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Software design course on OOP/functional paradigms, interfaces, and test-driven development, no named language/tool."
+  },
+  {
+    "id": "C013",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (CMSC catalog) - CMSC756: Robotics",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Engineering and Technology",
+        "id": "2.C.3.b",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "id": "2.B.2.i",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Robotics fundamentals course covering sensing, kinematics, and motion planning."
+  },
+  {
+    "id": "C014",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (CMSC catalog) - CMSC416: Introduction to Parallel Computing",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Covers parallel computing architectures and programming for shared/distributed memory systems."
+  },
+  {
+    "id": "C015",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (CMSC catalog) - CMSC723: Natural Language Processing",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "NLP course covering statistical and machine-learning techniques for processing human language."
+  },
+  {
+    "id": "C016",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (CMSC catalog) - CMSC431: Privacy Engineering",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Engineering and Technology",
+        "id": "2.C.3.b",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Law and Government",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Privacy engineering course blending technical mechanisms with legal and regulatory privacy topics."
+  },
+  {
+    "id": "C017",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (graduate CS courses) - CAS CS 651: Distributed Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Telecommunications",
+        "type": "knowledge"
+      },
+      {
+        "name_or_title": "Troubleshooting",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Programming-centric course on distributed system architecture, synchronization, and fault tolerance."
+  },
+  {
+    "id": "C018",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (graduate CS courses) - CAS CS 630: Graduate Algorithms",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Graduate algorithms course heavy on optimization, matrix methods, and NP-hardness."
+  },
+  {
+    "id": "C019",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (graduate CS courses) - CAS CS 585: Image and Video Computing",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Design",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Computer vision course on image/video understanding algorithms (face recognition, tracking, medical imaging)."
+  },
+  {
+    "id": "C020",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (graduate CS courses) - CAS CS 680: Graduate Introduction to Computer Graphics",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Computer graphics course on rendering, transformations, and visual realism."
+  },
+  {
+    "id": "C021",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (main CS catalog) - CS 7540: Spectral Algorithms and Representations",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Math-heavy course on spectral methods and algorithms for large datasets."
+  },
+  {
+    "id": "C022",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (main CS catalog) - CS 6730: Data Visualization: Principles and Applications",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Communications and Media",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Introductory course on design principles and best practices for visualizing datasets."
+  },
+  {
+    "id": "C023",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (main CS catalog) - CS 4901: Special Problems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Active Learning",
+        "id": "2.A.2.b",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "This is a catalog placeholder for independent study with almost no substantive content — flagged as too thin to label confidently."
+  },
+  {
+    "id": "C024",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (main CS catalog) - CS 6455: User Interface Design and Evaluation",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Evaluation",
+        "id": "2.B.4.h",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Psychology",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Course on usability, UI design methodology, and evaluation within the software development process."
+  },
+  {
+    "id": "C025",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science / MCS-DS (CS course catalog) - CS 442: Trustworthy Machine Learning",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "id": "2.B.2.i",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Public Safety and Security",
+        "type": "knowledge"
+      },
+      {
+        "name_or_title": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Course on adversarial ML, privacy, and defenses, combining coding assignments with security-adjacent concepts."
+  },
+  {
+    "id": "C026",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science / MCS-DS (CS course catalog) - CS 555: Numerical Methods for PDEs",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Programming",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Applied mathematics course on numerical PDE solution techniques, with some programming and software-package usage."
+  },
+  {
+    "id": "C027",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science / MCS-DS (CS course catalog) - CS 526: Advanced Compiler Construction",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Technology Design",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Compiler construction course covering code optimization and code generator models."
+  },
+  {
+    "id": "C028",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science / MCS-DS (CS course catalog) - CS 422: Programming Language Design",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Theoretical course on programming language design paradigms (imperative and functional)."
+  },
+  {
+    "id": "C029",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science and Engineering (EECS catalog) - EECS 475: Introduction to Cryptography",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Cryptography course covering encryption algorithms, hash functions, and security proof techniques."
+  },
+  {
+    "id": "C030",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science and Engineering (EECS catalog) - EECS 427: Very Large Scale Integrated (VLSI) Design I",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Engineering and Technology",
+        "id": "2.C.3.b",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Electrical-engineering-heavy VLSI circuit design course, only loosely related to the O*NET computing taxonomy."
+  },
+  {
+    "id": "C031",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science and Engineering (EECS catalog) - CSE 584: Advanced Database Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Programming",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Advanced research-oriented course on distributed databases, query optimization, and transaction processing."
+  },
+  {
+    "id": "C032",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science and Engineering (EECS catalog) - ECE 509: BioMEMS",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Physics",
+        "id": "2.C.4.b",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "id": "2.C.3.b",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Plasma physics/BioMEMS course with essentially no overlap with computing skills or technologies — a weak match to this taxonomy."
+  },
+  {
+    "id": "C033",
+    "source_type": "course",
+    "identifying_info": "MS Computer Sciences / MS Data Science (elective pool) - COMP SCI 550: Algorithmic Game Theory & Learning",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "id": "2.B.2.i",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Programming",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Game theory course rooted in optimization, probability, and mechanism design, with algorithm implementation."
+  },
+  {
+    "id": "C034",
+    "source_type": "course",
+    "identifying_info": "MS Computer Sciences / MS Data Science (elective pool) - COMP SCI 272: Introduction To Web Development",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Communications and Media",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Web development fundamentals course; mentions scripting languages, frameworks, and CMSs generically without naming specific tools."
+  },
+  {
+    "id": "C035",
+    "source_type": "course",
+    "identifying_info": "MS Computer Sciences / MS Data Science (elective pool) - COMP SCI 739: Distributed Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Troubleshooting",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Course on large-scale distributed systems: fault tolerance, scalability, storage, and consensus."
+  },
+  {
+    "id": "C036",
+    "source_type": "course",
+    "identifying_info": "MS Computer Sciences / MS Data Science (elective pool) - COMP SCI 541: Theory & Algorithms For Data Science",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Theoretical data-science course covering estimation and learning theory that explicitly uses Python for coursework."
+  },
+  {
+    "id": "C037",
+    "source_type": "course",
+    "identifying_info": "MS Cybersecurity (OMS Cybersecurity) - ECE 6266: Energy Systems Practicum",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Administration and Management",
+        "id": "2.C.1.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Law and Government",
+        "type": "knowledge"
+      },
+      {
+        "name_or_title": "Judgment and Decision Making",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Capstone practicum on the cybersecurity policy/governance track, focused on organizational and legal security management rather than hands-on technical work."
+  },
+  {
+    "id": "C038",
+    "source_type": "course",
+    "identifying_info": "MS Cybersecurity (OMS Cybersecurity) - CS 6264: Information Security Lab: System and Network Defense",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Systems Analysis",
+        "type": "skill"
+      },
+      {
+        "name_or_title": "Telecommunications",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Elective list for a security lab spanning operating systems, networks, databases, and malware analysis topics."
+  },
+  {
+    "id": "C039",
+    "source_type": "course",
+    "identifying_info": "MS Cybersecurity (OMS Cybersecurity) - CS 6035: Introduction to Information Security",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Programming",
+        "type": "skill"
+      },
+      {
+        "name_or_title": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Broad introductory security course covering vulnerabilities, cryptography, OS protections, and network security."
+  },
+  {
+    "id": "C040",
+    "source_type": "course",
+    "identifying_info": "MS Cybersecurity (OMS Cybersecurity) - CS 6265: Information Security Lab Reversed Engineering and Binary",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Troubleshooting",
+        "id": "2.B.3.k",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Reverse-engineering and binary-analysis lab for identifying system/network vulnerabilities."
+  },
+  {
+    "id": "C041",
+    "source_type": "course",
+    "identifying_info": "MS Data Analytics (DAAN) - DAAN 871: Data Visualization",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Microsoft Excel",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Broad data-visualization course sampling many tools (Gephi, R, Pajek, Excel, etc.); most named tools aren't in the O*NET technology list, but Excel is."
+  },
+  {
+    "id": "C042",
+    "source_type": "course",
+    "identifying_info": "MS Data Analytics (DAAN) - DAAN 822: Data Collection and Cleaning",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Quality Control Analysis",
+        "id": "2.B.3.m",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Programming",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Course on ETL/data-collection tooling and techniques for detecting and cleaning errors in large datasets."
+  },
+  {
+    "id": "C043",
+    "source_type": "course",
+    "identifying_info": "MS Data Analytics (DAAN) - DAAN 501: Analytics Research and Problem Framing",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Writing",
+        "id": "2.A.1.c",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Judgment and Decision Making",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Research-methods and ethics course for analytics; non-technical, focused on framing research questions."
+  },
+  {
+    "id": "C044",
+    "source_type": "course",
+    "identifying_info": "MS Data Analytics (DAAN) - DAAN 881: Data-Driven Decision Making",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Judgment and Decision Making",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Course on statistical decision-making techniques (PCA, clustering, logistic/regression trees) applied to real datasets."
+  },
+  {
+    "id": "C045",
+    "source_type": "course",
+    "identifying_info": "MSCS / MS Data Science (CSE catalog) - CSE 528: Computational Neuroscience",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Biology",
+        "id": "2.C.4.d",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Programming",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Computational neuroscience course blending biology with applied math/algorithms for modeling neural systems."
+  },
+  {
+    "id": "C046",
+    "source_type": "course",
+    "identifying_info": "MSCS / MS Data Science (CSE catalog) - CSE 143: Computer Programming II",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Intro-level programming course on data abstraction and classic data structures."
+  },
+  {
+    "id": "C047",
+    "source_type": "course",
+    "identifying_info": "MSCS / MS Data Science (CSE catalog) - CSE 413: Programming Languages and Their Implementation",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Scheme",
+        "hot_technology": false
+      },
+      {
+        "title": "Oracle Java",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Course explicitly implements functional and object-oriented language concepts using Scheme and Java."
+  },
+  {
+    "id": "C048",
+    "source_type": "course",
+    "identifying_info": "MSCS / MS Data Science (CSE catalog) - CSE 453: Datacenter Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Engineering and Technology",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Datacenter systems course on virtualization, storage, I/O architecture, and resource provisioning."
+  },
+  {
+    "id": "C049",
+    "source_type": "course",
+    "identifying_info": "Online Master of Computer Science (MCS) - CSE 330: Operating Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Troubleshooting",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Core operating systems course covering scheduling, synchronization, memory, and file systems."
+  },
+  {
+    "id": "C050",
+    "source_type": "course",
+    "identifying_info": "Online Master of Computer Science (MCS) - CSE 230: Computer Organization and Assembly Language Programming",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Course on register-level computer organization, instruction sets, and assembly-language programming."
+  },
+  {
+    "id": "C051",
+    "source_type": "course",
+    "identifying_info": "Online Master of Computer Science (MCS) - CSE 310: Data Structures and Algorithms",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Advanced data structures and algorithms course (trees, graphs, hashing, sorting)."
+  },
+  {
+    "id": "C052",
+    "source_type": "course",
+    "identifying_info": "Online Master of Computer Science (MCS) - CSE 340: Principles of Programming Languages",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "id": "2.C.3.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Theoretical course on syntax/semantics and foundations of programming paradigms."
+  },
+  {
+    "id": "P001",
+    "source_type": "posting",
+    "identifying_info": "Senior Software Engineer at Prestige Staffing (software engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Oracle Java",
+        "hot_technology": true
+      },
+      {
+        "title": "Spring Boot",
+        "hot_technology": true
+      },
+      {
+        "title": "RabbitMQ",
+        "hot_technology": false
+      },
+      {
+        "title": "Redis",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "RESTful API",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Backend-focused role building Java/Spring Boot microservices that use RabbitMQ for messaging and Redis for caching."
+  },
+  {
+    "id": "P002",
+    "source_type": "posting",
+    "identifying_info": "Software Engineer at TRG (software engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "C#",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft SQL Server",
+        "hot_technology": true
+      },
+      {
+        "title": "Git",
+        "hot_technology": true
+      },
+      {
+        "title": "Hypertext markup language HTML",
+        "hot_technology": true
+      },
+      {
+        "title": "Cascading style sheets CSS",
+        "hot_technology": true
+      },
+      {
+        "title": "JavaScript",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "JavaScript Object Notation JSON",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "RESTful API",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Microsoft SQL Server Integration Services SSIS",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Microsoft SQL Server Reporting Services SSRS",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Full-stack .NET developer role naming a long, specific tech stack: C#, SQL Server, Git, HTML/CSS/JS, and more."
+  },
+  {
+    "id": "P003",
+    "source_type": "posting",
+    "identifying_info": "Software Engineer for global computer software company in Redmond, WA at OSI Engineering (software engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "C#",
+        "hot_technology": true
+      },
+      {
+        "title": "Docker",
+        "hot_technology": true
+      },
+      {
+        "title": "Kubernetes",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft Azure software",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Amazon Web Services AWS software",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Google Cloud software",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "IBM Terraform",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Ansible software",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Puppet",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Prometheus",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Grafana Labs Grafana Cloud",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Infrastructure-automation engineer role centered on C# development and containerized deployment across cloud platforms."
+  },
+  {
+    "id": "P004",
+    "source_type": "posting",
+    "identifying_info": "Remote - Software Engineer - OIPA Configurator at State Farm (software engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Amazon Web Services AWS software",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Oracle Database",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Role modernizing a legacy insurance policy administration system with an AWS-hosted front end; thin on other named technologies."
+  },
+  {
+    "id": "P005",
+    "source_type": "posting",
+    "identifying_info": "Senior Data Scientist at Signify Technology (data scientist)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "id": "2.B.2.i",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "pandas",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "NumPy",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Senior data scientist role building credit-risk ML models, explicitly naming Python, SQL, pandas, and NumPy."
+  },
+  {
+    "id": "P006",
+    "source_type": "posting",
+    "identifying_info": "Marketing Analytics - Data Scientist Senior Associate at JPMorgan Chase & Co. (data scientist)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "SAS",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Tableau",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Google Analytics",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Marketing analytics data scientist applying statistical methods with SQL/SAS/Python and visualizing results in Tableau."
+  },
+  {
+    "id": "P007",
+    "source_type": "posting",
+    "identifying_info": "junior java programmer/data scientist at SynergisticIT (data scientist)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Oracle Java",
+        "hot_technology": true
+      },
+      {
+        "title": "JavaScript",
+        "hot_technology": true
+      },
+      {
+        "title": "C++",
+        "hot_technology": true
+      },
+      {
+        "title": "Docker",
+        "hot_technology": true
+      },
+      {
+        "title": "Jenkins CI",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Spring Boot",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "RESTful API",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Broad recruiting post for junior software/data roles listing many programming languages and dev tools."
+  },
+  {
+    "id": "P008",
+    "source_type": "posting",
+    "identifying_info": "Trader - Data Scientist at CPS, Inc. (data scientist)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "MySQL",
+        "hot_technology": true
+      },
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      }
+    ],
+    "optional": [],
+    "reasoning": "Trading-analyst role using Python, SQL, and MySQL for post-trade performance analysis."
+  },
+  {
+    "id": "P009",
+    "source_type": "posting",
+    "identifying_info": "Data Engineer at Piper Companies (data engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Quality Control Analysis",
+        "id": "2.B.3.m",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "Snowflake",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft PowerShell",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Amazon Web Services AWS software",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Microsoft Azure software",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Talend Open Studio",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Data engineer role building ETL and data-warehouse pipelines with SQL, Snowflake, Python, and PowerShell scripting."
+  },
+  {
+    "id": "P010",
+    "source_type": "posting",
+    "identifying_info": "GCP Data Engineer (Only W2) at TechWish (data engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "BigQuery",
+        "hot_technology": false
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "GitHub",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "GCP-focused data-ingestion role; most named Google services (Pub/Sub, Dataform, Cloud Storage, Composer) aren't in the O*NET technology list besides BigQuery."
+  },
+  {
+    "id": "P011",
+    "source_type": "posting",
+    "identifying_info": "Sr Data Engineer with Kafka at ZenithMinds Inc (data engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Apache Kafka",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Amazon Web Services AWS software",
+        "hot_technology": true
+      },
+      {
+        "title": "Snowflake",
+        "hot_technology": true
+      },
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "Linux",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Git",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Data engineer role centered on Kafka streaming pipelines with Python, AWS, Snowflake, and SQL."
+  },
+  {
+    "id": "P012",
+    "source_type": "posting",
+    "identifying_info": "Data Engineer I, Revenue Reporting Service at Amazon (data engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Scala",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Apache Hadoop",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Apache Spark",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "NoSQL",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Entry-level data engineer role building ETL pipelines and warehouses with SQL/Python, with optional big-data tooling."
+  },
+  {
+    "id": "P013",
+    "source_type": "posting",
+    "identifying_info": "Architect, Machine Learning, Field CTO at Snowflake (machine learning)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Administration and Management",
+        "id": "2.C.1.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Snowflake",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Architect/Field-CTO role centered on Snowflake's cloud data platform for enterprise ML enablement; strategic more than hands-on."
+  },
+  {
+    "id": "P014",
+    "source_type": "posting",
+    "identifying_info": "Software Engineer, Machine Learning at Niantic, Inc. (machine learning)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Oracle Java",
+        "hot_technology": true
+      },
+      {
+        "title": "Go",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "ML infrastructure engineer role building generative-AI deployment tooling in Python, Java, or Go."
+  },
+  {
+    "id": "P015",
+    "source_type": "posting",
+    "identifying_info": "Machine Learning Engineer at Jobot (machine learning)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "id": "2.B.2.i",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "PyTorch",
+        "hot_technology": true
+      },
+      {
+        "title": "TensorFlow",
+        "hot_technology": true
+      },
+      {
+        "title": "GitLab",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "NumPy",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Computer-vision ML engineer role building geospatial deep-learning pipelines with Python, PyTorch/TensorFlow, and GitLab."
+  },
+  {
+    "id": "P016",
+    "source_type": "posting",
+    "identifying_info": "Senior Machine Learning Engineer at Samson Rose (machine learning)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "id": "2.B.2.i",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "C++",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Computer-vision ML engineer role developing object-detection algorithms in Python or C++."
+  },
+  {
+    "id": "P017",
+    "source_type": "posting",
+    "identifying_info": "Senior Manager, Cybersecurity Product Management (Cloud/IAM) at Capital One (cybersecurity)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Administration and Management",
+        "id": "2.C.1.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Judgment and Decision Making",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Cybersecurity product-leadership role focused on identity/access strategy and roadmaps, not specific tools."
+  },
+  {
+    "id": "P018",
+    "source_type": "posting",
+    "identifying_info": "Manager, Cybersecurity Engineering at T-Mobile (cybersecurity)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Management of Personnel Resources",
+        "id": "2.B.5.d",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Telecommunications",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Cybersecurity engineering manager role overseeing firewalls/IPS/antivirus at a program level without naming specific vendor products."
+  },
+  {
+    "id": "P019",
+    "source_type": "posting",
+    "identifying_info": "Cybersecurity Test Engineer - Remote at Decision Point Security, Inc. (cybersecurity)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Quality Control Analysis",
+        "id": "2.B.3.m",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Amazon Web Services AWS software",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Google Cloud software",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Penetration-testing/red-team engineer role assessing cloud security posture across AWS and GCP."
+  },
+  {
+    "id": "P020",
+    "source_type": "posting",
+    "identifying_info": "Sr. Distinguished Cybersecurity Engineer, Cryptography at Capital One (cybersecurity)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Administration and Management",
+        "id": "2.C.1.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Judgment and Decision Making",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Senior cryptography/cloud-security strategist role, mostly architecture leadership rather than naming specific tools."
+  },
+  {
+    "id": "P021",
+    "source_type": "posting",
+    "identifying_info": "Information Security Manager at Select Source International (information security)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Qualys Cloud Platform",
+        "hot_technology": false
+      },
+      {
+        "title": "Microsoft Active Directory",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft PowerShell",
+        "hot_technology": true
+      },
+      {
+        "title": "ServiceNow",
+        "hot_technology": true
+      },
+      {
+        "title": "Atlassian JIRA",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Linux",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Perl",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Hands-on security manager role naming specific tools: Qualys, Active Directory, PowerShell, ServiceNow, and Jira."
+  },
+  {
+    "id": "P022",
+    "source_type": "posting",
+    "identifying_info": "Lead Information Security Engineer - Directory Security at Wells Fargo (information security)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Telecommunications",
+        "id": "2.C.9.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Directory-services security engineering role (PingDirectory/CA Directory/LDAP); those specific vendor products aren't in the O*NET technology list."
+  },
+  {
+    "id": "P023",
+    "source_type": "posting",
+    "identifying_info": "Sr. Information Security Engineer at Bill & Melinda Gates Foundation (information security)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Administration and Management",
+        "id": "2.C.1.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Judgment and Decision Making",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Information security engineer role focused on program design and incident response, without naming specific tools."
+  },
+  {
+    "id": "P024",
+    "source_type": "posting",
+    "identifying_info": "Information Security Director at PBF Energy (information security)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Administration and Management",
+        "id": "2.C.1.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Management of Personnel Resources",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Information security director role centered on NIST Cyber Security Framework governance and leadership."
+  },
+  {
+    "id": "P025",
+    "source_type": "posting",
+    "identifying_info": "Senior DevOps Engineer at Finfare (devops)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Technology Design",
+        "id": "2.B.3.b",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Docker",
+        "hot_technology": true
+      },
+      {
+        "title": "Kubernetes",
+        "hot_technology": true
+      },
+      {
+        "title": "Jenkins CI",
+        "hot_technology": true
+      },
+      {
+        "title": "Amazon Web Services AWS software",
+        "hot_technology": true
+      },
+      {
+        "title": "IBM Terraform",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Amazon Web Services AWS CloudFormation",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Google Cloud software",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Microsoft Azure software",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "DevOps engineer role building CI/CD and infrastructure-as-code pipelines across containers and multiple clouds."
+  },
+  {
+    "id": "P026",
+    "source_type": "posting",
+    "identifying_info": "AWS DevOps Engineer at Tech Consulting (devops)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Git",
+        "hot_technology": true
+      },
+      {
+        "title": "Jenkins CI",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Oracle Java",
+        "hot_technology": true
+      },
+      {
+        "title": "C++",
+        "hot_technology": true
+      },
+      {
+        "title": "Docker",
+        "hot_technology": true
+      },
+      {
+        "title": "Kubernetes",
+        "hot_technology": true
+      },
+      {
+        "title": "Bash",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft PowerShell",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "SQL",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "NoSQL",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Atlassian JIRA",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "AWS DevOps engineer role broadly listing programming languages plus CI/CD and container tooling."
+  },
+  {
+    "id": "P027",
+    "source_type": "posting",
+    "identifying_info": "DevOps Engineer (unspecified company) (devops)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "id": "2.C.8.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Telecommunications",
+        "id": "2.C.9.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Identity/SSO-focused DevOps role centered on Ping Identity products, which aren't present in the O*NET technology list."
+  },
+  {
+    "id": "P028",
+    "source_type": "posting",
+    "identifying_info": "Senior DevOps Engineer (CLT) at Matlen Silver (devops)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Git",
+        "hot_technology": true
+      },
+      {
+        "title": "Jenkins CI",
+        "hot_technology": true
+      },
+      {
+        "title": "Ansible software",
+        "hot_technology": true
+      },
+      {
+        "title": "JFrog Artifactory",
+        "hot_technology": false
+      },
+      {
+        "title": "Kubernetes",
+        "hot_technology": true
+      },
+      {
+        "title": "Red Hat OpenShift",
+        "hot_technology": true
+      },
+      {
+        "title": "Oracle Java",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Bash",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft PowerShell",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Linux",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "DevOps engineer role naming a long list of specific CI/CD, configuration-management, and scripting tools."
+  },
+  {
+    "id": "P029",
+    "source_type": "posting",
+    "identifying_info": "Cloud Engineer at Leidos (cloud engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Amazon Web Services AWS software",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft Azure software",
+        "hot_technology": true
+      },
+      {
+        "title": "Bash",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "IBM Terraform",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Amazon Web Services AWS CloudFormation",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Government cloud engineer role migrating applications to AWS/Azure using infrastructure automation and scripting."
+  },
+  {
+    "id": "P030",
+    "source_type": "posting",
+    "identifying_info": "Cloud Engineer at Computech Corporation (cloud engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Operations Monitoring",
+        "id": "2.B.3.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft Azure software",
+        "hot_technology": true
+      },
+      {
+        "title": "IBM Terraform",
+        "hot_technology": true
+      }
+    ],
+    "optional": [],
+    "reasoning": "Azure-focused cloud engineer role centered on Terraform-driven infrastructure and monitoring."
+  },
+  {
+    "id": "P031",
+    "source_type": "posting",
+    "identifying_info": "Cloud Engineer at Harvey Nash (cloud engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Troubleshooting",
+        "id": "2.B.3.k",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "General systems-engineer role supporting data-center platforms; no specific named tools."
+  },
+  {
+    "id": "P032",
+    "source_type": "posting",
+    "identifying_info": "AWS Cloud Engineer at Vernovis (cloud engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Customer and Personal Service",
+        "id": "2.C.1.e",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Amazon Web Services AWS software",
+        "hot_technology": true
+      },
+      {
+        "title": "Oracle Java",
+        "hot_technology": true
+      },
+      {
+        "title": "PHP",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Dynatrace",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "AWS cloud engineer role managing e-commerce infrastructure, drawing on Java/PHP development experience."
+  },
+  {
+    "id": "P033",
+    "source_type": "posting",
+    "identifying_info": "Oracle Database Administrator at System Soft Technologies (database administrator)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Troubleshooting",
+        "id": "2.B.3.k",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Oracle Database",
+        "hot_technology": true
+      },
+      {
+        "title": "MariaDB",
+        "hot_technology": false
+      },
+      {
+        "title": "Linux",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Shell script",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Oracle/MariaDB database administrator role focused on relational-database reliability and Linux shell scripting."
+  },
+  {
+    "id": "P034",
+    "source_type": "posting",
+    "identifying_info": "SQL Database Administrator at Planet Technology (database administrator)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Quality Control Analysis",
+        "id": "2.B.3.m",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft SQL Server",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft SQL Server Reporting Services SSRS",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft SQL Server Integration Services SSIS",
+        "hot_technology": true
+      },
+      {
+        "title": "Micosoft SQL Server Analysis Services SSAS",
+        "hot_technology": false
+      }
+    ],
+    "optional": [],
+    "reasoning": "SQL Server DBA role building ETL and reporting solutions with the Microsoft BI stack (SSRS/SSIS/SSAS)."
+  },
+  {
+    "id": "P035",
+    "source_type": "posting",
+    "identifying_info": "Database Administrator 4 at WEX (database administrator)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Operations Monitoring",
+        "id": "2.B.3.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft SQL Server",
+        "hot_technology": true
+      },
+      {
+        "title": "Transact-SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft PowerShell",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft Azure software",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Amazon Web Services AWS software",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "GitHub",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Microsoft SQL Server Integration Services SSIS",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Senior SQL Server DBA role managing databases in Azure with PowerShell automation and T-SQL tuning."
+  },
+  {
+    "id": "P036",
+    "source_type": "posting",
+    "identifying_info": "Database Administrator (BOCA RATON) at Ledgent Technology (database administrator)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Quality Control Analysis",
+        "id": "2.B.3.m",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft SQL Server",
+        "hot_technology": true
+      },
+      {
+        "title": "Transact-SQL",
+        "hot_technology": true
+      }
+    ],
+    "optional": [],
+    "reasoning": "SQL Server database administrator role focused on performance tuning, security, and T-SQL scripting."
+  },
+  {
+    "id": "P037",
+    "source_type": "posting",
+    "identifying_info": "Systems Administrator III at ManTech (systems administrator)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Troubleshooting",
+        "id": "2.B.3.k",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "General systems administrator role for servers and virtualization without naming specific products."
+  },
+  {
+    "id": "P038",
+    "source_type": "posting",
+    "identifying_info": "Systems Administrator (Tier 2 Deskside Support), Mid at General Dynamics Information Technology (systems administrator)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Customer and Personal Service",
+        "id": "2.C.1.e",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Troubleshooting",
+        "id": "2.B.3.k",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "ServiceNow",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Computers and Electronics",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Tier 2 desktop-support/systems admin role using ServiceNow for ticketing and end-user device support."
+  },
+  {
+    "id": "P039",
+    "source_type": "posting",
+    "identifying_info": "HPC Systems Administrator at Piper Companies (systems administrator)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Red Hat Enterprise Linux",
+        "hot_technology": true
+      },
+      {
+        "title": "Linux",
+        "hot_technology": true
+      },
+      {
+        "title": "Bash",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Perl",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Microsoft Azure software",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "HPC systems administrator role managing Linux clusters with scripting in Bash, Python, and Perl."
+  },
+  {
+    "id": "P040",
+    "source_type": "posting",
+    "identifying_info": "Network and Systems Administrator at SpotOn (systems administrator)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Telecommunications",
+        "id": "2.C.9.a",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft Active Directory",
+        "hot_technology": true
+      },
+      {
+        "title": "Slack",
+        "hot_technology": true
+      },
+      {
+        "title": "Google Workspace software",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Zoom",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Network/systems administrator role covering identity providers, network infrastructure, and productivity-tool administration."
+  },
+  {
+    "id": "P041",
+    "source_type": "posting",
+    "identifying_info": "Web Developer at MINIPPS inc. (web developer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "React",
+        "hot_technology": true
+      },
+      {
+        "title": "Django",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft Azure software",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "RESTful API",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Web developer internship building a React frontend and Django backend deployed on Azure."
+  },
+  {
+    "id": "P042",
+    "source_type": "posting",
+    "identifying_info": "Graphic Designer and Web Developer at Seek (web developer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Adobe Photoshop",
+        "hot_technology": true
+      },
+      {
+        "title": "Adobe Illustrator",
+        "hot_technology": true
+      },
+      {
+        "title": "Adobe InDesign",
+        "hot_technology": true
+      },
+      {
+        "title": "WordPress",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Cascading style sheets CSS",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "Hypertext markup language HTML",
+        "type": "technology"
+      },
+      {
+        "name_or_title": "JavaScript",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "Hybrid graphic-design/web-developer role centered on the Adobe Creative Suite and WordPress site maintenance."
+  },
+  {
+    "id": "P043",
+    "source_type": "posting",
+    "identifying_info": "Web Developer at DataAnnotation (web developer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "id": "2.B.3.e",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "JavaScript",
+        "hot_technology": true
+      },
+      {
+        "title": "Hypertext markup language HTML",
+        "hot_technology": true
+      },
+      {
+        "title": "C++",
+        "hot_technology": true
+      },
+      {
+        "title": "C#",
+        "hot_technology": true
+      },
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      }
+    ],
+    "optional": [],
+    "reasoning": "Web developer role explicitly requiring proficiency in several named programming languages to solve and evaluate coding problems."
+  },
+  {
+    "id": "P044",
+    "source_type": "posting",
+    "identifying_info": "Web Developer and Designer, Senior with Security Clearance at ClearanceJobs (web developer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Adobe Creative Cloud software",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft SharePoint",
+        "hot_technology": true
+      },
+      {
+        "title": "Apple Final Cut Pro",
+        "hot_technology": false
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Communications and Media",
+        "type": "knowledge"
+      }
+    ],
+    "reasoning": "Senior web developer/designer role for government UX/UI and web products using Adobe tools, SharePoint, and Final Cut Pro."
+  },
+  {
+    "id": "P045",
+    "source_type": "posting",
+    "identifying_info": "Network Engineer at Zufall Health (network engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Telecommunications",
+        "id": "2.C.9.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Troubleshooting",
+        "id": "2.B.3.k",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "VMware",
+        "hot_technology": false
+      }
+    ],
+    "optional": [],
+    "reasoning": "Network engineer role maintaining LAN/WAN infrastructure and VMware virtualization."
+  },
+  {
+    "id": "P046",
+    "source_type": "posting",
+    "identifying_info": "Sr. Radio Frequency Network Engineer, SBG at DSS, Inc. (network engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Telecommunications",
+        "id": "2.C.9.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "id": "2.C.3.b",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": [],
+    "reasoning": "Satellite/RF network engineer role focused on specialized communications systems; no O*NET-listed commercial tools named."
+  },
+  {
+    "id": "P047",
+    "source_type": "posting",
+    "identifying_info": "*Hybrid* Network Engineer (Appleton, WI) at TEKsystems (network engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Telecommunications",
+        "id": "2.C.9.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Troubleshooting",
+        "id": "2.B.3.k",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "VMware",
+        "hot_technology": false
+      }
+    ],
+    "optional": [],
+    "reasoning": "Network engineer role configuring switches, firewalls, and wireless; named vendor products (Extreme, Checkpoint, Meraki) aren't in the O*NET tech list besides VMware."
+  },
+  {
+    "id": "P048",
+    "source_type": "posting",
+    "identifying_info": "Sr. Network Engineer, AI Infrastructure at Tesla (network engineer)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Telecommunications",
+        "id": "2.C.9.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Analysis",
+        "id": "2.B.4.g",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Splunk Enterprise",
+        "hot_technology": true
+      }
+    ],
+    "optional": [],
+    "reasoning": "Senior network engineer role for AI-infrastructure data centers, heavy on networking protocols with Splunk for monitoring."
+  },
+  {
+    "id": "P049",
+    "source_type": "posting",
+    "identifying_info": "GME Business Intelligence Analyst II WFH at Talentify.io (business intelligence)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft Power BI",
+        "hot_technology": true
+      },
+      {
+        "title": "Tableau",
+        "hot_technology": true
+      }
+    ],
+    "optional": [],
+    "reasoning": "Healthcare BI analyst role building dashboards with SQL and BI tools (Power BI, MicroStrategy, Tableau)."
+  },
+  {
+    "id": "P050",
+    "source_type": "posting",
+    "identifying_info": "Business Intelligence Analyst at ClickUp (business intelligence)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Tableau",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft Power BI",
+        "hot_technology": true
+      }
+    ],
+    "optional": [],
+    "reasoning": "BI analyst role manipulating and visualizing revenue-operations data with SQL/Python and BI tools."
+  },
+  {
+    "id": "P051",
+    "source_type": "posting",
+    "identifying_info": "Business Intelligence Analyst at BIGO (business intelligence)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "id": "2.C.4.a",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL",
+        "hot_technology": true
+      },
+      {
+        "title": "Python",
+        "hot_technology": true
+      },
+      {
+        "title": "Microsoft Excel",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "JavaScript",
+        "type": "technology"
+      }
+    ],
+    "reasoning": "BI analyst role building data pipelines and reports with SQL, Python, and Excel."
+  },
+  {
+    "id": "P052",
+    "source_type": "posting",
+    "identifying_info": "Senior Business Intelligence Analyst at Alter Behavioral Health (business intelligence)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Design",
+        "id": "2.C.3.c",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "id": "2.A.2.a",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Snowflake",
+        "hot_technology": true
+      }
+    ],
+    "optional": [
+      {
+        "name_or_title": "Complex Problem Solving",
+        "type": "skill"
+      }
+    ],
+    "reasoning": "Senior BI analyst role building dashboards with specialist tools (Matillion, Fivetran, ThoughtSpot, DBT Cloud), most of which aren't in the O*NET technology list besides Snowflake."
+  }
+]

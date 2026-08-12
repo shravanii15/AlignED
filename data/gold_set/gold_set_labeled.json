@@ -1,0 +1,2391 @@
+[
+  {
+    "id": "C001",
+    "source_type": "course",
+    "identifying_info": "Cybersecurity (ENPM catalog) — Hacking of C programs and Unix Binaries (ENPM691)",
+    "essential_skills": [
+      {
+        "preferred_label": "Assembly (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/47b9bbcf-356c-4782-83a4-7f5a1b2b51a3"
+      },
+      {
+        "preferred_label": "develop code exploits",
+        "uri": "http://data.europa.eu/esco/skill/af313ba1-a39e-49ac-99ec-94630fbe4f7f"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "reasoning": "Course centers on secure C programming and analyzing/exploiting buffer overflows at the assembly level, so assembly-level analysis and exploit development are essential; general programming and cyber security are supporting themes."
+  },
+  {
+    "id": "C002",
+    "source_type": "course",
+    "identifying_info": "Cybersecurity (ENPM catalog) — Applied Finite Element Methods (ENPM652)",
+    "essential_skills": [
+      {
+        "preferred_label": "engineering principles",
+        "uri": "http://data.europa.eu/esco/skill/209a5498-3449-4689-8ed9-bd08cab4fd78"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "use computer-aided engineering systems",
+        "uri": "http://data.europa.eu/esco/skill/3c6fe585-7d12-4315-b579-e30c042088ce"
+      },
+      {
+        "preferred_label": "mathematics",
+        "uri": "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2"
+      }
+    ],
+    "reasoning": "This is a mechanical/structural engineering (FEM) course using ANSYS simulation software rather than a computing course, so only general engineering principles are essential, with CAE software and math as loosely related supporting concepts."
+  },
+  {
+    "id": "C003",
+    "source_type": "course",
+    "identifying_info": "Cybersecurity (ENPM catalog) — Autonomous Robotics (ENPM701)",
+    "essential_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "principles of artificial intelligence",
+        "uri": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "embedded systems",
+        "uri": "http://data.europa.eu/esco/skill/2180bd8c-86de-4889-8165-adac902eee9d"
+      },
+      {
+        "preferred_label": "engineering control theory",
+        "uri": "http://data.europa.eu/esco/skill/3c42d13b-d6e4-4ed9-bdc4-991251461dc4"
+      }
+    ],
+    "reasoning": "Hands-on robotics course implementing autonomy, planning and perception algorithms in Python, so Python and AI principles are core; embedded systems and control theory relate to the robot hardware/control aspects."
+  },
+  {
+    "id": "C004",
+    "source_type": "course",
+    "identifying_info": "Cybersecurity (ENPM catalog) — Heating, Ventilation and Air Conditioning of Buildings (ENPM625)",
+    "essential_skills": [
+      {
+        "preferred_label": "engineering principles",
+        "uri": "http://data.europa.eu/esco/skill/209a5498-3449-4689-8ed9-bd08cab4fd78"
+      }
+    ],
+    "optional_skills": [],
+    "reasoning": "This HVAC/thermal systems course is pure mechanical engineering with no substantive overlap with the computing skills vocabulary; only a generic engineering principles match applies."
+  },
+  {
+    "id": "C005",
+    "source_type": "course",
+    "identifying_info": "MS Analytics (OMS Analytics) — Computational Data Analysis (ISYE 6740)",
+    "essential_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      },
+      {
+        "preferred_label": "statistics",
+        "uri": "http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "data mining",
+        "uri": "http://data.europa.eu/esco/skill/25f0ea33-b4a2-4f31-b7b4-7d20e827b180"
+      },
+      {
+        "preferred_label": "apply statistical analysis techniques",
+        "uri": "http://data.europa.eu/esco/skill/382c11ed-20d5-4ae7-b60e-15fec527fa6c"
+      }
+    ],
+    "reasoning": "Course gives a rigorous grounding in machine learning methods and statistical theory, so ML and statistics are essential; data mining and applied statistical techniques are covered as supporting topics."
+  },
+  {
+    "id": "C006",
+    "source_type": "course",
+    "identifying_info": "MS Analytics (OMS Analytics) — Introduction for Computing for Data Analytics (CSE 6040)",
+    "essential_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      },
+      {
+        "preferred_label": "perform data analysis",
+        "uri": "http://data.europa.eu/esco/skill/2b92a5b2-6758-4ee3-9fb4-b6387a55cc8f"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "database",
+        "uri": "http://data.europa.eu/esco/skill/43ae58b9-5e56-4524-b45a-b422777a0576"
+      },
+      {
+        "preferred_label": "deliver visual presentation of data",
+        "uri": "http://data.europa.eu/esco/skill/c3e36d05-8ae8-447f-bb2b-6f9409f85389"
+      }
+    ],
+    "reasoning": "Course teaches programming, database access, numerical computing and visualization for data analysis, so programming and data analysis are core skills, with database access and visualization as supporting techniques."
+  },
+  {
+    "id": "C007",
+    "source_type": "course",
+    "identifying_info": "MS Analytics (OMS Analytics) — Artificial Intelligence (CS 6601)",
+    "essential_skills": [
+      {
+        "preferred_label": "principles of artificial intelligence",
+        "uri": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2"
+      }
+    ],
+    "optional_skills": [],
+    "reasoning": "This is a general AI survey course; principles of artificial intelligence is the clear and only strong vocabulary match since no specific subtopics or tools are named."
+  },
+  {
+    "id": "C008",
+    "source_type": "course",
+    "identifying_info": "MS Analytics (OMS Analytics) — Reinforcement Learning (CS 7642)",
+    "essential_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      },
+      {
+        "preferred_label": "principles of artificial intelligence",
+        "uri": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2"
+      }
+    ],
+    "optional_skills": [],
+    "reasoning": "Course is explicitly about reinforcement learning, a subarea of machine learning/AI; the vocabulary has no dedicated reinforcement-learning term so the closest general ML/AI matches are used."
+  },
+  {
+    "id": "C009",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (Align / CS catalog) — Building Scalable Distributed Systems (CS 6650)",
+    "essential_skills": [
+      {
+        "preferred_label": "distributed computing",
+        "uri": "http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "align software with system architectures",
+        "uri": "http://data.europa.eu/esco/skill/2857540c-180b-4208-9127-e94a01871966"
+      }
+    ],
+    "reasoning": "Course's core topic is building scalable, concurrent, distributed systems, so distributed computing is essential; aligning software with system architecture is a related supporting skill."
+  },
+  {
+    "id": "C010",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (Align / CS catalog) — Advanced Algorithms (CS 4810)",
+    "essential_skills": [
+      {
+        "preferred_label": "task algorithmisation",
+        "uri": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "mathematics",
+        "uri": "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2"
+      }
+    ],
+    "reasoning": "A theoretical algorithms course (greedy, dynamic programming, NP-completeness); task algorithmisation is the closest vocabulary proxy for algorithm design, with math as a supporting foundation."
+  },
+  {
+    "id": "C011",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (Align / CS catalog) — Foundations for Generative AI (CS 6180)",
+    "essential_skills": [
+      {
+        "preferred_label": "principles of artificial intelligence",
+        "uri": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2"
+      },
+      {
+        "preferred_label": "natural language processing",
+        "uri": "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a"
+      },
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      }
+    ],
+    "optional_skills": [],
+    "reasoning": "Course explicitly covers AI/ML foundations, advanced NLP, transformer models and large language models, so all three vocabulary terms directly match the syllabus."
+  },
+  {
+    "id": "C012",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (Align / CS catalog) — Program Design and Implementation 2 (CS 3100)",
+    "essential_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      },
+      {
+        "preferred_label": "use object-oriented programming",
+        "uri": "http://data.europa.eu/esco/skill/5b9cde20-f1b9-4adc-bfb3-dbf70b14138d"
+      },
+      {
+        "preferred_label": "use functional programming",
+        "uri": "http://data.europa.eu/esco/skill/d31fab87-2a7d-485c-b699-2901ca294b15"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "software design methodologies",
+        "uri": "http://data.europa.eu/esco/skill/8ff015a0-98ea-4d80-a23e-1f68110a919e"
+      },
+      {
+        "preferred_label": "create software design",
+        "uri": "http://data.europa.eu/esco/skill/3bddfd7c-ab6d-40c2-883d-5e97fb7640ba"
+      }
+    ],
+    "reasoning": "Course focuses on object-oriented and functional programming paradigms plus software design patterns, so programming paradigms are essential and design methodology topics are supporting."
+  },
+  {
+    "id": "C013",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (CMSC catalog) — Robotics (CMSC756)",
+    "essential_skills": [
+      {
+        "preferred_label": "engineering control theory",
+        "uri": "http://data.europa.eu/esco/skill/3c42d13b-d6e4-4ed9-bdc4-991251461dc4"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "embedded systems",
+        "uri": "http://data.europa.eu/esco/skill/2180bd8c-86de-4889-8165-adac902eee9d"
+      }
+    ],
+    "reasoning": "Course covers sensing, actuation, control and motion planning of robotic systems; the vocabulary has no dedicated robotics term, so control theory and embedded systems are the closest (imperfect) matches."
+  },
+  {
+    "id": "C014",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (CMSC catalog) — Introduction to Parallel Computing (CMSC416)",
+    "essential_skills": [
+      {
+        "preferred_label": "distributed computing",
+        "uri": "http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "use concurrent programming",
+        "uri": "http://data.europa.eu/esco/skill/25b291b5-8245-4d9d-b391-86a8a31d7109"
+      }
+    ],
+    "reasoning": "Course teaches parallel/distributed-memory architectures and performance analysis of parallel programs; distributed computing is the closest vocabulary match even though 'parallel computing' itself isn't a distinct term."
+  },
+  {
+    "id": "C015",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (CMSC catalog) — Natural Language Processing (CMSC723)",
+    "essential_skills": [
+      {
+        "preferred_label": "natural language processing",
+        "uri": "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a"
+      },
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      }
+    ],
+    "optional_skills": [],
+    "reasoning": "Course is explicitly about NLP techniques and the statistical/machine-learning approaches used to process human language, both directly named in the vocabulary."
+  },
+  {
+    "id": "C016",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (CMSC catalog) — Privacy Engineering (CMSC431)",
+    "essential_skills": [
+      {
+        "preferred_label": "ensure information privacy",
+        "uri": "http://data.europa.eu/esco/skill/71717c33-dd63-4acf-b052-a5fd5d9fc490"
+      },
+      {
+        "preferred_label": "information confidentiality",
+        "uri": "http://data.europa.eu/esco/skill/a56dec32-05ef-45de-a256-ee6741f356db"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "ICT security legislation",
+        "uri": "http://data.europa.eu/esco/skill/7814e88f-c133-4c3b-b27f-857afa145d42"
+      }
+    ],
+    "reasoning": "Course centers on technical mechanisms and legal/regulatory regimes for data privacy, matching the information-privacy and confidentiality vocabulary terms well."
+  },
+  {
+    "id": "C017",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (graduate CS courses) — Distributed Systems (CAS CS 651)",
+    "essential_skills": [
+      {
+        "preferred_label": "distributed computing",
+        "uri": "http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "ICT communications protocols",
+        "uri": "http://data.europa.eu/esco/skill/6e4f75b4-c60f-4623-a9ba-760c8245753b"
+      },
+      {
+        "preferred_label": "manage system security",
+        "uri": "http://data.europa.eu/esco/skill/2a3a96a3-709e-4d60-81f6-d247d6933f13"
+      }
+    ],
+    "reasoning": "Course covers structuring networks of computers as coherent distributed systems including architecture, communication, consistency, fault tolerance and security; distributed computing is core, protocols and security are supporting topics."
+  },
+  {
+    "id": "C018",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (graduate CS courses) — Graduate Algorithms (CAS CS 630)",
+    "essential_skills": [
+      {
+        "preferred_label": "task algorithmisation",
+        "uri": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "mathematics",
+        "uri": "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2"
+      }
+    ],
+    "reasoning": "Advanced theoretical algorithms course covering optimization, NP-hardness and large-data algorithms; task algorithmisation is the closest available proxy and math is a supporting foundation."
+  },
+  {
+    "id": "C019",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (graduate CS courses) — Image and Video Computing (CAS CS 585)",
+    "essential_skills": [
+      {
+        "preferred_label": "principles of artificial intelligence",
+        "uri": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "signal processing",
+        "uri": "http://data.europa.eu/esco/skill/cfa2be0d-96d5-4017-a866-962efb9c5070"
+      }
+    ],
+    "reasoning": "Course covers image/video understanding, face recognition and tracking; the vocabulary has no computer-vision term, so AI principles (the closest general umbrella) is used as essential and signal processing as a loosely related supporting concept."
+  },
+  {
+    "id": "C020",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (graduate CS courses) — Graduate Introduction to Computer Graphics (CAS CS 680)",
+    "essential_skills": [
+      {
+        "preferred_label": "render 3D images",
+        "uri": "http://data.europa.eu/esco/skill/e8171178-9a60-40a6-ad3b-510e10cfebad"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "3D modelling",
+        "uri": "http://data.europa.eu/esco/skill/97965983-0da4-4902-9daf-d5cd2693ef73"
+      },
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "reasoning": "Course teaches 2D/3D computer graphics algorithms (raster graphics, geometric transformations, camera modeling), which maps reasonably well to the 3D-rendering related vocabulary terms."
+  },
+  {
+    "id": "C021",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (main CS catalog) — Spectral Algorithms and Representations (CS 7540)",
+    "essential_skills": [
+      {
+        "preferred_label": "mathematics",
+        "uri": "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "task algorithmisation",
+        "uri": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410"
+      },
+      {
+        "preferred_label": "information extraction",
+        "uri": "http://data.europa.eu/esco/skill/696e3b5b-8b61-45af-ae4c-3ab700f197ec"
+      }
+    ],
+    "reasoning": "Course is a math-heavy treatment of spectral algorithms applied to search and information-retrieval problems; mathematics is essential with algorithmic and information-extraction concepts as supporting."
+  },
+  {
+    "id": "C022",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (main CS catalog) — Data Visualization: Principles and Applications (CS 6730)",
+    "essential_skills": [
+      {
+        "preferred_label": "deliver visual presentation of data",
+        "uri": "http://data.europa.eu/esco/skill/c3e36d05-8ae8-447f-bb2b-6f9409f85389"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "visual presentation techniques",
+        "uri": "http://data.europa.eu/esco/skill/348b74cd-49ce-4844-8bdf-ec188b497213"
+      }
+    ],
+    "reasoning": "Course is explicitly about principles and best practices of data visualization, directly matching the visual-presentation-of-data vocabulary term."
+  },
+  {
+    "id": "C023",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (main CS catalog) — Special Problems (CS 4901)",
+    "essential_skills": [
+      {
+        "preferred_label": "conduct scholarly research",
+        "uri": "http://data.europa.eu/esco/skill/485cdafb-3c7f-4104-ab1c-773e6131a39a"
+      }
+    ],
+    "optional_skills": [],
+    "reasoning": "Description is generic ('guided study and research' in an unspecified CS area) with no concrete technical content, so only a broad research-skill match applies."
+  },
+  {
+    "id": "C024",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science (main CS catalog) — User Interface Design and Evaluation (CS 6455)",
+    "essential_skills": [
+      {
+        "preferred_label": "design user interface",
+        "uri": "http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e"
+      },
+      {
+        "preferred_label": "usability engineering",
+        "uri": "http://data.europa.eu/esco/skill/95ee5e38-5c1e-4cd2-a21d-6921390025a9"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "measure software usability",
+        "uri": "http://data.europa.eu/esco/skill/be0ff6d8-5e61-4021-9c89-e40cf0b75cc6"
+      }
+    ],
+    "reasoning": "Course is explicitly about usability in the software development process, UI design and evaluation, directly matching these vocabulary terms."
+  },
+  {
+    "id": "C025",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science / MCS-DS (CS course catalog) — Trustworthy Machine Learning (CS 442)",
+    "essential_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      },
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "ensure information privacy",
+        "uri": "http://data.europa.eu/esco/skill/71717c33-dd63-4acf-b052-a5fd5d9fc490"
+      },
+      {
+        "preferred_label": "perform security vulnerability assessments",
+        "uri": "http://data.europa.eu/esco/skill/f4a85869-1855-45d5-a43c-7ee8cd451996"
+      }
+    ],
+    "reasoning": "Course teaches building ML classifiers, designing adversarial attacks and defenses, and differential privacy, so ML and security are essential with privacy and vulnerability assessment as supporting themes."
+  },
+  {
+    "id": "C026",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science / MCS-DS (CS course catalog) — Numerical Methods for PDEs (CS 555)",
+    "essential_skills": [
+      {
+        "preferred_label": "mathematics",
+        "uri": "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "reasoning": "Course is a numerical-methods/applied-math course for PDEs; only loosely touches programming via software usage, so it is mostly outside the computing vocabulary."
+  },
+  {
+    "id": "C027",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science / MCS-DS (CS course catalog) — Advanced Compiler Construction (CS 526)",
+    "essential_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "task algorithmisation",
+        "uri": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410"
+      }
+    ],
+    "reasoning": "Course covers compiler construction (parsing, code optimization, code generation); the vocabulary has no compiler-specific term, so general programming and algorithmic optimization are the closest matches."
+  },
+  {
+    "id": "C028",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science / MCS-DS (CS course catalog) — Programming Language Design (CS 422)",
+    "essential_skills": [
+      {
+        "preferred_label": "use functional programming",
+        "uri": "http://data.europa.eu/esco/skill/d31fab87-2a7d-485c-b699-2901ca294b15"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "reasoning": "Course explores programming language design paradigms (imperative and functional) and language processor construction, with functional programming being the most specific vocabulary match."
+  },
+  {
+    "id": "C029",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science and Engineering (EECS catalog) — Introduction to Cryptography (EECS 475)",
+    "essential_skills": [
+      {
+        "preferred_label": "ICT encryption",
+        "uri": "http://data.europa.eu/esco/skill/d32db06e-bd06-4415-a7ab-1b0ee68caa9a"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      }
+    ],
+    "reasoning": "Course covers cryptographic algorithms and protocols (encryption, hash functions, digital signatures, key distribution), matching the ICT encryption vocabulary term well."
+  },
+  {
+    "id": "C030",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science and Engineering (EECS catalog) — Very Large Scale Integrated (VLSI) Design I (EECS 427)",
+    "essential_skills": [
+      {
+        "preferred_label": "hardware architectures",
+        "uri": "http://data.europa.eu/esco/skill/e043aeeb-78f5-4049-afbf-12bba52225bc"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "electronics principles",
+        "uri": "http://data.europa.eu/esco/skill/557d1221-0235-4a48-ada5-8fca73443627"
+      },
+      {
+        "preferred_label": "engineering principles",
+        "uri": "http://data.europa.eu/esco/skill/209a5498-3449-4689-8ed9-bd08cab4fd78"
+      }
+    ],
+    "reasoning": "Course teaches VLSI circuit design (CMOS logic, processors, interconnects); the vocabulary lacks chip-design-specific terms so hardware architecture and electronics principles are the closest matches."
+  },
+  {
+    "id": "C031",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science and Engineering (EECS catalog) — Advanced Database Systems (CSE 584)",
+    "essential_skills": [
+      {
+        "preferred_label": "database management systems",
+        "uri": "http://data.europa.eu/esco/skill/ab1e97ed-2319-4293-a8b7-072d2648822f"
+      },
+      {
+        "preferred_label": "operate relational database management system",
+        "uri": "http://data.europa.eu/esco/skill/7369f779-4b71-4aab-8836-48b69c676eec"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "data warehouse",
+        "uri": "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de"
+      },
+      {
+        "preferred_label": "data mining",
+        "uri": "http://data.europa.eu/esco/skill/25f0ea33-b4a2-4f31-b7b4-7d20e827b180"
+      }
+    ],
+    "reasoning": "Course is an advanced treatment of database management systems, query optimization and transaction processing, directly matching these database vocabulary terms."
+  },
+  {
+    "id": "C032",
+    "source_type": "course",
+    "identifying_info": "MS Computer Science and Engineering (EECS catalog) — BioMEMS (ECE 509)",
+    "essential_skills": [
+      {
+        "preferred_label": "electronics principles",
+        "uri": "http://data.europa.eu/esco/skill/557d1221-0235-4a48-ada5-8fca73443627"
+      }
+    ],
+    "optional_skills": [],
+    "reasoning": "This course is about plasma chemistry and materials/biotech processes (BioMEMS), essentially physics/chemistry with no substantive computing content; only a weak electronics-principles match applies."
+  },
+  {
+    "id": "C033",
+    "source_type": "course",
+    "identifying_info": "MS Computer Sciences / MS Data Science (elective pool) — Algorithmic Game Theory & Learning (COMP SCI 550)",
+    "essential_skills": [
+      {
+        "preferred_label": "task algorithmisation",
+        "uri": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410"
+      },
+      {
+        "preferred_label": "mathematics",
+        "uri": "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      }
+    ],
+    "reasoning": "Course is a math/theory-heavy treatment of game theory and mechanism design, drawing on optimization and machine learning tools; algorithm design and math are essential, ML is a supporting tool mentioned."
+  },
+  {
+    "id": "C034",
+    "source_type": "course",
+    "identifying_info": "MS Computer Sciences / MS Data Science (elective pool) — Introduction To Web Development (COMP SCI 272)",
+    "essential_skills": [
+      {
+        "preferred_label": "web programming",
+        "uri": "http://data.europa.eu/esco/skill/69bbd53f-fbb0-4476-b4b2-ef7844464e28"
+      },
+      {
+        "preferred_label": "use content management system software",
+        "uri": "http://data.europa.eu/esco/skill/56a10e3e-c9e7-4d39-b6f1-6013398fcb3a"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "implement front-end website design",
+        "uri": "http://data.europa.eu/esco/skill/c4b1f326-224a-420a-b8b3-814a8f13b6cb"
+      },
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      }
+    ],
+    "reasoning": "Course explicitly teaches web development fundamentals, scripting languages/frameworks and content management systems, matching these vocabulary terms directly."
+  },
+  {
+    "id": "C035",
+    "source_type": "course",
+    "identifying_info": "MS Computer Sciences / MS Data Science (elective pool) — Distributed Systems (COMP SCI 739)",
+    "essential_skills": [
+      {
+        "preferred_label": "distributed computing",
+        "uri": "http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "data storage",
+        "uri": "http://data.europa.eu/esco/skill/a7f0fbe0-c546-4f30-8e41-34a58c64567e"
+      }
+    ],
+    "reasoning": "Course covers large-scale distributed systems including fault tolerance, replication and distributed storage, matching the distributed computing vocabulary term as core."
+  },
+  {
+    "id": "C036",
+    "source_type": "course",
+    "identifying_info": "MS Computer Sciences / MS Data Science (elective pool) — Theory & Algorithms For Data Science (COMP SCI 541)",
+    "essential_skills": [
+      {
+        "preferred_label": "task algorithmisation",
+        "uri": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410"
+      },
+      {
+        "preferred_label": "statistics",
+        "uri": "http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      }
+    ],
+    "reasoning": "Course covers theoretical/statistical foundations for data science algorithms (PAC learning, estimation, optimization) and uses Python, making algorithm theory and statistics essential."
+  },
+  {
+    "id": "C037",
+    "source_type": "course",
+    "identifying_info": "MS Cybersecurity (OMS Cybersecurity) — Energy Systems Practicum (ECE 6266)",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "ICT security legislation",
+        "uri": "http://data.europa.eu/esco/skill/7814e88f-c133-4c3b-b27f-857afa145d42"
+      },
+      {
+        "preferred_label": "information security strategy",
+        "uri": "http://data.europa.eu/esco/skill/11eebd42-44ab-401d-8a2c-bdb9fc9beb50"
+      }
+    ],
+    "reasoning": "Capstone practicum in a cybersecurity policy track covering security policy frameworks, internet governance and cyber norms, matching cyber security and security-strategy/legislation vocabulary terms."
+  },
+  {
+    "id": "C038",
+    "source_type": "course",
+    "identifying_info": "MS Cybersecurity (OMS Cybersecurity) — Information Security Lab: System and Network Defense (CS 6264)",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "computer forensics",
+        "uri": "http://data.europa.eu/esco/skill/118a9b27-1c5a-4214-b685-1a4d9e6365ea"
+      },
+      {
+        "preferred_label": "database management systems",
+        "uri": "http://data.europa.eu/esco/skill/ab1e97ed-2319-4293-a8b7-072d2648822f"
+      }
+    ],
+    "reasoning": "Listing of elective options for a security lab course spanning OS, networks, databases and malware analysis; cyber security is the clear umbrella essential with forensics and databases as supporting electives."
+  },
+  {
+    "id": "C039",
+    "source_type": "course",
+    "identifying_info": "MS Cybersecurity (OMS Cybersecurity) — Introduction to Information Security (CS 6035)",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "ICT encryption",
+        "uri": "http://data.europa.eu/esco/skill/d32db06e-bd06-4415-a7ab-1b0ee68caa9a"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "ensure information privacy",
+        "uri": "http://data.europa.eu/esco/skill/71717c33-dd63-4acf-b052-a5fd5d9fc490"
+      },
+      {
+        "preferred_label": "computer forensics",
+        "uri": "http://data.europa.eu/esco/skill/118a9b27-1c5a-4214-b685-1a4d9e6365ea"
+      }
+    ],
+    "reasoning": "Course is a full survey of information security including threats, vulnerabilities, cryptography, OS protections, network security and computer crime, matching security and encryption vocabulary as essential."
+  },
+  {
+    "id": "C040",
+    "source_type": "course",
+    "identifying_info": "MS Cybersecurity (OMS Cybersecurity) — Information Security Lab Reversed Engeneering and Binary (CS 6265)",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "computer forensics",
+        "uri": "http://data.europa.eu/esco/skill/118a9b27-1c5a-4214-b685-1a4d9e6365ea"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "ICT network security risks",
+        "uri": "http://data.europa.eu/esco/skill/2ddb1226-1117-4eb4-ae65-3a2f5a5a3c80"
+      }
+    ],
+    "reasoning": "Course covers computer/network vulnerabilities, reverse engineering of binaries and security analysis tools; forensics and cyber security are the closest vocabulary matches since reverse engineering itself isn't in the taxonomy."
+  },
+  {
+    "id": "C041",
+    "source_type": "course",
+    "identifying_info": "MS Data Analytics (DAAN) — Data Visualization (DAAN 871)",
+    "essential_skills": [
+      {
+        "preferred_label": "deliver visual presentation of data",
+        "uri": "http://data.europa.eu/esco/skill/c3e36d05-8ae8-447f-bb2b-6f9409f85389"
+      },
+      {
+        "preferred_label": "visual presentation techniques",
+        "uri": "http://data.europa.eu/esco/skill/348b74cd-49ce-4844-8bdf-ec188b497213"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "R",
+        "uri": "http://data.europa.eu/esco/skill/51586df8-1c46-4b47-8583-773cb63bf00b"
+      },
+      {
+        "preferred_label": "analyse big data",
+        "uri": "http://data.europa.eu/esco/skill/47a49cd6-097d-457a-9f7b-c290c14930d5"
+      }
+    ],
+    "reasoning": "Course is explicitly a foundation in data visualization principles and tools for large, complex datasets, with R named as one of the hands-on tools used."
+  },
+  {
+    "id": "C042",
+    "source_type": "course",
+    "identifying_info": "MS Data Analytics (DAAN) — Data Collection and Cleaning (DAAN 822)",
+    "essential_skills": [
+      {
+        "preferred_label": "perform data cleansing",
+        "uri": "http://data.europa.eu/esco/skill/50b100ea-74fd-4706-99db-3e4ca55e51b8"
+      },
+      {
+        "preferred_label": "manage data collection systems",
+        "uri": "http://data.europa.eu/esco/skill/a80fb090-63f4-4b05-83a5-2f090deb7757"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "define data quality criteria",
+        "uri": "http://data.europa.eu/esco/skill/54c9c155-9293-4329-8ed2-2e76e8b519d4"
+      },
+      {
+        "preferred_label": "database",
+        "uri": "http://data.europa.eu/esco/skill/43ae58b9-5e56-4524-b45a-b422777a0576"
+      }
+    ],
+    "reasoning": "Course is explicitly about data collection tools/techniques and data cleansing for quality and reliability, directly matching these vocabulary terms."
+  },
+  {
+    "id": "C043",
+    "source_type": "course",
+    "identifying_info": "MS Data Analytics (DAAN) — Analytics Research and Problem Framing (DAAN 501)",
+    "essential_skills": [
+      {
+        "preferred_label": "conduct quantitative research",
+        "uri": "http://data.europa.eu/esco/skill/8316979b-df5a-4dc7-98ef-61ec6a10df84"
+      },
+      {
+        "preferred_label": "conduct qualitative research",
+        "uri": "http://data.europa.eu/esco/skill/fa465db3-56e8-4b5d-a781-e2a313a4ed2d"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "plan research process",
+        "uri": "http://data.europa.eu/esco/skill/f88cb903-83a2-44a3-98a8-e72180ec37a9"
+      }
+    ],
+    "reasoning": "Course explicitly covers quantitative, qualitative and mixed-methods research approaches applied to analytics research, directly matching these vocabulary terms."
+  },
+  {
+    "id": "C044",
+    "source_type": "course",
+    "identifying_info": "MS Data Analytics (DAAN) — Data-Driven Decision Making (DAAN 881)",
+    "essential_skills": [
+      {
+        "preferred_label": "apply statistical analysis techniques",
+        "uri": "http://data.europa.eu/esco/skill/382c11ed-20d5-4ae7-b60e-15fec527fa6c"
+      },
+      {
+        "preferred_label": "utilise decision support system",
+        "uri": "http://data.europa.eu/esco/skill/df0612db-366c-4ff5-b106-40b9e385195c"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "data mining",
+        "uri": "http://data.europa.eu/esco/skill/25f0ea33-b4a2-4f31-b7b4-7d20e827b180"
+      },
+      {
+        "preferred_label": "statistics",
+        "uri": "http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833"
+      }
+    ],
+    "reasoning": "Course teaches quantitative decision-making tools (PCA, cluster analysis, logistic regression, regression trees), matching statistical-analysis and decision-support vocabulary terms as essential."
+  },
+  {
+    "id": "C045",
+    "source_type": "course",
+    "identifying_info": "MSCS / MS Data Science (CSE catalog) — Computational Neuroscience (CSE 528)",
+    "essential_skills": [
+      {
+        "preferred_label": "principles of artificial intelligence",
+        "uri": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "mathematics",
+        "uri": "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2"
+      }
+    ],
+    "reasoning": "Computational neuroscience course models nervous systems and learning algorithms; the vocabulary has no neuroscience-specific term, so AI principles is the closest (imperfect) match."
+  },
+  {
+    "id": "C046",
+    "source_type": "course",
+    "identifying_info": "MSCS / MS Data Science (CSE catalog) — Computer Programming II (CSE 143)",
+    "essential_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "task algorithmisation",
+        "uri": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410"
+      }
+    ],
+    "reasoning": "Introductory data-structures course (stacks, queues, trees, recursion) taught via programming; general programming is essential since the vocabulary has no dedicated data-structures term."
+  },
+  {
+    "id": "C047",
+    "source_type": "course",
+    "identifying_info": "MSCS / MS Data Science (CSE catalog) — Programming Languages and Their Implementation (CSE 413)",
+    "essential_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "use functional programming",
+        "uri": "http://data.europa.eu/esco/skill/d31fab87-2a7d-485c-b699-2901ca294b15"
+      },
+      {
+        "preferred_label": "use object-oriented programming",
+        "uri": "http://data.europa.eu/esco/skill/5b9cde20-f1b9-4adc-bfb3-dbf70b14138d"
+      }
+    ],
+    "reasoning": "Course covers implementation strategies for functional and object-oriented programming languages (Scheme, Java), matching general and paradigm-specific programming vocabulary terms."
+  },
+  {
+    "id": "C048",
+    "source_type": "course",
+    "identifying_info": "MSCS / MS Data Science (CSE catalog) — Datacenter Systems (CSE 453)",
+    "essential_skills": [
+      {
+        "preferred_label": "manage ICT virtualisation machines",
+        "uri": "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce"
+      },
+      {
+        "preferred_label": "ICT infrastructure",
+        "uri": "http://data.europa.eu/esco/skill/d0c6d77e-cb25-4770-bf77-2073fc5f7523"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "data storage",
+        "uri": "http://data.europa.eu/esco/skill/a7f0fbe0-c546-4f30-8e41-34a58c64567e"
+      },
+      {
+        "preferred_label": "hardware architectures",
+        "uri": "http://data.europa.eu/esco/skill/e043aeeb-78f5-4049-afbf-12bba52225bc"
+      }
+    ],
+    "reasoning": "Course covers datacenter server, network, storage and virtualization technologies, directly matching ICT infrastructure and virtualization management vocabulary terms."
+  },
+  {
+    "id": "C049",
+    "source_type": "course",
+    "identifying_info": "Online Master of Computer Science (MCS) — Operating Systems (CSE 330)",
+    "essential_skills": [
+      {
+        "preferred_label": "use concurrent programming",
+        "uri": "http://data.europa.eu/esco/skill/25b291b5-8245-4d9d-b391-86a8a31d7109"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "data storage",
+        "uri": "http://data.europa.eu/esco/skill/a7f0fbe0-c546-4f30-8e41-34a58c64567e"
+      }
+    ],
+    "reasoning": "Classic operating-systems course (scheduling, concurrency, memory/virtual memory, file systems); the vocabulary has no general 'operating systems' term, so concurrent programming is the closest available proxy."
+  },
+  {
+    "id": "C050",
+    "source_type": "course",
+    "identifying_info": "Online Master of Computer Science (MCS) — Computer Organization and Assembly Language Programming (CSE 230)",
+    "essential_skills": [
+      {
+        "preferred_label": "Assembly (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/47b9bbcf-356c-4782-83a4-7f5a1b2b51a3"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "hardware architectures",
+        "uri": "http://data.europa.eu/esco/skill/e043aeeb-78f5-4049-afbf-12bba52225bc"
+      }
+    ],
+    "reasoning": "Course is explicitly about assembly language programming and computer organization at the register/instruction-set level, directly matching the assembly programming vocabulary term."
+  },
+  {
+    "id": "C051",
+    "source_type": "course",
+    "identifying_info": "Online Master of Computer Science (MCS) — Data Structures and Algorithms (CSE 310)",
+    "essential_skills": [
+      {
+        "preferred_label": "task algorithmisation",
+        "uri": "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "reasoning": "Course covers advanced data structures and algorithms (trees, graphs, hashing, sorting); the vocabulary lacks a data-structures term so algorithm design is used as the closest proxy."
+  },
+  {
+    "id": "C052",
+    "source_type": "course",
+    "identifying_info": "Online Master of Computer Science (MCS) — Principles of Programming Languages (CSE 340)",
+    "essential_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "use functional programming",
+        "uri": "http://data.europa.eu/esco/skill/d31fab87-2a7d-485c-b699-2901ca294b15"
+      }
+    ],
+    "reasoning": "Course covers programming language semantics and paradigms formally; general programming is essential given no compiler/language-theory-specific vocabulary term exists."
+  },
+  {
+    "id": "P001",
+    "source_type": "posting",
+    "identifying_info": "Senior Software Engineer at Prestige Staffing",
+    "essential_skills": [
+      {
+        "preferred_label": "Java (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/19a8293b-8e95-4de3-983f-77484079c389"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "integrate system components",
+        "uri": "http://data.europa.eu/esco/skill/ed8de897-adbe-4f0e-b4d2-534953e64c72"
+      },
+      {
+        "preferred_label": "align software with system architectures",
+        "uri": "http://data.europa.eu/esco/skill/2857540c-180b-4208-9127-e94a01871966"
+      }
+    ],
+    "reasoning": "Role is centered on building backend APIs and microservices in Java/Spring Boot, so Java is essential; integrating system components and architecture alignment reflect the microservices/messaging work with RabbitMQ and Redis."
+  },
+  {
+    "id": "P002",
+    "source_type": "posting",
+    "identifying_info": "Software Engineer at TRG",
+    "essential_skills": [
+      {
+        "preferred_label": "C#",
+        "uri": "http://data.europa.eu/esco/skill/4c016b68-4116-468c-9dc6-42710c239e4a"
+      },
+      {
+        "preferred_label": "ASP.NET",
+        "uri": "http://data.europa.eu/esco/skill/56a7f561-1d55-43c9-9cd7-36a0a9bc6c50"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "SQL Server",
+        "uri": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead"
+      },
+      {
+        "preferred_label": "JavaScript",
+        "uri": "http://data.europa.eu/esco/skill/3cd569a2-4f88-4c1e-9995-8dce8c5e51a7"
+      },
+      {
+        "preferred_label": "CSS",
+        "uri": "http://data.europa.eu/esco/skill/e5d1f825-60ed-4bdd-872a-e748c387f777"
+      }
+    ],
+    "reasoning": "Posting explicitly lists C#/.NET Core/ASP.NET as the primary development stack for web/desktop/mobile coding tasks, with SQL Server and front-end technologies as supporting tools."
+  },
+  {
+    "id": "P003",
+    "source_type": "posting",
+    "identifying_info": "Software Engineer for global computer software company in Redmond, WA. at OSI Engineering",
+    "essential_skills": [
+      {
+        "preferred_label": "C#",
+        "uri": "http://data.europa.eu/esco/skill/4c016b68-4116-468c-9dc6-42710c239e4a"
+      },
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Ansible",
+        "uri": "http://data.europa.eu/esco/skill/6f8a40d6-f9ce-43ec-a72f-d4213a53f3ed"
+      },
+      {
+        "preferred_label": "Puppet (tools for software configuration management)",
+        "uri": "http://data.europa.eu/esco/skill/6417a4cc-6f61-4459-a114-761a7fa0279d"
+      }
+    ],
+    "reasoning": "Role requires strong C# proficiency and deep cloud computing/deployment automation expertise (Azure/AWS/GCP); the listed infrastructure-as-code tools Ansible and Puppet are the only named automation tools present in the vocabulary (Docker/Kubernetes/Terraform are not in the taxonomy)."
+  },
+  {
+    "id": "P004",
+    "source_type": "posting",
+    "identifying_info": "Remote - Software Engineer - OIPA Configurator at State Farm",
+    "essential_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Oracle Relational Database",
+        "uri": "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+      }
+    ],
+    "reasoning": "Posting is heavy on business/insurance-domain context (OIPA policy administration) with only a generic mention of AWS hosting and Oracle-based systems, giving a thin match against the computing vocabulary."
+  },
+  {
+    "id": "P005",
+    "source_type": "posting",
+    "identifying_info": "Senior Data Scientist at Signify Technology",
+    "essential_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      },
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "R",
+        "uri": "http://data.europa.eu/esco/skill/51586df8-1c46-4b47-8583-773cb63bf00b"
+      },
+      {
+        "preferred_label": "apply statistical analysis techniques",
+        "uri": "http://data.europa.eu/esco/skill/382c11ed-20d5-4ae7-b60e-15fec527fa6c"
+      }
+    ],
+    "reasoning": "Role explicitly builds ML models for credit risk assessment using Python/R and statistical modeling techniques (logistic regression, random forests, gradient boosting), directly matching these vocabulary terms."
+  },
+  {
+    "id": "P006",
+    "source_type": "posting",
+    "identifying_info": "Marketing Analytics - Data Scientist Senior Associate at JPMorgan Chase & Co.",
+    "essential_skills": [
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      },
+      {
+        "preferred_label": "apply statistical analysis techniques",
+        "uri": "http://data.europa.eu/esco/skill/382c11ed-20d5-4ae7-b60e-15fec527fa6c"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "web analytics",
+        "uri": "http://data.europa.eu/esco/skill/1605025e-a179-421f-8f35-5b07d182a6b2"
+      },
+      {
+        "preferred_label": "R",
+        "uri": "http://data.europa.eu/esco/skill/51586df8-1c46-4b47-8583-773cb63bf00b"
+      }
+    ],
+    "reasoning": "Role applies statistical methods and SQL-based analysis for marketing campaign performance, with web analytics tools and R/Python among the preferred skills."
+  },
+  {
+    "id": "P007",
+    "source_type": "posting",
+    "identifying_info": "junior java programmer/data scientist at SynergisticIT",
+    "essential_skills": [
+      {
+        "preferred_label": "Java (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/19a8293b-8e95-4de3-983f-77484079c389"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "JavaScript",
+        "uri": "http://data.europa.eu/esco/skill/3cd569a2-4f88-4c1e-9995-8dce8c5e51a7"
+      },
+      {
+        "preferred_label": "Jenkins (tools for software configuration management)",
+        "uri": "http://data.europa.eu/esco/skill/f47a1998-0beb-43be-9f46-380aa4d183da"
+      }
+    ],
+    "reasoning": "Posting lists Java as the primary required language for full-stack/software roles, with Python, JavaScript and CI tooling like Jenkins as supporting technologies also sought."
+  },
+  {
+    "id": "P008",
+    "source_type": "posting",
+    "identifying_info": "Trader - Data Scientist at CPS, Inc.",
+    "essential_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "MySQL",
+        "uri": "http://data.europa.eu/esco/skill/4da171e5-779c-4983-a76f-91c16751e99f"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "R",
+        "uri": "http://data.europa.eu/esco/skill/51586df8-1c46-4b47-8583-773cb63bf00b"
+      },
+      {
+        "preferred_label": "perform data analysis",
+        "uri": "http://data.europa.eu/esco/skill/2b92a5b2-6758-4ee3-9fb4-b6387a55cc8f"
+      }
+    ],
+    "reasoning": "Role explicitly requires Python and SQL/MySQL proficiency for post-trade data analysis, with R mentioned as an alternative analytical tool."
+  },
+  {
+    "id": "P009",
+    "source_type": "posting",
+    "identifying_info": "Data Engineer at Piper Companies",
+    "essential_skills": [
+      {
+        "preferred_label": "data warehouse",
+        "uri": "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de"
+      },
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "data extraction, transformation and loading tools",
+        "uri": "http://data.europa.eu/esco/skill/9d0d89be-bffa-4393-b6f6-8d05bea49051"
+      },
+      {
+        "preferred_label": "create data models",
+        "uri": "http://data.europa.eu/esco/skill/fbafa41f-cd05-4109-a649-8b44d306d779"
+      }
+    ],
+    "reasoning": "Role centers on ETL development, SQL tuning and data warehousing/BI solutions, with Python and data modeling as supporting preferred skills."
+  },
+  {
+    "id": "P010",
+    "source_type": "posting",
+    "identifying_info": " GCP Data Engineer (Only W2) at TechWish",
+    "essential_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      },
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "data storage",
+        "uri": "http://data.europa.eu/esco/skill/a7f0fbe0-c546-4f30-8e41-34a58c64567e"
+      }
+    ],
+    "reasoning": "Role is built entirely around Google Cloud Platform data ingestion services (BigQuery, Pub/Sub, Cloud Storage) and SQL; the vocabulary has no GCP-specific terms so general cloud technologies is used as the closest match."
+  },
+  {
+    "id": "P011",
+    "source_type": "posting",
+    "identifying_info": "Sr Data Engineer with Kafka at ZenithMinds Inc",
+    "essential_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      },
+      {
+        "preferred_label": "data warehouse",
+        "uri": "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de"
+      }
+    ],
+    "reasoning": "Role requires strong Python and AWS experience alongside Snowflake SQL-based data engineering; Kafka, the most emphasized skill, has no vocabulary match, so this posting was hard to represent fully."
+  },
+  {
+    "id": "P012",
+    "source_type": "posting",
+    "identifying_info": "Data Engineer I, Revenue Reporting Service at Amazon",
+    "essential_skills": [
+      {
+        "preferred_label": "data warehouse",
+        "uri": "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de"
+      },
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "distributed computing",
+        "uri": "http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83"
+      }
+    ],
+    "reasoning": "Role designs data warehouses, SQL/NoSQL systems and distributed data-collection pipelines, with Python scripting and big-data/distributed technologies as supporting skills."
+  },
+  {
+    "id": "P013",
+    "source_type": "posting",
+    "identifying_info": "Architect, Machine Learning, Field CTO at Snowflake",
+    "essential_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      },
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "design enterprise architecture",
+        "uri": "http://data.europa.eu/esco/skill/ee3c1d54-f46a-43c7-a0f9-0ba3648164d0"
+      }
+    ],
+    "reasoning": "Role is an ML-focused architect working on Snowflake's cloud data platform and enterprise ML ecosystem architecture, matching machine learning, cloud technologies and enterprise architecture vocabulary terms."
+  },
+  {
+    "id": "P014",
+    "source_type": "posting",
+    "identifying_info": "Software Engineer, Machine Learning at Niantic, Inc.",
+    "essential_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      },
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "distributed computing",
+        "uri": "http://data.europa.eu/esco/skill/897b393f-e7e0-4248-a40d-d77119694e83"
+      },
+      {
+        "preferred_label": "DevOps",
+        "uri": "http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4"
+      }
+    ],
+    "reasoning": "Role builds and deploys generative AI/ML infrastructure primarily in Python, with distributed/cloud infrastructure and DevOps/CI-CD practices as supporting skills."
+  },
+  {
+    "id": "P015",
+    "source_type": "posting",
+    "identifying_info": "Machine Learning Engineer at Jobot",
+    "essential_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      },
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "principles of artificial intelligence",
+        "uri": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2"
+      },
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "reasoning": "Role builds deep learning computer-vision pipelines in Python (PyTorch/TensorFlow) for object detection/segmentation on cloud-hosted (S3) geospatial data; ML and Python are essential, AI principles and cloud technologies supporting."
+  },
+  {
+    "id": "P016",
+    "source_type": "posting",
+    "identifying_info": "Senior Machine Learning Engineer at Samson Rose",
+    "essential_skills": [
+      {
+        "preferred_label": "utilise machine learning",
+        "uri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+      },
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "C++",
+        "uri": "http://data.europa.eu/esco/skill/b633eb55-8f1f-4ae6-ab4c-2022ffe2cb7f"
+      },
+      {
+        "preferred_label": "principles of artificial intelligence",
+        "uri": "http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2"
+      }
+    ],
+    "reasoning": "Role designs computer-vision/AI algorithms and requires Python/C++ proficiency with ML development frameworks, matching ML and programming-language vocabulary terms as essential."
+  },
+  {
+    "id": "P017",
+    "source_type": "posting",
+    "identifying_info": "Senior Manager, Cybersecurity Product Management (Cloud/IAM) at Capital One",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "maintain ICT identity management",
+        "uri": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      },
+      {
+        "preferred_label": "develop information security strategy",
+        "uri": "http://data.europa.eu/esco/skill/3579208e-49b3-4ce4-98e7-20e41b1ce8d4"
+      }
+    ],
+    "reasoning": "Role leads identity and access management security product strategy in the cloud, directly matching cyber security and identity-management vocabulary terms."
+  },
+  {
+    "id": "P018",
+    "source_type": "posting",
+    "identifying_info": "Manager, Cybersecurity Engineering at T-Mobile",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "manage system security",
+        "uri": "http://data.europa.eu/esco/skill/2a3a96a3-709e-4d60-81f6-d247d6933f13"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "ICT security standards",
+        "uri": "http://data.europa.eu/esco/skill/3ff589b7-68df-4ea5-ae41-b395bdb2378f"
+      },
+      {
+        "preferred_label": "implement ICT risk management",
+        "uri": "http://data.europa.eu/esco/skill/69cfc5ed-6569-4aca-a4cc-fd782ba51d9c"
+      }
+    ],
+    "reasoning": "Role leads a cybersecurity engineering team responsible for network security infrastructure, incident response, firewalls and security policy enforcement, matching these security-management vocabulary terms."
+  },
+  {
+    "id": "P019",
+    "source_type": "posting",
+    "identifying_info": "Cybersecurity Test Engineer – Remote at Decision Point Security, Inc.",
+    "essential_skills": [
+      {
+        "preferred_label": "penetration testing tool",
+        "uri": "http://data.europa.eu/esco/skill/de586dcf-d7e5-4340-bf5b-d59026f1b436"
+      },
+      {
+        "preferred_label": "perform security vulnerability assessments",
+        "uri": "http://data.europa.eu/esco/skill/f4a85869-1855-45d5-a43c-7ee8cd451996"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "manage IT security compliances",
+        "uri": "http://data.europa.eu/esco/skill/06358891-8424-43c5-891e-d40f226bef40"
+      }
+    ],
+    "reasoning": "Role is explicitly focused on penetration testing, vulnerability research and compliance assessments (PCI/FISMA/HIPAA), directly matching these vocabulary terms."
+  },
+  {
+    "id": "P020",
+    "source_type": "posting",
+    "identifying_info": "Sr. Distinguished Cybersecurity Engineer, Cryptography at Capital One",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "ICT encryption",
+        "uri": "http://data.europa.eu/esco/skill/d32db06e-bd06-4415-a7ab-1b0ee68caa9a"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      },
+      {
+        "preferred_label": "define security policies",
+        "uri": "http://data.europa.eu/esco/skill/37bc4dc0-1233-4008-98db-1116d0c1cfcc"
+      }
+    ],
+    "reasoning": "Role is a distinguished cybersecurity engineer focused on cryptography and cloud-native security architecture, directly matching cyber security and encryption vocabulary terms."
+  },
+  {
+    "id": "P021",
+    "source_type": "posting",
+    "identifying_info": "Information Security Manager at Select Source International",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "define firewall rules",
+        "uri": "http://data.europa.eu/esco/skill/054f26ab-cfdc-4077-883c-1c4c9e9b310a"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "implement ICT risk management",
+        "uri": "http://data.europa.eu/esco/skill/69cfc5ed-6569-4aca-a4cc-fd782ba51d9c"
+      },
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      }
+    ],
+    "reasoning": "Role manages hands-on enterprise security operations (firewalls, VPN, SIEM, incident response) and risk assessment using NIST standards, with PowerShell/Perl scripting as a supporting skill."
+  },
+  {
+    "id": "P022",
+    "source_type": "posting",
+    "identifying_info": "Lead Information Security Engineer - Directory Security at Wells Fargo",
+    "essential_skills": [
+      {
+        "preferred_label": "maintain ICT identity management",
+        "uri": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03"
+      },
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "LDAP",
+        "uri": "http://data.europa.eu/esco/skill/a57a54b6-2f2e-43e4-9621-b52f4a63cb08"
+      },
+      {
+        "preferred_label": "define security policies",
+        "uri": "http://data.europa.eu/esco/skill/37bc4dc0-1233-4008-98db-1116d0c1cfcc"
+      }
+    ],
+    "reasoning": "Role provides technical leadership designing authentication/directory server (LDAP) solutions and broader information security controls, directly matching identity-management and LDAP vocabulary terms."
+  },
+  {
+    "id": "P023",
+    "source_type": "posting",
+    "identifying_info": "Sr. Information Security Engineer at Bill & Melinda Gates Foundation",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "perform security vulnerability assessments",
+        "uri": "http://data.europa.eu/esco/skill/f4a85869-1855-45d5-a43c-7ee8cd451996"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "implement ICT risk management",
+        "uri": "http://data.europa.eu/esco/skill/69cfc5ed-6569-4aca-a4cc-fd782ba51d9c"
+      }
+    ],
+    "reasoning": "Role performs security incident investigation/response and vulnerability assessments while designing technical security controls, matching these vocabulary terms as essential."
+  },
+  {
+    "id": "P024",
+    "source_type": "posting",
+    "identifying_info": "Information Security Director at PBF Energy",
+    "essential_skills": [
+      {
+        "preferred_label": "cyber security",
+        "uri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44"
+      },
+      {
+        "preferred_label": "develop information security strategy",
+        "uri": "http://data.europa.eu/esco/skill/3579208e-49b3-4ce4-98e7-20e41b1ce8d4"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "implement ICT risk management",
+        "uri": "http://data.europa.eu/esco/skill/69cfc5ed-6569-4aca-a4cc-fd782ba51d9c"
+      },
+      {
+        "preferred_label": "manage disaster recovery plans",
+        "uri": "http://data.europa.eu/esco/skill/64852ade-6ae1-4760-ba4a-976bf07ca255"
+      }
+    ],
+    "reasoning": "Role directs enterprise cyber security strategy aligned to the NIST Cybersecurity Framework, incident response and audits, matching security-strategy vocabulary terms as essential."
+  },
+  {
+    "id": "P025",
+    "source_type": "posting",
+    "identifying_info": "Senior DevOps Engineer at Finfare",
+    "essential_skills": [
+      {
+        "preferred_label": "DevOps",
+        "uri": "http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4"
+      },
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "tools for software configuration management",
+        "uri": "http://data.europa.eu/esco/skill/9d2e926f-53d9-41f5-98f3-19dfaa687f3f"
+      }
+    ],
+    "reasoning": "Role explicitly performs cloud environment administration, CI/CD and infrastructure-as-code automation (Docker/Kubernetes/Terraform are not represented in the vocabulary, limiting exact matches)."
+  },
+  {
+    "id": "P026",
+    "source_type": "posting",
+    "identifying_info": "AWS DevOps Engineer at Tech Consulting",
+    "essential_skills": [
+      {
+        "preferred_label": "DevOps",
+        "uri": "http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4"
+      },
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      }
+    ],
+    "reasoning": "Role builds AWS-based DevOps pipelines using core AWS services, Python/Java and SQL/NoSQL databases, matching DevOps and cloud technologies as essential."
+  },
+  {
+    "id": "P027",
+    "source_type": "posting",
+    "identifying_info": "DevOps Engineer at ",
+    "essential_skills": [
+      {
+        "preferred_label": "maintain ICT identity management",
+        "uri": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "LDAP",
+        "uri": "http://data.europa.eu/esco/skill/a57a54b6-2f2e-43e4-9621-b52f4a63cb08"
+      }
+    ],
+    "reasoning": "Despite the 'DevOps Engineer' title, the actual content is entirely about LDAP/Ping Identity access management and SSO federation, so identity management and LDAP are the substantive matches."
+  },
+  {
+    "id": "P028",
+    "source_type": "posting",
+    "identifying_info": "Senior DevOps Engineer (CLT) at Matlen Silver",
+    "essential_skills": [
+      {
+        "preferred_label": "DevOps",
+        "uri": "http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4"
+      },
+      {
+        "preferred_label": "Ansible",
+        "uri": "http://data.europa.eu/esco/skill/6f8a40d6-f9ce-43ec-a72f-d4213a53f3ed"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Jenkins (tools for software configuration management)",
+        "uri": "http://data.europa.eu/esco/skill/f47a1998-0beb-43be-9f46-380aa4d183da"
+      },
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      }
+    ],
+    "reasoning": "Role explicitly lists Git, Jenkins, Ansible, Kubernetes and OOP/shell scripting as required DevOps tooling, matching DevOps and configuration-management vocabulary terms as essential."
+  },
+  {
+    "id": "P029",
+    "source_type": "posting",
+    "identifying_info": "Cloud Engineer at Leidos",
+    "essential_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      },
+      {
+        "preferred_label": "ICT infrastructure",
+        "uri": "http://data.europa.eu/esco/skill/d0c6d77e-cb25-4770-bf77-2073fc5f7523"
+      }
+    ],
+    "reasoning": "Role architects cloud migration solutions across AWS/Azure/IC ITE government cloud frameworks with BASH automation, matching cloud technologies as the clear essential skill."
+  },
+  {
+    "id": "P030",
+    "source_type": "posting",
+    "identifying_info": "Cloud Engineer at Computech Corporation",
+    "essential_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "monitor system performance",
+        "uri": "http://data.europa.eu/esco/skill/9190d87f-9792-42e0-bb7f-64294a656bcd"
+      },
+      {
+        "preferred_label": "manage changes in ICT system",
+        "uri": "http://data.europa.eu/esco/skill/1e7ed56a-6d6b-422f-962e-38543d150755"
+      }
+    ],
+    "reasoning": "Role operates and optimizes Azure cloud infrastructure with monitoring/alerting and incident management, matching cloud technologies as essential and system monitoring as supporting."
+  },
+  {
+    "id": "P031",
+    "source_type": "posting",
+    "identifying_info": "Cloud Engineer at Harvey Nash",
+    "essential_skills": [
+      {
+        "preferred_label": "administer ICT system",
+        "uri": "http://data.europa.eu/esco/skill/0868eef3-2213-4572-9343-74931345a7d3"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "maintain ICT server",
+        "uri": "http://data.europa.eu/esco/skill/f5ac9226-0ace-4d34-a1c3-7b3845834a98"
+      },
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      }
+    ],
+    "reasoning": "Role performs general systems engineering (install/configure/support servers and infrastructure) with database commands and scripting, matching general ICT system administration vocabulary terms."
+  },
+  {
+    "id": "P032",
+    "source_type": "posting",
+    "identifying_info": "AWS Cloud Engineer at Vernovis",
+    "essential_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      },
+      {
+        "preferred_label": "DevOps",
+        "uri": "http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "monitor system performance",
+        "uri": "http://data.europa.eu/esco/skill/9190d87f-9792-42e0-bb7f-64294a656bcd"
+      },
+      {
+        "preferred_label": "manage disaster recovery plans",
+        "uri": "http://data.europa.eu/esco/skill/64852ade-6ae1-4760-ba4a-976bf07ca255"
+      }
+    ],
+    "reasoning": "Role manages all facets of an AWS cloud environment including DevOps functionality, monitoring and disaster recovery planning, matching cloud technologies and DevOps as essential."
+  },
+  {
+    "id": "P033",
+    "source_type": "posting",
+    "identifying_info": "Oracle Database Administrator at System Soft Technologies",
+    "essential_skills": [
+      {
+        "preferred_label": "Oracle Relational Database",
+        "uri": "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+      },
+      {
+        "preferred_label": "maintain database performance",
+        "uri": "http://data.europa.eu/esco/skill/d6cdef49-b669-4507-91d1-3f959cf98e47"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      },
+      {
+        "preferred_label": "database management systems",
+        "uri": "http://data.europa.eu/esco/skill/ab1e97ed-2319-4293-a8b7-072d2648822f"
+      }
+    ],
+    "reasoning": "Role administers Oracle/MariaDB relational databases focusing on stability, scalability and performance tuning, directly matching database administration vocabulary terms."
+  },
+  {
+    "id": "P034",
+    "source_type": "posting",
+    "identifying_info": "SQL Database Administrator at Planet Technology",
+    "essential_skills": [
+      {
+        "preferred_label": "SQL Server",
+        "uri": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead"
+      },
+      {
+        "preferred_label": "manage database",
+        "uri": "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "SQL Server Integration Services",
+        "uri": "http://data.europa.eu/esco/skill/6f7512ab-d46d-402a-8c30-a8878d7c1f88"
+      },
+      {
+        "preferred_label": "data warehouse",
+        "uri": "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de"
+      }
+    ],
+    "reasoning": "Role is explicitly a SQL Server DBA using SSRS/SSIS/SSAS and building ETL processes into a data warehouse, directly matching these vocabulary terms."
+  },
+  {
+    "id": "P035",
+    "source_type": "posting",
+    "identifying_info": "Database Administrator 4 at WEX",
+    "essential_skills": [
+      {
+        "preferred_label": "SQL Server",
+        "uri": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead"
+      },
+      {
+        "preferred_label": "maintain database performance",
+        "uri": "http://data.europa.eu/esco/skill/d6cdef49-b669-4507-91d1-3f959cf98e47"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      },
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      }
+    ],
+    "reasoning": "Role is a SQL Server DBA responsible for performance monitoring, availability and data ingestion, managed partly in Azure, matching SQL Server and database performance vocabulary terms."
+  },
+  {
+    "id": "P036",
+    "source_type": "posting",
+    "identifying_info": "Database Administrator (BOCA RATON) at Ledgent Technology",
+    "essential_skills": [
+      {
+        "preferred_label": "SQL Server",
+        "uri": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead"
+      },
+      {
+        "preferred_label": "maintain database security",
+        "uri": "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "design database backup specifications",
+        "uri": "http://data.europa.eu/esco/skill/ab67fbfb-0ca7-4345-8bf6-af8f59480212"
+      },
+      {
+        "preferred_label": "maintain database performance",
+        "uri": "http://data.europa.eu/esco/skill/d6cdef49-b669-4507-91d1-3f959cf98e47"
+      }
+    ],
+    "reasoning": "Role administers, secures and tunes SQL Server databases including backup/recovery strategy, directly matching these database administration vocabulary terms."
+  },
+  {
+    "id": "P037",
+    "source_type": "posting",
+    "identifying_info": "Systems Administrator III at ManTech",
+    "essential_skills": [
+      {
+        "preferred_label": "administer ICT system",
+        "uri": "http://data.europa.eu/esco/skill/0868eef3-2213-4572-9343-74931345a7d3"
+      },
+      {
+        "preferred_label": "maintain ICT system",
+        "uri": "http://data.europa.eu/esco/skill/fbbcb9ab-4b95-4e57-a756-30d08b7da7a5"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "manage ICT virtualisation machines",
+        "uri": "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce"
+      },
+      {
+        "preferred_label": "perform backups",
+        "uri": "http://data.europa.eu/esco/skill/cf3e976d-2c3e-495c-a874-f9e8a66d3b48"
+      }
+    ],
+    "reasoning": "Role maintains, configures and ensures reliable operation of servers, virtualization and backup/disaster-recovery processes, matching general ICT system administration vocabulary terms as essential."
+  },
+  {
+    "id": "P038",
+    "source_type": "posting",
+    "identifying_info": "Systems Administrator (Tier 2 Deskside Support), Mid at General Dynamics Information Technology",
+    "essential_skills": [
+      {
+        "preferred_label": "administer ICT system",
+        "uri": "http://data.europa.eu/esco/skill/0868eef3-2213-4572-9343-74931345a7d3"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "handle helpdesk problems",
+        "uri": "http://data.europa.eu/esco/skill/118efbcd-8fc5-4668-81d1-c383a0d16070"
+      },
+      {
+        "preferred_label": "perform ICT troubleshooting",
+        "uri": "http://data.europa.eu/esco/skill/744442ac-c157-4350-8be0-ce454df4f5c5"
+      }
+    ],
+    "reasoning": "Role is Tier 2 deskside/helpdesk support troubleshooting end-user IT systems and devices, matching general system administration and helpdesk vocabulary terms."
+  },
+  {
+    "id": "P039",
+    "source_type": "posting",
+    "identifying_info": "HPC Systems Administrator at Piper Companies",
+    "essential_skills": [
+      {
+        "preferred_label": "administer ICT system",
+        "uri": "http://data.europa.eu/esco/skill/0868eef3-2213-4572-9343-74931345a7d3"
+      },
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "Perl",
+        "uri": "http://data.europa.eu/esco/skill/401eb8d8-6daa-4f8b-90ad-60afc71eb4f8"
+      }
+    ],
+    "reasoning": "Role manages a Linux-based HPC clustered computing environment and uses Bash/Python/Perl/R scripting for job scheduling and debugging pipelines, matching system administration and scripting vocabulary terms."
+  },
+  {
+    "id": "P040",
+    "source_type": "posting",
+    "identifying_info": "Network and Systems Administrator at SpotOn",
+    "essential_skills": [
+      {
+        "preferred_label": "administer ICT system",
+        "uri": "http://data.europa.eu/esco/skill/0868eef3-2213-4572-9343-74931345a7d3"
+      },
+      {
+        "preferred_label": "maintain information network hardware",
+        "uri": "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "maintain ICT identity management",
+        "uri": "http://data.europa.eu/esco/skill/ab49f767-296b-47d5-af56-0b4a69515b03"
+      },
+      {
+        "preferred_label": "define firewall rules",
+        "uri": "http://data.europa.eu/esco/skill/054f26ab-cfdc-4077-883c-1c4c9e9b310a"
+      }
+    ],
+    "reasoning": "Role designs, configures and administers LAN/WLAN/WAN/VPN network infrastructure and identity provider platforms, matching system/network administration vocabulary terms as essential."
+  },
+  {
+    "id": "P041",
+    "source_type": "posting",
+    "identifying_info": "Web Developer at ",
+    "essential_skills": [
+      {
+        "preferred_label": "web programming",
+        "uri": "http://data.europa.eu/esco/skill/69bbd53f-fbb0-4476-b4b2-ef7844464e28"
+      },
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "cloud technologies",
+        "uri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0"
+      },
+      {
+        "preferred_label": "ABAP",
+        "uri": "http://data.europa.eu/esco/skill/eb0e5615-1575-4a86-a1a2-7d39595033c5"
+      }
+    ],
+    "reasoning": "Internship role builds frontend (React) and backend (Django/Python) web systems deployed to Azure, matching web programming and Python as essential; cloud and ABAP experience are listed as supporting/bonus skills."
+  },
+  {
+    "id": "P042",
+    "source_type": "posting",
+    "identifying_info": "Graphic Designer and Web Developer at Seek",
+    "essential_skills": [
+      {
+        "preferred_label": "design graphics",
+        "uri": "http://data.europa.eu/esco/skill/f058bf62-70d1-4f5e-be2a-8b26fac24a96"
+      },
+      {
+        "preferred_label": "CSS",
+        "uri": "http://data.europa.eu/esco/skill/e5d1f825-60ed-4bdd-872a-e748c387f777"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Adobe Illustrator",
+        "uri": "http://data.europa.eu/esco/skill/27b913f0-3c52-448b-ad27-fc6ef08fb326"
+      },
+      {
+        "preferred_label": "Adobe Photoshop",
+        "uri": "http://data.europa.eu/esco/skill/14ced458-5f4b-495f-bd3d-9c240614bda0"
+      },
+      {
+        "preferred_label": "JavaScript",
+        "uri": "http://data.europa.eu/esco/skill/3cd569a2-4f88-4c1e-9995-8dce8c5e51a7"
+      }
+    ],
+    "reasoning": "Role is primarily graphic design work (branding, social/print graphics) combined with WordPress website maintenance using CSS3/HTML5/JavaScript, matching design and front-end vocabulary terms."
+  },
+  {
+    "id": "P043",
+    "source_type": "posting",
+    "identifying_info": "Web Developer at DataAnnotation",
+    "essential_skills": [
+      {
+        "preferred_label": "computer programming",
+        "uri": "http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97"
+      },
+      {
+        "preferred_label": "web programming",
+        "uri": "http://data.europa.eu/esco/skill/69bbd53f-fbb0-4476-b4b2-ef7844464e28"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "JavaScript",
+        "uri": "http://data.europa.eu/esco/skill/3cd569a2-4f88-4c1e-9995-8dce8c5e51a7"
+      }
+    ],
+    "reasoning": "Role requires proficiency in at least one general-purpose programming/web language to write and evaluate code for training AI coding assistants, matching general programming vocabulary terms."
+  },
+  {
+    "id": "P044",
+    "source_type": "posting",
+    "identifying_info": "Web Developer and Designer, Senior with Security Clearance at ClearanceJobs",
+    "essential_skills": [
+      {
+        "preferred_label": "design user interface",
+        "uri": "http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e"
+      },
+      {
+        "preferred_label": "ICT accessibility standards",
+        "uri": "http://data.europa.eu/esco/skill/3e23db60-0c3d-498a-a6ac-ffbed0ecb033"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Adobe Illustrator",
+        "uri": "http://data.europa.eu/esco/skill/27b913f0-3c52-448b-ad27-fc6ef08fb326"
+      },
+      {
+        "preferred_label": "usability engineering",
+        "uri": "http://data.europa.eu/esco/skill/95ee5e38-5c1e-4cd2-a21d-6921390025a9"
+      }
+    ],
+    "reasoning": "Senior role explicitly designs web UI/UX with attention to Section 508 accessibility compliance and usability best practices, directly matching these vocabulary terms."
+  },
+  {
+    "id": "P045",
+    "source_type": "posting",
+    "identifying_info": "Network Engineer at Zufall Health",
+    "essential_skills": [
+      {
+        "preferred_label": "maintain information network hardware",
+        "uri": "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37"
+      },
+      {
+        "preferred_label": "administer ICT system",
+        "uri": "http://data.europa.eu/esco/skill/0868eef3-2213-4572-9343-74931345a7d3"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Cisco",
+        "uri": "http://data.europa.eu/esco/skill/709ef32a-7435-48e2-8fa2-16e389ecab8a"
+      },
+      {
+        "preferred_label": "define firewall rules",
+        "uri": "http://data.europa.eu/esco/skill/054f26ab-cfdc-4077-883c-1c4c9e9b310a"
+      }
+    ],
+    "reasoning": "Role maintains and administers the organization's LAN/WAN network, servers and firewalls, with Cisco switches specifically named, matching network/system administration vocabulary terms."
+  },
+  {
+    "id": "P046",
+    "source_type": "posting",
+    "identifying_info": "Sr. Radio Frequency Network Engineer, SBG at DSS, Inc.",
+    "essential_skills": [
+      {
+        "preferred_label": "ICT communications protocols",
+        "uri": "http://data.europa.eu/esco/skill/6e4f75b4-c60f-4623-a9ba-760c8245753b"
+      },
+      {
+        "preferred_label": "design computer network",
+        "uri": "http://data.europa.eu/esco/skill/2164e860-7f20-48bc-b98c-5d9f8a561550"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "ICT network security risks",
+        "uri": "http://data.europa.eu/esco/skill/2ddb1226-1117-4eb4-ae65-3a2f5a5a3c80"
+      },
+      {
+        "preferred_label": "telecommunication trunking",
+        "uri": "http://data.europa.eu/esco/skill/4f1afd9d-77a7-40f8-a3c7-fe18b984ce43"
+      }
+    ],
+    "reasoning": "Role designs and secures satellite/ground network infrastructure and communication protocols for a mission-critical system, matching network design and protocol vocabulary terms as essential."
+  },
+  {
+    "id": "P047",
+    "source_type": "posting",
+    "identifying_info": "*Hybrid* Network Engineer (Appleton, WI) at TEKsystems",
+    "essential_skills": [
+      {
+        "preferred_label": "design computer network",
+        "uri": "http://data.europa.eu/esco/skill/2164e860-7f20-48bc-b98c-5d9f8a561550"
+      },
+      {
+        "preferred_label": "define firewall rules",
+        "uri": "http://data.europa.eu/esco/skill/054f26ab-cfdc-4077-883c-1c4c9e9b310a"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "maintain information network hardware",
+        "uri": "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37"
+      },
+      {
+        "preferred_label": "LDAP",
+        "uri": "http://data.europa.eu/esco/skill/a57a54b6-2f2e-43e4-9621-b52f4a63cb08"
+      }
+    ],
+    "reasoning": "Role leads design, configuration and administration of routers, switches, firewalls and VPNs as the sole network engineer, directly matching these network engineering vocabulary terms."
+  },
+  {
+    "id": "P048",
+    "source_type": "posting",
+    "identifying_info": "Sr. Network Engineer, AI Infrastructure at Tesla",
+    "essential_skills": [
+      {
+        "preferred_label": "design computer network",
+        "uri": "http://data.europa.eu/esco/skill/2164e860-7f20-48bc-b98c-5d9f8a561550"
+      },
+      {
+        "preferred_label": "ICT communications protocols",
+        "uri": "http://data.europa.eu/esco/skill/6e4f75b4-c60f-4623-a9ba-760c8245753b"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "use scripting programming",
+        "uri": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+      },
+      {
+        "preferred_label": "monitor communication channels' performance",
+        "uri": "http://data.europa.eu/esco/skill/e08821b5-d6dd-4db9-a0f1-43185653c244"
+      }
+    ],
+    "reasoning": "Role designs and operates large-scale datacenter network infrastructure and protocols (BGP/OSPF/VXLAN) with automation scripting for deployment, matching network design vocabulary terms as essential."
+  },
+  {
+    "id": "P049",
+    "source_type": "posting",
+    "identifying_info": "GME Business Intelligence Analyst II WFH at Talentify.io",
+    "essential_skills": [
+      {
+        "preferred_label": "business intelligence",
+        "uri": "http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c"
+      },
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "deliver visual presentation of data",
+        "uri": "http://data.europa.eu/esco/skill/c3e36d05-8ae8-447f-bb2b-6f9409f85389"
+      }
+    ],
+    "reasoning": "Role builds BI dashboards from large healthcare datasets using SQL and BI tools (PowerBI/Tableau/Microstrategy), directly matching business intelligence and query language vocabulary terms."
+  },
+  {
+    "id": "P050",
+    "source_type": "posting",
+    "identifying_info": "Business Intelligence Analyst at ClickUp",
+    "essential_skills": [
+      {
+        "preferred_label": "business intelligence",
+        "uri": "http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c"
+      },
+      {
+        "preferred_label": "apply statistical analysis techniques",
+        "uri": "http://data.europa.eu/esco/skill/382c11ed-20d5-4ae7-b60e-15fec527fa6c"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      }
+    ],
+    "reasoning": "Role analyzes and visualizes revenue-operations data with statistical forecasting/modeling using SQL, Python, R and BI tools, matching business intelligence and statistical analysis as essential."
+  },
+  {
+    "id": "P051",
+    "source_type": "posting",
+    "identifying_info": "Business Intelligence Analyst at BIGO",
+    "essential_skills": [
+      {
+        "preferred_label": "business intelligence",
+        "uri": "http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c"
+      },
+      {
+        "preferred_label": "query languages",
+        "uri": "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "Python (computer programming)",
+        "uri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+      },
+      {
+        "preferred_label": "track key performance indicators",
+        "uri": "http://data.europa.eu/esco/skill/8dcbcabe-09f7-4d11-940d-125af57bbc40"
+      }
+    ],
+    "reasoning": "Role owns internal analytics/reporting pipelines using SQL, Python and Excel, aligning KPIs across teams, matching business intelligence and query language vocabulary terms as essential."
+  },
+  {
+    "id": "P052",
+    "source_type": "posting",
+    "identifying_info": "Senior Business Intelligence Analyst  at Alter Behavioral Health",
+    "essential_skills": [
+      {
+        "preferred_label": "business intelligence",
+        "uri": "http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c"
+      },
+      {
+        "preferred_label": "deliver visual presentation of data",
+        "uri": "http://data.europa.eu/esco/skill/c3e36d05-8ae8-447f-bb2b-6f9409f85389"
+      }
+    ],
+    "optional_skills": [
+      {
+        "preferred_label": "track key performance indicators",
+        "uri": "http://data.europa.eu/esco/skill/8dcbcabe-09f7-4d11-940d-125af57bbc40"
+      },
+      {
+        "preferred_label": "Agile project management",
+        "uri": "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4"
+      }
+    ],
+    "reasoning": "Role builds BI visualizations, dashboards and KPI/KRI scorecards using specialist analytics tools (Snowflake, DBT, ThoughtSpot) in an agile workflow, matching these vocabulary terms as essential."
+  }
+]
