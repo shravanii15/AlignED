@@ -71,8 +71,22 @@ course_pattern = re.compile(r"^(.*?)\s*\(([A-Z]{2,4}\s?\d{4})\)\s*$")
 def scrape_program(name, url):
     """Handles Georgia Tech's OMS catalog pages.
     Pattern: a <strong>/<b> tag reading "Course Name (CODE 1234)" immediately
-    followed by a text description. This is the original parser and is left
-    exactly as it was so the two Georgia Tech programs keep working."""
+    followed by a text description.
+
+    BUG FIX (found during Week 2 gold-set prep): Georgia Tech's page
+    actually lists every course 3 times in slightly different HTML layouts
+    (a short list, then two fuller sections). The original version of this
+    function used `bold_tag.find_next(string=True)`, which grabs the very
+    next text node in the document -- fragile against that repetition, and
+    it was quietly grabbing the heading text itself back as the
+    "description" instead of the real paragraph (e.g. "Deep Learning
+    (CS 7643)" instead of the actual multi-sentence description). Fixed by
+    reading the whole containing paragraph's text and stripping the
+    heading off the front, the same more robust technique used by the
+    newer parsers below -- and by keeping the LONGEST version found across
+    all three repeated listings, since "keep the longest description"
+    logic was already here but had nothing good to compare against
+    before."""
     print(f"Fetching: {name}")
     response = requests.get(url, headers=headers, timeout=30)
     response.raise_for_status()
@@ -88,8 +102,21 @@ def scrape_program(name, url):
         course_name = match.group(1).strip()
         course_code = match.group(2).strip()
 
-        next_node = bold_tag.find_next(string=True)
-        description = next_node.strip() if next_node else ""
+        # GT's page groups multiple courses inside one shared paragraph, so
+        # grabbing the whole paragraph's text (like the first version of
+        # this fix did) bleeds into the next course(s)' text too. Instead,
+        # walk forward node by node and stop the moment we reach another
+        # bold heading -- that's the real boundary of this course's own
+        # description, wherever it happens to sit in the page structure.
+        description_parts = []
+        for node in bold_tag.find_all_next(string=True):
+            parent_bold = node.find_parent(["strong", "b"])
+            if parent_bold is not None and parent_bold is not bold_tag:
+                break
+            node_text = node.strip()
+            if node_text and node_text != text:
+                description_parts.append(node_text)
+        description = " ".join(description_parts).strip(" -–:")
 
         if course_code not in seen or len(description) > len(seen[course_code]["description"]):
             seen[course_code] = {
