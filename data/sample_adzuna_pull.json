@@ -1,167 +1,160 @@
 [
   {
-    "redirect_url": "https://www.adzuna.com/land/ad/5812147554?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=503411EA760E03C836518E570A31C30C6BC46662",
-    "title": "Data Scientist",
-    "created": "2026-07-23T05:48:54Z",
+    "salary_min": 145438.75,
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
+      "tag": "scientific-qa-jobs",
+      "label": "Scientific & QA Jobs"
     },
-    "salary_min": 120000,
-    "company": {
-      "display_name": "ManTech International",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "id": "5812147554",
-    "salary_max": 160000,
-    "latitude": 38.776903,
-    "longitude": -77.187169,
-    "salary_is_predicted": "0",
-    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMjE0NzU1NCIsInMiOiI0R0UyLVIyVzhSRzJ4ZmN0NU55dkF3In0.qR3HAubtgWhoN79wVuqyz0K91E_bl6Q-d7IOESTpFJo",
+    "created": "2026-08-12T20:49:40Z",
     "location": {
       "area": [
         "US",
-        "Virginia",
-        "Fairfax County",
-        "West Springfield"
+        "North Carolina"
       ],
       "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "West Springfield, Fairfax County"
+      "display_name": "North Carolina, US"
     },
-    "__CLASS__": "Adzuna::API::Response::Job"
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzOTE0NDA3OSIsInMiOiJqdU9sZS1lVzhSR0xxLTFQX2RlelZ3In0.GVXDXsz_qy6bU4DlTGamVZz_LewfqZNvgSt8Fzw06TM",
+    "company": {
+      "display_name": "VivoSense, Inc.",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "id": "5839144079",
+    "longitude": -79.472486,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 35.631186,
+    "description": "Data Scientist (Level depending on experience) Remote (US) About VivoSense VivoSense is a science-first digital health company building the future of patient-centered evidence through advanced biosensor analytics. We partner with pharmaceutical companies, biotechnology organizations, and academic researchers to transform high-resolution sensor signals into validated digital measures that improve clinical trials and accelerate the development of new therapies. Our work spans the full scientific \u2026",
+    "salary_max": 145438.75,
+    "title": "Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5839144079?se=juOle-eW8RGLq-1P_dezVw&utm_medium=api&utm_source=851bf6c5&v=30613F12139458AE1F719517F927E4B4CE321A30",
+    "salary_is_predicted": "1"
   },
   {
-    "salary_max": 104652.35,
+    "title": "Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5839216800?se=juOle-eW8RGLq-1P_dezVw&utm_medium=api&utm_source=851bf6c5&v=1655D072E31920BEA640CDB715A980A0F53D9BDD",
+    "salary_is_predicted": "1",
+    "salary_max": 144685.75,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -83.574124,
+    "description": "Data Scientist (Level depending on experience) Remote (US) About VivoSense VivoSense is a science-first digital health company building the future of patient-centered evidence through advanced biosensor analytics. We partner with pharmaceutical companies, biotechnology organizations, and academic researchers to transform high-resolution sensor signals into validated digital measures that improve clinical trials and accelerate the development of new therapies. Our work spans the full scientific \u2026",
+    "latitude": 32.814593,
+    "id": "5839216800",
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Procter & Gamble"
+      "display_name": "VivoSense, Inc.",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "id": "5835035362",
-    "created": "2026-08-09T18:59:43Z",
-    "salary_min": 104652.35,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzOTIxNjgwMCIsInMiOiJqdU9sZS1lVzhSR0xxLTFQX2RlelZ3In0.Kx4HKde8mn8BZp9GsS81zfPbDnk-ugaOESOhRV60SbE",
+    "location": {
+      "area": [
+        "US",
+        "Georgia"
+      ],
+      "display_name": "Georgia, US",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "salary_min": 144685.75,
     "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "scientific-qa-jobs",
+      "label": "Scientific & QA Jobs"
+    },
+    "created": "2026-08-12T21:57:56Z"
+  },
+  {
+    "created": "2026-08-12T21:52:19Z",
+    "category": {
+      "label": "Scientific & QA Jobs",
+      "tag": "scientific-qa-jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5835035362?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=3FDD5A73BB2203615FC47C3FF54C0DA1AB6455D2",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiNEdFMi1SMlc4UkcyeGZjdDVOeXZBdyIsImkiOiI1ODM1MDM1MzYyIn0.TXhKe94_mB_JwWe-eUrN1sMvHi3Bc-hXXipH7eq2Gqw",
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 153270.34,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoianVPbGUtZVc4UkdMcS0xUF9kZXpWdyIsImkiOiI1ODM5MjA5ODY3In0.DFWLA4P1Dmxh_s7xlwI5wtiw_Uj-jr49Gi6571nrJLo",
     "location": {
-      "display_name": "Cincinnati, Hamilton County",
-      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Ohio",
-        "Hamilton County",
-        "Cincinnati"
-      ]
-    },
-    "longitude": -84.502154,
-    "salary_is_predicted": "1",
-    "description": "Job Location CINCINNATI GENERAL OFFICES Job Description Do you enjoy solving billion-dollar data science problems across trillions of data points? Are you passionate about working at the cutting edge of interdisciplinary boundaries, where computer science meets hard science? If you like turning untidy data into nonobvious insights and surprising business leaders with the transformative power of Artificial Intelligence (AI), including Generative and Agentic AI, we want you on our team at P&G. As\u2026",
-    "latitude": 39.105431
-  },
-  {
-    "location": {
-      "display_name": "Bedford, Middlesex County",
+        "Florida",
+        "Florida"
+      ],
       "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Massachusetts",
-        "Middlesex County",
-        "Bedford"
-      ]
+      "display_name": "Florida"
     },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNzIwNTYzOCIsInMiOiI0R0UyLVIyVzhSRzJ4ZmN0NU55dkF3In0.5sV7Q1EC4QAHkv9KdQlCxi42Cbk7CHThfl_w3nlO6zE",
-    "latitude": 42.491671,
-    "description": "Our client is seeking a talented Data Scientist to join their team as an independent remote employee. Our team brings data science and machine learning to the private equity investment process, providing unparalleled access to alternative data sources and proprietary data from portfolio companies. You'll be at the forefront of high-value tactical workflows that drive all aspects of the investment process. As a Data Scientist with our client, you'll have the opportunity to own due diligence proc\u2026",
-    "salary_is_predicted": "1",
-    "longitude": -71.275992,
-    "id": "5837205638",
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "The Hollister Group"
-    },
-    "salary_max": 198688.84,
-    "redirect_url": "https://www.adzuna.com/land/ad/5837205638?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=3030861C83D819E6AEA9E54DD46692659BA42E8B",
-    "title": "Data Scientist - NYC",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Accounting & Finance Jobs",
-      "tag": "accounting-finance-jobs"
-    },
-    "salary_min": 198688.84,
-    "created": "2026-08-11T17:32:12Z"
-  },
-  {
-    "redirect_url": "https://www.adzuna.com/land/ad/5837204114?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=C17FBBF8E9C99F228E6E3D4FAE96A02C4F4CEA04",
-    "title": "Data Scientist - NYC",
-    "created": "2026-08-11T17:31:42Z",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Accounting & Finance Jobs",
-      "tag": "accounting-finance-jobs"
-    },
-    "salary_min": 170635.36,
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "The Hollister Group"
-    },
-    "id": "5837204114",
-    "salary_max": 170635.36,
-    "latitude": 42.3575,
-    "longitude": -71.0691,
-    "salary_is_predicted": "1",
-    "description": "Our client is seeking a talented Data Scientist to join their team as an independent remote employee. Our team brings data science and machine learning to the private equity investment process, providing unparalleled access to alternative data sources and proprietary data from portfolio companies. You'll be at the forefront of high-value tactical workflows that drive all aspects of the investment process. As a Data Scientist with our client, you'll have the opportunity to own due diligence proc\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiNEdFMi1SMlc4UkcyeGZjdDVOeXZBdyIsImkiOiI1ODM3MjA0MTE0In0.tgKWsAs1k_pe6to7Pf2SfAoQO9s2FwP-ZIn7ELwJ4Tw",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Boston, Suffolk County",
-      "area": [
-        "US",
-        "Massachusetts",
-        "Suffolk County",
-        "Boston"
-      ]
-    }
-  },
-  {
-    "longitude": -70.962548,
-    "description": "Our client is seeking a talented Data Scientist to join their team as an independent remote employee. Our team brings data science and machine learning to the private equity investment process, providing unparalleled access to alternative data sources and proprietary data from portfolio companies. You'll be at the forefront of high-value tactical workflows that drive all aspects of the investment process. As a Data Scientist with our client, you'll have the opportunity to own due diligence proc\u2026",
-    "salary_is_predicted": "1",
-    "latitude": 42.474167,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiNEdFMi1SMlc4UkcyeGZjdDVOeXZBdyIsImkiOiI1ODM3MTk3MjkzIn0.mtmSRVqXn00WLYiHF4h47pJNzwk0NX43O0y6Sj-mZ_I",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "location": {
-      "display_name": "Lynn, Essex County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Massachusetts",
-        "Essex County",
-        "Lynn"
-      ]
-    },
-    "created": "2026-08-11T17:28:46Z",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Accounting & Finance Jobs",
-      "tag": "accounting-finance-jobs"
-    },
-    "salary_min": 115849.76,
-    "redirect_url": "https://www.adzuna.com/land/ad/5837197293?se=4GE2-R2W8RG2xfct5NyvAw&utm_medium=api&utm_source=851bf6c5&v=42945193C0E8F9B8AD72E3F7CA3F4C14779C98C0",
-    "title": "Data Scientist - NYC",
-    "salary_max": 115849.76,
-    "id": "5837197293",
-    "company": {
-      "display_name": "The Hollister Group",
+      "display_name": "VivoSense, Inc.",
       "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "latitude": 18.362063,
+    "description": "Data Scientist (Level depending on experience) Remote (US) About VivoSense VivoSense is a science-first digital health company building the future of patient-centered evidence through advanced biosensor analytics. We partner with pharmaceutical companies, biotechnology organizations, and academic researchers to transform high-resolution sensor signals into validated digital measures that improve clinical trials and accelerate the development of new therapies. Our work spans the full scientific \u2026",
+    "longitude": -66.567142,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "id": "5839209867",
+    "redirect_url": "https://www.adzuna.com/land/ad/5839209867?se=juOle-eW8RGLq-1P_dezVw&utm_medium=api&utm_source=851bf6c5&v=0B425A27FC9F058C4BE4CC30337C3D440B29D892",
+    "salary_is_predicted": "1",
+    "title": "Data Scientist",
+    "salary_max": 153270.34
+  },
+  {
+    "latitude": 33.636364,
+    "description": "Data Scientist (Level depending on experience) Remote (US) About VivoSense VivoSense is a science-first digital health company building the future of patient-centered evidence through advanced biosensor analytics. We partner with pharmaceutical companies, biotechnology organizations, and academic researchers to transform high-resolution sensor signals into validated digital measures that improve clinical trials and accelerate the development of new therapies. Our work spans the full scientific \u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -91.857353,
+    "id": "5839209408",
+    "redirect_url": "https://www.adzuna.com/land/ad/5839209408?se=juOle-eW8RGLq-1P_dezVw&utm_medium=api&utm_source=851bf6c5&v=F6D8CAA26BFA3DFF676581993BB20471D7ECAA4A",
+    "salary_is_predicted": "1",
+    "title": "Data Scientist",
+    "salary_max": 152364.72,
+    "created": "2026-08-12T21:52:14Z",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "Scientific & QA Jobs",
+      "tag": "scientific-qa-jobs"
+    },
+    "salary_min": 152364.72,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzOTIwOTQwOCIsInMiOiJqdU9sZS1lVzhSR0xxLTFQX2RlelZ3In0.33smczzlWNLWNV_Ja4Y3lm6CR235cGE1ntUYFqHHDW0",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "VivoSense, Inc."
+    },
+    "location": {
+      "area": [
+        "US",
+        "Arkansas",
+        "Drew County",
+        "Tennessee"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Tennessee, Drew County"
     }
+  },
+  {
+    "created": "2026-08-12T21:52:25Z",
+    "category": {
+      "label": "Scientific & QA Jobs",
+      "tag": "scientific-qa-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "salary_min": 162238.75,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoianVPbGUtZVc4UkdMcS0xUF9kZXpWdyIsImkiOiI1ODM5MjEwNDk0In0.VtiQyil3tDYwgICT6qOWbU7hg8pnCLRhl_iAno2KJ1o",
+    "location": {
+      "area": [
+        "US",
+        "California"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "California, US"
+    },
+    "company": {
+      "display_name": "VivoSense, Inc.",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "description": "Data Scientist (Level depending on experience) Remote (US) About VivoSense VivoSense is a science-first digital health company building the future of patient-centered evidence through advanced biosensor analytics. We partner with pharmaceutical companies, biotechnology organizations, and academic researchers to transform high-resolution sensor signals into validated digital measures that improve clinical trials and accelerate the development of new therapies. Our work spans the full scientific \u2026",
+    "latitude": 37.928543,
+    "longitude": -120.943179,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "id": "5839210494",
+    "salary_is_predicted": "1",
+    "redirect_url": "https://www.adzuna.com/land/ad/5839210494?se=juOle-eW8RGLq-1P_dezVw&utm_medium=api&utm_source=851bf6c5&v=935DF4ED448A8DAF2FFA6E69BB31535B2FC3D739",
+    "title": "Data Scientist",
+    "salary_max": 162238.75
   }
 ]
