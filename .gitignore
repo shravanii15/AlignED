@@ -13,6 +13,7 @@ data/*.csv
 data/kaggle_backfill/
 data/taxonomy/
 data/clustering/
+data/gap_analysis/
 
 # Gold-set extraction *run outputs* are regenerated every time the
 # pipeline runs, so they're excluded like other raw pulls. The gold-set
