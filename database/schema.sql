@@ -67,10 +67,14 @@ CREATE TABLE IF NOT EXISTS posting_cluster_map (
 CREATE TABLE IF NOT EXISTS gap_scores (
     gap_id INTEGER PRIMARY KEY AUTOINCREMENT,
     program_id INTEGER NOT NULL,
-    cluster_id INTEGER,
-    period TEXT,
-    gap_value REAL,
-    p_value REAL,
+    skill_id INTEGER NOT NULL,       -- which specific skill this gap row is about
+    cluster_id INTEGER,              -- NULL = compared against overall market demand (all role clusters)
+    period TEXT,                     -- e.g. '2023-2024' (the date range of the postings used for demand)
+    program_coverage_rate REAL,      -- fraction of this program's courses that mention the skill
+    market_demand_rate REAL,         -- fraction of postings that mention the skill
+    gap_value REAL,                  -- market_demand_rate - program_coverage_rate (positive = real gap)
+    p_value REAL,                    -- two-proportion z-test p-value (is the gap statistically real, not noise?)
     FOREIGN KEY (program_id) REFERENCES programs(program_id),
+    FOREIGN KEY (skill_id) REFERENCES skills(skill_id),
     FOREIGN KEY (cluster_id) REFERENCES role_clusters(cluster_id)
 );
