@@ -99,7 +99,10 @@ CREATE TABLE IF NOT EXISTS gap_scores (
     program_coverage_rate REAL,      -- fraction of this program's courses that mention the skill
     market_demand_rate REAL,         -- fraction of postings that mention the skill
     gap_value REAL,                  -- market_demand_rate - program_coverage_rate (positive = real gap)
-    p_value REAL,                    -- two-proportion z-test p-value (is the gap statistically real, not noise?)
+    p_value REAL,                    -- raw two-proportion z-test p-value, before correction
+    q_value REAL,                    -- Benjamini-Hochberg FDR-corrected p-value, adjusted for running
+                                      -- ~70 tests per program at once (this is what actually decides
+                                      -- significance -- see compute_gap_scores.py for why)
     FOREIGN KEY (program_id) REFERENCES programs(program_id),
     FOREIGN KEY (skill_id) REFERENCES skills(skill_id),
     FOREIGN KEY (cluster_id) REFERENCES role_clusters(cluster_id)

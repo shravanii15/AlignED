@@ -22,11 +22,28 @@ How it works, step by step:
    signal. So for every (program, skill) pair we run a two-proportion
    z-test -- a standard statistics test for "are these two rates actually
    different, or could this difference plausibly have happened by chance
-   alone?" -- and only call something a genuine gap if the resulting
-   p-value is below 0.05 (a conventional significance threshold: less
-   than a 5% chance this apparent gap is just random noise).
-5. Save every significant, positive gap to the gap_scores table, and
-   print each program's top gaps to the console as a human-readable
+   alone?"
+5. Here's the subtlety a lot of "portfolio" statistics projects miss:
+   we're not running ONE test, we're running ~70 tests per program (one
+   per relevant skill) at once. If each test has a 5% chance of a false
+   positive on its own, running 70 of them means we should EXPECT a
+   handful of "significant" results to be false alarms just from running
+   that many tests -- this is the classic "multiple comparisons" problem
+   (the same issue behind the "green jellybeans cause acne" XKCD joke).
+   So instead of trusting the raw p-value directly, we apply a
+   Benjamini-Hochberg false discovery rate (FDR) correction across each
+   program's full set of tests, and only call something significant if
+   its *corrected* p-value (the "q-value") is below 0.05. We use
+   Benjamini-Hochberg rather than the stricter Bonferroni correction
+   because Bonferroni is built for "zero tolerance for any false
+   positive," which is appropriate for something like a clinical drug
+   trial, but is so conservative here it would likely wipe out most real
+   findings; FDR instead controls the *expected proportion* of false
+   positives among the results we call significant, which is the more
+   standard, practical choice for this kind of exploratory analysis.
+6. Save every significant, positive gap to the gap_scores table (with
+   both the raw p-value and the corrected q-value, for transparency),
+   and print each program's top gaps to the console as a human-readable
    summary.
 
 Why this matters for the project:
@@ -40,7 +57,7 @@ for a portfolio project.
 import os
 import sqlite3
 
-from scipy.stats import norm
+from scipy.stats import false_discovery_control, norm
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # .../AlignED
 DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
@@ -93,6 +110,20 @@ def two_proportion_z_test(x1, n1, x2, n2):
     z = (p2 - p1) / se
     p_value = 2 * (1 - norm.cdf(abs(z)))
     return z, p_value
+
+
+def apply_fdr_correction(p_values):
+    """Apply a Benjamini-Hochberg false discovery rate correction to a
+    list of raw p-values from *multiple* tests run together (here: every
+    skill tested for one program), returning the corrected "q-values" in
+    the same order. Each q-value is always >= the raw p-value it came
+    from -- correction can only make a result look less significant,
+    never more, which is exactly the conservative direction you want
+    when guarding against false positives from running many tests at
+    once. An empty input returns an empty list (nothing to correct)."""
+    if not p_values:
+        return []
+    return list(false_discovery_control(p_values, method="bh"))
 
 
 def main():
@@ -164,31 +195,54 @@ def main():
         if n_courses == 0:
             continue
 
-        program_gaps = []
+        # First pass: compute every skill's raw p-value for THIS program.
+        # The FDR correction has to see the full family of tests run for
+        # this program at once -- correcting one skill's p-value in
+        # isolation would defeat the whole point.
+        candidates = []
         for skill_id in relevant_skill_ids:
             x_courses = coverage_counts.get((program_id, skill_id), 0)
             x_postings = demand_counts.get(skill_id, 0)
-
             coverage_rate = x_courses / n_courses
             demand_rate = x_postings / total_postings
             gap_value = demand_rate - coverage_rate
-
             _, p_value = two_proportion_z_test(x_courses, n_courses, x_postings, total_postings)
+            candidates.append(
+                {
+                    "skill_id": skill_id,
+                    "coverage_rate": coverage_rate,
+                    "demand_rate": demand_rate,
+                    "gap_value": gap_value,
+                    "p_value": p_value,
+                }
+            )
 
-            if gap_value > 0 and p_value < SIGNIFICANCE_THRESHOLD:
+        # Second pass: correct all of this program's p-values together,
+        # then decide significance using the corrected q-value instead of
+        # the raw p-value.
+        q_values = apply_fdr_correction([c["p_value"] for c in candidates])
+        for c, q_value in zip(candidates, q_values):
+            c["q_value"] = q_value
+
+        program_gaps = []
+        for c in candidates:
+            if c["gap_value"] > 0 and c["q_value"] < SIGNIFICANCE_THRESHOLD:
+                skill_id = c["skill_id"]
                 program_gaps.append(
                     {
                         "skill_id": skill_id,
                         "skill_name": skill_info[skill_id][0],
                         "category": skill_info[skill_id][1],
-                        "coverage_rate": coverage_rate,
-                        "demand_rate": demand_rate,
-                        "gap_value": gap_value,
-                        "p_value": p_value,
+                        "coverage_rate": c["coverage_rate"],
+                        "demand_rate": c["demand_rate"],
+                        "gap_value": c["gap_value"],
+                        "p_value": c["p_value"],
+                        "q_value": c["q_value"],
                     }
                 )
                 all_gap_rows.append(
-                    (program_id, skill_id, None, period_label, coverage_rate, demand_rate, gap_value, p_value)
+                    (program_id, skill_id, None, period_label, c["coverage_rate"], c["demand_rate"],
+                     c["gap_value"], c["p_value"], c["q_value"])
                 )
 
         program_gaps.sort(key=lambda g: g["gap_value"], reverse=True)
@@ -196,14 +250,15 @@ def main():
 
     cur.executemany(
         """INSERT INTO gap_scores
-           (program_id, skill_id, cluster_id, period, program_coverage_rate, market_demand_rate, gap_value, p_value)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+           (program_id, skill_id, cluster_id, period, program_coverage_rate, market_demand_rate, gap_value, p_value, q_value)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
         all_gap_rows,
     )
     conn.commit()
     conn.close()
 
     print(f"\nSaved {len(all_gap_rows)} statistically significant gap rows across {len(program_summaries)} programs.")
+    print("(Significance is now based on the FDR-corrected q-value, not the raw p-value -- see the module docstring for why.)")
     print("\n" + "=" * 78)
     print("TOP GAPS PER PROGRAM (skills the market wants significantly more than the curriculum covers)")
     print("=" * 78)
@@ -215,7 +270,8 @@ def main():
         for g in gaps[:TOP_N_PER_PROGRAM]:
             print(
                 f"  {g['skill_name']:<45} coverage={g['coverage_rate']*100:5.1f}%  "
-                f"market={g['demand_rate']*100:5.1f}%  gap={g['gap_value']*100:5.1f}pts  p={g['p_value']:.4f}"
+                f"market={g['demand_rate']*100:5.1f}%  gap={g['gap_value']*100:5.1f}pts  "
+                f"p={g['p_value']:.4f}  q={g['q_value']:.4f}"
             )
 
     print("\nDone.")

@@ -1,16 +1,19 @@
 """
 test_gap_scoring.py
 
-Tests for the two-proportion z-test in compute_gap_scores.py -- this is
-the statistical core of the whole gap-scoring step (the thing that turns
-"this program has 0% coverage and the market has 40% demand" into a real,
-defensible claim of "this is a statistically significant gap" rather than
-just an eyeballed guess). If this function is wrong, every gap score in
-the project is wrong, so it's the single highest-value place to have
+Tests for the statistical core of compute_gap_scores.py:
+- two_proportion_z_test(): the per-skill significance test
+- apply_fdr_correction(): the Benjamini-Hochberg correction applied
+  across each program's full set of tests, so that running ~70 tests at
+  once doesn't produce a flood of false "significant" gaps just from
+  sheer test volume (the classic multiple-comparisons problem).
+
+If either of these is wrong, every gap score in the project is wrong, so
+this is the single highest-value place in the whole codebase to have
 real tests.
 """
 
-from compute_gap_scores import two_proportion_z_test
+from compute_gap_scores import apply_fdr_correction, two_proportion_z_test
 
 
 def test_identical_rates_are_not_significant():
@@ -59,3 +62,42 @@ def test_swapping_groups_flips_sign_but_not_significance():
     z2, p2 = two_proportion_z_test(x1=50, n1=200, x2=10, n2=100)
     assert round(p1, 10) == round(p2, 10)
     assert round(z1, 10) == round(-z2, 10)
+
+
+def test_fdr_correction_never_makes_a_p_value_smaller():
+    """Correcting for multiple comparisons can only make a result look
+    LESS significant (or equally significant), never more -- that's the
+    whole point of guarding against false positives. Every corrected
+    q-value must be >= its original raw p-value."""
+    raw_p_values = [0.001, 0.01, 0.03, 0.04, 0.2, 0.5, 0.8]
+    q_values = apply_fdr_correction(raw_p_values)
+    assert len(q_values) == len(raw_p_values)
+    for p, q in zip(raw_p_values, q_values):
+        assert q >= p - 1e-12  # tiny tolerance for floating point
+
+
+def test_fdr_correction_filters_noise_but_keeps_real_signal():
+    """The whole motivation for this correction, demonstrated directly:
+    simulate 70 tests like a real program would run -- 65 that are pure
+    random noise (no real effect) plus 5 with a genuinely tiny, real
+    p-value. Pure chance alone means a handful of the 65 noise p-values
+    will land under 0.05 and look "significant" before correction. After
+    correction, most/all of that noise should be filtered out, while the
+    5 genuinely strong signals must still survive -- that's exactly the
+    behavior that makes the FDR correction worth having."""
+    import random
+    rng = random.Random(42)
+    noise_p_values = [rng.uniform(0.001, 1.0) for _ in range(65)]
+    real_signal_p_values = [0.0001] * 5
+    all_p_values = noise_p_values + real_signal_p_values
+
+    q_values = apply_fdr_correction(all_p_values)
+    significant_before = sum(1 for p in all_p_values if p < 0.05)
+    significant_after = sum(1 for q in q_values if q < 0.05)
+
+    assert significant_after < significant_before  # correction removes some false positives
+    assert all(q < 0.05 for q in q_values[-5:])  # the 5 genuinely real signals must still survive
+
+
+def test_fdr_correction_empty_input():
+    assert apply_fdr_correction([]) == []

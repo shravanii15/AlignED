@@ -1039,6 +1039,20 @@ def render_methodology():
         analysis -- a real "best model for evaluation, faster model for
         production scale" engineering trade-off.
 
+        ### Correcting for running many statistical tests at once
+        Every program is tested against ~70 skills at once, not just one.
+        Running that many significance tests together means a few
+        "significant" results are expected to be false positives from
+        chance alone, even if every individual test is done correctly --
+        the classic multiple-comparisons problem. To account for this, a
+        Benjamini-Hochberg false discovery rate (FDR) correction is
+        applied across each program's full set of tests before anything
+        is called significant. This is a stricter, more defensible bar
+        than using raw p-values alone, and it visibly changes the results:
+        applying it dropped the count of "significant" gaps from 231 to
+        159 across all 13 programs -- exactly the kind of honest
+        tightening a real statistical review should produce.
+
         ### Known, documented limitations
         - **Keyword matching can't disambiguate context.** A handful of
           generic single-word skill names (e.g. "Design", "Science") were
