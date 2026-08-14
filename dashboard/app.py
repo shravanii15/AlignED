@@ -278,44 +278,127 @@ def build_combined_pattern(terms):
     return re.compile(pattern, re.IGNORECASE)
 
 
+TOP_SKILLS_PER_CLUSTER = 15  # how many of a role's most in-demand skills count toward the match score
+
+# Same generic, keyword-ambiguous terms excluded during gap scoring and
+# trend detection (scripts/gap_analysis/) -- common English words a
+# plain keyword scan can't tell apart from unrelated everyday text (e.g.
+# "Design" matching "design your career", not the skill). Applied here
+# too so the personal profile matcher stays consistent with the rest of
+# the project instead of surfacing noisy false positives.
+AMBIGUOUS_GENERIC_TERMS = {
+    "design", "science", "writing", "monitoring", "programming",
+    "troubleshooting", "mathematics", "coordination", "instructing",
+    "repairing", "speaking", "route", "ada",
+}
+
+
+def _extract_user_skills(user_text, tracked_df):
+    term_lookup = {normalize_term(name): sid for sid, name in zip(tracked_df["skill_id"], tracked_df["canonical_name"])}
+    pattern = build_combined_pattern(list(term_lookup.keys()))
+    matched = set()
+    for m in pattern.finditer(user_text.lower()):
+        sid = term_lookup.get(normalize_term(m.group(0)))
+        if sid is not None:
+            matched.add(sid)
+    return matched
+
+
+def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_df, sample_postings_df):
+    """A personalized career-style PDF: which real roles best fit this
+    person's background, their strengths and gaps for the top match, and
+    real example job postings pulled from that role -- built with the
+    same branded report style as the program-level PDF, so the two feel
+    like the same product."""
+    def clean(text):
+        return str(text).encode("latin-1", "replace").decode("latin-1")
+
+    def write_line(text, size=10, bold=False, color=(20, 20, 20)):
+        pdf.set_text_color(*color)
+        pdf.set_font("Helvetica", "B" if bold else "", size)
+        pdf.multi_cell(0, 6, text)
+        pdf.set_x(pdf.l_margin)
+
+    pdf = AlignEDReport()
+    pdf.set_auto_page_break(auto=True, margin=20)
+    pdf.add_page()
+
+    pdf.set_fill_color(30, 58, 138)
+    pdf.rect(0, 0, pdf.w, 32, style="F")
+    pdf.set_xy(pdf.l_margin, 8)
+    pdf.set_text_color(255, 255, 255)
+    pdf.set_font("Helvetica", "B", 18)
+    pdf.cell(0, 10, "AlignED -- Your Personalized Career Report")
+    pdf.set_xy(pdf.l_margin, 20)
+    pdf.set_font("Helvetica", "", 11)
+    pdf.cell(0, 8, clean(f"Best-matching role: {top_role_label}"))
+    pdf.set_y(40)
+
+    write_line(f"Generated {datetime.date.today().isoformat()}", size=9, color=(90, 90, 90))
+    pdf.ln(6)
+    pdf.set_x(pdf.l_margin)
+
+    write_line("How your background matches real job roles", size=13, bold=True, color=(30, 58, 138))
+    pdf.set_font("Helvetica", "", 9)
+    pdf.set_fill_color(255, 255, 255)
+    pdf.set_text_color(20, 20, 20)
+    with pdf.table(col_widths=(80, 40), text_align="LEFT", line_height=6,
+                   headings_style=FontFace(emphasis="BOLD", fill_color=(30, 58, 138), color=(255, 255, 255))) as table:
+        header_row = table.row()
+        header_row.cell("Role")
+        header_row.cell("Match Score")
+        for _, row in role_matches_df.head(6).iterrows():
+            data_row = table.row()
+            data_row.cell(clean(row["role_label"]))
+            data_row.cell(f"{row['match_score']*100:.0f}%")
+
+    pdf.ln(6)
+    pdf.set_x(pdf.l_margin)
+    write_line(f"Your strengths for {top_role_label}", size=13, bold=True, color=(22, 163, 74))
+    strengths_text = ", ".join(have_df["canonical_name"].head(10)) if not have_df.empty else "None matched yet -- add more detail to your profile text."
+    write_line(clean(strengths_text), size=10)
+
+    pdf.ln(4)
+    pdf.set_x(pdf.l_margin)
+    write_line(f"Skills to prioritize for {top_role_label}", size=13, bold=True, color=(220, 38, 38))
+    gaps_text = ", ".join(missing_df["canonical_name"].head(10)) if not missing_df.empty else "No major gaps found -- strong match!"
+    write_line(clean(gaps_text), size=10)
+
+    if not sample_postings_df.empty:
+        pdf.ln(6)
+        pdf.set_x(pdf.l_margin)
+        write_line("Example real job openings matching this role", size=13, bold=True, color=(30, 58, 138))
+        for _, row in sample_postings_df.head(6).iterrows():
+            write_line(clean(f"-  {row['title']} ({row['company']})"), size=9.5, color=(60, 60, 60))
+
+    return bytes(pdf.output())
+
+
 def render_profile_builder():
     st.title("🙋 Build Your Profile")
     st.markdown(
         """
         Paste your current skills, resume text, or a list of courses you've taken.
-        We'll scan it against real job-market demand (the same matching logic used
-        everywhere else in this project) and show you which in-demand skills you
-        already have -- and which ones you're missing.
+        We'll match your background against **every real role in the job-market data**,
+        show which one fits you best, and generate a personalized career report --
+        including real example job openings for that role.
         """
-    )
-
-    role_options_df = run_query(
-        "SELECT cluster_id, role_label FROM role_clusters WHERE role_label NOT LIKE 'Mixed%' AND role_label NOT LIKE 'Near-duplicate%' ORDER BY role_label"
-    )
-    role_choice = st.selectbox(
-        "Compare against demand for:",
-        ["Overall market (all roles)"] + list(role_options_df["role_label"]),
     )
 
     user_text = st.text_area(
         "Your skills / resume text / courses taken",
         height=180,
-        placeholder="e.g. I've taken courses in Python, statistics, and SQL. Built a project using Docker and AWS...",
+        placeholder="e.g. I've taken courses in Python, statistics, and machine learning. Built a project using Docker and AWS...",
     )
 
-    if not st.button("🔍 Analyze my gaps", type="primary"):
-        st.info("Paste your background above and click the button to see your personal skill gaps.")
+    if not st.button("🔍 Find my best-matching roles", type="primary"):
+        st.info("Paste your background above and click the button.")
         return
 
     if not user_text.strip():
         st.warning("Please paste some text first.")
         return
 
-    # Every skill that's ever actually shown up in a real job posting --
-    # a broader set than the ~70 "statistically significant gap" skills
-    # used elsewhere, since a personal analysis should surface anything
-    # relevant, not just the skills that were significant at the
-    # program level.
     tracked_df = run_query(
         """
         SELECT DISTINCT s.skill_id, s.canonical_name
@@ -323,77 +406,98 @@ def render_profile_builder():
         WHERE e.source_type = 'posting' AND e.method = 'baseline_keyword'
         """
     )
-    term_lookup = {normalize_term(name): sid for sid, name in zip(tracked_df["skill_id"], tracked_df["canonical_name"])}
-    pattern = build_combined_pattern(list(term_lookup.keys()))
+    tracked_df = tracked_df[~tracked_df["canonical_name"].str.strip().str.lower().isin(AMBIGUOUS_GENERIC_TERMS)]
+    matched_skill_ids = _extract_user_skills(user_text, tracked_df)
 
-    matched_skill_ids = set()
-    for m in pattern.finditer(user_text.lower()):
-        sid = term_lookup.get(normalize_term(m.group(0)))
-        if sid is not None:
-            matched_skill_ids.add(sid)
-
-    # Scope demand to the chosen role cluster, or the whole sampled
-    # market if "Overall" was picked.
-    if role_choice == "Overall market (all roles)":
-        posting_filter_sql = "SELECT posting_id FROM postings WHERE source = 'kaggle_sample'"
-        params = ()
-    else:
-        cluster_id = int(role_options_df[role_options_df["role_label"] == role_choice]["cluster_id"].iloc[0])
-        posting_filter_sql = "SELECT posting_id FROM posting_cluster_map WHERE cluster_id = ?"
-        params = (cluster_id,)
-
-    scoped_postings_df = run_query(posting_filter_sql, params)
-    total_scoped = len(scoped_postings_df)
-    if total_scoped == 0:
-        st.warning("No postings found for that role -- try a different selection.")
+    if not matched_skill_ids:
+        st.warning("We couldn't match any tracked skills in what you pasted -- try naming specific tools/languages/technologies (e.g. Python, SQL, Docker, Tableau).")
         return
 
-    placeholders = ",".join("?" * len(scoped_postings_df))
-    demand_df = run_query(
-        f"""
-        SELECT skill_id, COUNT(DISTINCT source_id) AS n
-        FROM extractions
-        WHERE source_type = 'posting' AND method = 'baseline_keyword'
-          AND source_id IN ({placeholders})
-        GROUP BY skill_id
-        """,
-        tuple(scoped_postings_df["posting_id"]),
+    # Compute how well the user's skills overlap with each real role's
+    # most in-demand skills -- this is what "auto-detects" the best-fit
+    # role instead of asking the user to guess one from a dropdown.
+    cluster_skill_counts = run_query(
+        """
+        SELECT pcm.cluster_id, e.skill_id, COUNT(DISTINCT e.source_id) AS n
+        FROM extractions e JOIN posting_cluster_map pcm ON pcm.posting_id = e.source_id
+        WHERE e.source_type = 'posting' AND e.method = 'baseline_keyword'
+        GROUP BY pcm.cluster_id, e.skill_id
+        """
     )
-    demand_df["demand_rate"] = demand_df["n"] / total_scoped
-    demand_df = demand_df.merge(tracked_df, on="skill_id", how="left")
+    cluster_totals = run_query("SELECT cluster_id, COUNT(*) AS total FROM posting_cluster_map GROUP BY cluster_id")
+    roles_df = run_query(
+        "SELECT cluster_id, role_label FROM role_clusters WHERE role_label NOT LIKE 'Mixed%' AND role_label NOT LIKE 'Near-duplicate%'"
+    )
 
-    MIN_DEMAND = 0.03  # ignore skills mentioned in under 3% of scoped postings -- too rare to be a meaningful priority
-    demand_df = demand_df[demand_df["demand_rate"] >= MIN_DEMAND]
+    merged = cluster_skill_counts.merge(cluster_totals, on="cluster_id").merge(roles_df, on="cluster_id")
+    merged["demand_rate"] = merged["n"] / merged["total"]
+    # Inner join on purpose: tracked_df has already excluded the generic,
+    # keyword-ambiguous terms, so an inner join here removes those skills
+    # from the per-role ranking entirely, instead of a left join leaving
+    # them in with a blank name (which would still let them occupy a
+    # "top skill" slot).
+    merged = merged.merge(tracked_df, on="skill_id", how="inner")
+    top_per_cluster = merged.sort_values("demand_rate", ascending=False).groupby("cluster_id").head(TOP_SKILLS_PER_CLUSTER)
 
-    have_df = demand_df[demand_df["skill_id"].isin(matched_skill_ids)].sort_values("demand_rate", ascending=False)
-    missing_df = demand_df[~demand_df["skill_id"].isin(matched_skill_ids)].sort_values("demand_rate", ascending=False)
+    match_rows = []
+    for cluster_id, group in top_per_cluster.groupby("cluster_id"):
+        overlap = group["skill_id"].isin(matched_skill_ids).sum()
+        match_rows.append({
+            "cluster_id": cluster_id,
+            "role_label": group["role_label"].iloc[0],
+            "match_score": overlap / len(group),
+        })
+    role_matches_df = pd.DataFrame(match_rows).sort_values("match_score", ascending=False).reset_index(drop=True)
 
     st.markdown("---")
+    st.subheader("🎯 Your best-matching roles")
+    for _, row in role_matches_df.head(5).iterrows():
+        st.write(f"**{row['role_label']}** -- {row['match_score']*100:.0f}% match")
+        st.progress(min(row["match_score"], 1.0))
+
+    top_role = role_matches_df.iloc[0]
+    top_cluster_id = int(top_role["cluster_id"])
+    st.markdown("---")
+    st.subheader(f"Deep dive: {top_role['role_label']}")
+
+    cluster_data = top_per_cluster[top_per_cluster["cluster_id"] == top_cluster_id]
+    have_df = cluster_data[cluster_data["skill_id"].isin(matched_skill_ids)].sort_values("demand_rate", ascending=False)
+    missing_df = cluster_data[~cluster_data["skill_id"].isin(matched_skill_ids)].sort_values("demand_rate", ascending=False)
+
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader(f"✅ Your strengths ({len(have_df)})")
-        st.caption("In-demand skills you already show")
-        for _, row in have_df.head(15).iterrows():
-            st.write(f"🟢 **{row['canonical_name']}** -- in {row['demand_rate']*100:.0f}% of relevant postings")
+        st.markdown(f"**✅ Your strengths ({len(have_df)})**")
+        for _, row in have_df.iterrows():
+            st.write(f"🟢 {row['canonical_name']} -- in {row['demand_rate']*100:.0f}% of postings")
         if have_df.empty:
-            st.write("None of your pasted text matched a tracked in-demand skill yet -- try adding more detail.")
+            st.write("No overlap yet with this role's top skills.")
     with col2:
-        st.subheader(f"🎯 Skills to prioritize ({len(missing_df)})")
-        st.caption("In-demand skills not found in what you pasted")
-        for _, row in missing_df.head(15).iterrows():
-            st.write(f"🔴 **{row['canonical_name']}** -- in {row['demand_rate']*100:.0f}% of relevant postings")
+        st.markdown(f"**🔴 Skills to prioritize ({len(missing_df)})**")
+        for _, row in missing_df.iterrows():
+            st.write(f"🔴 {row['canonical_name']} -- in {row['demand_rate']*100:.0f}% of postings")
         if missing_df.empty:
-            st.write("Great coverage! No major gaps found against this role.")
+            st.write("Great coverage of this role's top skills!")
 
-    if not missing_df.empty:
-        st.markdown("---")
-        fig = px.bar(
-            missing_df.head(15).sort_values("demand_rate"), x="demand_rate", y="canonical_name", orientation="h",
-            labels={"demand_rate": "Market demand", "canonical_name": "Skill"},
-            color_discrete_sequence=["#DC2626"],
-        )
-        fig.update_layout(xaxis_tickformat=".0%", height=max(300, min(15, len(missing_df)) * 32))
-        st.plotly_chart(fig, use_container_width=True)
+    sample_postings_df = run_query(
+        """
+        SELECT p.title, p.company FROM postings p
+        JOIN posting_cluster_map pcm ON pcm.posting_id = p.posting_id
+        WHERE pcm.cluster_id = ? LIMIT 8
+        """,
+        (top_cluster_id,),
+    )
+    st.markdown("---")
+    st.subheader("💼 Example real job openings matching this role")
+    st.caption("Pulled directly from the sampled job postings -- real listings, not generated examples.")
+    for _, row in sample_postings_df.iterrows():
+        st.write(f"• **{row['title']}** ({row['company']})")
+
+    st.markdown("---")
+    pdf_bytes = build_profile_pdf_report(role_matches_df, top_role["role_label"], have_df, missing_df, sample_postings_df)
+    st.download_button(
+        "⬇️ Download my personalized career report (PDF)", data=pdf_bytes,
+        file_name="AlignED_My_Career_Report.pdf", mime="application/pdf",
+    )
 
     st.caption(
         "This uses simple keyword matching, the same fast method used for the full-scale program analysis "
