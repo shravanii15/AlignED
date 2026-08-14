@@ -1,0 +1,31 @@
+name: Run Tests
+
+# This runs automatically on every push and every pull request to main,
+# so anyone looking at the repo can see -- via the badge in the README --
+# whether the statistical core of the project (gap scoring, trend
+# detection, recommendation text, extraction matching) is actually
+# passing its tests right now, not just "at some point in the past."
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the packages the tests need
+        run: pip install pytest scipy
+
+      - name: Run the test suite
+        run: python -m pytest tests/ -v
