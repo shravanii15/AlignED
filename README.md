@@ -14,6 +14,8 @@ AlignED is an end-to-end data pipeline and analytics dashboard that compares rea
 
 Prospective grad students, career switchers, and even program directors rarely have a data-backed answer to "does this curriculum still match what employers actually want?" AlignED builds that answer from scratch: real scraped course catalogs, real job postings, a validated AI-vs-classical skill extraction comparison, and statistically significant gap scoring — all the way to a browsable dashboard and a personal skill-gap tool.
 
+**A note on what "gap" means:** "Program coverage" means a skill's name appears in a course description — not that it's taught in depth or assessed. "Market demand" means a skill appears in this project's sampled job postings — not that every employer requires it. Every gap score is a text-coverage signal, not a certified measurement of learning outcomes or labor-market truth. Full reasoning is on the dashboard's Methodology page.
+
 ## Screenshots
 
 *(Add 2-3 screenshots here — see the "Adding screenshots" note at the bottom of this README for exactly how.)*
