@@ -38,6 +38,7 @@ Page structure (see the sidebar):
 import datetime
 import io
 import os
+import re
 import sqlite3
 
 import pandas as pd
@@ -251,6 +252,153 @@ class AlignEDReport(FPDF):
         self.set_font("Helvetica", "I", 8)
         self.set_text_color(120, 120, 120)
         self.cell(0, 10, f"AlignED  |  Generated {datetime.date.today().isoformat()}  |  Page {self.page_no()}", align="C")
+
+
+def normalize_term(term):
+    """Same normalization rule used throughout the extraction pipeline
+    (lowercase + collapse whitespace), duplicated here on purpose rather
+    than imported from scripts/extraction/. The dashboard is meant to be
+    deployable on its own (e.g. Streamlit Community Cloud only runs
+    dashboard/app.py), so keeping this one small, stable helper
+    self-contained avoids a fragile cross-folder import path."""
+    if term is None:
+        return ""
+    return " ".join(str(term).strip().lower().split())
+
+
+def build_combined_pattern(terms):
+    """Same technique as scripts/extraction/extract_baseline.py's
+    build_combined_pattern() -- one compiled regex covering every term,
+    scanned in a single pass instead of once per term. Duplicated here
+    for the same self-contained-deployment reason as normalize_term()
+    above."""
+    terms_sorted = sorted(terms, key=len, reverse=True)
+    escaped = [re.escape(t) for t in terms_sorted]
+    pattern = r"(?<![A-Za-z0-9_])(" + "|".join(escaped) + r")(?![A-Za-z0-9_])"
+    return re.compile(pattern, re.IGNORECASE)
+
+
+def render_profile_builder():
+    st.title("🙋 Build Your Profile")
+    st.markdown(
+        """
+        Paste your current skills, resume text, or a list of courses you've taken.
+        We'll scan it against real job-market demand (the same matching logic used
+        everywhere else in this project) and show you which in-demand skills you
+        already have -- and which ones you're missing.
+        """
+    )
+
+    role_options_df = run_query(
+        "SELECT cluster_id, role_label FROM role_clusters WHERE role_label NOT LIKE 'Mixed%' AND role_label NOT LIKE 'Near-duplicate%' ORDER BY role_label"
+    )
+    role_choice = st.selectbox(
+        "Compare against demand for:",
+        ["Overall market (all roles)"] + list(role_options_df["role_label"]),
+    )
+
+    user_text = st.text_area(
+        "Your skills / resume text / courses taken",
+        height=180,
+        placeholder="e.g. I've taken courses in Python, statistics, and SQL. Built a project using Docker and AWS...",
+    )
+
+    if not st.button("🔍 Analyze my gaps", type="primary"):
+        st.info("Paste your background above and click the button to see your personal skill gaps.")
+        return
+
+    if not user_text.strip():
+        st.warning("Please paste some text first.")
+        return
+
+    # Every skill that's ever actually shown up in a real job posting --
+    # a broader set than the ~70 "statistically significant gap" skills
+    # used elsewhere, since a personal analysis should surface anything
+    # relevant, not just the skills that were significant at the
+    # program level.
+    tracked_df = run_query(
+        """
+        SELECT DISTINCT s.skill_id, s.canonical_name
+        FROM extractions e JOIN skills s ON s.skill_id = e.skill_id
+        WHERE e.source_type = 'posting' AND e.method = 'baseline_keyword'
+        """
+    )
+    term_lookup = {normalize_term(name): sid for sid, name in zip(tracked_df["skill_id"], tracked_df["canonical_name"])}
+    pattern = build_combined_pattern(list(term_lookup.keys()))
+
+    matched_skill_ids = set()
+    for m in pattern.finditer(user_text.lower()):
+        sid = term_lookup.get(normalize_term(m.group(0)))
+        if sid is not None:
+            matched_skill_ids.add(sid)
+
+    # Scope demand to the chosen role cluster, or the whole sampled
+    # market if "Overall" was picked.
+    if role_choice == "Overall market (all roles)":
+        posting_filter_sql = "SELECT posting_id FROM postings WHERE source = 'kaggle_sample'"
+        params = ()
+    else:
+        cluster_id = int(role_options_df[role_options_df["role_label"] == role_choice]["cluster_id"].iloc[0])
+        posting_filter_sql = "SELECT posting_id FROM posting_cluster_map WHERE cluster_id = ?"
+        params = (cluster_id,)
+
+    scoped_postings_df = run_query(posting_filter_sql, params)
+    total_scoped = len(scoped_postings_df)
+    if total_scoped == 0:
+        st.warning("No postings found for that role -- try a different selection.")
+        return
+
+    placeholders = ",".join("?" * len(scoped_postings_df))
+    demand_df = run_query(
+        f"""
+        SELECT skill_id, COUNT(DISTINCT source_id) AS n
+        FROM extractions
+        WHERE source_type = 'posting' AND method = 'baseline_keyword'
+          AND source_id IN ({placeholders})
+        GROUP BY skill_id
+        """,
+        tuple(scoped_postings_df["posting_id"]),
+    )
+    demand_df["demand_rate"] = demand_df["n"] / total_scoped
+    demand_df = demand_df.merge(tracked_df, on="skill_id", how="left")
+
+    MIN_DEMAND = 0.03  # ignore skills mentioned in under 3% of scoped postings -- too rare to be a meaningful priority
+    demand_df = demand_df[demand_df["demand_rate"] >= MIN_DEMAND]
+
+    have_df = demand_df[demand_df["skill_id"].isin(matched_skill_ids)].sort_values("demand_rate", ascending=False)
+    missing_df = demand_df[~demand_df["skill_id"].isin(matched_skill_ids)].sort_values("demand_rate", ascending=False)
+
+    st.markdown("---")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader(f"✅ Your strengths ({len(have_df)})")
+        st.caption("In-demand skills you already show")
+        for _, row in have_df.head(15).iterrows():
+            st.write(f"🟢 **{row['canonical_name']}** -- in {row['demand_rate']*100:.0f}% of relevant postings")
+        if have_df.empty:
+            st.write("None of your pasted text matched a tracked in-demand skill yet -- try adding more detail.")
+    with col2:
+        st.subheader(f"🎯 Skills to prioritize ({len(missing_df)})")
+        st.caption("In-demand skills not found in what you pasted")
+        for _, row in missing_df.head(15).iterrows():
+            st.write(f"🔴 **{row['canonical_name']}** -- in {row['demand_rate']*100:.0f}% of relevant postings")
+        if missing_df.empty:
+            st.write("Great coverage! No major gaps found against this role.")
+
+    if not missing_df.empty:
+        st.markdown("---")
+        fig = px.bar(
+            missing_df.head(15).sort_values("demand_rate"), x="demand_rate", y="canonical_name", orientation="h",
+            labels={"demand_rate": "Market demand", "canonical_name": "Skill"},
+            color_discrete_sequence=["#DC2626"],
+        )
+        fig.update_layout(xaxis_tickformat=".0%", height=max(300, min(15, len(missing_df)) * 32))
+        st.plotly_chart(fig, use_container_width=True)
+
+    st.caption(
+        "This uses simple keyword matching, the same fast method used for the full-scale program analysis "
+        "elsewhere in this project -- it can miss skills phrased differently than expected. See Methodology for details."
+    )
 
 
 def build_pdf_report(university, program_name, course_count, recs_df):
@@ -815,6 +963,7 @@ def render_methodology():
 
 PAGES = {
     "🏠  Overview": render_overview,
+    "🙋  Build Your Profile": render_profile_builder,
     "📋  Program Explorer": render_program_explorer,
     "🔎  Course Finder": render_course_finder,
     "⚖️  Compare Programs": render_compare,
