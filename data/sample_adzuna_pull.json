@@ -1,41 +1,14 @@
 [
   {
-    "title": "Data Scientist",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "id": "5821339231",
-    "redirect_url": "https://www.adzuna.com/land/ad/5821339231?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=663AA87D6F1A93E785213F6AAD54C9FE89876E10",
+    "redirect_url": "https://www.adzuna.com/land/ad/5808654182?se=Vu684XKY8RGJftUyzQ0_4w&utm_medium=api&utm_source=851bf6c5&v=23F0D475E7B68CFEB479ED010E33721F3B1136D8",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwODY1NDE4MiIsInMiOiJWdTY4NFhLWThSR0pmdFV5elEwXzR3In0.y6UIlhfDnstvHwXd9woHwA79-Qq9Mx1tUhGSoOg_xgw",
+    "latitude": 35.488354,
+    "salary_min": 198653.98,
+    "salary_max": 198653.98,
     "location": {
-      "area": [
-        "US",
-        "California",
-        "Los Angeles County",
-        "Los Angeles"
-      ],
-      "display_name": "Los Angeles, Los Angeles County",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "company": {
-      "display_name": "Fanatics Collectibles",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "salary_min": 134768.48,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMTMzOTIzMSIsInMiOiJJajVLVzdDWDhSR3pVNmQ4dC01dTJ3In0.vMHK4iQWcm3EiDcsCCv-kHzvQAzr_j7dTANzj8eDb7k",
-    "created": "2026-07-30T12:46:51Z",
-    "salary_max": 134768.48,
-    "description": "About Us Fanatics is building a leading global digital sports platform. We ignite the passions of global sports fans and maximize the presence and reach for our hundreds of sports partners globally by offering products and services across Fanatics Commerce, Fanatics Collectibles, and Fanatics Betting & Gaming, allowing sports fans to Buy, Collect, and Bet. Through the Fanatics platform, sports fans can buy licensed fan gear, jerseys, lifestyle and streetwear products, headwear, and hardgoods; c\u2026",
-    "salary_is_predicted": "1"
-  },
-  {
-    "id": "5808654182",
-    "redirect_url": "https://www.adzuna.com/land/ad/5808654182?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=23F0D475E7B68CFEB479ED010E33721F3B1136D8",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
       "display_name": "Davidson, Mecklenburg County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "North Carolina",
@@ -43,35 +16,23 @@
         "Davidson"
       ]
     },
+    "longitude": -80.815849,
     "title": "Senior Data Scientist",
+    "description": "Be a part of our mission! As a world leader in creating comfortable, sustainable, and efficient climate solutions for buildings, homes and transportation, it's our responsibility to put the planet first. For us at Trane Technologies , and through our businesses including Trane\u00ae and Thermo King , sustainability is not just how we do business\u2014it is our business. Do you dare to look at the world's challenges and see impactful possibilities? Do you want to contribute to making a better future? If t\u2026",
     "category": {
       "label": "Engineering Jobs",
-      "tag": "engineering-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "engineering-jobs"
     },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 35.488354,
-    "salary_min": 198653.98,
     "company": {
       "display_name": "Trane Technologies",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "salary_max": 198653.98,
-    "created": "2026-07-20T20:38:37Z",
-    "longitude": -80.815849,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwODY1NDE4MiIsInMiOiJJajVLVzdDWDhSR3pVNmQ4dC01dTJ3In0.1Lt82Mg7eTzhr8LI-UT5Yz3iotRhmCsSriMVQDpRDiI",
     "salary_is_predicted": "1",
-    "description": "Be a part of our mission! As a world leader in creating comfortable, sustainable, and efficient climate solutions for buildings, homes and transportation, it's our responsibility to put the planet first. For us at Trane Technologies , and through our businesses including Trane\u00ae and Thermo King , sustainability is not just how we do business\u2014it is our business. Do you dare to look at the world's challenges and see impactful possibilities? Do you want to contribute to making a better future? If t\u2026"
+    "created": "2026-07-20T20:38:37Z",
+    "id": "5808654182"
   },
   {
-    "title": "Data Scientist",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs",
-      "label": "IT Jobs"
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 38.776903,
     "location": {
       "area": [
         "US",
@@ -79,43 +40,42 @@
         "Fairfax County",
         "West Springfield"
       ],
-      "display_name": "West Springfield, Fairfax County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "West Springfield, Fairfax County"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5812147554?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=503411EA760E03C836518E570A31C30C6BC46662",
-    "id": "5812147554",
+    "longitude": -77.187169,
+    "title": "Data Scientist",
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
     "company": {
       "display_name": "ManTech International",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "salary_min": 120000,
-    "longitude": -77.187169,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMjE0NzU1NCIsInMiOiJJajVLVzdDWDhSR3pVNmQ4dC01dTJ3In0.IbtGtDbGb7uHWh0K7vI2X3B4Ori6PnGsuup54oMxpQI",
-    "salary_max": 160000,
     "created": "2026-07-23T05:48:54Z",
-    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
-    "salary_is_predicted": "0"
+    "id": "5812147554",
+    "salary_is_predicted": "0",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5812147554?se=Vu684XKY8RGJftUyzQ0_4w&utm_medium=api&utm_source=851bf6c5&v=503411EA760E03C836518E570A31C30C6BC46662",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVnU2ODRYS1k4UkdKZnRVeXpRMF80dyIsImkiOiI1ODEyMTQ3NTU0In0.-7vQXxbQRhqbK1Xi4LkeeboHh7L4qZv6KgebwoSViUo",
+    "latitude": 38.776903,
+    "salary_min": 120000,
+    "salary_max": 160000
   },
   {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiSWo1S1c3Q1g4Ukd6VTZkOHQtNXUydyIsImkiOiI1ODE2NDEzMDk5In0.Hc4s6RwGHgCu_MMF84qWI5JO-pKGibQ2rHghJ0bH9i8",
-    "longitude": -77.428438,
-    "salary_max": 160000,
-    "created": "2026-07-26T06:03:20Z",
-    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
-    "salary_is_predicted": "0",
-    "latitude": 38.883702,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVnU2ODRYS1k4UkdKZnRVeXpRMF80dyIsImkiOiI1ODE2NDEzMDk5In0.JoiuFgO_A0mb6lyDkAEnNPmtLTetreqFqbAg3t4Quos",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "title": "Data Scientist",
-    "id": "5816413099",
-    "redirect_url": "https://www.adzuna.com/land/ad/5816413099?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=6DCD85402292FB06587401F79C9710BCB900CEB2",
+    "redirect_url": "https://www.adzuna.com/land/ad/5816413099?se=Vu684XKY8RGJftUyzQ0_4w&utm_medium=api&utm_source=851bf6c5&v=6DCD85402292FB06587401F79C9710BCB900CEB2",
+    "salary_max": 160000,
+    "salary_min": 120000,
+    "latitude": 38.883702,
+    "longitude": -77.428438,
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
       "display_name": "Chantilly, Fairfax County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Virginia",
@@ -123,43 +83,85 @@
         "Chantilly"
       ]
     },
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
+    },
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
       "display_name": "ManTech International"
     },
-    "salary_min": 120000
+    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
+    "salary_is_predicted": "0",
+    "created": "2026-07-26T06:03:20Z",
+    "id": "5816413099",
+    "title": "Data Scientist"
   },
   {
+    "salary_min": 204354.89,
+    "salary_max": 204354.89,
+    "latitude": 47.6055,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVnU2ODRYS1k4UkdKZnRVeXpRMF80dyIsImkiOiI1Nzk4OTcxNjQyIn0.cuod6p-J92HOL6BUF6MmLjwaKzA42wuwSZP0oaOzYLY",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5798971642?se=Vu684XKY8RGJftUyzQ0_4w&utm_medium=api&utm_source=851bf6c5&v=FFB9299331BF58A31EB6F869E8160216E2528E54",
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
+    "company": {
+      "display_name": "Weyerhaeuser",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "description": "Description: About Weyerhaeuser At Weyerhaeuser, we are the world\u2019s premier timberland, and forest products company. Sustainability is the founding concept of our business, and our values drive every decision to ensure we continue to lead the forestry industry in sustainability practices. And we know about sustainability \u2013 we led it in the forestry industry when we planted our first seedling by hand in 1938. We recognize that our success is dependent on the success of our people. For over 125 y\u2026",
+    "created": "2026-07-13T13:05:46Z",
+    "salary_is_predicted": "1",
+    "id": "5798971642",
+    "title": "Principal Data Scientist",
+    "longitude": -122.3319,
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
       "display_name": "Pioneer Square, King County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Washington",
         "King County",
         "Pioneer Square"
       ]
+    }
+  },
+  {
+    "title": "Data Scientist",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "MANTECH"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5798971642?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=FFB9299331BF58A31EB6F869E8160216E2528E54",
-    "id": "5798971642",
-    "title": "Principal Data Scientist",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 47.6055,
     "category": {
       "tag": "it-jobs",
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "salary_min": 204354.89,
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Weyerhaeuser"
-    },
-    "created": "2026-07-13T13:05:46Z",
-    "salary_max": 204354.89,
-    "longitude": -122.3319,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5ODk3MTY0MiIsInMiOiJJajVLVzdDWDhSR3pVNmQ4dC01dTJ3In0.6T6vT3JVeXl4FR-KTcVbWuW2mqZs9-6f3LDHgHvYcTo",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
+    "created": "2026-07-06T11:33:01Z",
     "salary_is_predicted": "1",
-    "description": "Description: About Weyerhaeuser At Weyerhaeuser, we are the world\u2019s premier timberland, and forest products company. Sustainability is the founding concept of our business, and our values drive every decision to ensure we continue to lead the forestry industry in sustainability practices. And we know about sustainability \u2013 we led it in the forestry industry when we planted our first seedling by hand in 1938. We recognize that our success is dependent on the success of our people. For over 125 y\u2026"
+    "id": "5789985191",
+    "location": {
+      "display_name": "Tampa, Hillsborough County",
+      "area": [
+        "US",
+        "Florida",
+        "Hillsborough County",
+        "Tampa"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "longitude": -82.45632,
+    "latitude": 27.955269,
+    "salary_max": 112013.98,
+    "salary_min": 112013.98,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=Vu684XKY8RGJftUyzQ0_4w&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NTE5MSIsInMiOiJWdTY4NFhLWThSR0pmdFV5elEwXzR3In0.M1awWUrw2by8TH3yxB3j5wu-RpvUY5WWmgEVnj-iI-g"
   }
 ]
