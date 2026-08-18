@@ -1,123 +1,19 @@
 [
   {
-    "salary_is_predicted": "1",
-    "title": "Senior Data Scientist",
-    "longitude": -80.815849,
-    "category": {
-      "tag": "engineering-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Engineering Jobs"
-    },
-    "location": {
-      "display_name": "Davidson, Mecklenburg County",
-      "area": [
-        "US",
-        "North Carolina",
-        "Mecklenburg County",
-        "Davidson"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "salary_min": 198653.98,
-    "created": "2026-07-20T20:38:37Z",
-    "id": "5808654182",
-    "description": "Be a part of our mission! As a world leader in creating comfortable, sustainable, and efficient climate solutions for buildings, homes and transportation, it's our responsibility to put the planet first. For us at Trane Technologies , and through our businesses including Trane\u00ae and Thermo King , sustainability is not just how we do business\u2014it is our business. Do you dare to look at the world's challenges and see impactful possibilities? Do you want to contribute to making a better future? If t\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwODY1NDE4MiIsInMiOiJWamwtRFFlYThSR1VpcTE0b2hyUmV3In0.q1GJXrPPWANNPj_SpcY4rdKYAr4rITS-jrM7v67VisE",
-    "salary_max": 198653.98,
-    "company": {
-      "display_name": "Trane Technologies",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5808654182?se=Vjl-DQea8RGUiq14ohrRew&utm_medium=api&utm_source=851bf6c5&v=23F0D475E7B68CFEB479ED010E33721F3B1136D8",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 35.488354
-  },
-  {
-    "latitude": 38.776903,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "redirect_url": "https://www.adzuna.com/land/ad/5812147554?se=Vjl-DQea8RGUiq14ohrRew&utm_medium=api&utm_source=851bf6c5&v=503411EA760E03C836518E570A31C30C6BC46662",
-    "salary_max": 160000,
-    "company": {
-      "display_name": "ManTech International",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMjE0NzU1NCIsInMiOiJWamwtRFFlYThSR1VpcTE0b2hyUmV3In0.QZWMkYpsrZmiBojnXa4SL0lUdK3bnBZG2xtUIL70Lok",
-    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
-    "id": "5812147554",
-    "created": "2026-07-23T05:48:54Z",
-    "salary_min": 120000,
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Virginia",
-        "Fairfax County",
-        "West Springfield"
-      ],
-      "display_name": "West Springfield, Fairfax County"
-    },
-    "category": {
-      "label": "IT Jobs",
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "longitude": -77.187169,
-    "title": "Data Scientist",
-    "salary_is_predicted": "0"
-  },
-  {
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs",
-      "label": "IT Jobs"
-    },
-    "longitude": -77.428438,
-    "title": "Data Scientist",
-    "salary_is_predicted": "0",
-    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxNjQxMzA5OSIsInMiOiJWamwtRFFlYThSR1VpcTE0b2hyUmV3In0.wfu4-lQ62_Mk4el11qE-4JdyxY0qoNmIUN8F0N9UR1g",
-    "id": "5816413099",
-    "created": "2026-07-26T06:03:20Z",
-    "salary_min": 120000,
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Chantilly, Fairfax County",
-      "area": [
-        "US",
-        "Virginia",
-        "Fairfax County",
-        "Chantilly"
-      ]
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5816413099?se=Vjl-DQea8RGUiq14ohrRew&utm_medium=api&utm_source=851bf6c5&v=6DCD85402292FB06587401F79C9710BCB900CEB2",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_max": 160000,
-    "company": {
-      "display_name": "ManTech International",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "latitude": 38.883702
-  },
-  {
-    "company": {
-      "display_name": "Weyerhaeuser",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
+    "id": "5798971642",
     "salary_max": 204354.89,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "redirect_url": "https://www.adzuna.com/land/ad/5798971642?se=Vjl-DQea8RGUiq14ohrRew&utm_medium=api&utm_source=851bf6c5&v=FFB9299331BF58A31EB6F869E8160216E2528E54",
-    "latitude": 47.6055,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVEd4bkZNLWE4UkdCOHJuTS1PaVRwUSIsImkiOiI1Nzk4OTcxNjQyIn0.jeaHAaXUGtb205wY5UmmF-Jv1KJnUYbBMtN57MNEQ4A",
     "title": "Principal Data Scientist",
     "salary_is_predicted": "1",
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    },
-    "longitude": -122.3319,
-    "created": "2026-07-13T13:05:46Z",
-    "id": "5798971642",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5798971642?se=TGxnFM-a8RGB8rnM-OiTpQ&utm_medium=api&utm_source=851bf6c5&v=FFB9299331BF58A31EB6F869E8160216E2528E54",
     "salary_min": 204354.89,
+    "latitude": 47.6055,
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
     "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
       "display_name": "Pioneer Square, King County",
@@ -128,40 +24,144 @@
         "Pioneer Square"
       ]
     },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5ODk3MTY0MiIsInMiOiJWamwtRFFlYThSR1VpcTE0b2hyUmV3In0.-Hn5djJW9tVFjXaPhrDezxgsQ0o4umZD_e8Xv-wxkyo",
-    "description": "Description: About Weyerhaeuser At Weyerhaeuser, we are the world\u2019s premier timberland, and forest products company. Sustainability is the founding concept of our business, and our values drive every decision to ensure we continue to lead the forestry industry in sustainability practices. And we know about sustainability \u2013 we led it in the forestry industry when we planted our first seedling by hand in 1938. We recognize that our success is dependent on the success of our people. For over 125 y\u2026"
+    "longitude": -122.3319,
+    "created": "2026-07-13T13:05:46Z",
+    "description": "Description: About Weyerhaeuser At Weyerhaeuser, we are the world\u2019s premier timberland, and forest products company. Sustainability is the founding concept of our business, and our values drive every decision to ensure we continue to lead the forestry industry in sustainability practices. And we know about sustainability \u2013 we led it in the forestry industry when we planted our first seedling by hand in 1938. We recognize that our success is dependent on the success of our people. For over 125 y\u2026",
+    "company": {
+      "display_name": "Weyerhaeuser",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    }
   },
   {
+    "salary_min": 112013.98,
+    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=TGxnFM-a8RGB8rnM-OiTpQ&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
+    "created": "2026-07-06T11:33:01Z",
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "latitude": 27.955269,
     "category": {
-      "label": "IT Jobs",
       "tag": "it-jobs",
+      "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "longitude": -82.45632,
-    "title": "Data Scientist",
-    "salary_is_predicted": "1",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NTE5MSIsInMiOiJWamwtRFFlYThSR1VpcTE0b2hyUmV3In0.KhGHWy8kkzjy_KThSCui64ywFyG4z0329IrshVQf4xA",
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
-    "id": "5789985191",
-    "created": "2026-07-06T11:33:01Z",
-    "salary_min": 112013.98,
     "location": {
-      "display_name": "Tampa, Hillsborough County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Florida",
         "Hillsborough County",
         "Tampa"
       ],
-      "__CLASS__": "Adzuna::API::Response::Location"
+      "display_name": "Tampa, Hillsborough County"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=Vjl-DQea8RGUiq14ohrRew&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -82.45632,
     "salary_max": 112013.98,
+    "title": "Data Scientist",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NTE5MSIsInMiOiJUR3huRk0tYThSR0I4cm5NLU9pVHBRIn0.tjuBAZ_kzY0JKDfneaErnw4mtNeZaWd6pKQ3NO31DL4",
+    "id": "5789985191",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1"
+  },
+  {
+    "id": "5792991528",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVEd4bkZNLWE4UkdCOHJuTS1PaVRwUSIsImkiOiI1NzkyOTkxNTI4In0.alBtEqijbncgPT3L8R4ofdmX5eld8yvWEgqRrtan8J4",
+    "title": "Data Scientist",
+    "salary_max": 103764.39,
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=TGxnFM-a8RGB8rnM-OiTpQ&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC",
+    "salary_min": 103764.39,
+    "longitude": -81.311499,
+    "latitude": 32.372413,
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Springfield, Effingham County",
+      "area": [
+        "US",
+        "Georgia",
+        "Effingham County",
+        "Springfield"
+      ]
+    },
     "company": {
       "display_name": "MANTECH",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "latitude": 27.955269
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
+    "created": "2026-07-08T16:10:15Z"
+  },
+  {
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxNzY5NjQwNSIsInMiOiJUR3huRk0tYThSR0I4cm5NLU9pVHBRIn0.KxkagyUXAqpNr9HFTdLprsv4Zd0IlXqLHe7RasD4J18",
+    "title": "Data Scientist",
+    "salary_max": 108394.18,
+    "id": "5817696405",
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "created": "2026-07-27T18:44:21Z",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. ManTech seeks a motivated, career and customer-oriented Data Scientist to join our team in Chantilly, VA . In this dynamic role, you will join a top-tier team of Information Technology and Analytic professionals dedicated to supporting national security through innovative data science and analytics. You will work in a self-contained Big Data environment where the team manages everything from inf\u2026",
+    "longitude": -77.431099,
+    "category": {
+      "label": "IT Jobs",
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "latitude": 38.894279,
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Chantilly, Fairfax County",
+      "area": [
+        "US",
+        "Virginia",
+        "Fairfax County",
+        "Chantilly"
+      ]
+    },
+    "salary_min": 108394.18,
+    "redirect_url": "https://www.adzuna.com/land/ad/5817696405?se=TGxnFM-a8RGB8rnM-OiTpQ&utm_medium=api&utm_source=851bf6c5&v=E9EFEB2C3A8995053BDB9D0440DD78E5568C8C77"
+  },
+  {
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVEd4bkZNLWE4UkdCOHJuTS1PaVRwUSIsImkiOiI1ODMyNjI5MTc2In0.nn5p2S6Qjv7TSWkf0wC4dSJQWYJJz-lIfcfhFMrzAic",
+    "title": "Senior AI/ Data Scientist",
+    "salary_max": 190000,
+    "id": "5832629176",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "0",
+    "salary_min": 145000,
+    "redirect_url": "https://www.adzuna.com/land/ad/5832629176?se=TGxnFM-a8RGB8rnM-OiTpQ&utm_medium=api&utm_source=851bf6c5&v=74FEB2EA3E7723E2948318BC33A0324566BDBCC9",
+    "company": {
+      "display_name": "Cargill",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "description": "Cargill seeks a Senior AI Data Scientist to drive advanced analytics across its global manufacturing operations. In this role, you will design, build, and deploy machine learning solutions that optimize production, quality, and supply chain performance. You will work with large industrial datasets, partner closely with engineers and plant leaders, and translate complex insights into practical actions. At Cargill, you will join a culture of integrity, safety, and inclusive growth while contribut\u2026",
+    "created": "2026-08-07T19:22:01Z",
+    "longitude": -84.388176,
+    "latitude": 33.747434,
+    "category": {
+      "label": "IT Jobs",
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Northlake, DeKalb County",
+      "area": [
+        "US",
+        "Georgia",
+        "DeKalb County",
+        "Northlake"
+      ]
+    }
   }
 ]
