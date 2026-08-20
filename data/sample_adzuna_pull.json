@@ -1,130 +1,64 @@
 [
   {
-    "company": {
-      "display_name": "Amgen",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "id": "5847155309",
-    "created": "2026-08-18T15:33:03Z",
-    "title": "Data Scientist",
+    "salary_max": 204354.89,
+    "id": "5798971642",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5ODk3MTY0MiIsInMiOiIxak0wd1dHYzhSR1Fvci1MMnpLUjdBIn0.o7EjPneUp1Vf9sS17yh08r4cG_MBjAG4LkIpY_n8H9k",
+    "created": "2026-07-13T13:05:46Z",
     "category": {
-      "tag": "engineering-jobs",
-      "label": "Engineering Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "salary_max": 148672.77,
-    "latitude": 34.18,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQWl6NldwaWI4Ukd3aGIwMVhEQkNUdyIsImkiOiI1ODQ3MTU1MzA5In0.jvHZsPjNy1ORAvavQ7KqwJfK2wUvhxzrnSONkGYVz-c",
-    "salary_min": 148672.77,
-    "redirect_url": "https://www.adzuna.com/land/ad/5847155309?se=Aiz6Wpib8RGwhb01XDBCTw&utm_medium=api&utm_source=851bf6c5&v=DC215028B89CAA58E4833248F0A89F5809AF8CEF",
-    "longitude": -118.91,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Career Category Operations Job Description Join Amgen\u2019s Mission of Serving Patients At Amgen, if you feel like you\u2019re part of something bigger, it\u2019s because you are. Our shared mission\u2014to serve patients living with serious illnesses\u2014drives all that we do. Since 1980, we\u2019ve helped pioneer the world of biotech in our fight against the world\u2019s toughest diseases. With our focus on four therapeutic areas \u2013Oncology, Inflammation, General Medicine, and Rare Disease\u2013 we reach millions of patients each \u2026",
-    "location": {
-      "area": [
-        "US",
-        "California",
-        "Ventura County",
-        "Thousand Oaks"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Thousand Oaks, Ventura County"
-    },
-    "salary_is_predicted": "1"
-  },
-  {
-    "location": {
-      "area": [
-        "US",
-        "Massachusetts",
-        "Middlesex County",
-        "Cambridge"
-      ],
-      "display_name": "Cambridge, Middlesex County",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Career Category Operations Job Description Join Amgen\u2019s Mission of Serving Patients At Amgen, if you feel like you\u2019re part of something bigger, it\u2019s because you are. Our shared mission\u2014to serve patients living with serious illnesses\u2014drives all that we do. Since 1980, we\u2019ve helped pioneer the world of biotech in our fight against the world\u2019s toughest diseases. With our focus on four therapeutic areas \u2013Oncology, Inflammation, General Medicine, and Rare Disease\u2013 we reach millions of patients each \u2026",
-    "redirect_url": "https://www.adzuna.com/land/ad/5847164549?se=Aiz6Wpib8RGwhb01XDBCTw&utm_medium=api&utm_source=851bf6c5&v=3129E548619314DCC37BF9C43EF66B9F9CB84770",
-    "longitude": -71.13891,
-    "salary_min": 159936.1,
-    "salary_max": 159936.1,
-    "latitude": 42.380327,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQWl6NldwaWI4Ukd3aGIwMVhEQkNUdyIsImkiOiI1ODQ3MTY0NTQ5In0.r8PktnHmF3NPEAg1BDno53jw-VCbxdoqIfJlIErTOas",
-    "category": {
-      "label": "Engineering Jobs",
-      "tag": "engineering-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "title": "Data Scientist",
-    "id": "5847164549",
-    "created": "2026-08-18T15:39:08Z",
-    "company": {
-      "display_name": "Amgen",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    }
-  },
-  {
-    "created": "2026-08-18T16:07:01Z",
-    "id": "5847202274",
-    "title": "Data Scientist",
-    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
+      "label": "IT Jobs"
     },
+    "salary_min": 204354.89,
+    "salary_is_predicted": "1",
+    "latitude": 47.6055,
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Clay Labs"
+      "display_name": "Weyerhaeuser",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "longitude": -122.418411,
-    "redirect_url": "https://www.adzuna.com/land/ad/5847202274?se=Aiz6Wpib8RGwhb01XDBCTw&utm_medium=api&utm_source=851bf6c5&v=24B4D3C49EFD2EDCFED533E0821442A769753692",
-    "description": "About Clay Our mission is to help organizations turn any growth idea into reality. We see growth as a creative practice, not a formula. Finding and reaching your best-fit customers takes unique ideas and constant iteration. As AI makes execution faster and tactics easier to copy, creativity is the only lasting advantage. We're already helping thousands of customers \u2014 including Anthropic, Notion, Google, and Ramp \u2014 go to market with unique data, signals, and AI research. In 2025, we raised a $10\u2026",
     "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Description: About Weyerhaeuser At Weyerhaeuser, we are the world\u2019s premier timberland, and forest products company. Sustainability is the founding concept of our business, and our values drive every decision to ensure we continue to lead the forestry industry in sustainability practices. And we know about sustainability \u2013 we led it in the forestry industry when we planted our first seedling by hand in 1938. We recognize that our success is dependent on the success of our people. For over 125 y\u2026",
     "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Pioneer Square, King County",
       "area": [
         "US",
-        "California",
-        "San Mateo County",
-        "South San Francisco"
-      ],
-      "display_name": "South San Francisco, San Mateo County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+        "Washington",
+        "King County",
+        "Pioneer Square"
+      ]
     },
-    "salary_is_predicted": "1",
-    "latitude": 37.65319,
-    "salary_max": 177921.03,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0NzIwMjI3NCIsInMiOiJBaXo2V3BpYjhSR3doYjAxWERCQ1R3In0.NE9XrOe2uhlUTjOOWz_Vd4zvrDiapbfMojwp3gKHjtA",
-    "salary_min": 177921.03
+    "redirect_url": "https://www.adzuna.com/land/ad/5798971642?se=1jM0wWGc8RGQor-L2zKR7A&utm_medium=api&utm_source=851bf6c5&v=FFB9299331BF58A31EB6F869E8160216E2528E54",
+    "longitude": -122.3319,
+    "title": "Principal Data Scientist"
   },
   {
-    "salary_min": 129299.66,
-    "latitude": 38.97,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0NzIxODA2MiIsInMiOiJBaXo2V3BpYjhSR3doYjAxWERCQ1R3In0.DHkcx7FDZdNvncv_KVsonF__KfxOz86wvo1GVltMOYI",
-    "salary_max": 129299.66,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "What Impact You'll Have GRVTY is a member of 100% of the winning teams for the largest technology program in the Intel Community. We've been supporting this customer on many different sub-projects of this program since our founding in 2013. We've grown on this effort by providing the customer with Engineers who have done exceptional work, and we've retained our staff by paying very strong salaries, and working hard to ensure each Engineer is doing work that aligns with their career interest. Wo\u2026",
-    "longitude": -77.23,
-    "redirect_url": "https://www.adzuna.com/land/ad/5847218062?se=Aiz6Wpib8RGwhb01XDBCTw&utm_medium=api&utm_source=851bf6c5&v=CE45325206A2C2DE22D88A5DA539E14024ACF07D",
-    "salary_is_predicted": "1",
-    "location": {
-      "area": [
-        "US",
-        "Virginia",
-        "Fairfax County",
-        "Mc Lean"
-      ],
-      "display_name": "Mc Lean, Fairfax County",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "GRVTY"
+      "display_name": "MANTECH"
     },
-    "id": "5847218062",
-    "created": "2026-08-18T16:19:55Z",
+    "location": {
+      "display_name": "Tampa, Hillsborough County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Florida",
+        "Hillsborough County",
+        "Tampa"
+      ]
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=1jM0wWGc8RGQor-L2zKR7A&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
+    "longitude": -82.45632,
     "title": "Data Scientist",
+    "salary_max": 112013.98,
+    "id": "5789985191",
+    "salary_min": 112013.98,
+    "salary_is_predicted": "1",
+    "latitude": 27.955269,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NTE5MSIsInMiOiIxak0wd1dHYzhSR1Fvci1MMnpLUjdBIn0.3vwU1aKwbaarGW2aZPXdelg0ToMgT0F6WIBkLqyAccE",
+    "created": "2026-07-06T11:33:01Z",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs",
@@ -132,37 +66,102 @@
     }
   },
   {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQWl6NldwaWI4Ukd3aGIwMVhEQkNUdyIsImkiOiI1ODQ3MTUzNTk4In0.gKh1JSModmLu4_NmhAqRp13NwerqsBaqEpARUow96BI",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Dayton, Montgomery County",
-      "area": [
-        "US",
-        "Ohio",
-        "Montgomery County",
-        "Dayton"
-      ]
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private and pu\u2026",
-    "redirect_url": "https://www.adzuna.com/land/ad/5847153598?se=Aiz6Wpib8RGwhb01XDBCTw&utm_medium=api&utm_source=851bf6c5&v=8CB0F637CE998B0D79B6332E6FFEE2B1EFE7C7B1",
-    "company": {
-      "display_name": "Booz Allen Hamilton",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
+    "salary_min": 103764.39,
+    "salary_is_predicted": "1",
+    "latitude": 32.372413,
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
     },
-    "id": "5847153598",
-    "salary_min": 110496.02,
-    "latitude": 39.757443,
-    "salary_max": 110496.02,
-    "salary_is_predicted": "1",
-    "longitude": -84.209435,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiMWpNMHdXR2M4UkdRb3ItTDJ6S1I3QSIsImkiOiI1NzkyOTkxNTI4In0.VL-GunQOYVskS5wGzdDgIjxt1SGybV0OvdzyUVbaoS4",
+    "created": "2026-07-08T16:10:15Z",
+    "id": "5792991528",
+    "salary_max": 103764.39,
+    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=1jM0wWGc8RGQor-L2zKR7A&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Springfield, Effingham County",
+      "area": [
+        "US",
+        "Georgia",
+        "Effingham County",
+        "Springfield"
+      ]
+    },
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
+    "longitude": -81.311499,
     "title": "Data Scientist",
-    "contract_time": "part_time",
-    "created": "2026-08-18T15:32:47Z"
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "MANTECH"
+    }
+  },
+  {
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxNzY5NjQwNSIsInMiOiIxak0wd1dHYzhSR1Fvci1MMnpLUjdBIn0.qFHii8PRXC0tQdmPJHYzCRjUIAEEXdf4LljdRHgGBAA",
+    "created": "2026-07-27T18:44:21Z",
+    "salary_min": 108394.18,
+    "salary_is_predicted": "1",
+    "latitude": 38.894279,
+    "id": "5817696405",
+    "salary_max": 108394.18,
+    "location": {
+      "display_name": "Chantilly, Fairfax County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Virginia",
+        "Fairfax County",
+        "Chantilly"
+      ]
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5817696405?se=1jM0wWGc8RGQor-L2zKR7A&utm_medium=api&utm_source=851bf6c5&v=E9EFEB2C3A8995053BDB9D0440DD78E5568C8C77",
+    "title": "Data Scientist",
+    "longitude": -77.431099,
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. ManTech seeks a motivated, career and customer-oriented Data Scientist to join our team in Chantilly, VA . In this dynamic role, you will join a top-tier team of Information Technology and Analytic professionals dedicated to supporting national security through innovative data science and analytics. You will work in a self-contained Big Data environment where the team manages everything from inf\u2026",
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job"
+  },
+  {
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
+    },
+    "created": "2026-07-06T11:33:19Z",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NjA2OSIsInMiOiIxak0wd1dHYzhSR1Fvci1MMnpLUjdBIn0.HWCblSMyCffRedzH-UtPODTJzmQ0Jw-kUW2OhvGgTPI",
+    "salary_is_predicted": "1",
+    "salary_min": 164090.44,
+    "latitude": 32.033488,
+    "salary_max": 164090.44,
+    "id": "5789986069",
+    "location": {
+      "display_name": "Raleigh, Smith County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Mississippi",
+        "Smith County",
+        "Raleigh"
+      ]
+    },
+    "title": "Lead Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5789986069?se=1jM0wWGc8RGQor-L2zKR7A&utm_medium=api&utm_source=851bf6c5&v=F22439E3495F86E1B7EF099DAA5CADD187385603",
+    "description": "hackajob is collaborating with LexisNexis to connect them with exceptional professionals for this role. About Us : LexisNexis, a part of RELX, is a leading global provider of legal, regulatory, and business information. We help customers increase productivity and improve decision-making and outcomes. Our 10,500 experts and innovative tools help us shape a better world for our customers and communities. About the Role : Are you looking to develop your Data Scientist career? Do you enjoy coaching\u2026",
+    "longitude": -89.522291,
+    "company": {
+      "display_name": "LexisNexis",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job"
   }
 ]
