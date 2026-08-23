@@ -1,76 +1,58 @@
 [
   {
-    "title": "Data Scientist Intern",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Ensemble Health Partners"
-    },
-    "description": "We\u2019re solving problems in healthcare with AI. Are you passionate about leveraging AI to solve complex problems in healthcare? Do you want to be part of a team that is transforming the industry with cutting-edge technology? Join Ensemble Health Partners as an AI Engineer and make a meaningful impact on healthcare delivery and patient experience. About Ensemble Health Partners Ensemble Health Partners is at the forefront of healthcare innovation, investing over $70 million annually in technology \u2026",
-    "salary_min": 76613.21,
+    "redirect_url": "https://www.adzuna.com/land/ad/5798971642?se=AtempLye8RGSb8VpDRDiVA&utm_medium=api&utm_source=851bf6c5&v=FFB9299331BF58A31EB6F869E8160216E2528E54",
+    "latitude": 47.6055,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5ODk3MTY0MiIsInMiOiJBdGVtcEx5ZThSR1NiOFZwRFJEaVZBIn0.Zs0fEK3lqxa65ab3WajPNji3F-_EteWxBZT1UPwaR5E",
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US"
-      ],
-      "display_name": "US"
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiV0djU1JmT2Q4UkdkOVAwY1B4SF81QSIsImkiOiI1ODUxNjM2NTc0In0.P4iUkqWp71aTo7W7eti1xU6dCEaS7C6Nzhb4HC_9cts",
-    "salary_max": 76613.21,
-    "salary_is_predicted": "1",
-    "id": "5851636574",
-    "created": "2026-08-21T18:16:17Z",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "redirect_url": "https://www.adzuna.com/land/ad/5851636574?se=WGcSRfOd8RGd9P0cPxH_5A&utm_medium=api&utm_source=851bf6c5&v=75B4E08BB5128540BCB4E1C94F6225C4F39DF8BD",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    }
-  },
-  {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiV0djU1JmT2Q4UkdkOVAwY1B4SF81QSIsImkiOiI1Nzk4OTcxNjQyIn0.j5jyqY-CdkKLlEKCdCcSzGBIghxadTMM9B4ZlWc2kSQ",
-    "salary_max": 204354.89,
-    "longitude": -122.3319,
-    "salary_min": 204354.89,
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Washington",
         "King County",
         "Pioneer Square"
       ],
+      "__CLASS__": "Adzuna::API::Response::Location",
       "display_name": "Pioneer Square, King County"
     },
-    "id": "5798971642",
+    "salary_min": 204354.89,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "created": "2026-07-13T13:05:46Z",
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5798971642?se=WGcSRfOd8RGd9P0cPxH_5A&utm_medium=api&utm_source=851bf6c5&v=FFB9299331BF58A31EB6F869E8160216E2528E54",
     "salary_is_predicted": "1",
-    "title": "Principal Data Scientist",
-    "description": "Description: About Weyerhaeuser At Weyerhaeuser, we are the world\u2019s premier timberland, and forest products company. Sustainability is the founding concept of our business, and our values drive every decision to ensure we continue to lead the forestry industry in sustainability practices. And we know about sustainability \u2013 we led it in the forestry industry when we planted our first seedling by hand in 1938. We recognize that our success is dependent on the success of our people. For over 125 y\u2026",
-    "company": {
-      "display_name": "Weyerhaeuser",
-      "__CLASS__": "Adzuna::API::Response::Company"
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
     },
-    "latitude": 47.6055
+    "description": "Description: About Weyerhaeuser At Weyerhaeuser, we are the world\u2019s premier timberland, and forest products company. Sustainability is the founding concept of our business, and our values drive every decision to ensure we continue to lead the forestry industry in sustainability practices. And we know about sustainability \u2013 we led it in the forestry industry when we planted our first seedling by hand in 1938. We recognize that our success is dependent on the success of our people. For over 125 y\u2026",
+    "created": "2026-07-13T13:05:46Z",
+    "salary_max": 204354.89,
+    "id": "5798971642",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Weyerhaeuser"
+    },
+    "title": "Principal Data Scientist",
+    "longitude": -122.3319
   },
   {
-    "salary_is_predicted": "1",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "MANTECH"
+    },
+    "id": "5789985191",
+    "title": "Data Scientist",
+    "longitude": -82.45632,
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
     "created": "2026-07-06T11:33:01Z",
+    "salary_max": 112013.98,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=WGcSRfOd8RGd9P0cPxH_5A&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
+    "salary_is_predicted": "1",
     "category": {
       "tag": "it-jobs",
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "id": "5789985191",
+    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=AtempLye8RGSb8VpDRDiVA&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
+    "latitude": 27.955269,
+    "salary_min": 112013.98,
     "location": {
       "display_name": "Tampa, Hillsborough County",
       "__CLASS__": "Adzuna::API::Response::Location",
@@ -81,27 +63,27 @@
         "Tampa"
       ]
     },
-    "salary_min": 112013.98,
-    "longitude": -82.45632,
-    "salary_max": 112013.98,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NTE5MSIsInMiOiJXR2NTUmZPZDhSR2Q5UDBjUHhIXzVBIn0.JK9MzbJQTeVh6RJgZa7ZI7H3Se5xtl92WU6gAmXmhg8",
-    "latitude": 27.955269,
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "MANTECH"
-    },
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
-    "title": "Data Scientist"
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQXRlbXBMeWU4UkdTYjhWcERSRGlWQSIsImkiOiI1Nzg5OTg1MTkxIn0.75vdns6sADvIySKCnlSqbPjdYbJ9TyRuiY8S0sopBAk"
   },
   {
     "title": "Data Scientist",
+    "longitude": -81.311499,
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "MANTECH"
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "latitude": 32.372413,
+    "id": "5792991528",
+    "salary_max": 103764.39,
+    "created": "2026-07-08T16:10:15Z",
     "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
-    "salary_min": 103764.39,
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1",
+    "latitude": 32.372413,
     "location": {
       "area": [
         "US",
@@ -109,54 +91,77 @@
         "Effingham County",
         "Springfield"
       ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Springfield, Effingham County"
+      "display_name": "Springfield, Effingham County",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5Mjk5MTUyOCIsInMiOiJXR2NTUmZPZDhSR2Q5UDBjUHhIXzVBIn0.ByOUopSYvZp3mNAOtzN1HLYWua8LpCNm4djZPJ7X0Sw",
-    "salary_max": 103764.39,
-    "longitude": -81.311499,
-    "salary_is_predicted": "1",
-    "id": "5792991528",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "created": "2026-07-08T16:10:15Z",
-    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=WGcSRfOd8RGd9P0cPxH_5A&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC"
+    "salary_min": 103764.39,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQXRlbXBMeWU4UkdTYjhWcERSRGlWQSIsImkiOiI1NzkyOTkxNTI4In0.52A_G8Mn6g6t9qbg-F40msrFoDPi1Veg8a-2IiIoQ5M",
+    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=AtempLye8RGSb8VpDRDiVA&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC"
   },
   {
-    "salary_min": 108394.18,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1",
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5817696405?se=AtempLye8RGSb8VpDRDiVA&utm_medium=api&utm_source=851bf6c5&v=E9EFEB2C3A8995053BDB9D0440DD78E5568C8C77",
+    "latitude": 38.894279,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQXRlbXBMeWU4UkdTYjhWcERSRGlWQSIsImkiOiI1ODE3Njk2NDA1In0.xW3j-vbahDrsRL8cj08CjYJBaQzGiAjJyIiNXxTTk4g",
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Virginia",
         "Fairfax County",
         "Chantilly"
       ],
-      "display_name": "Chantilly, Fairfax County"
+      "display_name": "Chantilly, Fairfax County",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxNzY5NjQwNSIsInMiOiJXR2NTUmZPZDhSR2Q5UDBjUHhIXzVBIn0.QPNF9CyzgwrAV63vbpQOLq939QYna-8024gnOBfEmyE",
-    "salary_max": 108394.18,
-    "longitude": -77.431099,
-    "salary_is_predicted": "1",
+    "salary_min": 108394.18,
     "id": "5817696405",
-    "redirect_url": "https://www.adzuna.com/land/ad/5817696405?se=WGcSRfOd8RGd9P0cPxH_5A&utm_medium=api&utm_source=851bf6c5&v=E9EFEB2C3A8995053BDB9D0440DD78E5568C8C77",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "created": "2026-07-27T18:44:21Z",
-    "title": "Data Scientist",
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "MANTECH"
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "latitude": 38.894279,
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. ManTech seeks a motivated, career and customer-oriented Data Scientist to join our team in Chantilly, VA . In this dynamic role, you will join a top-tier team of Information Technology and Analytic professionals dedicated to supporting national security through innovative data science and analytics. You will work in a self-contained Big Data environment where the team manages everything from inf\u2026"
+    "title": "Data Scientist",
+    "longitude": -77.431099,
+    "created": "2026-07-27T18:44:21Z",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. ManTech seeks a motivated, career and customer-oriented Data Scientist to join our team in Chantilly, VA . In this dynamic role, you will join a top-tier team of Information Technology and Analytic professionals dedicated to supporting national security through innovative data science and analytics. You will work in a self-contained Big Data environment where the team manages everything from inf\u2026",
+    "salary_max": 108394.18
+  },
+  {
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQXRlbXBMeWU4UkdTYjhWcERSRGlWQSIsImkiOiI1Nzg5OTg2MDY5In0.zQgwWh3fGFr1wcn4vRGd_pSsqefnxkWITOge6uVTJmU",
+    "location": {
+      "area": [
+        "US",
+        "Mississippi",
+        "Smith County",
+        "Raleigh"
+      ],
+      "display_name": "Raleigh, Smith County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "salary_min": 164090.44,
+    "latitude": 32.033488,
+    "redirect_url": "https://www.adzuna.com/land/ad/5789986069?se=AtempLye8RGSb8VpDRDiVA&utm_medium=api&utm_source=851bf6c5&v=F22439E3495F86E1B7EF099DAA5CADD187385603",
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_max": 164090.44,
+    "description": "hackajob is collaborating with LexisNexis to connect them with exceptional professionals for this role. About Us : LexisNexis, a part of RELX, is a leading global provider of legal, regulatory, and business information. We help customers increase productivity and improve decision-making and outcomes. Our 10,500 experts and innovative tools help us shape a better world for our customers and communities. About the Role : Are you looking to develop your Data Scientist career? Do you enjoy coaching\u2026",
+    "created": "2026-07-06T11:33:19Z",
+    "longitude": -89.522291,
+    "title": "Lead Data Scientist",
+    "id": "5789986069",
+    "company": {
+      "display_name": "LexisNexis",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    }
   }
 ]
