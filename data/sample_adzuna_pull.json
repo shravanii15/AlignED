@@ -1,73 +1,125 @@
 [
   {
-    "company": {
-      "display_name": "MCKESSON",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "id": "5856896513",
-    "latitude": 40.103832,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1Njg5NjUxMyIsInMiOiJNSjBxOWpxaThSR2Z4NWJFZC1uaFBnIn0.Uec_qDy2TpI0aNYepcfX3zEOfN9yRvRjRi9bp1cXEbQ",
-    "redirect_url": "https://www.adzuna.com/land/ad/5856896513?se=MJ0q9jqi8RGfx5bEd-nhPg&utm_medium=api&utm_source=851bf6c5&v=0A644335261E50171ECA9DDD61CF19E5ABC9AF4E",
     "description": "McKesson is an impact-driven, Fortune 10 company that touches virtually every aspect of healthcare. We are known for delivering insights, products, and services that make quality care more accessible and affordable. Here, we focus on the health, happiness, and well-being of you and those we serve \u2013 we care. What you do at McKesson matters. We foster a culture where you can grow, make an impact, and are empowered to bring new ideas. Together, we thrive as we shape the future of health for patien\u2026",
-    "title": "Strategic Data Scientist",
-    "__CLASS__": "Adzuna::API::Response::Job",
     "salary_is_predicted": "1",
+    "longitude": -83.020025,
+    "id": "5856896513",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1Njg5NjUxMyIsInMiOiJBRjhqZHd1ajhSR2NmS1llX2NJcHZBIn0.6AuE0uPH2ESqcLE86vMW_WdjrQTNWRe9MFmGU0QedsU",
     "category": {
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs"
     },
-    "salary_max": 124373.66,
-    "created": "2026-08-26T10:31:06Z",
-    "longitude": -83.020025,
-    "salary_min": 124373.66,
+    "company": {
+      "display_name": "MCKESSON",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "latitude": 40.103832,
+    "title": "Strategic Data Scientist",
+    "__CLASS__": "Adzuna::API::Response::Job",
     "location": {
-      "display_name": "Columbus, Franklin County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Ohio",
         "Franklin County",
         "Columbus"
       ],
-      "__CLASS__": "Adzuna::API::Response::Location"
-    }
+      "display_name": "Columbus, Franklin County"
+    },
+    "salary_min": 124373.66,
+    "redirect_url": "https://www.adzuna.com/land/ad/5856896513?se=AF8jdwuj8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=0A644335261E50171ECA9DDD61CF19E5ABC9AF4E",
+    "salary_max": 124373.66,
+    "created": "2026-08-26T10:31:06Z"
   },
   {
-    "id": "5789985191",
-    "latitude": 27.955269,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTUowcTlqcWk4UkdmeDViRWQtbmhQZyIsImkiOiI1Nzg5OTg1MTkxIn0.gSZhwadVU_ftdav3J5e8r3IF0p2qghP0EZb0i5bbv1I",
+    "longitude": -103.471515,
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist in Fort Meade, MD , to drive cutting-edge statistical analytics and cloud-based data solutions for national security objectives. In this role, you will collaborate with subject matter experts and customers to guide analytic development from prototype to production, delivering high-value data-driven insights while laying the g\u2026",
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQUY4amR3dWo4UkdjZktZZV9jSXB2QSIsImkiOiI1ODU5NjM3NDY3In0.qwOzM9ZnTfSdL5ZtePzBeR35craTtqA8QQ2V4tWDBmA",
+    "id": "5859637467",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "South Dakota",
+        "Meade County",
+        "Fort Meade"
+      ],
+      "display_name": "Fort Meade, Meade County"
+    },
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
       "display_name": "MANTECH"
     },
-    "salary_max": 112013.98,
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "latitude": 44.410977,
+    "title": "Data Scientist",
+    "created": "2026-08-28T07:42:15Z",
+    "salary_max": 119148.47,
+    "salary_min": 119148.47,
+    "redirect_url": "https://www.adzuna.com/land/ad/5859637467?se=AF8jdwuj8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=BDBAFE2720873F527953CC2AC05C7D43357A02A6"
+  },
+  {
     "longitude": -82.45632,
-    "created": "2026-07-06T11:33:01Z",
+    "salary_is_predicted": "1",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQUY4amR3dWo4UkdjZktZZV9jSXB2QSIsImkiOiI1Nzg5OTg1MTkxIn0.HlSm7ZZxYE1gUQ_jNaJ1A2o0SGSIzyc9vkjoHx5_VFU",
+    "id": "5789985191",
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Tampa, Hillsborough County",
       "area": [
         "US",
         "Florida",
         "Hillsborough County",
         "Tampa"
-      ]
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Tampa, Hillsborough County"
     },
-    "salary_min": 112013.98,
-    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=MJ0q9jqi8RGfx5bEd-nhPg&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
-    "title": "Data Scientist",
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_is_predicted": "1",
+    "title": "Data Scientist",
+    "latitude": 27.955269,
     "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs"
-    }
+    },
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "salary_max": 112013.98,
+    "created": "2026-07-06T11:33:01Z",
+    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=AF8jdwuj8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
+    "salary_min": 112013.98
   },
   {
-    "salary_max": 103764.39,
+    "id": "5792991528",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiQUY4amR3dWo4UkdjZktZZV9jSXB2QSIsImkiOiI1NzkyOTkxNTI4In0.91402swuf2C-uK9-kNBpRXmNI4Ud9_BlBp2AuBR92pM",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
+    "salary_is_predicted": "1",
+    "longitude": -81.311499,
     "salary_min": 103764.39,
+    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=AF8jdwuj8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC",
+    "salary_max": 103764.39,
+    "created": "2026-07-08T16:10:15Z",
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "MANTECH"
+    },
+    "latitude": 32.372413,
+    "title": "Data Scientist",
+    "__CLASS__": "Adzuna::API::Response::Job",
     "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
@@ -77,92 +129,39 @@
         "Springfield"
       ],
       "display_name": "Springfield, Effingham County"
-    },
-    "longitude": -81.311499,
-    "created": "2026-07-08T16:10:15Z",
-    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=MJ0q9jqi8RGfx5bEd-nhPg&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC",
-    "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs",
-      "label": "IT Jobs"
-    },
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
-    "title": "Data Scientist",
-    "id": "5792991528",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTUowcTlqcWk4UkdmeDViRWQtbmhQZyIsImkiOiI1NzkyOTkxNTI4In0.lvWln3a0FJOAl35LL6fhQteYnfUJ74-KBMHXse7WO3E",
-    "latitude": 32.372413,
-    "company": {
-      "display_name": "MANTECH",
-      "__CLASS__": "Adzuna::API::Response::Company"
     }
   },
   {
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. ManTech seeks a motivated, career and customer-oriented Data Scientist to join our team in Chantilly, VA . In this dynamic role, you will join a top-tier team of Information Technology and Analytic professionals dedicated to supporting national security through innovative data science and analytics. You will work in a self-contained Big Data environment where the team manages everything from inf\u2026",
+    "salary_is_predicted": "1",
+    "longitude": -77.431099,
+    "id": "5817696405",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxNzY5NjQwNSIsInMiOiJBRjhqZHd1ajhSR2NmS1llX2NJcHZBIn0.Xe4nHHzCd5ZKxVA-tGsIAMH77yD8PU0IpNBhoYzXOxc",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
       "display_name": "MANTECH"
     },
-    "id": "5817696405",
-    "latitude": 38.894279,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTUowcTlqcWk4UkdmeDViRWQtbmhQZyIsImkiOiI1ODE3Njk2NDA1In0.Fhyo15r0kj8miWOCSFAsqCQuVb3zbnNGaNlDo0I7W4A",
-    "redirect_url": "https://www.adzuna.com/land/ad/5817696405?se=MJ0q9jqi8RGfx5bEd-nhPg&utm_medium=api&utm_source=851bf6c5&v=E9EFEB2C3A8995053BDB9D0440DD78E5568C8C77",
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. ManTech seeks a motivated, career and customer-oriented Data Scientist to join our team in Chantilly, VA . In this dynamic role, you will join a top-tier team of Information Technology and Analytic professionals dedicated to supporting national security through innovative data science and analytics. You will work in a self-contained Big Data environment where the team manages everything from inf\u2026",
-    "title": "Data Scientist",
     "category": {
-      "label": "IT Jobs",
       "tag": "it-jobs",
+      "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_is_predicted": "1",
-    "salary_max": 108394.18,
-    "created": "2026-07-27T18:44:21Z",
-    "longitude": -77.431099,
-    "salary_min": 108394.18,
+    "title": "Data Scientist",
+    "latitude": 38.894279,
     "location": {
+      "display_name": "Chantilly, Fairfax County",
       "area": [
         "US",
         "Virginia",
         "Fairfax County",
         "Chantilly"
       ],
-      "display_name": "Chantilly, Fairfax County",
       "__CLASS__": "Adzuna::API::Response::Location"
-    }
-  },
-  {
-    "title": "Data Scientist/Senior Data Scientist",
-    "description": "As a member of the C3 AI Data Science team, you will work with some of the largest companies on the planet helping them build the next generation of AI-powered enterprise applications on the C3 AI Platform. You will work directly with data scientists, AI engineers, and subject matter experts to design and deploy AI capabilities that give our customers the information they need to make better decisions and accelerate their digital transformation. You will identify the right AI approaches for eac\u2026",
-    "salary_is_predicted": "1",
+    },
     "__CLASS__": "Adzuna::API::Response::Job",
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "contract_time": "full_time",
-    "redirect_url": "https://www.adzuna.com/land/ad/5825678170?se=MJ0q9jqi8RGfx5bEd-nhPg&utm_medium=api&utm_source=851bf6c5&v=BE1A66C30695B263D8601188750B694F3E68888D",
-    "salary_max": 175675.55,
-    "longitude": -122.24046,
-    "created": "2026-08-02T08:28:38Z",
-    "salary_min": 175675.55,
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Portola Valley, San Mateo County",
-      "area": [
-        "US",
-        "California",
-        "San Mateo County",
-        "Portola Valley"
-      ]
-    },
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "C3 AI"
-    },
-    "id": "5825678170",
-    "latitude": 37.39908,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTUowcTlqcWk4UkdmeDViRWQtbmhQZyIsImkiOiI1ODI1Njc4MTcwIn0.es_IJIRLLMNWEL-Xh1wKaeTiSjifNKxeixoN6HdqSy0"
+    "salary_min": 108394.18,
+    "redirect_url": "https://www.adzuna.com/land/ad/5817696405?se=AF8jdwuj8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=E9EFEB2C3A8995053BDB9D0440DD78E5568C8C77",
+    "salary_max": 108394.18,
+    "created": "2026-07-27T18:44:21Z"
   }
 ]
