@@ -1,115 +1,71 @@
 [
   {
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDk0NzQyOCIsInMiOiJSTmxNTEdPazhSR2YxcmJ3Vi1qR05nIn0._8LhvD9ks4ynqWChUWm9WwuyC_dYks8If0kSAio2wLA",
+    "redirect_url": "https://www.adzuna.com/land/ad/5860947428?se=RNlMLGOk8RGf1rbwV-jGNg&utm_medium=api&utm_source=851bf6c5&v=3EC9A4DE8E54F1BD8A870C7EAA6FBE75B870B2B9",
+    "longitude": -86.866651,
+    "latitude": 36.677883,
+    "salary_is_predicted": "0",
+    "created": "2026-08-29T06:15:36Z",
+    "salary_min": 120000,
+    "title": "Data Scientist",
+    "id": "5860947428",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_max": 165000,
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Adairville, Logan County",
       "area": [
         "US",
         "Kentucky",
         "Logan County",
         "Adairville"
-      ]
+      ],
+      "display_name": "Adairville, Logan County",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
       "display_name": "Starbucks"
     },
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5860947428?se=nmv12qKj8RGEeLI7Dotn4Q&utm_medium=api&utm_source=851bf6c5&v=3EC9A4DE8E54F1BD8A870C7EAA6FBE75B870B2B9",
-    "salary_max": 165000,
-    "title": "Data Scientist",
-    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting our global coffee retail and store operations. In this role, you will analyze large, complex datasets from stores, loyalty programs, supply chain, and digital channels to generate insights that improve customer experience, store performance, and operational efficiency. You will build predictive models, conduct A/B testing, and create dashboards that guide decision-making. You\u2019ll partner with business, marketing, \u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDk0NzQyOCIsInMiOiJubXYxMnFLajhSR0VlTEk3RG90bjRRIn0.cp_O0fCr4_TQYTS5fdHj2FutgapIbMsk_TzmeVoWPvI",
-    "salary_is_predicted": "0",
-    "created": "2026-08-29T06:15:36Z",
-    "salary_min": 120000,
-    "id": "5860947428",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 36.677883,
-    "longitude": -86.866651
+    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting our global coffee retail and store operations. In this role, you will analyze large, complex datasets from stores, loyalty programs, supply chain, and digital channels to generate insights that improve customer experience, store performance, and operational efficiency. You will build predictive models, conduct A/B testing, and create dashboards that guide decision-making. You\u2019ll partner with business, marketing, \u2026"
   },
   {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibm12MTJxS2o4UkdFZUxJN0RvdG40USIsImkiOiI1ODYwOTU3NDMzIn0.mwHK9uOwil5C_oJlU_thC7H5dNLaoLvXyNCkLLdYQEs",
-    "description": "Starbucks is seeking a Data Scientist to support Data & Analytics for our global coffee retail operations. In this role, you will analyze large customer, store, and supply chain datasets to uncover insights that improve guest experience, optimize inventory, and support sustainability goals. You will build predictive models, experimentation frameworks, and dashboards that guide decisions across marketing, product, and operations. Partner with cross-functional teams to define data needs, translat\u2026",
-    "salary_max": 180000,
-    "title": "Data Scientist",
-    "created": "2026-08-29T06:25:31Z",
-    "salary_is_predicted": "0",
     "company": {
       "display_name": "Starbucks",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    },
     "location": {
+      "display_name": "Berry Hill, Davidson County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Tennessee",
         "Davidson County",
         "Berry Hill"
-      ],
-      "display_name": "Berry Hill, Davidson County",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5860957433?se=nmv12qKj8RGEeLI7Dotn4Q&utm_medium=api&utm_source=851bf6c5&v=C7F8EF9EAFD1D5C45324D75E29AD9CA9D6CD59AD",
-    "longitude": -86.77572,
-    "salary_min": 125000,
-    "latitude": 36.10734,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5860957433"
-  },
-  {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibm12MTJxS2o4UkdFZUxJN0RvdG40USIsImkiOiI1ODYwOTM1NzYzIn0.TJy_wwfataxZWYIEKq3km04WD1k78Ev89edEmuR3S58",
-    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
-    "salary_max": 185000,
-    "title": "Data Scientist",
-    "created": "2026-08-29T06:00:02Z",
-    "salary_is_predicted": "0",
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "company": {
-      "display_name": "Starbucks",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "location": {
-      "display_name": "Nashville, Davidson County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Tennessee",
-        "Davidson County",
-        "Nashville"
       ]
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5860935763?se=nmv12qKj8RGEeLI7Dotn4Q&utm_medium=api&utm_source=851bf6c5&v=002CC99A685D8AABA292DA0EFDD1D0DD500E0D4E",
-    "longitude": -86.78903,
-    "salary_min": 132000,
-    "latitude": 36.14946,
+    "description": "Starbucks is seeking a Data Scientist to support Data & Analytics for our global coffee retail operations. In this role, you will analyze large customer, store, and supply chain datasets to uncover insights that improve guest experience, optimize inventory, and support sustainability goals. You will build predictive models, experimentation frameworks, and dashboards that guide decisions across marketing, product, and operations. Partner with cross-functional teams to define data needs, translat\u2026",
+    "category": {
+      "label": "IT Jobs",
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "salary_max": 180000,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5860935763"
+    "title": "Data Scientist",
+    "id": "5860957433",
+    "salary_min": 125000,
+    "created": "2026-08-29T06:25:31Z",
+    "salary_is_predicted": "0",
+    "latitude": 36.10734,
+    "redirect_url": "https://www.adzuna.com/land/ad/5860957433?se=RNlMLGOk8RGf1rbwV-jGNg&utm_medium=api&utm_source=851bf6c5&v=C7F8EF9EAFD1D5C45324D75E29AD9CA9D6CD59AD",
+    "longitude": -86.77572,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDk1NzQzMyIsInMiOiJSTmxNTEdPazhSR2YxcmJ3Vi1qR05nIn0.uXrcTilEJEoQRMstLlSiI0E6crmysUnCGx4yCizBu2g"
   },
   {
-    "longitude": -86.36359,
-    "salary_min": 132000,
-    "id": "5860935797",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 35.84775,
-    "salary_max": 185000,
-    "title": "Data Scientist",
-    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDkzNTc5NyIsInMiOiJubXYxMnFLajhSR0VlTEk3RG90bjRRIn0.49cLx2Ec_-hBd9yy5SSAoTLFY9eOiUWqrDovC8fA13I",
-    "created": "2026-08-29T06:00:13Z",
-    "salary_is_predicted": "0",
     "category": {
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
@@ -119,49 +75,93 @@
       "__CLASS__": "Adzuna::API::Response::Company",
       "display_name": "Starbucks"
     },
+    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Murfreesboro, Rutherford County",
       "area": [
         "US",
         "Tennessee",
-        "Rutherford County",
-        "Murfreesboro"
-      ]
+        "Williamson County",
+        "Fairview"
+      ],
+      "display_name": "Fairview, Williamson County",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5860935797?se=nmv12qKj8RGEeLI7Dotn4Q&utm_medium=api&utm_source=851bf6c5&v=9FA04F6DBE31DC8C916C5772E1CFE7F932226D55"
+    "id": "5860960737",
+    "title": "Data Scientist",
+    "salary_max": 185000,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "0",
+    "latitude": 35.969338,
+    "salary_min": 132000,
+    "created": "2026-08-29T06:30:25Z",
+    "longitude": -87.126764,
+    "redirect_url": "https://www.adzuna.com/land/ad/5860960737?se=RNlMLGOk8RGf1rbwV-jGNg&utm_medium=api&utm_source=851bf6c5&v=3B225294AC948C35B33064027F586ED9C37D4F80",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUk5sTUxHT2s4UkdmMXJid1YtakdOZyIsImkiOiI1ODYwOTYwNzM3In0.puStRJ7nXQALBqwL5Gr2E-MFjRzDTnLinNhr9BDb5wU"
+  },
+  {
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUk5sTUxHT2s4UkdmMXJid1YtakdOZyIsImkiOiI1ODYwOTQyMTYyIn0.73sqHEpujyBejcdgBTcEsxOob7ZMeDxfeCb6JHhxZKU",
+    "longitude": -86.153559,
+    "redirect_url": "https://www.adzuna.com/land/ad/5860942162?se=RNlMLGOk8RGf1rbwV-jGNg&utm_medium=api&utm_source=851bf6c5&v=5FEFBFD7363B128ED6A11F0EF9E78B8194A6681C",
+    "latitude": 36.408021,
+    "salary_is_predicted": "0",
+    "created": "2026-08-29T06:10:26Z",
+    "salary_min": 132000,
+    "id": "5860942162",
+    "title": "Data Scientist",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_max": 185000,
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
+    },
+    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
+    "company": {
+      "display_name": "Starbucks",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "location": {
+      "area": [
+        "US",
+        "Tennessee",
+        "Trousdale County",
+        "Hartsville"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Hartsville, Trousdale County"
+    }
   },
   {
     "company": {
       "display_name": "Starbucks",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
+    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
     "location": {
+      "display_name": "College Grove, Williamson County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Kentucky",
-        "Simpson County",
-        "Franklin"
-      ],
-      "display_name": "Franklin, Simpson County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+        "Tennessee",
+        "Williamson County",
+        "College Grove"
+      ]
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5860935739?se=nmv12qKj8RGEeLI7Dotn4Q&utm_medium=api&utm_source=851bf6c5&v=12DF36712CB8E010E4A0478E628FDB31917A35A2",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
+    },
     "salary_max": 185000,
-    "title": "Data Scientist",
-    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibm12MTJxS2o4UkdFZUxJN0RvdG40USIsImkiOiI1ODYwOTM1NzM5In0.fBLDA-pkYBIedw_IKm4qXOGhAc043_WakBu3_Pof2_4",
-    "created": "2026-08-29T05:59:56Z",
-    "salary_is_predicted": "0",
-    "salary_min": 132000,
-    "id": "5860935739",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 36.71298,
-    "longitude": -86.57652
+    "id": "5860941446",
+    "title": "Data Scientist",
+    "salary_min": 132000,
+    "created": "2026-08-29T06:09:33Z",
+    "salary_is_predicted": "0",
+    "latitude": 35.7751,
+    "redirect_url": "https://www.adzuna.com/land/ad/5860941446?se=RNlMLGOk8RGf1rbwV-jGNg&utm_medium=api&utm_source=851bf6c5&v=B128E4E47A86AC9001795B078A122FAC368D8D2D",
+    "longitude": -86.7142,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUk5sTUxHT2s4UkdmMXJid1YtakdOZyIsImkiOiI1ODYwOTQxNDQ2In0.cIq12i5KSCbhCimEUpjKONfZGVklH8f_VY-enMj209Q"
   }
 ]
