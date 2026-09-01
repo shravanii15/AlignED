@@ -1,167 +1,167 @@
 [
   {
-    "id": "5860947428",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiMUJrdE1qaWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODYwOTQ3NDI4In0.clSXTu9OCGtpA3n1h9HXay4X8euynb1p1FjujTtK3Ow",
-    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting our global coffee retail and store operations. In this role, you will analyze large, complex datasets from stores, loyalty programs, supply chain, and digital channels to generate insights that improve customer experience, store performance, and operational efficiency. You will build predictive models, conduct A/B testing, and create dashboards that guide decision-making. You\u2019ll partner with business, marketing, \u2026",
-    "salary_is_predicted": "0",
-    "longitude": -86.866651,
-    "salary_min": 120000,
-    "redirect_url": "https://www.adzuna.com/land/ad/5860947428?se=1BktMjil8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=3EC9A4DE8E54F1BD8A870C7EAA6FBE75B870B2B9",
-    "salary_max": 165000,
-    "created": "2026-08-29T06:15:36Z",
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Starbucks"
-    },
-    "latitude": 36.677883,
-    "title": "Data Scientist",
-    "__CLASS__": "Adzuna::API::Response::Job",
     "location": {
-      "display_name": "Adairville, Logan County",
+      "display_name": "Columbus, Franklin County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Kentucky",
-        "Logan County",
-        "Adairville"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location"
-    }
-  },
-  {
-    "redirect_url": "https://www.adzuna.com/land/ad/5860957433?se=1BktMjil8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=C7F8EF9EAFD1D5C45324D75E29AD9CA9D6CD59AD",
-    "salary_min": 125000,
-    "salary_max": 180000,
-    "created": "2026-08-29T06:25:31Z",
-    "latitude": 36.10734,
-    "title": "Data Scientist",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Starbucks"
+        "Ohio",
+        "Franklin County",
+        "Columbus"
+      ]
     },
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1",
+    "latitude": 40.103832,
+    "salary_min": 124373.66,
+    "redirect_url": "https://www.adzuna.com/land/ad/5856896513?se=DKieavSl8RGGYI73n1NTOA&utm_medium=api&utm_source=851bf6c5&v=0A644335261E50171ECA9DDD61CF19E5ABC9AF4E",
     "category": {
       "tag": "it-jobs",
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_max": 124373.66,
+    "id": "5856896513",
+    "description": "McKesson is an impact-driven, Fortune 10 company that touches virtually every aspect of healthcare. We are known for delivering insights, products, and services that make quality care more accessible and affordable. Here, we focus on the health, happiness, and well-being of you and those we serve \u2013 we care. What you do at McKesson matters. We foster a culture where you can grow, make an impact, and are empowered to bring new ideas. Together, we thrive as we shape the future of health for patien\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1Njg5NjUxMyIsInMiOiJES2llYXZTbDhSR0dZSTczbjFOVE9BIn0.0kcbBLGGc5S_fhOI_NxF0-J2Q8yxQv3CyhiwJG6KGLs",
+    "company": {
+      "display_name": "MCKESSON",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "title": "Strategic Data Scientist",
+    "longitude": -83.020025,
+    "created": "2026-08-26T10:31:06Z"
+  },
+  {
+    "title": "Data Scientist",
+    "longitude": -93.269357,
+    "created": "2026-08-30T19:13:50Z",
     "location": {
+      "display_name": "Minneapolis, Hennepin County",
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Tennessee",
-        "Davidson County",
-        "Berry Hill"
-      ],
-      "display_name": "Berry Hill, Davidson County"
+        "Minnesota",
+        "Hennepin County",
+        "Minneapolis"
+      ]
     },
-    "id": "5860957433",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiMUJrdE1qaWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODYwOTU3NDMzIn0.RggnBz11KQQ4TiW-h9JDIjoTqrPvVB8kvwe7eU8xDDg",
-    "salary_is_predicted": "0",
-    "description": "Starbucks is seeking a Data Scientist to support Data & Analytics for our global coffee retail operations. In this role, you will analyze large customer, store, and supply chain datasets to uncover insights that improve guest experience, optimize inventory, and support sustainability goals. You will build predictive models, experimentation frameworks, and dashboards that guide decisions across marketing, product, and operations. Partner with cross-functional teams to define data needs, translat\u2026",
-    "longitude": -86.77572
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 44.983654,
+    "salary_min": 132465.67,
+    "redirect_url": "https://www.adzuna.com/land/ad/5862539065?se=DKieavSl8RGGYI73n1NTOA&utm_medium=api&utm_source=851bf6c5&v=5FEBC52C25CEA0A631624D28FCB18FD5A48DE8DA",
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
+    "salary_max": 132465.67,
+    "id": "5862539065",
+    "description": "SUMMARY Mortenson is currently seeking a Data Scientist that will be responsible for modeling complex business problems and discovering business insights through the use of statistical, algorithmic, mining, and visualization techniques to solve key business problems, and help build a data-driven business culture in an industry where analytics is still an undefined competency. RESPONSIBILITIES Understand the assigned business challenge and develop a plan to identify, obtain, and analyze the nece\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MjUzOTA2NSIsInMiOiJES2llYXZTbDhSR0dZSTczbjFOVE9BIn0.UlDDyka7jYDZHXagzOJWn-PIX8PAlr8by3hZeZZ7F5o",
+    "company": {
+      "display_name": "Mortenson",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    }
   },
   {
-    "salary_max": 185000,
-    "created": "2026-08-29T06:00:02Z",
-    "salary_min": 132000,
-    "redirect_url": "https://www.adzuna.com/land/ad/5860935763?se=1BktMjil8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=002CC99A685D8AABA292DA0EFDD1D0DD500E0D4E",
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "title": "Data Scientist",
+    "longitude": -103.471515,
+    "created": "2026-08-28T07:42:15Z",
     "location": {
-      "display_name": "Nashville, Davidson County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Fort Meade, Meade County",
       "area": [
         "US",
-        "Tennessee",
-        "Davidson County",
-        "Nashville"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location"
+        "South Dakota",
+        "Meade County",
+        "Fort Meade"
+      ]
     },
+    "redirect_url": "https://www.adzuna.com/land/ad/5859637467?se=DKieavSl8RGGYI73n1NTOA&utm_medium=api&utm_source=851bf6c5&v=BDBAFE2720873F527953CC2AC05C7D43357A02A6",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 119148.47,
+    "latitude": 44.410977,
+    "salary_is_predicted": "1",
+    "salary_max": 119148.47,
     "category": {
-      "label": "IT Jobs",
+      "tag": "it-jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
+      "label": "IT Jobs"
     },
+    "id": "5859637467",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist in Fort Meade, MD , to drive cutting-edge statistical analytics and cloud-based data solutions for national security objectives. In this role, you will collaborate with subject matter experts and customers to guide analytic development from prototype to production, delivering high-value data-driven insights while laying the g\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTYzNzQ2NyIsInMiOiJES2llYXZTbDhSR0dZSTczbjFOVE9BIn0.T6K2pIMGPaSn4T9bJfYNETuMh8VzPjXHsxeWuGRlnv8",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Starbucks"
-    },
-    "latitude": 36.14946,
-    "title": "Data Scientist",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDkzNTc2MyIsInMiOiIxQmt0TWppbDhSR2NmS1llX2NJcHZBIn0.rndKegsc9KwB6Sqcauk73CPphRtap9hRinrqnvVmJF4",
-    "id": "5860935763",
-    "longitude": -86.78903,
-    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
-    "salary_is_predicted": "0"
+      "display_name": "MANTECH"
+    }
   },
   {
     "location": {
-      "display_name": "Berry Hill, Davidson County",
-      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Tennessee",
-        "Davidson County",
-        "Berry Hill"
-      ]
+        "Florida",
+        "Hillsborough County",
+        "Tampa"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Tampa, Hillsborough County"
     },
+    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=DKieavSl8RGGYI73n1NTOA&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
     "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1",
+    "latitude": 27.955269,
+    "salary_min": 112013.98,
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "salary_max": 112013.98,
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NTE5MSIsInMiOiJES2llYXZTbDhSR0dZSTczbjFOVE9BIn0.NmlqIhkLuqJ_u8wm-48Cl1sICXIHbfKKOVEt3OCxyOs",
+    "id": "5789985191",
     "company": {
-      "display_name": "Starbucks",
+      "display_name": "MANTECH",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "latitude": 36.134416,
     "title": "Data Scientist",
-    "salary_max": 185000,
-    "created": "2026-08-29T06:20:20Z",
-    "salary_min": 132000,
-    "redirect_url": "https://www.adzuna.com/land/ad/5860951577?se=1BktMjil8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=306E2034B098108036283924B1329C4FA8D73A97",
-    "longitude": -86.802788,
-    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
-    "salary_is_predicted": "0",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiMUJrdE1qaWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODYwOTUxNTc3In0.mG2IlyNrBuBo50yP5sVO-qAJ1DrCS5IkIwLfhhisOKY",
-    "id": "5860951577"
+    "created": "2026-07-06T11:33:01Z",
+    "longitude": -82.45632
   },
   {
     "title": "Data Scientist",
-    "latitude": 36.606801,
-    "company": {
-      "display_name": "Starbucks",
-      "__CLASS__": "Adzuna::API::Response::Company"
+    "longitude": -81.311499,
+    "created": "2026-07-08T16:10:15Z",
+    "location": {
+      "area": [
+        "US",
+        "Georgia",
+        "Effingham County",
+        "Springfield"
+      ],
+      "display_name": "Springfield, Effingham County",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 32.372413,
+    "salary_min": 103764.39,
+    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=DKieavSl8RGGYI73n1NTOA&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC",
     "category": {
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs"
     },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "location": {
-      "display_name": "Orlinda, Robertson County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Tennessee",
-        "Robertson County",
-        "Orlinda"
-      ]
+    "salary_max": 103764.39,
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5860950764?se=1BktMjil8RGcfKYe_cIpvA&utm_medium=api&utm_source=851bf6c5&v=BEFDAA4B3F99C86990E32AE81CC6A55E742915DE",
-    "salary_min": 132000,
-    "created": "2026-08-29T06:19:31Z",
-    "salary_max": 185000,
-    "salary_is_predicted": "0",
-    "description": "Starbucks is seeking a Data Scientist to join our Data & Analytics team supporting global retail and beverage operations. You will use statistical modeling, machine learning, and experimentation to optimize store performance, personalize customer experiences, and improve supply chain efficiency. Partner with cross-functional stakeholders to translate business questions into analytical projects, build and validate predictive models, and deliver actionable insights through dashboards and clear st\u2026",
-    "longitude": -86.707198,
-    "id": "5860950764",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiMUJrdE1qaWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODYwOTUwNzY0In0.IPlQY3e2L1eFBZZ1FndPW0614LOPqGJUpolkTddTksw"
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
+    "id": "5792991528",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5Mjk5MTUyOCIsInMiOiJES2llYXZTbDhSR0dZSTczbjFOVE9BIn0.YamhljNKduYc71GIz_5OJBz9OYZUXC--otw0Er_pvRo"
   }
 ]
