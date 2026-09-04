@@ -1,167 +1,167 @@
 [
   {
-    "longitude": -76.8669,
-    "title": "Data Scientist (TS/SCI cleared)",
-    "description": "Description Are you passionate about building solutions for our greatest national security challenges? Are you searching for engaging work with an employer that prioritizes impact, innovation, and personal development? Do you value working in a creative and collaborative environment? If so, we're looking for someone like you to join our team at APL. The Threat Analytic Systems (QAI) Group is seeking engineers, scientists, and developers with a curiosity and drive for learning who can translate \u2026",
-    "salary_max": 85038.04,
-    "salary_min": 85038.04,
+    "id": "5866784320",
     "category": {
-      "tag": "engineering-jobs",
       "label": "Engineering Jobs",
+      "tag": "engineering-jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "latitude": 39.1359,
-    "created": "2026-09-02T05:12:37Z",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Johns Hopkins Applied Physics Laboratory "
-    },
     "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Maryland",
         "Prince George's County",
         "North Laurel"
       ],
+      "display_name": "North Laurel, Prince George's County"
+    },
+    "description": "Description Are you passionate about building solutions for our greatest national security challenges? Are you searching for engaging work with an employer that prioritizes impact, innovation, and personal development? Do you value working in a creative and collaborative environment? If so, we're looking for someone like you to join our team at APL. The Threat Analytic Systems (QAI) Group is seeking engineers, scientists, and developers with a curiosity and drive for learning who can translate \u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 39.1359,
+    "salary_min": 85038.04,
+    "redirect_url": "https://www.adzuna.com/land/ad/5866784320?se=_lHWdEuo8RGFGZR3nA5uCg&utm_medium=api&utm_source=851bf6c5&v=56989BB5FA5E8508424B1BBA6C283E2CFF24FA94",
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2xIV2RFdW84UkdGR1pSM25BNXVDZyIsImkiOiI1ODY2Nzg0MzIwIn0.jcV2L3Qxr_MsLLHbUSby7B3WOTzLaKo2h2jGNVifu3U",
+    "title": "Data Scientist (TS/SCI cleared)",
+    "longitude": -76.8669,
+    "created": "2026-09-02T05:12:37Z",
+    "salary_max": 85038.04,
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Johns Hopkins Applied Physics Laboratory "
+    }
+  },
+  {
+    "redirect_url": "https://www.adzuna.com/land/ad/5864882069?se=_lHWdEuo8RGFGZR3nA5uCg&utm_medium=api&utm_source=851bf6c5&v=3223B4866675DE870378D4D87C5D0C0DF7C411B5",
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2xIV2RFdW84UkdGR1pSM25BNXVDZyIsImkiOiI1ODY0ODgyMDY5In0.T5spUG7dHhq5W4vIHAToOY457l5qyUE9y3a0IfmzfEA",
+    "id": "5864882069",
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "description": "Description Are you passionate about building solutions for our greatest national security challenges? Are you searching for engaging work with an employer that prioritizes impact, innovation, and personal development? Do you value working in a creative and collaborative environment? If so, we're looking for someone like you to join our team at APL. The Threat Analytic Systems (QAI) Group is seeking talented team members who will help provide our nation with ground-breaking capabilities that br\u2026",
+    "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Maryland",
+        "Prince George's County",
+        "North Laurel"
+      ],
       "display_name": "North Laurel, Prince George's County"
     },
     "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_is_predicted": "1",
-    "id": "5866784320",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2Njc4NDMyMCIsInMiOiJMbHJiUzRPbjhSRzM3OENpY1B0RGZnIn0.IjiD80WajUaVT-Q3Qxiq9uKhcyqsXNF3hnSEFBLR7W0",
-    "redirect_url": "https://www.adzuna.com/land/ad/5866784320?se=LlrbS4On8RG378CicPtDfg&utm_medium=api&utm_source=851bf6c5&v=56989BB5FA5E8508424B1BBA6C283E2CFF24FA94"
-  },
-  {
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "North Laurel, Prince George's County",
-      "area": [
-        "US",
-        "Maryland",
-        "Prince George's County",
-        "North Laurel"
-      ]
-    },
-    "salary_is_predicted": "1",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2NDg4MjA2OSIsInMiOiJMbHJiUzRPbjhSRzM3OENpY1B0RGZnIn0.BD1kiIxdJI3vbz7da9GLNJZrvMAt2HkIK6epPIWiMac",
-    "id": "5864882069",
-    "redirect_url": "https://www.adzuna.com/land/ad/5864882069?se=LlrbS4On8RG378CicPtDfg&utm_medium=api&utm_source=851bf6c5&v=3223B4866675DE870378D4D87C5D0C0DF7C411B5",
-    "longitude": -76.8669,
-    "title": "Senior Data Scientist (TS/SCI cleared)",
-    "description": "Description Are you passionate about building solutions for our greatest national security challenges? Are you searching for engaging work with an employer that prioritizes impact, innovation, and personal development? Do you value working in a creative and collaborative environment? If so, we're looking for someone like you to join our team at APL. The Threat Analytic Systems (QAI) Group is seeking talented team members who will help provide our nation with ground-breaking capabilities that br\u2026",
     "latitude": 39.1359,
     "salary_min": 93539.16,
+    "created": "2026-09-01T11:40:26Z",
     "salary_max": 93539.16,
-    "category": {
-      "label": "IT Jobs",
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Johns Hopkins Applied Physics Laboratory "
+      "display_name": "Johns Hopkins Applied Physics Laboratory ",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "created": "2026-09-01T11:40:26Z"
+    "title": "Senior Data Scientist (TS/SCI cleared)",
+    "longitude": -76.8669
   },
   {
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MTE4MTg4NyIsInMiOiJfbEhXZEV1bzhSR0ZHWlIzbkE1dUNnIn0.sIR56Q5V5JVeBAkf-uWNfYBzD7RClQuobiAkJ9kctGw",
+    "salary_is_predicted": "1",
+    "redirect_url": "https://www.adzuna.com/land/ad/5861181887?se=_lHWdEuo8RGFGZR3nA5uCg&utm_medium=api&utm_source=851bf6c5&v=85E3D93A7FC5994DDF40A3E04F41245F8634E3F2",
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
+    "id": "5861181887",
+    "salary_min": 61873.33,
     "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 36.197863,
+    "description": "Now Brewing \u2013 Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Data Scientist, you\u2019ll support business decisions by partnering on a cross-functional team to understand complex data relationships and build core data science mode\u2026",
     "location": {
+      "display_name": "Mount Juliet, Wilson County",
       "area": [
         "US",
         "Tennessee",
-        "Davidson County",
-        "Nashville"
+        "Wilson County",
+        "Mount Juliet"
       ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Nashville, Davidson County"
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "salary_is_predicted": "1",
-    "id": "5861425499",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTGxyYlM0T244UkczNzhDaWNQdERmZyIsImkiOiI1ODYxNDI1NDk5In0.2nI2WGWxhw2zXhncPe4DmJOrxwln0vYAKpTHHT1Zh98",
-    "redirect_url": "https://www.adzuna.com/land/ad/5861425499?se=LlrbS4On8RG378CicPtDfg&utm_medium=api&utm_source=851bf6c5&v=421E9AB41B767D0872CD6253A753DE9FF68A3C09",
-    "longitude": -86.79254,
-    "description": "Now Brewing \u2013 Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Data Scientist, you\u2019ll support business decisions by partnering on a cross-functional team to understand complex data relationships and build core data science mode\u2026",
-    "title": "data scientist, Data & Analytics (Nashville, TN)",
-    "latitude": 36.15023,
-    "salary_min": 48524.47,
-    "salary_max": 48524.47,
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
+    "salary_max": 61873.33,
+    "created": "2026-08-29T10:27:58Z",
+    "company": {
+      "display_name": "Starbucks",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
+    "longitude": -86.510734,
+    "title": "data scientist, Data & Analytics (Nashville, TN)"
+  },
+  {
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
       "display_name": "Starbucks"
     },
-    "created": "2026-08-29T16:27:48Z"
-  },
-  {
-    "latitude": 35.96507,
-    "salary_max": 52396.86,
-    "salary_min": 52396.86,
-    "category": {
-      "label": "IT Jobs",
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "company": {
-      "display_name": "Starbucks",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "created": "2026-08-29T16:27:49Z",
-    "longitude": -86.514712,
+    "salary_max": 51996.29,
+    "created": "2026-08-28T22:50:42Z",
+    "longitude": -86.538201,
     "title": "data scientist, Data & Analytics (Nashville, TN)",
-    "description": "Now Brewing \u2013 Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Data Scientist, you\u2019ll support business decisions by partnering on a cross-functional team to understand complex data relationships and build core data science mode\u2026",
-    "id": "5861425503",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTGxyYlM0T244UkczNzhDaWNQdERmZyIsImkiOiI1ODYxNDI1NTAzIn0.JEa98MC-RZ-M5-912ri3CUVxoMah5EQVUeAD2YF9B-8",
-    "redirect_url": "https://www.adzuna.com/land/ad/5861425503?se=LlrbS4On8RG378CicPtDfg&utm_medium=api&utm_source=851bf6c5&v=67DF19F6F6EB1C1C32CE9A81C2B04A6B2EBA7B0F",
-    "location": {
-      "display_name": "Smyrna, Rutherford County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Tennessee",
-        "Rutherford County",
-        "Smyrna"
-      ]
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_is_predicted": "1"
-  },
-  {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MjAxNzAzOSIsInMiOiJMbHJiUzRPbjhSRzM3OENpY1B0RGZnIn0.Zq9SlJPZYYEHkl_PJq7GFtzaukAkFAPwnRmKL1TPfuM",
-    "id": "5862017039",
-    "redirect_url": "https://www.adzuna.com/land/ad/5862017039?se=LlrbS4On8RG378CicPtDfg&utm_medium=api&utm_source=851bf6c5&v=96E285247EE39CB7AF76B06D3F83C513345996EB",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "location": {
-      "display_name": "La Vergne, Rutherford County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Tennessee",
-        "Rutherford County",
-        "La Vergne"
-      ]
-    },
     "salary_is_predicted": "1",
-    "latitude": 36.01133,
-    "salary_min": 54569.71,
-    "salary_max": 54569.71,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2xIV2RFdW84UkdGR1pSM25BNXVDZyIsImkiOiI1ODYwNjM5Nzg2In0.8ezJ7_QtspZt7Rcx1HMFBD1sloMSRGPsk_5jVexauGw",
+    "redirect_url": "https://www.adzuna.com/land/ad/5860639786?se=_lHWdEuo8RGFGZR3nA5uCg&utm_medium=api&utm_source=851bf6c5&v=4F9B907063DE68A656E62303544FCFFCB0E51EAB",
+    "latitude": 36.632915,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 51996.29,
+    "description": "Now Brewing \u2013 Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Data Scientist, you\u2019ll support business decisions by partnering on a cross-functional team to understand complex data relationships and build core data science mode\u2026",
+    "location": {
+      "area": [
+        "US",
+        "Tennessee",
+        "Sumner County",
+        "Mitchellville"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Mitchellville, Sumner County"
+    },
     "category": {
       "label": "IT Jobs",
       "tag": "it-jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
+    "id": "5860639786"
+  },
+  {
+    "longitude": -86.36359,
+    "title": "data scientist, Data & Analytics (Nashville, TN)",
+    "salary_max": 51821.89,
+    "created": "2026-09-02T06:09:54Z",
     "company": {
-      "display_name": "Starbucks",
-      "__CLASS__": "Adzuna::API::Response::Company"
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Starbucks"
     },
-    "created": "2026-08-30T04:32:41Z",
-    "longitude": -86.565906,
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "id": "5866852284",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 51821.89,
+    "latitude": 35.84775,
+    "location": {
+      "area": [
+        "US",
+        "Tennessee",
+        "Rutherford County",
+        "Murfreesboro"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Murfreesboro, Rutherford County"
+    },
     "description": "Now Brewing \u2013 Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Data Scientist, you\u2019ll support business decisions by partnering on a cross-functional team to understand complex data relationships and build core data science mode\u2026",
-    "title": "data scientist, Data & Analytics (Nashville, TN)"
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2Njg1MjI4NCIsInMiOiJfbEhXZEV1bzhSR0ZHWlIzbkE1dUNnIn0.RiG7zZK2UQ99dNsiTRAONhXnmUcRVbIfqFjC2SMg5RY",
+    "salary_is_predicted": "1",
+    "redirect_url": "https://www.adzuna.com/land/ad/5866852284?se=_lHWdEuo8RGFGZR3nA5uCg&utm_medium=api&utm_source=851bf6c5&v=5FB10B28BF3A088946967569AF3103E53A3E0707"
   }
 ]
