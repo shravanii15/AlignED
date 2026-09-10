@@ -1,170 +1,167 @@
 [
   {
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5876133501",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "MANTECH"
-    },
-    "description": "We are seeking talented and motivated Data Scientists with expertise in machine learning, statistical analysis, and artificial intelligence to join our team. In these roles, you will be responsible for developing advanced algorithms and data-driven solutions that address complex challenges. These positions will be part of our Defense and Intelligence Business unit serving the Intelligence Community as our primary customer. Essential Functions: As a Senior Data Scientist, you will: Develop and i\u2026",
-    "location": {
-      "area": [
-        "US",
-        "Maryland",
-        "Anne Arundel County",
-        "Fort George G Meade"
-      ],
-      "display_name": "Fort George G Meade, Anne Arundel County",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "latitude": 39.11376,
-    "salary_min": 121718.81,
-    "created": "2026-09-08T17:40:02Z",
-    "salary_is_predicted": "1",
-    "redirect_url": "https://www.adzuna.com/land/ad/5876133501?se=uHc7ADus8RGsGvIAzEZRCQ&utm_medium=api&utm_source=851bf6c5&v=420AEAB9229B6D87A1848D4B3C052AAFD23ECF78",
-    "title": "Data Scientist",
-    "salary_max": 121718.81,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidUhjN0FEdXM4UkdzR3ZJQXpFWlJDUSIsImkiOiI1ODc2MTMzNTAxIn0.jmAhw7ExDJJ_4egGhJY0bDojE8UiwWvOGSYv1J_p8mo",
-    "longitude": -76.726777
-  },
-  {
-    "description": "MANTECH seeks a motivated, career and customer-oriented Data Scientist in Fort Meade, MD , to drive cutting-edge statistical analytics and cloud-based data solutions for national security objectives. In this role, you will collaborate with subject matter experts and customers to guide analytic development from prototype to production, delivering high-value data-driven insights while laying the groundwork for the future integration of machine learning into mission operations. Responsibilities in\u2026",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Fort George G Meade, Anne Arundel County",
-      "area": [
-        "US",
-        "Maryland",
-        "Anne Arundel County",
-        "Fort George G Meade"
-      ]
-    },
-    "latitude": 39.11376,
-    "salary_min": 111271.04,
-    "created": "2026-09-08T17:36:11Z",
-    "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5876133114",
+    "salary_min": 61735.76,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MTQyNzM3MSIsInMiOiJIQWxvbUFLdDhSR2RFSkh3U09JQUx3In0.i8S2KvMSqC6I2mEUizN3ESHZFTVNA3x-MkgtE7kn3BM",
     "category": {
       "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    },
-    "company": {
-      "display_name": "MANTECH",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "salary_max": 111271.04,
-    "longitude": -76.726777,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg3NjEzMzExNCIsInMiOiJ1SGM3QUR1czhSR3NHdklBekVaUkNRIn0.xZLyovszI89IET3nCo3_trqPn3gubbO2V0fhiAjv2AQ",
-    "redirect_url": "https://www.adzuna.com/land/ad/5876133114?se=uHc7ADus8RGsGvIAzEZRCQ&utm_medium=api&utm_source=851bf6c5&v=9668755174956D829EF078187E163C1FC8059B79",
-    "title": "Data Scientist"
-  },
-  {
-    "salary_min": 113072.68,
-    "salary_is_predicted": "1",
-    "created": "2026-09-08T17:39:05Z",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Virginia",
-        "Fairfax County",
-        "Chantilly"
-      ],
-      "display_name": "Chantilly, Fairfax County"
-    },
-    "latitude": 38.883702,
-    "description": "ManTech seeks a motivated, career and customer-oriented Data Scientist to join our team in Chantilly, VA . In this dynamic role, you will join a top-tier team of Information Technology and Analytic professionals dedicated to supporting national security through innovative data science and analytics. You will work in a self-contained Big Data environment where the team manages everything from infrastructure and application development to advanced analytics. This position offers numerous opportun\u2026",
-    "company": {
-      "display_name": "MANTECH",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "category": {
       "tag": "it-jobs",
-      "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5876133406",
-    "longitude": -77.428438,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg3NjEzMzQwNiIsInMiOiJ1SGM3QUR1czhSR3NHdklBekVaUkNRIn0.h1SjLRAh6_3KAxVlM00HayLLD13ytBYmBIcLID47YCQ",
-    "salary_max": 113072.68,
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5876133406?se=uHc7ADus8RGsGvIAzEZRCQ&utm_medium=api&utm_source=851bf6c5&v=0376435117B20CF5B287DEFB3524B0602D2000DA"
-  },
-  {
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5874447517",
     "location": {
-      "display_name": "Atlanta, Fulton County",
       "area": [
         "US",
-        "Georgia",
-        "Fulton County",
-        "Atlanta"
+        "Tennessee",
+        "Davidson County",
+        "Nashville"
       ],
+      "display_name": "Nashville, Davidson County",
       "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "description": "Data Scientist I The Data Scientist I provides data science, statistical, and advanced analytical support to CDC programs. This role focuses on extracting knowledge from structured and unstructured public health data to support analysis, research, surveillance, improved understanding and communication, visualization, health services delivery, and data-driven decision-making. The Data Scientist I develops, implements, and monitors advanced analytic, computational, and predictive modeling tools a\u2026",
-    "created": "2026-09-07T16:06:14Z",
-    "redirect_url": "https://www.adzuna.com/land/ad/5874447517?se=uHc7ADus8RGsGvIAzEZRCQ&utm_medium=api&utm_source=851bf6c5&v=BE40AEE7D88C94D3CB93E7A27BE27EBE5A2AF5B8",
-    "title": "Data Scientist",
-    "salary_max": 96424.98,
-    "longitude": -84.388372,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidUhjN0FEdXM4UkdzR3ZJQXpFWlJDUSIsImkiOiI1ODc0NDQ3NTE3In0.J2RyxmKDjmFfTLHfhTZ-bzcHlPos4oNeD90Lt27JvAk",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
+    "longitude": -86.807693,
+    "salary_is_predicted": "1",
+    "title": "data scientist, Data & Analytics (Nashville, TN)",
+    "salary_max": 61735.76,
+    "created": "2026-08-29T16:38:00Z",
+    "description": "Now Brewing \u2013 Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Data Scientist, you\u2019ll support business decisions by partnering on a cross-functional team to understand complex data relationships and build core data science mode\u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "id": "5861427371",
+    "redirect_url": "https://www.adzuna.com/land/ad/5861427371?se=HAlomAKt8RGdEJHwSOIALw&utm_medium=api&utm_source=851bf6c5&v=DA8583D146F39BE645D3B560C3953C83968F5EB9",
+    "latitude": 36.173945,
     "company": {
-      "display_name": "Cherokee Federal",
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Starbucks"
+    }
+  },
+  {
+    "salary_max": 130435.74,
+    "title": "Data Scientist",
+    "company": {
+      "display_name": "MANTECH",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "latitude": 33.755711,
-    "contract_time": "full_time",
-    "salary_min": 96424.98,
+    "redirect_url": "https://www.adzuna.com/land/ad/5867068379?se=HAlomAKt8RGdEJHwSOIALw&utm_medium=api&utm_source=851bf6c5&v=E8DF7ECB0388EFE8A5AB2B29B114DDF1203ACA75",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 44.410977,
+    "id": "5867068379",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. We are seeking talented and motivated Data Scientists with expertise in machine learning, statistical analysis, and artificial intelligence to join our team. In these roles, you will be responsible for developing advanced algorithms and data-driven solutions that address complex challenges. These positions will be part of our Defense and Intelligence Business unit serving the Intelligence Commun\u2026",
+    "created": "2026-09-02T07:52:39Z",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2NzA2ODM3OSIsInMiOiJIQWxvbUFLdDhSR2RFSkh3U09JQUx3In0.gfp632biTODFWzMQ4_tlGxMod84nZr4tS_DdcLZ9b8k",
+    "salary_min": 130435.74,
+    "salary_is_predicted": "1",
+    "longitude": -103.471515,
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Fort Meade, Meade County",
+      "area": [
+        "US",
+        "South Dakota",
+        "Meade County",
+        "Fort Meade"
+      ]
+    },
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    }
+  },
+  {
+    "salary_min": 119148.47,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTYzNzQ2NyIsInMiOiJIQWxvbUFLdDhSR2RFSkh3U09JQUx3In0.KnmnUjqUOg0bprQuK117jnvUZHC0XU_XhpUL9PX3R2o",
+    "category": {
+      "label": "IT Jobs",
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "South Dakota",
+        "Meade County",
+        "Fort Meade"
+      ],
+      "display_name": "Fort Meade, Meade County"
+    },
+    "longitude": -103.471515,
+    "salary_is_predicted": "1",
+    "title": "Data Scientist",
+    "salary_max": 119148.47,
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist in Fort Meade, MD , to drive cutting-edge statistical analytics and cloud-based data solutions for national security objectives. In this role, you will collaborate with subject matter experts and customers to guide analytic development from prototype to production, delivering high-value data-driven insights while laying the g\u2026",
+    "created": "2026-08-28T07:42:15Z",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5859637467?se=HAlomAKt8RGdEJHwSOIALw&utm_medium=api&utm_source=851bf6c5&v=BDBAFE2720873F527953CC2AC05C7D43357A02A6",
+    "latitude": 44.410977,
+    "id": "5859637467",
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    }
+  },
+  {
+    "title": "Data Scientist",
+    "salary_max": 112013.98,
+    "created": "2026-07-06T11:33:01Z",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "id": "5789985191",
+    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=HAlomAKt8RGdEJHwSOIALw&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
+    "latitude": 27.955269,
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "salary_min": 112013.98,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NTE5MSIsInMiOiJIQWxvbUFLdDhSR2RFSkh3U09JQUx3In0.ytPStHv9Ha0ck7HjnLzMjMpVmnqbhfmRZrjeYGlJHTo",
+    "location": {
+      "area": [
+        "US",
+        "Florida",
+        "Hillsborough County",
+        "Tampa"
+      ],
+      "display_name": "Tampa, Hillsborough County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "longitude": -82.45632,
     "salary_is_predicted": "1"
   },
   {
-    "longitude": -75.098184,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidUhjN0FEdXM4UkdzR3ZJQXpFWlJDUSIsImkiOiI1ODY5MDQ3Nzk3In0.GaXNAXNZ-wXjrxzF-aGCOQ2cZ4Go4393GgrMz9XrzFU",
-    "salary_max": 105311.33,
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5869047797?se=uHc7ADus8RGsGvIAzEZRCQ&utm_medium=api&utm_source=851bf6c5&v=2132D8A17313DE6341D8EC9043861485815CA089",
-    "contract_type": "permanent",
-    "salary_is_predicted": "1",
-    "salary_min": 105311.33,
-    "contract_time": "full_time",
-    "latitude": 39.909999,
-    "company": {
-      "display_name": "United State Cold Storage Inc / USCS",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
+    "salary_min": 103764.39,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5Mjk5MTUyOCIsInMiOiJIQWxvbUFLdDhSR2RFSkh3U09JQUx3In0.Bkro9k4SNukppICzrTePdRO5X11Tczl3jIq_gj8hlv4",
     "category": {
-      "tag": "it-jobs",
       "label": "IT Jobs",
+      "tag": "it-jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "created": "2026-09-03T11:08:21Z",
     "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "New Jersey",
-        "Camden County",
-        "Camden"
+        "Georgia",
+        "Effingham County",
+        "Springfield"
       ],
-      "display_name": "Camden, Camden County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+      "display_name": "Springfield, Effingham County"
     },
-    "description": "Build the intelligence that optimizes the movement of food at national scale Who We Are: US Cold owns and operates one of the most complex temperature-controlled logistics networks in North America. Every day, our systems coordinate the storage and movement of food on a national scale across a network of state-of-the-art distribution centers, including multiple highly automated warehouse facilities. We continue to advance our core warehouse and logistics platforms. Our current focus is on modul\u2026",
+    "longitude": -81.311499,
+    "salary_is_predicted": "1",
+    "title": "Data Scientist",
+    "salary_max": 103764.39,
+    "created": "2026-07-08T16:10:15Z",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
+    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=HAlomAKt8RGdEJHwSOIALw&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5869047797"
+    "id": "5792991528",
+    "latitude": 32.372413,
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    }
   }
 ]
