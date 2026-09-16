@@ -1,162 +1,171 @@
 [
   {
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Harvard Square, Middlesex County",
-      "area": [
-        "US",
-        "Massachusetts",
-        "Middlesex County",
-        "Harvard Square"
-      ]
-    },
+    "salary_is_predicted": "1",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "The Hollister Group"
+      "display_name": "Vantor"
     },
-    "category": {
-      "tag": "accounting-finance-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Accounting & Finance Jobs"
-    },
-    "latitude": 42.3758,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5883932047",
-    "created": "2026-09-14T18:21:09Z",
-    "title": "Data Scientist - NYC",
-    "redirect_url": "https://www.adzuna.com/land/ad/5883932047?se=2g3KN_Sw8RGeGPSgLB1F6Q&utm_medium=api&utm_source=851bf6c5&v=87AB35763DED03F91CD342D622043D743FD979A6",
-    "salary_max": 152612.53,
-    "salary_min": 152612.53,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg4MzkzMjA0NyIsInMiOiIyZzNLTl9TdzhSR2VHUFNnTEIxRjZRIn0.HZ2QTHLIDwVlGqmehqJjE1NrQhhl-SdxmwBNwOLnOCU",
-    "description": "Our client is seeking a talented Data Scientist to join their team as an independent remote employee. Our team brings data science and machine learning to the private equity investment process, providing unparalleled access to alternative data sources and proprietary data from portfolio companies. You'll be at the forefront of high-value tactical workflows that drive all aspects of the investment process. As a Data Scientist with our client, you'll have the opportunity to own due diligence proc\u2026",
-    "longitude": -71.1187,
-    "salary_is_predicted": "1"
-  },
-  {
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 44.410977,
-    "id": "5867068379",
-    "created": "2026-09-02T07:52:39Z",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs",
-      "label": "IT Jobs"
-    },
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "MANTECH"
-    },
+    "created": "2026-09-15T21:41:39Z",
     "location": {
       "area": [
         "US",
-        "South Dakota",
-        "Meade County",
-        "Fort Meade"
+        "Virginia",
+        "Fairfax County",
+        "Reston"
       ],
       "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Fort Meade, Meade County"
+      "display_name": "Reston, Fairfax County"
     },
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. We are seeking talented and motivated Data Scientists with expertise in machine learning, statistical analysis, and artificial intelligence to join our team. In these roles, you will be responsible for developing advanced algorithms and data-driven solutions that address complex challenges. These positions will be part of our Defense and Intelligence Business unit serving the Intelligence Commun\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiMmczS05fU3c4UkdlR1BTZ0xCMUY2USIsImkiOiI1ODY3MDY4Mzc5In0.Vss88aoDRwu7x1inwTpLqJLPjRtYyU7vTzrrBJ9kK7M",
-    "salary_min": 130435.74,
-    "salary_max": 130435.74,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -77.338186,
+    "salary_max": 112848.93,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg4NTQ1NTEzNSIsInMiOiJlTHJkMUx1eDhSR3g2S1FrNHc0aUh3In0.3OsPP8ocs5g4yQFnbL6wfJH562wL88wr22dR83LGLO0",
     "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5867068379?se=2g3KN_Sw8RGeGPSgLB1F6Q&utm_medium=api&utm_source=851bf6c5&v=E8DF7ECB0388EFE8A5AB2B29B114DDF1203ACA75",
-    "salary_is_predicted": "1",
-    "longitude": -103.471515
-  },
-  {
-    "longitude": -103.471515,
-    "salary_is_predicted": "1",
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5859637467?se=2g3KN_Sw8RGeGPSgLB1F6Q&utm_medium=api&utm_source=851bf6c5&v=BDBAFE2720873F527953CC2AC05C7D43357A02A6",
-    "salary_max": 119148.47,
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist in Fort Meade, MD , to drive cutting-edge statistical analytics and cloud-based data solutions for national security objectives. In this role, you will collaborate with subject matter experts and customers to guide analytic development from prototype to production, delivering high-value data-driven insights while laying the g\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTYzNzQ2NyIsInMiOiIyZzNLTl9TdzhSR2VHUFNnTEIxRjZRIn0.64bFICP18bdYmZlEEuN9A3hvz9QZ9Ysa3qIWOsXTyGM",
-    "salary_min": 119148.47,
-    "location": {
-      "area": [
-        "US",
-        "South Dakota",
-        "Meade County",
-        "Fort Meade"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Fort Meade, Meade County"
-    },
-    "company": {
-      "display_name": "MANTECH",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
     "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs",
-      "label": "IT Jobs"
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "created": "2026-08-28T07:42:15Z",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5859637467",
-    "latitude": 44.410977
+    "description": "Vantor, Inc., a leader in cutting-edge IT and AI solutions, is seeking an expert Data Scientist to enhance our capabilities in the Defense & Aerospace sector. This role involves leveraging advanced AI and data analytics to develop innovative, effective solutions that meet stringent security and accuracy standards. The Data Scientist will be pivotal in translating complex data into actionable intelligence, optimizing defense operations and contributing to the architectural design of secure, robu\u2026",
+    "latitude": 38.95528,
+    "salary_min": 112848.93,
+    "redirect_url": "https://www.adzuna.com/land/ad/5885455135?se=eLrd1Lux8RGx6KQk4w4iHw&utm_medium=api&utm_source=851bf6c5&v=E492CF39F1A3BAF6CD0423F614CF8D3ED4D371C7",
+    "id": "5885455135"
   },
   {
-    "salary_max": 112013.98,
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Tampa, FL . The Data Scientist will leverage their strong technical background and knowledge to interpret and analyze complex sets of data to produce actionable insights. This role requires a knowledge of programming, mathematical modeling, and statistics to carry out machine learning projects. Responsibil\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4OTk4NTE5MSIsInMiOiIyZzNLTl9TdzhSR2VHUFNnTEIxRjZRIn0.N4kSfcYBGQE1Ta0256sX2Ju6G7qOVoN9P8waZ3JKX8Y",
-    "salary_min": 112013.98,
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5789985191?se=2g3KN_Sw8RGeGPSgLB1F6Q&utm_medium=api&utm_source=851bf6c5&v=ECDE68B23D3AC312E311C3894F422B9A35507C99",
-    "latitude": 27.955269,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "id": "5789985191",
-    "created": "2026-07-06T11:33:01Z",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "MANTECH"
-    },
-    "location": {
-      "display_name": "Tampa, Hillsborough County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Florida",
-        "Hillsborough County",
-        "Tampa"
-      ]
-    },
+    "created": "2026-09-15T12:21:21Z",
+    "contract_time": "part_time",
+    "redirect_url": "https://www.adzuna.com/land/ad/5884890228?se=eLrd1Lux8RGx6KQk4w4iHw&utm_medium=api&utm_source=851bf6c5&v=D31F6FC92D55356DB814E4E662AB3DB3F42CE636",
+    "latitude": 38.97,
     "category": {
       "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "title": "Data Scientist",
+    "longitude": -77.23,
+    "salary_max": 107153.83,
+    "location": {
+      "display_name": "Mc Lean, Fairfax County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Virginia",
+        "Fairfax County",
+        "Mc Lean"
+      ]
+    },
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Booz Allen Hamilton"
     },
     "salary_is_predicted": "1",
-    "longitude": -82.45632
+    "id": "5884890228",
+    "salary_min": 107153.83,
+    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private and pu\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZUxyZDFMdXg4Ukd4NktRazR3NGlIdyIsImkiOiI1ODg0ODkwMjI4In0.Vmk8OQe2rAUloMJjxw05DXzwROW69uUbFiCiRqEq7MA"
   },
   {
+    "salary_max": 115904.79,
+    "location": {
+      "display_name": "Mc Lean, Fairfax County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Virginia",
+        "Fairfax County",
+        "Mc Lean"
+      ]
+    },
+    "longitude": -77.23,
+    "company": {
+      "display_name": "Booz Allen Hamilton",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
     "salary_is_predicted": "1",
-    "description": "hackajob is collaborating with Planet Technologies to connect them with exceptional professionals for this role. Planet Technologies, the Nation\u2019s leading Microsoft services provider to the public sector, is looking for a highly motivated individual to join our growing team as Data Scientist . In this role, you will be supporting impactful projects that make a difference for our country. Responsibilities Builds, maintains, and improves dashboards, applications, and automations. Connects to APIs\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg3OTY1NDk0NCIsInMiOiIyZzNLTl9TdzhSR2VHUFNnTEIxRjZRIn0.-Yp-qoh_NxP7XhHJuO7K7xcqp1GRy-TgiRoeCo1U3xY",
-    "salary_min": 152785.97,
-    "salary_max": 152785.97,
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5879654944?se=2g3KN_Sw8RGeGPSgLB1F6Q&utm_medium=api&utm_source=851bf6c5&v=9BC383D02D0CD2B95A43A14D916D21096182FCB6",
-    "id": "5879654944",
+    "id": "5884759079",
+    "salary_min": 115904.79,
+    "description": "Data Scientist The Opportunity: As an analytics professional, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. If you care about moving a mission forward as much as advancing the field of data science, this is the opportunity for you. Your deep AI and analytics expertise and advisory mindset, coupled with an original approach to your work, will help clients and \u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZUxyZDFMdXg4Ukd4NktRazR3NGlIdyIsImkiOiI1ODg0NzU5MDc5In0.FvZFOgoalojFcJ0SWfjvtf-b4sDiSayWjwLC4f68CVk",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "created": "2026-09-11T07:40:14Z",
+    "created": "2026-09-15T11:23:28Z",
+    "contract_time": "part_time",
+    "redirect_url": "https://www.adzuna.com/land/ad/5884759079?se=eLrd1Lux8RGx6KQk4w4iHw&utm_medium=api&utm_source=851bf6c5&v=25E475D9365616617AAB4A0790B4F04894654A71",
+    "latitude": 38.97,
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "scientific-qa-jobs",
+      "label": "Scientific & QA Jobs"
+    },
+    "title": "Data Scientist"
+  },
+  {
+    "created": "2026-09-15T12:11:12Z",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 37.702152,
+    "redirect_url": "https://www.adzuna.com/land/ad/5884853039?se=eLrd1Lux8RGx6KQk4w4iHw&utm_medium=api&utm_source=851bf6c5&v=EF891E385892F3B425C73ADAC12559E18941C575",
+    "title": "Data Scientist",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs",
       "label": "IT Jobs"
     },
+    "contract_type": "permanent",
+    "salary_max": 102185.98,
+    "location": {
+      "display_name": "Dublin, Alameda County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "California",
+        "Alameda County",
+        "Dublin"
+      ]
+    },
+    "longitude": -121.935792,
+    "salary_is_predicted": "1",
+    "company": {
+      "display_name": "Epicor Software Corporation",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "salary_min": 102185.98,
+    "id": "5884853039",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg4NDg1MzAzOSIsInMiOiJlTHJkMUx1eDhSR3g2S1FrNHc0aUh3In0.vYlQ2xDDGPjvzPjcyFHO_76VzTGXJmdeG54zWYSqJx0",
+    "description": "As a Data Scientist at Epicor, you will help turn data into meaningful insights that support product and business decisions. You will work with data scientists, engineers, product teams, and subject-matter experts to explore data, develop analytical solutions, and communicate findings to stakeholders. You will have opportunities to strengthen your technical skills while contributing to customer-facing analytics and data-driven initiatives. We are seeking applicants with a strong analytical foun\u2026"
+  },
+  {
+    "id": "5884723353",
+    "salary_min": 93687.55,
+    "description": "As a Data Scientist at Epicor, you will help turn data into meaningful insights that support product and business decisions. You will work with data scientists, engineers, product teams, and subject-matter experts to explore data, develop analytical solutions, and communicate findings to stakeholders. You will have opportunities to strengthen your technical skills while contributing to customer-facing analytics and data-driven initiatives. We are seeking applicants with a strong analytical foun\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg4NDcyMzM1MyIsInMiOiJlTHJkMUx1eDhSR3g2S1FrNHc0aUh3In0.FnSKia6HBA_3e0UNveDFq9347Io5A8PVQ9fB8f2ahwo",
+    "contract_type": "permanent",
+    "location": {
+      "display_name": "Minneapolis, Hennepin County",
+      "area": [
+        "US",
+        "Minnesota",
+        "Hennepin County",
+        "Minneapolis"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "salary_max": 93687.55,
+    "longitude": -93.269357,
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Planet Technologies"
+      "display_name": "Epicor Software Corporation"
     },
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "US",
-      "area": [
-        "US"
-      ]
-    }
+    "salary_is_predicted": "1",
+    "redirect_url": "https://www.adzuna.com/land/ad/5884723353?se=eLrd1Lux8RGx6KQk4w4iHw&utm_medium=api&utm_source=851bf6c5&v=6B4078D91369669EF3EF37E005453E84C8C7A285",
+    "latitude": 44.983654,
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "title": "Data Scientist",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "created": "2026-09-15T11:08:14Z"
   }
 ]
