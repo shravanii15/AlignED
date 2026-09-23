@@ -1,165 +1,167 @@
 [
   {
+    "latitude": 36.93432,
     "title": "Data Scientist",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "id": "5821339231",
-    "redirect_url": "https://www.adzuna.com/land/ad/5821339231?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=663AA87D6F1A93E785213F6AAD54C9FE89876E10",
-    "location": {
-      "area": [
-        "US",
-        "California",
-        "Los Angeles County",
-        "Los Angeles"
-      ],
-      "display_name": "Los Angeles, Los Angeles County",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
     "company": {
-      "display_name": "Fanatics Collectibles",
-      "__CLASS__": "Adzuna::API::Response::Company"
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Guidehouse"
     },
-    "salary_min": 134768.48,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMTMzOTIzMSIsInMiOiJJajVLVzdDWDhSR3pVNmQ4dC01dTJ3In0.vMHK4iQWcm3EiDcsCCv-kHzvQAzr_j7dTANzj8eDb7k",
-    "created": "2026-07-30T12:46:51Z",
-    "salary_max": 134768.48,
-    "description": "About Us Fanatics is building a leading global digital sports platform. We ignite the passions of global sports fans and maximize the presence and reach for our hundreds of sports partners globally by offering products and services across Fanatics Commerce, Fanatics Collectibles, and Fanatics Betting & Gaming, allowing sports fans to Buy, Collect, and Bet. Through the Fanatics platform, sports fans can buy licensed fan gear, jerseys, lifestyle and streetwear products, headwear, and hardgoods; c\u2026",
-    "salary_is_predicted": "1"
-  },
-  {
-    "id": "5808654182",
-    "redirect_url": "https://www.adzuna.com/land/ad/5808654182?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=23F0D475E7B68CFEB479ED010E33721F3B1136D8",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Davidson, Mecklenburg County",
-      "area": [
-        "US",
-        "North Carolina",
-        "Mecklenburg County",
-        "Davidson"
-      ]
-    },
-    "title": "Senior Data Scientist",
+    "salary_is_predicted": "1",
     "category": {
-      "label": "Engineering Jobs",
-      "tag": "engineering-jobs",
+      "label": "IT Jobs",
+      "tag": "it-jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
+    "salary_min": 162458.14,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 35.488354,
-    "salary_min": 198653.98,
-    "company": {
-      "display_name": "Trane Technologies",
-      "__CLASS__": "Adzuna::API::Response::Company"
+    "created": "2026-09-21T00:10:18Z",
+    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Secret What You Will Do : The Data Scientist will focus on performing ETL / data cleaning, developing interactive visualizations, building predictive models, and support implementing Artificial Intelligence solutions tied to asset and material maintenance and management data, as well as policy data. The data analyst will be responsible for all of the following to include but not limited to: Dedicated to\u2026",
+    "id": "5892341994",
+    "location": {
+      "area": [
+        "US",
+        "Virginia",
+        "Hampton City",
+        "Fort Monroe"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Fort Monroe, Hampton City"
     },
-    "salary_max": 198653.98,
-    "created": "2026-07-20T20:38:37Z",
-    "longitude": -80.815849,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwODY1NDE4MiIsInMiOiJJajVLVzdDWDhSR3pVNmQ4dC01dTJ3In0.1Lt82Mg7eTzhr8LI-UT5Yz3iotRhmCsSriMVQDpRDiI",
-    "salary_is_predicted": "1",
-    "description": "Be a part of our mission! As a world leader in creating comfortable, sustainable, and efficient climate solutions for buildings, homes and transportation, it's our responsibility to put the planet first. For us at Trane Technologies , and through our businesses including Trane\u00ae and Thermo King , sustainability is not just how we do business\u2014it is our business. Do you dare to look at the world's challenges and see impactful possibilities? Do you want to contribute to making a better future? If t\u2026"
+    "redirect_url": "https://www.adzuna.com/land/ad/5892341994?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=C36AD890E75E2F64AC230BA8F523D5B65AC66D89",
+    "longitude": -76.30362,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicmpad1REdTM4UkdDNFl5dG1aNDg2QSIsImkiOiI1ODkyMzQxOTk0In0.8XpTMG1RPBRQMF_GHPUy2W35rwoyUo575UiIRqYMGAY",
+    "salary_max": 162458.14
   },
   {
+    "id": "5892777538",
+    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Public Trust What You Will Do : The Border Security Data Scientist will join a dynamic team supporting U.S Federal border security customers. In this role, the candidate will collect, transform, integrate, and analyze data to. develop integrated data models, generate reports and analyses for key senior leaders and deploy dynamic analytical solutions. Develop integrated data pipelines and models to suppo\u2026",
+    "created": "2026-09-21T08:12:27Z",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 125438.95,
     "title": "Data Scientist",
+    "salary_is_predicted": "1",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Guidehouse"
+    },
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs",
       "label": "IT Jobs"
     },
+    "latitude": 39.015239,
+    "salary_max": 125438.95,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicmpad1REdTM4UkdDNFl5dG1aNDg2QSIsImkiOiI1ODkyNzc3NTM4In0.S5t3TFfAFaoJxLgjrFpivV4JDbZiX-XggkgDYZulz_g",
+    "longitude": -77.393545,
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Virginia",
+        "Loudoun County",
+        "Sterling"
+      ],
+      "display_name": "Sterling, Loudoun County"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5892777538?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=6B47B90EF865510AE66AFA2C06F9F92048B9F5C0"
+  },
+  {
+    "latitude": 38.85981,
+    "salary_min": 122986.7,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 38.776903,
+    "title": "Data Scientist",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
+    },
+    "salary_is_predicted": "1",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Guidehouse"
+    },
+    "created": "2026-09-21T14:07:59Z",
+    "id": "5893051286",
+    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Ability to Obtain Public Trust What You Will Do : Guidehouse is seeking a Data Scientist to join our AI & Data Defense and Security Segment, where the individual will collect and analyze data to identify trends, develop visualizations in support of organizational and mission goals, and support decision-making for large-scale programs within the Department of Homeland Security (DHS). Responsibilities include, b\u2026",
+    "redirect_url": "https://www.adzuna.com/land/ad/5893051286?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=8369F87F0B0A9D7E5162A987775C107D6ED41F24",
     "location": {
       "area": [
         "US",
         "Virginia",
-        "Fairfax County",
-        "West Springfield"
+        "Arlington County",
+        "Crystal"
       ],
-      "display_name": "West Springfield, Fairfax County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Crystal, Arlington County"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5812147554?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=503411EA760E03C836518E570A31C30C6BC46662",
-    "id": "5812147554",
-    "company": {
-      "display_name": "ManTech International",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "salary_min": 120000,
-    "longitude": -77.187169,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMjE0NzU1NCIsInMiOiJJajVLVzdDWDhSR3pVNmQ4dC01dTJ3In0.IbtGtDbGb7uHWh0K7vI2X3B4Ori6PnGsuup54oMxpQI",
-    "salary_max": 160000,
-    "created": "2026-07-23T05:48:54Z",
-    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
-    "salary_is_predicted": "0"
+    "longitude": -77.05099,
+    "salary_max": 122986.7,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicmpad1REdTM4UkdDNFl5dG1aNDg2QSIsImkiOiI1ODkzMDUxMjg2In0.acbWiVNvjfGXZhxJ4HFfAKpU6pzch6CGfffK9_C7eds"
   },
   {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiSWo1S1c3Q1g4Ukd6VTZkOHQtNXUydyIsImkiOiI1ODE2NDEzMDk5In0.Hc4s6RwGHgCu_MMF84qWI5JO-pKGibQ2rHghJ0bH9i8",
-    "longitude": -77.428438,
-    "salary_max": 160000,
-    "created": "2026-07-26T06:03:20Z",
-    "description": "At ManTech, we are dedicated to providing advanced technology and solutions to secure our national security. We are seeking a Data Scientist who will leverage data analytics, machine learning, and artificial intelligence to support critical missions across the U.S. intelligence community and federal agencies. The right candidate will contribute to the maintenance of our nation's security by transforming large amounts of complex data into actionable intelligence. Develop predictive models and al\u2026",
-    "salary_is_predicted": "0",
-    "latitude": 38.883702,
+    "id": "5892341997",
+    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Secret What You Will Do : Develop, implement, and validate statistical models and analytical methodologies to support client mission objectives Perform exploratory data analysis (EDA) to identify trends, patterns, and anomalies in large and complex datasets Design and deploy predictive and prescriptive models to enable data-driven decision-making Apply advanced analytics to Navy-specific domains such as\u2026",
+    "created": "2026-09-21T00:10:18Z",
+    "salary_min": 195474.58,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
     "title": "Data Scientist",
-    "id": "5816413099",
-    "redirect_url": "https://www.adzuna.com/land/ad/5816413099?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=6DCD85402292FB06587401F79C9710BCB900CEB2",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
+    },
+    "salary_is_predicted": "1",
+    "company": {
+      "display_name": "Guidehouse",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "latitude": 36.93432,
+    "salary_max": 195474.58,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5MjM0MTk5NyIsInMiOiJyalp3VER1MzhSR0M0WXl0bVo0ODZBIn0.yXGWOByDJEhxhYuL_L0XFjNJIDmZGWMVdEvEl79zYro",
+    "longitude": -76.30362,
     "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Chantilly, Fairfax County",
+      "area": [
+        "US",
+        "Virginia",
+        "Hampton City",
+        "Fort Monroe"
+      ],
+      "display_name": "Fort Monroe, Hampton City"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5892341997?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=B08041DD4E7D72DFE8AF24ED2BD3804F59936B51"
+  },
+  {
+    "latitude": 38.883702,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 151490.47,
+    "title": "Senior Data Scientist",
+    "salary_is_predicted": "1",
+    "company": {
+      "display_name": "Guidehouse",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "Accounting & Finance Jobs",
+      "tag": "accounting-finance-jobs"
+    },
+    "created": "2026-09-21T00:10:17Z",
+    "id": "5892341907",
+    "description": "Job Family : Data Science Consulting Travel Required : None Clearance Required : Active Top Secret SCI with Polygraph What You Will Do : Our Data and Analytics consultants help clients maximize the value of their data. This high performing team works with clients to implement the full spectrum of data analytics and data science, from data querying and data wrangling to data visualization and dashboarding for business intelligence (BI), to predictive analytics, machine learning, and artificial i\u2026",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Virginia",
         "Fairfax County",
         "Chantilly"
-      ]
+      ],
+      "display_name": "Chantilly, Fairfax County"
     },
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "ManTech International"
-    },
-    "salary_min": 120000
-  },
-  {
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Pioneer Square, King County",
-      "area": [
-        "US",
-        "Washington",
-        "King County",
-        "Pioneer Square"
-      ]
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5798971642?se=Ij5KW7CX8RGzU6d8t-5u2w&utm_medium=api&utm_source=851bf6c5&v=FFB9299331BF58A31EB6F869E8160216E2528E54",
-    "id": "5798971642",
-    "title": "Principal Data Scientist",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 47.6055,
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "salary_min": 204354.89,
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Weyerhaeuser"
-    },
-    "created": "2026-07-13T13:05:46Z",
-    "salary_max": 204354.89,
-    "longitude": -122.3319,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5ODk3MTY0MiIsInMiOiJJajVLVzdDWDhSR3pVNmQ4dC01dTJ3In0.6T6vT3JVeXl4FR-KTcVbWuW2mqZs9-6f3LDHgHvYcTo",
-    "salary_is_predicted": "1",
-    "description": "Description: About Weyerhaeuser At Weyerhaeuser, we are the world\u2019s premier timberland, and forest products company. Sustainability is the founding concept of our business, and our values drive every decision to ensure we continue to lead the forestry industry in sustainability practices. And we know about sustainability \u2013 we led it in the forestry industry when we planted our first seedling by hand in 1938. We recognize that our success is dependent on the success of our people. For over 125 y\u2026"
+    "redirect_url": "https://www.adzuna.com/land/ad/5892341907?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=19CE565AFB44FFBD5C8080E20AB358EC51C433F7",
+    "longitude": -77.428438,
+    "salary_max": 151490.47,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicmpad1REdTM4UkdDNFl5dG1aNDg2QSIsImkiOiI1ODkyMzQxOTA3In0.xTeltvPvRbVGxxRNYke7EJEJMgx3ENnbyFbV2GLKjJE"
   }
 ]
