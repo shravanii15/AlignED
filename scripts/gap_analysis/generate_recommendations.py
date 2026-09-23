@@ -4,8 +4,9 @@ generate_recommendations.py
 What this script does, in plain terms:
 This is the payoff step that ties everything from Week 3 together. It
 takes the statistically significant gaps found by compute_gap_scores.py
-("this program under-covers this skill, and the market really does want
-it more") and cross-references each one against compute_skill_trends.py
+("this program under-covers this skill relative to how often it shows up
+in our sampled job postings") and cross-references each one against
+compute_skill_trends.py
 ("and is demand for this skill rising, falling, or flat?") to produce one
 final, ranked, plain-English recommendation list per program -- the kind
 of output a real curriculum advisory board or program director could
@@ -47,10 +48,18 @@ MAX_RECOMMENDATIONS_PER_PROGRAM = 10
 
 
 def build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_label, slope):
+    # Deliberately precise wording: "statistically significant" describes
+    # the *observed text coverage* in this sampled corpus -- it does not
+    # mean "the market really wants this skill" in some absolute sense
+    # (the postings sample isn't a random draw from the whole labor
+    # market, and "coverage" is a text-mention proxy, not a depth-of-
+    # instruction measurement). See the dashboard's Methodology page for
+    # the full reasoning.
     base = (
         f"{skill_name} appears in {demand_rate * 100:.0f}% of real job postings we sampled, "
         f"but only {coverage_rate * 100:.0f}% of this program's courses cover it -- "
-        f"a {gap_value * 100:.0f} percentage-point gap that's statistically real, not noise."
+        f"a {gap_value * 100:.0f} percentage-point gap that's a statistically significant "
+        f"difference in observed text coverage, not noise from a small sample."
     )
     if trend_label == "rising":
         return base + f" Demand for {skill_name} is also trending upward, making this a higher-priority addition."

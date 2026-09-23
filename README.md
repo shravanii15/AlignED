@@ -26,11 +26,12 @@ Prospective grad students, career switchers, and even program directors rarely h
 |---|---|
 | University programs analyzed | 13 (Georgia Tech, ASU, UIUC, Northeastern, BU, Wisconsin, UMD ×2, Penn State, UW, Michigan) |
 | Real courses analyzed | 1,378 |
-| Real job postings analyzed | 1,660+ sampled, ~124,000 historical + a live daily pipeline |
+| Real job postings analyzed (gap scoring) | 1,660, sampled from the historical dataset |
+| Historical postings used for demand-trend detection | ~124,000 (see "A note on the data" below for how this differs from the 1,660 sample) |
 | AI vs. classical extraction (F1 score) | **0.400 (AI)** vs. 0.364 (keyword baseline) — validated on a 104-item hand-labeled test set |
-| Statistically significant skill gaps found | 231, across all 13 programs |
-| Skills with a real, tested demand trend | 67 tracked (7 rising, 2 falling, over the dataset's real-volume weeks) |
-| Final ranked recommendations | 90, combining gap size + demand trend |
+| Statistically significant skill gaps found | 159, across all 13 programs (after Benjamini-Hochberg FDR correction for running ~70 tests per program — see Methodology) |
+| Skills with a statistically detected demand trend | 67 tracked (7 rising, 2 falling, over the dataset's real-volume weeks) |
+| Final ranked recommendations | 69, combining gap size + demand trend |
 
 The consistent, cross-program finding: named, hands-on tools — **Python, Docker, Kubernetes, Linux, Git, Tableau** — show up as statistically significant gaps in almost every program studied, often by 10-40 percentage points.
 
@@ -98,6 +99,15 @@ Then run the scripts under `scripts/` in order: scraping → `setup_database.py`
 ## A note on the data
 
 The committed `database/aligned.db` is a **frozen snapshot**, not a live-updating database — it reflects whatever the pipeline scripts produced the last time they were run and the file was recommitted. The one exception is `data/sample_adzuna_pull.json`, which genuinely does update daily via the GitHub Action shown in the badge above. Rerunning the full pipeline (see above) will regenerate the database with fresh data at any time.
+
+There are four distinct things called "job posting data" in this project, and it's worth being precise about which is which:
+
+- **1,660 sampled postings** — the fixed sample actually used for gap scoring (program coverage vs. market demand, the two-proportion z-tests). This is what every gap score and recommendation on the dashboard is based on.
+- **~124,000 historical postings** — a larger backfill (Kaggle) used only for demand-trend detection (Skill Demand Trends page), and even then restricted to the 6 weeks with meaningful volume — see Methodology for why.
+- **Live daily Adzuna pipeline** — a small number of real postings pulled in automatically every day via GitHub Actions. This keeps growing the raw `postings` table (currently a handful beyond the 1,660 sample), but it is **not** yet re-integrated into gap scoring or trend detection — the analysis you see on the dashboard is not recalculated from today's job market in real time.
+- **The committed database snapshot** — the frozen file described above, which is what the deployed dashboard actually reads from.
+
+In short: the numbers on this dashboard reflect a specific, dated sample — not a continuously live labor market — and that's stated here on purpose rather than left ambiguous.
 
 ## Repository structure
 
