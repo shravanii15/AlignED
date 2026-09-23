@@ -6,16 +6,25 @@ This is the payoff step that ties everything from Week 3 together. It
 takes the statistically significant gaps found by compute_gap_scores.py
 ("this program under-covers this skill relative to how often it shows up
 in our sampled job postings") and cross-references each one against
-compute_skill_trends.py
-("and is demand for this skill rising, falling, or flat?") to produce one
-final, ranked, plain-English recommendation list per program -- the kind
-of output a real curriculum advisory board or program director could
-actually read and act on, not just a table of raw numbers.
+compute_skill_trends.py ("and is demand for this skill rising, falling,
+or flat?") to produce one final, ranked, plain-English recommendation
+list -- the kind of output a real curriculum advisory board or program
+director could actually read and act on, not just a table of raw
+numbers.
 
-How the priority ranking works:
+As of this version, gap_scores contains rows at TWO scopes -- overall
+market (cluster_id NULL) and per real role cluster (cluster_id set) --
+so this script now generates a separate ranked recommendation list for
+EACH (program, scope) combination, not just each program. A program's
+top-3 recommendations "vs. the overall market" and its top-3
+recommendations "vs. Data Scientist postings specifically" are
+genuinely different lists, computed and ranked independently, because
+they're answering different questions.
+
+How the priority ranking works (unchanged from before, per scope):
 Each gap already has a gap_value (how many percentage points the market
-wants a skill more than the curriculum covers it). We adjust that number
-up or down based on the trend:
+wants a skill more than the curriculum covers it, within that scope). We
+adjust that number up or down based on the trend:
   - Rising demand -> priority boosted 50% (this gap is getting MORE
     urgent over time, not less)
   - Falling demand -> priority reduced 30% (still a real, statistically
@@ -25,10 +34,14 @@ This is a simple, explainable weighting scheme (not a black-box model),
 chosen deliberately -- for a recommendation a real person needs to trust
 and act on, being able to say exactly *why* something is ranked where it
 is matters more than squeezing out a slightly "smarter" black-box score.
+Trend data itself is only tracked at the overall-market level (there
+isn't enough per-cluster historical volume to detect a per-cluster
+trend), so the same trend label/slope is used regardless of scope.
 
-Within each program, the top 3 recommendations by adjusted priority are
-labeled 'high', the next 4 'medium', and the rest 'low' -- simple,
-consistent tiers rather than an arbitrary numeric cutoff.
+Within each (program, scope) combination, the top 3 recommendations by
+adjusted priority are labeled 'high', the next 4 'medium', and the rest
+'low' -- simple, consistent tiers rather than an arbitrary numeric
+cutoff.
 """
 
 import json
@@ -47,7 +60,7 @@ TOP_N_MEDIUM = 4  # ranks 4-7 -> medium, everything after -> low
 MAX_RECOMMENDATIONS_PER_PROGRAM = 10
 
 
-def build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_label, slope):
+def build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_label, slope, scope_label="Overall market"):
     # Deliberately precise wording: "statistically significant" describes
     # the *observed text coverage* in this sampled corpus -- it does not
     # mean "the market really wants this skill" in some absolute sense
@@ -55,8 +68,13 @@ def build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_lab
     # market, and "coverage" is a text-mention proxy, not a depth-of-
     # instruction measurement). See the dashboard's Methodology page for
     # the full reasoning.
+    demand_phrase = (
+        f"{demand_rate * 100:.0f}% of real job postings we sampled"
+        if scope_label == "Overall market"
+        else f"{demand_rate * 100:.0f}% of real {scope_label} postings we sampled"
+    )
     base = (
-        f"{skill_name} appears in {demand_rate * 100:.0f}% of real job postings we sampled, "
+        f"{skill_name} appears in {demand_phrase}, "
         f"but only {coverage_rate * 100:.0f}% of this program's courses cover it -- "
         f"a {gap_value * 100:.0f} percentage-point gap that's a statistically significant "
         f"difference in observed text coverage, not noise from a small sample."
@@ -74,7 +92,7 @@ def main():
 
     cur.execute(
         """
-        SELECT g.program_id, p.university, p.program_name, g.skill_id, s.canonical_name,
+        SELECT g.program_id, p.university, p.program_name, g.cluster_id, g.skill_id, s.canonical_name,
                g.program_coverage_rate, g.market_demand_rate, g.gap_value
         FROM gap_scores g
         JOIN programs p ON p.program_id = g.program_id
@@ -82,7 +100,10 @@ def main():
         """
     )
     gap_rows = cur.fetchall()
-    print(f"Loaded {len(gap_rows)} significant gap rows.")
+    print(f"Loaded {len(gap_rows)} significant gap rows (all scopes).")
+
+    cur.execute("SELECT cluster_id, role_label FROM role_clusters")
+    role_label_by_cluster = dict(cur.fetchall())
 
     cur.execute("SELECT skill_id, trend_label, slope FROM skill_trends")
     trend_by_skill = {sid: (label, slope) for sid, label, slope in cur.fetchall()}
@@ -90,9 +111,14 @@ def main():
 
     cur.execute("DELETE FROM recommendations")
 
-    by_program = {}
-    for program_id, university, program_name, skill_id, skill_name, coverage_rate, demand_rate, gap_value in gap_rows:
+    # Group by (program_id, cluster_id) -- each combination gets its own
+    # independently ranked top-N list, since "top gaps vs. the overall
+    # market" and "top gaps vs. Data Scientist postings" are different
+    # questions with different answers.
+    by_scope = {}
+    for program_id, university, program_name, cluster_id, skill_id, skill_name, coverage_rate, demand_rate, gap_value in gap_rows:
         trend_label, slope = trend_by_skill.get(skill_id, ("no trend data", None))
+        scope_label = "Overall market" if cluster_id is None else role_label_by_cluster.get(cluster_id, f"Cluster {cluster_id}")
 
         priority_score = gap_value
         if trend_label == "rising":
@@ -100,12 +126,14 @@ def main():
         elif trend_label == "falling":
             priority_score *= FALLING_PENALTY
 
-        rationale = build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_label, slope)
+        rationale = build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_label, slope, scope_label)
 
         entry = {
             "program_id": program_id,
             "university": university,
             "program_name": program_name,
+            "cluster_id": cluster_id,
+            "scope_label": scope_label,
             "skill_id": skill_id,
             "skill_name": skill_name,
             "coverage_rate": coverage_rate,
@@ -115,8 +143,9 @@ def main():
             "priority_score": priority_score,
             "rationale": rationale,
         }
-        by_program.setdefault(program_id, {"university": university, "program_name": program_name, "items": []})
-        by_program[program_id]["items"].append(entry)
+        key = (program_id, cluster_id)
+        by_scope.setdefault(key, {"university": university, "program_name": program_name, "scope_label": scope_label, "items": []})
+        by_scope[key]["items"].append(entry)
 
     all_recommendations = []
     insert_rows = []
@@ -125,15 +154,19 @@ def main():
     report_lines.append("=" * 78)
     report_lines.append(
         "Each recommendation combines a statistically significant skill gap "
-        "(Week 3, gap scoring) with that skill's demand trend (Week 3, trend "
-        "detection) into one ranked, explained priority per program.\n"
+        "(gap scoring, at a given scope: overall market or one target role) "
+        "with that skill's demand trend into one ranked, explained priority "
+        "per program per scope.\n"
     )
 
-    for program_id, data in by_program.items():
+    n_scopes_with_recs = 0
+    for (program_id, cluster_id), data in by_scope.items():
         items = sorted(data["items"], key=lambda e: e["priority_score"], reverse=True)
         items = items[:MAX_RECOMMENDATIONS_PER_PROGRAM]
+        if items:
+            n_scopes_with_recs += 1
 
-        report_lines.append(f"\n{data['university']} -- {data['program_name']}")
+        report_lines.append(f"\n{data['university']} -- {data['program_name']}  [scope: {data['scope_label']}]")
         report_lines.append("-" * 78)
 
         for rank, item in enumerate(items):
@@ -149,7 +182,7 @@ def main():
             all_recommendations.append(item)
             insert_rows.append(
                 (
-                    item["program_id"], item["skill_id"], item["gap_value"], item["trend_label"],
+                    item["program_id"], item["skill_id"], cluster_id, item["gap_value"], item["trend_label"],
                     item["priority_score"], tier, item["rationale"],
                 )
             )
@@ -158,12 +191,12 @@ def main():
             report_lines.append(f"           {item['rationale']}")
 
         if not items:
-            report_lines.append("  No significant gaps found for this program.")
+            report_lines.append("  No significant gaps found for this program/scope.")
 
     cur.executemany(
         """INSERT INTO recommendations
-           (program_id, skill_id, gap_value, trend_label, priority_score, priority_tier, rationale)
-           VALUES (?, ?, ?, ?, ?, ?, ?)""",
+           (program_id, skill_id, cluster_id, gap_value, trend_label, priority_score, priority_tier, rationale)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
         insert_rows,
     )
     conn.commit()
@@ -175,7 +208,8 @@ def main():
     with open(OUTPUT_REPORT_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(report_lines))
 
-    print(f"\nSaved {len(all_recommendations)} ranked recommendations across {len(by_program)} programs.")
+    n_programs = len({pid for pid, _ in by_scope})
+    print(f"\nSaved {len(all_recommendations)} ranked recommendations across {n_programs} programs and {len(by_scope)} program/scope combinations ({n_scopes_with_recs} with at least one recommendation).")
     print(f"  -> {OUTPUT_JSON_PATH}")
     print(f"  -> {OUTPUT_REPORT_PATH}")
     print("\nDone.")

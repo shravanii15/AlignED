@@ -21,8 +21,13 @@ def render_overview():
     programs = run_query("SELECT COUNT(*) AS n FROM programs").iloc[0]["n"]
     courses = run_query("SELECT COUNT(*) AS n FROM courses").iloc[0]["n"]
     postings = run_query("SELECT COUNT(*) AS n FROM postings WHERE source = 'kaggle_sample'").iloc[0]["n"]
-    gaps = run_query("SELECT COUNT(*) AS n FROM gap_scores").iloc[0]["n"]
-    recs = run_query("SELECT COUNT(*) AS n FROM recommendations").iloc[0]["n"]
+    # Overall-market scope only (cluster_id IS NULL) -- gap_scores and
+    # recommendations also contain per-role-cluster rows now (see Program
+    # Explorer's target-role selector), and counting those in here too
+    # would inflate these headline numbers with rows from 9 different
+    # scopes at once, which isn't what "significant gaps found" should mean.
+    gaps = run_query("SELECT COUNT(*) AS n FROM gap_scores WHERE cluster_id IS NULL").iloc[0]["n"]
+    recs = run_query("SELECT COUNT(*) AS n FROM recommendations WHERE cluster_id IS NULL").iloc[0]["n"]
 
     col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("University Programs", programs)
@@ -30,6 +35,7 @@ def render_overview():
     col3.metric("Job Postings Analyzed", f"{postings:,}")
     col4.metric("Statistically Significant Gaps", gaps)
     col5.metric("Final Recommendations", recs)
+    st.caption("Gap and recommendation counts above are the overall-market scope. Program Explorer now also lets you narrow the analysis to a specific target role.")
 
     st.markdown("---")
     st.markdown(

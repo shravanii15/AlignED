@@ -81,13 +81,18 @@ CREATE TABLE IF NOT EXISTS recommendations (
     recommendation_id INTEGER PRIMARY KEY AUTOINCREMENT,
     program_id INTEGER NOT NULL,
     skill_id INTEGER NOT NULL,
+    cluster_id INTEGER,               -- NULL = program vs. overall market (all role clusters combined);
+                                       -- set = program vs. this specific role cluster's postings only.
+                                       -- Lets "Program Explorer" answer "what does this program prepare
+                                       -- me for, for THIS target role" instead of only the generic market.
     gap_value REAL,                  -- from gap_scores: market_demand_rate - program_coverage_rate
     trend_label TEXT,                -- from skill_trends, or 'no trend data' if not tracked
     priority_score REAL,             -- gap_value adjusted up/down based on trend direction
     priority_tier TEXT,              -- 'high', 'medium', or 'low'
     rationale TEXT,                  -- plain-English explanation, ready to display
     FOREIGN KEY (program_id) REFERENCES programs(program_id),
-    FOREIGN KEY (skill_id) REFERENCES skills(skill_id)
+    FOREIGN KEY (skill_id) REFERENCES skills(skill_id),
+    FOREIGN KEY (cluster_id) REFERENCES role_clusters(cluster_id)
 );
 
 CREATE TABLE IF NOT EXISTS gap_scores (

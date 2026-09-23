@@ -17,10 +17,15 @@ def render_heatmap():
 
     num_skills = st.slider("Number of skills to show (fewer = easier to read)", min_value=5, max_value=20, value=10)
 
+    # Overall-market scope only (cluster_id IS NULL) -- gap_scores also
+    # contains per-role-cluster rows now, and counting those here too
+    # would count the same skill/program pair up to 9 extra times (once
+    # per real role cluster), badly skewing "most commonly gapped."
     top_skills_df = run_query(
         """
         SELECT s.skill_id, s.canonical_name, COUNT(*) AS n_programs_gapped
         FROM gap_scores g JOIN skills s ON s.skill_id = g.skill_id
+        WHERE g.cluster_id IS NULL
         GROUP BY g.skill_id ORDER BY n_programs_gapped DESC LIMIT ?
         """,
         (num_skills,),

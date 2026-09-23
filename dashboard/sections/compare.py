@@ -31,8 +31,12 @@ def render_compare():
     for col, (_, prog) in zip(cols, chosen.iterrows()):
         program_id = int(prog["program_id"])
         course_count = run_query("SELECT COUNT(*) AS n FROM courses WHERE program_id = ?", (program_id,)).iloc[0]["n"]
+        # Overall-market scope only (cluster_id IS NULL) -- keeps this
+        # page's side-by-side comparison apples-to-apples across
+        # programs. Per-target-role comparison is a natural next step,
+        # but Program Explorer is where that lives today.
         recs = run_query(
-            "SELECT skill_id, gap_value, priority_tier FROM recommendations WHERE program_id = ? ORDER BY priority_score DESC LIMIT 8",
+            "SELECT skill_id, gap_value, priority_tier FROM recommendations WHERE program_id = ? AND cluster_id IS NULL ORDER BY priority_score DESC LIMIT 8",
             (program_id,),
         ).merge(skills_df, on="skill_id", how="left")
         recs["program_label"] = prog["label"]
