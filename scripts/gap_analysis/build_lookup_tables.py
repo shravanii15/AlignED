@@ -165,6 +165,7 @@ def populate_postings_and_clusters(conn):
 def main():
     print(f"Connecting to database: {DB_PATH}")
     conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA foreign_keys = ON")
 
     print("\nPopulating skills table from O*NET vocabulary...")
     populate_skills(conn)

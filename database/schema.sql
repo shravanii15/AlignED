@@ -70,8 +70,12 @@ CREATE TABLE IF NOT EXISTS skill_trends (
     weeks_covered INTEGER,           -- how many weekly data points went into this trend
     slope REAL,                      -- change in demand rate per week (linear regression)
     p_value REAL,                    -- is the slope statistically real, or could it be noise?
+    q_value REAL,                    -- p_value after Benjamini-Hochberg FDR correction across all
+                                      -- skills tested together -- THIS decides trend_label, not p_value
+                                      -- alone, since ~67 simultaneous tests need multiple-comparisons
+                                      -- correction (same reasoning gap_scores already applies)
     r_squared REAL,                  -- how well a straight line fits the weekly data
-    trend_label TEXT,                -- 'rising', 'falling', or 'no clear trend'
+    trend_label TEXT,                -- 'rising', 'falling', or 'no clear trend' (based on q_value)
     first_half_rate REAL,            -- simple baseline: avg demand rate, first half of weeks
     second_half_rate REAL,           -- simple baseline: avg demand rate, second half of weeks
     FOREIGN KEY (skill_id) REFERENCES skills(skill_id)

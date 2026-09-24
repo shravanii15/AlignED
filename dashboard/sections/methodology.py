@@ -63,6 +63,26 @@ def render_methodology():
                       (Georgia Tech, ASU, UIUC, Northeastern, BU, Wisconsin, UMD, Penn State, UW, Michigan).
                     - **Job posting data:** a live daily pipeline (Adzuna API, via GitHub Actions) plus a
                       historical backfill of ~124,000 real postings (Kaggle LinkedIn dataset).
+
+                    **An honest caveat about the 1,660-posting sample:** this is the same sample built for
+                    role-cluster embedding, deliberately drawn across a fixed set of tech role categories
+                    (software engineering, data science, cybersecurity, DevOps, etc.) so clustering would
+                    have real variety to work with. That makes it a **category-balanced sample**, not a
+                    random draw proportional to the real labor market -- so "demand" on this dashboard
+                    means demand *within this sampled set*, not necessarily the true relative demand
+                    across the entire job market. Phrases like "what the job market wants" should be read
+                    with that in mind.
+
+                    **An honest caveat about course data comparability:** the 13 programs are not
+                    represented by equally complete data. Course counts range from 5 (ASU -- a
+                    representative sample of courses, not a full published catalog) to 295 (Georgia
+                    Tech's main CS catalog -- effectively the complete public course list). Some
+                    programs are represented by a full degree catalog, others by an elective pool, and
+                    others by a smaller representative sample -- these are genuinely different kinds of
+                    corpora, not interchangeable "curricula." Program Explorer flags this directly when
+                    a program's course count is small (under 30), and every comparison should be read
+                    with that in mind: a small corpus can genuinely miss skills that a larger one would
+                    catch, independent of anything about the program's actual quality.
                     """
                 )
     with card_col2:
@@ -89,10 +109,12 @@ def render_methodology():
                     | Baseline (keyword) | 0.518 | 0.280 | 0.364 |
                     | AI (local LLM + embeddings) | 0.407 | 0.392 | **0.400** |
 
-                    The AI method won on F1, the accuracy metric that matters most here. But running it
-                    across the *full* 1,378 courses and thousands of postings would take hours on consumer
-                    hardware, so the fast keyword method was used deliberately for full-scale analysis -- a
-                    real "best model for evaluation, faster model for production scale" trade-off.
+                    The AI method won on F1 -- the harmonic mean of precision and recall, and the metric
+                    that matters most here since it balances both instead of favoring one (F1 is not
+                    "accuracy"). But running the AI method across the *full* 1,378 courses and thousands
+                    of postings would take hours on consumer hardware, so the fast keyword method was used
+                    deliberately for full-scale analysis -- a real "best model for evaluation, faster
+                    model for production scale" trade-off.
 
                     **On the gold set itself:** the 104 labels (52 courses, 52 postings) were created by a
                     single annotator (the project author) against the O\\*NET vocabulary, without a second
@@ -120,6 +142,13 @@ def render_methodology():
                     than raw p-values alone, and it visibly changed the results: applying it dropped the
                     count of "significant" gaps from 231 to 159 across all 13 programs -- exactly the kind
                     of honest tightening a real statistical review should produce.
+
+                    **The same correction is applied to trend detection too.** The Skill Demand Trends
+                    page tests ~67 skills for a rising/falling trend simultaneously. Applying FDR
+                    correction there dropped the count of "significant" trends from 9 (using a raw
+                    p-value alone) to **0** at q < 0.05 -- the trends page now shows these as exploratory
+                    directional signals rather than confirmed trends, consistent with the same standard
+                    used for gap scoring.
                     """
                 )
     with card_col5:

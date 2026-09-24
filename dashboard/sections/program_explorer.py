@@ -25,6 +25,7 @@ import streamlit as st
 from services.database import run_query
 from services.reports_excel import build_excel_report
 from services.reports_pdf import build_pdf_report
+from utils.formatting import safe_filename
 from utils.layout import page_header
 from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY
 
@@ -85,7 +86,28 @@ def render_program_explorer():
         ).iloc[0]["n"]
 
     course_count = run_query("SELECT COUNT(*) AS n FROM courses WHERE program_id = ?", (program_id,)).iloc[0]["n"]
-    st.caption(f"Tier: {selected['tier']}  |  {course_count} real courses in this program  |  Target: {scope_display_name}  |  {scope_total_postings} postings in this scope")
+    # Only show delivery mode (a verifiable fact about the program), never
+    # the "top-ranked"/"mid-tier" part of the tier field -- that's an
+    # unsourced prestige classification with no documented ranking
+    # methodology behind it, and displaying it next to statistical results
+    # would make this dashboard look like it's silently vouching for one
+    # program over another. See Methodology for the full reasoning.
+    delivery_note = "Online  |  " if "online" in str(selected["tier"]).lower() else ""
+    st.caption(f"{delivery_note}{course_count} courses in this analysis  |  Target: {scope_display_name}  |  {scope_total_postings} postings in this scope")
+
+    # Corpus-size transparency: course counts range from 5 (a
+    # representative sample) to 295 (a full catalog) across the 13
+    # programs in this dataset -- treating all of them as equally
+    # complete "curricula" would overstate what a small corpus can
+    # actually show. Flag it plainly when the corpus is small rather
+    # than letting the statistics speak as if the input were uniform.
+    if course_count < 30:
+        st.info(
+            f"⚠️ **Small course corpus** -- this analysis uses {course_count} course descriptions, a "
+            "representative sample rather than a complete degree catalog. Statistical results here should "
+            "be read with more caution than for programs represented by a larger course corpus (see "
+            "Methodology for how course data was collected for each program)."
+        )
 
     rec_query = """
         SELECT r.skill_id, r.gap_value, r.trend_label, r.priority_score, r.priority_tier, r.rationale,
@@ -103,6 +125,19 @@ def render_program_explorer():
         recs_df = run_query(rec_query.format("?"), (program_id, cluster_id))
     skills_df = run_query("SELECT skill_id, canonical_name FROM skills")
     recs_df = recs_df.merge(skills_df, on="skill_id", how="left")
+
+    # True significant-gap count, queried directly from gap_scores rather
+    # than taken from len(recs_df). Bug this fixes: recommendations is
+    # capped at MAX_RECOMMENDATIONS_PER_PROGRAM (10) per program+scope in
+    # generate_recommendations.py, but gap_scores is NOT capped -- so a
+    # program with, say, 40 significant gaps only ever gets 10
+    # recommendation rows. Using len(recs_df) as "significant gaps found"
+    # was quietly wrong for every program with more than 10 gaps.
+    gap_count_query = "SELECT COUNT(*) AS n FROM gap_scores WHERE program_id = ? AND cluster_id IS {}"
+    if cluster_id is None:
+        true_gap_count = int(run_query(gap_count_query.format("NULL"), (program_id,)).iloc[0]["n"])
+    else:
+        true_gap_count = int(run_query(gap_count_query.format("?"), (program_id, cluster_id)).iloc[0]["n"])
 
     if recs_df.empty:
         st.warning(
@@ -122,17 +157,18 @@ def render_program_explorer():
         excel_bytes = build_excel_report(selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df)
         st.download_button(
             "⬇️ Download as Excel", data=excel_bytes,
-            file_name=f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations.xlsx".replace(" ", "_"),
+            file_name=safe_filename(f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations") + ".xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
     with dl_col2:
         pdf_bytes = build_pdf_report(
             selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
             scope_display_name=scope_display_name, scope_total_postings=scope_total_postings,
+            true_gap_count=true_gap_count,
         )
         st.download_button(
             "⬇️ Download as PDF", data=pdf_bytes,
-            file_name=f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations.pdf".replace(" ", "_"),
+            file_name=safe_filename(f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations") + ".pdf",
             mime="application/pdf",
         )
 
@@ -150,13 +186,20 @@ def render_program_explorer():
     snap_col1, snap_col2, snap_col3, snap_col4 = st.columns(4)
     snap_col1.metric("Courses analyzed", course_count)
     snap_col2.metric("Postings in scope", scope_total_postings)
-    snap_col3.metric("Significant gaps", len(recs_df))
-    snap_col4.metric("Largest-gap items", int(tier_counts.get("high", 0)))
-    st.caption(
-        f"Against {scope_display_name}, {len(recs_df)} skills showed a statistically significant coverage gap "
-        f"(after FDR correction) out of the skills this program's courses and this scope's postings both touched on. "
-        "A program can genuinely cover many more skills than appear below -- only significant gaps are listed."
-    )
+    snap_col3.metric("Significant gaps", true_gap_count)
+    snap_col4.metric("Shown below", len(recs_df))
+    if true_gap_count > len(recs_df):
+        st.caption(
+            f"Against {scope_display_name}, {true_gap_count} skills showed a statistically significant coverage gap "
+            f"(after FDR correction). Only the top {len(recs_df)}, ranked by priority signal, are shown below and in "
+            "the exported reports -- a program can have more significant gaps than are practical to list individually."
+        )
+    else:
+        st.caption(
+            f"Against {scope_display_name}, {true_gap_count} skills showed a statistically significant coverage gap "
+            "(after FDR correction) out of the skills this program's courses and this scope's postings both touched on. "
+            "A program can genuinely cover many more skills than appear below -- only significant gaps are listed."
+        )
 
     st.markdown("---")
     tier_colors = {"high": "🔴", "medium": "🟡", "low": "🟢"}

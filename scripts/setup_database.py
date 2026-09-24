@@ -21,6 +21,7 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 
 print(f"Building database at: {DB_PATH}")
 conn = sqlite3.connect(DB_PATH)
+conn.execute("PRAGMA foreign_keys = ON")
 cur = conn.cursor()
 
 # Step 1: build the empty tables from the schema file.

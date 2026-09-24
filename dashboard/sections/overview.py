@@ -130,9 +130,9 @@ def render_overview():
         unsafe_allow_html=True,
     )
     st.caption(
-        "An AI extraction method was hand-validated against a classical keyword baseline on a 104-item "
-        "hand-labeled test set (AI won, F1 0.400 vs. 0.364) before being chosen for full-scale analysis -- "
-        "full reasoning on the Methodology page."
+        "An AI extraction method was benchmarked against a classical keyword baseline on a 104-item "
+        "hand-labeled test set (AI won on F1, 0.400 vs. 0.364) -- but the faster keyword method was chosen "
+        "for full-scale analysis as a deliberate speed-vs-accuracy trade-off. Full reasoning on the Methodology page."
     )
 
     st.markdown("---")

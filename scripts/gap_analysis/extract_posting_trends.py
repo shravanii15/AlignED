@@ -93,6 +93,7 @@ def main():
     start_time = time.time()
 
     conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA foreign_keys = ON")
     cur = conn.cursor()
     cur.execute(
         """

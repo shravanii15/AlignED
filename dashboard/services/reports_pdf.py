@@ -31,7 +31,7 @@ class AlignEDReport(FPDF):
         self.cell(0, 10, f"AlignED  |  Generated {datetime.date.today().isoformat()}  |  Page {self.page_no()}", align="C")
 
 
-def build_pdf_report(university, program_name, course_count, recs_df, scope_display_name="the overall market", scope_total_postings=None):
+def build_pdf_report(university, program_name, course_count, recs_df, scope_display_name="the overall market", scope_total_postings=None, true_gap_count=None):
     """Build a proper report-style PDF: a colored title block, an
     executive summary, a clean data table (not a wall of repeated
     sentences), a "top priorities, explained" section with the real
@@ -67,6 +67,13 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
     n_high = (recs_df["priority_tier"] == "high").sum()
     n_rising = (recs_df["trend_label"] == "rising").sum()
     postings_note = f"{scope_total_postings} postings analyzed in this scope" if scope_total_postings else "postings analyzed"
+    # true_gap_count is the actual count of significant rows in gap_scores;
+    # recs_df is capped at MAX_RECOMMENDATIONS_PER_PROGRAM (10) per
+    # program+scope in generate_recommendations.py, so the two can differ
+    # for programs with more than 10 significant gaps. Fall back to
+    # len(recs_df) only if the caller didn't pass the real count.
+    gap_count = true_gap_count if true_gap_count is not None else len(recs_df)
+    capped = gap_count > len(recs_df)
 
     # Executive summary -- a plain-English paragraph stating exactly what
     # this report measures and how, so it stands on its own even if
@@ -75,10 +82,12 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
     write_line(
         clean(
             f"This report compares {university} -- {program_name}'s curriculum ({course_count} courses) "
-            f"against {scope_display_name} ({postings_note}). Of the skills tested, {len(recs_df)} showed a "
+            f"against {scope_display_name} ({postings_note}). Of the skills tested, {gap_count} showed a "
             f"statistically significant gap after a Benjamini-Hochberg false discovery rate (FDR) correction "
             f"for running many comparisons at once -- meaning these differences are unlikely to be due to "
-            f"chance alone. \"Coverage\" and \"demand\" measure how often a skill's name appears in course "
+            f"chance alone." + (f" The {len(recs_df)} highest-priority gaps are detailed below; the report "
+            f"doesn't list all {gap_count} individually." if capped else "") +
+            f" \"Coverage\" and \"demand\" measure how often a skill's name appears in course "
             f"descriptions and job postings respectively -- a text-coverage signal, not a direct measurement "
             f"of instructional depth or strict job requirements. Full methodology on the live dashboard."
         ),
@@ -86,7 +95,7 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
     )
     pdf.ln(2)
     write_line(
-        f"{course_count} courses analyzed   |   {len(recs_df)} significant gaps found   |   "
+        f"{course_count} courses analyzed   |   {gap_count} significant gaps found   |   "
         f"{n_high} high-priority   |   {n_rising} trending upward   |   Generated {datetime.date.today().isoformat()}",
         size=9, color=(90, 90, 90),
     )
@@ -95,7 +104,8 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
 
     # A real data table instead of repeated paragraphs -- far quicker to
     # scan, and it's what a curriculum committee would actually expect.
-    write_line("All significant gaps", size=13, bold=True, color=(30, 58, 138))
+    table_title = f"Top {len(recs_df)} ranked gap signals" if capped else "All significant gaps"
+    write_line(table_title, size=13, bold=True, color=(30, 58, 138))
     pdf.set_font("Helvetica", "", 9)
     # Reset fill color to white before the table -- otherwise the navy
     # fill_color left over from the header banner above silently bleeds
@@ -268,9 +278,10 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
     pdf.set_x(pdf.l_margin)
     write_line(
         clean(
-            "How this was matched: simple keyword matching against your pasted text -- the same fast, "
-            "validated method used for the full-scale program analysis elsewhere in AlignED. It can miss "
-            "skills phrased differently than expected. Full methodology on the live dashboard."
+            "How this was matched: simple keyword matching against your pasted text -- the same fast "
+            "method used for the full-scale program analysis elsewhere in AlignED, benchmarked against an "
+            "AI extraction method on a 104-item test set. It can miss skills phrased differently than "
+            "expected. Full methodology on the live dashboard."
         ),
         size=8, color=(130, 130, 130),
     )

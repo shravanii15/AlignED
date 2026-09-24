@@ -35,7 +35,7 @@ import json
 import os
 import sqlite3
 
-from scipy.stats import linregress
+from scipy.stats import false_discovery_control, linregress
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # .../AlignED
 DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
@@ -44,6 +44,22 @@ OUTPUT_JSON_PATH = os.path.join(BASE_DIR, "data", "gap_analysis", "skill_trends.
 
 SIGNIFICANCE_THRESHOLD = 0.05
 MIN_WEEKS_REQUIRED = 5  # need a reasonable number of points before trying to fit a trend line
+
+
+def apply_fdr_correction(p_values):
+    """Benjamini-Hochberg FDR correction across every skill's trend test
+    run together -- same technique and same reasoning as
+    compute_gap_scores.py's apply_fdr_correction(): ~67 skills are tested
+    for a trend simultaneously here, and without this correction, a few
+    "significant" results are expected to be false positives from chance
+    alone even if every individual test is done correctly (the classic
+    multiple-comparisons problem). Verified on this project's real data:
+    9 skills looked significant at raw p<0.05, but 0 survived this
+    correction at q<0.05 -- exactly the kind of honest tightening gap
+    scoring already applies, now applied consistently here too."""
+    if not p_values:
+        return []
+    return list(false_discovery_control(p_values, method="bh"))
 
 # Real data-quality finding, caught by actually inspecting the raw weekly
 # totals before trusting any trend numbers: postings in this historical
@@ -58,8 +74,10 @@ MIN_WEEKS_REQUIRED = 5  # need a reasonable number of points before trying to fi
 MIN_POSTINGS_PER_WEEK = 100
 
 
-def classify_trend(slope, p_value):
-    if p_value >= SIGNIFICANCE_THRESHOLD:
+def classify_trend(slope, q_value):
+    """Classification now uses the FDR-corrected q-value, not the raw
+    p-value -- see apply_fdr_correction()'s docstring for why."""
+    if q_value >= SIGNIFICANCE_THRESHOLD:
         return "no clear trend"
     return "rising" if slope > 0 else "falling"
 
@@ -97,6 +115,7 @@ def main():
     }
 
     conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA foreign_keys = ON")
     cur = conn.cursor()
     cur.execute("SELECT skill_id, canonical_name FROM skills")
     skill_names = {
@@ -106,8 +125,12 @@ def main():
 
     cur.execute("DELETE FROM skill_trends")
 
-    results = []
-    insert_rows = []
+    # Pass 1: compute the raw linear-regression trend test for every
+    # skill first, WITHOUT classifying anything yet -- FDR correction
+    # needs to see every p-value in the whole family of tests at once
+    # (same two-pass pattern as compute_gap_scores.py: raw p-values
+    # first, then one correction pass across all of them, then classify).
+    candidates = []
     skipped_too_few_weeks = 0
 
     for skill_id_str, week_counts in skill_week_counts.items():
@@ -131,30 +154,41 @@ def main():
         midpoint = len(rates) // 2
         first_half_rate = sum(rates[:midpoint]) / midpoint if midpoint else 0.0
         second_half_rate = sum(rates[midpoint:]) / (len(rates) - midpoint) if (len(rates) - midpoint) else 0.0
-
-        trend_label = classify_trend(slope, p_value)
         skill_name = skill_names.get(skill_id_str, f"skill_id={skill_id_str}")
 
-        result = {
-            "skill_id": int(skill_id_str),
-            "skill_name": skill_name,
-            "weeks_covered": len(rates),
-            "slope": slope,
-            "p_value": p_value,
-            "r_squared": r_value ** 2,
-            "trend_label": trend_label,
-            "first_half_rate": first_half_rate,
-            "second_half_rate": second_half_rate,
-        }
-        results.append(result)
-        insert_rows.append(
-            (int(skill_id_str), len(rates), slope, p_value, r_value ** 2, trend_label, first_half_rate, second_half_rate)
+        candidates.append(
+            {
+                "skill_id": int(skill_id_str),
+                "skill_name": skill_name,
+                "weeks_covered": len(rates),
+                "slope": slope,
+                "p_value": p_value,
+                "r_squared": r_value ** 2,
+                "first_half_rate": first_half_rate,
+                "second_half_rate": second_half_rate,
+            }
         )
+
+    # Pass 2: FDR-correct across the whole family of tests, then classify
+    # each trend using its corrected q-value, not the raw p-value.
+    q_values = apply_fdr_correction([c["p_value"] for c in candidates])
+    for c, q_value in zip(candidates, q_values):
+        c["q_value"] = q_value
+        c["trend_label"] = classify_trend(c["slope"], q_value)
+
+    results = candidates
+    insert_rows = [
+        (
+            r["skill_id"], r["weeks_covered"], r["slope"], r["p_value"], r["q_value"],
+            r["r_squared"], r["trend_label"], r["first_half_rate"], r["second_half_rate"],
+        )
+        for r in results
+    ]
 
     cur.executemany(
         """INSERT INTO skill_trends
-           (skill_id, weeks_covered, slope, p_value, r_squared, trend_label, first_half_rate, second_half_rate)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+           (skill_id, weeks_covered, slope, p_value, q_value, r_squared, trend_label, first_half_rate, second_half_rate)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
         insert_rows,
     )
     conn.commit()
@@ -167,26 +201,32 @@ def main():
     rising = sorted([r for r in results if r["trend_label"] == "rising"], key=lambda r: r["slope"], reverse=True)
     falling = sorted([r for r in results if r["trend_label"] == "falling"], key=lambda r: r["slope"])
     stable = [r for r in results if r["trend_label"] == "no clear trend"]
+    raw_sig_count = sum(1 for r in results if r["p_value"] < SIGNIFICANCE_THRESHOLD)
 
     print(f"\n{skipped_too_few_weeks} skills skipped (fewer than {MIN_WEEKS_REQUIRED} weeks of data).")
     print(f"Saved {len(results)} skill trend rows to the database and to: {OUTPUT_JSON_PATH}")
+    print(
+        f"\n{raw_sig_count} skills looked significant at raw p<{SIGNIFICANCE_THRESHOLD} before FDR correction; "
+        f"{len(rising) + len(falling)} survive after Benjamini-Hochberg correction across all {len(results)} tests "
+        "(this is the honest number -- see Methodology)."
+    )
 
     print("\n" + "=" * 78)
-    print(f"RISING skills ({len(rising)}) -- statistically significant upward trend, p < {SIGNIFICANCE_THRESHOLD}")
+    print(f"RISING skills ({len(rising)}) -- statistically significant upward trend, q < {SIGNIFICANCE_THRESHOLD} (FDR-corrected)")
     print("=" * 78)
     for r in rising:
         print(
             f"  {r['skill_name']:<20} first-half={r['first_half_rate']*100:5.1f}%  "
-            f"second-half={r['second_half_rate']*100:5.1f}%  slope={r['slope']*100:+.2f}pts/wk  p={r['p_value']:.4f}"
+            f"second-half={r['second_half_rate']*100:5.1f}%  slope={r['slope']*100:+.2f}pts/wk  p={r['p_value']:.4f}  q={r['q_value']:.4f}"
         )
 
     print("\n" + "=" * 78)
-    print(f"FALLING skills ({len(falling)}) -- statistically significant downward trend, p < {SIGNIFICANCE_THRESHOLD}")
+    print(f"FALLING skills ({len(falling)}) -- statistically significant downward trend, q < {SIGNIFICANCE_THRESHOLD} (FDR-corrected)")
     print("=" * 78)
     for r in falling:
         print(
             f"  {r['skill_name']:<20} first-half={r['first_half_rate']*100:5.1f}%  "
-            f"second-half={r['second_half_rate']*100:5.1f}%  slope={r['slope']*100:+.2f}pts/wk  p={r['p_value']:.4f}"
+            f"second-half={r['second_half_rate']*100:5.1f}%  slope={r['slope']*100:+.2f}pts/wk  p={r['p_value']:.4f}  q={r['q_value']:.4f}"
         )
 
     print(f"\n{len(stable)} skills showed no statistically significant trend over this window.")

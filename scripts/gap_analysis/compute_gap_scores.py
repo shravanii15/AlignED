@@ -209,6 +209,7 @@ def relevant_skills_for_scope(demand_counts, skill_info):
 
 def main():
     conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA foreign_keys = ON")
     cur = conn.cursor()
 
     print("Loading programs...")

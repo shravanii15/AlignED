@@ -47,6 +47,7 @@ def main():
     print(f"  -> {len(term_lookup)} vocabulary terms loaded (compiled into one combined pattern).")
 
     conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA foreign_keys = ON")
     cur = conn.cursor()
 
     # Map canonical_name -> skill_id, so we can insert extractions with a

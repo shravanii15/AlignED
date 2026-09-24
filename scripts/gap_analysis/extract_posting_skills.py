@@ -61,6 +61,7 @@ def main():
     print(f"  -> {len(term_lookup)} vocabulary terms loaded (compiled into one combined pattern).")
 
     conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA foreign_keys = ON")
     cur = conn.cursor()
 
     cur.execute("SELECT skill_id, canonical_name FROM skills")
