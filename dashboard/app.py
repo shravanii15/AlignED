@@ -109,6 +109,67 @@ st.markdown(
     }
     .aligned-banner h1 { color: white; margin-bottom: 0.25rem; }
     .aligned-banner p { color: #DBEAFE; font-size: 1.05rem; margin-bottom: 0; }
+    /* Shortened hero used on the redesigned Overview page -- less vertical
+       space than the original banner so the "start an analysis" form sits
+       closer to the top of the screen. */
+    .aligned-banner-compact { padding: 1.3rem 2rem 1.1rem 2rem; }
+    .aligned-banner-compact h1 { font-size: 1.9rem; }
+    .aligned-banner-kicker {
+        color: #BFDBFE !important;
+        font-size: 0.82rem !important;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin: 0 0 0.5rem 0 !important;
+    }
+    .aligned-banner-compact p:last-child { font-size: 0.98rem !important; }
+
+    /* Overview page: compact "how it works" step strip. */
+    .howitworks-strip {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin: 0.3rem 0 0.8rem 0;
+    }
+    .howitworks-step {
+        background: #F1F5F9;
+        border: 1px solid #E2E8F0;
+        border-radius: 8px;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #1E3A8A;
+        white-space: nowrap;
+    }
+    .howitworks-arrow { color: #94A3B8; font-size: 1rem; padding: 0 0.1rem; }
+
+    /* Program Explorer: curriculum-vs-market gap bars inside each
+       recommendation card. */
+    .gap-compare { margin: 0.6rem 0 0.3rem 0; }
+    .gap-compare-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem; }
+    .gap-compare-label { width: 84px; font-size: 0.82rem; color: #475569; flex-shrink: 0; }
+    .gap-bar-track { flex: 1; background: #F1F5F9; border-radius: 6px; height: 14px; overflow: hidden; }
+    .gap-bar-fill { height: 100%; border-radius: 6px; }
+    .gap-bar-curriculum { background: #2563EB; }
+    .gap-bar-market { background: #F59E0B; }
+    .gap-bar-role { background: #7C3AED; }
+    .gap-bar-value { width: 52px; text-align: right; font-size: 0.82rem; font-weight: 600; color: #0F172A; flex-shrink: 0; }
+
+    /* Build Your Profile: skill chips (detected skills, strengths, gaps)
+       instead of plain emoji bullet lists -- reads like a report, not a
+       console dump. */
+    .skill-chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.4rem 0 0.9rem 0; }
+    .skill-chip {
+        display: inline-block;
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .skill-chip-have { background: #DCFCE7; color: #166534; border: 1px solid #BBF7D0; }
+    .skill-chip-missing { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
     div[data-testid="stMetric"] {
         background-color: #F8FAFC;
         border: 1px solid #E2E8F0;
@@ -121,6 +182,12 @@ st.markdown(
        default white sidebar with bare-looking radio buttons. */
     section[data-testid="stSidebar"] {
         background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+    }
+    /* Narrower sidebar (was Streamlit's ~330px default) so the main content
+       area -- tables, charts, evidence cards -- gets more room to breathe. */
+    section[data-testid="stSidebar"][aria-expanded="true"] {
+        min-width: 260px;
+        max-width: 260px;
     }
     section[data-testid="stSidebar"] * { color: #E2E8F0 !important; }
     .sidebar-logo {
@@ -256,9 +323,9 @@ else:
     page_selection = next(iter(pages_in_group))
 
 st.sidebar.markdown(
-    '<p class="sidebar-footer">Data refreshed via database queries<br>'
+    '<p class="sidebar-footer"><b>Analysis snapshot</b><br>'
     '13 programs · 1,378 courses · 1,660 postings<br>'
-    'Built with Python, SQLite &amp; Streamlit</p>',
+    'Built with Python · SQL · Streamlit</p>',
     unsafe_allow_html=True,
 )
 pages_in_group[page_selection]()

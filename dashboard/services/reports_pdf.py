@@ -4,9 +4,11 @@ personalized profile reports).
 
 Both reports share the same AlignEDReport base class (so every page
 gets a consistent branded footer for free) and the same general layout
-style: a navy title block, a real data table, and a short "explained"
-callout section -- built to look like something you'd hand to a
-curriculum committee or keep for yourself, not a plain text dump.
+style: a navy title block, an executive summary, a real data table, an
+"explained + evidence" callout section, and a closing methodology/
+sources note -- built to look like something you'd actually hand to a
+curriculum committee or keep for yourself, not a plain text dump, and
+auditable rather than just a list of numbers to trust blindly.
 """
 
 import datetime
@@ -29,12 +31,14 @@ class AlignEDReport(FPDF):
         self.cell(0, 10, f"AlignED  |  Generated {datetime.date.today().isoformat()}  |  Page {self.page_no()}", align="C")
 
 
-def build_pdf_report(university, program_name, course_count, recs_df):
-    """Build a proper report-style PDF: a colored title block, a few
-    headline numbers, a clean data table (not a wall of repeated
-    sentences), and a short "top 3 priorities" callout section at the
-    end -- meant to look like something you'd actually hand to a
-    curriculum committee, not a boring text dump."""
+def build_pdf_report(university, program_name, course_count, recs_df, scope_display_name="the overall market", scope_total_postings=None):
+    """Build a proper report-style PDF: a colored title block, an
+    executive summary, a clean data table (not a wall of repeated
+    sentences), a "top priorities, explained" section with the real
+    evidence behind each one, and a closing methodology/sources note --
+    meant to look like something you'd actually hand to a curriculum
+    committee, not a boring text dump, and to stand on its own without
+    requiring the dashboard to interpret."""
     def clean(text):
         return str(text).encode("latin-1", "replace").decode("latin-1")
 
@@ -62,6 +66,25 @@ def build_pdf_report(university, program_name, course_count, recs_df):
 
     n_high = (recs_df["priority_tier"] == "high").sum()
     n_rising = (recs_df["trend_label"] == "rising").sum()
+    postings_note = f"{scope_total_postings} postings analyzed in this scope" if scope_total_postings else "postings analyzed"
+
+    # Executive summary -- a plain-English paragraph stating exactly what
+    # this report measures and how, so it stands on its own even if
+    # printed and handed to someone who's never seen the dashboard.
+    write_line("Executive summary", size=13, bold=True, color=(30, 58, 138))
+    write_line(
+        clean(
+            f"This report compares {university} -- {program_name}'s curriculum ({course_count} courses) "
+            f"against {scope_display_name} ({postings_note}). Of the skills tested, {len(recs_df)} showed a "
+            f"statistically significant gap after a Benjamini-Hochberg false discovery rate (FDR) correction "
+            f"for running many comparisons at once -- meaning these differences are unlikely to be due to "
+            f"chance alone. \"Coverage\" and \"demand\" measure how often a skill's name appears in course "
+            f"descriptions and job postings respectively -- a text-coverage signal, not a direct measurement "
+            f"of instructional depth or strict job requirements. Full methodology on the live dashboard."
+        ),
+        size=9.5,
+    )
+    pdf.ln(2)
     write_line(
         f"{course_count} courses analyzed   |   {len(recs_df)} significant gaps found   |   "
         f"{n_high} high-priority   |   {n_rising} trending upward   |   Generated {datetime.date.today().isoformat()}",
@@ -81,8 +104,8 @@ def build_pdf_report(university, program_name, course_count, recs_df):
     # it, not just checking that the code ran without error).
     pdf.set_fill_color(255, 255, 255)
     pdf.set_text_color(20, 20, 20)
-    col_widths = (18, 48, 25, 25, 22, 28)
-    headers = ["Priority", "Skill", "Coverage", "Market Demand", "Gap", "Trend"]
+    col_widths = (16, 44, 22, 24, 18, 22, 22)
+    headers = ["Priority", "Skill", "Coverage", "Demand", "Gap", "Trend", "q-value"]
     with pdf.table(col_widths=col_widths, text_align="LEFT", line_height=6,
                    headings_style=FontFace(emphasis="BOLD", fill_color=(30, 58, 138), color=(255, 255, 255))) as table:
         header_row = table.row()
@@ -96,11 +119,15 @@ def build_pdf_report(university, program_name, course_count, recs_df):
             data_row.cell(f"{row['market_demand_rate']*100:.0f}%")
             data_row.cell(f"+{row['gap_value']*100:.0f} pt")
             data_row.cell(row["trend_label"].replace("no clear trend", "flat").title())
+            data_row.cell(f"{row['q_value']:.4f}" if "q_value" in row and row["q_value"] is not None else "--")
 
     # A short, readable "top priorities" callout with genuinely varied
     # phrasing per row -- reusing the exact same sentence template three
     # times in a row (as the raw database rationale does) reads robotic
-    # and repetitive once you actually read them back to back.
+    # and repetitive once you actually read them back to back. Each item
+    # also gets its exact evidence (counts + p/q-value), matching what
+    # the dashboard's "Why am I seeing this?" drill-down shows, so the
+    # PDF doesn't make a weaker claim than the live page does.
     def punchy_summary(row, variant):
         skill = clean(row["canonical_name"])
         cov = row["program_coverage_rate"] * 100
@@ -124,13 +151,37 @@ def build_pdf_report(university, program_name, course_count, recs_df):
         rgb = TIER_RGB.get(row["priority_tier"], (100, 100, 100))
         start_y = pdf.get_y()
         pdf.set_fill_color(*rgb)
-        pdf.rect(pdf.l_margin, start_y, 2.5, 16, style="F")
+        pdf.rect(pdf.l_margin, start_y, 2.5, 20, style="F")
         pdf.set_x(pdf.l_margin + 5)
         write_line(clean(row["canonical_name"]), size=11, bold=True, color=rgb)
         pdf.set_x(pdf.l_margin + 5)
         write_line(punchy_summary(row, i), size=9.5, color=(60, 60, 60))
+        pdf.set_x(pdf.l_margin + 5)
+        if "p_value" in row and "q_value" in row and row["p_value"] is not None:
+            write_line(
+                clean(f"Evidence: raw p-value {row['p_value']:.4f}, FDR-adjusted q-value {row['q_value']:.4f} (decides significance)."),
+                size=8.5, color=(120, 120, 120),
+            )
+            pdf.set_x(pdf.l_margin + 5)
         pdf.ln(3)
         pdf.set_x(pdf.l_margin)
+
+    # Closing methodology/sources note -- so this PDF is honest and
+    # self-contained even printed on its own, without requiring the
+    # reader to already know how AlignED works.
+    pdf.ln(4)
+    pdf.set_x(pdf.l_margin)
+    write_line("Methodology & sources", size=12, bold=True, color=(30, 58, 138))
+    write_line(
+        clean(
+            "Skill taxonomy: U.S. Department of Labor O*NET. Significance: two-proportion z-test per skill, "
+            "Benjamini-Hochberg FDR-corrected across every skill tested for this program+scope together (not "
+            "individually) to control for the multiple-comparisons problem. Data: a fixed, dated sample of "
+            "job postings and scraped course catalogs -- not a continuously live labor market. Full honest "
+            "limitations, including single-annotator evaluation caveats, are on the dashboard's Methodology page."
+        ),
+        size=8.5, color=(100, 100, 100),
+    )
 
     return bytes(pdf.output())
 
@@ -170,18 +221,29 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
     pdf.set_x(pdf.l_margin)
 
     write_line("How your background matches real job roles", size=13, bold=True, color=(30, 58, 138))
+    write_line(
+        clean(
+            "\"Covered\" means your pasted text matched that many of a role's most in-demand tracked skills -- "
+            "a simple overlap count against real job-posting data, not a validated fit score or probability."
+        ),
+        size=8.5, color=(100, 100, 100),
+    )
     pdf.set_font("Helvetica", "", 9)
     pdf.set_fill_color(255, 255, 255)
     pdf.set_text_color(20, 20, 20)
+    has_counts = "skills_covered" in role_matches_df.columns and "n_core_skills" in role_matches_df.columns
     with pdf.table(col_widths=(80, 40), text_align="LEFT", line_height=6,
                    headings_style=FontFace(emphasis="BOLD", fill_color=(30, 58, 138), color=(255, 255, 255))) as table:
         header_row = table.row()
         header_row.cell("Role")
-        header_row.cell("Match Score")
+        header_row.cell("Skills Covered")
         for _, row in role_matches_df.head(6).iterrows():
             data_row = table.row()
             data_row.cell(clean(row["role_label"]))
-            data_row.cell(f"{row['match_score']*100:.0f}%")
+            if has_counts:
+                data_row.cell(f"{row['skills_covered']} of {row['n_core_skills']}")
+            else:
+                data_row.cell(f"{row['match_score']*100:.0f}%")
 
     pdf.ln(6)
     pdf.set_x(pdf.l_margin)
@@ -201,5 +263,16 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
         write_line("Example real job openings matching this role", size=13, bold=True, color=(30, 58, 138))
         for _, row in sample_postings_df.head(6).iterrows():
             write_line(clean(f"-  {row['title']} ({row['company']})"), size=9.5, color=(60, 60, 60))
+
+    pdf.ln(4)
+    pdf.set_x(pdf.l_margin)
+    write_line(
+        clean(
+            "How this was matched: simple keyword matching against your pasted text -- the same fast, "
+            "validated method used for the full-scale program analysis elsewhere in AlignED. It can miss "
+            "skills phrased differently than expected. Full methodology on the live dashboard."
+        ),
+        size=8, color=(130, 130, 130),
+    )
 
     return bytes(pdf.output())

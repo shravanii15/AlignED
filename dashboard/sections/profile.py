@@ -49,6 +49,11 @@ def render_profile_builder():
         st.warning("We couldn't match any tracked skills in what you pasted -- try naming specific tools/languages/technologies (e.g. Python, SQL, Docker, Tableau).")
         return
 
+    detected_names = tracked_df[tracked_df["skill_id"].isin(matched_skill_ids)]["canonical_name"].sort_values()
+    st.markdown("**Skills we detected in your text**")
+    chips_html = "".join(f'<span class="skill-chip skill-chip-have">{name}</span>' for name in detected_names)
+    st.markdown(f'<div class="skill-chip-row">{chips_html}</div>', unsafe_allow_html=True)
+
     # Compute how well the user's skills overlap with each real role's
     # most in-demand skills -- this is what "auto-detects" the best-fit
     # role instead of asking the user to guess one from a dropdown.
@@ -95,8 +100,17 @@ def render_profile_builder():
         "overlap count, not a validated fit score or probability."
     )
     for _, row in role_matches_df.head(5).iterrows():
-        st.write(f"**{row['role_label']}** -- {row['skills_covered']} of {row['n_core_skills']} core skills covered")
-        st.progress(min(row["match_score"], 1.0))
+        pct = min(row["match_score"], 1.0) * 100
+        st.markdown(
+            f"""
+            <div class="gap-compare-row">
+                <div class="gap-compare-label" style="width:auto; min-width:220px; font-weight:600; color:#0F172A;">{row['role_label']}</div>
+                <div class="gap-bar-track"><div class="gap-bar-fill gap-bar-role" style="width:{pct:.1f}%"></div></div>
+                <div class="gap-bar-value">{row['skills_covered']}/{row['n_core_skills']}</div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
     top_role = role_matches_df.iloc[0]
     top_cluster_id = int(top_role["cluster_id"])
@@ -109,17 +123,26 @@ def render_profile_builder():
 
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown(f"**✅ Your strengths ({len(have_df)})**")
-        for _, row in have_df.iterrows():
-            st.write(f"🟢 {row['canonical_name']} -- in {row['demand_rate']*100:.0f}% of postings")
+        st.markdown(f"**✅ You already show ({len(have_df)})**")
         if have_df.empty:
             st.write("No overlap yet with this role's top skills.")
+        else:
+            chips = "".join(
+                f'<span class="skill-chip skill-chip-have">{row["canonical_name"]} &middot; {row["demand_rate"]*100:.0f}%</span>'
+                for _, row in have_df.iterrows()
+            )
+            st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
     with col2:
-        st.markdown(f"**🔴 Skills to prioritize ({len(missing_df)})**")
-        for _, row in missing_df.iterrows():
-            st.write(f"🔴 {row['canonical_name']} -- in {row['demand_rate']*100:.0f}% of postings")
+        st.markdown(f"**🎯 Commonly observed gaps ({len(missing_df)})**")
         if missing_df.empty:
             st.write("Great coverage of this role's top skills!")
+        else:
+            chips = "".join(
+                f'<span class="skill-chip skill-chip-missing">{row["canonical_name"]} &middot; {row["demand_rate"]*100:.0f}%</span>'
+                for _, row in missing_df.iterrows()
+            )
+            st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
+    st.caption("Percentages show how often each skill appears in this role's sampled job postings.")
 
     sample_postings_df = run_query(
         """

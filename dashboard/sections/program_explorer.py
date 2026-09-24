@@ -26,6 +26,7 @@ from services.database import run_query
 from services.reports_excel import build_excel_report
 from services.reports_pdf import build_pdf_report
 from utils.layout import page_header
+from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY
 
 OVERALL_MARKET_LABEL = "🌐 Overall market (all sampled postings)"
 RISING_BOOST = 1.5     # kept in sync with scripts/gap_analysis/generate_recommendations.py
@@ -42,7 +43,13 @@ def render_program_explorer():
 
     programs_df = run_query("SELECT program_id, university, program_name, tier FROM programs ORDER BY university")
     programs_df["label"] = programs_df["university"] + " -- " + programs_df["program_name"]
-    selected_label = st.selectbox("Choose a program", programs_df["label"])
+
+    # Bound to a session-state key (rather than a bare st.selectbox) so the
+    # Overview page's "Start an analysis" form can pre-select a program
+    # before jumping here -- see utils/nav.py's jump_to_program_explorer().
+    if EXPLORER_PROGRAM_KEY not in st.session_state or st.session_state[EXPLORER_PROGRAM_KEY] not in list(programs_df["label"]):
+        st.session_state[EXPLORER_PROGRAM_KEY] = programs_df["label"].iloc[0]
+    selected_label = st.selectbox("Choose a program", programs_df["label"], key=EXPLORER_PROGRAM_KEY)
     selected = programs_df[programs_df["label"] == selected_label].iloc[0]
     program_id = int(selected["program_id"])
 
@@ -57,9 +64,12 @@ def render_program_explorer():
         """
     )
     role_options = [OVERALL_MARKET_LABEL] + list(clusters_df["role_label"])
+    if EXPLORER_ROLE_KEY not in st.session_state or st.session_state[EXPLORER_ROLE_KEY] not in role_options:
+        st.session_state[EXPLORER_ROLE_KEY] = OVERALL_MARKET_LABEL
     selected_role_label = st.selectbox(
         "Target role",
         role_options,
+        key=EXPLORER_ROLE_KEY,
         help="Compare this program against the overall job-market sample, or narrow the comparison to postings for one specific role.",
     )
 
@@ -116,12 +126,37 @@ def render_program_explorer():
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
     with dl_col2:
-        pdf_bytes = build_pdf_report(selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df)
+        pdf_bytes = build_pdf_report(
+            selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
+            scope_display_name=scope_display_name, scope_total_postings=scope_total_postings,
+        )
         st.download_button(
             "⬇️ Download as PDF", data=pdf_bytes,
             file_name=f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations.pdf".replace(" ", "_"),
             mime="application/pdf",
         )
+
+    st.markdown("---")
+
+    # Alignment snapshot: real counts only, deliberately NOT a single
+    # invented "alignment %" score. This project's whole stance is that
+    # gap scoring is a text-coverage signal, not a certified measure of
+    # curriculum quality -- collapsing that into one made-up percentage
+    # would undercut the honesty the rest of the dashboard argues for. So
+    # this snapshot shows what was actually measured: how much data went
+    # in, and how many statistically significant gaps came out.
+    tier_counts = recs_df["priority_tier"].value_counts()
+    st.markdown('<p class="section-eyebrow">ALIGNMENT SNAPSHOT</p>', unsafe_allow_html=True)
+    snap_col1, snap_col2, snap_col3, snap_col4 = st.columns(4)
+    snap_col1.metric("Courses analyzed", course_count)
+    snap_col2.metric("Postings in scope", scope_total_postings)
+    snap_col3.metric("Significant gaps", len(recs_df))
+    snap_col4.metric("Largest-gap items", int(tier_counts.get("high", 0)))
+    st.caption(
+        f"Against {scope_display_name}, {len(recs_df)} skills showed a statistically significant coverage gap "
+        f"(after FDR correction) out of the skills this program's courses and this scope's postings both touched on. "
+        "A program can genuinely cover many more skills than appear below -- only significant gaps are listed."
+    )
 
     st.markdown("---")
     tier_colors = {"high": "🔴", "medium": "🟡", "low": "🟢"}
@@ -146,38 +181,65 @@ def render_program_explorer():
         st.subheader(f"{tier_colors[tier]} {tier_section_titles[tier]}")
         for _, row in tier_df.iterrows():
             trend_note = {"rising": "📈 rising demand", "falling": "📉 falling demand"}.get(row["trend_label"], "")
-            with st.expander(f"{row['canonical_name']}  ({row['gap_value']*100:.0f} point gap)  {trend_note}"):
+            cov_pct = row["program_coverage_rate"] * 100
+            dem_pct = row["market_demand_rate"] * 100
+            max_pct = max(cov_pct, dem_pct, 1)
+
+            with st.container(border=True):
+                st.markdown(f"**{row['canonical_name']}**  &nbsp; `{row['gap_value']*100:.0f} point gap`  {trend_note}", unsafe_allow_html=True)
                 st.write(row["rationale"])
 
-                # Evidence drill-down: exact counts, raw + corrected
-                # significance, and the priority-score math -- so nothing
-                # here has to just be taken on faith.
+                # Gap visualization: curriculum coverage vs. market demand,
+                # side by side -- makes the gap immediately visible instead
+                # of requiring the visitor to compare two percentages by eye.
+                st.markdown(
+                    f"""
+                    <div class="gap-compare">
+                        <div class="gap-compare-row">
+                            <div class="gap-compare-label">Curriculum</div>
+                            <div class="gap-bar-track"><div class="gap-bar-fill gap-bar-curriculum" style="width:{cov_pct/max_pct*100:.1f}%"></div></div>
+                            <div class="gap-bar-value">{cov_pct:.1f}%</div>
+                        </div>
+                        <div class="gap-compare-row">
+                            <div class="gap-compare-label">Job market</div>
+                            <div class="gap-bar-track"><div class="gap-bar-fill gap-bar-market" style="width:{dem_pct/max_pct*100:.1f}%"></div></div>
+                            <div class="gap-bar-value">{dem_pct:.1f}%</div>
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+
+                # Evidence drill-down, as a compact structured card instead
+                # of a wall of markdown bullets -- exact counts, raw and
+                # FDR-corrected significance, and the priority-score math,
+                # so nothing here has to just be taken on faith.
                 x_courses = round(row["program_coverage_rate"] * course_count)
                 x_postings = round(row["market_demand_rate"] * scope_total_postings)
-                trend_modifier = {"rising": RISING_BOOST, "falling": FALLING_PENALTY}.get(row["trend_label"], 1.0)
+                trend_desc = {
+                    "rising": f"x {RISING_BOOST} (rising demand)",
+                    "falling": f"x {FALLING_PENALTY} (falling demand)",
+                }.get(row["trend_label"], "x 1.0 (no clear trend)")
 
-                st.markdown("**Why am I seeing this? (evidence)**")
-                ev_col1, ev_col2 = st.columns(2)
-                with ev_col1:
+                with st.expander("Why am I seeing this? (evidence)"):
                     st.markdown(
-                        f"- Curriculum coverage: **{x_courses} of {course_count}** courses "
-                        f"({row['program_coverage_rate']*100:.1f}%)\n"
-                        f"- Market demand: **{x_postings} of {scope_total_postings}** postings "
-                        f"({row['market_demand_rate']*100:.1f}%), scope: {scope_display_name}\n"
-                        f"- Gap: **{row['gap_value']*100:.1f} percentage points**"
+                        f"""
+                        | | |
+                        |---|---|
+                        | Curriculum coverage | **{x_courses} of {course_count}** courses ({cov_pct:.1f}%) |
+                        | Market demand | **{x_postings} of {scope_total_postings}** postings ({dem_pct:.1f}%), scope: {scope_display_name} |
+                        | Gap | **{row['gap_value']*100:.1f} percentage points** |
+                        | Raw p-value | `{row['p_value']:.4f}` |
+                        | FDR-adjusted q-value | `{row['q_value']:.4f}` (this is what decides significance) |
+                        | Data period | {row['period']} |
+                        | Method | Two-proportion z-test + Benjamini-Hochberg FDR correction |
+                        """
                     )
-                with ev_col2:
-                    st.markdown(
-                        f"- Raw p-value: `{row['p_value']:.4f}`\n"
-                        f"- FDR-adjusted q-value: `{row['q_value']:.4f}` (this is what decides significance)\n"
-                        f"- Data period: {row['period']}"
+                    st.caption(
+                        f"Priority signal = gap ({row['gap_value']*100:.1f} pts) x trend modifier ({trend_desc}) "
+                        f"= {row['priority_score']*100:.1f}. Used only to rank results within this program+scope -- "
+                        f"not a validated measure of real-world importance."
                     )
-                trend_desc = {"rising": "x 1.5 (rising demand)", "falling": "x 0.7 (falling demand)"}.get(row["trend_label"], "x 1.0 (no clear trend)")
-                st.caption(
-                    f"Priority signal = gap ({row['gap_value']*100:.1f} pts) x trend modifier ({trend_desc}) "
-                    f"= {row['priority_score']*100:.1f}. Used only to rank results within this program+scope -- "
-                    f"not a validated measure of real-world importance."
-                )
 
     st.markdown("---")
     st.subheader("Gap size, visualized")
