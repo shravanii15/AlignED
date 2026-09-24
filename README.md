@@ -59,14 +59,19 @@ Every stage grounds its output in the real, official O\*NET skills taxonomy — 
 
 ## What's in the dashboard
 
+The sidebar is grouped into 3 workflows instead of one flat list, so it's clear where to start:
+
 - **Overview** — headline numbers and a one-paragraph summary of the whole pipeline
-- **Build Your Profile** — paste your own skills/resume text and get a personalized analysis: which real job roles best match your background, your strengths and gaps for that role, real example job openings, and a downloadable personalized PDF career report
-- **Program Explorer** — pick any of the 13 programs and see its ranked, color-coded, plain-English skill-gap recommendations, with Excel/PDF export
-- **Course Finder** — search or filter real courses across all 13 programs by keyword or specific skill
-- **Compare Programs** — see 2-3 programs' top gaps side by side
-- **Skill Coverage Heatmap** — a visual grid of programs × skills, real coverage percentages
-- **Skill Demand Trends** — which tracked skills are statistically rising or falling in demand
-- **Role Clusters** — how real job postings group into real-world roles, with sample postings per cluster
+- **Analyze**
+  - **Program Explorer** — pick any of the 13 programs *and* a target role (or "Overall market"), and see ranked, color-coded, plain-English skill-gap recommendations computed specifically for that combination, with Excel/PDF export
+  - **Compare Programs** — see 2-3 programs' top overall-market gaps side by side
+- **Explore**
+  - **Skill Coverage Heatmap** — a visual grid of programs × skills, real coverage percentages
+  - **Skill Demand Trends** — which tracked skills are statistically rising or falling in demand
+  - **Role Groups** — how real job postings group into broad role families (embedding-based, silhouette score disclosed honestly), with sample postings per group
+  - **Course Finder** — search or filter real courses across all 13 programs by keyword or specific skill
+- **Personalize**
+  - **Build Your Profile** — paste your own skills/resume text and get a personalized analysis: which real job roles best match your background (shown as "X of N core skills covered," not an unvalidated match %), your strengths and gaps for that role, real example job openings, and a downloadable personalized PDF career report
 - **Methodology & Honest Limitations** — every real trade-off and limitation stated openly, the kind of thing an interviewer would ask about directly
 
 ## Tech stack

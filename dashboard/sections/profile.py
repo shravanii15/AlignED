@@ -79,18 +79,25 @@ def render_profile_builder():
 
     match_rows = []
     for cluster_id, group in top_per_cluster.groupby("cluster_id"):
-        overlap = group["skill_id"].isin(matched_skill_ids).sum()
+        n_core_skills = len(group)
+        overlap = int(group["skill_id"].isin(matched_skill_ids).sum())
         match_rows.append({
             "cluster_id": cluster_id,
             "role_label": group["role_label"].iloc[0],
-            "match_score": overlap / len(group),
+            "skills_covered": overlap,
+            "n_core_skills": n_core_skills,
+            "match_score": overlap / n_core_skills,  # kept internally for ranking/sorting only
         })
     role_matches_df = pd.DataFrame(match_rows).sort_values("match_score", ascending=False).reset_index(drop=True)
 
     st.markdown("---")
     st.subheader("🎯 Your best-matching roles")
+    st.caption(
+        "\"Covered\" means your text matched that many of this role's most-in-demand skills -- a simple "
+        "overlap count, not a validated fit score or probability."
+    )
     for _, row in role_matches_df.head(5).iterrows():
-        st.write(f"**{row['role_label']}** -- {row['match_score']*100:.0f}% match")
+        st.write(f"**{row['role_label']}** -- {row['skills_covered']} of {row['n_core_skills']} core skills covered")
         st.progress(min(row["match_score"], 1.0))
 
     top_role = role_matches_df.iloc[0]
@@ -118,7 +125,8 @@ def render_profile_builder():
 
     sample_postings_df = run_query(
         """
-        SELECT p.title, p.company FROM postings p
+        SELECT p.title, p.company, p.location, p.salary_min, p.salary_max, p.posted_date
+        FROM postings p
         JOIN posting_cluster_map pcm ON pcm.posting_id = p.posting_id
         WHERE pcm.cluster_id = ? LIMIT 8
         """,
@@ -127,8 +135,24 @@ def render_profile_builder():
     st.markdown("---")
     st.subheader("💼 Example real job openings matching this role")
     st.caption("Pulled directly from the sampled job postings -- real listings, not generated examples.")
+    # The 1,660-posting sample used here (Kaggle historical dataset)
+    # mostly doesn't include location/salary/date fields -- only a small
+    # separate live pipeline does. Show that extra detail automatically
+    # whenever a posting actually has it, rather than claiming data that
+    # doesn't exist for most rows.
     for _, row in sample_postings_df.iterrows():
-        st.write(f"• **{row['title']}** ({row['company']})")
+        details = []
+        if row["location"]:
+            details.append(f"📍 {row['location']}")
+        if row["salary_min"] or row["salary_max"]:
+            lo, hi = row["salary_min"], row["salary_max"]
+            details.append(f"💰 ${lo:,.0f}–${hi:,.0f}" if lo and hi else f"💰 ${(lo or hi):,.0f}")
+        if row["posted_date"]:
+            details.append(f"📅 {row['posted_date']}")
+        if details:
+            st.markdown(f"**{row['title']}** — {row['company']}  \n{'  ·  '.join(details)}")
+        else:
+            st.write(f"• **{row['title']}** ({row['company']})")
 
     st.markdown("---")
     pdf_bytes = build_profile_pdf_report(role_matches_df, top_role["role_label"], have_df, missing_df, sample_postings_df)
