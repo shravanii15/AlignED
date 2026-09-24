@@ -43,6 +43,10 @@ def render_overview():
     col4.metric("Statistically Significant Gaps", gaps)
     col5.metric("Final Recommendations", recs)
     st.caption("Gap and recommendation counts above are the overall-market scope. Program Explorer lets you narrow the analysis to a specific target role.")
+    st.markdown(
+        '📚 **Skill taxonomy: U.S. Department of Labor O\\*NET** -- every skill on this dashboard comes from '
+        "this real, external, publicly maintained standard. Nothing here is an invented list."
+    )
 
     st.markdown("---")
     st.markdown('<p class="section-eyebrow">WHAT DO YOU WANT TO DO?</p>', unsafe_allow_html=True)
