@@ -1,167 +1,169 @@
 [
   {
-    "latitude": 36.93432,
+    "salary_min": 96424.98,
+    "salary_max": 96424.98,
+    "longitude": -84.388372,
+    "created": "2026-09-23T16:43:28Z",
+    "description": "Data Scientist I The Data Scientist I provides data science, statistical, and advanced analytical support to CDC programs. This role focuses on extracting knowledge from structured and unstructured public health data to support analysis, research, surveillance, improved understanding and communication, visualization, health services delivery, and data-driven decision-making. The Data Scientist I develops, implements, and monitors advanced analytic, computational, and predictive modeling tools a\u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
     "title": "Data Scientist",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Guidehouse"
+      "display_name": "Cherokee Federal"
     },
-    "salary_is_predicted": "1",
-    "category": {
-      "label": "IT Jobs",
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "salary_min": 162458.14,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "created": "2026-09-21T00:10:18Z",
-    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Secret What You Will Do : The Data Scientist will focus on performing ETL / data cleaning, developing interactive visualizations, building predictive models, and support implementing Artificial Intelligence solutions tied to asset and material maintenance and management data, as well as policy data. The data analyst will be responsible for all of the following to include but not limited to: Dedicated to\u2026",
-    "id": "5892341994",
     "location": {
       "area": [
         "US",
-        "Virginia",
-        "Hampton City",
-        "Fort Monroe"
+        "Georgia",
+        "Fulton County",
+        "Atlanta"
       ],
       "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Fort Monroe, Hampton City"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5892341994?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=C36AD890E75E2F64AC230BA8F523D5B65AC66D89",
-    "longitude": -76.30362,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicmpad1REdTM4UkdDNFl5dG1aNDg2QSIsImkiOiI1ODkyMzQxOTk0In0.8XpTMG1RPBRQMF_GHPUy2W35rwoyUo575UiIRqYMGAY",
-    "salary_max": 162458.14
-  },
-  {
-    "id": "5892777538",
-    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Public Trust What You Will Do : The Border Security Data Scientist will join a dynamic team supporting U.S Federal border security customers. In this role, the candidate will collect, transform, integrate, and analyze data to. develop integrated data models, generate reports and analyses for key senior leaders and deploy dynamic analytical solutions. Develop integrated data pipelines and models to suppo\u2026",
-    "created": "2026-09-21T08:12:27Z",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_min": 125438.95,
-    "title": "Data Scientist",
-    "salary_is_predicted": "1",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Guidehouse"
+      "display_name": "Atlanta, Fulton County"
     },
     "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs"
     },
-    "latitude": 39.015239,
-    "salary_max": 125438.95,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicmpad1REdTM4UkdDNFl5dG1aNDg2QSIsImkiOiI1ODkyNzc3NTM4In0.S5t3TFfAFaoJxLgjrFpivV4JDbZiX-XggkgDYZulz_g",
-    "longitude": -77.393545,
+    "contract_time": "full_time",
+    "id": "5895621996",
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NTYyMTk5NiIsInMiOiJVTURjWHdlNDhSR3k5WThWR3hma0pnIn0.A2rBGibO2TWfyyQtItG2B8bkZicAFL09vup-2Acop9g",
+    "latitude": 33.755711,
+    "redirect_url": "https://www.adzuna.com/land/ad/5895621996?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=E412AD8DD28D52A7AB82448A4B73C546A6131DE8"
+  },
+  {
+    "title": "Data Scientist",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NTYxODgxOSIsInMiOiJVTURjWHdlNDhSR3k5WThWR3hma0pnIn0.8OQI9AFPhp8nRX-VthMcom6QLwc2OzaPuxnXJlV3Cps",
+    "company": {
+      "display_name": "Denver Health",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5895618819?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=EC8A9C17E0A4996BD8E9E20E9220D0DC45AB3182",
+    "location": {
+      "area": [
+        "US",
+        "Colorado",
+        "Denver"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Denver, Colorado"
+    },
+    "latitude": 39.75,
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "salary_min": 97171.33,
+    "salary_max": 97171.33,
+    "created": "2026-09-23T16:42:39Z",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "We are recruiting for a mission-driven Data Scientist to join our team! We're with you for life\u2019s journey. At Denver Health, purpose isn\u2019t just something we believe in\u2014it\u2019s something we live every day, for life\u2019s journey. Our Values Respect | Belonging | Accountability | Transparency Department Primary Care Support Job Summary Under minimal supervision, the Data Scientist is responsible for development, implementation, and evaluation of multiple projects simultaneously. This includes gathering \u2026",
+    "id": "5895618819",
+    "longitude": -104.99,
+    "salary_is_predicted": "1"
+  },
+  {
+    "salary_is_predicted": "1",
+    "id": "5895723954",
+    "contract_time": "full_time",
+    "latitude": 37.445797,
+    "redirect_url": "https://www.adzuna.com/land/ad/5895723954?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=062C9BC20240D83A77FCE51B085B4EDDBAD88418",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NTcyMzk1NCIsInMiOiJVTURjWHdlNDhSR3k5WThWR3hma0pnIn0.YoItYEN9qXSwQq1i32CcEL1bFEB0fGrY2mcFxJHwTOw",
+    "longitude": -122.157575,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Who You Are You are a data scientist, an experienced quantitative thinker who wants to develop further as both a data scientist and an engineer. You are skilled at finding the precise mathematical kernels of real-world business challenges faced by leading international financial institutions. You want to apply your expertise in statistics and computer science using Quantifind\u2019s state-of-the-art infrastructure to solve problems in Natural Language Processing, such as Entity Resolution, Document \u2026",
+    "created": "2026-09-23T17:53:05Z",
+    "salary_max": 243812.03,
+    "salary_min": 243812.03,
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
     "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Virginia",
-        "Loudoun County",
-        "Sterling"
+        "California",
+        "Santa Clara County",
+        "Palo Alto"
       ],
-      "display_name": "Sterling, Loudoun County"
+      "display_name": "Palo Alto, Santa Clara County"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5892777538?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=6B47B90EF865510AE66AFA2C06F9F92048B9F5C0"
-  },
-  {
-    "latitude": 38.85981,
-    "salary_min": 122986.7,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "title": "Data Scientist",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "salary_is_predicted": "1",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Guidehouse"
+      "display_name": "Quantifind"
     },
-    "created": "2026-09-21T14:07:59Z",
-    "id": "5893051286",
-    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Ability to Obtain Public Trust What You Will Do : Guidehouse is seeking a Data Scientist to join our AI & Data Defense and Security Segment, where the individual will collect and analyze data to identify trends, develop visualizations in support of organizational and mission goals, and support decision-making for large-scale programs within the Department of Homeland Security (DHS). Responsibilities include, b\u2026",
-    "redirect_url": "https://www.adzuna.com/land/ad/5893051286?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=8369F87F0B0A9D7E5162A987775C107D6ED41F24",
-    "location": {
-      "area": [
-        "US",
-        "Virginia",
-        "Arlington County",
-        "Crystal"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Crystal, Arlington County"
-    },
-    "longitude": -77.05099,
-    "salary_max": 122986.7,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicmpad1REdTM4UkdDNFl5dG1aNDg2QSIsImkiOiI1ODkzMDUxMjg2In0.acbWiVNvjfGXZhxJ4HFfAKpU6pzch6CGfffK9_C7eds"
+    "title": "Data Scientist"
   },
   {
-    "id": "5892341997",
-    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Secret What You Will Do : Develop, implement, and validate statistical models and analytical methodologies to support client mission objectives Perform exploratory data analysis (EDA) to identify trends, patterns, and anomalies in large and complex datasets Design and deploy predictive and prescriptive models to enable data-driven decision-making Apply advanced analytics to Navy-specific domains such as\u2026",
-    "created": "2026-09-21T00:10:18Z",
-    "salary_min": 195474.58,
+    "salary_max": 220580.92,
+    "salary_min": 220580.92,
+    "longitude": -73.808983,
+    "salary_is_predicted": "1",
+    "id": "5895723076",
+    "description": "About Us Twitch is the world\u2019s biggest live streaming service, with global communities built around gaming, entertainment, music, sports, cooking, and more. It is where thousands of communities come together for whatever, every day. We\u2019re about community, inside and out. You\u2019ll find coworkers who are eager to team up, collaborate, and smash (or elegantly solve) problems together. We\u2019re on a quest to empower live communities, so if this sounds good to you, see what we\u2019re up to on LinkedIn and X,\u2026",
     "__CLASS__": "Adzuna::API::Response::Job",
+    "created": "2026-09-23T17:52:56Z",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Twitch"
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVU1EY1h3ZTQ4Ukd5OVk4Vkd4ZmtKZyIsImkiOiI1ODk1NzIzMDc2In0.LsfTi1f-XdXsoIon93TpJNmlYVlNvperjpxeDknloos",
     "title": "Data Scientist",
     "category": {
+      "tag": "accounting-finance-jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
+      "label": "Accounting & Finance Jobs"
     },
-    "salary_is_predicted": "1",
-    "company": {
-      "display_name": "Guidehouse",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "latitude": 36.93432,
-    "salary_max": 195474.58,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5MjM0MTk5NyIsInMiOiJyalp3VER1MzhSR0M0WXl0bVo0ODZBIn0.yXGWOByDJEhxhYuL_L0XFjNJIDmZGWMVdEvEl79zYro",
-    "longitude": -76.30362,
+    "latitude": 42.679357,
     "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Virginia",
-        "Hampton City",
-        "Fort Monroe"
+        "New York",
+        "Albany County",
+        "Ny State Campus"
       ],
-      "display_name": "Fort Monroe, Hampton City"
+      "display_name": "Ny State Campus, Albany County"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5892341997?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=B08041DD4E7D72DFE8AF24ED2BD3804F59936B51"
+    "redirect_url": "https://www.adzuna.com/land/ad/5895723076?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=FE237C937D7947456A83852F2F8EBBD9E2FD4B21"
   },
   {
-    "latitude": 38.883702,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_min": 151490.47,
-    "title": "Senior Data Scientist",
     "salary_is_predicted": "1",
-    "company": {
-      "display_name": "Guidehouse",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
+    "id": "5895704224",
+    "contract_time": "part_time",
+    "latitude": 42.679357,
+    "redirect_url": "https://www.adzuna.com/land/ad/5895704224?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=38889E84D06B683E178F8303C9045CC63E57D7B7",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVU1EY1h3ZTQ4Ukd5OVk4Vkd4ZmtKZyIsImkiOiI1ODk1NzA0MjI0In0.coUDAApFqczMV7GpkwNWJjGsw7bXqv_syRqwPQatq_Q",
+    "longitude": -73.808983,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Our Purpose Mastercard powers economies and empowers people in 200 countries and territories worldwide. Together with our customers, we\u2019re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions secure, simple, smart and accessible. Our technology and innovation, partnerships and networks combine to deliver a unique set of products and services that help people, businesses and governments realize their greatest pot\u2026",
+    "created": "2026-09-23T17:43:18Z",
+    "salary_max": 101348.22,
+    "salary_min": 101348.22,
     "category": {
+      "tag": "it-jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Accounting & Finance Jobs",
-      "tag": "accounting-finance-jobs"
+      "label": "IT Jobs"
     },
-    "created": "2026-09-21T00:10:17Z",
-    "id": "5892341907",
-    "description": "Job Family : Data Science Consulting Travel Required : None Clearance Required : Active Top Secret SCI with Polygraph What You Will Do : Our Data and Analytics consultants help clients maximize the value of their data. This high performing team works with clients to implement the full spectrum of data analytics and data science, from data querying and data wrangling to data visualization and dashboarding for business intelligence (BI), to predictive analytics, machine learning, and artificial i\u2026",
     "location": {
+      "display_name": "Ny State Campus, Albany County",
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Virginia",
-        "Fairfax County",
-        "Chantilly"
-      ],
-      "display_name": "Chantilly, Fairfax County"
+        "New York",
+        "Albany County",
+        "Ny State Campus"
+      ]
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5892341907?se=rjZwTDu38RGC4YytmZ486A&utm_medium=api&utm_source=851bf6c5&v=19CE565AFB44FFBD5C8080E20AB358EC51C433F7",
-    "longitude": -77.428438,
-    "salary_max": 151490.47,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicmpad1REdTM4UkdDNFl5dG1aNDg2QSIsImkiOiI1ODkyMzQxOTA3In0.xTeltvPvRbVGxxRNYke7EJEJMgx3ENnbyFbV2GLKjJE"
+    "company": {
+      "display_name": "Mastercard",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "title": "Data Scientist"
   }
 ]
