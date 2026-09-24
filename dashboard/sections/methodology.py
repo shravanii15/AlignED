@@ -4,9 +4,11 @@ interviewer would ask about directly."""
 
 import streamlit as st
 
+from utils.layout import page_header
+
 
 def render_methodology():
-    st.title("🔍 Methodology & Honest Limitations")
+    page_header("🔍", "Methodology & Honest Limitations")
     st.markdown(
         """
         This page exists on purpose: a portfolio project is only as

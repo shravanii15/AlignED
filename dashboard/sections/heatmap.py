@@ -6,13 +6,14 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from services.database import run_query
+from utils.layout import page_header
 
 
 def render_heatmap():
-    st.title("🗺️ Skill Coverage Heatmap")
-    st.markdown(
-        "**How to read this:** each cell shows what percent of a program's courses cover a skill. "
-        "🔴 Red = barely covered (a real gap). 🟢 Green = well covered. The number in each cell is the exact percentage."
+    page_header(
+        "🗺️", "Skill Coverage Heatmap",
+        "<b>How to read this:</b> each cell shows what percent of a program's courses cover a skill. "
+        "🔴 Red = barely covered (a real gap). 🟢 Green = well covered. The number in each cell is the exact percentage.",
     )
 
     num_skills = st.slider("Number of skills to show (fewer = easier to read)", min_value=5, max_value=20, value=10)

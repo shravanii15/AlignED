@@ -13,17 +13,15 @@ import plotly.express as px
 import streamlit as st
 
 from services.database import run_query
+from utils.layout import page_header
 
 
 def render_clusters():
-    st.title("🧩 Role Groups")
-    st.markdown(
-        """
-        Real job postings were grouped into broad role families using
-        AI-generated embeddings and k-means clustering -- so curricula can
-        be compared against what a role generally needs, not one
-        company's specific posting.
-        """
+    page_header(
+        "🧩", "Role Groups",
+        "Real job postings were grouped into broad role families using AI-generated embeddings and "
+        "k-means clustering -- so curricula can be compared against what a role generally needs, not "
+        "one company's specific posting.",
     )
 
     clusters_df = run_query(

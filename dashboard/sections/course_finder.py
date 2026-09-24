@@ -4,13 +4,14 @@
 import streamlit as st
 
 from services.database import run_query
+from utils.layout import page_header
 
 
 def render_course_finder():
-    st.title("🔎 Course Finder")
-    st.markdown(
+    page_header(
+        "🔎", "Course Finder",
         "Looking for courses that build a specific skill (e.g. Python, Docker, Machine Learning)? "
-        "Search or filter below -- no upload needed, this searches real course descriptions across all 13 programs directly."
+        "Search or filter below -- no upload needed, this searches real course descriptions across all 13 programs directly.",
     )
 
     search_text = st.text_input("Search course names/descriptions (e.g. 'software', 'security', 'machine learning')")

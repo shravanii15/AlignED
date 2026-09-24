@@ -18,13 +18,13 @@ import streamlit as st
 from services.database import run_query
 from services.reports_excel import build_excel_report
 from services.reports_pdf import build_pdf_report
+from utils.layout import page_header
 
 OVERALL_MARKET_LABEL = "🌐 Overall market (all sampled postings)"
 
 
 def render_program_explorer():
-    st.title("📋 Program Explorer")
-    st.markdown("Pick a program and a target role to see ranked, statistically significant skill gaps -- and what to do about them.")
+    page_header("📋", "Program Explorer", "Pick a program and a target role to see ranked, statistically significant skill gaps -- and what to do about them.")
 
     programs_df = run_query("SELECT program_id, university, program_name, tier FROM programs ORDER BY university")
     programs_df["label"] = programs_df["university"] + " -- " + programs_df["program_name"]

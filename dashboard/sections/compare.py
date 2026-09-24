@@ -5,11 +5,11 @@ import plotly.express as px
 import streamlit as st
 
 from services.database import run_query
+from utils.layout import page_header
 
 
 def render_compare():
-    st.title("⚖️ Compare Programs")
-    st.markdown("Pick 2-3 programs to see their top skill gaps side by side.")
+    page_header("⚖️", "Compare Programs", "Pick 2-3 programs to see their top skill gaps side by side.")
 
     programs_df = run_query("SELECT program_id, university, program_name FROM programs ORDER BY university")
     programs_df["label"] = programs_df["university"] + " -- " + programs_df["program_name"]

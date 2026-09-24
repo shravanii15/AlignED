@@ -6,16 +6,14 @@ import plotly.express as px
 import streamlit as st
 
 from services.database import run_query
+from utils.layout import page_header
 
 
 def render_trends():
-    st.title("📈 Skill Demand Trends")
-    st.markdown(
-        """
-        Based on ~124,000 real historical job postings, restricted to the
-        6 weeks with a real, meaningful volume of data (see Methodology for
-        why some weeks were excluded).
-        """
+    page_header(
+        "📈", "Skill Demand Trends",
+        "Based on ~124,000 real historical job postings, restricted to the 6 weeks with a real, "
+        "meaningful volume of data (see Methodology for why some weeks were excluded).",
     )
 
     trends_df = run_query(

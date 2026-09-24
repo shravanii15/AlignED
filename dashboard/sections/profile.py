@@ -9,18 +9,16 @@ import streamlit as st
 from services.database import run_query
 from services.reports_pdf import build_profile_pdf_report
 from utils.constants import AMBIGUOUS_GENERIC_TERMS, TOP_SKILLS_PER_CLUSTER
+from utils.layout import page_header
 from utils.text import extract_user_skills
 
 
 def render_profile_builder():
-    st.title("🙋 Build Your Profile")
-    st.markdown(
-        """
-        Paste your current skills, resume text, or a list of courses you've taken.
-        We'll match your background against **every real role in the job-market data**,
-        show which one fits you best, and generate a personalized career report --
-        including real example job openings for that role.
-        """
+    page_header(
+        "🙋", "Build Your Profile",
+        "Paste your current skills, resume text, or a list of courses you've taken. We'll match your "
+        "background against <b>every real role in the job-market data</b>, show which one fits you best, "
+        "and generate a personalized career report -- including real example job openings for that role.",
     )
 
     user_text = st.text_area(

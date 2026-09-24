@@ -85,6 +85,12 @@ from sections.overview import render_overview
 from sections.profile import render_profile_builder
 from sections.program_explorer import render_program_explorer
 from sections.trends import render_trends
+from utils.nav import (
+    GROUP_ANALYZE, GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_OVERVIEW, GROUP_PERSONALIZE,
+    NAV_GROUP_KEY, NAV_PAGE_KEY,
+    PAGE_BUILD_PROFILE, PAGE_COMPARE, PAGE_COURSE_FINDER, PAGE_HEATMAP,
+    PAGE_METHODOLOGY, PAGE_PROGRAM_EXPLORER, PAGE_ROLE_GROUPS, PAGE_TRENDS,
+)
 
 st.set_page_config(page_title="AlignED -- Curriculum vs. Job Market Gap Analysis", page_icon="🎓", layout="wide")
 
@@ -145,6 +151,60 @@ st.markdown(
         font-size: 0.72rem;
         color: #64748B !important;
     }
+
+    /* Shared page header (utils/layout.py's page_header()) -- every page
+       except Overview uses this instead of a bare st.title(), so the 9
+       pages share one visual rhythm instead of each inventing its own. */
+    .page-header {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.9rem 1.2rem;
+        background: #F1F5F9;
+        border-left: 4px solid #2563EB;
+        border-radius: 8px;
+        margin-bottom: 0.6rem;
+    }
+    .page-header-icon { font-size: 1.6rem; line-height: 1; }
+    .page-header-title { font-size: 1.5rem; font-weight: 700; color: #0F172A; }
+    .page-header-desc {
+        color: #475569;
+        font-size: 0.95rem;
+        margin: 0.3rem 0 1.1rem 0.2rem;
+        line-height: 1.5;
+    }
+
+    /* Overview page: "what do you want to do?" section label + the 3
+       action cards underneath it. */
+    .section-eyebrow {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: #64748B;
+        margin: 0.4rem 0 0.9rem 0;
+    }
+    .action-card-icon { font-size: 1.9rem; margin-bottom: 0.3rem; }
+    .action-card-title { font-size: 1.15rem; font-weight: 700; color: #0F172A; margin-bottom: 0.35rem; }
+    .action-card-desc { color: #475569; font-size: 0.88rem; line-height: 1.5; min-height: 4.5rem; }
+    div[data-testid="stVerticalBlockBorderWrapper"] {
+        border-radius: 12px !important;
+        transition: box-shadow 0.15s ease, transform 0.15s ease;
+    }
+    div[data-testid="stVerticalBlockBorderWrapper"]:hover {
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+        transform: translateY(-2px);
+    }
+
+    /* General polish: consistent rounded corners on alerts/tables and a
+       slightly more deliberate primary-button style than Streamlit's
+       flat default. */
+    div[data-testid="stAlert"] { border-radius: 8px; }
+    div[data-testid="stDataFrame"] { border-radius: 8px; overflow: hidden; }
+    button[kind="primary"] {
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+    }
+    hr { margin: 1.4rem 0 !important; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -155,33 +215,43 @@ st.markdown(
 # pages. Overview and Methodology stand alone (landing page, and the
 # "how honest is this" page respectively); everything else groups under
 # what the visitor is trying to DO: analyze a program, explore the
-# underlying data, or get something personalized to them.
+# underlying data, or get something personalized to them. Group/page
+# label strings come from utils.nav so the Overview page's action cards
+# can jump straight to a specific group+page via the same session-state
+# keys these radios are bound to (key=NAV_GROUP_KEY / key=NAV_PAGE_KEY).
 NAV_GROUPS = {
-    "🏠  Overview": {"Overview": render_overview},
-    "🎯  Analyze": {
-        "📋  Program Explorer": render_program_explorer,
-        "⚖️  Compare Programs": render_compare,
+    GROUP_OVERVIEW: {"Overview": render_overview},
+    GROUP_ANALYZE: {
+        PAGE_PROGRAM_EXPLORER: render_program_explorer,
+        PAGE_COMPARE: render_compare,
     },
-    "🔍  Explore": {
-        "🗺️  Skill Coverage Heatmap": render_heatmap,
-        "📈  Skill Demand Trends": render_trends,
-        "🧩  Role Groups": render_clusters,
-        "🔎  Course Finder": render_course_finder,
+    GROUP_EXPLORE: {
+        PAGE_HEATMAP: render_heatmap,
+        PAGE_TRENDS: render_trends,
+        PAGE_ROLE_GROUPS: render_clusters,
+        PAGE_COURSE_FINDER: render_course_finder,
     },
-    "👤  Personalize": {
-        "🙋  Build Your Profile": render_profile_builder,
+    GROUP_PERSONALIZE: {
+        PAGE_BUILD_PROFILE: render_profile_builder,
     },
-    "📖  Methodology": {"🔍  Methodology & Limitations": render_methodology},
+    GROUP_METHODOLOGY: {PAGE_METHODOLOGY: render_methodology},
 }
 
 st.sidebar.markdown('<p class="sidebar-logo">🎓 AlignED</p>', unsafe_allow_html=True)
 st.sidebar.markdown('<p class="sidebar-tagline">Curriculum vs. job market gap analysis</p>', unsafe_allow_html=True)
 
-group_selection = st.sidebar.radio("Section", list(NAV_GROUPS.keys()), label_visibility="collapsed")
+group_selection = st.sidebar.radio("Section", list(NAV_GROUPS.keys()), key=NAV_GROUP_KEY, label_visibility="collapsed")
 pages_in_group = NAV_GROUPS[group_selection]
 
 if len(pages_in_group) > 1:
-    page_selection = st.sidebar.radio("Page", list(pages_in_group.keys()), label_visibility="collapsed")
+    # Guard: the page previously selected might belong to a DIFFERENT
+    # group (e.g. a homepage card jump, or the visitor just switched
+    # groups manually) -- Streamlit's radio widget errors if its bound
+    # session-state value isn't among its current options, so fall back
+    # to this group's first page instead of crashing.
+    if st.session_state.get(NAV_PAGE_KEY) not in pages_in_group:
+        st.session_state[NAV_PAGE_KEY] = next(iter(pages_in_group))
+    page_selection = st.sidebar.radio("Page", list(pages_in_group.keys()), key=NAV_PAGE_KEY, label_visibility="collapsed")
 else:
     page_selection = next(iter(pages_in_group))
 

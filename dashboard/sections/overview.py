@@ -1,9 +1,16 @@
-"""sections/overview.py -- the Overview page: headline numbers + a
-one-paragraph summary of the whole pipeline."""
+"""sections/overview.py -- the Overview page: hero banner, headline
+numbers, and three clickable "what do you want to do?" action cards that
+jump straight to the relevant section -- the actual front door of the
+product, not just a summary to scroll past."""
 
 import streamlit as st
 
 from services.database import run_query
+from utils.nav import (
+    GROUP_ANALYZE, GROUP_EXPLORE, GROUP_PERSONALIZE,
+    PAGE_HEATMAP, PAGE_PROGRAM_EXPLORER, PAGE_BUILD_PROFILE,
+    jump_to,
+)
 
 
 def render_overview():
@@ -35,7 +42,60 @@ def render_overview():
     col3.metric("Job Postings Analyzed", f"{postings:,}")
     col4.metric("Statistically Significant Gaps", gaps)
     col5.metric("Final Recommendations", recs)
-    st.caption("Gap and recommendation counts above are the overall-market scope. Program Explorer now also lets you narrow the analysis to a specific target role.")
+    st.caption("Gap and recommendation counts above are the overall-market scope. Program Explorer lets you narrow the analysis to a specific target role.")
+
+    st.markdown("---")
+    st.markdown('<p class="section-eyebrow">WHAT DO YOU WANT TO DO?</p>', unsafe_allow_html=True)
+
+    card_col1, card_col2, card_col3 = st.columns(3)
+
+    with card_col1:
+        with st.container(border=True):
+            st.markdown(
+                """
+                <div class="action-card-icon">🎯</div>
+                <div class="action-card-title">Analyze a Program</div>
+                <div class="action-card-desc">Pick a graduate program and a target role, and see exactly
+                which in-demand skills it's missing -- with statistical proof.</div>
+                """,
+                unsafe_allow_html=True,
+            )
+            st.button(
+                "Start analysis →", key="card_analyze", use_container_width=True,
+                on_click=jump_to, args=(GROUP_ANALYZE, PAGE_PROGRAM_EXPLORER),
+            )
+
+    with card_col2:
+        with st.container(border=True):
+            st.markdown(
+                """
+                <div class="action-card-icon">👤</div>
+                <div class="action-card-title">Analyze My Profile</div>
+                <div class="action-card-desc">Paste your resume or skills, and see which real job roles
+                fit you best, and what to learn next -- plus a downloadable report.</div>
+                """,
+                unsafe_allow_html=True,
+            )
+            st.button(
+                "Build my profile →", key="card_personalize", use_container_width=True,
+                on_click=jump_to, args=(GROUP_PERSONALIZE, PAGE_BUILD_PROFILE),
+            )
+
+    with card_col3:
+        with st.container(border=True):
+            st.markdown(
+                """
+                <div class="action-card-icon">📊</div>
+                <div class="action-card-title">Explore the Market</div>
+                <div class="action-card-desc">Browse skill coverage, demand trends, and how real job
+                postings group into role families -- the raw data behind every claim.</div>
+                """,
+                unsafe_allow_html=True,
+            )
+            st.button(
+                "Explore data →", key="card_explore", use_container_width=True,
+                on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP),
+            )
 
     st.markdown("---")
     st.markdown(
@@ -50,4 +110,4 @@ def render_overview():
         see the Methodology page for the full, honest reasoning.
         """
     )
-    st.info("Use the sidebar to explore a specific program's recommendations, skill demand trends, or the honest methodology behind this project.")
+    st.info("Use the cards above, or the sidebar, to explore a specific program's recommendations, skill demand trends, or the honest methodology behind this project.")
