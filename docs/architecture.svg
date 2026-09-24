@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="760" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="500" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#0F172A">AlignED -- Architecture</text>
+  <text x="500" y="56" text-anchor="middle" font-size="12.5" fill="#64748B">Data sources -&gt; SQLite -&gt; skill extraction -&gt; statistical gap analysis -&gt; recommendations -&gt; dashboard</text>
+
+  <!-- Row 1: Data sources -->
+  <g>
+    <rect x="60"  y="90" width="220" height="64" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="170" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A8A">University course catalogs</text>
+    <text x="170" y="134" text-anchor="middle" font-size="11" fill="#475569">13 programs, 1,378 courses</text>
+    <text x="170" y="149" text-anchor="middle" font-size="10.5" fill="#94A3B8">scraped (BeautifulSoup)</text>
+  </g>
+  <g>
+    <rect x="390" y="90" width="220" height="64" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="500" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A8A">Job postings</text>
+    <text x="500" y="134" text-anchor="middle" font-size="11" fill="#475569">1,660 sampled + ~124K historical</text>
+    <text x="500" y="149" text-anchor="middle" font-size="10.5" fill="#94A3B8">Kaggle backfill + live daily Adzuna pull</text>
+  </g>
+  <g>
+    <rect x="720" y="90" width="220" height="64" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="830" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A8A">O*NET skills taxonomy</text>
+    <text x="830" y="134" text-anchor="middle" font-size="11" fill="#475569">1,597 official named skills</text>
+    <text x="830" y="149" text-anchor="middle" font-size="10.5" fill="#94A3B8">U.S. Dept. of Labor</text>
+  </g>
+
+  <path d="M170,154 L170,190 L500,190" stroke="#94A3B8" fill="none" stroke-width="1.5"/>
+  <path d="M500,154 L500,190" stroke="#94A3B8" fill="none" stroke-width="1.5"/>
+  <path d="M830,154 L830,190 L500,190" stroke="#94A3B8" fill="none" stroke-width="1.5"/>
+  <path d="M500,190 L500,208" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 2: SQLite -->
+  <rect x="340" y="212" width="320" height="52" rx="10" fill="#1E3A8A"/>
+  <text x="500" y="234" text-anchor="middle" font-size="13.5" font-weight="700" fill="#FFFFFF">SQLite database</text>
+  <text x="500" y="252" text-anchor="middle" font-size="10.5" fill="#DBEAFE">programs, courses, postings, skills, clusters, gap_scores, recommendations</text>
+
+  <path d="M500,264 L500,284" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 3: Extraction -->
+  <g>
+    <rect x="230" y="288" width="230" height="60" rx="10" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+    <text x="345" y="312" text-anchor="middle" font-size="12.5" font-weight="700" fill="#166534">Baseline keyword extraction</text>
+    <text x="345" y="330" text-anchor="middle" font-size="10.5" fill="#475569">combined-regex, full corpus (fast)</text>
+  </g>
+  <g>
+    <rect x="510" y="288" width="230" height="60" rx="10" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+    <text x="625" y="312" text-anchor="middle" font-size="12.5" font-weight="700" fill="#166534">LLM extraction (Ollama) + embeddings</text>
+    <text x="625" y="330" text-anchor="middle" font-size="10.5" fill="#475569">validated on 104-item gold set (F1 0.400 vs 0.364)</text>
+  </g>
+
+  <path d="M500,264 L345,284" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M500,264 L625,284" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M345,348 L345,368 L500,368" stroke="#94A3B8" fill="none" stroke-width="1.5"/>
+  <path d="M625,348 L625,368 L500,368" stroke="#94A3B8" fill="none" stroke-width="1.5"/>
+  <path d="M500,368 L500,386" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 4: Clustering -->
+  <rect x="370" y="390" width="260" height="54" rx="10" fill="#FDF4FF" stroke="#A855F7" stroke-width="1.5"/>
+  <text x="500" y="413" text-anchor="middle" font-size="12.5" font-weight="700" fill="#6B21A8">Role grouping (k-means on embeddings)</text>
+  <text x="500" y="431" text-anchor="middle" font-size="10.5" fill="#475569">9 usable role groups + 2 excluded (weak/duplicate)</text>
+
+  <path d="M500,444 L500,464" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 5: Gap scoring -->
+  <rect x="300" y="468" width="400" height="66" rx="10" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="500" y="492" text-anchor="middle" font-size="13" font-weight="700" fill="#991B1B">Gap scoring: two-proportion z-test</text>
+  <text x="500" y="510" text-anchor="middle" font-size="10.5" fill="#475569">per (program, skill, scope) -- overall market AND per role group</text>
+  <text x="500" y="525" text-anchor="middle" font-size="10.5" fill="#475569">Benjamini-Hochberg FDR correction within each family of tests</text>
+
+  <path d="M500,534 L500,554" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 6: Trend + Recommendations -->
+  <g>
+    <rect x="230" y="558" width="230" height="56" rx="10" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+    <text x="345" y="581" text-anchor="middle" font-size="12.5" font-weight="700" fill="#92400E">Demand trend detection</text>
+    <text x="345" y="599" text-anchor="middle" font-size="10.5" fill="#475569">linear regression, 6 well-populated weeks</text>
+  </g>
+  <g>
+    <rect x="510" y="558" width="230" height="56" rx="10" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+    <text x="625" y="581" text-anchor="middle" font-size="12.5" font-weight="700" fill="#92400E">Ranked recommendations</text>
+    <text x="625" y="599" text-anchor="middle" font-size="10.5" fill="#475569">gap x trend modifier, tiered per program+scope</text>
+  </g>
+  <path d="M345,614 L345,632 L500,632" stroke="#94A3B8" fill="none" stroke-width="1.5"/>
+  <path d="M625,614 L625,632 L500,632" stroke="#94A3B8" fill="none" stroke-width="1.5"/>
+  <path d="M500,632 L500,650" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 7: Dashboard -->
+  <rect x="300" y="654" width="400" height="70" rx="10" fill="#1E3A8A"/>
+  <text x="500" y="680" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">Streamlit dashboard</text>
+  <text x="500" y="699" text-anchor="middle" font-size="10.5" fill="#DBEAFE">Analyze / Explore / Personalize -- Excel + PDF export, evidence drill-down</text>
+  <text x="500" y="714" text-anchor="middle" font-size="10" fill="#93C5FD">deployed on Streamlit Community Cloud</text>
+
+  <text x="500" y="748" text-anchor="middle" font-size="10.5" fill="#94A3B8">Every stage above is covered by the pytest suite in tests/, run automatically on every push via GitHub Actions.</text>
+</svg>

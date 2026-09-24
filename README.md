@@ -10,12 +10,6 @@
 
 AlignED is an end-to-end data pipeline and analytics dashboard that compares real graduate program curricula against real job-market demand, using the official US Department of Labor (O\*NET) skills taxonomy as a shared, unbiased yardstick — and proves every claim with actual statistics, not guesses.
 
-## The problem
-
-Prospective grad students, career switchers, and even program directors rarely have a data-backed answer to "does this curriculum still match what employers actually want?" AlignED builds that answer from scratch: real scraped course catalogs, real job postings, a validated AI-vs-classical skill extraction comparison, and statistically significant gap scoring — all the way to a browsable dashboard and a personal skill-gap tool.
-
-**A note on what "gap" means:** "Program coverage" means a skill's name appears in a course description — not that it's taught in depth or assessed. "Market demand" means a skill appears in this project's sampled job postings — not that every employer requires it. Every gap score is a text-coverage signal, not a certified measurement of learning outcomes or labor-market truth. Full reasoning is on the dashboard's Methodology page.
-
 ## Screenshots
 
 *(Add 2-3 screenshots here — see the "Adding screenshots" note at the bottom of this README for exactly how.)*
@@ -35,25 +29,15 @@ Prospective grad students, career switchers, and even program directors rarely h
 
 The consistent, cross-program finding: named, hands-on tools — **Python, Docker, Kubernetes, Linux, Git, Tableau** — show up as statistically significant gaps in almost every program studied, often by 10-40 percentage points.
 
+## The problem
+
+Prospective grad students, career switchers, and even program directors rarely have a data-backed answer to "does this curriculum still match what employers actually want?" AlignED builds that answer from scratch: real scraped course catalogs, real job postings, a validated AI-vs-classical skill extraction comparison, and statistically significant gap scoring — all the way to a browsable dashboard and a personal skill-gap tool.
+
+**A note on what "gap" means:** "Program coverage" means a skill's name appears in a course description — not that it's taught in depth or assessed. "Market demand" means a skill appears in this project's sampled job postings — not that every employer requires it. Every gap score is a text-coverage signal, not a certified measurement of learning outcomes or labor-market truth. Full reasoning is on the dashboard's Methodology page.
+
 ## How it works
 
-```
-Scrape course catalogs (13 programs)  ─┐
-                                        ├─► SQLite database ─► Skill extraction (AI + baseline,
-Pull job postings (live + historical) ─┘                       validated against each other)
-                                                                        │
-                                                                        ▼
-                                          Gap scoring (two-proportion z-test)
-                                                        │
-                                                        ▼
-                                      Demand trend detection (linear regression)
-                                                        │
-                                                        ▼
-                                    Ranked recommendations (gap + trend combined)
-                                                        │
-                                                        ▼
-                                       Streamlit dashboard (9 interactive pages)
-```
+![AlignED architecture diagram](docs/architecture.svg)
 
 Every stage grounds its output in the real, official O\*NET skills taxonomy — nothing is an invented list.
 
@@ -73,6 +57,17 @@ The sidebar is grouped into 3 workflows instead of one flat list, so it's clear 
 - **Personalize**
   - **Build Your Profile** — paste your own skills/resume text and get a personalized analysis: which real job roles best match your background (shown as "X of N core skills covered," not an unvalidated match %), your strengths and gaps for that role, real example job openings, and a downloadable personalized PDF career report
 - **Methodology & Honest Limitations** — every real trade-off and limitation stated openly, the kind of thing an interviewer would ask about directly
+
+## Engineering quality
+
+This isn't just a notebook with a chart at the end — it's built and checked the way a small production data product would be:
+
+- **Automated tests** — a real pytest suite (`tests/`) covers the statistical core (two-proportion z-tests, FDR correction, trend classification) and the recommendation text generator, not just "does it run without crashing." Runs on every push via GitHub Actions (see badge at the top).
+- **CI on every push** — the `Run Tests` workflow re-runs the full suite automatically; the `Daily Job Pull` workflow re-runs the Adzuna ingestion daily and fails loudly if the API breaks.
+- **Structured, migrated schema** — `database/schema.sql` is the single source of truth for every table, with foreign keys enforced (not just implied) and additive migrations (`ALTER TABLE ... ADD COLUMN`) used instead of silently reshaping tables.
+- **Reproducible pipeline** — the entire database can be rebuilt from scratch by rerunning the scripts in `scripts/` in order (scrape → extract → score → recommend); nothing is hand-edited or one-off.
+- **Modular dashboard code** — `dashboard/app.py` delegates to per-page modules under `sections/`, with shared logic (queries, layout, nav state) factored into `services/` and `utils/` rather than duplicated across pages.
+- **Honest validation, not just a working demo** — the AI skill-extraction method was benchmarked against a classical keyword baseline on a 104-item hand-labeled gold set before being chosen for full-scale use (see Key results above and the Methodology page).
 
 ## Tech stack
 
