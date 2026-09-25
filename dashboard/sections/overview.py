@@ -21,6 +21,10 @@ from sections.program_explorer import OVERALL_MARKET_LABEL
 
 def render_overview():
     # ---- Hero ----
+    # The wordmark was missing entirely in the first redesign pass --
+    # the sidebar has "AlignED", but a visitor landing on the page itself
+    # never saw the product's name in the main content area. Fixed here.
+    st.markdown('<p class="hero-wordmark">AlignED</p>', unsafe_allow_html=True)
     st.markdown('<p class="hero-kicker">Curriculum &times; Labor-Market Intelligence</p>', unsafe_allow_html=True)
     st.markdown(
         '<p class="hero-title">Where do graduate computing curricula diverge from the skills appearing '

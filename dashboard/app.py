@@ -131,6 +131,13 @@ st.markdown(
     h1, h2, h3 { letter-spacing: -0.01em; }
 
     /* ---- Hero (Overview page) ---- */
+    .hero-wordmark {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--text);
+        letter-spacing: -0.01em;
+        margin-bottom: 1.1rem;
+    }
     .hero-kicker {
         font-size: 0.78rem;
         font-weight: 700;
@@ -273,7 +280,13 @@ st.markdown(
         color: #FFFFFF !important;
         font-weight: 700 !important;
     }
-    .sidebar-footer { position: fixed; bottom: 1rem; font-size: 0.7rem; line-height: 1.6; color: #6B7690 !important; }
+    /* NOT position:fixed -- that took the footer out of the sidebar's
+       own layout flow entirely, so its text wrapped at the *viewport's*
+       width instead of the sidebar's ~250px width and spilled out over
+       the main content area. Normal flow (just placed after the nav
+       radios, with a top margin) keeps it correctly clipped to the
+       sidebar's own box no matter how long the text is. */
+    .sidebar-footer { margin-top: 2.5rem; font-size: 0.7rem; line-height: 1.6; color: #6B7690 !important; max-width: 100%; word-wrap: break-word; }
     .sidebar-footer b { color: #9AA5C0 !important; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 
     /* ---- Shared page header (utils/layout.py's page_header()): a
