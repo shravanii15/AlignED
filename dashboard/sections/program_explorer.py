@@ -25,11 +25,12 @@ import streamlit as st
 from services.database import run_query
 from services.reports_excel import build_excel_report
 from services.reports_pdf import build_pdf_report
+from utils.charts import TIER_COLOR_MAP, apply_chart_theme
 from utils.formatting import safe_filename
 from utils.layout import page_header
 from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY
 
-OVERALL_MARKET_LABEL = "🌐 Overall market (all sampled postings)"
+OVERALL_MARKET_LABEL = "Overall market (all sampled postings)"
 RISING_BOOST = 1.5     # kept in sync with scripts/gap_analysis/generate_recommendations.py
 FALLING_PENALTY = 0.7  # kept in sync with scripts/gap_analysis/generate_recommendations.py
 
@@ -103,10 +104,11 @@ def render_program_explorer():
     # than letting the statistics speak as if the input were uniform.
     if course_count < 30:
         st.info(
-            f"⚠️ **Small course corpus** -- this analysis uses {course_count} course descriptions, a "
+            f"**Small course corpus** -- this analysis uses {course_count} course descriptions, a "
             "representative sample rather than a complete degree catalog. Statistical results here should "
             "be read with more caution than for programs represented by a larger course corpus (see "
-            "Methodology for how course data was collected for each program)."
+            "Methodology for how course data was collected for each program).",
+            icon="⚠️",
         )
 
     rec_query = """
@@ -202,7 +204,6 @@ def render_program_explorer():
         )
 
     st.markdown("---")
-    tier_colors = {"high": "🔴", "medium": "🟡", "low": "🟢"}
     # Reworded from "High/Medium/Low priority" (which reads as an
     # externally validated importance ranking) to "largest observed
     # gaps" -- the tiers are just a rank-based cut (top 3 / next 4 /
@@ -221,9 +222,9 @@ def render_program_explorer():
         tier_df = recs_df[recs_df["priority_tier"] == tier]
         if tier_df.empty:
             continue
-        st.subheader(f"{tier_colors[tier]} {tier_section_titles[tier]}")
+        st.subheader(tier_section_titles[tier])
         for _, row in tier_df.iterrows():
-            trend_note = {"rising": "📈 rising demand", "falling": "📉 falling demand"}.get(row["trend_label"], "")
+            trend_note = {"rising": "↑ rising demand", "falling": "↓ falling demand"}.get(row["trend_label"], "")
             cov_pct = row["program_coverage_rate"] * 100
             dem_pct = row["market_demand_rate"] * 100
             max_pct = max(cov_pct, dem_pct, 1)
@@ -285,12 +286,13 @@ def render_program_explorer():
                     )
 
     st.markdown("---")
-    st.subheader("Gap size, visualized")
+    st.markdown('<p class="section-eyebrow">Skills With the Largest Observed Curriculum-Market Gaps</p>', unsafe_allow_html=True)
     chart_df = recs_df.sort_values("gap_value", ascending=True)
     fig = px.bar(
         chart_df, x="gap_value", y="canonical_name", orientation="h",
-        color="priority_tier", color_discrete_map={"high": "#e15759", "medium": "#f1c232", "low": "#59a14f"},
-        labels={"gap_value": f"Gap (demand within {scope_display_name} - program coverage)", "canonical_name": "Skill"},
+        color="priority_tier", color_discrete_map=TIER_COLOR_MAP,
+        labels={"gap_value": f"Gap (demand within {scope_display_name} - program coverage)", "canonical_name": ""},
     )
-    fig.update_layout(xaxis_tickformat=".0%", height=max(300, len(chart_df) * 35))
+    fig.update_layout(xaxis_tickformat=".0%", showlegend=False)
+    apply_chart_theme(fig, height=max(280, len(chart_df) * 32))
     st.plotly_chart(fig, use_container_width=True)

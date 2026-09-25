@@ -5,18 +5,23 @@ visual rhythm instead of each page hand-rolling its own header style.
 Before this, some pages used st.title() + a markdown paragraph, others
 jumped straight into content with no framing at all -- inconsistent
 enough that the 9 pages didn't feel like one product. page_header()
-standardizes it: an icon+title banner in the same style as the Overview
-page's hero banner (just smaller), with an optional one-line description
-directly underneath, consistently spaced.
+standardizes it.
+
+Redesign pass: this used to render a filled colored box (icon in a blue
+strip) -- replaced with a thin bottom rule and a large document-style
+title, closer to a research paper section heading than app chrome. The
+icon is kept (small, muted) for a little visual variety across pages
+without dominating the layout.
 """
 
 import streamlit as st
 
 
 def page_header(icon, title, description=None):
-    """Render a consistent page header: icon + title in a styled strip,
-    optional description text directly below. Use at the top of every
-    page's render_*() function in place of a bare st.title()."""
+    """Render a consistent page header: a large title with a small muted
+    icon, a thin rule underneath, and an optional one-line description.
+    Use at the top of every page's render_*() function in place of a
+    bare st.title()."""
     st.markdown(
         f"""
         <div class="page-header">

@@ -13,15 +13,16 @@ just be a broken nav link with no error), instead of hand-typing the
 same literal strings in two different files.
 """
 
-# Sidebar section (group) labels. Sprint 6: reduced to one emoji per group
-# (not one per page too) -- a professional data-product sidebar, not a
-# student-project wall of icons. "Explore" was also renamed to "Market
-# Intelligence" since it names WHAT you'll find there, not just an action.
-GROUP_OVERVIEW = "🏠  Overview"
-GROUP_ANALYZE = "🎯  Analyze"
-GROUP_EXPLORE = "📊  Market Intelligence"
-GROUP_PERSONALIZE = "👤  Personalize"
-GROUP_METHODOLOGY = "📖  Methodology"
+# Sidebar section (group) labels. Redesign pass: no emojis at all -- a
+# research-tool sidebar uses small-caps text labels (styled in app.py's
+# CSS), not icons, to read as a serious analytics product rather than a
+# student Streamlit app. "Explore" was renamed to "Market Intelligence"
+# since it names WHAT you'll find there, not just an action.
+GROUP_OVERVIEW = "Overview"
+GROUP_ANALYZE = "Analyze"
+GROUP_EXPLORE = "Market Intelligence"
+GROUP_PERSONALIZE = "Personalize"
+GROUP_METHODOLOGY = "Methodology"
 
 # Page labels within a group (only listed here where the Overview page's
 # action cards need to jump directly to them). No emojis at this level --

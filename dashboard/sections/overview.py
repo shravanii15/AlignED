@@ -1,36 +1,92 @@
-"""sections/overview.py -- the Overview page. Redesigned (Sprint 6) around
-a "start an analysis" form as the primary action, not headline metrics --
-a visitor should be able to use the product from the first screen, rather
-than scrolling past a wall of numbers to find it. Metrics, the "how it
-works" strip, and two secondary entry points (profile / market) come after."""
+"""sections/overview.py -- the Overview page.
+
+Full redesign pass (not a patch): a light, editorial hero instead of a
+filled blue banner; a live "THE SIGNAL" example -- the single largest
+real gap in the database right now, pulled from the actual data rather
+than hardcoded, so the homepage demonstrates the product instead of just
+describing it; a command-center style analysis form; a lightweight text
+list (not heavy cards) for the two secondary entry points; research-style
+big-number statistics; and a compact footer with author credit."""
 
 import streamlit as st
 
 from services.database import run_query
 from utils.nav import (
-    GROUP_ANALYZE, GROUP_EXPLORE, GROUP_PERSONALIZE,
-    PAGE_HEATMAP, PAGE_PROGRAM_EXPLORER, PAGE_BUILD_PROFILE,
+    GROUP_ANALYZE, GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_PERSONALIZE,
+    PAGE_COMPARE, PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_BUILD_PROFILE,
     jump_to, jump_to_program_explorer,
 )
 from sections.program_explorer import OVERALL_MARKET_LABEL
 
 
 def render_overview():
+    # ---- Hero ----
+    st.markdown('<p class="hero-kicker">Curriculum &times; Labor-Market Intelligence</p>', unsafe_allow_html=True)
     st.markdown(
-        """
-        <div class="aligned-banner aligned-banner-compact">
-            <h1>🎓 AlignED</h1>
-            <p class="aligned-banner-kicker">Curriculum &times; Labor-Market Intelligence</p>
-            <p>Do graduate programs teach the skills employers are asking for? AlignED compares real
-            course descriptions with observed job-market demand using statistical testing, skill
-            normalization, and labor-market evidence.</p>
-        </div>
-        """,
+        '<p class="hero-title">Where do graduate computing curricula diverge from the skills appearing '
+        'in the job market?</p>',
         unsafe_allow_html=True,
     )
+    st.markdown(
+        '<p class="hero-subtitle">AlignED compares real course descriptions with demand observed in a '
+        'sampled set of real job postings, using a common skill taxonomy and statistical testing -- not guesses.</p>',
+        unsafe_allow_html=True,
+    )
+    st.markdown("<br>", unsafe_allow_html=True)
 
-    # ---- Start an analysis: the primary action, above the fold ----
-    st.markdown('<p class="section-eyebrow">START AN ANALYSIS</p>', unsafe_allow_html=True)
+    # ---- THE SIGNAL: a live example, not a mockup. Pulls the single
+    # largest real gap currently in the database (overall-market scope)
+    # so the homepage demonstrates the analysis instead of describing it.
+    signal_row = run_query(
+        """
+        SELECT p.university, p.program_name, s.canonical_name AS skill_name,
+               g.program_coverage_rate, g.market_demand_rate, g.gap_value, g.q_value
+        FROM recommendations r
+        JOIN gap_scores g ON g.program_id = r.program_id AND g.skill_id = r.skill_id AND g.cluster_id IS r.cluster_id
+        JOIN programs p ON p.program_id = r.program_id
+        JOIN skills s ON s.skill_id = r.skill_id
+        WHERE r.cluster_id IS NULL
+        ORDER BY g.gap_value DESC
+        LIMIT 1
+        """
+    )
+    if not signal_row.empty:
+        sig = signal_row.iloc[0]
+        cov_pct = sig["program_coverage_rate"] * 100
+        dem_pct = sig["market_demand_rate"] * 100
+        max_pct = max(cov_pct, dem_pct, 1)
+        st.markdown('<p class="section-eyebrow">The Signal -- a Real Example, Live From the Database</p>', unsafe_allow_html=True)
+        with st.container(border=True):
+            st.markdown(f'<p class="signal-eyebrow">{sig["university"]} -- {sig["program_name"]}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class="signal-skill-name">{sig["skill_name"]}</p>', unsafe_allow_html=True)
+            st.markdown(
+                f"""
+                <div class="signal-row">
+                    <div class="signal-label">Curriculum</div>
+                    <div class="signal-track"><div class="signal-fill signal-fill-coverage" style="width:{cov_pct/max_pct*100:.1f}%"></div></div>
+                    <div class="signal-value">{cov_pct:.1f}%</div>
+                </div>
+                <div class="signal-row">
+                    <div class="signal-label">Job market</div>
+                    <div class="signal-track"><div class="signal-fill signal-fill-market" style="width:{dem_pct/max_pct*100:.1f}%"></div></div>
+                    <div class="signal-value">{dem_pct:.1f}%</div>
+                </div>
+                <div class="signal-gap-line">
+                    <span class="signal-gap-value">+{sig['gap_value']*100:.1f} percentage-point gap</span>
+                    &nbsp;&middot;&nbsp; q &lt; {max(sig['q_value'], 0.0001):.4f}
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            st.button(
+                "Explore this analysis →", key="signal_explore_btn",
+                on_click=jump_to_program_explorer, args=(f"{sig['university']} -- {sig['program_name']}", OVERALL_MARKET_LABEL),
+            )
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ---- Command center: the primary action ----
+    st.markdown('<p class="section-eyebrow">Explore a Curriculum</p>', unsafe_allow_html=True)
     with st.container(border=True):
         programs_df = run_query("SELECT program_id, university, program_name FROM programs ORDER BY university")
         programs_df["label"] = programs_df["university"] + " -- " + programs_df["program_name"]
@@ -47,96 +103,111 @@ def render_overview():
         with form_col1:
             program_choice = st.selectbox("Program", programs_df["label"], key="home_program_choice")
         with form_col2:
-            role_choice = st.selectbox("Target role", role_options, key="home_role_choice")
+            role_choice = st.selectbox("Compared with", role_options, key="home_role_choice")
         st.button(
-            "Analyze →", key="home_analyze_btn", type="primary", use_container_width=True,
+            "Analyze program →", key="home_analyze_btn", type="primary", use_container_width=True,
             on_click=jump_to_program_explorer, args=(program_choice, role_choice),
         )
-        st.caption("See ranked, statistically significant skill gaps for this program and role, with an evidence drill-down for every result.")
+        st.caption("40+ skills compared per program &middot; statistical gap testing &middot; evidence for every result", unsafe_allow_html=True)
 
-    # ---- Secondary entry points ----
-    card_col1, card_col2 = st.columns(2)
-    with card_col1:
-        with st.container(border=True):
-            st.markdown(
-                """
-                <div class="action-card-icon">👤</div>
-                <div class="action-card-title">Analyze My Profile</div>
-                <div class="action-card-desc">Paste your resume or skills, and see which real job roles
-                fit you best, and what to learn next -- plus a downloadable report.</div>
-                """,
-                unsafe_allow_html=True,
-            )
-            st.button(
-                "Build my profile →", key="card_personalize", use_container_width=True,
-                on_click=jump_to, args=(GROUP_PERSONALIZE, PAGE_BUILD_PROFILE),
-            )
-    with card_col2:
-        with st.container(border=True):
-            st.markdown(
-                """
-                <div class="action-card-icon">📊</div>
-                <div class="action-card-title">Explore the Market</div>
-                <div class="action-card-desc">Browse skill coverage, demand trends, and how real job
-                postings group into role families -- the raw data behind every claim.</div>
-                """,
-                unsafe_allow_html=True,
-            )
-            st.button(
-                "Explore data →", key="card_explore", use_container_width=True,
-                on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP),
-            )
+    st.markdown("<br>", unsafe_allow_html=True)
 
-    st.markdown("---")
+    # ---- Lightweight secondary entry points (text list, not cards) ----
+    st.markdown('<p class="section-eyebrow">What Else Do You Want to Explore?</p>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="explore-item">
+            <div class="explore-item-title">Compare programs</div>
+            <div class="explore-item-desc">See 2-3 programs' top overall-market gaps side by side, against the same reference sample.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.button("Compare programs →", key="explore_compare_btn", on_click=jump_to, args=(GROUP_ANALYZE, PAGE_COMPARE))
 
-    # ---- Dataset stats (condensed, secondary) + emphasized results ----
+    st.markdown(
+        """
+        <div class="explore-item">
+            <div class="explore-item-title">Analyze my profile</div>
+            <div class="explore-item-desc">Paste your resume or skills and see which real job roles fit you best, and what to learn next.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.button("Build my profile →", key="explore_profile_btn", on_click=jump_to, args=(GROUP_PERSONALIZE, PAGE_BUILD_PROFILE))
+
+    st.markdown(
+        """
+        <div class="explore-item">
+            <div class="explore-item-title">Explore the market</div>
+            <div class="explore-item-desc">Browse skill coverage, demand momentum, and how real job postings group into role families.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.button("Explore data →", key="explore_market_btn", on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP))
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ---- THE DATASET: research-style big numbers, not sidebar-sized text ----
     programs = run_query("SELECT COUNT(*) AS n FROM programs").iloc[0]["n"]
     courses = run_query("SELECT COUNT(*) AS n FROM courses").iloc[0]["n"]
     postings = run_query("SELECT COUNT(*) AS n FROM postings WHERE source = 'kaggle_sample'").iloc[0]["n"]
-    # Overall-market scope only (cluster_id IS NULL) -- gap_scores and
-    # recommendations also contain per-role-cluster rows now (see Program
-    # Explorer's target-role selector), and counting those in here too
-    # would inflate these headline numbers with rows from 9 different
-    # scopes at once, which isn't what "significant gaps found" should mean.
     gaps = run_query("SELECT COUNT(*) AS n FROM gap_scores WHERE cluster_id IS NULL").iloc[0]["n"]
-    recs = run_query("SELECT COUNT(*) AS n FROM recommendations WHERE cluster_id IS NULL").iloc[0]["n"]
 
-    st.markdown('<p class="section-eyebrow">ANALYSIS SNAPSHOT</p>', unsafe_allow_html=True)
-    st.caption(f"{programs} programs · {courses:,} courses · {postings:,} job postings (overall-market scope; Program Explorer lets you narrow to a specific target role)")
-
-    result_col1, result_col2 = st.columns(2)
-    result_col1.metric("Statistically significant gaps", gaps)
-    result_col2.metric("Evidence-ranked recommendations", recs)
-    st.markdown(
-        '📚 **Skill taxonomy: U.S. Department of Labor O\\*NET** -- every skill on this dashboard comes from '
-        "this real, external, publicly maintained standard. Nothing here is an invented list."
+    st.markdown('<p class="section-eyebrow">The Dataset</p>', unsafe_allow_html=True)
+    stat_col1, stat_col2, stat_col3, stat_col4 = st.columns(4)
+    stats = [
+        (stat_col1, f"{programs}", "Programs"),
+        (stat_col2, f"{courses:,}", "Course Descriptions"),
+        (stat_col3, f"{postings:,}", "Job Postings"),
+        (stat_col4, f"{gaps}", "Significant Gap Signals"),
+    ]
+    for col, number, label in stats:
+        with col:
+            st.markdown(f'<div class="stat-block"><div class="stat-number">{number}</div><div class="stat-label">{label}</div></div>', unsafe_allow_html=True)
+    st.caption(
+        "Analysis snapshot &middot; O\\*NET-derived skill taxonomy &middot; category-balanced job-posting sample "
+        "(see Methodology for what that means)",
+        unsafe_allow_html=True,
     )
 
     st.markdown("---")
 
     # ---- How it works, compact ----
-    st.markdown('<p class="section-eyebrow">HOW IT WORKS</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-eyebrow">How It Works</p>', unsafe_allow_html=True)
     st.markdown(
         """
         <div class="howitworks-strip">
-            <div class="howitworks-step">Curricula</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Skill extraction</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">O&#42;NET normalization</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Market comparison</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Statistical gap testing</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Recommendations</div>
+            <div class="howitworks-step">Course Data</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Skill Extraction</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">O&#42;NET Normalization</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Market Comparison</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Statistical Testing</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Gap Evidence</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
     st.caption(
-        "An AI extraction method was benchmarked against a classical keyword baseline on a 104-item "
-        "hand-labeled test set (AI won on F1, 0.400 vs. 0.364) -- but the faster keyword method was chosen "
-        "for full-scale analysis as a deliberate speed-vs-accuracy trade-off. Full reasoning on the Methodology page."
+        "An AI extraction method was benchmarked against a classical keyword baseline on a 104-item hand-labeled "
+        "test set (AI won on F1, 0.400 vs. 0.364) -- full reasoning on the Methodology page."
     )
 
     st.markdown("---")
-    st.markdown(
-        '<p style="color:#94A3B8; font-size:0.85rem;">Built by Shravani Kulkarni &middot; MS Data Science</p>',
-        unsafe_allow_html=True,
-    )
+
+    # ---- Footer ----
+    footer_col1, footer_col2 = st.columns([3, 1])
+    with footer_col1:
+        st.markdown(
+            '<p class="site-footer"><b>Built by Shravani Kulkarni</b> &middot; MS Data Science, Analytics &amp; '
+            'Engineering<br>Python &middot; SQLite &middot; Streamlit &middot; Plotly</p>',
+            unsafe_allow_html=True,
+        )
+    with footer_col2:
+        st.markdown(
+            '<p class="site-footer" style="text-align:right;">'
+            '<a href="https://github.com/shravanii15/AlignED" target="_blank">GitHub ↗</a></p>',
+            unsafe_allow_html=True,
+        )
+        st.button("Methodology →", key="footer_methodology_btn", on_click=jump_to, args=(GROUP_METHODOLOGY, PAGE_METHODOLOGY))

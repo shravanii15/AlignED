@@ -92,186 +92,219 @@ from utils.nav import (
     PAGE_METHODOLOGY, PAGE_PROGRAM_EXPLORER, PAGE_ROLE_GROUPS, PAGE_TRENDS,
 )
 
-st.set_page_config(page_title="AlignED -- Curriculum vs. Job Market Gap Analysis", page_icon="🎓", layout="wide")
+st.set_page_config(page_title="AlignED -- Curriculum vs. Job Market Gap Analysis", page_icon="📊", layout="wide")
 
-# A small block of custom CSS, layered on top of the theme in
-# .streamlit/config.toml, purely for visual polish -- none of this
-# touches how data is queried or computed, only how it's displayed.
+# Design system rewrite (redesign pass): a research-instrument aesthetic
+# -- generous whitespace, a restrained semantic color system, and text
+# used as the primary visual language instead of icons/boxes/shadows.
+# Color roles are deliberate, not decorative:
+#   brand blue  = interactive / primary action
+#   gap red     = a curriculum-market gap (bad news, the thing to fix)
+#   market blue = job-market demand (the target)
+#   coverage green = curriculum coverage / a strength
+#   grey        = neutral / structural
 st.markdown(
     """
     <style>
-    .aligned-banner {
-        background: linear-gradient(90deg, #1E3A8A 0%, #2563EB 60%, #3B82F6 100%);
-        padding: 2rem 2rem 1.5rem 2rem;
-        border-radius: 12px;
-        color: white;
-        margin-bottom: 1.5rem;
-    }
-    .aligned-banner h1 { color: white; margin-bottom: 0.25rem; }
-    .aligned-banner p { color: #DBEAFE; font-size: 1.05rem; margin-bottom: 0; }
-    /* Shortened hero used on the redesigned Overview page -- less vertical
-       space than the original banner so the "start an analysis" form sits
-       closer to the top of the screen. */
-    .aligned-banner-compact { padding: 1.3rem 2rem 1.1rem 2rem; }
-    .aligned-banner-compact h1 { font-size: 1.9rem; }
-    .aligned-banner-kicker {
-        color: #BFDBFE !important;
-        font-size: 0.82rem !important;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        margin: 0 0 0.5rem 0 !important;
-    }
-    .aligned-banner-compact p:last-child { font-size: 0.98rem !important; }
-
-    /* Overview page: compact "how it works" step strip. */
-    .howitworks-strip {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.3rem;
-        margin: 0.3rem 0 0.8rem 0;
-    }
-    .howitworks-step {
-        background: #F1F5F9;
-        border: 1px solid #E2E8F0;
-        border-radius: 8px;
-        padding: 0.4rem 0.75rem;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #1E3A8A;
-        white-space: nowrap;
-    }
-    .howitworks-arrow { color: #94A3B8; font-size: 1rem; padding: 0 0.1rem; }
-
-    /* Program Explorer: curriculum-vs-market gap bars inside each
-       recommendation card. */
-    .gap-compare { margin: 0.6rem 0 0.3rem 0; }
-    .gap-compare-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem; }
-    .gap-compare-label { width: 84px; font-size: 0.82rem; color: #475569; flex-shrink: 0; }
-    .gap-bar-track { flex: 1; background: #F1F5F9; border-radius: 6px; height: 14px; overflow: hidden; }
-    .gap-bar-fill { height: 100%; border-radius: 6px; }
-    .gap-bar-curriculum { background: #2563EB; }
-    .gap-bar-market { background: #F59E0B; }
-    .gap-bar-role { background: #7C3AED; }
-    .gap-bar-value { width: 52px; text-align: right; font-size: 0.82rem; font-weight: 600; color: #0F172A; flex-shrink: 0; }
-
-    /* Build Your Profile: skill chips (detected skills, strengths, gaps)
-       instead of plain emoji bullet lists -- reads like a report, not a
-       console dump. */
-    .skill-chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.4rem 0 0.9rem 0; }
-    .skill-chip {
-        display: inline-block;
-        padding: 0.3rem 0.7rem;
-        border-radius: 999px;
-        font-size: 0.82rem;
-        font-weight: 600;
-        white-space: nowrap;
-    }
-    .skill-chip-have { background: #DCFCE7; color: #166534; border: 1px solid #BBF7D0; }
-    .skill-chip-missing { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
-    div[data-testid="stMetric"] {
-        background-color: #F8FAFC;
-        border: 1px solid #E2E8F0;
-        border-radius: 10px;
-        padding: 0.75rem 1rem 0.5rem 1rem;
-    }
-    div[data-testid="stExpander"] { border-radius: 8px; }
-
-    /* Sidebar redesign: a dark, branded panel instead of the plain
-       default white sidebar with bare-looking radio buttons. */
-    section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
-    }
-    /* Narrower sidebar (was Streamlit's ~330px default) so the main content
-       area -- tables, charts, evidence cards -- gets more room to breathe. */
-    section[data-testid="stSidebar"][aria-expanded="true"] {
-        min-width: 260px;
-        max-width: 260px;
-    }
-    section[data-testid="stSidebar"] * { color: #E2E8F0 !important; }
-    .sidebar-logo {
-        font-size: 1.6rem;
-        font-weight: 800;
-        color: #FFFFFF !important;
-        margin-bottom: 0;
-    }
-    .sidebar-tagline {
-        font-size: 0.8rem;
-        color: #94A3B8 !important;
-        margin-bottom: 1.2rem;
-    }
-    section[data-testid="stSidebar"] div[role="radiogroup"] label {
-        background-color: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 8px;
-        padding: 0.5rem 0.75rem;
-        margin-bottom: 0.4rem;
-        transition: background-color 0.15s ease;
-    }
-    section[data-testid="stSidebar"] div[role="radiogroup"] label:hover {
-        background-color: rgba(59,130,246,0.18);
-    }
-    .sidebar-footer {
-        position: fixed;
-        bottom: 1rem;
-        font-size: 0.72rem;
-        color: #64748B !important;
+    :root {
+        --bg: #F7F8FA;
+        --surface: #FFFFFF;
+        --surface-soft: #F1F3F6;
+        --text: #101828;
+        --text-muted: #667085;
+        --navy: #0B1220;
+        --navy-soft: #16213A;
+        --brand: #315CF5;
+        --brand-soft: #EAF0FF;
+        --gap-red: #D94A4A;
+        --gap-red-soft: #FBEAEA;
+        --market-blue: #4C7DFF;
+        --coverage-green: #1F9D68;
+        --coverage-green-soft: #E7F7EF;
+        --border: #E4E7EC;
     }
 
-    /* Shared page header (utils/layout.py's page_header()) -- every page
-       except Overview uses this instead of a bare st.title(), so the 9
-       pages share one visual rhythm instead of each inventing its own. */
-    .page-header {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 0.9rem 1.2rem;
-        background: #F1F5F9;
-        border-left: 4px solid #2563EB;
-        border-radius: 8px;
-        margin-bottom: 0.6rem;
-    }
-    .page-header-icon { font-size: 1.6rem; line-height: 1; }
-    .page-header-title { font-size: 1.5rem; font-weight: 700; color: #0F172A; }
-    .page-header-desc {
-        color: #475569;
-        font-size: 0.95rem;
-        margin: 0.3rem 0 1.1rem 0.2rem;
-        line-height: 1.5;
-    }
+    /* App-wide background + typography baseline. */
+    div[data-testid="stAppViewContainer"] { background: var(--bg); }
+    div[data-testid="stMainBlockContainer"] { padding-top: 2.25rem; max-width: 1180px; }
+    html, body, [class*="css"] { color: var(--text); }
+    h1, h2, h3 { letter-spacing: -0.01em; }
 
-    /* Overview page: "what do you want to do?" section label + the 3
-       action cards underneath it. */
-    .section-eyebrow {
+    /* ---- Hero (Overview page) ---- */
+    .hero-kicker {
         font-size: 0.78rem;
         font-weight: 700;
-        letter-spacing: 0.06em;
-        color: #64748B;
-        margin: 0.4rem 0 0.9rem 0;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+        color: var(--brand);
+        margin-bottom: 0.6rem;
     }
-    .action-card-icon { font-size: 1.9rem; margin-bottom: 0.3rem; }
-    .action-card-title { font-size: 1.15rem; font-weight: 700; color: #0F172A; margin-bottom: 0.35rem; }
-    .action-card-desc { color: #475569; font-size: 0.88rem; line-height: 1.5; min-height: 4.5rem; }
-    div[data-testid="stVerticalBlockBorderWrapper"] {
-        border-radius: 12px !important;
-        transition: box-shadow 0.15s ease, transform 0.15s ease;
+    .hero-title {
+        font-size: 2.4rem;
+        font-weight: 800;
+        line-height: 1.15;
+        color: var(--text);
+        margin-bottom: 0.9rem;
+        max-width: 640px;
     }
-    div[data-testid="stVerticalBlockBorderWrapper"]:hover {
-        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-        transform: translateY(-2px);
+    .hero-subtitle {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: var(--text-muted);
+        max-width: 560px;
+        margin-bottom: 0;
     }
 
-    /* General polish: consistent rounded corners on alerts/tables and a
-       slightly more deliberate primary-button style than Streamlit's
-       flat default. */
-    div[data-testid="stAlert"] { border-radius: 8px; }
-    div[data-testid="stDataFrame"] { border-radius: 8px; overflow: hidden; }
-    button[kind="primary"] {
+    /* ---- Small-caps section eyebrow, used throughout ---- */
+    .section-eyebrow {
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin: 0 0 0.9rem 0;
+    }
+
+    /* ---- Signal panel: the live example analysis on the homepage,
+       and the per-skill gap display in Program Explorer. A direct
+       curriculum-vs-market bar comparison, the core visual idea of the
+       whole product. ---- */
+    .signal-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; }
+    .signal-title { font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 1.1rem; }
+    .signal-skill-name { font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 0.9rem; }
+    .signal-row { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.7rem; }
+    .signal-label { width: 96px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; }
+    .signal-track { flex: 1; background: var(--surface-soft); border-radius: 4px; height: 20px; overflow: hidden; }
+    .signal-fill { height: 100%; }
+    .signal-fill-coverage { background: var(--coverage-green); }
+    .signal-fill-market { background: var(--market-blue); }
+    .signal-value { width: 64px; text-align: right; font-size: 0.95rem; font-weight: 700; color: var(--text); flex-shrink: 0; }
+    .signal-gap-line { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 1rem; }
+    .signal-gap-value { color: var(--gap-red); font-weight: 800; }
+
+    /* Program Explorer: curriculum-vs-market gap bars inside each
+       recommendation card (smaller variant of the signal bars above). */
+    .gap-compare { margin: 0.6rem 0 0.3rem 0; }
+    .gap-compare-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem; }
+    .gap-compare-label { width: 84px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; }
+    .gap-bar-track { flex: 1; background: var(--surface-soft); border-radius: 4px; height: 12px; overflow: hidden; }
+    .gap-bar-fill { height: 100%; }
+    .gap-bar-curriculum { background: var(--coverage-green); }
+    .gap-bar-market { background: var(--market-blue); }
+    .gap-bar-role { background: var(--brand); }
+    .gap-bar-value { width: 52px; text-align: right; font-size: 0.82rem; font-weight: 700; color: var(--text); flex-shrink: 0; }
+
+    /* ---- Big research-metric numbers (Overview's "THE DATASET"). ---- */
+    .stat-block { text-align: left; }
+    .stat-number { font-size: 2.1rem; font-weight: 800; color: var(--text); line-height: 1.1; }
+    .stat-label { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.3rem; }
+
+    /* ---- Lightweight "what do you want to explore" list, replacing
+       the old heavy action cards. ---- */
+    .explore-item { padding: 1rem 0; border-top: 1px solid var(--border); }
+    .explore-item:last-child { border-bottom: 1px solid var(--border); }
+    .explore-item-title { font-size: 1.02rem; font-weight: 700; color: var(--text); }
+    .explore-item-desc { font-size: 0.88rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+    /* ---- "How it works" step strip. ---- */
+    .howitworks-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 0.25rem; margin: 0.3rem 0 0.4rem 0; }
+    .howitworks-step {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--text);
+        white-space: nowrap;
+    }
+    .howitworks-arrow { color: var(--text-muted); font-size: 0.9rem; padding: 0 0.05rem; }
+
+    /* ---- Skill chips (Build Your Profile). ---- */
+    .skill-chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.4rem 0 0.9rem 0; }
+    .skill-chip { display: inline-block; padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
+    .skill-chip-have { background: var(--coverage-green-soft); color: #146643; border: 1px solid #C8ECDA; }
+    .skill-chip-missing { background: var(--gap-red-soft); color: #A13333; border: 1px solid #F2CFCF; }
+
+    /* ---- Metrics: flatten Streamlit's boxed default into plain
+       research-style numbers (no card background/border). ---- */
+    div[data-testid="stMetric"] { background: transparent; border: none; padding: 0; }
+    div[data-testid="stMetricLabel"] p { font-size: 0.74rem !important; font-weight: 700 !important; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted) !important; }
+    div[data-testid="stMetricValue"] { color: var(--text) !important; }
+    div[data-testid="stExpander"] { border-radius: 6px; border-color: var(--border) !important; }
+
+    /* ---- Sidebar: a slim, text-first research-tool nav, not a
+       colored-pill menu. Selectors below target Streamlit's stable
+       data-testid="stRadioOption" attribute and its known internal
+       structure (verified against the live rendered DOM) rather than
+       auto-generated class names, which change between Streamlit
+       builds and would silently stop matching. ---- */
+    section[data-testid="stSidebar"] { background: var(--navy); }
+    section[data-testid="stSidebar"][aria-expanded="true"] { min-width: 250px; max-width: 250px; }
+    section[data-testid="stSidebar"] * { color: #CBD3E1 !important; }
+    .sidebar-logo { font-size: 1.25rem; font-weight: 800; color: #FFFFFF !important; letter-spacing: -0.01em; margin-bottom: 0; }
+    .sidebar-tagline { font-size: 0.76rem; color: #7B87A3 !important; margin-bottom: 1.4rem; }
+
+    /* Hide the circle/dot indicator Streamlit renders for each radio
+       option -- it's the first child div inside the option's content
+       wrapper. Text weight + a left accent bar (below) communicate
+       selection instead. */
+    section[data-testid="stSidebar"] label[data-testid="stRadioOption"] > div > div:first-child {
+        display: none;
+    }
+    section[data-testid="stSidebar"] label[data-testid="stRadioOption"] {
+        padding: 0.4rem 0 0.4rem 0.75rem;
+        margin-bottom: 0.05rem;
+        border-left: 2px solid transparent;
+        border-radius: 0;
+        transition: border-color 0.12s ease, color 0.12s ease;
+    }
+    section[data-testid="stSidebar"] label[data-testid="stRadioOption"] p {
+        font-size: 0.88rem !important;
+        font-weight: 500 !important;
+    }
+    section[data-testid="stSidebar"] label[data-testid="stRadioOption"]:hover {
+        border-left-color: #3D4A6B;
+    }
+    section[data-testid="stSidebar"] label[data-testid="stRadioOption"][data-selected="true"] {
+        border-left-color: var(--brand);
+    }
+    section[data-testid="stSidebar"] label[data-testid="stRadioOption"][data-selected="true"] p {
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+    }
+    .sidebar-footer { position: fixed; bottom: 1rem; font-size: 0.7rem; line-height: 1.6; color: #6B7690 !important; }
+    .sidebar-footer b { color: #9AA5C0 !important; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* ---- Shared page header (utils/layout.py's page_header()): a
+       thin bottom rule and large title instead of a filled colored
+       box -- reads as a document heading, not a UI chrome element. ---- */
+    .page-header { border-bottom: 1px solid var(--border); padding-bottom: 0.9rem; margin-bottom: 0.5rem; }
+    .page-header-icon { font-size: 1rem; opacity: 0.55; margin-right: 0.4rem; }
+    .page-header-title { font-size: 1.9rem; font-weight: 800; color: var(--text); }
+    .page-header-desc { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 1.3rem 0; line-height: 1.55; max-width: 760px; }
+
+    /* ---- Cards: used selectively (the analysis command-center, a gap
+       card, a signal panel) -- subtle border, no shadow-lift hover
+       animation, small border-radius. ---- */
+    div[data-testid="stVerticalBlockBorderWrapper"] {
         border-radius: 8px !important;
+        border-color: var(--border) !important;
+    }
+
+    div[data-testid="stAlert"] { border-radius: 6px; }
+    div[data-testid="stDataFrame"] { border-radius: 6px; overflow: hidden; }
+    button[kind="primary"] {
+        background: var(--brand) !important;
+        border-color: var(--brand) !important;
+        border-radius: 6px !important;
         font-weight: 600 !important;
     }
-    hr { margin: 1.4rem 0 !important; }
+    hr { margin: 1.6rem 0 !important; border-color: var(--border) !important; }
+
+    /* ---- Footer credit line (Overview page). ---- */
+    .site-footer { color: var(--text-muted); font-size: 0.85rem; }
+    .site-footer a { color: var(--brand); text-decoration: none; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -304,8 +337,8 @@ NAV_GROUPS = {
     GROUP_METHODOLOGY: {PAGE_METHODOLOGY: render_methodology},
 }
 
-st.sidebar.markdown('<p class="sidebar-logo">🎓 AlignED</p>', unsafe_allow_html=True)
-st.sidebar.markdown('<p class="sidebar-tagline">Curriculum vs. job market gap analysis</p>', unsafe_allow_html=True)
+st.sidebar.markdown('<p class="sidebar-logo">AlignED</p>', unsafe_allow_html=True)
+st.sidebar.markdown('<p class="sidebar-tagline">Curriculum &times; Labor Market Intelligence</p>', unsafe_allow_html=True)
 
 group_selection = st.sidebar.radio("Section", list(NAV_GROUPS.keys()), key=NAV_GROUP_KEY, label_visibility="collapsed")
 pages_in_group = NAV_GROUPS[group_selection]
@@ -323,9 +356,9 @@ else:
     page_selection = next(iter(pages_in_group))
 
 st.sidebar.markdown(
-    '<p class="sidebar-footer"><b>Analysis snapshot</b><br>'
-    '13 programs · 1,378 courses · 1,660 postings<br>'
-    'Built with Python · SQL · Streamlit</p>',
+    '<p class="sidebar-footer"><b>Analysis Snapshot</b><br>'
+    '13 programs &middot; 1,378 courses &middot; 1,660 postings<br>'
+    'Python &middot; SQL &middot; Streamlit</p>',
     unsafe_allow_html=True,
 )
 pages_in_group[page_selection]()
