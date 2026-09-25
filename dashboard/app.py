@@ -130,35 +130,24 @@ st.markdown(
     html, body, [class*="css"] { color: var(--text); }
     h1, h2, h3 { letter-spacing: -0.01em; }
 
-    /* ---- Hero (Overview page) ---- */
+    /* ---- Hero (Overview page): a real masthead, not another line of
+       body text -- this is deliberately the single largest, boldest
+       thing on the page so it reads unmistakably as the product's name,
+       plus one short tagline. That's it -- no stacked kicker/title/
+       subtitle paragraphs before the visual content starts. ---- */
     .hero-wordmark {
-        font-size: 1.05rem;
+        font-size: 2.6rem;
         font-weight: 800;
         color: var(--text);
-        letter-spacing: -0.01em;
-        margin-bottom: 1.1rem;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
     }
-    .hero-kicker {
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.10em;
-        text-transform: uppercase;
-        color: var(--brand);
-        margin-bottom: 0.6rem;
-    }
-    .hero-title {
-        font-size: 2.4rem;
-        font-weight: 800;
-        line-height: 1.15;
-        color: var(--text);
-        margin-bottom: 0.9rem;
-        max-width: 640px;
-    }
-    .hero-subtitle {
+    .hero-tagline {
         font-size: 1.05rem;
-        line-height: 1.6;
+        line-height: 1.55;
         color: var(--text-muted);
-        max-width: 560px;
+        max-width: 620px;
         margin-bottom: 0;
     }
 

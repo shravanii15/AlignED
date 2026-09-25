@@ -21,19 +21,15 @@ from sections.program_explorer import OVERALL_MARKET_LABEL
 
 def render_overview():
     # ---- Hero ----
-    # The wordmark was missing entirely in the first redesign pass --
-    # the sidebar has "AlignED", but a visitor landing on the page itself
-    # never saw the product's name in the main content area. Fixed here.
+    # Cut down hard from the first redesign pass: that version stacked
+    # FOUR separate text blocks (wordmark, kicker, title, subtitle)
+    # before anything visual appeared -- it read as a writeup, not a
+    # product. This is now: one unmistakable masthead, one short tagline,
+    # then straight into a real visual (the Signal panel below).
     st.markdown('<p class="hero-wordmark">AlignED</p>', unsafe_allow_html=True)
-    st.markdown('<p class="hero-kicker">Curriculum &times; Labor-Market Intelligence</p>', unsafe_allow_html=True)
     st.markdown(
-        '<p class="hero-title">Where do graduate computing curricula diverge from the skills appearing '
-        'in the job market?</p>',
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        '<p class="hero-subtitle">AlignED compares real course descriptions with demand observed in a '
-        'sampled set of real job postings, using a common skill taxonomy and statistical testing -- not guesses.</p>',
+        '<p class="hero-tagline">Curriculum &times; Labor-Market Intelligence -- see where a graduate '
+        'curriculum diverges from real job-market demand, with statistical evidence.</p>',
         unsafe_allow_html=True,
     )
     st.markdown("<br>", unsafe_allow_html=True)
