@@ -136,28 +136,28 @@ st.markdown(
        plus one short tagline. That's it -- no stacked kicker/title/
        subtitle paragraphs before the visual content starts. ---- */
     .hero-wordmark {
-        font-size: 2.6rem;
-        font-weight: 800;
-        color: var(--text);
+        font-size: 2.6rem !important;
+        font-weight: 800 !important;
+        color: var(--text) !important;
         letter-spacing: -0.02em;
-        line-height: 1.1;
+        line-height: 1.1 !important;
         margin-bottom: 0.5rem;
     }
     .hero-tagline {
-        font-size: 1.05rem;
-        line-height: 1.55;
-        color: var(--text-muted);
+        font-size: 1.05rem !important;
+        line-height: 1.55 !important;
+        color: var(--text-muted) !important;
         max-width: 620px;
         margin-bottom: 0;
     }
 
     /* ---- Small-caps section eyebrow, used throughout ---- */
     .section-eyebrow {
-        font-size: 0.74rem;
-        font-weight: 700;
+        font-size: 0.74rem !important;
+        font-weight: 700 !important;
         letter-spacing: 0.10em;
         text-transform: uppercase;
-        color: var(--text-muted);
+        color: var(--text-muted) !important;
         margin: 0 0 0.9rem 0;
     }
 
@@ -165,42 +165,42 @@ st.markdown(
        and the per-skill gap display in Program Explorer. A direct
        curriculum-vs-market bar comparison, the core visual idea of the
        whole product. ---- */
-    .signal-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; }
-    .signal-title { font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 1.1rem; }
-    .signal-skill-name { font-size: 1.5rem; font-weight: 800; color: var(--text); margin-bottom: 0.9rem; }
+    .signal-eyebrow { font-size: 0.72rem !important; font-weight: 700 !important; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted) !important; margin-bottom: 0.3rem; }
+    .signal-title { font-size: 1.15rem !important; font-weight: 700 !important; color: var(--text) !important; margin-bottom: 1.1rem; }
+    .signal-skill-name { font-size: 1.5rem !important; font-weight: 800 !important; color: var(--text) !important; margin-bottom: 0.9rem; }
     .signal-row { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.7rem; }
-    .signal-label { width: 96px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; }
+    .signal-label { width: 96px; font-size: 0.8rem !important; font-weight: 600 !important; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted) !important; flex-shrink: 0; }
     .signal-track { flex: 1; background: var(--surface-soft); border-radius: 4px; height: 20px; overflow: hidden; }
     .signal-fill { height: 100%; }
     .signal-fill-coverage { background: var(--coverage-green); }
     .signal-fill-market { background: var(--market-blue); }
-    .signal-value { width: 64px; text-align: right; font-size: 0.95rem; font-weight: 700; color: var(--text); flex-shrink: 0; }
-    .signal-gap-line { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 1rem; }
-    .signal-gap-value { color: var(--gap-red); font-weight: 800; }
+    .signal-value { width: 64px; text-align: right; font-size: 0.95rem !important; font-weight: 700 !important; color: var(--text) !important; flex-shrink: 0; }
+    .signal-gap-line { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 1rem !important; }
+    .signal-gap-value { color: var(--gap-red) !important; font-weight: 800 !important; }
 
     /* Program Explorer: curriculum-vs-market gap bars inside each
        recommendation card (smaller variant of the signal bars above). */
     .gap-compare { margin: 0.6rem 0 0.3rem 0; }
     .gap-compare-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem; }
-    .gap-compare-label { width: 84px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; }
+    .gap-compare-label { width: 84px; font-size: 0.78rem !important; font-weight: 600 !important; letter-spacing: 0.03em; text-transform: uppercase; color: var(--text-muted) !important; flex-shrink: 0; }
     .gap-bar-track { flex: 1; background: var(--surface-soft); border-radius: 4px; height: 12px; overflow: hidden; }
     .gap-bar-fill { height: 100%; }
     .gap-bar-curriculum { background: var(--coverage-green); }
     .gap-bar-market { background: var(--market-blue); }
     .gap-bar-role { background: var(--brand); }
-    .gap-bar-value { width: 52px; text-align: right; font-size: 0.82rem; font-weight: 700; color: var(--text); flex-shrink: 0; }
+    .gap-bar-value { width: 52px; text-align: right; font-size: 0.82rem !important; font-weight: 700 !important; color: var(--text) !important; flex-shrink: 0; }
 
     /* ---- Big research-metric numbers (Overview's "THE DATASET"). ---- */
     .stat-block { text-align: left; }
-    .stat-number { font-size: 2.1rem; font-weight: 800; color: var(--text); line-height: 1.1; }
-    .stat-label { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.3rem; }
+    .stat-number { font-size: 2.1rem !important; font-weight: 800 !important; color: var(--text) !important; line-height: 1.1 !important; }
+    .stat-label { font-size: 0.74rem !important; font-weight: 700 !important; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted) !important; margin-top: 0.3rem; }
 
     /* ---- Lightweight "what do you want to explore" list, replacing
        the old heavy action cards. ---- */
     .explore-item { padding: 1rem 0; border-top: 1px solid var(--border); }
     .explore-item:last-child { border-bottom: 1px solid var(--border); }
-    .explore-item-title { font-size: 1.02rem; font-weight: 700; color: var(--text); }
-    .explore-item-desc { font-size: 0.88rem; color: var(--text-muted); margin-top: 0.15rem; }
+    .explore-item-title { font-size: 1.02rem !important; font-weight: 700 !important; color: var(--text) !important; }
+    .explore-item-desc { font-size: 0.88rem !important; color: var(--text-muted) !important; margin-top: 0.15rem; }
 
     /* ---- "How it works" step strip. ---- */
     .howitworks-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 0.25rem; margin: 0.3rem 0 0.4rem 0; }
@@ -209,18 +209,18 @@ st.markdown(
         border: 1px solid var(--border);
         border-radius: 6px;
         padding: 0.4rem 0.75rem;
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: var(--text);
+        font-size: 0.82rem !important;
+        font-weight: 600 !important;
+        color: var(--text) !important;
         white-space: nowrap;
     }
-    .howitworks-arrow { color: var(--text-muted); font-size: 0.9rem; padding: 0 0.05rem; }
+    .howitworks-arrow { color: var(--text-muted) !important; font-size: 0.9rem !important; padding: 0 0.05rem; }
 
     /* ---- Skill chips (Build Your Profile). ---- */
     .skill-chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.4rem 0 0.9rem 0; }
-    .skill-chip { display: inline-block; padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
-    .skill-chip-have { background: var(--coverage-green-soft); color: #146643; border: 1px solid #C8ECDA; }
-    .skill-chip-missing { background: var(--gap-red-soft); color: #A13333; border: 1px solid #F2CFCF; }
+    .skill-chip { display: inline-block; padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.82rem !important; font-weight: 600 !important; white-space: nowrap; }
+    .skill-chip-have { background: var(--coverage-green-soft); color: #146643 !important; border: 1px solid #C8ECDA; }
+    .skill-chip-missing { background: var(--gap-red-soft); color: #A13333 !important; border: 1px solid #F2CFCF; }
 
     /* ---- Metrics: flatten Streamlit's boxed default into plain
        research-style numbers (no card background/border). ---- */
@@ -238,8 +238,8 @@ st.markdown(
     section[data-testid="stSidebar"] { background: var(--navy); }
     section[data-testid="stSidebar"][aria-expanded="true"] { min-width: 250px; max-width: 250px; }
     section[data-testid="stSidebar"] * { color: #CBD3E1 !important; }
-    .sidebar-logo { font-size: 1.25rem; font-weight: 800; color: #FFFFFF !important; letter-spacing: -0.01em; margin-bottom: 0; }
-    .sidebar-tagline { font-size: 0.76rem; color: #7B87A3 !important; margin-bottom: 1.4rem; }
+    .sidebar-logo { font-size: 1.25rem !important; font-weight: 800 !important; color: #FFFFFF !important; letter-spacing: -0.01em; margin-bottom: 0; }
+    .sidebar-tagline { font-size: 0.76rem !important; color: #7B87A3 !important; margin-bottom: 1.4rem; }
 
     /* Hide the circle/dot indicator Streamlit renders for each radio
        option -- it's the first child div inside the option's content
@@ -275,16 +275,16 @@ st.markdown(
        the main content area. Normal flow (just placed after the nav
        radios, with a top margin) keeps it correctly clipped to the
        sidebar's own box no matter how long the text is. */
-    .sidebar-footer { margin-top: 2.5rem; font-size: 0.7rem; line-height: 1.6; color: #6B7690 !important; max-width: 100%; word-wrap: break-word; }
-    .sidebar-footer b { color: #9AA5C0 !important; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .sidebar-footer { margin-top: 2.5rem; font-size: 0.7rem !important; line-height: 1.6 !important; color: #6B7690 !important; max-width: 100%; word-wrap: break-word; }
+    .sidebar-footer b { color: #9AA5C0 !important; font-size: 0.68rem !important; font-weight: 700 !important; letter-spacing: 0.06em; text-transform: uppercase; }
 
     /* ---- Shared page header (utils/layout.py's page_header()): a
        thin bottom rule and large title instead of a filled colored
        box -- reads as a document heading, not a UI chrome element. ---- */
     .page-header { border-bottom: 1px solid var(--border); padding-bottom: 0.9rem; margin-bottom: 0.5rem; }
-    .page-header-icon { font-size: 1rem; opacity: 0.55; margin-right: 0.4rem; }
-    .page-header-title { font-size: 1.9rem; font-weight: 800; color: var(--text); }
-    .page-header-desc { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 1.3rem 0; line-height: 1.55; max-width: 760px; }
+    .page-header-icon { font-size: 1rem !important; opacity: 0.55; margin-right: 0.4rem; }
+    .page-header-title { font-size: 1.9rem !important; font-weight: 800 !important; color: var(--text) !important; }
+    .page-header-desc { color: var(--text-muted) !important; font-size: 0.95rem !important; margin: 0.5rem 0 1.3rem 0; line-height: 1.55 !important; max-width: 760px; }
 
     /* ---- Cards: used selectively (the analysis command-center, a gap
        card, a signal panel) -- subtle border, no shadow-lift hover
@@ -305,7 +305,7 @@ st.markdown(
     hr { margin: 1.6rem 0 !important; border-color: var(--border) !important; }
 
     /* ---- Footer credit line (Overview page). ---- */
-    .site-footer { color: var(--text-muted); font-size: 0.85rem; }
+    .site-footer { color: var(--text-muted) !important; font-size: 0.85rem !important; }
     .site-footer a { color: var(--brand); text-decoration: none; }
     </style>
     """,
