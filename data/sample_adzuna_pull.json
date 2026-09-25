@@ -1,16 +1,17 @@
 [
   {
-    "salary_min": 96424.98,
-    "salary_max": 96424.98,
-    "longitude": -84.388372,
-    "created": "2026-09-23T16:43:28Z",
+    "id": "5895621996",
     "description": "Data Scientist I The Data Scientist I provides data science, statistical, and advanced analytical support to CDC programs. This role focuses on extracting knowledge from structured and unstructured public health data to support analysis, research, surveillance, improved understanding and communication, visualization, health services delivery, and data-driven decision-making. The Data Scientist I develops, implements, and monitors advanced analytic, computational, and predictive modeling tools a\u2026",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "title": "Data Scientist",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Cherokee Federal"
+    "longitude": -84.388372,
+    "contract_time": "full_time",
+    "created": "2026-09-23T16:43:28Z",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoienN0TGY5QzQ4UkdmZjl1NnNaUzM4dyIsImkiOiI1ODk1NjIxOTk2In0.L9znHvmz0FJPv00DN90FRkHNaweVEhN--V97z5pY3PE",
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
     },
+    "salary_min": 96424.98,
     "location": {
       "area": [
         "US",
@@ -18,152 +19,152 @@
         "Fulton County",
         "Atlanta"
       ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Atlanta, Fulton County"
+      "display_name": "Atlanta, Fulton County",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
+    "latitude": 33.755711,
+    "company": {
+      "display_name": "Cherokee Federal",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_max": 96424.98,
+    "salary_is_predicted": "1",
+    "redirect_url": "https://www.adzuna.com/land/ad/5895621996?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=E412AD8DD28D52A7AB82448A4B73C546A6131DE8",
+    "title": "Data Scientist"
+  },
+  {
+    "salary_max": 115029.58,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "company": {
+      "display_name": "Cherokee Federal",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "title": "Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5897738537?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=C2B7BF23B2F9C1A6265C8C840AFAB61A97C60CB1",
+    "salary_is_predicted": "1",
+    "contract_time": "full_time",
+    "created": "2026-09-24T21:46:28Z",
+    "longitude": -84.3879,
+    "description": "Data Scientist I The Data Scientist I provides data science, statistical, and advanced analytical support to CDC programs. This role focuses on extracting knowledge from structured and unstructured public health data to support analysis, research, surveillance, improved understanding and communication, visualization, health services delivery, and data-driven decision-making. The Data Scientist I develops, implements, and monitors advanced analytic, computational, and predictive modeling tools a\u2026",
+    "id": "5897738537",
+    "salary_min": 115029.58,
+    "location": {
+      "display_name": "Northlake, DeKalb County",
+      "area": [
+        "US",
+        "Georgia",
+        "DeKalb County",
+        "Northlake"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "latitude": 33.7487,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoienN0TGY5QzQ4UkdmZjl1NnNaUzM4dyIsImkiOiI1ODk3NzM4NTM3In0.fZWcw4pS4CPVW5PrqAOK_f-vj9BWFUnau6tXLxgfqoI",
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    }
+  },
+  {
+    "company": {
+      "display_name": "Booz Allen Hamilton",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_max": 120715.05,
+    "redirect_url": "https://www.adzuna.com/land/ad/5897251950?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=510C391456D281265FDA98BEAD098C5899BAE277",
+    "title": "Data Scientist",
+    "salary_is_predicted": "1",
+    "longitude": -77.093858,
+    "contract_time": "part_time",
+    "created": "2026-09-24T14:12:04Z",
+    "id": "5897251950",
+    "description": "Data Scientist The Opportunity: Are you excited at the prospect of unlocking the secrets held by a data set? Are you fascinated by the possibilities presented by the IoT, machine learning and artificial intelligence advances? In an increasingly connected world, massive amounts of structured and unstructured data open up new opportunities. As a data scientist, you can turn these complex data sets into useful information to solve global challenges. Across private and public sectors from fraud det\u2026",
+    "salary_min": 120715.05,
+    "latitude": 38.884513,
+    "location": {
+      "display_name": "Arlington, Arlington County",
+      "area": [
+        "US",
+        "Virginia",
+        "Arlington County",
+        "Arlington"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NzI1MTk1MCIsInMiOiJ6c3RMZjlDNDhSR2ZmOXU2c1pTMzh3In0.JchoQMyxw2_o0Qkd6OOvXMlYAqFR9vvVfiBBd63NHzU",
     "category": {
       "tag": "it-jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs"
-    },
-    "contract_time": "full_time",
-    "id": "5895621996",
-    "salary_is_predicted": "1",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NTYyMTk5NiIsInMiOiJVTURjWHdlNDhSR3k5WThWR3hma0pnIn0.A2rBGibO2TWfyyQtItG2B8bkZicAFL09vup-2Acop9g",
-    "latitude": 33.755711,
-    "redirect_url": "https://www.adzuna.com/land/ad/5895621996?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=E412AD8DD28D52A7AB82448A4B73C546A6131DE8"
+    }
   },
   {
-    "title": "Data Scientist",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NTYxODgxOSIsInMiOiJVTURjWHdlNDhSR3k5WThWR3hma0pnIn0.8OQI9AFPhp8nRX-VthMcom6QLwc2OzaPuxnXJlV3Cps",
-    "company": {
-      "display_name": "Denver Health",
-      "__CLASS__": "Adzuna::API::Response::Company"
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoienN0TGY5QzQ4UkdmZjl1NnNaUzM4dyIsImkiOiI1ODk3NzE3NzQ0In0.ygvDguFlAYmE7glPLgyfzLhtsD8CsZ6nTOVesKCvXSA",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5895618819?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=EC8A9C17E0A4996BD8E9E20E9220D0DC45AB3182",
+    "latitude": 38.886306,
+    "salary_min": 150734.45,
+    "location": {
+      "area": [
+        "US",
+        "Virginia",
+        "Arlington County",
+        "State Farm"
+      ],
+      "display_name": "State Farm, Arlington County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "id": "5897717744",
+    "description": "Data Scientist The Opportunity: Are you excited at the prospect of unlocking the secrets held by a data set? Are you fascinated by the possibilities presented by the IoT, machine learning and artificial intelligence advances? In an increasingly connected world, massive amounts of structured and unstructured data open up new opportunities. As a data scientist, you can turn these complex data sets into useful information to solve global challenges. Across private and public sectors from fraud det\u2026",
+    "longitude": -77.097739,
+    "contract_time": "part_time",
+    "created": "2026-09-24T21:28:02Z",
+    "salary_is_predicted": "1",
+    "title": "Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5897717744?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=F78B2612EE861446336575C8570875D7AA58123B",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Booz Allen Hamilton"
+    },
+    "salary_max": 150734.45,
+    "__CLASS__": "Adzuna::API::Response::Job"
+  },
+  {
+    "salary_max": 97171.33,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "created": "2026-09-23T16:42:39Z",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Denver Health"
+    },
+    "longitude": -104.99,
+    "description": "We are recruiting for a mission-driven Data Scientist to join our team! We're with you for life\u2019s journey. At Denver Health, purpose isn\u2019t just something we believe in\u2014it\u2019s something we live every day, for life\u2019s journey. Our Values Respect | Belonging | Accountability | Transparency Department Primary Care Support Job Summary Under minimal supervision, the Data Scientist is responsible for development, implementation, and evaluation of multiple projects simultaneously. This includes gathering \u2026",
+    "id": "5895618819",
+    "redirect_url": "https://www.adzuna.com/land/ad/5895618819?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=EC8A9C17E0A4996BD8E9E20E9220D0DC45AB3182",
+    "salary_min": 97171.33,
+    "title": "Data Scientist",
     "location": {
       "area": [
         "US",
         "Colorado",
         "Denver"
       ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Denver, Colorado"
+      "display_name": "Denver, Colorado",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
     "latitude": 39.75,
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoienN0TGY5QzQ4UkdmZjl1NnNaUzM4dyIsImkiOiI1ODk1NjE4ODE5In0.5LXkjMONM9UpEWNP0AIw1y6i6qg4Ty3qFHMFfxzlGYM",
     "category": {
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs"
-    },
-    "salary_min": 97171.33,
-    "salary_max": 97171.33,
-    "created": "2026-09-23T16:42:39Z",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "We are recruiting for a mission-driven Data Scientist to join our team! We're with you for life\u2019s journey. At Denver Health, purpose isn\u2019t just something we believe in\u2014it\u2019s something we live every day, for life\u2019s journey. Our Values Respect | Belonging | Accountability | Transparency Department Primary Care Support Job Summary Under minimal supervision, the Data Scientist is responsible for development, implementation, and evaluation of multiple projects simultaneously. This includes gathering \u2026",
-    "id": "5895618819",
-    "longitude": -104.99,
-    "salary_is_predicted": "1"
-  },
-  {
-    "salary_is_predicted": "1",
-    "id": "5895723954",
-    "contract_time": "full_time",
-    "latitude": 37.445797,
-    "redirect_url": "https://www.adzuna.com/land/ad/5895723954?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=062C9BC20240D83A77FCE51B085B4EDDBAD88418",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NTcyMzk1NCIsInMiOiJVTURjWHdlNDhSR3k5WThWR3hma0pnIn0.YoItYEN9qXSwQq1i32CcEL1bFEB0fGrY2mcFxJHwTOw",
-    "longitude": -122.157575,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Who You Are You are a data scientist, an experienced quantitative thinker who wants to develop further as both a data scientist and an engineer. You are skilled at finding the precise mathematical kernels of real-world business challenges faced by leading international financial institutions. You want to apply your expertise in statistics and computer science using Quantifind\u2019s state-of-the-art infrastructure to solve problems in Natural Language Processing, such as Entity Resolution, Document \u2026",
-    "created": "2026-09-23T17:53:05Z",
-    "salary_max": 243812.03,
-    "salary_min": 243812.03,
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "California",
-        "Santa Clara County",
-        "Palo Alto"
-      ],
-      "display_name": "Palo Alto, Santa Clara County"
-    },
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Quantifind"
-    },
-    "title": "Data Scientist"
-  },
-  {
-    "salary_max": 220580.92,
-    "salary_min": 220580.92,
-    "longitude": -73.808983,
-    "salary_is_predicted": "1",
-    "id": "5895723076",
-    "description": "About Us Twitch is the world\u2019s biggest live streaming service, with global communities built around gaming, entertainment, music, sports, cooking, and more. It is where thousands of communities come together for whatever, every day. We\u2019re about community, inside and out. You\u2019ll find coworkers who are eager to team up, collaborate, and smash (or elegantly solve) problems together. We\u2019re on a quest to empower live communities, so if this sounds good to you, see what we\u2019re up to on LinkedIn and X,\u2026",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "created": "2026-09-23T17:52:56Z",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Twitch"
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVU1EY1h3ZTQ4Ukd5OVk4Vkd4ZmtKZyIsImkiOiI1ODk1NzIzMDc2In0.LsfTi1f-XdXsoIon93TpJNmlYVlNvperjpxeDknloos",
-    "title": "Data Scientist",
-    "category": {
-      "tag": "accounting-finance-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Accounting & Finance Jobs"
-    },
-    "latitude": 42.679357,
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "New York",
-        "Albany County",
-        "Ny State Campus"
-      ],
-      "display_name": "Ny State Campus, Albany County"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5895723076?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=FE237C937D7947456A83852F2F8EBBD9E2FD4B21"
-  },
-  {
-    "salary_is_predicted": "1",
-    "id": "5895704224",
-    "contract_time": "part_time",
-    "latitude": 42.679357,
-    "redirect_url": "https://www.adzuna.com/land/ad/5895704224?se=UMDcXwe48RGy9Y8VGxfkJg&utm_medium=api&utm_source=851bf6c5&v=38889E84D06B683E178F8303C9045CC63E57D7B7",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVU1EY1h3ZTQ4Ukd5OVk4Vkd4ZmtKZyIsImkiOiI1ODk1NzA0MjI0In0.coUDAApFqczMV7GpkwNWJjGsw7bXqv_syRqwPQatq_Q",
-    "longitude": -73.808983,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Our Purpose Mastercard powers economies and empowers people in 200 countries and territories worldwide. Together with our customers, we\u2019re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions secure, simple, smart and accessible. Our technology and innovation, partnerships and networks combine to deliver a unique set of products and services that help people, businesses and governments realize their greatest pot\u2026",
-    "created": "2026-09-23T17:43:18Z",
-    "salary_max": 101348.22,
-    "salary_min": 101348.22,
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "location": {
-      "display_name": "Ny State Campus, Albany County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "New York",
-        "Albany County",
-        "Ny State Campus"
-      ]
-    },
-    "company": {
-      "display_name": "Mastercard",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "title": "Data Scientist"
+    }
   }
 ]
