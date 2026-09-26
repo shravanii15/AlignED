@@ -1,170 +1,167 @@
 [
   {
-    "id": "5895621996",
-    "description": "Data Scientist I The Data Scientist I provides data science, statistical, and advanced analytical support to CDC programs. This role focuses on extracting knowledge from structured and unstructured public health data to support analysis, research, surveillance, improved understanding and communication, visualization, health services delivery, and data-driven decision-making. The Data Scientist I develops, implements, and monitors advanced analytic, computational, and predictive modeling tools a\u2026",
-    "longitude": -84.388372,
-    "contract_time": "full_time",
-    "created": "2026-09-23T16:43:28Z",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoienN0TGY5QzQ4UkdmZjl1NnNaUzM4dyIsImkiOiI1ODk1NjIxOTk2In0.L9znHvmz0FJPv00DN90FRkHNaweVEhN--V97z5pY3PE",
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    },
-    "salary_min": 96424.98,
-    "location": {
-      "area": [
-        "US",
-        "Georgia",
-        "Fulton County",
-        "Atlanta"
-      ],
-      "display_name": "Atlanta, Fulton County",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "latitude": 33.755711,
+    "created": "2026-09-25T16:58:41Z",
+    "id": "5898711162",
     "company": {
-      "display_name": "Cherokee Federal",
-      "__CLASS__": "Adzuna::API::Response::Company"
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "C3 AI"
     },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_max": 96424.98,
-    "salary_is_predicted": "1",
-    "redirect_url": "https://www.adzuna.com/land/ad/5895621996?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=E412AD8DD28D52A7AB82448A4B73C546A6131DE8",
-    "title": "Data Scientist"
-  },
-  {
-    "salary_max": 115029.58,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "company": {
-      "display_name": "Cherokee Federal",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5897738537?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=C2B7BF23B2F9C1A6265C8C840AFAB61A97C60CB1",
-    "salary_is_predicted": "1",
-    "contract_time": "full_time",
-    "created": "2026-09-24T21:46:28Z",
-    "longitude": -84.3879,
-    "description": "Data Scientist I The Data Scientist I provides data science, statistical, and advanced analytical support to CDC programs. This role focuses on extracting knowledge from structured and unstructured public health data to support analysis, research, surveillance, improved understanding and communication, visualization, health services delivery, and data-driven decision-making. The Data Scientist I develops, implements, and monitors advanced analytic, computational, and predictive modeling tools a\u2026",
-    "id": "5897738537",
-    "salary_min": 115029.58,
-    "location": {
-      "display_name": "Northlake, DeKalb County",
-      "area": [
-        "US",
-        "Georgia",
-        "DeKalb County",
-        "Northlake"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "latitude": 33.7487,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoienN0TGY5QzQ4UkdmZjl1NnNaUzM4dyIsImkiOiI1ODk3NzM4NTM3In0.fZWcw4pS4CPVW5PrqAOK_f-vj9BWFUnau6tXLxgfqoI",
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    }
-  },
-  {
-    "company": {
-      "display_name": "Booz Allen Hamilton",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_max": 120715.05,
-    "redirect_url": "https://www.adzuna.com/land/ad/5897251950?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=510C391456D281265FDA98BEAD098C5899BAE277",
-    "title": "Data Scientist",
-    "salary_is_predicted": "1",
-    "longitude": -77.093858,
-    "contract_time": "part_time",
-    "created": "2026-09-24T14:12:04Z",
-    "id": "5897251950",
-    "description": "Data Scientist The Opportunity: Are you excited at the prospect of unlocking the secrets held by a data set? Are you fascinated by the possibilities presented by the IoT, machine learning and artificial intelligence advances? In an increasingly connected world, massive amounts of structured and unstructured data open up new opportunities. As a data scientist, you can turn these complex data sets into useful information to solve global challenges. Across private and public sectors from fraud det\u2026",
-    "salary_min": 120715.05,
-    "latitude": 38.884513,
-    "location": {
-      "display_name": "Arlington, Arlington County",
-      "area": [
-        "US",
-        "Virginia",
-        "Arlington County",
-        "Arlington"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NzI1MTk1MCIsInMiOiJ6c3RMZjlDNDhSR2ZmOXU2c1pTMzh3In0.JchoQMyxw2_o0Qkd6OOvXMlYAqFR9vvVfiBBd63NHzU",
     "category": {
       "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -122.240826,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5ODcxMTE2MiIsInMiOiJzcl93TUplNThSR0N3Nmt1VERySmxnIn0.BcNgEI8_05vsx0bIPYi5PZKou9Ao3qec3jnq5B0hfBc",
+    "description": "C3 AI (NYSE: AI), is the Enterprise AI application software company. C3 AI delivers a family of fully integrated products including the C3 Agentic AI Platform, an end-to-end platform for developing, deploying, and operating enterprise AI applications, C3 AI applications, a portfolio of industry-specific SaaS enterprise AI applications that enable the digital transformation of organizations globally, and C3 Generative AI, a suite of domain-specific generative AI offerings for the enterprise. Lea\u2026",
+    "salary_max": 126057.98,
+    "salary_min": 126057.98,
+    "title": "Data Scientist/Senior Data Scientist",
+    "latitude": 37.463334,
+    "location": {
+      "area": [
+        "US",
+        "California",
+        "San Mateo County",
+        "Redwood City"
+      ],
+      "display_name": "Redwood City, San Mateo County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5898711162?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=BF4BA77F8E4C61130E94E158937EE8952D1CBD6C"
+  },
+  {
+    "latitude": 37.772927,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoic3Jfd01KZTU4UkdDdzZrdVREckpsZyIsImkiOiI1ODk4NzA4OTQzIn0.2lfSZ2DKH_uEbp5MJL7a9TNkvwNMlR_lCYEQb0L_o4M",
+    "longitude": -122.214332,
+    "salary_max": 184917.77,
+    "description": "Requisition ID  174643 Job Category: Accounting / Finance Job Level: Individual Contributor Business Unit: Customer & Corporate Affairs Work Type: Hybrid Job Location: Oakland Department Overview The Rates department within PG&E\u2019s Customer & Corporate Affairs organization develops and provides expertise on gas and electric customer rates in regulatory proceedings at the California Public Utilities Commission (CPUC) and the Federal Energy Regulatory Commission (FERC). With a primary focus on ens\u2026",
+    "salary_min": 184917.77,
+    "title": "Data Scientist",
+    "location": {
+      "display_name": "Oakland, Alameda County",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "California",
+        "Alameda County",
+        "Oakland"
+      ]
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5898708943?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=6CE991160B82C30D5F94B95BB4844A83D754C246",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1",
+    "id": "5898708943",
+    "created": "2026-09-25T16:57:27Z",
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Pacific Gas And Electric Company"
     }
   },
   {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoienN0TGY5QzQ4UkdmZjl1NnNaUzM4dyIsImkiOiI1ODk3NzE3NzQ0In0.ygvDguFlAYmE7glPLgyfzLhtsD8CsZ6nTOVesKCvXSA",
+    "location": {
+      "area": [
+        "US",
+        "California",
+        "Alameda County",
+        "Philatelic"
+      ],
+      "display_name": "Philatelic, Alameda County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5899033738?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=ADFF4177DD3398ACAF05EEDC550EFEBB3E5E1B5E",
+    "latitude": 37.8044,
+    "longitude": -122.2698,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoic3Jfd01KZTU4UkdDdzZrdVREckpsZyIsImkiOiI1ODk5MDMzNzM4In0.9egee-0DezM4Ve6oLxwn-Fy_2G9s3ohgqsR_AMm96tk",
+    "salary_min": 247783.58,
+    "salary_max": 247783.58,
+    "title": "Data Scientist",
+    "description": "Requisition ID  174643 Job Category: Accounting / Finance Job Level: Individual Contributor Business Unit: Customer & Corporate Affairs Work Type: Hybrid Job Location: Oakland Department Overview The Rates department within PG&E\u2019s Customer & Corporate Affairs organization develops and provides expertise on gas and electric customer rates in regulatory proceedings at the California Public Utilities Commission (CPUC) and the Federal Energy Regulatory Commission (FERC). With a primary focus on ens\u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1",
+    "id": "5899033738",
+    "created": "2026-09-25T21:46:44Z",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
     },
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Pacific Gas And Electric Company"
+    }
+  },
+  {
+    "longitude": -77.097739,
+    "title": "Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5897717744?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=F78B2612EE861446336575C8570875D7AA58123B",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_is_predicted": "1",
+    "created": "2026-09-24T21:28:02Z",
     "latitude": 38.886306,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NzcxNzc0NCIsInMiOiJzcl93TUplNThSR0N3Nmt1VERySmxnIn0.wGw9b1uD6t2U4oVKiA-FVQ7yqrnSUa86P55Me8ttl5Q",
+    "salary_max": 150734.45,
+    "description": "Data Scientist The Opportunity: Are you excited at the prospect of unlocking the secrets held by a data set? Are you fascinated by the possibilities presented by the IoT, machine learning and artificial intelligence advances? In an increasingly connected world, massive amounts of structured and unstructured data open up new opportunities. As a data scientist, you can turn these complex data sets into useful information to solve global challenges. Across private and public sectors from fraud det\u2026",
     "salary_min": 150734.45,
     "location": {
+      "display_name": "State Farm, Arlington County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Virginia",
         "Arlington County",
         "State Farm"
-      ],
-      "display_name": "State Farm, Arlington County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+      ]
     },
-    "id": "5897717744",
-    "description": "Data Scientist The Opportunity: Are you excited at the prospect of unlocking the secrets held by a data set? Are you fascinated by the possibilities presented by the IoT, machine learning and artificial intelligence advances? In an increasingly connected world, massive amounts of structured and unstructured data open up new opportunities. As a data scientist, you can turn these complex data sets into useful information to solve global challenges. Across private and public sectors from fraud det\u2026",
-    "longitude": -77.097739,
     "contract_time": "part_time",
-    "created": "2026-09-24T21:28:02Z",
-    "salary_is_predicted": "1",
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5897717744?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=F78B2612EE861446336575C8570875D7AA58123B",
+    "id": "5897717744",
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Booz Allen Hamilton"
+      "display_name": "Booz Allen Hamilton",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "salary_max": 150734.45,
-    "__CLASS__": "Adzuna::API::Response::Job"
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
+    }
   },
   {
-    "salary_max": 97171.33,
+    "created": "2026-09-25T17:40:44Z",
+    "salary_is_predicted": "1",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "created": "2026-09-23T16:42:39Z",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Denver Health"
-    },
-    "longitude": -104.99,
-    "description": "We are recruiting for a mission-driven Data Scientist to join our team! We're with you for life\u2019s journey. At Denver Health, purpose isn\u2019t just something we believe in\u2014it\u2019s something we live every day, for life\u2019s journey. Our Values Respect | Belonging | Accountability | Transparency Department Primary Care Support Job Summary Under minimal supervision, the Data Scientist is responsible for development, implementation, and evaluation of multiple projects simultaneously. This includes gathering \u2026",
-    "id": "5895618819",
-    "redirect_url": "https://www.adzuna.com/land/ad/5895618819?se=zstLf9C48RGff9u6sZS38w&utm_medium=api&utm_source=851bf6c5&v=EC8A9C17E0A4996BD8E9E20E9220D0DC45AB3182",
-    "salary_min": 97171.33,
+    "longitude": -92.504444,
     "title": "Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5898767799?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=BD475DE0A00C0B44EB7948ABC02B86941EC36706",
+    "id": "5898767799",
+    "company": {
+      "display_name": "Concord USA",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5ODc2Nzc5OSIsInMiOiJzcl93TUplNThSR0N3Nmt1VERySmxnIn0.MUlBXR5GTOp0pE1qp9OJ6cdEkZ2CElLx-fq8zJ1gztU",
+    "description": "About Us Concord isn't your typical consulting firm; we're an execution company. We help organizations move technology and AI initiatives from concept to measurable capability, working alongside our clients from the initial definition of success through full implementation and adoption. Our team brings expertise across artificial intelligence and data, digital experience, and platform engineering, enabling the organizations we serve to build lasting internal capability. We operate as a global t\u2026",
+    "salary_max": 106976.07,
+    "salary_min": 106976.07,
+    "latitude": 38.453302,
+    "contract_time": "full_time",
     "location": {
       "area": [
         "US",
-        "Colorado",
-        "Denver"
+        "Missouri"
       ],
-      "display_name": "Denver, Colorado",
+      "display_name": "Missouri, US",
       "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "latitude": 39.75,
-    "salary_is_predicted": "1",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoienN0TGY5QzQ4UkdmZjl1NnNaUzM4dyIsImkiOiI1ODk1NjE4ODE5In0.5LXkjMONM9UpEWNP0AIw1y6i6qg4Ty3qFHMFfxzlGYM",
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
     }
   }
 ]
