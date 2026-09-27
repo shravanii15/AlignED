@@ -1,167 +1,167 @@
 [
   {
-    "created": "2026-09-25T16:58:41Z",
-    "id": "5898711162",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -80.107138,
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "C3 AI"
+      "display_name": "Vaco LLC"
     },
+    "title": "Data Scientist",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NzI2NjU5OCIsInMiOiJtT3U2RW1XNjhSRzJ6NHl5MUZqM2tRIn0.4nrMtxolcIdSp0J3ANwtfe-5-E5zoaPs3NbgVUtB2lg",
+    "location": {
+      "area": [
+        "US",
+        "Pennsylvania",
+        "Butler County",
+        "Cranberry Township"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Cranberry Township, Butler County"
+    },
+    "salary_is_predicted": "1",
+    "category": {
+      "tag": "it-jobs",
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "salary_max": 141384.8,
+    "salary_min": 141384.8,
+    "description": "Work Authorization Candidates must currently reside in the Pittsburgh area and be available for a hybrid schedule. This opportunity is for direct hire only and is not available for C2C, third-party submissions, or visa sponsorship Data Scientist We are seeking a versatile Data Scientist to join our team in Pittsburgh, PA. This is a direct hire position offering a hybrid work schedule for candidates who currently reside in the Pittsburgh area. This role is not open to C2C, visa sponsorship, or t\u2026",
+    "id": "5897266598",
+    "latitude": 40.684963,
+    "redirect_url": "https://www.adzuna.com/land/ad/5897266598?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=85FDBA5E8672D37448EDCC7A1A8589017B88AEF3",
+    "created": "2026-09-24T14:28:33Z"
+  },
+  {
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. We are seeking talented and motivated Data Scientists with expertise in machine learning, statistical analysis, and artificial intelligence to join our team. In these roles, you will be responsible for developing advanced algorithms and data-driven solutions that address complex challenges. These positions will be part of our Defense and Intelligence Business unit serving the Intelligence Commun\u2026",
+    "salary_max": 130435.74,
+    "salary_min": 130435.74,
+    "created": "2026-09-02T07:52:39Z",
+    "redirect_url": "https://www.adzuna.com/land/ad/5867068379?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=E8DF7ECB0388EFE8A5AB2B29B114DDF1203ACA75",
+    "latitude": 44.410977,
+    "id": "5867068379",
+    "title": "Data Scientist",
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "longitude": -103.471515,
+    "__CLASS__": "Adzuna::API::Response::Job",
     "category": {
       "tag": "it-jobs",
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
     "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "longitude": -122.240826,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5ODcxMTE2MiIsInMiOiJzcl93TUplNThSR0N3Nmt1VERySmxnIn0.BcNgEI8_05vsx0bIPYi5PZKou9Ao3qec3jnq5B0hfBc",
-    "description": "C3 AI (NYSE: AI), is the Enterprise AI application software company. C3 AI delivers a family of fully integrated products including the C3 Agentic AI Platform, an end-to-end platform for developing, deploying, and operating enterprise AI applications, C3 AI applications, a portfolio of industry-specific SaaS enterprise AI applications that enable the digital transformation of organizations globally, and C3 Generative AI, a suite of domain-specific generative AI offerings for the enterprise. Lea\u2026",
-    "salary_max": 126057.98,
-    "salary_min": 126057.98,
-    "title": "Data Scientist/Senior Data Scientist",
-    "latitude": 37.463334,
     "location": {
-      "area": [
-        "US",
-        "California",
-        "San Mateo County",
-        "Redwood City"
-      ],
-      "display_name": "Redwood City, San Mateo County",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5898711162?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=BF4BA77F8E4C61130E94E158937EE8952D1CBD6C"
-  },
-  {
-    "latitude": 37.772927,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoic3Jfd01KZTU4UkdDdzZrdVREckpsZyIsImkiOiI1ODk4NzA4OTQzIn0.2lfSZ2DKH_uEbp5MJL7a9TNkvwNMlR_lCYEQb0L_o4M",
-    "longitude": -122.214332,
-    "salary_max": 184917.77,
-    "description": "Requisition ID  174643 Job Category: Accounting / Finance Job Level: Individual Contributor Business Unit: Customer & Corporate Affairs Work Type: Hybrid Job Location: Oakland Department Overview The Rates department within PG&E\u2019s Customer & Corporate Affairs organization develops and provides expertise on gas and electric customer rates in regulatory proceedings at the California Public Utilities Commission (CPUC) and the Federal Energy Regulatory Commission (FERC). With a primary focus on ens\u2026",
-    "salary_min": 184917.77,
-    "title": "Data Scientist",
-    "location": {
-      "display_name": "Oakland, Alameda County",
       "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Fort Meade, Meade County",
       "area": [
         "US",
-        "California",
-        "Alameda County",
-        "Oakland"
+        "South Dakota",
+        "Meade County",
+        "Fort Meade"
       ]
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5898708943?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=6CE991160B82C30D5F94B95BB4844A83D754C246",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_is_predicted": "1",
-    "id": "5898708943",
-    "created": "2026-09-25T16:57:27Z",
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Pacific Gas And Electric Company"
-    }
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibU91NkVtVzY4UkcyejR5eTFGajNrUSIsImkiOiI1ODY3MDY4Mzc5In0.izkBKOlHcyG8SFU8DV5-tHRdCS6uItpjd6A1yfhw_8o"
   },
   {
+    "longitude": -103.471515,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "title": "Data Scientist",
+    "company": {
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
     "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Fort Meade, Meade County",
       "area": [
         "US",
-        "California",
-        "Alameda County",
-        "Philatelic"
-      ],
-      "display_name": "Philatelic, Alameda County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+        "South Dakota",
+        "Meade County",
+        "Fort Meade"
+      ]
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5899033738?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=ADFF4177DD3398ACAF05EEDC550EFEBB3E5E1B5E",
-    "latitude": 37.8044,
-    "longitude": -122.2698,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoic3Jfd01KZTU4UkdDdzZrdVREckpsZyIsImkiOiI1ODk5MDMzNzM4In0.9egee-0DezM4Ve6oLxwn-Fy_2G9s3ohgqsR_AMm96tk",
-    "salary_min": 247783.58,
-    "salary_max": 247783.58,
-    "title": "Data Scientist",
-    "description": "Requisition ID  174643 Job Category: Accounting / Finance Job Level: Individual Contributor Business Unit: Customer & Corporate Affairs Work Type: Hybrid Job Location: Oakland Department Overview The Rates department within PG&E\u2019s Customer & Corporate Affairs organization develops and provides expertise on gas and electric customer rates in regulatory proceedings at the California Public Utilities Commission (CPUC) and the Federal Energy Regulatory Commission (FERC). With a primary focus on ens\u2026",
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTYzNzQ2NyIsInMiOiJtT3U2RW1XNjhSRzJ6NHl5MUZqM2tRIn0.MUF9cUo7Cdfoea-i_mVnJLQRTQ1nCrVLNJhAORhlqPQ",
+    "category": {
+      "label": "IT Jobs",
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
     "salary_is_predicted": "1",
-    "id": "5899033738",
-    "created": "2026-09-25T21:46:44Z",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist in Fort Meade, MD , to drive cutting-edge statistical analytics and cloud-based data solutions for national security objectives. In this role, you will collaborate with subject matter experts and customers to guide analytic development from prototype to production, delivering high-value data-driven insights while laying the g\u2026",
+    "salary_min": 119148.47,
+    "salary_max": 119148.47,
+    "latitude": 44.410977,
+    "id": "5859637467",
+    "created": "2026-08-28T07:42:15Z",
+    "redirect_url": "https://www.adzuna.com/land/ad/5859637467?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=BDBAFE2720873F527953CC2AC05C7D43357A02A6"
+  },
+  {
+    "latitude": 32.372413,
+    "id": "5792991528",
+    "created": "2026-07-08T16:10:15Z",
+    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC",
+    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
+    "salary_max": 103764.39,
+    "salary_min": 103764.39,
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Springfield, Effingham County",
+      "area": [
+        "US",
+        "Georgia",
+        "Effingham County",
+        "Springfield"
+      ]
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5Mjk5MTUyOCIsInMiOiJtT3U2RW1XNjhSRzJ6NHl5MUZqM2tRIn0.NP2Mf9Onh3Vt9Nv4lhvuzsoO4hTBxfsxXo2b8SHMcag",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
     },
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -81.311499,
+    "title": "Data Scientist",
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Pacific Gas And Electric Company"
+      "display_name": "MANTECH",
+      "__CLASS__": "Adzuna::API::Response::Company"
     }
   },
   {
-    "longitude": -77.097739,
+    "description": "hackajob is collaborating with Lockheed Martin - US to connect them with exceptional professionals for this role. This Program is seeking a data scientist will develop machine learning, data mining, statistical and graph-based algorithms to analyze and make sense of datasets; prototype or consider several algorithms and decide upon final model based on suitable performance metrics; build models or develop experiments to generate data when training or example datasets are unavailable; generate r\u2026",
+    "salary_max": 128449.9,
+    "salary_min": 128449.9,
+    "created": "2026-09-25T10:52:37Z",
+    "redirect_url": "https://www.adzuna.com/land/ad/5898401221?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=198145142992E8A932EF5166BF32FB3506A8E28B",
+    "latitude": 44.410977,
+    "id": "5898401221",
     "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5897717744?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=F78B2612EE861446336575C8570875D7AA58123B",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_is_predicted": "1",
-    "created": "2026-09-24T21:28:02Z",
-    "latitude": 38.886306,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NzcxNzc0NCIsInMiOiJzcl93TUplNThSR0N3Nmt1VERySmxnIn0.wGw9b1uD6t2U4oVKiA-FVQ7yqrnSUa86P55Me8ttl5Q",
-    "salary_max": 150734.45,
-    "description": "Data Scientist The Opportunity: Are you excited at the prospect of unlocking the secrets held by a data set? Are you fascinated by the possibilities presented by the IoT, machine learning and artificial intelligence advances? In an increasingly connected world, massive amounts of structured and unstructured data open up new opportunities. As a data scientist, you can turn these complex data sets into useful information to solve global challenges. Across private and public sectors from fraud det\u2026",
-    "salary_min": 150734.45,
-    "location": {
-      "display_name": "State Farm, Arlington County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Virginia",
-        "Arlington County",
-        "State Farm"
-      ]
-    },
-    "contract_time": "part_time",
-    "id": "5897717744",
     "company": {
-      "display_name": "Booz Allen Hamilton",
+      "display_name": "Lockheed Martin - US",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    }
-  },
-  {
-    "created": "2026-09-25T17:40:44Z",
-    "salary_is_predicted": "1",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "longitude": -92.504444,
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5898767799?se=sr_wMJe58RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=BD475DE0A00C0B44EB7948ABC02B86941EC36706",
-    "id": "5898767799",
-    "company": {
-      "display_name": "Concord USA",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
+    "longitude": -103.471515,
     "category": {
       "tag": "it-jobs",
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5ODc2Nzc5OSIsInMiOiJzcl93TUplNThSR0N3Nmt1VERySmxnIn0.MUlBXR5GTOp0pE1qp9OJ6cdEkZ2CElLx-fq8zJ1gztU",
-    "description": "About Us Concord isn't your typical consulting firm; we're an execution company. We help organizations move technology and AI initiatives from concept to measurable capability, working alongside our clients from the initial definition of success through full implementation and adoption. Our team brings expertise across artificial intelligence and data, digital experience, and platform engineering, enabling the organizations we serve to build lasting internal capability. We operate as a global t\u2026",
-    "salary_max": 106976.07,
-    "salary_min": 106976.07,
-    "latitude": 38.453302,
-    "contract_time": "full_time",
+    "salary_is_predicted": "1",
     "location": {
+      "display_name": "Fort Meade, Meade County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "Missouri"
-      ],
-      "display_name": "Missouri, US",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    }
+        "South Dakota",
+        "Meade County",
+        "Fort Meade"
+      ]
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibU91NkVtVzY4UkcyejR5eTFGajNrUSIsImkiOiI1ODk4NDAxMjIxIn0.ktnfnMgFG7Fq6CYdErIw6ER1FQTdQ7segxvqKI5i248"
   }
 ]
