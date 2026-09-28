@@ -1,167 +1,167 @@
 [
   {
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "longitude": -80.107138,
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Vaco LLC"
-    },
-    "title": "Data Scientist",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NzI2NjU5OCIsInMiOiJtT3U2RW1XNjhSRzJ6NHl5MUZqM2tRIn0.4nrMtxolcIdSp0J3ANwtfe-5-E5zoaPs3NbgVUtB2lg",
-    "location": {
-      "area": [
-        "US",
-        "Pennsylvania",
-        "Butler County",
-        "Cranberry Township"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Cranberry Township, Butler County"
-    },
     "salary_is_predicted": "1",
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "salary_max": 141384.8,
-    "salary_min": 141384.8,
-    "description": "Work Authorization Candidates must currently reside in the Pittsburgh area and be available for a hybrid schedule. This opportunity is for direct hire only and is not available for C2C, third-party submissions, or visa sponsorship Data Scientist We are seeking a versatile Data Scientist to join our team in Pittsburgh, PA. This is a direct hire position offering a hybrid work schedule for candidates who currently reside in the Pittsburgh area. This role is not open to C2C, visa sponsorship, or t\u2026",
-    "id": "5897266598",
-    "latitude": 40.684963,
-    "redirect_url": "https://www.adzuna.com/land/ad/5897266598?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=85FDBA5E8672D37448EDCC7A1A8589017B88AEF3",
-    "created": "2026-09-24T14:28:33Z"
-  },
-  {
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. We are seeking talented and motivated Data Scientists with expertise in machine learning, statistical analysis, and artificial intelligence to join our team. In these roles, you will be responsible for developing advanced algorithms and data-driven solutions that address complex challenges. These positions will be part of our Defense and Intelligence Business unit serving the Intelligence Commun\u2026",
-    "salary_max": 130435.74,
-    "salary_min": 130435.74,
-    "created": "2026-09-02T07:52:39Z",
-    "redirect_url": "https://www.adzuna.com/land/ad/5867068379?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=E8DF7ECB0388EFE8A5AB2B29B114DDF1203ACA75",
-    "latitude": 44.410977,
-    "id": "5867068379",
-    "title": "Data Scientist",
+    "__CLASS__": "Adzuna::API::Response::Job",
     "company": {
-      "display_name": "MANTECH",
+      "display_name": "Guidehouse",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "longitude": -103.471515,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "salary_is_predicted": "1",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Fort Meade, Meade County",
-      "area": [
-        "US",
-        "South Dakota",
-        "Meade County",
-        "Fort Meade"
-      ]
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibU91NkVtVzY4UkcyejR5eTFGajNrUSIsImkiOiI1ODY3MDY4Mzc5In0.izkBKOlHcyG8SFU8DV5-tHRdCS6uItpjd6A1yfhw_8o"
-  },
-  {
-    "longitude": -103.471515,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "title": "Data Scientist",
-    "company": {
-      "display_name": "MANTECH",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Fort Meade, Meade County",
-      "area": [
-        "US",
-        "South Dakota",
-        "Meade County",
-        "Fort Meade"
-      ]
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTYzNzQ2NyIsInMiOiJtT3U2RW1XNjhSRzJ6NHl5MUZqM2tRIn0.MUF9cUo7Cdfoea-i_mVnJLQRTQ1nCrVLNJhAORhlqPQ",
-    "category": {
-      "label": "IT Jobs",
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "salary_is_predicted": "1",
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist in Fort Meade, MD , to drive cutting-edge statistical analytics and cloud-based data solutions for national security objectives. In this role, you will collaborate with subject matter experts and customers to guide analytic development from prototype to production, delivering high-value data-driven insights while laying the g\u2026",
-    "salary_min": 119148.47,
-    "salary_max": 119148.47,
-    "latitude": 44.410977,
-    "id": "5859637467",
-    "created": "2026-08-28T07:42:15Z",
-    "redirect_url": "https://www.adzuna.com/land/ad/5859637467?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=BDBAFE2720873F527953CC2AC05C7D43357A02A6"
-  },
-  {
-    "latitude": 32.372413,
-    "id": "5792991528",
-    "created": "2026-07-08T16:10:15Z",
-    "redirect_url": "https://www.adzuna.com/land/ad/5792991528?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=8153E7478DECFDC1171862ABD6C9D22DA42C2FBC",
-    "description": "hackajob is collaborating with MANTECH to connect them with exceptional professionals for this role. MANTECH seeks a motivated, career and customer-oriented Data Scientist to join our team in Springfield, VA . This is a full-time onsite position. The Data Scientist shall support the maintenance and implementation of the data architecture for all Program data. This position requires experience with databases, cloud architectures, and compliance with data standards. This position is responsible f\u2026",
-    "salary_max": 103764.39,
-    "salary_min": 103764.39,
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Springfield, Effingham County",
-      "area": [
-        "US",
-        "Georgia",
-        "Effingham County",
-        "Springfield"
-      ]
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5Mjk5MTUyOCIsInMiOiJtT3U2RW1XNjhSRzJ6NHl5MUZqM2tRIn0.NP2Mf9Onh3Vt9Nv4lhvuzsoO4hTBxfsxXo2b8SHMcag",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
     },
-    "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "longitude": -81.311499,
+    "id": "5901208170",
+    "created": "2026-09-28T00:37:43Z",
+    "latitude": 39.015239,
     "title": "Data Scientist",
-    "company": {
-      "display_name": "MANTECH",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    }
+    "salary_min": 125438.95,
+    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Public Trust What You Will Do : The Border Security Data Scientist will join a dynamic team supporting U.S Federal border security customers. In this role, the candidate will collect, transform, integrate, and analyze data to. develop integrated data models, generate reports and analyses for key senior leaders and deploy dynamic analytical solutions. Develop integrated data pipelines and models to suppo\u2026",
+    "salary_max": 125438.95,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiOEw5eXFEcTc4UkdDdzZrdVREckpsZyIsImkiOiI1OTAxMjA4MTcwIn0.K_mH__qwrKpmrBUsoIQmpT-osac63epo4Si8Xlem_is",
+    "longitude": -77.393545,
+    "location": {
+      "area": [
+        "US",
+        "Virginia",
+        "Loudoun County",
+        "Sterling"
+      ],
+      "display_name": "Sterling, Loudoun County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5901208170?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=4B68A3D14C20BFE21D84E34FB31703249FFDAE4E"
   },
   {
-    "description": "hackajob is collaborating with Lockheed Martin - US to connect them with exceptional professionals for this role. This Program is seeking a data scientist will develop machine learning, data mining, statistical and graph-based algorithms to analyze and make sense of datasets; prototype or consider several algorithms and decide upon final model based on suitable performance metrics; build models or develop experiments to generate data when training or example datasets are unavailable; generate r\u2026",
-    "salary_max": 128449.9,
-    "salary_min": 128449.9,
-    "created": "2026-09-25T10:52:37Z",
-    "redirect_url": "https://www.adzuna.com/land/ad/5898401221?se=mOu6EmW68RG2z4yy1Fj3kQ&utm_medium=api&utm_source=851bf6c5&v=198145142992E8A932EF5166BF32FB3506A8E28B",
-    "latitude": 44.410977,
-    "id": "5898401221",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Fort Monroe, Hampton City",
+      "area": [
+        "US",
+        "Virginia",
+        "Hampton City",
+        "Fort Monroe"
+      ]
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5901208140?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=A805130529095AF4582A4297ADCA48F368691558",
+    "salary_min": 195474.58,
+    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Secret What You Will Do : Develop, implement, and validate statistical models and analytical methodologies to support client mission objectives Perform exploratory data analysis (EDA) to identify trends, patterns, and anomalies in large and complex datasets Design and deploy predictive and prescriptive models to enable data-driven decision-making Apply advanced analytics to Navy-specific domains such as\u2026",
+    "salary_max": 195474.58,
     "title": "Data Scientist",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiOEw5eXFEcTc4UkdDdzZrdVREckpsZyIsImkiOiI1OTAxMjA4MTQwIn0.LghayeaZjmpIEhBx9oTLuJ9LnS4wUmYekU-FX-Fcbrg",
+    "longitude": -76.30362,
+    "latitude": 36.93432,
     "company": {
-      "display_name": "Lockheed Martin - US",
+      "display_name": "Guidehouse",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "longitude": -103.471515,
     "category": {
       "tag": "it-jobs",
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
+    "created": "2026-09-28T00:37:42Z",
+    "id": "5901208140",
     "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job"
+  },
+  {
+    "redirect_url": "https://www.adzuna.com/land/ad/5901208187?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=BE21FDBD7DB8173DB5957947593F47CA289FE943",
     "location": {
-      "display_name": "Fort Meade, Meade County",
       "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Fort Monroe, Hampton City",
       "area": [
         "US",
-        "South Dakota",
-        "Meade County",
-        "Fort Meade"
+        "Virginia",
+        "Hampton City",
+        "Fort Monroe"
       ]
     },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibU91NkVtVzY4UkcyejR5eTFGajNrUSIsImkiOiI1ODk4NDAxMjIxIn0.ktnfnMgFG7Fq6CYdErIw6ER1FQTdQ7segxvqKI5i248"
+    "latitude": 36.93432,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiOEw5eXFEcTc4UkdDdzZrdVREckpsZyIsImkiOiI1OTAxMjA4MTg3In0.WJTZma5lm25ku-lv5yvnCGLc2WgScfYPI3CMhHyRQDc",
+    "longitude": -76.30362,
+    "salary_min": 162458.14,
+    "title": "Data Scientist",
+    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Secret What You Will Do : The Data Scientist will focus on performing ETL / data cleaning, developing interactive visualizations, building predictive models, and support implementing Artificial Intelligence solutions tied to asset and material maintenance and management data, as well as policy data. The data analyst will be responsible for all of the following to include but not limited to: Dedicated to\u2026",
+    "salary_max": 162458.14,
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "created": "2026-09-28T00:37:44Z",
+    "id": "5901208187",
+    "company": {
+      "display_name": "Guidehouse",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
+    }
+  },
+  {
+    "location": {
+      "area": [
+        "US",
+        "Virginia",
+        "Arlington County",
+        "Crystal"
+      ],
+      "display_name": "Crystal, Arlington County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5901208186?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=327DE51756CB0C53B93EAAF24A0BDFCC8CEF60DA",
+    "title": "Data Scientist",
+    "salary_min": 122986.7,
+    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Ability to Obtain Public Trust What You Will Do : Guidehouse is seeking a Data Scientist to join our AI & Data Defense and Security Segment, where the individual will collect and analyze data to identify trends, develop visualizations in support of organizational and mission goals, and support decision-making for large-scale programs within the Department of Homeland Security (DHS). Responsibilities include, b\u2026",
+    "salary_max": 122986.7,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMTIwODE4NiIsInMiOiI4TDl5cURxNzhSR0N3Nmt1VERySmxnIn0.20oAN2815E7nCs0b0Z6nJoauTndPYTPlWY5ZF_ql4vs",
+    "longitude": -77.05099,
+    "latitude": 38.85981,
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Guidehouse"
+    },
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
+    },
+    "created": "2026-09-28T00:37:44Z",
+    "id": "5901208186",
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job"
+  },
+  {
+    "id": "5901208160",
+    "created": "2026-09-28T00:37:43Z",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "Accounting & Finance Jobs",
+      "tag": "accounting-finance-jobs"
+    },
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Guidehouse"
+    },
+    "salary_is_predicted": "1",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiOEw5eXFEcTc4UkdDdzZrdVREckpsZyIsImkiOiI1OTAxMjA4MTYwIn0.tUaZIAQqydJ8NO9RnSmhmjrZ1U2S1ql0sljgJk-GTNA",
+    "longitude": -77.428438,
+    "description": "Job Family : Data Science Consulting Travel Required : None Clearance Required : Active Top Secret SCI with Polygraph What You Will Do : Our Data and Analytics consultants help clients maximize the value of their data. This high performing team works with clients to implement the full spectrum of data analytics and data science, from data querying and data wrangling to data visualization and dashboarding for business intelligence (BI), to predictive analytics, machine learning, and artificial i\u2026",
+    "salary_min": 151490.47,
+    "salary_max": 151490.47,
+    "title": "Senior Data Scientist",
+    "latitude": 38.883702,
+    "location": {
+      "area": [
+        "US",
+        "Virginia",
+        "Fairfax County",
+        "Chantilly"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Chantilly, Fairfax County"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5901208160?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=BCF09638DC7198AED717B37CD98E5AD9149FD0C2"
   }
 ]
