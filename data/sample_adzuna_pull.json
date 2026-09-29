@@ -1,167 +1,166 @@
 [
   {
-    "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job",
     "company": {
-      "display_name": "Guidehouse",
+      "display_name": "Concord USA",
       "__CLASS__": "Adzuna::API::Response::Company"
     },
+    "longitude": -92.504444,
+    "description": "About Us Concord isn't your typical consulting firm; we're an execution company. We help organizations move technology and AI initiatives from concept to measurable capability, working alongside our clients from the initial definition of success through full implementation and adoption. Our team brings expertise across artificial intelligence and data, digital experience, and platform engineering, enabling the organizations we serve to build lasting internal capability. We operate as a global t\u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 38.453302,
+    "title": "Data Scientist",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
     },
-    "id": "5901208170",
-    "created": "2026-09-28T00:37:43Z",
-    "latitude": 39.015239,
-    "title": "Data Scientist",
-    "salary_min": 125438.95,
-    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Public Trust What You Will Do : The Border Security Data Scientist will join a dynamic team supporting U.S Federal border security customers. In this role, the candidate will collect, transform, integrate, and analyze data to. develop integrated data models, generate reports and analyses for key senior leaders and deploy dynamic analytical solutions. Develop integrated data pipelines and models to suppo\u2026",
-    "salary_max": 125438.95,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiOEw5eXFEcTc4UkdDdzZrdVREckpsZyIsImkiOiI1OTAxMjA4MTcwIn0.K_mH__qwrKpmrBUsoIQmpT-osac63epo4Si8Xlem_is",
-    "longitude": -77.393545,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5ODc2Nzc5OSIsInMiOiJFTXFQbmYyNzhSR1FndUs0STNQSVhRIn0.pwsiiDQCmzz1fiD2riPXuUQlMdaOPJt-y-RwJbKpPK8",
+    "id": "5898767799",
+    "contract_time": "full_time",
+    "created": "2026-09-25T17:40:44Z",
+    "redirect_url": "https://www.adzuna.com/land/ad/5898767799?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=BD475DE0A00C0B44EB7948ABC02B86941EC36706",
+    "salary_max": 106976.07,
     "location": {
       "area": [
         "US",
-        "Virginia",
-        "Loudoun County",
-        "Sterling"
+        "Missouri"
       ],
-      "display_name": "Sterling, Loudoun County",
+      "display_name": "Missouri, US",
       "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5901208170?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=4B68A3D14C20BFE21D84E34FB31703249FFDAE4E"
+    "salary_is_predicted": "1",
+    "salary_min": 106976.07
   },
   {
+    "latitude": 28.662967,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "title": "Data Scientist",
+    "redirect_url": "https://www.adzuna.com/land/ad/5897283059?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=A4470016DFBAA51FBDFB90A4CF2CA53247D84A0A",
+    "salary_max": 138767.77,
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Fort Monroe, Hampton City",
       "area": [
         "US",
-        "Virginia",
-        "Hampton City",
-        "Fort Monroe"
-      ]
-    },
-    "redirect_url": "https://www.adzuna.com/land/ad/5901208140?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=A805130529095AF4582A4297ADCA48F368691558",
-    "salary_min": 195474.58,
-    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Secret What You Will Do : Develop, implement, and validate statistical models and analytical methodologies to support client mission objectives Perform exploratory data analysis (EDA) to identify trends, patterns, and anomalies in large and complex datasets Design and deploy predictive and prescriptive models to enable data-driven decision-making Apply advanced analytics to Navy-specific domains such as\u2026",
-    "salary_max": 195474.58,
-    "title": "Data Scientist",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiOEw5eXFEcTc4UkdDdzZrdVREckpsZyIsImkiOiI1OTAxMjA4MTQwIn0.LghayeaZjmpIEhBx9oTLuJ9LnS4wUmYekU-FX-Fcbrg",
-    "longitude": -76.30362,
-    "latitude": 36.93432,
-    "company": {
-      "display_name": "Guidehouse",
-      "__CLASS__": "Adzuna::API::Response::Company"
+        "Florida",
+        "Orange County",
+        "Apopka"
+      ],
+      "display_name": "Apopka, Orange County",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
     "category": {
       "tag": "it-jobs",
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "created": "2026-09-28T00:37:42Z",
-    "id": "5901208140",
     "salary_is_predicted": "1",
+    "salary_min": 138767.77,
+    "company": {
+      "display_name": "Northrop Grumman",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "longitude": -81.51735,
+    "description": "RELOCATION ASSISTANCE: No relocation assistance availableCLEARANCE REQUIRED FOR START: NoCLEARANCE TYPE: SecretTRAVEL: Yes, 10% of the Time Description At Northrop Grumman, our employees have incredible opportunities to work on revolutionary systems that impact people's lives around the world today, and for generations to come. Our pioneering and inventive spirit has enabled us to be at the forefront of many technological advancements in our nation's history - from the first flight across the A\u2026",
+    "id": "5897283059",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRU1xUG5mMjc4UkdRZ3VLNEkzUElYUSIsImkiOiI1ODk3MjgzMDU5In0.MCI2lwlNS082aM3Yt3RDX0lAtWjdUwtMjBQiFwjz5tg",
+    "created": "2026-09-24T15:14:40Z"
+  },
+  {
+    "contract_time": "part_time",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NzI1OTM2MCIsInMiOiJFTXFQbmYyNzhSR1FndUs0STNQSVhRIn0.3GBMRyasb0PDgDvqgcAMSOvScXgvyFK6NEjHtCXujjY",
+    "id": "5897259360",
+    "created": "2026-09-24T14:15:57Z",
+    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private and pu\u2026",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Booz Allen Hamilton"
+    },
+    "location": {
+      "display_name": "Washington, Washington, D.C.",
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Washington, D.C.",
+        "Washington"
+      ]
+    },
+    "salary_max": 130343.23,
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
+    "salary_is_predicted": "1",
+    "salary_min": 130343.23,
+    "redirect_url": "https://www.adzuna.com/land/ad/5897259360?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=5370C0CB16D54EB8548103DFB3080F761588B767",
+    "title": "Data Scientist",
     "__CLASS__": "Adzuna::API::Response::Job"
   },
   {
-    "redirect_url": "https://www.adzuna.com/land/ad/5901208187?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=BE21FDBD7DB8173DB5957947593F47CA289FE943",
+    "salary_min": 129469.07,
+    "salary_is_predicted": "1",
     "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Fort Monroe, Hampton City",
-      "area": [
-        "US",
-        "Virginia",
-        "Hampton City",
-        "Fort Monroe"
-      ]
-    },
-    "latitude": 36.93432,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiOEw5eXFEcTc4UkdDdzZrdVREckpsZyIsImkiOiI1OTAxMjA4MTg3In0.WJTZma5lm25ku-lv5yvnCGLc2WgScfYPI3CMhHyRQDc",
-    "longitude": -76.30362,
-    "salary_min": 162458.14,
-    "title": "Data Scientist",
-    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Active Secret What You Will Do : The Data Scientist will focus on performing ETL / data cleaning, developing interactive visualizations, building predictive models, and support implementing Artificial Intelligence solutions tied to asset and material maintenance and management data, as well as policy data. The data analyst will be responsible for all of the following to include but not limited to: Dedicated to\u2026",
-    "salary_max": 162458.14,
-    "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "created": "2026-09-28T00:37:44Z",
-    "id": "5901208187",
-    "company": {
-      "display_name": "Guidehouse",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs",
-      "label": "IT Jobs"
-    }
-  },
-  {
-    "location": {
+      "display_name": "Arlington, Arlington County",
       "area": [
         "US",
         "Virginia",
         "Arlington County",
-        "Crystal"
-      ],
-      "display_name": "Crystal, Arlington County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+        "Arlington"
+      ]
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5901208186?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=327DE51756CB0C53B93EAAF24A0BDFCC8CEF60DA",
+    "salary_max": 129469.07,
+    "redirect_url": "https://www.adzuna.com/land/ad/5898732535?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=25CB2B8459C44E611AE70F2E169C07EB12B9B63E",
+    "created": "2026-09-25T17:15:00Z",
+    "contract_time": "part_time",
+    "id": "5898732535",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRU1xUG5mMjc4UkdRZ3VLNEkzUElYUSIsImkiOiI1ODk4NzMyNTM1In0.7DbNpCjHwU0SPzYkqeoHHXgBvJtFXj2J__CTmOVGHUw",
+    "category": {
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs"
+    },
     "title": "Data Scientist",
-    "salary_min": 122986.7,
-    "description": "Job Family : Data Science Consulting Travel Required : Up to 10% Clearance Required : Ability to Obtain Public Trust What You Will Do : Guidehouse is seeking a Data Scientist to join our AI & Data Defense and Security Segment, where the individual will collect and analyze data to identify trends, develop visualizations in support of organizational and mission goals, and support decision-making for large-scale programs within the Department of Homeland Security (DHS). Responsibilities include, b\u2026",
-    "salary_max": 122986.7,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMTIwODE4NiIsInMiOiI4TDl5cURxNzhSR0N3Nmt1VERySmxnIn0.20oAN2815E7nCs0b0Z6nJoauTndPYTPlWY5ZF_ql4vs",
-    "longitude": -77.05099,
-    "latitude": 38.85981,
+    "latitude": 38.884513,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence (AI). In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private a\u2026",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Guidehouse"
+      "display_name": "Booz Allen Hamilton"
     },
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "created": "2026-09-28T00:37:44Z",
-    "id": "5901208186",
-    "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job"
+    "longitude": -77.093858
   },
   {
-    "id": "5901208160",
-    "created": "2026-09-28T00:37:43Z",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "Accounting & Finance Jobs",
-      "tag": "accounting-finance-jobs"
-    },
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Guidehouse"
-    },
+    "created": "2026-09-25T17:27:50Z",
+    "contract_time": "part_time",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5ODc1MzgxMyIsInMiOiJFTXFQbmYyNzhSR1FndUs0STNQSVhRIn0.n54k6SBbEOq--xDVRoUhJdBvaYTygnumFe64em9RUXY",
+    "id": "5898753813",
+    "redirect_url": "https://www.adzuna.com/land/ad/5898753813?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=F7D9A03F86403B6313FA087CFD317973AF8DE04D",
     "salary_is_predicted": "1",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiOEw5eXFEcTc4UkdDdzZrdVREckpsZyIsImkiOiI1OTAxMjA4MTYwIn0.tUaZIAQqydJ8NO9RnSmhmjrZ1U2S1ql0sljgJk-GTNA",
-    "longitude": -77.428438,
-    "description": "Job Family : Data Science Consulting Travel Required : None Clearance Required : Active Top Secret SCI with Polygraph What You Will Do : Our Data and Analytics consultants help clients maximize the value of their data. This high performing team works with clients to implement the full spectrum of data analytics and data science, from data querying and data wrangling to data visualization and dashboarding for business intelligence (BI), to predictive analytics, machine learning, and artificial i\u2026",
-    "salary_min": 151490.47,
-    "salary_max": 151490.47,
-    "title": "Senior Data Scientist",
-    "latitude": 38.883702,
+    "salary_min": 130680.53,
     "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Mc Lean, Fairfax County",
       "area": [
         "US",
         "Virginia",
         "Fairfax County",
-        "Chantilly"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Chantilly, Fairfax County"
+        "Mc Lean"
+      ]
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5901208160?se=8L9yqDq78RGCw6kuTDrJlg&utm_medium=api&utm_source=851bf6c5&v=BCF09638DC7198AED717B37CD98E5AD9149FD0C2"
+    "salary_max": 130680.53,
+    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence (AI). In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private a\u2026",
+    "longitude": -77.23,
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Booz Allen Hamilton"
+    },
+    "title": "Data Scientist",
+    "latitude": 38.97,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
+    }
   }
 ]
