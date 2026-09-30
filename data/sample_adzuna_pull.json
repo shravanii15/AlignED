@@ -1,166 +1,158 @@
 [
   {
-    "company": {
-      "display_name": "Concord USA",
-      "__CLASS__": "Adzuna::API::Response::Company"
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzc3MjQ1NSIsInMiOiJwS1ZISWNXODhSR1phOW9YVnBMRWdnIn0.D1nQwGgNxgoJiwqs9bRaLHqUYLHv6NsL5ANIkYgPPZ0",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "West Virginia"
+      ],
+      "display_name": "West Virginia, US"
     },
-    "longitude": -92.504444,
-    "description": "About Us Concord isn't your typical consulting firm; we're an execution company. We help organizations move technology and AI initiatives from concept to measurable capability, working alongside our clients from the initial definition of success through full implementation and adoption. Our team brings expertise across artificial intelligence and data, digital experience, and platform engineering, enabling the organizations we serve to build lasting internal capability. We operate as a global t\u2026",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "latitude": 38.453302,
+    "description": "Job Description Avenue Code is the leading software consultancy focused on delivering end-to-end development solutions for digital transformation across every vertical. We\u2019re privately held, profitable, and have been on a solid growth trajectory since day one. We care deeply about our clients, our partners, and our people. We prefer the word \u2018partner\u2019 over \u2018vendor\u2019, and our investment in professional relationships is a reflection of that philosophy. We pride ourselves on our technical acumen, o\u2026",
+    "redirect_url": "https://www.adzuna.com/land/ad/5903772455?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=C0F5B65EA9D12A2461E8E6EBA7B6CB1E0291BDD1",
     "title": "Data Scientist",
+    "salary_min": 147427.89,
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
     },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5ODc2Nzc5OSIsInMiOiJFTXFQbmYyNzhSR1FndUs0STNQSVhRIn0.pwsiiDQCmzz1fiD2riPXuUQlMdaOPJt-y-RwJbKpPK8",
-    "id": "5898767799",
-    "contract_time": "full_time",
-    "created": "2026-09-25T17:40:44Z",
-    "redirect_url": "https://www.adzuna.com/land/ad/5898767799?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=BD475DE0A00C0B44EB7948ABC02B86941EC36706",
-    "salary_max": 106976.07,
-    "location": {
-      "area": [
-        "US",
-        "Missouri"
-      ],
-      "display_name": "Missouri, US",
-      "__CLASS__": "Adzuna::API::Response::Location"
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Avenue Code"
     },
-    "salary_is_predicted": "1",
-    "salary_min": 106976.07
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -80.682155,
+    "id": "5903772455",
+    "salary_max": 147427.89,
+    "created": "2026-09-30T06:40:21Z",
+    "latitude": 38.771041
   },
   {
-    "latitude": 28.662967,
     "__CLASS__": "Adzuna::API::Response::Job",
-    "title": "Data Scientist",
-    "redirect_url": "https://www.adzuna.com/land/ad/5897283059?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=A4470016DFBAA51FBDFB90A4CF2CA53247D84A0A",
-    "salary_max": 138767.77,
-    "location": {
-      "area": [
-        "US",
-        "Florida",
-        "Orange County",
-        "Apopka"
-      ],
-      "display_name": "Apopka, Orange County",
-      "__CLASS__": "Adzuna::API::Response::Location"
+    "company": {
+      "display_name": "SteerBridge",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
+    "longitude": -77.220397,
+    "id": "5899275443",
+    "created": "2026-09-26T00:52:09Z",
+    "salary_max": 136157.62,
+    "latitude": 38.893471,
+    "salary_min": 136157.62,
     "category": {
       "tag": "it-jobs",
       "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "salary_is_predicted": "1",
-    "salary_min": 138767.77,
-    "company": {
-      "display_name": "Northrop Grumman",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "longitude": -81.51735,
-    "description": "RELOCATION ASSISTANCE: No relocation assistance availableCLEARANCE REQUIRED FOR START: NoCLEARANCE TYPE: SecretTRAVEL: Yes, 10% of the Time Description At Northrop Grumman, our employees have incredible opportunities to work on revolutionary systems that impact people's lives around the world today, and for generations to come. Our pioneering and inventive spirit has enabled us to be at the forefront of many technological advancements in our nation's history - from the first flight across the A\u2026",
-    "id": "5897283059",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRU1xUG5mMjc4UkdRZ3VLNEkzUElYUSIsImkiOiI1ODk3MjgzMDU5In0.MCI2lwlNS082aM3Yt3RDX0lAtWjdUwtMjBQiFwjz5tg",
-    "created": "2026-09-24T15:14:40Z"
-  },
-  {
-    "contract_time": "part_time",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5NzI1OTM2MCIsInMiOiJFTXFQbmYyNzhSR1FndUs0STNQSVhRIn0.3GBMRyasb0PDgDvqgcAMSOvScXgvyFK6NEjHtCXujjY",
-    "id": "5897259360",
-    "created": "2026-09-24T14:15:57Z",
-    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private and pu\u2026",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Booz Allen Hamilton"
-    },
-    "location": {
-      "display_name": "Washington, Washington, D.C.",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Washington, D.C.",
-        "Washington"
-      ]
-    },
-    "salary_max": 130343.23,
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "salary_is_predicted": "1",
-    "salary_min": 130343.23,
-    "redirect_url": "https://www.adzuna.com/land/ad/5897259360?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=5370C0CB16D54EB8548103DFB3080F761588B767",
+    "description": "Job Description Senior Data Scientist \\n Vienna, VA \\n Aviation \u2013 Tech Team / \\n Full-time / \\n On-site \\n SteerBridge is a modern technology company delivering innovative, mission\u2011focused solutions to the U.S. Government and private sector. Leveraging deep expertise in federal acquisition, digital transformation, and emerging technologies, we deliver agile, commercial\u2011grade capabilities that accelerate operational effectiveness and drive measurable mission success. \\n At the core of SteerBridg\u2026",
+    "redirect_url": "https://www.adzuna.com/land/ad/5899275443?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=1578493AE9D31D2183BFC42D4DFEAD1516269D84",
     "title": "Data Scientist",
-    "__CLASS__": "Adzuna::API::Response::Job"
-  },
-  {
-    "salary_min": 129469.07,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicEtWSEljVzg4UkdaYTlvWFZwTEVnZyIsImkiOiI1ODk5Mjc1NDQzIn0.uyxkx40Z_s2tpAGCdfjpszxi7R4-65R3DL6Vu9WYG1M",
     "salary_is_predicted": "1",
     "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Arlington, Arlington County",
-      "area": [
-        "US",
-        "Virginia",
-        "Arlington County",
-        "Arlington"
-      ]
-    },
-    "salary_max": 129469.07,
-    "redirect_url": "https://www.adzuna.com/land/ad/5898732535?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=25CB2B8459C44E611AE70F2E169C07EB12B9B63E",
-    "created": "2026-09-25T17:15:00Z",
-    "contract_time": "part_time",
-    "id": "5898732535",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRU1xUG5mMjc4UkdRZ3VLNEkzUElYUSIsImkiOiI1ODk4NzMyNTM1In0.7DbNpCjHwU0SPzYkqeoHHXgBvJtFXj2J__CTmOVGHUw",
-    "category": {
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs"
-    },
-    "title": "Data Scientist",
-    "latitude": 38.884513,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence (AI). In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private a\u2026",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Booz Allen Hamilton"
-    },
-    "longitude": -77.093858
-  },
-  {
-    "created": "2026-09-25T17:27:50Z",
-    "contract_time": "part_time",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg5ODc1MzgxMyIsInMiOiJFTXFQbmYyNzhSR1FndUs0STNQSVhRIn0.n54k6SBbEOq--xDVRoUhJdBvaYTygnumFe64em9RUXY",
-    "id": "5898753813",
-    "redirect_url": "https://www.adzuna.com/land/ad/5898753813?se=EMqPnf278RGQguK4I3PIXQ&utm_medium=api&utm_source=851bf6c5&v=F7D9A03F86403B6313FA087CFD317973AF8DE04D",
-    "salary_is_predicted": "1",
-    "salary_min": 130680.53,
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Mc Lean, Fairfax County",
+      "display_name": "Vienna, Fairfax County",
       "area": [
         "US",
         "Virginia",
         "Fairfax County",
-        "Mc Lean"
-      ]
+        "Vienna"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location"
+    }
+  },
+  {
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
     },
-    "salary_max": 130680.53,
-    "description": "Data Scientist The Opportunity: As a data scientist, you\u2019re excited at the prospect of unlocking the secrets held by a data set, and you\u2019re fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence (AI). In an increasingly connected world, massive amounts of structured and unstructured data open new opportunities. As a data scientist at Booz Allen, you can help turn these complex data sets into useful information to solve global challenges. Across private a\u2026",
-    "longitude": -77.23,
+    "salary_min": 136829.95,
+    "id": "5903770358",
+    "longitude": -80.682155,
+    "__CLASS__": "Adzuna::API::Response::Job",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Booz Allen Hamilton"
+      "display_name": "Innovatix Technology Partners"
     },
-    "title": "Data Scientist",
-    "latitude": 38.97,
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "latitude": 38.771041,
+    "salary_max": 136829.95,
+    "created": "2026-09-30T06:39:13Z",
+    "location": {
+      "area": [
+        "US",
+        "West Virginia"
+      ],
+      "display_name": "West Virginia, US",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzc3MDM1OCIsInMiOiJwS1ZISWNXODhSR1phOW9YVnBMRWdnIn0.TzipUMiSHkLUOmGQtuKDaUgDUVetUtxwFNY3l9x4V2k",
+    "salary_is_predicted": "1",
+    "redirect_url": "https://www.adzuna.com/land/ad/5903770358?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=5659A0448AD3E7424A894F6F431BAF2D6D53C760",
+    "description": "Job Description Role: Data Scientist \\n Duration: 12 Months \\n Location: Open for Remote Work from the US \\n \\n As a senior-level scientist, you will primarily be responsible for one major release at a time with a high degree of individual ownership. While not all research leads to successful deployed systems, past successes have seen a general availability launch typically ~6 months from project start. Our solutions have used a wide range of approaches, including: agentic systems and model con\u2026",
+    "title": "Data Scientist"
+  },
+  {
+    "salary_min": 141384.8,
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
-    }
+    },
+    "salary_max": 141384.8,
+    "created": "2026-09-24T14:28:33Z",
+    "latitude": 40.684963,
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Vaco LLC"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "longitude": -80.107138,
+    "id": "5897266598",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicEtWSEljVzg4UkdaYTlvWFZwTEVnZyIsImkiOiI1ODk3MjY2NTk4In0.5JRbe3LPrusqqdARka7mPkFFlg40FqjXB11BncENvLg",
+    "salary_is_predicted": "1",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Pennsylvania",
+        "Butler County",
+        "Cranberry Township"
+      ],
+      "display_name": "Cranberry Township, Butler County"
+    },
+    "title": "Data Scientist",
+    "description": "Work Authorization Candidates must currently reside in the Pittsburgh area and be available for a hybrid schedule. This opportunity is for direct hire only and is not available for C2C, third-party submissions, or visa sponsorship Data Scientist We are seeking a versatile Data Scientist to join our team in Pittsburgh, PA. This is a direct hire position offering a hybrid work schedule for candidates who currently reside in the Pittsburgh area. This role is not open to C2C, visa sponsorship, or t\u2026",
+    "redirect_url": "https://www.adzuna.com/land/ad/5897266598?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=85FDBA5E8672D37448EDCC7A1A8589017B88AEF3"
+  },
+  {
+    "salary_min": 131289.88,
+    "category": {
+      "tag": "scientific-qa-jobs",
+      "label": "Scientific & QA Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "company": {
+      "display_name": "Booz Allen Hamilton",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "id": "5889584529",
+    "created": "2026-09-18T12:30:08Z",
+    "salary_max": 131289.88,
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicEtWSEljVzg4UkdaYTlvWFZwTEVnZyIsImkiOiI1ODg5NTg0NTI5In0.t2QS_AyrjmONS3kEy2cBf8IDsr8piUNi9t8467t9614",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US"
+      ],
+      "display_name": "US"
+    },
+    "description": "Job Number: R0238939 Data Scientist The Opportunity: As an analytics professional, you're excited at the prospect of unlocking the secrets held by a data set, and you're fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. If you care about moving a mission forward as much as advancing the field of data science, this is the opportunity for you. Your deep AI and analytics expertise and advisory mindset, coupled with an original approach to your work, w\u2026",
+    "redirect_url": "https://www.adzuna.com/land/ad/5889584529?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=DCD7DC6DF5415530362B4355F112C3D69DC14011",
+    "title": "Data Scientist"
   }
 ]
