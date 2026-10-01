@@ -1,158 +1,167 @@
 [
   {
+    "created": "2026-09-30T22:58:13Z",
+    "company": {
+      "display_name": "Clarity Innovations",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
     "salary_is_predicted": "1",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzc3MjQ1NSIsInMiOiJwS1ZISWNXODhSR1phOW9YVnBMRWdnIn0.D1nQwGgNxgoJiwqs9bRaLHqUYLHv6NsL5ANIkYgPPZ0",
+    "latitude": 28.1164,
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
+    },
+    "location": {
+      "display_name": "Tampa Palms, Hillsborough County",
+      "area": [
+        "US",
+        "Florida",
+        "Hillsborough County",
+        "Tampa Palms"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "description": "Clarity Innovations is a trusted national security partner, dedicated to safeguarding our nation\u2019s interests and delivering innovative solutions that empower the Intelligence Community (IC) and Department of Defense (DoD) to transform data into actionable intelligence, ensuring mission success in an evolving world. Our mission-first software and data engineering platform modernizes data operations, utilizing advanced workflows, CI/CD, and secure DevSecOps practices. We focus on challenges in In\u2026",
+    "title": "Data Scientist",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2hhV2RaSzk4UkdFWU4wOWpSZmNZQSIsImkiOiI1OTA0NTE3ODA5In0.ZwJu4DlGTXVVExzFaGn-Z-YdIDwuj1DaXiTiHQD2OhY",
+    "redirect_url": "https://www.adzuna.com/land/ad/5904517809?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=29A448FC610CC03D63A7EAC9BD1B229B09A0B7F0",
+    "id": "5904517809",
+    "salary_max": 144574.72,
+    "longitude": -82.36277,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 144574.72
+  },
+  {
+    "salary_is_predicted": "1",
+    "created": "2026-09-30T16:23:07Z",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Clarity Innovations"
+    },
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "location": {
+      "display_name": "Tampa, Hillsborough County",
+      "area": [
+        "US",
+        "Florida",
+        "Hillsborough County",
+        "Tampa"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "latitude": 27.955269,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwNDIyNzE1OCIsInMiOiJfaGFXZFpLOThSR0VZTjA5alJmY1lBIn0.md4WO4S2BkbMItQs9xTt7VpMXLAE6zx_encK6D7174E",
+    "title": "Data Scientist",
+    "description": "Clarity Innovations is a trusted national security partner, dedicated to safeguarding our nation\u2019s interests and delivering innovative solutions that empower the Intelligence Community (IC) and Department of Defense (DoD) to transform data into actionable intelligence, ensuring mission success in an evolving world. Our mission-first software and data engineering platform modernizes data operations, utilizing advanced workflows, CI/CD, and secure DevSecOps practices. We focus on challenges in In\u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 114316.44,
+    "longitude": -82.45632,
+    "salary_max": 114316.44,
+    "redirect_url": "https://www.adzuna.com/land/ad/5904227158?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=F3AEFE08FF09AEF3C14B7D7D599DBA8C30A9CC11",
+    "id": "5904227158"
+  },
+  {
+    "redirect_url": "https://www.adzuna.com/land/ad/5904474068?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=3EDB0C39A2126D30734A83DBFC0F71E11D39C854",
+    "id": "5904474068",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "created": "2026-09-30T22:21:36Z",
+    "contract_time": "full_time",
+    "salary_is_predicted": "1",
+    "latitude": 45.674245,
+    "category": {
+      "label": "IT Jobs",
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
+    },
+    "description": "Data Scientist Description - Turn Data Into Stories. Turn AI Into Impact. At HP, we believe data is more than numbers. It's a story waiting to be uncovered. Every dataset contains insights that can improve customer experiences, accelerate innovation, and shape the future of technology. We are seeking a Data Scientist who combines technical expertise, business curiosity, and storytelling skills to transform complex data into compelling narratives that drive action. As part of HP's data science c\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2hhV2RaSzk4UkdFWU4wOWpSZmNZQSIsImkiOiI1OTA0NDc0MDY4In0.CYzaJR1MnKvRvsKtZ7f8AvmvNm_DQQQqUkG-YW0mcVw",
+    "title": "Data Scientist",
+    "salary_max": 128834.02,
+    "salary_min": 128834.02,
+    "longitude": -122.576918,
+    "company": {
+      "display_name": "HP",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
     "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "West Virginia"
+        "Washington",
+        "Clark County",
+        "Orchards"
       ],
-      "display_name": "West Virginia, US"
-    },
-    "description": "Job Description Avenue Code is the leading software consultancy focused on delivering end-to-end development solutions for digital transformation across every vertical. We\u2019re privately held, profitable, and have been on a solid growth trajectory since day one. We care deeply about our clients, our partners, and our people. We prefer the word \u2018partner\u2019 over \u2018vendor\u2019, and our investment in professional relationships is a reflection of that philosophy. We pride ourselves on our technical acumen, o\u2026",
-    "redirect_url": "https://www.adzuna.com/land/ad/5903772455?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=C0F5B65EA9D12A2461E8E6EBA7B6CB1E0291BDD1",
-    "title": "Data Scientist",
-    "salary_min": 147427.89,
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Avenue Code"
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "longitude": -80.682155,
-    "id": "5903772455",
-    "salary_max": 147427.89,
-    "created": "2026-09-30T06:40:21Z",
-    "latitude": 38.771041
-  },
-  {
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "company": {
-      "display_name": "SteerBridge",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "longitude": -77.220397,
-    "id": "5899275443",
-    "created": "2026-09-26T00:52:09Z",
-    "salary_max": 136157.62,
-    "latitude": 38.893471,
-    "salary_min": 136157.62,
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "description": "Job Description Senior Data Scientist \\n Vienna, VA \\n Aviation \u2013 Tech Team / \\n Full-time / \\n On-site \\n SteerBridge is a modern technology company delivering innovative, mission\u2011focused solutions to the U.S. Government and private sector. Leveraging deep expertise in federal acquisition, digital transformation, and emerging technologies, we deliver agile, commercial\u2011grade capabilities that accelerate operational effectiveness and drive measurable mission success. \\n At the core of SteerBridg\u2026",
-    "redirect_url": "https://www.adzuna.com/land/ad/5899275443?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=1578493AE9D31D2183BFC42D4DFEAD1516269D84",
-    "title": "Data Scientist",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicEtWSEljVzg4UkdaYTlvWFZwTEVnZyIsImkiOiI1ODk5Mjc1NDQzIn0.uyxkx40Z_s2tpAGCdfjpszxi7R4-65R3DL6Vu9WYG1M",
-    "salary_is_predicted": "1",
-    "location": {
-      "display_name": "Vienna, Fairfax County",
-      "area": [
-        "US",
-        "Virginia",
-        "Fairfax County",
-        "Vienna"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location"
+      "display_name": "Orchards, Clark County"
     }
   },
   {
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    },
-    "salary_min": 136829.95,
-    "id": "5903770358",
-    "longitude": -80.682155,
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "contract_time": "full_time",
+    "salary_is_predicted": "1",
+    "created": "2026-09-30T16:45:29Z",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Innovatix Technology Partners"
+      "display_name": "HP"
     },
-    "latitude": 38.771041,
-    "salary_max": 136829.95,
-    "created": "2026-09-30T06:39:13Z",
     "location": {
-      "area": [
-        "US",
-        "West Virginia"
-      ],
-      "display_name": "West Virginia, US",
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzc3MDM1OCIsInMiOiJwS1ZISWNXODhSR1phOW9YVnBMRWdnIn0.TzipUMiSHkLUOmGQtuKDaUgDUVetUtxwFNY3l9x4V2k",
-    "salary_is_predicted": "1",
-    "redirect_url": "https://www.adzuna.com/land/ad/5903770358?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=5659A0448AD3E7424A894F6F431BAF2D6D53C760",
-    "description": "Job Description Role: Data Scientist \\n Duration: 12 Months \\n Location: Open for Remote Work from the US \\n \\n As a senior-level scientist, you will primarily be responsible for one major release at a time with a high degree of individual ownership. While not all research leads to successful deployed systems, past successes have seen a general availability launch typically ~6 months from project start. Our solutions have used a wide range of approaches, including: agentic systems and model con\u2026",
-    "title": "Data Scientist"
-  },
-  {
-    "salary_min": 141384.8,
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "salary_max": 141384.8,
-    "created": "2026-09-24T14:28:33Z",
-    "latitude": 40.684963,
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Vaco LLC"
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "longitude": -80.107138,
-    "id": "5897266598",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicEtWSEljVzg4UkdaYTlvWFZwTEVnZyIsImkiOiI1ODk3MjY2NTk4In0.5JRbe3LPrusqqdARka7mPkFFlg40FqjXB11BncENvLg",
-    "salary_is_predicted": "1",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Pennsylvania",
-        "Butler County",
-        "Cranberry Township"
-      ],
-      "display_name": "Cranberry Township, Butler County"
-    },
-    "title": "Data Scientist",
-    "description": "Work Authorization Candidates must currently reside in the Pittsburgh area and be available for a hybrid schedule. This opportunity is for direct hire only and is not available for C2C, third-party submissions, or visa sponsorship Data Scientist We are seeking a versatile Data Scientist to join our team in Pittsburgh, PA. This is a direct hire position offering a hybrid work schedule for candidates who currently reside in the Pittsburgh area. This role is not open to C2C, visa sponsorship, or t\u2026",
-    "redirect_url": "https://www.adzuna.com/land/ad/5897266598?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=85FDBA5E8672D37448EDCC7A1A8589017B88AEF3"
-  },
-  {
-    "salary_min": 131289.88,
-    "category": {
-      "tag": "scientific-qa-jobs",
-      "label": "Scientific & QA Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "company": {
-      "display_name": "Booz Allen Hamilton",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "id": "5889584529",
-    "created": "2026-09-18T12:30:08Z",
-    "salary_max": 131289.88,
-    "salary_is_predicted": "1",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoicEtWSEljVzg4UkdaYTlvWFZwTEVnZyIsImkiOiI1ODg5NTg0NTI5In0.t2QS_AyrjmONS3kEy2cBf8IDsr8piUNi9t8467t9614",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "US",
       "area": [
         "US"
       ],
-      "display_name": "US"
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "description": "Job Number: R0238939 Data Scientist The Opportunity: As an analytics professional, you're excited at the prospect of unlocking the secrets held by a data set, and you're fascinated by the possibilities presented by IoT, machine learning, and artificial intelligence. If you care about moving a mission forward as much as advancing the field of data science, this is the opportunity for you. Your deep AI and analytics expertise and advisory mindset, coupled with an original approach to your work, w\u2026",
-    "redirect_url": "https://www.adzuna.com/land/ad/5889584529?se=pKVHIcW88RGZa9oXVpLEgg&utm_medium=api&utm_source=851bf6c5&v=DCD7DC6DF5415530362B4355F112C3D69DC14011",
-    "title": "Data Scientist"
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "title": "Data Scientist",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2hhV2RaSzk4UkdFWU4wOWpSZmNZQSIsImkiOiI1OTA0MjQ5MTIwIn0.PWclhcMFYlo7fRo8MZ9NEL_JNNU2y16aRhJjQwG-bYw",
+    "description": "Data Scientist Description - Turn Data Into Stories. Turn AI Into Impact. At HP, we believe data is more than numbers. It's a story waiting to be uncovered. Every dataset contains insights that can improve customer experiences, accelerate innovation, and shape the future of technology. We are seeking a Data Scientist who combines technical expertise, business curiosity, and storytelling skills to transform complex data into compelling narratives that drive action. As part of HP's data science c\u2026",
+    "salary_min": 118092.79,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5904249120?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=F4C677BF387034F48BFF165915FE4351A52FD06E",
+    "id": "5904249120",
+    "salary_max": 118092.79
+  },
+  {
+    "company": {
+      "display_name": "City of New York",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "contract_type": "contract",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "New York",
+        "New York City",
+        "Manhattan",
+        "Grand Central"
+      ],
+      "display_name": "Grand Central, Manhattan"
+    },
+    "description": "Job Description The New York City Department of Transportation (DOT) provides for the safe, efficient, and environmentally responsible movement of people and goods in the City of New York and maintains and enhances the transportation infrastructure crucial to the economic vitality and quality of life of City residents. DOT is an equal opportunity employer, committed to recruiting and maintaining a diverse workforce in an open and inclusive environment. This candidate will serve as a Data Scient\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwNTA2MDkxMSIsInMiOiJfaGFXZFpLOThSR0VZTjA5alJmY1lBIn0.EtlR3emcyP6Pmoy751XEC3Is6atqmVN05U1nTG6ePgo",
+    "title": "Data Scientist",
+    "salary_max": 106829.46,
+    "salary_min": 106829.46,
+    "longitude": -73.97528,
+    "created": "2026-10-01T03:04:54Z",
+    "salary_is_predicted": "1",
+    "contract_time": "full_time",
+    "latitude": 40.75284,
+    "category": {
+      "tag": "scientific-qa-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "Scientific & QA Jobs"
+    },
+    "id": "5905060911",
+    "redirect_url": "https://www.adzuna.com/land/ad/5905060911?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=5FECC3CFA61F2F03D2416EEB3244423FE92FE01E",
+    "__CLASS__": "Adzuna::API::Response::Job"
   }
 ]
