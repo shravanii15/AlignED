@@ -1,139 +1,88 @@
 [
   {
     "created": "2026-09-30T22:58:13Z",
-    "company": {
-      "display_name": "Clarity Innovations",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "salary_is_predicted": "1",
-    "latitude": 28.1164,
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs",
-      "label": "IT Jobs"
-    },
+    "__CLASS__": "Adzuna::API::Response::Job",
     "location": {
       "display_name": "Tampa Palms, Hillsborough County",
+      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Florida",
         "Hillsborough County",
         "Tampa Palms"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "description": "Clarity Innovations is a trusted national security partner, dedicated to safeguarding our nation\u2019s interests and delivering innovative solutions that empower the Intelligence Community (IC) and Department of Defense (DoD) to transform data into actionable intelligence, ensuring mission success in an evolving world. Our mission-first software and data engineering platform modernizes data operations, utilizing advanced workflows, CI/CD, and secure DevSecOps practices. We focus on challenges in In\u2026",
-    "title": "Data Scientist",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2hhV2RaSzk4UkdFWU4wOWpSZmNZQSIsImkiOiI1OTA0NTE3ODA5In0.ZwJu4DlGTXVVExzFaGn-Z-YdIDwuj1DaXiTiHQD2OhY",
-    "redirect_url": "https://www.adzuna.com/land/ad/5904517809?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=29A448FC610CC03D63A7EAC9BD1B229B09A0B7F0",
-    "id": "5904517809",
-    "salary_max": 144574.72,
-    "longitude": -82.36277,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_min": 144574.72
-  },
-  {
-    "salary_is_predicted": "1",
-    "created": "2026-09-30T16:23:07Z",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Clarity Innovations"
+      ]
     },
     "category": {
-      "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
+      "tag": "it-jobs",
+      "label": "IT Jobs"
     },
+    "redirect_url": "https://www.adzuna.com/land/ad/5904517809?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=29A448FC610CC03D63A7EAC9BD1B229B09A0B7F0",
+    "company": {
+      "display_name": "Clarity Innovations",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "longitude": -82.36277,
+    "latitude": 28.1164,
+    "title": "Data Scientist",
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwNDUxNzgwOSIsInMiOiJtZzV6SmxlLThSR2c4NnFuaFpRTEVnIn0.fulzYwtJo_28ICXLDQLYtNBBbeXfQycU4LTAjSTV394",
+    "id": "5904517809",
+    "salary_max": 144574.72,
+    "salary_min": 144574.72,
+    "description": "Clarity Innovations is a trusted national security partner, dedicated to safeguarding our nation\u2019s interests and delivering innovative solutions that empower the Intelligence Community (IC) and Department of Defense (DoD) to transform data into actionable intelligence, ensuring mission success in an evolving world. Our mission-first software and data engineering platform modernizes data operations, utilizing advanced workflows, CI/CD, and secure DevSecOps practices. We focus on challenges in In\u2026"
+  },
+  {
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibWc1ekpsZS04UkdnODZxbmhaUUxFZyIsImkiOiI1OTA0MjI3MTU4In0._b62joybcLdKzfmVHPbg7Y2WJng5n8J8KyqPgWugpuE",
+    "salary_is_predicted": "1",
+    "title": "Data Scientist",
+    "latitude": 27.955269,
+    "longitude": -82.45632,
+    "description": "Clarity Innovations is a trusted national security partner, dedicated to safeguarding our nation\u2019s interests and delivering innovative solutions that empower the Intelligence Community (IC) and Department of Defense (DoD) to transform data into actionable intelligence, ensuring mission success in an evolving world. Our mission-first software and data engineering platform modernizes data operations, utilizing advanced workflows, CI/CD, and secure DevSecOps practices. We focus on challenges in In\u2026",
+    "salary_max": 114316.44,
+    "salary_min": 114316.44,
+    "id": "5904227158",
     "location": {
-      "display_name": "Tampa, Hillsborough County",
       "area": [
         "US",
         "Florida",
         "Hillsborough County",
         "Tampa"
       ],
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "latitude": 27.955269,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwNDIyNzE1OCIsInMiOiJfaGFXZFpLOThSR0VZTjA5alJmY1lBIn0.md4WO4S2BkbMItQs9xTt7VpMXLAE6zx_encK6D7174E",
-    "title": "Data Scientist",
-    "description": "Clarity Innovations is a trusted national security partner, dedicated to safeguarding our nation\u2019s interests and delivering innovative solutions that empower the Intelligence Community (IC) and Department of Defense (DoD) to transform data into actionable intelligence, ensuring mission success in an evolving world. Our mission-first software and data engineering platform modernizes data operations, utilizing advanced workflows, CI/CD, and secure DevSecOps practices. We focus on challenges in In\u2026",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "salary_min": 114316.44,
-    "longitude": -82.45632,
-    "salary_max": 114316.44,
-    "redirect_url": "https://www.adzuna.com/land/ad/5904227158?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=F3AEFE08FF09AEF3C14B7D7D599DBA8C30A9CC11",
-    "id": "5904227158"
-  },
-  {
-    "redirect_url": "https://www.adzuna.com/land/ad/5904474068?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=3EDB0C39A2126D30734A83DBFC0F71E11D39C854",
-    "id": "5904474068",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "created": "2026-09-30T22:21:36Z",
-    "contract_time": "full_time",
-    "salary_is_predicted": "1",
-    "latitude": 45.674245,
-    "category": {
-      "label": "IT Jobs",
-      "tag": "it-jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
-    "description": "Data Scientist Description - Turn Data Into Stories. Turn AI Into Impact. At HP, we believe data is more than numbers. It's a story waiting to be uncovered. Every dataset contains insights that can improve customer experiences, accelerate innovation, and shape the future of technology. We are seeking a Data Scientist who combines technical expertise, business curiosity, and storytelling skills to transform complex data into compelling narratives that drive action. As part of HP's data science c\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2hhV2RaSzk4UkdFWU4wOWpSZmNZQSIsImkiOiI1OTA0NDc0MDY4In0.CYzaJR1MnKvRvsKtZ7f8AvmvNm_DQQQqUkG-YW0mcVw",
-    "title": "Data Scientist",
-    "salary_max": 128834.02,
-    "salary_min": 128834.02,
-    "longitude": -122.576918,
-    "company": {
-      "display_name": "HP",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Washington",
-        "Clark County",
-        "Orchards"
-      ],
-      "display_name": "Orchards, Clark County"
+      "display_name": "Tampa, Hillsborough County"
+    },
+    "created": "2026-09-30T16:23:07Z",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Clarity Innovations"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5904227158?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=F3AEFE08FF09AEF3C14B7D7D599DBA8C30A9CC11",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
     }
   },
   {
-    "contract_time": "full_time",
-    "salary_is_predicted": "1",
-    "created": "2026-09-30T16:45:29Z",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5905060911?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=5FECC3CFA61F2F03D2416EEB3244423FE92FE01E",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "scientific-qa-jobs",
+      "label": "Scientific & QA Jobs"
+    },
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "HP"
+      "display_name": "City of New York"
     },
-    "location": {
-      "display_name": "US",
-      "area": [
-        "US"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location"
-    },
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    },
+    "salary_is_predicted": "1",
+    "latitude": 40.75284,
     "title": "Data Scientist",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiX2hhV2RaSzk4UkdFWU4wOWpSZmNZQSIsImkiOiI1OTA0MjQ5MTIwIn0.PWclhcMFYlo7fRo8MZ9NEL_JNNU2y16aRhJjQwG-bYw",
-    "description": "Data Scientist Description - Turn Data Into Stories. Turn AI Into Impact. At HP, we believe data is more than numbers. It's a story waiting to be uncovered. Every dataset contains insights that can improve customer experiences, accelerate innovation, and shape the future of technology. We are seeking a Data Scientist who combines technical expertise, business curiosity, and storytelling skills to transform complex data into compelling narratives that drive action. As part of HP's data science c\u2026",
-    "salary_min": 118092.79,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "redirect_url": "https://www.adzuna.com/land/ad/5904249120?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=F4C677BF387034F48BFF165915FE4351A52FD06E",
-    "id": "5904249120",
-    "salary_max": 118092.79
-  },
-  {
-    "company": {
-      "display_name": "City of New York",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "contract_type": "contract",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibWc1ekpsZS04UkdnODZxbmhaUUxFZyIsImkiOiI1OTA1MDYwOTExIn0.u_MXIfGxWS8ymuN42QQYrjAs2VPtK1UAbHUA2vINH6w",
+    "id": "5905060911",
+    "created": "2026-10-01T03:04:54Z",
     "location": {
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
@@ -145,23 +94,81 @@
       ],
       "display_name": "Grand Central, Manhattan"
     },
-    "description": "Job Description The New York City Department of Transportation (DOT) provides for the safe, efficient, and environmentally responsible movement of people and goods in the City of New York and maintains and enhances the transportation infrastructure crucial to the economic vitality and quality of life of City residents. DOT is an equal opportunity employer, committed to recruiting and maintaining a diverse workforce in an open and inclusive environment. This candidate will serve as a Data Scient\u2026",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwNTA2MDkxMSIsInMiOiJfaGFXZFpLOThSR0VZTjA5alJmY1lBIn0.EtlR3emcyP6Pmoy751XEC3Is6atqmVN05U1nTG6ePgo",
-    "title": "Data Scientist",
-    "salary_max": 106829.46,
-    "salary_min": 106829.46,
-    "longitude": -73.97528,
-    "created": "2026-10-01T03:04:54Z",
-    "salary_is_predicted": "1",
     "contract_time": "full_time",
-    "latitude": 40.75284,
+    "contract_type": "contract",
+    "longitude": -73.97528,
+    "salary_min": 106829.46,
+    "salary_max": 106829.46,
+    "description": "Job Description The New York City Department of Transportation (DOT) provides for the safe, efficient, and environmentally responsible movement of people and goods in the City of New York and maintains and enhances the transportation infrastructure crucial to the economic vitality and quality of life of City residents. DOT is an equal opportunity employer, committed to recruiting and maintaining a diverse workforce in an open and inclusive environment. This candidate will serve as a Data Scient\u2026"
+  },
+  {
+    "description": "Location: Cambridge, MA / Hybrid (This role requires working in-office 3 days per week: Tuesday, Wednesday, and Thursday.) About us: EverQuote is a leading AI-powered growth solutions partner for regulated property and casualty insurance entities, enabling the largest insurance carriers and thousands of agents to maximize customer acquisition across digital channels. Fueled by our proprietary data assets and our AI traffic engine, EverQuote is transforming the way providers attract and engage c\u2026",
+    "salary_max": 132794.53,
+    "salary_min": 132794.53,
+    "longitude": -71.13891,
+    "contract_time": "full_time",
+    "contract_type": "contract",
+    "created": "2026-10-02T01:39:59Z",
+    "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "area": [
+        "US",
+        "Massachusetts",
+        "Middlesex County",
+        "Cambridge"
+      ],
+      "display_name": "Cambridge, Middlesex County"
+    },
+    "id": "5907441539",
+    "salary_is_predicted": "1",
+    "title": "Data Scientist",
+    "latitude": 42.380327,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibWc1ekpsZS04UkdnODZxbmhaUUxFZyIsImkiOiI1OTA3NDQxNTM5In0.44vvQ3tnpm6rCwJ4QPLwIYYuUumOb5TsRsFUPaREmaU",
     "category": {
-      "tag": "scientific-qa-jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
+      "label": "IT Jobs",
+      "tag": "it-jobs"
+    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5907441539?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=99062FFF90002B68B362FE532621D74061431778",
+    "company": {
+      "display_name": "EverQuote",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job"
+  },
+  {
+    "created": "2026-09-30T16:37:53Z",
+    "location": {
+      "area": [
+        "US",
+        "New York",
+        "Albany County",
+        "Ny State Campus"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Ny State Campus, Albany County"
+    },
+    "contract_time": "full_time",
+    "contract_type": "contract",
+    "longitude": -73.808983,
+    "salary_max": 85875.59,
+    "salary_min": 85875.59,
+    "description": "Job Description The New York City Department of Transportation (DOT) provides for the safe, efficient, and environmentally responsible movement of people and goods in the City of New York and maintains and enhances the transportation infrastructure crucial to the economic vitality and quality of life of City residents. DOT is an equal opportunity employer, committed to recruiting and maintaining a diverse workforce in an open and inclusive environment. This candidate will serve as a Data Scient\u2026",
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "redirect_url": "https://www.adzuna.com/land/ad/5904237842?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=4C366EA5CB63D17B7F4305293E1E6C33BEC05DDA",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "scientific-qa-jobs",
       "label": "Scientific & QA Jobs"
     },
-    "id": "5905060911",
-    "redirect_url": "https://www.adzuna.com/land/ad/5905060911?se=_haWdZK98RGEYN09jRfcYA&utm_medium=api&utm_source=851bf6c5&v=5FECC3CFA61F2F03D2416EEB3244423FE92FE01E",
-    "__CLASS__": "Adzuna::API::Response::Job"
+    "company": {
+      "display_name": "City of New York",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "latitude": 42.679357,
+    "title": "Data Scientist",
+    "salary_is_predicted": "1",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwNDIzNzg0MiIsInMiOiJtZzV6SmxlLThSR2c4NnFuaFpRTEVnIn0.hc10GnwDJr5uAePjE_2XPwtlTeE7GV3tqDwiax0xSt8",
+    "id": "5904237842"
   }
 ]
