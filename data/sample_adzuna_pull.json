@@ -1,174 +1,167 @@
 [
   {
-    "created": "2026-09-30T22:58:13Z",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "location": {
-      "display_name": "Tampa Palms, Hillsborough County",
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Florida",
-        "Hillsborough County",
-        "Tampa Palms"
-      ]
-    },
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001213?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=C9FBA9C213D1732A3D1799E285D0768C173362AC",
+    "salary_max": 67754.73,
+    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
     "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
       "tag": "it-jobs",
-      "label": "IT Jobs"
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5904517809?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=29A448FC610CC03D63A7EAC9BD1B229B09A0B7F0",
-    "company": {
-      "display_name": "Clarity Innovations",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "longitude": -82.36277,
-    "latitude": 28.1164,
-    "title": "Data Scientist",
+    "created": "2026-09-29T14:35:44Z",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTIxMyIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.gi1HcNFll5RWZhlLfYautFoWL6ehtYezzqxcQ60djXg",
     "salary_is_predicted": "1",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwNDUxNzgwOSIsInMiOiJtZzV6SmxlLThSR2c4NnFuaFpRTEVnIn0.fulzYwtJo_28ICXLDQLYtNBBbeXfQycU4LTAjSTV394",
-    "id": "5904517809",
-    "salary_max": 144574.72,
-    "salary_min": 144574.72,
-    "description": "Clarity Innovations is a trusted national security partner, dedicated to safeguarding our nation\u2019s interests and delivering innovative solutions that empower the Intelligence Community (IC) and Department of Defense (DoD) to transform data into actionable intelligence, ensuring mission success in an evolving world. Our mission-first software and data engineering platform modernizes data operations, utilizing advanced workflows, CI/CD, and secure DevSecOps practices. We focus on challenges in In\u2026"
-  },
-  {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibWc1ekpsZS04UkdnODZxbmhaUUxFZyIsImkiOiI1OTA0MjI3MTU4In0._b62joybcLdKzfmVHPbg7Y2WJng5n8J8KyqPgWugpuE",
-    "salary_is_predicted": "1",
-    "title": "Data Scientist",
-    "latitude": 27.955269,
-    "longitude": -82.45632,
-    "description": "Clarity Innovations is a trusted national security partner, dedicated to safeguarding our nation\u2019s interests and delivering innovative solutions that empower the Intelligence Community (IC) and Department of Defense (DoD) to transform data into actionable intelligence, ensuring mission success in an evolving world. Our mission-first software and data engineering platform modernizes data operations, utilizing advanced workflows, CI/CD, and secure DevSecOps practices. We focus on challenges in In\u2026",
-    "salary_max": 114316.44,
-    "salary_min": 114316.44,
-    "id": "5904227158",
-    "location": {
-      "area": [
-        "US",
-        "Florida",
-        "Hillsborough County",
-        "Tampa"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Tampa, Hillsborough County"
-    },
-    "created": "2026-09-30T16:23:07Z",
-    "__CLASS__": "Adzuna::API::Response::Job",
+    "salary_min": 67754.73,
+    "longitude": -86.662827,
+    "id": "5903001213",
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Clarity Innovations"
+      "display_name": "Starbucks"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5904227158?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=F3AEFE08FF09AEF3C14B7D7D599DBA8C30A9CC11",
+    "location": {
+      "area": [
+        "US",
+        "Tennessee",
+        "Williamson County",
+        "Nolensville"
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Nolensville, Williamson County"
+    },
+    "latitude": 35.95412,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026"
+  },
+  {
+    "longitude": -87.289101,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTIwNCIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.zAtdu7aDnQzg3g2t2GIaVLoayUmOimTi2ycG4xYBrM4",
+    "salary_min": 67618.21,
+    "salary_is_predicted": "1",
+    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001204?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=A5224BF99F71ED6A085975FFA57EFCB9678A2455",
+    "salary_max": 67618.21,
+    "created": "2026-09-29T14:35:44Z",
     "category": {
+      "label": "IT Jobs",
       "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs",
-      "label": "IT Jobs"
+      "tag": "it-jobs"
+    },
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
+    "latitude": 35.946893,
+    "location": {
+      "area": [
+        "US",
+        "Tennessee",
+        "Hickman County",
+        "Bon Aqua"
+      ],
+      "display_name": "Bon Aqua, Hickman County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "id": "5903001204",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Starbucks"
     }
   },
   {
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "redirect_url": "https://www.adzuna.com/land/ad/5905060911?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=5FECC3CFA61F2F03D2416EEB3244423FE92FE01E",
-    "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "scientific-qa-jobs",
-      "label": "Scientific & QA Jobs"
-    },
     "company": {
       "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "City of New York"
+      "display_name": "Starbucks"
     },
-    "salary_is_predicted": "1",
-    "latitude": 40.75284,
-    "title": "Data Scientist",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibWc1ekpsZS04UkdnODZxbmhaUUxFZyIsImkiOiI1OTA1MDYwOTExIn0.u_MXIfGxWS8ymuN42QQYrjAs2VPtK1UAbHUA2vINH6w",
-    "id": "5905060911",
-    "created": "2026-10-01T03:04:54Z",
+    "id": "5903001184",
     "location": {
+      "display_name": "Watertown, Wilson County",
       "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
-        "New York",
-        "New York City",
-        "Manhattan",
-        "Grand Central"
-      ],
-      "display_name": "Grand Central, Manhattan"
+        "Tennessee",
+        "Wilson County",
+        "Watertown"
+      ]
     },
-    "contract_time": "full_time",
-    "contract_type": "contract",
-    "longitude": -73.97528,
-    "salary_min": 106829.46,
-    "salary_max": 106829.46,
-    "description": "Job Description The New York City Department of Transportation (DOT) provides for the safe, efficient, and environmentally responsible movement of people and goods in the City of New York and maintains and enhances the transportation infrastructure crucial to the economic vitality and quality of life of City residents. DOT is an equal opportunity employer, committed to recruiting and maintaining a diverse workforce in an open and inclusive environment. This candidate will serve as a Data Scient\u2026"
-  },
-  {
-    "description": "Location: Cambridge, MA / Hybrid (This role requires working in-office 3 days per week: Tuesday, Wednesday, and Thursday.) About us: EverQuote is a leading AI-powered growth solutions partner for regulated property and casualty insurance entities, enabling the largest insurance carriers and thousands of agents to maximize customer acquisition across digital channels. Fueled by our proprietary data assets and our AI traffic engine, EverQuote is transforming the way providers attract and engage c\u2026",
-    "salary_max": 132794.53,
-    "salary_min": 132794.53,
-    "longitude": -71.13891,
-    "contract_time": "full_time",
-    "contract_type": "contract",
-    "created": "2026-10-02T01:39:59Z",
-    "location": {
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "area": [
-        "US",
-        "Massachusetts",
-        "Middlesex County",
-        "Cambridge"
-      ],
-      "display_name": "Cambridge, Middlesex County"
-    },
-    "id": "5907441539",
-    "salary_is_predicted": "1",
-    "title": "Data Scientist",
-    "latitude": 42.380327,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoibWc1ekpsZS04UkdnODZxbmhaUUxFZyIsImkiOiI1OTA3NDQxNTM5In0.44vvQ3tnpm6rCwJ4QPLwIYYuUumOb5TsRsFUPaREmaU",
+    "latitude": 36.101484,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
+    "salary_max": 69586.09,
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001184?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=A5A933EFFE2CF29E18070130ACCBD2027A89FB19",
+    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
+    "created": "2026-09-29T14:35:43Z",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
     },
-    "redirect_url": "https://www.adzuna.com/land/ad/5907441539?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=99062FFF90002B68B362FE532621D74061431778",
-    "company": {
-      "display_name": "EverQuote",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "__CLASS__": "Adzuna::API::Response::Job"
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTE4NCIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.jiziuG9x8gwEGm_9YOiRoeBAS4lfz-brQLEvbyIVH8k",
+    "salary_is_predicted": "1",
+    "salary_min": 69586.09,
+    "longitude": -86.145749
   },
   {
-    "created": "2026-09-30T16:37:53Z",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTM5OCIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.GWA-JpdW0ERBzxB62mwuKS5TKTqa_IcbeEfuKeD5Cr8",
+    "salary_min": 86443.53,
+    "salary_is_predicted": "1",
+    "longitude": -86.897142,
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001398?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=723D5163BB2EAE1FBEF5718C60314A31E7B081BE",
+    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
+    "salary_max": 86443.53,
+    "created": "2026-09-29T14:35:50Z",
+    "category": {
+      "label": "IT Jobs",
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs"
+    },
+    "latitude": 35.789378,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
+    "company": {
+      "display_name": "Starbucks",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "id": "5903001398",
     "location": {
       "area": [
         "US",
-        "New York",
-        "Albany County",
-        "Ny State Campus"
+        "Tennessee",
+        "Williamson County",
+        "Thompsons Station"
       ],
       "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Ny State Campus, Albany County"
-    },
-    "contract_time": "full_time",
-    "contract_type": "contract",
-    "longitude": -73.808983,
-    "salary_max": 85875.59,
-    "salary_min": 85875.59,
-    "description": "Job Description The New York City Department of Transportation (DOT) provides for the safe, efficient, and environmentally responsible movement of people and goods in the City of New York and maintains and enhances the transportation infrastructure crucial to the economic vitality and quality of life of City residents. DOT is an equal opportunity employer, committed to recruiting and maintaining a diverse workforce in an open and inclusive environment. This candidate will serve as a Data Scient\u2026",
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "redirect_url": "https://www.adzuna.com/land/ad/5904237842?se=mg5zJle-8RGg86qnhZQLEg&utm_medium=api&utm_source=851bf6c5&v=4C366EA5CB63D17B7F4305293E1E6C33BEC05DDA",
+      "display_name": "Thompsons Station, Williamson County"
+    }
+  },
+  {
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001220?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=24C4D3122F2DC0F1AD2D3C07EA56A6F407CFFEE9",
+    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
+    "salary_max": 79564.08,
+    "created": "2026-09-29T14:35:44Z",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "scientific-qa-jobs",
-      "label": "Scientific & QA Jobs"
+      "label": "IT Jobs",
+      "tag": "it-jobs"
     },
-    "company": {
-      "display_name": "City of New York",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "latitude": 42.679357,
-    "title": "Data Scientist",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTIyMCIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.DkP-8jp8jDaq90JNH9pGX8StGiSvnfL0CDgs-szQqvE",
     "salary_is_predicted": "1",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwNDIzNzg0MiIsInMiOiJtZzV6SmxlLThSR2c4NnFuaFpRTEVnIn0.hc10GnwDJr5uAePjE_2XPwtlTeE7GV3tqDwiax0xSt8",
-    "id": "5904237842"
+    "salary_min": 79564.08,
+    "longitude": -86.870305,
+    "id": "5903001220",
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Starbucks"
+    },
+    "location": {
+      "area": [
+        "US",
+        "Tennessee",
+        "Robertson County",
+        "Coopertown"
+      ],
+      "display_name": "Coopertown, Robertson County",
+      "__CLASS__": "Adzuna::API::Response::Location"
+    },
+    "latitude": 36.500587,
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026"
   }
 ]
