@@ -1,23 +1,24 @@
 [
   {
-    "redirect_url": "https://www.adzuna.com/land/ad/5903001213?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=C9FBA9C213D1732A3D1799E285D0768C173362AC",
-    "salary_max": 67754.73,
-    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
-    "category": {
-      "tag": "it-jobs",
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category"
-    },
     "created": "2026-09-29T14:35:44Z",
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTIxMyIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.gi1HcNFll5RWZhlLfYautFoWL6ehtYezzqxcQ60djXg",
-    "salary_is_predicted": "1",
-    "salary_min": 67754.73,
-    "longitude": -86.662827,
-    "id": "5903001213",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Starbucks"
+    "__CLASS__": "Adzuna::API::Response::Job",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUkxLcW1jREE4UkdUTWVra0FZbVdQdyIsImkiOiI1OTAzMDAxMjEzIn0.btRxMn5UujofN7bsXeYL4HBUOk-Ce5Yo6Xl-GiNpADw",
+    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
     },
+    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001213?se=RLKqmcDA8RGTMekkAYmWPw&utm_medium=api&utm_source=851bf6c5&v=C9FBA9C213D1732A3D1799E285D0768C173362AC",
+    "salary_max": 67754.73,
+    "id": "5903001213",
+    "salary_is_predicted": "1",
+    "company": {
+      "display_name": "Starbucks",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "salary_min": 67754.73,
     "location": {
       "area": [
         "US",
@@ -25,143 +26,142 @@
         "Williamson County",
         "Nolensville"
       ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Nolensville, Williamson County"
+      "display_name": "Nolensville, Williamson County",
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
     "latitude": 35.95412,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026"
+    "longitude": -86.662827
   },
   {
-    "longitude": -87.289101,
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTIwNCIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.zAtdu7aDnQzg3g2t2GIaVLoayUmOimTi2ycG4xYBrM4",
-    "salary_min": 67618.21,
-    "salary_is_predicted": "1",
     "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
-    "redirect_url": "https://www.adzuna.com/land/ad/5903001204?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=A5224BF99F71ED6A085975FFA57EFCB9678A2455",
-    "salary_max": 67618.21,
-    "created": "2026-09-29T14:35:44Z",
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001204?se=RLKqmcDA8RGTMekkAYmWPw&utm_medium=api&utm_source=851bf6c5&v=A5224BF99F71ED6A085975FFA57EFCB9678A2455",
     "category": {
       "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
+      "tag": "it-jobs",
+      "__CLASS__": "Adzuna::API::Response::Category"
     },
+    "created": "2026-09-29T14:35:44Z",
     "__CLASS__": "Adzuna::API::Response::Job",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUkxLcW1jREE4UkdUTWVra0FZbVdQdyIsImkiOiI1OTAzMDAxMjA0In0.w7fJpp9Fyh0PYguqY2pWmQNZWUmF-nlsWlLtYC5L8G0",
     "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
     "latitude": 35.946893,
+    "longitude": -87.289101,
     "location": {
+      "display_name": "Bon Aqua, Hickman County",
       "area": [
         "US",
         "Tennessee",
         "Hickman County",
         "Bon Aqua"
       ],
-      "display_name": "Bon Aqua, Hickman County",
       "__CLASS__": "Adzuna::API::Response::Location"
     },
+    "salary_max": 67618.21,
     "id": "5903001204",
+    "salary_is_predicted": "1",
+    "salary_min": 67618.21,
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Starbucks"
+      "display_name": "Starbucks",
+      "__CLASS__": "Adzuna::API::Response::Company"
     }
   },
   {
+    "salary_is_predicted": "1",
     "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Starbucks"
+      "display_name": "Starbucks",
+      "__CLASS__": "Adzuna::API::Response::Company"
     },
+    "salary_min": 69586.09,
     "id": "5903001184",
+    "salary_max": 69586.09,
+    "latitude": 36.101484,
+    "longitude": -86.145749,
     "location": {
       "display_name": "Watertown, Wilson County",
-      "__CLASS__": "Adzuna::API::Response::Location",
       "area": [
         "US",
         "Tennessee",
         "Wilson County",
         "Watertown"
-      ]
+      ],
+      "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "latitude": 36.101484,
-    "__CLASS__": "Adzuna::API::Response::Job",
     "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
-    "salary_max": 69586.09,
-    "redirect_url": "https://www.adzuna.com/land/ad/5903001184?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=A5A933EFFE2CF29E18070130ACCBD2027A89FB19",
-    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUkxLcW1jREE4UkdUTWVra0FZbVdQdyIsImkiOiI1OTAzMDAxMTg0In0.RSfDb94s6jKRF6VWY5bWdD04Y-nt2V79csA1UFbkGdA",
+    "__CLASS__": "Adzuna::API::Response::Job",
     "created": "2026-09-29T14:35:43Z",
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001184?se=RLKqmcDA8RGTMekkAYmWPw&utm_medium=api&utm_source=851bf6c5&v=A5A933EFFE2CF29E18070130ACCBD2027A89FB19",
+    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
     "category": {
-      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
       "label": "IT Jobs",
-      "tag": "it-jobs"
-    },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTE4NCIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.jiziuG9x8gwEGm_9YOiRoeBAS4lfz-brQLEvbyIVH8k",
-    "salary_is_predicted": "1",
-    "salary_min": 69586.09,
-    "longitude": -86.145749
+      "__CLASS__": "Adzuna::API::Response::Category"
+    }
   },
   {
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTM5OCIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.GWA-JpdW0ERBzxB62mwuKS5TKTqa_IcbeEfuKeD5Cr8",
-    "salary_min": 86443.53,
-    "salary_is_predicted": "1",
-    "longitude": -86.897142,
-    "redirect_url": "https://www.adzuna.com/land/ad/5903001398?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=723D5163BB2EAE1FBEF5718C60314A31E7B081BE",
-    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
-    "salary_max": 86443.53,
-    "created": "2026-09-29T14:35:50Z",
-    "category": {
-      "label": "IT Jobs",
-      "__CLASS__": "Adzuna::API::Response::Category",
-      "tag": "it-jobs"
-    },
     "latitude": 35.789378,
-    "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
-    "company": {
-      "display_name": "Starbucks",
-      "__CLASS__": "Adzuna::API::Response::Company"
-    },
-    "id": "5903001398",
+    "longitude": -86.897142,
     "location": {
+      "__CLASS__": "Adzuna::API::Response::Location",
+      "display_name": "Thompsons Station, Williamson County",
       "area": [
         "US",
         "Tennessee",
         "Williamson County",
         "Thompsons Station"
-      ],
-      "__CLASS__": "Adzuna::API::Response::Location",
-      "display_name": "Thompsons Station, Williamson County"
-    }
-  },
-  {
-    "redirect_url": "https://www.adzuna.com/land/ad/5903001220?se=fAr_yei_8RGTyvTH5qRQ7A&utm_medium=api&utm_source=851bf6c5&v=24C4D3122F2DC0F1AD2D3C07EA56A6F407CFFEE9",
+      ]
+    },
+    "salary_is_predicted": "1",
+    "company": {
+      "display_name": "Starbucks",
+      "__CLASS__": "Adzuna::API::Response::Company"
+    },
+    "salary_min": 86443.53,
+    "salary_max": 86443.53,
+    "id": "5903001398",
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001398?se=RLKqmcDA8RGTMekkAYmWPw&utm_medium=api&utm_source=851bf6c5&v=723D5163BB2EAE1FBEF5718C60314A31E7B081BE",
     "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
-    "salary_max": 79564.08,
-    "created": "2026-09-29T14:35:44Z",
     "category": {
       "__CLASS__": "Adzuna::API::Response::Category",
       "label": "IT Jobs",
       "tag": "it-jobs"
     },
-    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTkwMzAwMTIyMCIsInMiOiJmQXJfeWVpXzhSR1R5dlRINXFSUTdBIn0.DkP-8jp8jDaq90JNH9pGX8StGiSvnfL0CDgs-szQqvE",
-    "salary_is_predicted": "1",
-    "salary_min": 79564.08,
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUkxLcW1jREE4UkdUTWVra0FZbVdQdyIsImkiOiI1OTAzMDAxMzk4In0.L3LMskNeUPyiitgb0NYuN-WJTaaH0SdnekT9beiRksE",
+    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
+    "created": "2026-09-29T14:35:50Z",
+    "__CLASS__": "Adzuna::API::Response::Job"
+  },
+  {
+    "latitude": 36.500587,
     "longitude": -86.870305,
-    "id": "5903001220",
-    "company": {
-      "__CLASS__": "Adzuna::API::Response::Company",
-      "display_name": "Starbucks"
-    },
     "location": {
+      "display_name": "Coopertown, Robertson County",
       "area": [
         "US",
         "Tennessee",
         "Robertson County",
         "Coopertown"
       ],
-      "display_name": "Coopertown, Robertson County",
       "__CLASS__": "Adzuna::API::Response::Location"
     },
-    "latitude": 36.500587,
+    "company": {
+      "__CLASS__": "Adzuna::API::Response::Company",
+      "display_name": "Starbucks"
+    },
+    "salary_is_predicted": "1",
+    "salary_min": 79564.08,
+    "salary_max": 79564.08,
+    "id": "5903001220",
+    "redirect_url": "https://www.adzuna.com/land/ad/5903001220?se=RLKqmcDA8RGTMekkAYmWPw&utm_medium=api&utm_source=851bf6c5&v=24C4D3122F2DC0F1AD2D3C07EA56A6F407CFFEE9",
+    "title": "Senior/Lead Data Scientist, Data & Analytics (Nashville, TN)",
+    "category": {
+      "__CLASS__": "Adzuna::API::Response::Category",
+      "tag": "it-jobs",
+      "label": "IT Jobs"
+    },
+    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026",
+    "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUkxLcW1jREE4UkdUTWVra0FZbVdQdyIsImkiOiI1OTAzMDAxMjIwIn0.hZH58P613O33lkYsGU1Fg5Y1VlKGtnK8BxSMycLPNng",
     "__CLASS__": "Adzuna::API::Response::Job",
-    "description": "Now Brewing \u2013 Senior/Lead Data Scientist! tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but that also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guided by their service to others. As a Senior Data Scientist, you\u2019ll help guide business decisions by building and applying statistical and machine learning approaches to solve high-impa\u2026"
+    "created": "2026-09-29T14:35:44Z"
   }
 ]
