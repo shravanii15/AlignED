@@ -48,7 +48,7 @@ def test_non_significant_negative_slope_is_no_clear_trend():
 
 def test_boundary_q_value_is_not_significant():
     """q_value exactly at the threshold should NOT count as significant
-   , the significance test in the project is a strict less-than, not
+   the significance test in the project is a strict less-than, not
     less-than-or-equal."""
     assert classify_trend(slope=0.01, q_value=0.05) == "no clear trend"
 

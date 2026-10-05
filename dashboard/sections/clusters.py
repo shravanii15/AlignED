@@ -17,9 +17,9 @@ from utils.layout import page_header
 
 def render_clusters():
     page_header(
-        "", "Role Groups",
-        "Job postings grouped into broad role families with sentence embeddings and k-means, so curricula "
-        "can be compared against what a role generally needs rather than one company's posting.",
+        "", "Job Families",
+        "Job postings sorted into broad families of similar jobs, so programs can be compared against what a "
+        "kind of job generally needs instead of one company's posting.",
     )
 
     clusters_df = run_query(
@@ -34,14 +34,19 @@ def render_clusters():
     silhouette = clusters_df["silhouette_score"].iloc[0] if not clusters_df.empty else None
     if silhouette is not None:
         st.info(
-            f"Read these as broad role families, not strict categories. The silhouette score is {silhouette:.2f} "
-            "(modest), because posting text overlaps heavily across related roles. Use the postings browser "
-            "below to check any group yourself."
+            "These families are rough. Related jobs share a lot of wording, so some postings could fit more than one "
+            "family. Browse the postings below to judge for yourself."
         )
+
+        with st.expander("Technical note"):
+            st.markdown(
+                "Postings were embedded with a sentence-transformer model and grouped with k-means. "
+                f"The silhouette score is modest ({silhouette:.2f}), which is expected when related roles use similar language."
+            )
 
     chart_col, pie_col = st.columns([3, 2])
     with chart_col:
-        st.markdown('<p class="section-eyebrow">Postings per Role Group</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-eyebrow">Postings per Family</p>', unsafe_allow_html=True)
         chart_df = clusters_df.sort_values("n_postings", ascending=True)
         fig = px.bar(chart_df, x="n_postings", y="role_label", orientation="h", labels={"n_postings": "Sampled postings", "role_label": ""})
         fig.update_traces(marker_color=BRAND)
@@ -55,8 +60,8 @@ def render_clusters():
         fig_pie.update_layout(showlegend=False)
         st.plotly_chart(fig_pie, use_container_width=True)
 
-    st.markdown('<p class="section-eyebrow">Browse Postings in a Role Group</p>', unsafe_allow_html=True)
-    cluster_choice = st.selectbox("Role group", clusters_df["role_label"])
+    st.markdown('<p class="section-eyebrow">Browse Postings in a Family</p>', unsafe_allow_html=True)
+    cluster_choice = st.selectbox("Job family", clusters_df["role_label"])
     cluster_id = int(clusters_df[clusters_df["role_label"] == cluster_choice]["cluster_id"].iloc[0])
     sample_postings = run_query(
         """

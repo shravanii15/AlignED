@@ -17,7 +17,7 @@ from utils.nav import (
     jump_to, jump_to_program_explorer,
 )
 from sections.program_explorer import OVERALL_MARKET_LABEL
-from utils.formatting import program_label
+from utils.formatting import evidence_strength, program_label
 
 
 def render_overview():
@@ -29,8 +29,8 @@ def render_overview():
     # then straight into a real visual (the Signal panel below).
     st.markdown('<p class="hero-wordmark">AlignED</p>', unsafe_allow_html=True)
     st.markdown(
-        '<p class="hero-tagline">Curriculum &times; Labor-Market Intelligence. See where a graduate '
-        'curriculum diverges from job-market demand, with statistical evidence.</p>',
+        '<p class="hero-tagline">Does a graduate program teach what employers ask for? Compare 13 programs '
+        'with 1,660 job postings, skill by skill.</p>',
         unsafe_allow_html=True,
     )
     st.markdown("<br>", unsafe_allow_html=True)
@@ -56,38 +56,38 @@ def render_overview():
         cov_pct = sig["program_coverage_rate"] * 100
         dem_pct = sig["market_demand_rate"] * 100
         max_pct = max(cov_pct, dem_pct, 1)
-        st.markdown('<p class="section-eyebrow">The Signal: a Live Example From the Database</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-eyebrow">One Example, Straight From the Data</p>', unsafe_allow_html=True)
         with st.container(border=True):
             st.markdown(f'<p class="signal-eyebrow">{sig["university"]} · {sig["program_name"]}</p>', unsafe_allow_html=True)
             st.markdown(f'<p class="signal-skill-name">{sig["skill_name"]}</p>', unsafe_allow_html=True)
             st.markdown(
                 f"""
                 <div class="signal-row">
-                    <div class="signal-label">Curriculum</div>
+                    <div class="signal-label">Courses</div>
                     <div class="signal-track"><div class="signal-fill signal-fill-coverage" style="width:{cov_pct/max_pct*100:.1f}%"></div></div>
                     <div class="signal-value">{cov_pct:.1f}%</div>
                 </div>
                 <div class="signal-row">
-                    <div class="signal-label">Job market</div>
+                    <div class="signal-label">Job postings</div>
                     <div class="signal-track"><div class="signal-fill signal-fill-market" style="width:{dem_pct/max_pct*100:.1f}%"></div></div>
                     <div class="signal-value">{dem_pct:.1f}%</div>
                 </div>
                 <div class="signal-gap-line">
-                    <span class="signal-gap-value">+{sig['gap_value']*100:.1f} percentage-point gap</span>
-                    &nbsp;&middot;&nbsp; q &lt; {max(sig['q_value'], 0.0001):.4f}
+                    <span class="signal-gap-value">{sig['gap_value']*100:.0f}-point gap</span>
+                    &nbsp;&middot;&nbsp; evidence: {evidence_strength(sig['q_value']).lower()}
                 </div>
                 """,
                 unsafe_allow_html=True,
             )
             st.button(
-                "Explore this analysis →", key="signal_explore_btn",
+                "See the full analysis →", key="signal_explore_btn",
                 on_click=jump_to_program_explorer, args=(program_label(sig['university'], sig['program_name']), OVERALL_MARKET_LABEL),
             )
 
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ---- Command center: the primary action ----
-    st.markdown('<p class="section-eyebrow">Explore a Curriculum</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-eyebrow">Check a Program</p>', unsafe_allow_html=True)
     with st.container(border=True):
         programs_df = run_query("SELECT program_id, university, program_name FROM programs ORDER BY university")
         programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]
@@ -104,22 +104,22 @@ def render_overview():
         with form_col1:
             program_choice = st.selectbox("Program", programs_df["label"], key="home_program_choice")
         with form_col2:
-            role_choice = st.selectbox("Compared with", role_options, key="home_role_choice")
+            role_choice = st.selectbox("Compared with jobs in", role_options, key="home_role_choice")
         st.button(
             "Analyze program →", key="home_analyze_btn", type="primary", use_container_width=True,
             on_click=jump_to_program_explorer, args=(program_choice, role_choice),
         )
-        st.caption("40+ skills compared per program &middot; statistical gap testing &middot; evidence for every result", unsafe_allow_html=True)
+        st.caption("40+ skills compared per program &middot; every result shows its evidence", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ---- Lightweight secondary entry points (text list, not cards) ----
-    st.markdown('<p class="section-eyebrow">What Else Do You Want to Explore?</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-eyebrow">More to Explore</p>', unsafe_allow_html=True)
     st.markdown(
         """
         <div class="explore-item">
             <div class="explore-item-title">Compare programs</div>
-            <div class="explore-item-desc">See 2-3 programs' top overall-market gaps side by side, against the same reference sample.</div>
+            <div class="explore-item-desc">Put 2 or 3 programs side by side.</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -130,7 +130,7 @@ def render_overview():
         """
         <div class="explore-item">
             <div class="explore-item-title">Analyze my profile</div>
-            <div class="explore-item-desc">Paste your resume or skills and see which real job roles fit you best, and what to learn next.</div>
+            <div class="explore-item-desc">Paste your skills and see which jobs fit you and what to learn next.</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -141,12 +141,12 @@ def render_overview():
         """
         <div class="explore-item">
             <div class="explore-item-title">Explore the market</div>
-            <div class="explore-item-desc">Browse skill coverage, demand momentum, and how real job postings group into role families.</div>
+            <div class="explore-item-desc">See which skills programs mention, which are rising, and how jobs group into families.</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
-    st.button("Explore data →", key="explore_market_btn", on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP))
+    st.button("Explore the job market →", key="explore_market_btn", on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP))
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -156,20 +156,19 @@ def render_overview():
     postings = run_query("SELECT COUNT(*) AS n FROM postings WHERE source = 'kaggle_sample'").iloc[0]["n"]
     gaps = run_query("SELECT COUNT(*) AS n FROM gap_scores WHERE cluster_id IS NULL").iloc[0]["n"]
 
-    st.markdown('<p class="section-eyebrow">The Dataset</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-eyebrow">What Is Behind It</p>', unsafe_allow_html=True)
     stat_col1, stat_col2, stat_col3, stat_col4 = st.columns(4)
     stats = [
         (stat_col1, f"{programs}", "Programs"),
-        (stat_col2, f"{courses:,}", "Course Descriptions"),
+        (stat_col2, f"{courses:,}", "Courses"),
         (stat_col3, f"{postings:,}", "Job Postings"),
-        (stat_col4, f"{gaps}", "Significant Gap Signals"),
+        (stat_col4, f"{gaps}", "Skill Gaps Found"),
     ]
     for col, number, label in stats:
         with col:
             st.markdown(f'<div class="stat-block"><div class="stat-number">{number}</div><div class="stat-label">{label}</div></div>', unsafe_allow_html=True)
     st.caption(
-        "Analysis snapshot &middot; O\\*NET-derived skill taxonomy &middot; category-balanced job-posting sample "
-        "(see Methodology for what that means)",
+        "Skills come from the US Department of Labor's O\\*NET list. Job postings are a fixed sample. See Methodology for details.",
         unsafe_allow_html=True,
     )
 
@@ -180,20 +179,17 @@ def render_overview():
     st.markdown(
         """
         <div class="howitworks-strip">
-            <div class="howitworks-step">Course Data</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Skill Extraction</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">O&#42;NET Normalization</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Market Comparison</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Statistical Testing</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Gap Evidence</div>
+            <div class="howitworks-step">Read courses</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Find skills</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Match to O&#42;NET</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Compare with jobs</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Rule out chance</div><div class="howitworks-arrow">&rarr;</div>
+            <div class="howitworks-step">Show evidence</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
-    st.caption(
-        "An AI extraction method was benchmarked against a classical keyword baseline on a 104-item hand-labeled "
-        "test set (LLM F1 0.400 vs. 0.364). Details on the Methodology page."
-    )
+    st.caption("How skills are found and compared is explained on the Methodology page.")
 
     st.markdown("---")
 

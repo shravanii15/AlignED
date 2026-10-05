@@ -26,7 +26,7 @@ Scope decisions made on purpose, and why:
   risk of losing progress partway through.
 - The historical dataset only spans about 4.5 months (Dec 2023-Apr 2024).
   That's honestly a short window for "forecasting" in the textbook sense
- , it's better described as early trend detection than a mature
+ it's better described as early trend detection than a mature
   time-series forecast. This is a known, stated limitation, not an
   oversight; the live daily Adzuna pipeline (built in Week 1) keeps
   extending this window every single day going forward.

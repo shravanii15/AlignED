@@ -61,29 +61,22 @@ MAX_RECOMMENDATIONS_PER_PROGRAM = 10
 
 
 def build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_label, slope, scope_label="Overall market"):
-    # Deliberately precise wording: "statistically significant" describes
-    # the *observed text coverage* in this sampled corpus, it does not
-    # mean "the market really wants this skill" in some absolute sense
-    # (the postings sample isn't a random draw from the whole labor
-    # market, and "coverage" is a text-mention proxy, not a depth-of-
-    # instruction measurement). See the dashboard's Methodology page for
-    # the full reasoning.
+    # Plain wording for non-technical readers. The statistical detail
+    # (p-value, q-value, method) lives in the dashboard's evidence panel.
     demand_phrase = (
-        f"{demand_rate * 100:.0f}% of real job postings we sampled"
+        f"{demand_rate * 100:.0f}% of the job postings we looked at"
         if scope_label == "Overall market"
-        else f"{demand_rate * 100:.0f}% of real {scope_label} postings we sampled"
+        else f"{demand_rate * 100:.0f}% of the {scope_label} postings we looked at"
     )
     base = (
         f"{skill_name} appears in {demand_phrase}, "
-        f"but only {coverage_rate * 100:.0f}% of this program's courses cover it, "
-        f"a {gap_value * 100:.0f} percentage-point gap that's a statistically significant "
-        f"difference in observed text coverage, not noise from a small sample."
+        f"but in only {coverage_rate * 100:.0f}% of this program's course descriptions."
     )
     if trend_label == "rising":
-        return base + f" Demand for {skill_name} is also trending upward, making this a higher-priority addition."
+        return base + f" Demand for {skill_name} has also been rising recently."
     if trend_label == "falling":
-        return base + f" That said, demand for {skill_name} has been trending downward recently, so this may be a lower priority than it first appears."
-    return base + " No significant demand trend was detected either way over the available time window."
+        return base + f" Demand for {skill_name} has been falling recently, so it may be a lower priority."
+    return base + " No clear demand trend."
 
 
 def main():

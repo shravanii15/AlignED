@@ -113,7 +113,7 @@ def render_methodology():
                 )
     with card_col5:
         with st.container(border=True):
-            st.markdown("**Role grouping**")
+            st.markdown("**Job families**")
             st.caption("Sentence embeddings and k-means. Silhouette score 0.08.")
             with st.expander("Detail"):
                 st.markdown(

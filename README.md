@@ -36,7 +36,7 @@ Scrape course catalogs, extract skills, normalize them to O\*NET, compare each p
 
 - **Program Explorer:** pick a program and a target role, get ranked skill gaps with statistical evidence, and export to Excel or PDF.
 - **Compare Programs:** top gaps for 2 to 3 programs side by side.
-- **Market Intelligence:** skill coverage heatmap, demand trends, role groups from embedding-based clustering, and a course search.
+- **Job Market:** skills by program, rising and falling skills, job families from embedding-based clustering, and a course search.
 - **Build Your Profile:** paste your skills or resume text to see which roles fit and what to learn next.
 - **Methodology:** how the numbers are produced, and their limits.
 

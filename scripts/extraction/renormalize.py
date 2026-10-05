@@ -57,7 +57,7 @@ LLM_EXTRACTIONS_PATH = os.path.join(DATA_DIR, "llm_extractions.json")
 # A small, fast, well-regarded general-purpose embedding model. "Small"
 # here still means good enough for this kind of short-phrase matching
 # task, and importantly it's light enough to run quickly on a laptop CPU
-#, we deliberately avoid repeating the "too heavy for this machine"
+#we deliberately avoid repeating the "too heavy for this machine"
 # mistake from the extraction step itself.
 EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 

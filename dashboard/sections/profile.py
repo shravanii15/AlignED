@@ -16,8 +16,8 @@ from utils.text import extract_user_skills
 def render_profile_builder():
     page_header(
         "", "Build Your Profile",
-        "Paste your skills, resume text, or courses taken. Your background is matched against every role "
-        "group in the job-market data, with a personalized report and example openings for the best fit.",
+        "Paste your skills, resume text, or courses taken. We match them against each family of jobs in the "
+        "data and show the best fit, what to learn next, and example postings.",
     )
 
     user_text = st.text_area(
@@ -90,8 +90,8 @@ def render_profile_builder():
         })
     role_matches_df = pd.DataFrame(match_rows).sort_values("match_score", ascending=False).reset_index(drop=True)
 
-    st.markdown('<p class="section-eyebrow">Your Best-Matching Roles</p>', unsafe_allow_html=True)
-    st.caption("Covered means your text matched that many of the role's most in-demand skills. It is an overlap count, not a fit score.")
+    st.markdown('<p class="section-eyebrow">Jobs That Fit You Best</p>', unsafe_allow_html=True)
+    st.caption("Shows how many of a job family's most requested skills your text mentions. It is a simple count, not a score.")
     for _, row in role_matches_df.head(5).iterrows():
         pct = min(row["match_score"], 1.0) * 100
         st.markdown(
@@ -125,7 +125,7 @@ def render_profile_builder():
             )
             st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
     with col2:
-        st.markdown(f"**Commonly observed gaps ({len(missing_df)})**")
+        st.markdown(f"**Skills to learn next ({len(missing_df)})**")
         if missing_df.empty:
             st.write("You cover all of this role's top skills.")
         else:

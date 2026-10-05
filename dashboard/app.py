@@ -65,7 +65,7 @@ flat list, so a visitor knows where to start):
 - Analyze: Program Explorer (pick a program AND a target role, see
   ranked, explained skill-gap recommendations for that combination) and
   Compare Programs (side-by-side, overall-market view)
-- Explore: Skill Coverage Heatmap, Skill Demand Trends, Role Groups, and
+- Job Market: Skills by Program, Rising and Falling Skills, Job Families, and
   Course Finder, supporting views over the underlying data
 - Personalize: Build Your Profile, paste your own background, get a
   personalized skill-gap + role-match report
@@ -95,7 +95,7 @@ from utils.nav import (
 st.set_page_config(page_title="AlignED: Curriculum vs. Job Market Gap Analysis", page_icon="📊", layout="wide")
 
 # Design system rewrite (redesign pass): a research-instrument aesthetic
-#, generous whitespace, a restrained semantic color system, and text
+#generous whitespace, a restrained semantic color system, and text
 # used as the primary visual language instead of icons/boxes/shadows.
 # Color roles are deliberate, not decorative:
 #   brand blue  = interactive / primary action
@@ -345,7 +345,7 @@ NAV_GROUPS = {
 }
 
 st.sidebar.markdown('<p class="sidebar-logo">AlignED</p>', unsafe_allow_html=True)
-st.sidebar.markdown('<p class="sidebar-tagline">Curriculum &times; Labor Market Intelligence</p>', unsafe_allow_html=True)
+st.sidebar.markdown('<p class="sidebar-tagline">Does your program teach what employers ask for?</p>', unsafe_allow_html=True)
 
 group_selection = st.sidebar.radio("Section", list(NAV_GROUPS.keys()), key=NAV_GROUP_KEY, label_visibility="collapsed")
 pages_in_group = NAV_GROUPS[group_selection]

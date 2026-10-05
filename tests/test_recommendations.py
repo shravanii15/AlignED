@@ -27,7 +27,7 @@ def test_rising_trend_adds_upward_language():
         skill_name="Docker", coverage_rate=0.0, demand_rate=0.10,
         gap_value=0.10, trend_label="rising", slope=0.01,
     )
-    assert "trending upward" in text
+    assert "rising" in text
     assert "Docker" in text
 
 
@@ -36,20 +36,20 @@ def test_falling_trend_adds_downward_language():
         skill_name="Perl", coverage_rate=0.02, demand_rate=0.05,
         gap_value=0.03, trend_label="falling", slope=-0.01,
     )
-    assert "trending downward" in text
+    assert "falling" in text
 
 
 def test_no_trend_label_does_not_falsely_claim_a_trend():
     """If there's no significant trend, the rationale must not claim one
-   , it should say plainly that no trend was detected, not silently
+   it should say plainly that no trend was detected, not silently
     omit the topic (which could read as implying a trend either way)."""
     text = build_rationale(
         skill_name="Git", coverage_rate=0.0, demand_rate=0.07,
         gap_value=0.07, trend_label="no clear trend", slope=None,
     )
-    assert "No significant demand trend" in text
-    assert "trending upward" not in text
-    assert "trending downward" not in text
+    assert "No clear demand trend" in text
+    assert "rising" not in text
+    assert "falling" not in text
 
 
 def test_default_scope_reads_as_overall_market():
@@ -60,13 +60,13 @@ def test_default_scope_reads_as_overall_market():
         skill_name="SQL", coverage_rate=0.1, demand_rate=0.5,
         gap_value=0.4, trend_label="no clear trend", slope=None,
     )
-    assert "real job postings we sampled" in text
+    assert "job postings we looked at" in text
 
 
 def test_role_specific_scope_names_the_role_in_the_rationale():
     """When a recommendation is generated against a specific role cluster
     (not the overall market), the rationale text must say so explicitly
-   , a reader shouldn't have to guess whether 'the market' means every
+   a reader shouldn't have to guess whether 'the market' means every
     posting or just this one target role."""
     text = build_rationale(
         skill_name="AWS", coverage_rate=0.02, demand_rate=0.31,

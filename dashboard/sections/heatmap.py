@@ -12,9 +12,9 @@ from utils.layout import page_header
 
 def render_heatmap():
     page_header(
-        "", "Skill Coverage Heatmap",
-        "Each cell is the share of a program's courses whose description names the skill. Darker blue means "
-        "more coverage. Most cells are blank because course descriptions rarely name specific tools.",
+        "", "Skills by Program",
+        "How many of each program's courses mention each skill. Darker blue means more courses. Most cells are "
+        "blank because course descriptions rarely name specific tools.",
     )
 
     num_skills = st.slider("Skills to show", min_value=5, max_value=20, value=10)
@@ -107,8 +107,8 @@ def render_heatmap():
             text=text_matrix,
             texttemplate="%{text}", textfont={"size": 11, "color": "#1E293B"},
             xgap=3, ygap=3,  # thin gaps between cells so the grid reads as designed, not as a solid block
-            colorbar=dict(title="Coverage", tickformat=".0%", thickness=14),
-            hovertemplate="Program: %{y}<br>Skill: %{x}<br>Coverage: %{z:.1%}<extra></extra>",
+            colorbar=dict(title="Courses", tickformat=".0%", thickness=14),
+            hovertemplate="Program: %{y}<br>Skill: %{x}<br>Courses mentioning it: %{z:.1%}<extra></extra>",
         )
     )
     apply_chart_theme(fig, height=max(420, len(matrix.index) * 34))
@@ -116,7 +116,5 @@ def render_heatmap():
     fig.update_xaxes(showgrid=False)
     st.plotly_chart(fig, use_container_width=True)
     st.caption(
-        f"Coverage is each program's full rate, not just the significant-gap subset. The best-covered "
-        f"program and skill pair reaches only {data_max*100:.0f}%, so the color scale is stretched to this "
-        "data's range instead of 0 to 100%."
+        f"The highest value here is {data_max*100:.0f}%, so the colors are scaled to that instead of 0 to 100%."
     )

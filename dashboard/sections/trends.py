@@ -18,9 +18,9 @@ TOP_SIGNALS_SHOWN = 10
 
 def render_trends():
     page_header(
-        "", "Observed Demand Momentum",
-        "Exploratory signals from about 124,000 historical postings, limited to the 6 weeks with enough "
-        "volume. These are early signals over a short window, not confirmed trends or forecasts.",
+        "", "Rising and Falling Skills",
+        "Which skills are being asked for more or less often in job postings. This covers only a short window, "
+        "so treat it as an early hint, not a forecast.",
     )
 
     trends_df = run_query(
@@ -36,33 +36,31 @@ def render_trends():
 
     if n_fdr_significant == 0:
         st.warning(
-            f"None of the {len(trends_df)} tracked skills show a confirmed trend after correcting for multiple "
-            f"tests. {n_raw_significant} looked significant on a raw p-value, but with this many simultaneous "
-            "tests a few false positives are expected. After Benjamini-Hochberg correction, the same standard "
-            "used for gap scoring, none survive at q < 0.05. The strongest directional signals are shown "
-            "below as exploratory."
+            f"No skill shows a trend we can be confident in yet. {n_raw_significant} of {len(trends_df)} looked like "
+            "they were changing, but with this many skills checked at once some will look that way by chance, and "
+            "none held up after correcting for that. The biggest movers are shown below as early hints."
         )
     else:
-        st.success(f"{n_fdr_significant} of {len(trends_df)} tracked skills show a confirmed trend after FDR correction (q < {SIGNIFICANCE_THRESHOLD}).")
+        st.success(f"{n_fdr_significant} of {len(trends_df)} skills show a trend that held up after correcting for multiple checks.")
 
-    st.markdown('<p class="section-eyebrow">Strongest Directional Signals (Exploratory)</p>', unsafe_allow_html=True)
-    st.caption("Ranked by q-value, smallest first. A skill is labeled confirmed only if q < 0.05.")
+    st.markdown('<p class="section-eyebrow">Biggest Movers (Early Hints)</p>', unsafe_allow_html=True)
+    st.caption("Ordered by how consistent the change is. Only changes that held up under the stricter check are marked confirmed.")
 
     top_signals = trends_df.head(TOP_SIGNALS_SHOWN).copy()
     for _, row in top_signals.iterrows():
         confirmed = row["q_value"] < SIGNIFICANCE_THRESHOLD
         direction = "Rising" if row["slope"] > 0 else "Falling"
-        badge = f"{direction}, confirmed" if confirmed else f"{direction}, not confirmed"
+        badge = f"{direction}, confirmed" if confirmed else f"{direction} (early hint, not confirmed)"
         with st.container(border=True):
             st.markdown(f'<p class="signal-skill-name" style="font-size:1.15rem !important; margin-bottom:0.2rem;">{row["canonical_name"]}</p>', unsafe_allow_html=True)
             st.caption(badge)
-            sig_col1, sig_col2, sig_col3, sig_col4 = st.columns(4)
-            sig_col1.metric("Slope", f"{row['slope']*100:+.2f} pts/wk")
-            sig_col2.metric("First half", f"{row['first_half_rate']*100:.1f}%")
-            sig_col3.metric("Second half", f"{row['second_half_rate']*100:.1f}%")
-            sig_col4.metric("q-value", f"{row['q_value']:.3f}")
-
+            sig_col1, sig_col2, sig_col3 = st.columns(3)
+            sig_col1.metric("Change per week", f"{row['slope']*100:+.2f} pts")
+            sig_col2.metric("Earlier weeks", f"{row['first_half_rate']*100:.1f}%")
+            sig_col3.metric("Later weeks", f"{row['second_half_rate']*100:.1f}%")
+    
     st.markdown('<p class="section-eyebrow">All Tracked Skills</p>', unsafe_allow_html=True)
+    st.caption("Full table with the statistics (p-value and FDR-adjusted q-value).")
 
     def format_for_display(df):
         # Formatted as strings directly, avoiding pandas' Styler, which

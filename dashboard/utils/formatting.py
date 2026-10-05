@@ -17,6 +17,21 @@ def program_label(university, program_name):
     return f"{university}{PROGRAM_LABEL_SEPARATOR}{program_name}"
 
 
+def evidence_strength(q_value):
+    """Plain-language label for how strong the statistical evidence for a
+    gap is. Every gap shown on the dashboard already passed the
+    FDR-corrected significance bar (q < 0.05); this just grades how far
+    below that bar it sits, so non-technical readers get a word instead
+    of a decimal."""
+    if q_value is None:
+        return "Not available"
+    if q_value < 0.001:
+        return "Very strong"
+    if q_value < 0.01:
+        return "Strong"
+    return "Moderate"
+
+
 def format_posting_details(row):
     """Plain-text detail line for a job posting (location, salary,
     posted date), or None when the posting has none of them."""

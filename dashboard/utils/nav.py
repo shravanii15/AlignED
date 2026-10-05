@@ -20,7 +20,7 @@ same literal strings in two different files.
 # since it names WHAT you'll find there, not just an action.
 GROUP_OVERVIEW = "Overview"
 GROUP_ANALYZE = "Analyze"
-GROUP_EXPLORE = "Market Intelligence"
+GROUP_EXPLORE = "Job Market"
 GROUP_PERSONALIZE = "Personalize"
 GROUP_METHODOLOGY = "Methodology"
 
@@ -30,9 +30,9 @@ GROUP_METHODOLOGY = "Methodology"
 # emoji-prefixed pages under an already-iconed group read as cluttered.
 PAGE_PROGRAM_EXPLORER = "Program Explorer"
 PAGE_COMPARE = "Compare Programs"
-PAGE_HEATMAP = "Skill Coverage Heatmap"
-PAGE_TRENDS = "Skill Demand Trends"
-PAGE_ROLE_GROUPS = "Role Groups"
+PAGE_HEATMAP = "Skills by Program"
+PAGE_TRENDS = "Rising and Falling Skills"
+PAGE_ROLE_GROUPS = "Job Families"
 PAGE_COURSE_FINDER = "Course Finder"
 PAGE_BUILD_PROFILE = "Build Your Profile"
 PAGE_METHODOLOGY = "Methodology & Limitations"
