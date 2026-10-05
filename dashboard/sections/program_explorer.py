@@ -1,22 +1,13 @@
-"""sections/program_explorer.py: pick a program AND a target role,
-see its ranked, statistically significant skill-gap recommendations for
-that specific combination, with Excel/PDF export and a per-skill
-evidence drill-down.
+"""sections/program_explorer.py: the "Skill Gaps" page. Pick a program and a
+kind of job, get the top skills employers ask for that the program's course
+descriptions do not mention, each with a button to find courses that teach
+it. The statistics behind every skill sit in a collapsed "How we know"
+panel, and the full list plus Excel/PDF downloads are below the answer.
 
-Gap scoring and recommendations are now computed at two scopes: overall
-market (every sampled posting) and per real role cluster (postings
-mapped to one specific role, e.g. "Data Science / Data Engineering").
-This page is where a visitor picks which of those they want to see --
-"what does this program prepare me for, in general" vs. "what does this
-program prepare me for, specifically for a Data Scientist role" are
-genuinely different, independently-computed answers, not the same
-numbers relabeled.
-
-Every recommendation shown here can be expanded into its underlying
-evidence (raw counts, p-value, FDR-adjusted q-value, and the exact
-gap+trend math behind its priority ranking), the point being that
-nothing on this page should require the visitor to just trust a number;
-they can always see exactly where it came from.
+Gap scoring and recommendations exist at two scopes: the overall market
+(every sampled posting) and per job family (postings mapped to one role
+cluster). The two are independently computed, not the same numbers
+relabeled.
 """
 
 import plotly.express as px
@@ -28,35 +19,96 @@ from services.reports_pdf import build_pdf_report
 from utils.charts import TIER_COLOR_MAP, apply_chart_theme
 from utils.formatting import evidence_strength, program_label, safe_filename
 from utils.layout import page_header
-from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY
+from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY, jump_to_course_finder
 
 OVERALL_MARKET_LABEL = "Overall market (all sampled postings)"
 RISING_BOOST = 1.5     # kept in sync with scripts/gap_analysis/generate_recommendations.py
 FALLING_PENALTY = 0.7  # kept in sync with scripts/gap_analysis/generate_recommendations.py
+TOP_SKILLS_SHOWN = 5
+
+
+def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
+    """One skill gap as a compact card: name, courses-vs-postings bars, a
+    plain sentence, a 'find courses' action, and the statistics collapsed."""
+    trend_note = {"rising": "demand rising", "falling": "demand falling"}.get(row["trend_label"], "")
+    cov_pct = row["program_coverage_rate"] * 100
+    dem_pct = row["market_demand_rate"] * 100
+    max_pct = max(cov_pct, dem_pct, 1)
+    meta = f"{row['gap_value']*100:.0f}-point gap  ·  evidence: {evidence_strength(row['q_value']).lower()}"
+    if trend_note:
+        meta += f"  ·  {trend_note}"
+
+    with st.container(border=True):
+        st.markdown(
+            f'<div class="skill-card-head"><span class="skill-rank">{rank}</span>'
+            f'<span class="skill-card-name">{row["canonical_name"]}</span></div>'
+            f'<p class="skill-card-meta">{meta}</p>',
+            unsafe_allow_html=True,
+        )
+        st.write(row["rationale"])
+        st.markdown(
+            f"""
+            <div class="gap-compare">
+                <div class="gap-compare-row">
+                    <div class="gap-compare-label">Courses</div>
+                    <div class="gap-bar-track"><div class="gap-bar-fill gap-bar-curriculum" style="width:{cov_pct/max_pct*100:.1f}%"></div></div>
+                    <div class="gap-bar-value">{cov_pct:.1f}%</div>
+                </div>
+                <div class="gap-compare-row">
+                    <div class="gap-compare-label">Job postings</div>
+                    <div class="gap-bar-track"><div class="gap-bar-fill gap-bar-market" style="width:{dem_pct/max_pct*100:.1f}%"></div></div>
+                    <div class="gap-bar-value">{dem_pct:.1f}%</div>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        st.button(
+            f"Find courses that mention {row['canonical_name']} →",
+            key=f"{key_prefix}_courses_{int(row['skill_id'])}",
+            on_click=jump_to_course_finder, args=(row["canonical_name"],),
+        )
+
+        x_courses = round(row["program_coverage_rate"] * course_count)
+        x_postings = round(row["market_demand_rate"] * scope_total_postings)
+        trend_desc = {
+            "rising": f"x {RISING_BOOST} (rising demand)",
+            "falling": f"x {FALLING_PENALTY} (falling demand)",
+        }.get(row["trend_label"], "x 1.0 (no clear trend)")
+        with st.expander("How we know"):
+            st.markdown(
+                f"""
+                | | |
+                |---|---|
+                | In course descriptions | **{x_courses} of {course_count}** courses ({cov_pct:.1f}%) |
+                | In job postings | **{x_postings} of {scope_total_postings}** postings ({dem_pct:.1f}%) |
+                | Gap | **{row['gap_value']*100:.1f} percentage points** |
+                | Strength of evidence | **{evidence_strength(row['q_value'])}** (the gap is unlikely to be due to chance) |
+                | Technical detail | p = {row['p_value']:.4f}, FDR-adjusted q = {row['q_value']:.4f} (two-proportion z-test, Benjamini-Hochberg correction) |
+                """
+            )
+            st.caption(
+                f"Ranking score = gap ({row['gap_value']*100:.1f} pts) x demand-trend adjustment ({trend_desc}) "
+                f"= {row['priority_score']*100:.1f}. Used only to order this list."
+            )
 
 
 def render_program_explorer():
-    page_header("", "Program Explorer", "Choose a program and a type of job to see which skills employers ask for that the program's courses do not mention.")
-    st.caption(
-        "Skills come from the US Department of Labor's O\\*NET list. A skill counts as mentioned when its name "
-        "appears in a course description or job posting. That shows presence, not how well it is taught."
-    )
+    page_header("", "Skill Gaps", "Choose a program and a type of job to see which skills employers ask for that the program's courses do not mention.")
 
-    programs_df = run_query("SELECT program_id, university, program_name, tier FROM programs ORDER BY university")
+    programs_df = run_query(
+        "SELECT p.program_id, p.university, p.program_name, p.tier, "
+        "(SELECT COUNT(*) FROM courses c WHERE c.program_id = p.program_id) AS n_courses "
+        "FROM programs p ORDER BY p.university"
+    )
     programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]
 
-    # Bound to a session-state key (rather than a bare st.selectbox) so the
-    # Overview page's "Start an analysis" form can pre-select a program
-    # before jumping here, see utils/nav.py's jump_to_program_explorer().
+    # Bound to session-state keys so the Home page can pre-select a program
+    # and job type before jumping here (see utils/nav.py).
     if EXPLORER_PROGRAM_KEY not in st.session_state or st.session_state[EXPLORER_PROGRAM_KEY] not in list(programs_df["label"]):
-        st.session_state[EXPLORER_PROGRAM_KEY] = programs_df["label"].iloc[0]
-    selected_label = st.selectbox("Program", programs_df["label"], key=EXPLORER_PROGRAM_KEY)
-    selected = programs_df[programs_df["label"] == selected_label].iloc[0]
-    program_id = int(selected["program_id"])
+        # First program with a full course set, so the default view has real results.
+        st.session_state[EXPLORER_PROGRAM_KEY] = programs_df["label"].iloc[int((programs_df["n_courses"] >= 30).idxmax())]
 
-    # Only real, coherent role clusters are offered here, "Mixed" and
-    # "Near-duplicate" clusters were excluded from gap analysis entirely
-    # (see compute_gap_scores.py), so there's no per-role data for them.
     clusters_df = run_query(
         """
         SELECT cluster_id, role_label FROM role_clusters
@@ -67,16 +119,21 @@ def render_program_explorer():
     role_options = [OVERALL_MARKET_LABEL] + list(clusters_df["role_label"])
     if EXPLORER_ROLE_KEY not in st.session_state or st.session_state[EXPLORER_ROLE_KEY] not in role_options:
         st.session_state[EXPLORER_ROLE_KEY] = OVERALL_MARKET_LABEL
-    selected_role_label = st.selectbox(
-        "Type of job",
-        role_options,
-        key=EXPLORER_ROLE_KEY,
-        help="Compare against all sampled job postings, or only postings for one kind of job.",
-    )
+
+    sel_col1, sel_col2 = st.columns([3, 2])
+    with sel_col1:
+        selected_label = st.selectbox("Program", programs_df["label"], key=EXPLORER_PROGRAM_KEY)
+    with sel_col2:
+        selected_role_label = st.selectbox(
+            "Type of job", role_options, key=EXPLORER_ROLE_KEY,
+            help="Compare against all sampled job postings, or only postings for one kind of job.",
+        )
+    selected = programs_df[programs_df["label"] == selected_label].iloc[0]
+    program_id = int(selected["program_id"])
 
     if selected_role_label == OVERALL_MARKET_LABEL:
         cluster_id = None
-        scope_display_name = "the overall market"
+        scope_display_name = "all jobs"
         scope_total_postings = run_query("SELECT COUNT(*) AS n FROM postings WHERE source = 'kaggle_sample'").iloc[0]["n"]
     else:
         cluster_id = int(clusters_df[clusters_df["role_label"] == selected_role_label]["cluster_id"].iloc[0])
@@ -86,21 +143,11 @@ def render_program_explorer():
         ).iloc[0]["n"]
 
     course_count = run_query("SELECT COUNT(*) AS n FROM courses WHERE program_id = ?", (program_id,)).iloc[0]["n"]
-    # Only show delivery mode (a verifiable fact about the program), never
-    # the "top-ranked"/"mid-tier" part of the tier field, that's an
-    # unsourced prestige classification with no documented ranking
-    # methodology behind it, and displaying it next to statistical results
-    # would make this dashboard look like it's silently vouching for one
-    # program over another. See Methodology for the full reasoning.
-    delivery_note = "Online  |  " if "online" in str(selected["tier"]).lower() else ""
-    st.caption(f"{delivery_note}{course_count} courses  ·  compared with {scope_total_postings} job postings ({scope_display_name})")
+    # Delivery mode is a verifiable fact; the "top-ranked"/"mid-tier" part of
+    # the tier field is an unsourced prestige label and is never shown.
+    delivery_note = "Online  ·  " if "online" in str(selected["tier"]).lower() else ""
+    st.caption(f"{delivery_note}{course_count} courses compared with {scope_total_postings} job postings ({scope_display_name})")
 
-    # Corpus-size transparency: course counts range from 5 (a
-    # representative sample) to 295 (a full catalog) across the 13
-    # programs in this dataset, treating all of them as equally
-    # complete "curricula" would overstate what a small corpus can
-    # actually show. Flag it plainly when the corpus is small rather
-    # than letting the statistics speak as if the input were uniform.
     if course_count < 30:
         st.info(
             f"**Only {course_count} courses were available for this program.** That is a sample, not the full catalog, "
@@ -125,13 +172,8 @@ def render_program_explorer():
     skills_df = run_query("SELECT skill_id, canonical_name FROM skills")
     recs_df = recs_df.merge(skills_df, on="skill_id", how="left")
 
-    # True significant-gap count, queried directly from gap_scores rather
-    # than taken from len(recs_df). Bug this fixes: recommendations is
-    # capped at MAX_RECOMMENDATIONS_PER_PROGRAM (10) per program+scope in
-    # generate_recommendations.py, but gap_scores is NOT capped, so a
-    # program with, say, 40 significant gaps only ever gets 10
-    # recommendation rows. Using len(recs_df) as "significant gaps found"
-    # was quietly wrong for every program with more than 10 gaps.
+    # True count straight from gap_scores: recommendations is capped per
+    # program and scope, so len(recs_df) undercounts programs with many gaps.
     gap_count_query = "SELECT COUNT(*) AS n FROM gap_scores WHERE program_id = ? AND cluster_id IS {}"
     if cluster_id is None:
         true_gap_count = int(run_query(gap_count_query.format("NULL"), (program_id,)).iloc[0]["n"])
@@ -145,140 +187,35 @@ def render_program_explorer():
         )
         return
 
-    dl_col1, dl_col2 = st.columns(2)
-    report_title_suffix = "" if cluster_id is None else f" (target role: {scope_display_name})"
-    with dl_col1:
-        # A real formatted Excel file, not a plain CSV, CSV is just raw
-        # comma-separated text, so it fundamentally cannot look
-        # "professional" no matter how the columns are arranged (no
-        # colors, no bold header, no cell shading). Excel can, while
-        # still being just as sortable/filterable as a CSV would be.
-        excel_bytes = build_excel_report(selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df)
-        st.download_button(
-            "Download Excel", data=excel_bytes,
-            file_name=safe_filename(f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations") + ".xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        )
-    with dl_col2:
-        pdf_bytes = build_pdf_report(
-            selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
-            scope_display_name=scope_display_name, scope_total_postings=scope_total_postings,
-            true_gap_count=true_gap_count,
-        )
-        st.download_button(
-            "Download PDF", data=pdf_bytes,
-            file_name=safe_filename(f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations") + ".pdf",
-            mime="application/pdf",
-        )
-
-    st.markdown("---")
-
-    # Alignment snapshot: real counts only, deliberately NOT a single
-    # invented "alignment %" score. This project's whole stance is that
-    # gap scoring is a text-coverage signal, not a certified measure of
-    # curriculum quality, collapsing that into one made-up percentage
-    # would undercut the honesty the rest of the dashboard argues for. So
-    # this snapshot shows what was actually measured: how much data went
-    # in, and how many statistically significant gaps came out.
-    tier_counts = recs_df["priority_tier"].value_counts()
-    st.markdown('<p class="section-eyebrow">At a Glance</p>', unsafe_allow_html=True)
-    snap_col1, snap_col2, snap_col3, snap_col4 = st.columns(4)
-    snap_col1.metric("Courses", course_count)
-    snap_col2.metric("Job postings", scope_total_postings)
-    snap_col3.metric("Skill gaps found", true_gap_count)
-    snap_col4.metric("Listed below", len(recs_df))
-    if true_gap_count > len(recs_df):
-        st.caption(
-            f"{true_gap_count} skills are asked for in {scope_display_name} postings far more often than they appear in this "
-            f"program's courses. The {len(recs_df)} biggest are listed below and in the downloads."
-        )
-    else:
-        st.caption(
-            f"{true_gap_count} skills are asked for in {scope_display_name} postings far more often than they appear in this "
-            "program's courses. All of them are listed below."
-        )
-
-    st.markdown("---")
-    # Reworded from "High/Medium/Low priority" (which reads as an
-    # externally validated importance ranking) to "largest observed
-    # gaps", the tiers are just a rank-based cut (top 3 / next 4 /
-    # rest) of gap size adjusted by demand trend, not a claim that a
-    # 'high' item objectively matters more in some absolute sense.
-    tier_section_titles = {
-        "high": "Biggest gaps",
-        "medium": "Notable gaps",
-        "low": "Smaller gaps",
-    }
-    st.caption(
-        "Ranked by gap size, adjusted for whether demand is rising or falling. The ranking compares skills within "
-        "this program only; it is not a measure of how important a skill is."
+    # ---- The answer, first ----
+    top = recs_df.head(TOP_SKILLS_SHOWN)
+    chips = "".join(f'<span class="skill-chip skill-chip-missing">{name}</span>' for name in top["canonical_name"])
+    st.markdown(
+        f"""
+        <div class="answer-banner">
+            <p class="answer-banner-label">The short answer</p>
+            <p class="answer-banner-text">{true_gap_count} skills that employers ask for ({scope_display_name}) are missing
+            from this program's course descriptions. The biggest:</p>
+            <div class="skill-chip-row">{chips}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
-    for tier in ["high", "medium", "low"]:
-        tier_df = recs_df[recs_df["priority_tier"] == tier]
-        if tier_df.empty:
-            continue
-        st.subheader(tier_section_titles[tier])
-        for _, row in tier_df.iterrows():
-            trend_note = {"rising": "· demand rising", "falling": "· demand falling"}.get(row["trend_label"], "")
-            cov_pct = row["program_coverage_rate"] * 100
-            dem_pct = row["market_demand_rate"] * 100
-            max_pct = max(cov_pct, dem_pct, 1)
 
-            with st.container(border=True):
-                st.markdown(f"**{row['canonical_name']}**  &nbsp; `{row['gap_value']*100:.0f}-point gap`  · evidence: {evidence_strength(row['q_value']).lower()} {trend_note}", unsafe_allow_html=True)
-                st.write(row["rationale"])
+    st.markdown(f'<p class="section-eyebrow">Top {len(top)} Skills to Look For</p>', unsafe_allow_html=True)
+    for rank, (_, row) in enumerate(top.iterrows(), start=1):
+        _skill_card(row, rank, course_count, scope_total_postings, key_prefix="top")
 
-                # Gap visualization: curriculum coverage vs. market demand,
-                # side by side, makes the gap immediately visible instead
-                # of requiring the visitor to compare two percentages by eye.
-                st.markdown(
-                    f"""
-                    <div class="gap-compare">
-                        <div class="gap-compare-row">
-                            <div class="gap-compare-label">Courses</div>
-                            <div class="gap-bar-track"><div class="gap-bar-fill gap-bar-curriculum" style="width:{cov_pct/max_pct*100:.1f}%"></div></div>
-                            <div class="gap-bar-value">{cov_pct:.1f}%</div>
-                        </div>
-                        <div class="gap-compare-row">
-                            <div class="gap-compare-label">Job postings</div>
-                            <div class="gap-bar-track"><div class="gap-bar-fill gap-bar-market" style="width:{dem_pct/max_pct*100:.1f}%"></div></div>
-                            <div class="gap-bar-value">{dem_pct:.1f}%</div>
-                        </div>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
+    rest = recs_df.iloc[TOP_SKILLS_SHOWN:]
+    if not rest.empty:
+        with st.expander(f"Show {len(rest)} more skills"):
+            for rank, (_, row) in enumerate(rest.iterrows(), start=TOP_SKILLS_SHOWN + 1):
+                _skill_card(row, rank, course_count, scope_total_postings, key_prefix="more")
+    if true_gap_count > len(recs_df):
+        st.caption(f"The list shows the {len(recs_df)} biggest of {true_gap_count} gaps found.")
 
-                # Evidence drill-down, as a compact structured card instead
-                # of a wall of markdown bullets, exact counts, raw and
-                # FDR-corrected significance, and the priority-score math,
-                # so nothing here has to just be taken on faith.
-                x_courses = round(row["program_coverage_rate"] * course_count)
-                x_postings = round(row["market_demand_rate"] * scope_total_postings)
-                trend_desc = {
-                    "rising": f"x {RISING_BOOST} (rising demand)",
-                    "falling": f"x {FALLING_PENALTY} (falling demand)",
-                }.get(row["trend_label"], "x 1.0 (no clear trend)")
-
-                with st.expander("How we know"):
-                    st.markdown(
-                        f"""
-                        | | |
-                        |---|---|
-                        | In course descriptions | **{x_courses} of {course_count}** courses ({cov_pct:.1f}%) |
-                        | In job postings | **{x_postings} of {scope_total_postings}** postings ({dem_pct:.1f}%) |
-                        | Gap | **{row['gap_value']*100:.1f} percentage points** |
-                        | Strength of evidence | **{evidence_strength(row['q_value'])}** (the gap is unlikely to be due to chance) |
-                        | Technical detail | p = {row['p_value']:.4f}, FDR-adjusted q = {row['q_value']:.4f} (two-proportion z-test, Benjamini-Hochberg correction) |
-                        """
-                    )
-                    st.caption(
-                        f"Ranking score = gap ({row['gap_value']*100:.1f} pts) x demand-trend adjustment ({trend_desc}) "
-                        f"= {row['priority_score']*100:.1f}. Used only to order this list."
-                    )
-
-    st.markdown("---")
-    st.markdown('<p class="section-eyebrow">Biggest Gaps at a Glance</p>', unsafe_allow_html=True)
+    # ---- Chart ----
+    st.markdown('<p class="section-eyebrow">The Gaps at a Glance</p>', unsafe_allow_html=True)
     chart_df = recs_df.sort_values("gap_value", ascending=True)
     fig = px.bar(
         chart_df, x="gap_value", y="canonical_name", orientation="h",
@@ -288,3 +225,25 @@ def render_program_explorer():
     fig.update_layout(xaxis_tickformat=".0%", showlegend=False)
     apply_chart_theme(fig, height=max(280, len(chart_df) * 32))
     st.plotly_chart(fig, use_container_width=True)
+
+    # ---- Downloads ----
+    st.markdown('<p class="section-eyebrow">Take It With You</p>', unsafe_allow_html=True)
+    report_title_suffix = "" if cluster_id is None else f" (target role: {scope_display_name})"
+    dl_col1, dl_col2, _ = st.columns([1, 1, 2])
+    base_name = safe_filename(f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations")
+    with dl_col1:
+        excel_bytes = build_excel_report(selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df)
+        st.download_button(
+            "Download Excel", data=excel_bytes, file_name=base_name + ".xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", use_container_width=True,
+        )
+    with dl_col2:
+        pdf_bytes = build_pdf_report(
+            selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
+            scope_display_name=scope_display_name, scope_total_postings=scope_total_postings,
+            true_gap_count=true_gap_count,
+        )
+        st.download_button(
+            "Download PDF", data=pdf_bytes, file_name=base_name + ".pdf",
+            mime="application/pdf", use_container_width=True,
+        )

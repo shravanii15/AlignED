@@ -227,6 +227,19 @@ st.markdown(
     .skill-chip-have { background: var(--coverage-green-soft); color: #146643 !important; border: 1px solid #C8ECDA; }
     .skill-chip-missing { background: var(--gap-red-soft); color: #A13333 !important; border: 1px solid #F2CFCF; }
 
+    /* ---- Home: the two path cards ---- */
+    .path-title { font-size: 1.25rem !important; font-weight: 800 !important; color: var(--text) !important; margin-bottom: 0.2rem; line-height: 1.25 !important; }
+    .path-desc { font-size: 0.92rem !important; color: var(--text-muted) !important; margin-bottom: 0.8rem; line-height: 1.5 !important; }
+
+    /* ---- Skill Gaps: the short-answer banner and ranked skill cards ---- */
+    .answer-banner { background: var(--brand-soft); border: 1px solid #D5E0FF; border-radius: 10px; padding: 1.1rem 1.3rem 0.6rem 1.3rem; margin: 0.8rem 0 1.6rem 0; }
+    .answer-banner-label { font-size: 0.72rem !important; font-weight: 700 !important; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand) !important; margin-bottom: 0.3rem; }
+    .answer-banner-text { font-size: 1.1rem !important; font-weight: 600 !important; color: var(--text) !important; line-height: 1.45 !important; margin-bottom: 0.6rem; }
+    .skill-card-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.1rem; }
+    .skill-rank { display: inline-flex; align-items: center; justify-content: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--navy); color: #FFFFFF !important; font-size: 0.8rem !important; font-weight: 700 !important; flex-shrink: 0; }
+    .skill-card-name { font-size: 1.25rem !important; font-weight: 800 !important; color: var(--text) !important; }
+    .skill-card-meta { font-size: 0.82rem !important; color: var(--text-muted) !important; margin: 0 0 0.5rem 2.4rem; }
+
     /* ---- Metrics: flatten Streamlit's boxed default into plain
        research-style numbers (no card background/border). ---- */
     div[data-testid="stMetric"] { background: transparent; border: none; padding: 0; }
@@ -363,9 +376,8 @@ else:
     page_selection = next(iter(pages_in_group))
 
 st.sidebar.markdown(
-    '<p class="sidebar-footer"><b>Analysis Snapshot</b><br>'
-    '13 programs &middot; 1,378 courses &middot; 1,660 postings<br>'
-    'Python &middot; SQL &middot; Streamlit</p>',
+    '<p class="sidebar-footer"><b>Based on</b><br>'
+    '13 programs &middot; 1,378 courses &middot; 1,660 job postings</p>',
     unsafe_allow_html=True,
 )
 pages_in_group[page_selection]()

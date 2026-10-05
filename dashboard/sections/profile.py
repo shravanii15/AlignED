@@ -10,23 +10,30 @@ from services.reports_pdf import build_profile_pdf_report
 from utils.constants import AMBIGUOUS_GENERIC_TERMS, TOP_SKILLS_PER_CLUSTER
 from utils.formatting import format_posting_details
 from utils.layout import page_header
+from utils.nav import PROFILE_RUN_KEY, PROFILE_TEXT_KEY
 from utils.text import extract_user_skills
 
 
 def render_profile_builder():
     page_header(
-        "", "Build Your Profile",
+        "", "My Skill Plan",
         "Paste your skills, resume text, or courses taken. We match them against each family of jobs in the "
         "data and show the best fit, what to learn next, and example postings.",
     )
 
     user_text = st.text_area(
         "Your skills, resume text, or courses taken",
+        key=PROFILE_TEXT_KEY,
         height=180,
         placeholder="e.g. I've taken courses in Python, statistics, and machine learning. Built a project using Docker and AWS...",
     )
 
-    if not st.button("Find my best-matching roles", type="primary"):
+    # The run flag persists in session state so results stay on screen when
+    # the visitor clicks the PDF download (which reruns the script) or when
+    # the Home page starts the plan with text already entered.
+    if st.button("Make my skill plan", type="primary"):
+        st.session_state[PROFILE_RUN_KEY] = True
+    if not st.session_state.get(PROFILE_RUN_KEY):
         st.info("Paste your background above and click the button.")
         return
 
@@ -158,7 +165,7 @@ def render_profile_builder():
     st.markdown("---")
     pdf_bytes = build_profile_pdf_report(role_matches_df, top_role["role_label"], have_df, missing_df, sample_postings_df)
     st.download_button(
-        "Download my career report (PDF)", data=pdf_bytes,
+        "Download my skill plan (PDF)", data=pdf_bytes,
         file_name="AlignED_My_Career_Report.pdf", mime="application/pdf",
     )
 

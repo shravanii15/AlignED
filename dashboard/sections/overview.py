@@ -1,45 +1,88 @@
-"""sections/overview.py: the Overview page.
+"""sections/overview.py: the Home page.
 
-Full redesign pass (not a patch): a light, editorial hero instead of a
-filled blue banner; a live "THE SIGNAL" example, the single largest
-real gap in the database right now, pulled from the actual data rather
-than hardcoded, so the homepage demonstrates the product instead of just
-describing it; a command-center style analysis form; a lightweight text
-list (not heavy cards) for the two secondary entry points; research-style
-big-number statistics; and a compact footer with author credit."""
+Built around the two questions a visitor actually arrives with, not
+around the analysis behind them:
+
+  1. "I'm choosing a program: does it teach what employers want?"
+  2. "I want a job: what should I learn?"
+
+Each gets one card with its own action. A real example from the data
+sits underneath, and the deeper data pages are one small row of links.
+"""
 
 import streamlit as st
 
 from services.database import run_query
-from utils.nav import (
-    GROUP_ANALYZE, GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_PERSONALIZE,
-    PAGE_COMPARE, PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_BUILD_PROFILE,
-    jump_to, jump_to_program_explorer,
-)
 from sections.program_explorer import OVERALL_MARKET_LABEL
 from utils.formatting import evidence_strength, program_label
+from utils.nav import (
+    GROUP_EXPLORE, GROUP_METHODOLOGY,
+    PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_ROLE_GROUPS, PAGE_TRENDS,
+    jump_to, jump_to_program_explorer, start_skill_plan,
+)
+
+# Skill-gap example is only drawn from programs with enough courses that
+# a missing skill is not just a small-sample artifact.
+EXAMPLE_MIN_COURSES = 30
 
 
 def render_overview():
-    # ---- Hero ----
-    # Cut down hard from the first redesign pass: that version stacked
-    # FOUR separate text blocks (wordmark, kicker, title, subtitle)
-    # before anything visual appeared, it read as a writeup, not a
-    # product. This is now: one unmistakable masthead, one short tagline,
-    # then straight into a real visual (the Signal panel below).
     st.markdown('<p class="hero-wordmark">AlignED</p>', unsafe_allow_html=True)
     st.markdown(
-        '<p class="hero-tagline">Does a graduate program teach what employers ask for? Compare 13 programs '
-        'with 1,660 job postings, skill by skill.</p>',
+        '<p class="hero-tagline">Does a graduate program teach what employers ask for? '
+        'Compare 13 programs with 1,660 job postings, skill by skill.</p>',
         unsafe_allow_html=True,
     )
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # ---- THE SIGNAL: a live example, not a mockup. Pulls the single
-    # largest real gap currently in the database (overall-market scope)
-    # so the homepage demonstrates the analysis instead of describing it.
-    signal_row = run_query(
+    # ---- Two paths ----
+    programs_df = run_query(
+        "SELECT p.program_id, p.university, p.program_name, "
+        "(SELECT COUNT(*) FROM courses c WHERE c.program_id = p.program_id) AS n_courses "
+        "FROM programs p ORDER BY p.university"
+    )
+    programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]
+    # Default to the first program with a full course set, so the first
+    # click shows real results instead of an "only 5 courses" empty state.
+    default_idx = int((programs_df["n_courses"] >= EXAMPLE_MIN_COURSES).idxmax())
+    clusters_df = run_query(
         """
+        SELECT cluster_id, role_label FROM role_clusters
+        WHERE role_label NOT LIKE 'Mixed%' AND role_label NOT LIKE 'Near-duplicate%'
+        ORDER BY role_label
+        """
+    )
+    role_options = [OVERALL_MARKET_LABEL] + list(clusters_df["role_label"])
+
+    left, right = st.columns(2, gap="large")
+    with left:
+        with st.container(border=True):
+            st.markdown('<p class="path-title">I am choosing a program</p>', unsafe_allow_html=True)
+            st.markdown('<p class="path-desc">See which skills employers want that a program\'s courses do not mention.</p>', unsafe_allow_html=True)
+            program_choice = st.selectbox("Program", programs_df["label"], index=default_idx, key="home_program_choice")
+            role_choice = st.selectbox("Compared with jobs in", role_options, key="home_role_choice")
+            st.button(
+                "Show me the gaps →", key="home_analyze_btn", type="primary", use_container_width=True,
+                on_click=jump_to_program_explorer, args=(program_choice, role_choice),
+            )
+    with right:
+        with st.container(border=True):
+            st.markdown('<p class="path-title">I want to know what to learn</p>', unsafe_allow_html=True)
+            st.markdown('<p class="path-desc">Paste your skills, resume text, or courses. See which jobs fit you and what to learn next.</p>', unsafe_allow_html=True)
+            profile_text = st.text_area(
+                "Your skills", key="home_profile_text", height=122,
+                placeholder="e.g. Python, SQL, statistics, a machine learning course",
+            )
+            st.button(
+                "Make my skill plan →", key="home_plan_btn", type="primary", use_container_width=True,
+                on_click=start_skill_plan, args=(profile_text,),
+            )
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ---- A real example, pulled live ----
+    signal_row = run_query(
+        f"""
         SELECT p.university, p.program_name, s.canonical_name AS skill_name,
                g.program_coverage_rate, g.market_demand_rate, g.gap_value, g.q_value
         FROM recommendations r
@@ -47,6 +90,7 @@ def render_overview():
         JOIN programs p ON p.program_id = r.program_id
         JOIN skills s ON s.skill_id = r.skill_id
         WHERE r.cluster_id IS NULL
+          AND (SELECT COUNT(*) FROM courses c WHERE c.program_id = r.program_id) >= {EXAMPLE_MIN_COURSES}
         ORDER BY g.gap_value DESC
         LIMIT 1
         """
@@ -56,7 +100,7 @@ def render_overview():
         cov_pct = sig["program_coverage_rate"] * 100
         dem_pct = sig["market_demand_rate"] * 100
         max_pct = max(cov_pct, dem_pct, 1)
-        st.markdown('<p class="section-eyebrow">One Example, Straight From the Data</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-eyebrow">What an Answer Looks Like</p>', unsafe_allow_html=True)
         with st.container(border=True):
             st.markdown(f'<p class="signal-eyebrow">{sig["university"]} · {sig["program_name"]}</p>', unsafe_allow_html=True)
             st.markdown(f'<p class="signal-skill-name">{sig["skill_name"]}</p>', unsafe_allow_html=True)
@@ -79,132 +123,24 @@ def render_overview():
                 """,
                 unsafe_allow_html=True,
             )
-            st.button(
-                "See the full analysis →", key="signal_explore_btn",
-                on_click=jump_to_program_explorer, args=(program_label(sig['university'], sig['program_name']), OVERALL_MARKET_LABEL),
+            st.caption(
+                "Course descriptions are short, so a skill missing from them may still be taught in class. "
+                "Read gaps as a prompt to check the syllabus."
             )
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # ---- Command center: the primary action ----
-    st.markdown('<p class="section-eyebrow">Check a Program</p>', unsafe_allow_html=True)
-    with st.container(border=True):
-        programs_df = run_query("SELECT program_id, university, program_name FROM programs ORDER BY university")
-        programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]
-        clusters_df = run_query(
-            """
-            SELECT cluster_id, role_label FROM role_clusters
-            WHERE role_label NOT LIKE 'Mixed%' AND role_label NOT LIKE 'Near-duplicate%'
-            ORDER BY role_label
-            """
-        )
-        role_options = [OVERALL_MARKET_LABEL] + list(clusters_df["role_label"])
-
-        form_col1, form_col2 = st.columns(2)
-        with form_col1:
-            program_choice = st.selectbox("Program", programs_df["label"], key="home_program_choice")
-        with form_col2:
-            role_choice = st.selectbox("Compared with jobs in", role_options, key="home_role_choice")
-        st.button(
-            "Analyze program →", key="home_analyze_btn", type="primary", use_container_width=True,
-            on_click=jump_to_program_explorer, args=(program_choice, role_choice),
-        )
-        st.caption("40+ skills compared per program &middot; every result shows its evidence", unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # ---- Lightweight secondary entry points (text list, not cards) ----
-    st.markdown('<p class="section-eyebrow">More to Explore</p>', unsafe_allow_html=True)
-    st.markdown(
-        """
-        <div class="explore-item">
-            <div class="explore-item-title">Compare programs</div>
-            <div class="explore-item-desc">Put 2 or 3 programs side by side.</div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.button("Compare programs →", key="explore_compare_btn", on_click=jump_to, args=(GROUP_ANALYZE, PAGE_COMPARE))
-
-    st.markdown(
-        """
-        <div class="explore-item">
-            <div class="explore-item-title">Analyze my profile</div>
-            <div class="explore-item-desc">Paste your skills and see which jobs fit you and what to learn next.</div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.button("Build my profile →", key="explore_profile_btn", on_click=jump_to, args=(GROUP_PERSONALIZE, PAGE_BUILD_PROFILE))
-
-    st.markdown(
-        """
-        <div class="explore-item">
-            <div class="explore-item-title">Explore the market</div>
-            <div class="explore-item-desc">See which skills programs mention, which are rising, and how jobs group into families.</div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.button("Explore the job market →", key="explore_market_btn", on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP))
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # ---- THE DATASET: research-style big numbers, not sidebar-sized text ----
-    programs = run_query("SELECT COUNT(*) AS n FROM programs").iloc[0]["n"]
-    courses = run_query("SELECT COUNT(*) AS n FROM courses").iloc[0]["n"]
-    postings = run_query("SELECT COUNT(*) AS n FROM postings WHERE source = 'kaggle_sample'").iloc[0]["n"]
-    gaps = run_query("SELECT COUNT(*) AS n FROM gap_scores WHERE cluster_id IS NULL").iloc[0]["n"]
-
-    st.markdown('<p class="section-eyebrow">What Is Behind It</p>', unsafe_allow_html=True)
-    stat_col1, stat_col2, stat_col3, stat_col4 = st.columns(4)
-    stats = [
-        (stat_col1, f"{programs}", "Programs"),
-        (stat_col2, f"{courses:,}", "Courses"),
-        (stat_col3, f"{postings:,}", "Job Postings"),
-        (stat_col4, f"{gaps}", "Skill Gaps Found"),
-    ]
-    for col, number, label in stats:
-        with col:
-            st.markdown(f'<div class="stat-block"><div class="stat-number">{number}</div><div class="stat-label">{label}</div></div>', unsafe_allow_html=True)
-    st.caption(
-        "Skills come from the US Department of Labor's O\\*NET list. Job postings are a fixed sample. See Methodology for details.",
-        unsafe_allow_html=True,
-    )
+    # ---- Deeper pages, one quiet row ----
+    st.markdown('<p class="section-eyebrow">Dig Deeper</p>', unsafe_allow_html=True)
+    more1, more2, more3, more4 = st.columns(4)
+    more1.button("Skills by program", key="more_heatmap_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP))
+    more2.button("Rising and falling skills", key="more_trends_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_TRENDS))
+    more3.button("Job families", key="more_families_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_ROLE_GROUPS))
+    more4.button("How it works", key="more_method_btn", use_container_width=True, on_click=jump_to, args=(GROUP_METHODOLOGY, PAGE_METHODOLOGY))
 
     st.markdown("---")
-
-    # ---- How it works, compact ----
-    st.markdown('<p class="section-eyebrow">How It Works</p>', unsafe_allow_html=True)
     st.markdown(
-        """
-        <div class="howitworks-strip">
-            <div class="howitworks-step">Read courses</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Find skills</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Match to O&#42;NET</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Compare with jobs</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Rule out chance</div><div class="howitworks-arrow">&rarr;</div>
-            <div class="howitworks-step">Show evidence</div>
-        </div>
-        """,
+        '<p class="site-footer"><b>Built by Shravani Kulkarni</b> &middot; MS Data Science &middot; '
+        '<a href="https://github.com/shravanii15/AlignED" target="_blank">GitHub ↗</a></p>',
         unsafe_allow_html=True,
     )
-    st.caption("How skills are found and compared is explained on the Methodology page.")
-
-    st.markdown("---")
-
-    # ---- Footer ----
-    footer_col1, footer_col2 = st.columns([3, 1])
-    with footer_col1:
-        st.markdown(
-            '<p class="site-footer"><b>Built by Shravani Kulkarni</b> &middot; MS Data Science, Analytics &amp; '
-            'Engineering<br>Python &middot; SQLite &middot; Streamlit &middot; Plotly</p>',
-            unsafe_allow_html=True,
-        )
-    with footer_col2:
-        st.markdown(
-            '<p class="site-footer" style="text-align:right;">'
-            '<a href="https://github.com/shravanii15/AlignED" target="_blank">GitHub ↗</a></p>',
-            unsafe_allow_html=True,
-        )
-        st.button("Methodology →", key="footer_methodology_btn", on_click=jump_to, args=(GROUP_METHODOLOGY, PAGE_METHODOLOGY))

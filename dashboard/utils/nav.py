@@ -18,23 +18,23 @@ same literal strings in two different files.
 # CSS), not icons, to read as a serious analytics product rather than a
 # student Streamlit app. "Explore" was renamed to "Market Intelligence"
 # since it names WHAT you'll find there, not just an action.
-GROUP_OVERVIEW = "Overview"
-GROUP_ANALYZE = "Analyze"
-GROUP_EXPLORE = "Job Market"
-GROUP_PERSONALIZE = "Personalize"
+GROUP_OVERVIEW = "Home"
+GROUP_ANALYZE = "Check a Program"
+GROUP_EXPLORE = "Explore the Data"
+GROUP_PERSONALIZE = "Plan My Skills"
 GROUP_METHODOLOGY = "Methodology"
 
 # Page labels within a group (only listed here where the Overview page's
 # action cards need to jump directly to them). No emojis at this level --
 # the group-level icon above is enough context, and a flat list of
 # emoji-prefixed pages under an already-iconed group read as cluttered.
-PAGE_PROGRAM_EXPLORER = "Program Explorer"
+PAGE_PROGRAM_EXPLORER = "Skill Gaps"
 PAGE_COMPARE = "Compare Programs"
 PAGE_HEATMAP = "Skills by Program"
 PAGE_TRENDS = "Rising and Falling Skills"
 PAGE_ROLE_GROUPS = "Job Families"
 PAGE_COURSE_FINDER = "Course Finder"
-PAGE_BUILD_PROFILE = "Build Your Profile"
+PAGE_BUILD_PROFILE = "My Skill Plan"
 PAGE_METHODOLOGY = "Methodology & Limitations"
 
 # The st.session_state keys the sidebar's two radio widgets are bound to
@@ -81,3 +81,29 @@ def jump_to_program_explorer(program_label=None, role_label=None):
         st.session_state[EXPLORER_PROGRAM_KEY] = program_label
     if role_label is not None:
         st.session_state[EXPLORER_ROLE_KEY] = role_label
+
+
+# Course Finder's skill filter and the profile tool's input/run flag are
+# also session-state keys, so a result card can send a visitor straight to
+# "courses that teach this skill", and the homepage can start a skill plan.
+COURSE_FINDER_SKILLS_KEY = "course_finder_skills"
+PROFILE_TEXT_KEY = "profile_text"
+PROFILE_RUN_KEY = "profile_run"
+
+
+def jump_to_course_finder(skill_name):
+    """Callback: open Course Finder pre-filtered to one skill."""
+    import streamlit as st
+
+    jump_to(GROUP_EXPLORE, PAGE_COURSE_FINDER)
+    st.session_state[COURSE_FINDER_SKILLS_KEY] = [skill_name]
+
+
+def start_skill_plan(text):
+    """Callback: open the skill plan with text already entered and the
+    analysis already running."""
+    import streamlit as st
+
+    jump_to(GROUP_PERSONALIZE, PAGE_BUILD_PROFILE)
+    st.session_state[PROFILE_TEXT_KEY] = text
+    st.session_state[PROFILE_RUN_KEY] = bool(text and text.strip())

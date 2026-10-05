@@ -54,7 +54,7 @@ def render_methodology():
                     **Course data is not equally complete across programs.** Course counts range from 5
                     (ASU, a sample) to 295 (Georgia Tech's main CS catalog, close to the full public
                     list). Some programs are a full degree catalog, others an elective pool or a sample.
-                    Program Explorer flags programs with fewer than 30 courses, because a small corpus can
+                    The Skill Gaps page flags programs with fewer than 30 courses, because a small corpus can
                     miss skills a larger one would catch.
                     """
                 )

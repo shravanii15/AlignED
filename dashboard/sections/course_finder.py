@@ -5,10 +5,11 @@ import streamlit as st
 
 from services.database import run_query
 from utils.layout import page_header
+from utils.nav import COURSE_FINDER_SKILLS_KEY
 
 
 def render_course_finder():
-    page_header("", "Course Finder", "Search course descriptions across all 13 programs, or filter by a tracked skill.")
+    page_header("", "Course Finder", "Find courses across all 13 programs that mention a skill you want to learn.")
 
     search_text = st.text_input("Search course names and descriptions", placeholder="e.g. security, machine learning")
 
@@ -20,7 +21,11 @@ def render_course_finder():
         ORDER BY s.canonical_name
         """
     )
-    skill_filter = st.multiselect("Filter by tracked skill", tracked_skills_df["canonical_name"])
+    valid_skills = set(tracked_skills_df["canonical_name"])
+    st.session_state[COURSE_FINDER_SKILLS_KEY] = [
+        s for s in st.session_state.get(COURSE_FINDER_SKILLS_KEY, []) if s in valid_skills
+    ]
+    skill_filter = st.multiselect("Filter by skill", tracked_skills_df["canonical_name"], key=COURSE_FINDER_SKILLS_KEY)
 
     base_query = """
         SELECT c.course_name, c.description, p.university, p.program_name
