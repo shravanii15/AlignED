@@ -56,7 +56,7 @@ def render_match_job():
         "Paste a job posting you like and your own skills. See what you already have, what is missing, and what to learn first.",
     )
 
-    top_col, btn_col = st.columns([4, 1])
+    top_col, btn_col = st.columns([3, 1])
     with btn_col:
         st.button("Try an example", on_click=_load_example, use_container_width=True)
 

@@ -306,6 +306,17 @@ st.markdown(
     .page-header-title { font-size: 1.9rem !important; font-weight: 800 !important; color: var(--text) !important; }
     .page-header-desc { color: var(--text-muted) !important; font-size: 0.95rem !important; margin: 0.5rem 0 1.3rem 0; line-height: 1.55 !important; max-width: 760px; }
 
+    /* ---- Page tabs (sub-pages of a section), shown above the page. ---- */
+    div[data-testid="stMainBlockContainer"] div[role="radiogroup"] { gap: 0.4rem; }
+    div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"] {
+        background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
+        padding: 0.3rem 0.95rem; margin-right: 0;
+    }
+    div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"] > div > div:first-child { display: none; }
+    div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"][data-selected="true"] { background: var(--navy); border-color: var(--navy); }
+    div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"][data-selected="true"] p { color: #FFFFFF !important; font-weight: 700 !important; }
+    div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"] p { font-size: 0.88rem !important; font-weight: 600 !important; }
+
     /* ---- Cards: used selectively (the analysis command-center, a gap
        card, a signal panel), subtle border, no shadow-lift hover
        animation, small border-radius. ---- */
@@ -374,7 +385,10 @@ if len(pages_in_group) > 1:
     # to this group's first page instead of crashing.
     if st.session_state.get(NAV_PAGE_KEY) not in pages_in_group:
         st.session_state[NAV_PAGE_KEY] = next(iter(pages_in_group))
-    page_selection = st.sidebar.radio("Page", list(pages_in_group.keys()), key=NAV_PAGE_KEY, label_visibility="collapsed")
+    # Sub-pages are tabs at the top of the content area, not a second list
+    # in the sidebar: a second radio there rendered underneath
+    # "Methodology" and read as if it belonged to that section.
+    page_selection = st.radio("Page", list(pages_in_group.keys()), key=NAV_PAGE_KEY, horizontal=True, label_visibility="collapsed")
 else:
     page_selection = next(iter(pages_in_group))
 
