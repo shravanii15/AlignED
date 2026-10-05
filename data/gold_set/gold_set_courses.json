@@ -1,0 +1,366 @@
+[
+  {
+    "source_type": "course",
+    "program": "Cybersecurity (ENPM catalog)",
+    "course_code": "ENPM691",
+    "course_name": "Hacking of C programs and Unix Binaries",
+    "text": "Teaches the fundamentals of secure programming in C. An in depth discussion on various security vulnerabilities (e.g., buffer overflows) in C applications will be taught with hands-on demo of concepts during the class. Students will learn how a C program runs \"under-the-hood\". The course will teach nitty-gritty of C programs by analyzing at the assembly level. The course discusses best practices (e.g., coding standards) and design principles for secure programming so that security can be built-in during design time. In addition to assignments, students are required to present papers related to this course."
+  },
+  {
+    "source_type": "course",
+    "program": "Cybersecurity (ENPM catalog)",
+    "course_code": "ENPM652",
+    "course_name": "Applied Finite Element Methods",
+    "text": "Introduces the Finite Element Method (FEM), widely used to perform analyses in areas such as structural/solid mechanics, fluid mechanics, heat transfer. This course presents an introduction to the mathematical and physical concepts underpinning the FEM framework. Additionally, ANSYS Workbench software will be used to demonstrate engineering-scale examples for stress and thermal analysis problems. There are no formal requirements for this course although students will benefit from a familiarity with basic concepts in linear algebra, calculus, differential equations, solid mechanics, and heat transfer."
+  },
+  {
+    "source_type": "course",
+    "program": "Cybersecurity (ENPM catalog)",
+    "course_code": "ENPM701",
+    "course_name": "Autonomous Robotics",
+    "text": "This is a hands-on course exploring the principles of robotic autonomy. Students will explore the theoretical, algorithmic, and implementation aspects of autonomous robotic modeling and controls, perception, localization and SLAM, planning, and decision making. These techniques will be applied through completion of a semester-long hands-on project employing the course material, ground-based mobile robots, and Python."
+  },
+  {
+    "source_type": "course",
+    "program": "Cybersecurity (ENPM catalog)",
+    "course_code": "ENPM625",
+    "course_name": "Heating, Ventilation and Air Conditioning of Buildings",
+    "text": "Fundamentals of heating, ventilation and air conditioning analysis and design. Thermodynamics, heat transfer and fluid mechanics principles applied to field problems. Quantitative analyses stressed. Topics include psychometrics, thermal loads, incompressible flow in ducts and pipes, heat exchangers, cooling towers, and refrigeration."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6740",
+    "course_name": "Computational Data Analysis",
+    "text": "*required for Computational Data Analytics Track Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed. The course is designed to answer the most fundamental questions about machine learning: What are the most important methods to know about, and why? How can we answer the question 'is this method better than that one' using asymptotic theory? How can we answer the question 'is this method better than that one' for a specific dataset of interest? What can we say about the errors our method will make on future data? What's the 'right' objective function? What does it mean to be statistically rigorous? This course is designed to give graduate students a thorough grounding in the methods, theory, mathematics and algorithms needed to do research and applications in machine learning. The course covers topics from machine learning, classical statistics, and data mining. Students entering the class with a pre-existing working knowledge of probability, statistics and algorithms will be Analytical Tools an advantage, but the class has been designed so that anyone with a strong numerate background can catch up and fully participate. Some experience with coding are expected."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Analytics (OMS Analytics)",
+    "course_code": "CSE 6040",
+    "course_name": "Introduction for Computing for Data Analytics",
+    "text": "Computational techniques needed for data analysis; programming, accessing databases, multidimensional arrays, basic numerical computing, and visualization; hands-on applications and case studies. Credit will not be awarded for both CSE 6040 and CX 4240."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Analytics (OMS Analytics)",
+    "course_code": "CS 6601",
+    "course_name": "Artificial Intelligence",
+    "text": "This course is a survey of the field of Artificial Intelligence and will often be taken as the first graduate course in the area. It is designed to be challenging and involves significant independent work, readings, and assignments. The course covers most of the required textbook Artificial Intelligence A Modern Approach 3rd edition, which is a keystone of Georgia Tech\u2019s Intelligent Systems PhD qualifier exam."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Analytics (OMS Analytics)",
+    "course_code": "CS 7642",
+    "course_name": "Reinforcement Learning",
+    "text": "Reinforcement Learning is a subarea of Machine Learning, that area of Artificial Intelligence that is concerned with computational artifacts that modify and improve their performance through experience. This course focuses on automated computational decision making through a combination of classic papers and more recent work. It examines efficient algorithms, where they exist, for single-agent and multiagent planning as well as approaches to learning near optimal decisions from experience. Topics include Markov decision processes; stochastic and repeated games; partially observable Markov decision processes; reinforcement learning; and interactive reinforcement learning. The class is particularly interested in issues of generalization, exploration, and representation."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (Align / CS catalog)",
+    "course_code": "CS\u00a06650",
+    "course_name": "Building Scalable Distributed Systems",
+    "text": "Covers the essential elements of distributed, concurrent systems and builds upon that knowledge with engineering principles and practical experience with state-of-the-art technologies and methods for building scalable systems. Scalability is an essential quality of internet-facing systems and requires specialized skills and knowledge to build systems that scale at low cost."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (Align / CS catalog)",
+    "course_code": "CS\u00a04810",
+    "course_name": "Advanced Algorithms",
+    "text": "Builds on CS\u00a03000 . Presents an advanced study of computer algorithms. Covers basic algorithmic paradigms (e.g., greedy, divide-and-conquer, and dynamic programming); graph algorithms; optimization; computational Intractability (e.g., NP-completeness, PSPACE-completeness); randomized algorithms; and approximation algorithms."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (Align / CS catalog)",
+    "course_code": "CS\u00a06180",
+    "course_name": "Foundations for Generative AI",
+    "text": "Offers students an opportunity to obtain both the theoretical foundation and practical skills to understand, analyze, and apply generative AI techniques effectively. Begins with foundational concepts in AI and machine learning; progresses to advanced natural language processing, transformer models, and large language models; and concludes with cutting-edge techniques like prompt engineering, domain-specific adaptations, and retrieval-augmented generation."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (Align / CS catalog)",
+    "course_code": "CS\u00a03100",
+    "course_name": "Program Design and Implementation 2",
+    "text": "Builds on foundations introduced in CS\u00a02100 to examine program design at increasing scales of complexity. Reviews abstraction, encapsulation, inheritance, and interfaces in statically typed object-oriented languages. Presents a comparative approach to software design patterns and paradigms, including object-oriented and functional programming. Offers students an opportunity to obtain a deeper understanding of the principles of program design including interface design, test-driven development, graphical design notations, reusable software components, and open-source ecosystems. Illustrates the impact of design-time decisions on software correctness including accessibility, changeability, performance, reusability, and privacy. Students collaborate throughout the semester to design and implement a large software project."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (CMSC catalog)",
+    "course_code": "CMSC756",
+    "course_name": "Robotics",
+    "text": "Overview on fundamental components of robotic systems, including the sensing and actuation, control and modeling of motion and perception, dynamics and kinematics, motion planning and manipulation of robots."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (CMSC catalog)",
+    "course_code": "CMSC416",
+    "course_name": "Introduction to Parallel Computing",
+    "text": "Introduction to parallel computing. Topics include programming for shared memory and distributed memory parallel architectures, and fundamental issues in design, development, and performance analysis of parallel programs."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (CMSC catalog)",
+    "course_code": "CMSC723",
+    "course_name": "Natural Language Processing",
+    "text": "Introduce fundamental concepts, techniques, and algorithms for the computational handling of natural language. Statistical and machine learning techniques, models, and algorithms that enable computers to deal with the ambiguity and implicit structure of human language. Approaches that focus on uncovering linguistic structure, such as syntactic or semantic parsing, as well as those that focus on manipulating text in useful ways, such as question answering or machine translation."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (CMSC catalog)",
+    "course_code": "CMSC431",
+    "course_name": "Privacy Engineering",
+    "text": "Explores the intersection of technology and privacy, including technical mechanisms for data privacy, legal and regulatory privacy regimes, and mediation of interpersonal privacy through technology."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (graduate CS courses)",
+    "course_code": "CAS CS 651",
+    "course_name": "Distributed Systems",
+    "text": "Undergraduate Prerequisites: (CASCS112 & CASCS210) - Programming-centric introduction to how networks of computers are structured to operate as coherent single systems. Introducing principles of architecture, processes, communications, naming, synchronization, consistency and replication, fault tolerance and security, and paradigms such as web-based, object-based, file system, and consistency-based."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (graduate CS courses)",
+    "course_code": "CAS CS 630",
+    "course_name": "Graduate Algorithms",
+    "text": "Undergraduate Prerequisites: (CASCS330) - Examines advanced algorithmic topics and methods for CS graduate students, including matrix decomposition techniques and applications, linear programming, fundamental discrete and continuous optimization methods, probabilistic algorithms, NP-hard problems and approximation techniques, and algorithms for very large data sets."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (graduate CS courses)",
+    "course_code": "CAS CS 585",
+    "course_name": "Image and Video Computing",
+    "text": "Undergraduate Prerequisites: (CASCS132 OR CASMA242) and CASCS112 or equivalent programming experience and familiarity with calculus. - Introduction to images and video as multimedia data types and algorithms for image and video understanding based on color, shading, stereo, and motion. Topics include face recognition, human-computer interfaces, animal and vehicle tracking, and medical image analysis."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (graduate CS courses)",
+    "course_code": "CAS CS 680",
+    "course_name": "Graduate Introduction to Computer Graphics",
+    "text": "Undergraduate Prerequisites: (CASCS112) and CASCS132 or CASMA242. - Introduction to computer graphics algorithms, programming methods, and applications. Focus on fundamentals of two- and three-dimensional raster graphics: scan-conversion, clipping, geometric transformations, and camera modeling. Introduces concepts in computational geometry, computer-human interfaces, animation, and visual realism. Effective Fall 2019, this course fulfills a single unit in the following BU Hub area: Digital/Multimedia Expression. BU Hub Learn More Digital/Multimedia Expression"
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (main CS catalog)",
+    "course_code": "CS\u00a07540",
+    "course_name": "Spectral Algorithms and Representations",
+    "text": "Spectral methods mathematics and algorithmic insights driving applications with large data sets in domains such as web-search, information-retrieval, and medical diagnosis and prediction."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (main CS catalog)",
+    "course_code": "CS\u00a06730",
+    "course_name": "Data Visualization: Principles and Applications",
+    "text": "Introductory course on design principles and applications of data visualization. This course teaches best practices for visualizing datasets from diverse domains intended to help people make sense of data. Students cannot receive credit for both CS\u00a06730 and CS\u00a04460 ."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (main CS catalog)",
+    "course_code": "CS\u00a04901",
+    "course_name": "Special Problems",
+    "text": "An investigation of significant areas of information in computer science. Guided study and research."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science (main CS catalog)",
+    "course_code": "CS\u00a06455",
+    "course_name": "User Interface Design and Evaluation",
+    "text": "Examines usability in the software development process with an emphasis on usability, requirements, methodology, design, and evaluation."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science / MCS-DS (CS course catalog)",
+    "course_code": "CS\u00a0442",
+    "course_name": "Trustworthy Machine Learning",
+    "text": "Prepares students to understand the security and privacy problems in machine learning and educates students to propose different attack strategies to identify the vulnerabilities of a range of learning algorithms and understand different defense approaches towards trustworthy machine learning systems. Students will explore topics including basic machine learning foundations (e.g., linear regression and PCA), adversarial attacks against different learning algorithms, differential privacy, data valuation, and different categories of defenses. The lessons are reinforced via a series of topic-driven lectures, coding assignments, related paper readings, exams and in-class discussions. Students will learn to analyze current interactions between attackers and defenders on machine learning and therefore develop an understanding of the principles on trustworthy machine learning which is an emerging and important topic. Students will be required to finish three related homework projects, including 1) developing a machine learning classifier, 2) designing adversarial attacks against the built classifier, and 3) developing defenses to improve the robustness of the trained classifier against designed attacks. Students registered for 4 credit hours will also finish a final project based on the class topics, demonstrating their ability to propose related new algorithms based on the class subjects. 3 undergraduate hours. 4 graduate hours. Prerequisite: CS\u00a0225 ; one of CS\u00a0440 , ECE\u00a0448 , CS\u00a0441 , CS\u00a0446 or ECE\u00a0449 ; one of MATH\u00a0225 , MATH\u00a0257 , MATH\u00a0415 , MATH\u00a0416 , ASRM\u00a0406 or BIOE\u00a0210 ."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science / MCS-DS (CS course catalog)",
+    "course_code": "CS\u00a0555",
+    "course_name": "Numerical Methods for PDEs",
+    "text": "Numerical techniques for initial and boundary value problems in partial differential equations. Finite difference and finite element discretization techniques, direct and iterative solution methods for discrete problems, and programming techniques and usage of software packages. Same as CSE\u00a0510 and MATH\u00a0552 . Prerequisite: CS\u00a0450 , CSE\u00a0401 , ECE\u00a0491 , MATH\u00a0450 or CS 457."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science / MCS-DS (CS course catalog)",
+    "course_code": "CS\u00a0526",
+    "course_name": "Advanced Compiler Construction",
+    "text": "Incremental and interactive compiling, error correction, code optimization, models of code generators. Prerequisite: CS\u00a0426 ."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science / MCS-DS (CS course catalog)",
+    "course_code": "CS\u00a0422",
+    "course_name": "Programming Language Design",
+    "text": "Exploration of major language design paradigms using imperative and functional programming as unifying themes. Tools include both practical language processor construction and theoretical models. 3 undergraduate hours. 3 or 4 graduate hours. Prerequisite: CS\u00a0421 ."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science and Engineering (EECS catalog)",
+    "course_code": "EECS 475",
+    "course_name": "Introduction to Cryptography",
+    "text": "Covers fundamental concepts, algorithms, and protocols in cryptography. Topics: ancient ciphers, Shannon theory, symmetric encryption, public key encryption, hash functions, digital signatures, key distribution. Emphasizes attack models, precise definitions of security, reductions, and proof techniques."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science and Engineering (EECS catalog)",
+    "course_code": "EECS 427",
+    "course_name": "Very Large Scale Integrated (VLSI) Design I",
+    "text": "Design techniques for full-custom VLSI circuits. Design rule checking, logic and circuit simulation. CMOS circuit delay and power analysis. High performance and low power VLSI systems. CMOS logic circuit families, adders, multipliers, memory arrays, sequential circuits, and interconnects. Clock and power distribution. Major design project to implement a RISC processor. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science and Engineering (EECS catalog)",
+    "course_code": "CSE 584",
+    "course_name": "Advanced Database Systems",
+    "text": "Advanced topics and research issues in database management systems. Distributed databases, advanced query optimization, query processing, transaction processing, data models and architectures. Data management for emerging application areas, including bioinformatics, the internet, OLAP and data mining. A substantial course project allows in-depth exploration of topics of interest."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Science and Engineering (EECS catalog)",
+    "course_code": "ECE 509",
+    "course_name": "BioMEMS",
+    "text": "Focuses on the plasma chemistry and plasma-surface interactions occurring in low temperature plasmas as used in, for example, materials processing, chemical conversion, biotechnology, environmental remediation, and photon sources. Emphasis is on the atomic and molecular processes that produce chemically reactive species by electron and ion-molecule collisions, neutral-neutral reactions; and reactions with inorganic, organic and liquid surfaces. Plasma-surface interactions will be addressed that result in deposition, etching and sputtering. Radiation transport producing photoionization and photodissociation, and trapping will be discussed."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Sciences / MS Data Science (elective pool)",
+    "course_code": "COMP SCI 550",
+    "course_name": "Algorithmic Game Theory & Learning",
+    "text": "Game theory is a mathematical lens for studying interactions among strategic agents, modeling these situations as games with the goal of understanding and influencing outcomes. Core topics include non-cooperative game theory, mechanism design, and cooperative game theory, examined via the lens of a computer scientist, drawing on tools from theoretical computer science, optimization, probability, and machine learning. Themes include the impact of self-interested behavior on others and on societal outcomes, the emergence of equilibria under such behavior, how such equilibria can be computed or approximated, designing mechanisms to ensure fair and efficient outcomes, and how cooperation can lead to fair value distribution. Particular emphasis is placed on studying, designing, and implementing algorithms."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Sciences / MS Data Science (elective pool)",
+    "course_code": "COMP SCI 272",
+    "course_name": "Introduction To Web Development",
+    "text": "Introduces methods and tools for creating/maintaining secure and interactive web content. Topics include programming fundamentals to support core web concepts, application development essentials, and content management systems. Web best practices - such as accessibility, design, and critical thinking about relevant ethics and organization. Covers practical skills to design and implement websites using popular scripting languages and frameworks, content management systems (CMSs), and related tools."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Sciences / MS Data Science (elective pool)",
+    "course_code": "COMP SCI 739",
+    "course_name": "Distributed Systems",
+    "text": "Large-scale distributed systems have become pervasive, underlying virtually all widely used computing services. Explore prevalent issues in designing and implementing distributed systems. Topics include fault tolerance, scalability, replication, distributed storage, consensus, reliability, performance, and correctness."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Computer Sciences / MS Data Science (elective pool)",
+    "course_code": "COMP SCI 541",
+    "course_name": "Theory & Algorithms For Data Science",
+    "text": "Theoretical methods for data science. Topics include: review of probability background, concentration inequalities, geometry of high dimensional random variables, parametric and non-parametric estimation, selected topics from optimization (optimality conditions; deterministic and stochastic gradient descent), PAC learning, sample complexity and algorithms for linear classification and regression, and property/distribution testing. Uses Python programming language."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "ECE 6266",
+    "course_name": "Energy Systems Practicum",
+    "text": "Capstone independent study placing students in a commercial, industrial, academic or government setting where they must solve real-world security problems. This course will have the same learning objectives and will be taught in a coordinated fashion across all specializations. Policy Track The Policy track approaches cybersecurity from the management aspect, including the administrative, market, and public policy tools used to keep cyberspace safe. This concentration focuses on the way IT security is affected by organizational, national, and international policies. Topics covered include security policy frameworks, global internet governance, privacy technologies and law, critical infrastructure policies, cyberspace as a domain for international conflict, and multilateral cyber norm development. Core Courses (9 hours)"
+  },
+  {
+    "source_type": "course",
+    "program": "MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6264",
+    "course_name": "Information Security Lab: System and Network Defense",
+    "text": "Elective Courses (6 hours) Special Note Select two courses from the list. Advanced Operating Systems (CS 6210) Computer Networks (CS 6250) Software Development Process (CS 6300) Database System Concepts & Design (CS 6400) Advanced Topics in Malware Analysis (CS 6747) Enterprise Cybersecurity Management (CS 8803) Malware Analysis and Defense (CS 8813) Practicum (5 hours)"
+  },
+  {
+    "source_type": "course",
+    "program": "MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6035",
+    "course_name": "Introduction to Information Security",
+    "text": "A full spectrum of information security: threats, software vulnerabilities, programming for malice, basic cryptography, operating systems protections, network security, privacy, data mining, computer crime."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6265",
+    "course_name": "Information Security Lab Reversed Engeneering and Binary",
+    "text": "Computer systems and network vulnerabilities, information warfare, network and operating system security techniques, security analysis tools."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Data Analytics (DAAN)",
+    "course_code": "DAAN 871",
+    "course_name": "Data Visualization",
+    "text": "Data Visualization (3) The course provides a foundation in the principles, concepts, techniques and tools for visualizing information in large complex data sets. Unlike scientific visualization, which focuses on the presentation of data that has a spatial or physical correspondence, data visualization focuses on mapping complex, abstract information to a physical representation. The development of effective visualization strategies is crucial for not only facilitating an understanding of large complex data sets but also for driving knowledge discovery and the decision making processes in a given domain. In this course, students will learn the key principles involved in data visualization and will explore a wide range of visualization approaches that can be applied for understanding complex data across different data types. Specifically, techniques for visualizing one-dimensional data (e.g., temporal data); two-dimensional data (e.g., geospatial data); multidimensional data (e.g., mapping relational data in n-dimensional space); hierarchies and graphs (e.g., tree structures); networks (e.g., social networks) and text (e.g., mining text and hypertext from Web) will be discussed. Emphasis will be placed on the identification of patterns, trends and differences in visualizations of data from variety of domains (e.g., science, business, engineering, social media, etc.). In addition, students will gain hands-on experience with a variety of visualization tools including: Gephi, ManyEyes, Excel, Science of Science (Sci2), Pajek, Lattix, R, Cfinder, MapEquation, NodeXL, and/or Gapminder."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Data Analytics (DAAN)",
+    "course_code": "DAAN 822",
+    "course_name": "Data Collection and Cleaning",
+    "text": "This course focuses on the tools and techniques required for collecting data and preparing them for further analysis. The presence of incorrect and inconsistent data can significantly distort the results of the analysis often negating the potential benefits of information-driven approaches. As a result a variety of research over the last decades has focused on data cleansing: computational procedures to automatically or semi-automatically identify - and, when possible, correct - errors in large data sets. The goal of this course is to explore and discuss different data collection tools and techniques in addition to learning skills for retrieving data from existing databases. To further enforce data quality and reliability this course will cover techniques for error detection and data cleaning on large databases. Students will learn the available tools and techniques for data collection including automated data collection for databases, retrieving data from available databases, data preparation and cleansing techniques, data quality and reliability and finally learn techniques to identify issues in data collection and how to clean the data."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Data Analytics (DAAN)",
+    "course_code": "DAAN 501",
+    "course_name": "Analytics Research and Problem Framing",
+    "text": "Students in this course will explore the elements of the research process within quantitative, qualitative, and mixed methods approaches as it applies to research into data analytics and its use. The ethical principles and challenges of research will be covered including human-subject research guidelines and the Institutional Review Board approval process. Students will use these theoretical underpinnings to begin to critically review literature in the analytics domain, determine how research findings are useful in forming their understanding of their work, and place their own research within the context of the extant literature."
+  },
+  {
+    "source_type": "course",
+    "program": "MS Data Analytics (DAAN)",
+    "course_code": "DAAN 881",
+    "course_name": "Data-Driven Decision Making",
+    "text": "Data-Driven Decision Making (3) The theory and application of several quantitative decision-making tools will be studied. The usefulness of these tools will be illustrated using projects and case studies throughout the course. Emphasis will be placed on the application of the tools and techniques and the results they generate. Finding patterns in data and appropriately grouping them are essential in the extraction of information in large datasets. This course will use Principal Component Analyses to transform highly correlated sets of data by means of orthogonal transformation. Cluster analysis will be used to properly group data when working with large datasets. When the outcomes involve categorical variables, Logistic regression techniques will be used to estimate the probabilistic values of the output. The decision space will be divided into smaller regions using Regression tree analyses. When factors are too numerous and highly collinear, Partial Least Square Regression methods will be performed.Public access datasets in the healthcare, transportation and finance industries will be used to demonstrate the applications and the limitations of these techniques."
+  },
+  {
+    "source_type": "course",
+    "program": "MSCS / MS Data Science (CSE catalog)",
+    "course_code": "CSE 528",
+    "course_name": "Computational Neuroscience",
+    "text": "Introduction to computational methods for understanding nervous systems and the principles governing their operation. Topics include representation of information by spiking neurons, information processing in neural circuits, and algorithms for adaptation and learning. Recommended: coursework in elementary calculus; linear algebra; and statistics. Offered: jointly with NEURO 528."
+  },
+  {
+    "source_type": "course",
+    "program": "MSCS / MS Data Science (CSE catalog)",
+    "course_code": "CSE 143",
+    "course_name": "Computer Programming II",
+    "text": "Continuation of CSE 142. Concepts of data abstraction and encapsulation including stacks, queues, linked lists, binary trees, recursion, instruction to complexity and use of predefined collection classes. Course equivalent to: CSS 143 and TCSS 143. Course overlaps with: CSE 122; CSE 123; CSS 123; CSS 133; and T INFO 473. Prerequisite: CSE 142. Offered: AWSpS."
+  },
+  {
+    "source_type": "course",
+    "program": "MSCS / MS Data Science (CSE catalog)",
+    "course_code": "CSE 413",
+    "course_name": "Programming Languages and Their Implementation",
+    "text": "Basic concepts and implementation strategies for modern functional and object-oriented programming languages such as Scheme and Java. Intended for non-majors. Course overlaps with: CSE 341 and CSE 401. Prerequisite: CSE 373."
+  },
+  {
+    "source_type": "course",
+    "program": "MSCS / MS Data Science (CSE catalog)",
+    "course_code": "CSE 453",
+    "course_name": "Datacenter Systems",
+    "text": "Datacenter server, network, storage, security, and energy management technologies.  Virtualization, I/O architectures, resource isolation and provisioning, disaggregation, quality of service, and tail latency. Prerequisite: CSE 332 and CSE 333; recommended: CSE 451 or CSE 452."
+  },
+  {
+    "source_type": "course",
+    "program": "Online Master of Computer Science (MCS)",
+    "course_code": "CSE 330",
+    "course_name": "Operating Systems",
+    "text": "Operating system structure and services, processor scheduling, concurrent processes, synchronization techniques, memory management, virtual memory, input/output, storage management and file systems."
+  },
+  {
+    "source_type": "course",
+    "program": "Online Master of Computer Science (MCS)",
+    "course_code": "CSE 230",
+    "course_name": "Computer Organization and Assembly Language Programming",
+    "text": "Register-level computer organization, instruction set architecture, assembly language, processor organization and design, memory organization, IO programming and exception/interrupt handling."
+  },
+  {
+    "source_type": "course",
+    "program": "Online Master of Computer Science (MCS)",
+    "course_code": "CSE 310",
+    "course_name": "Data Structures and Algorithms",
+    "text": "Advanced data structures and algorithms, including stacks, queues, trees (B, B+, AVL), graphs and searching for graphs, hashing and external sorting."
+  },
+  {
+    "source_type": "course",
+    "program": "Online Master of Computer Science (MCS)",
+    "course_code": "CSE 340",
+    "course_name": "Principles of Programming Languages",
+    "text": "Formal syntactic and semantic descriptions, compilation and implementation issues, and theoretical foundations for several programming paradigms."
+  }
+]

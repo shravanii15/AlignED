@@ -1,0 +1,1108 @@
+================================================================================
+ID: C001 | type: course
+PROGRAM: Cybersecurity (ENPM catalog) | COURSE: Hacking of C programs and Unix Binaries ENPM691
+TEXT: Teaches the fundamentals of secure programming in C. An in depth discussion on various security vulnerabilities (e.g., buffer overflows) in C applications will be taught with hands-on demo of concepts during the class. Students will learn how a C program runs "under-the-hood". The course will teach nitty-gritty of C programs by analyzing at the assembly level. The course discusses best practices (e.g., coding standards) and design principles for secure programming so that security can be built-in during design time. In addition to assignments, students are required to present papers related to this course.
+================================================================================
+ID: C002 | type: course
+PROGRAM: Cybersecurity (ENPM catalog) | COURSE: Applied Finite Element Methods ENPM652
+TEXT: Introduces the Finite Element Method (FEM), widely used to perform analyses in areas such as structural/solid mechanics, fluid mechanics, heat transfer. This course presents an introduction to the mathematical and physical concepts underpinning the FEM framework. Additionally, ANSYS Workbench software will be used to demonstrate engineering-scale examples for stress and thermal analysis problems. There are no formal requirements for this course although students will benefit from a familiarity with basic concepts in linear algebra, calculus, differential equations, solid mechanics, and heat transfer.
+================================================================================
+ID: C003 | type: course
+PROGRAM: Cybersecurity (ENPM catalog) | COURSE: Autonomous Robotics ENPM701
+TEXT: This is a hands-on course exploring the principles of robotic autonomy. Students will explore the theoretical, algorithmic, and implementation aspects of autonomous robotic modeling and controls, perception, localization and SLAM, planning, and decision making. These techniques will be applied through completion of a semester-long hands-on project employing the course material, ground-based mobile robots, and Python.
+================================================================================
+ID: C004 | type: course
+PROGRAM: Cybersecurity (ENPM catalog) | COURSE: Heating, Ventilation and Air Conditioning of Buildings ENPM625
+TEXT: Fundamentals of heating, ventilation and air conditioning analysis and design. Thermodynamics, heat transfer and fluid mechanics principles applied to field problems. Quantitative analyses stressed. Topics include psychometrics, thermal loads, incompressible flow in ducts and pipes, heat exchangers, cooling towers, and refrigeration.
+================================================================================
+ID: C005 | type: course
+PROGRAM: MS Analytics (OMS Analytics) | COURSE: Computational Data Analysis ISYE 6740
+TEXT: *required for Computational Data Analytics Track Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed. The course is designed to answer the most fundamental questions about machine learning: What are the most important methods to know about, and why? How can we answer the question 'is this method better than that one' using asymptotic theory? How can we answer the question 'is this method better than that one' for a specific dataset of interest? What can we say about the errors our method will make on future data? What's the 'right' objective function? What does it mean to be statistically rigorous? This course is designed to give graduate students a thorough grounding in the methods, theory, mathematics and algorithms needed to do research and applications in machine learning. The course covers topics from machine learning, classical statistics, and data mining. Students entering the class with a pre-existing working knowledge of probability, statistics and algorithms will be Analytical Tools an advantage, but the class has been designed so that anyone with a strong numerate background can catch up and fully participate. Some experience with coding are expected.
+================================================================================
+ID: C006 | type: course
+PROGRAM: MS Analytics (OMS Analytics) | COURSE: Introduction for Computing for Data Analytics CSE 6040
+TEXT: Computational techniques needed for data analysis; programming, accessing databases, multidimensional arrays, basic numerical computing, and visualization; hands-on applications and case studies. Credit will not be awarded for both CSE 6040 and CX 4240.
+================================================================================
+ID: C007 | type: course
+PROGRAM: MS Analytics (OMS Analytics) | COURSE: Artificial Intelligence CS 6601
+TEXT: This course is a survey of the field of Artificial Intelligence and will often be taken as the first graduate course in the area. It is designed to be challenging and involves significant independent work, readings, and assignments. The course covers most of the required textbook Artificial Intelligence A Modern Approach 3rd edition, which is a keystone of Georgia Tech’s Intelligent Systems PhD qualifier exam.
+================================================================================
+ID: C008 | type: course
+PROGRAM: MS Analytics (OMS Analytics) | COURSE: Reinforcement Learning CS 7642
+TEXT: Reinforcement Learning is a subarea of Machine Learning, that area of Artificial Intelligence that is concerned with computational artifacts that modify and improve their performance through experience. This course focuses on automated computational decision making through a combination of classic papers and more recent work. It examines efficient algorithms, where they exist, for single-agent and multiagent planning as well as approaches to learning near optimal decisions from experience. Topics include Markov decision processes; stochastic and repeated games; partially observable Markov decision processes; reinforcement learning; and interactive reinforcement learning. The class is particularly interested in issues of generalization, exploration, and representation.
+================================================================================
+ID: C009 | type: course
+PROGRAM: MS Computer Science (Align / CS catalog) | COURSE: Building Scalable Distributed Systems CS 6650
+TEXT: Covers the essential elements of distributed, concurrent systems and builds upon that knowledge with engineering principles and practical experience with state-of-the-art technologies and methods for building scalable systems. Scalability is an essential quality of internet-facing systems and requires specialized skills and knowledge to build systems that scale at low cost.
+================================================================================
+ID: C010 | type: course
+PROGRAM: MS Computer Science (Align / CS catalog) | COURSE: Advanced Algorithms CS 4810
+TEXT: Builds on CS 3000 . Presents an advanced study of computer algorithms. Covers basic algorithmic paradigms (e.g., greedy, divide-and-conquer, and dynamic programming); graph algorithms; optimization; computational Intractability (e.g., NP-completeness, PSPACE-completeness); randomized algorithms; and approximation algorithms.
+================================================================================
+ID: C011 | type: course
+PROGRAM: MS Computer Science (Align / CS catalog) | COURSE: Foundations for Generative AI CS 6180
+TEXT: Offers students an opportunity to obtain both the theoretical foundation and practical skills to understand, analyze, and apply generative AI techniques effectively. Begins with foundational concepts in AI and machine learning; progresses to advanced natural language processing, transformer models, and large language models; and concludes with cutting-edge techniques like prompt engineering, domain-specific adaptations, and retrieval-augmented generation.
+================================================================================
+ID: C012 | type: course
+PROGRAM: MS Computer Science (Align / CS catalog) | COURSE: Program Design and Implementation 2 CS 3100
+TEXT: Builds on foundations introduced in CS 2100 to examine program design at increasing scales of complexity. Reviews abstraction, encapsulation, inheritance, and interfaces in statically typed object-oriented languages. Presents a comparative approach to software design patterns and paradigms, including object-oriented and functional programming. Offers students an opportunity to obtain a deeper understanding of the principles of program design including interface design, test-driven development, graphical design notations, reusable software components, and open-source ecosystems. Illustrates the impact of design-time decisions on software correctness including accessibility, changeability, performance, reusability, and privacy. Students collaborate throughout the semester to design and implement a large software project.
+================================================================================
+ID: C013 | type: course
+PROGRAM: MS Computer Science (CMSC catalog) | COURSE: Robotics CMSC756
+TEXT: Overview on fundamental components of robotic systems, including the sensing and actuation, control and modeling of motion and perception, dynamics and kinematics, motion planning and manipulation of robots.
+================================================================================
+ID: C014 | type: course
+PROGRAM: MS Computer Science (CMSC catalog) | COURSE: Introduction to Parallel Computing CMSC416
+TEXT: Introduction to parallel computing. Topics include programming for shared memory and distributed memory parallel architectures, and fundamental issues in design, development, and performance analysis of parallel programs.
+================================================================================
+ID: C015 | type: course
+PROGRAM: MS Computer Science (CMSC catalog) | COURSE: Natural Language Processing CMSC723
+TEXT: Introduce fundamental concepts, techniques, and algorithms for the computational handling of natural language. Statistical and machine learning techniques, models, and algorithms that enable computers to deal with the ambiguity and implicit structure of human language. Approaches that focus on uncovering linguistic structure, such as syntactic or semantic parsing, as well as those that focus on manipulating text in useful ways, such as question answering or machine translation.
+================================================================================
+ID: C016 | type: course
+PROGRAM: MS Computer Science (CMSC catalog) | COURSE: Privacy Engineering CMSC431
+TEXT: Explores the intersection of technology and privacy, including technical mechanisms for data privacy, legal and regulatory privacy regimes, and mediation of interpersonal privacy through technology.
+================================================================================
+ID: C017 | type: course
+PROGRAM: MS Computer Science (graduate CS courses) | COURSE: Distributed Systems CAS CS 651
+TEXT: Undergraduate Prerequisites: (CASCS112 & CASCS210) - Programming-centric introduction to how networks of computers are structured to operate as coherent single systems. Introducing principles of architecture, processes, communications, naming, synchronization, consistency and replication, fault tolerance and security, and paradigms such as web-based, object-based, file system, and consistency-based.
+================================================================================
+ID: C018 | type: course
+PROGRAM: MS Computer Science (graduate CS courses) | COURSE: Graduate Algorithms CAS CS 630
+TEXT: Undergraduate Prerequisites: (CASCS330) - Examines advanced algorithmic topics and methods for CS graduate students, including matrix decomposition techniques and applications, linear programming, fundamental discrete and continuous optimization methods, probabilistic algorithms, NP-hard problems and approximation techniques, and algorithms for very large data sets.
+================================================================================
+ID: C019 | type: course
+PROGRAM: MS Computer Science (graduate CS courses) | COURSE: Image and Video Computing CAS CS 585
+TEXT: Undergraduate Prerequisites: (CASCS132 OR CASMA242) and CASCS112 or equivalent programming experience and familiarity with calculus. - Introduction to images and video as multimedia data types and algorithms for image and video understanding based on color, shading, stereo, and motion. Topics include face recognition, human-computer interfaces, animal and vehicle tracking, and medical image analysis.
+================================================================================
+ID: C020 | type: course
+PROGRAM: MS Computer Science (graduate CS courses) | COURSE: Graduate Introduction to Computer Graphics CAS CS 680
+TEXT: Undergraduate Prerequisites: (CASCS112) and CASCS132 or CASMA242. - Introduction to computer graphics algorithms, programming methods, and applications. Focus on fundamentals of two- and three-dimensional raster graphics: scan-conversion, clipping, geometric transformations, and camera modeling. Introduces concepts in computational geometry, computer-human interfaces, animation, and visual realism. Effective Fall 2019, this course fulfills a single unit in the following BU Hub area: Digital/Multimedia Expression. BU Hub Learn More Digital/Multimedia Expression
+================================================================================
+ID: C021 | type: course
+PROGRAM: MS Computer Science (main CS catalog) | COURSE: Spectral Algorithms and Representations CS 7540
+TEXT: Spectral methods mathematics and algorithmic insights driving applications with large data sets in domains such as web-search, information-retrieval, and medical diagnosis and prediction.
+================================================================================
+ID: C022 | type: course
+PROGRAM: MS Computer Science (main CS catalog) | COURSE: Data Visualization: Principles and Applications CS 6730
+TEXT: Introductory course on design principles and applications of data visualization. This course teaches best practices for visualizing datasets from diverse domains intended to help people make sense of data. Students cannot receive credit for both CS 6730 and CS 4460 .
+================================================================================
+ID: C023 | type: course
+PROGRAM: MS Computer Science (main CS catalog) | COURSE: Special Problems CS 4901
+TEXT: An investigation of significant areas of information in computer science. Guided study and research.
+================================================================================
+ID: C024 | type: course
+PROGRAM: MS Computer Science (main CS catalog) | COURSE: User Interface Design and Evaluation CS 6455
+TEXT: Examines usability in the software development process with an emphasis on usability, requirements, methodology, design, and evaluation.
+================================================================================
+ID: C025 | type: course
+PROGRAM: MS Computer Science / MCS-DS (CS course catalog) | COURSE: Trustworthy Machine Learning CS 442
+TEXT: Prepares students to understand the security and privacy problems in machine learning and educates students to propose different attack strategies to identify the vulnerabilities of a range of learning algorithms and understand different defense approaches towards trustworthy machine learning systems. Students will explore topics including basic machine learning foundations (e.g., linear regression and PCA), adversarial attacks against different learning algorithms, differential privacy, data valuation, and different categories of defenses. The lessons are reinforced via a series of topic-driven lectures, coding assignments, related paper readings, exams and in-class discussions. Students will learn to analyze current interactions between attackers and defenders on machine learning and therefore develop an understanding of the principles on trustworthy machine learning which is an emerging and important topic. Students will be required to finish three related homework projects, including 1) developing a machine learning classifier, 2) designing adversarial attacks against the built classifier, and 3) developing defenses to improve the robustness of the trained classifier against designed attacks. Students registered for 4 credit hours will also finish a final project based on the class topics, demonstrating their ability to propose related new algorithms based on the class subjects. 3 undergraduate hours. 4 graduate hours. Prerequisite: CS 225 ; one of CS 440 , ECE 448 , CS 441 , CS 446 or ECE 449 ; one of MATH 225 , MATH 257 , MATH 415 , MATH 416 , ASRM 406 or BIOE 210 .
+================================================================================
+ID: C026 | type: course
+PROGRAM: MS Computer Science / MCS-DS (CS course catalog) | COURSE: Numerical Methods for PDEs CS 555
+TEXT: Numerical techniques for initial and boundary value problems in partial differential equations. Finite difference and finite element discretization techniques, direct and iterative solution methods for discrete problems, and programming techniques and usage of software packages. Same as CSE 510 and MATH 552 . Prerequisite: CS 450 , CSE 401 , ECE 491 , MATH 450 or CS 457.
+================================================================================
+ID: C027 | type: course
+PROGRAM: MS Computer Science / MCS-DS (CS course catalog) | COURSE: Advanced Compiler Construction CS 526
+TEXT: Incremental and interactive compiling, error correction, code optimization, models of code generators. Prerequisite: CS 426 .
+================================================================================
+ID: C028 | type: course
+PROGRAM: MS Computer Science / MCS-DS (CS course catalog) | COURSE: Programming Language Design CS 422
+TEXT: Exploration of major language design paradigms using imperative and functional programming as unifying themes. Tools include both practical language processor construction and theoretical models. 3 undergraduate hours. 3 or 4 graduate hours. Prerequisite: CS 421 .
+================================================================================
+ID: C029 | type: course
+PROGRAM: MS Computer Science and Engineering (EECS catalog) | COURSE: Introduction to Cryptography EECS 475
+TEXT: Covers fundamental concepts, algorithms, and protocols in cryptography. Topics: ancient ciphers, Shannon theory, symmetric encryption, public key encryption, hash functions, digital signatures, key distribution. Emphasizes attack models, precise definitions of security, reductions, and proof techniques.
+================================================================================
+ID: C030 | type: course
+PROGRAM: MS Computer Science and Engineering (EECS catalog) | COURSE: Very Large Scale Integrated (VLSI) Design I EECS 427
+TEXT: Design techniques for full-custom VLSI circuits. Design rule checking, logic and circuit simulation. CMOS circuit delay and power analysis. High performance and low power VLSI systems. CMOS logic circuit families, adders, multipliers, memory arrays, sequential circuits, and interconnects. Clock and power distribution. Major design project to implement a RISC processor. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations.
+================================================================================
+ID: C031 | type: course
+PROGRAM: MS Computer Science and Engineering (EECS catalog) | COURSE: Advanced Database Systems CSE 584
+TEXT: Advanced topics and research issues in database management systems. Distributed databases, advanced query optimization, query processing, transaction processing, data models and architectures. Data management for emerging application areas, including bioinformatics, the internet, OLAP and data mining. A substantial course project allows in-depth exploration of topics of interest.
+================================================================================
+ID: C032 | type: course
+PROGRAM: MS Computer Science and Engineering (EECS catalog) | COURSE: BioMEMS ECE 509
+TEXT: Focuses on the plasma chemistry and plasma-surface interactions occurring in low temperature plasmas as used in, for example, materials processing, chemical conversion, biotechnology, environmental remediation, and photon sources. Emphasis is on the atomic and molecular processes that produce chemically reactive species by electron and ion-molecule collisions, neutral-neutral reactions; and reactions with inorganic, organic and liquid surfaces. Plasma-surface interactions will be addressed that result in deposition, etching and sputtering. Radiation transport producing photoionization and photodissociation, and trapping will be discussed.
+================================================================================
+ID: C033 | type: course
+PROGRAM: MS Computer Sciences / MS Data Science (elective pool) | COURSE: Algorithmic Game Theory & Learning COMP SCI 550
+TEXT: Game theory is a mathematical lens for studying interactions among strategic agents, modeling these situations as games with the goal of understanding and influencing outcomes. Core topics include non-cooperative game theory, mechanism design, and cooperative game theory, examined via the lens of a computer scientist, drawing on tools from theoretical computer science, optimization, probability, and machine learning. Themes include the impact of self-interested behavior on others and on societal outcomes, the emergence of equilibria under such behavior, how such equilibria can be computed or approximated, designing mechanisms to ensure fair and efficient outcomes, and how cooperation can lead to fair value distribution. Particular emphasis is placed on studying, designing, and implementing algorithms.
+================================================================================
+ID: C034 | type: course
+PROGRAM: MS Computer Sciences / MS Data Science (elective pool) | COURSE: Introduction To Web Development COMP SCI 272
+TEXT: Introduces methods and tools for creating/maintaining secure and interactive web content. Topics include programming fundamentals to support core web concepts, application development essentials, and content management systems. Web best practices - such as accessibility, design, and critical thinking about relevant ethics and organization. Covers practical skills to design and implement websites using popular scripting languages and frameworks, content management systems (CMSs), and related tools.
+================================================================================
+ID: C035 | type: course
+PROGRAM: MS Computer Sciences / MS Data Science (elective pool) | COURSE: Distributed Systems COMP SCI 739
+TEXT: Large-scale distributed systems have become pervasive, underlying virtually all widely used computing services. Explore prevalent issues in designing and implementing distributed systems. Topics include fault tolerance, scalability, replication, distributed storage, consensus, reliability, performance, and correctness.
+================================================================================
+ID: C036 | type: course
+PROGRAM: MS Computer Sciences / MS Data Science (elective pool) | COURSE: Theory & Algorithms For Data Science COMP SCI 541
+TEXT: Theoretical methods for data science. Topics include: review of probability background, concentration inequalities, geometry of high dimensional random variables, parametric and non-parametric estimation, selected topics from optimization (optimality conditions; deterministic and stochastic gradient descent), PAC learning, sample complexity and algorithms for linear classification and regression, and property/distribution testing. Uses Python programming language.
+================================================================================
+ID: C037 | type: course
+PROGRAM: MS Cybersecurity (OMS Cybersecurity) | COURSE: Energy Systems Practicum ECE 6266
+TEXT: Capstone independent study placing students in a commercial, industrial, academic or government setting where they must solve real-world security problems. This course will have the same learning objectives and will be taught in a coordinated fashion across all specializations. Policy Track The Policy track approaches cybersecurity from the management aspect, including the administrative, market, and public policy tools used to keep cyberspace safe. This concentration focuses on the way IT security is affected by organizational, national, and international policies. Topics covered include security policy frameworks, global internet governance, privacy technologies and law, critical infrastructure policies, cyberspace as a domain for international conflict, and multilateral cyber norm development. Core Courses (9 hours)
+================================================================================
+ID: C038 | type: course
+PROGRAM: MS Cybersecurity (OMS Cybersecurity) | COURSE: Information Security Lab: System and Network Defense CS 6264
+TEXT: Elective Courses (6 hours) Special Note Select two courses from the list. Advanced Operating Systems (CS 6210) Computer Networks (CS 6250) Software Development Process (CS 6300) Database System Concepts & Design (CS 6400) Advanced Topics in Malware Analysis (CS 6747) Enterprise Cybersecurity Management (CS 8803) Malware Analysis and Defense (CS 8813) Practicum (5 hours)
+================================================================================
+ID: C039 | type: course
+PROGRAM: MS Cybersecurity (OMS Cybersecurity) | COURSE: Introduction to Information Security CS 6035
+TEXT: A full spectrum of information security: threats, software vulnerabilities, programming for malice, basic cryptography, operating systems protections, network security, privacy, data mining, computer crime.
+================================================================================
+ID: C040 | type: course
+PROGRAM: MS Cybersecurity (OMS Cybersecurity) | COURSE: Information Security Lab Reversed Engeneering and Binary CS 6265
+TEXT: Computer systems and network vulnerabilities, information warfare, network and operating system security techniques, security analysis tools.
+================================================================================
+ID: C041 | type: course
+PROGRAM: MS Data Analytics (DAAN) | COURSE: Data Visualization DAAN 871
+TEXT: Data Visualization (3) The course provides a foundation in the principles, concepts, techniques and tools for visualizing information in large complex data sets. Unlike scientific visualization, which focuses on the presentation of data that has a spatial or physical correspondence, data visualization focuses on mapping complex, abstract information to a physical representation. The development of effective visualization strategies is crucial for not only facilitating an understanding of large complex data sets but also for driving knowledge discovery and the decision making processes in a given domain. In this course, students will learn the key principles involved in data visualization and will explore a wide range of visualization approaches that can be applied for understanding complex data across different data types. Specifically, techniques for visualizing one-dimensional data (e.g., temporal data); two-dimensional data (e.g., geospatial data); multidimensional data (e.g., mapping relational data in n-dimensional space); hierarchies and graphs (e.g., tree structures); networks (e.g., social networks) and text (e.g., mining text and hypertext from Web) will be discussed. Emphasis will be placed on the identification of patterns, trends and differences in visualizations of data from variety of domains (e.g., science, business, engineering, social media, etc.). In addition, students will gain hands-on experience with a variety of visualization tools including: Gephi, ManyEyes, Excel, Science of Science (Sci2), Pajek, Lattix, R, Cfinder, MapEquation, NodeXL, and/or Gapminder.
+================================================================================
+ID: C042 | type: course
+PROGRAM: MS Data Analytics (DAAN) | COURSE: Data Collection and Cleaning DAAN 822
+TEXT: This course focuses on the tools and techniques required for collecting data and preparing them for further analysis. The presence of incorrect and inconsistent data can significantly distort the results of the analysis often negating the potential benefits of information-driven approaches. As a result a variety of research over the last decades has focused on data cleansing: computational procedures to automatically or semi-automatically identify - and, when possible, correct - errors in large data sets. The goal of this course is to explore and discuss different data collection tools and techniques in addition to learning skills for retrieving data from existing databases. To further enforce data quality and reliability this course will cover techniques for error detection and data cleaning on large databases. Students will learn the available tools and techniques for data collection including automated data collection for databases, retrieving data from available databases, data preparation and cleansing techniques, data quality and reliability and finally learn techniques to identify issues in data collection and how to clean the data.
+================================================================================
+ID: C043 | type: course
+PROGRAM: MS Data Analytics (DAAN) | COURSE: Analytics Research and Problem Framing DAAN 501
+TEXT: Students in this course will explore the elements of the research process within quantitative, qualitative, and mixed methods approaches as it applies to research into data analytics and its use. The ethical principles and challenges of research will be covered including human-subject research guidelines and the Institutional Review Board approval process. Students will use these theoretical underpinnings to begin to critically review literature in the analytics domain, determine how research findings are useful in forming their understanding of their work, and place their own research within the context of the extant literature.
+================================================================================
+ID: C044 | type: course
+PROGRAM: MS Data Analytics (DAAN) | COURSE: Data-Driven Decision Making DAAN 881
+TEXT: Data-Driven Decision Making (3) The theory and application of several quantitative decision-making tools will be studied. The usefulness of these tools will be illustrated using projects and case studies throughout the course. Emphasis will be placed on the application of the tools and techniques and the results they generate. Finding patterns in data and appropriately grouping them are essential in the extraction of information in large datasets. This course will use Principal Component Analyses to transform highly correlated sets of data by means of orthogonal transformation. Cluster analysis will be used to properly group data when working with large datasets. When the outcomes involve categorical variables, Logistic regression techniques will be used to estimate the probabilistic values of the output. The decision space will be divided into smaller regions using Regression tree analyses. When factors are too numerous and highly collinear, Partial Least Square Regression methods will be performed.Public access datasets in the healthcare, transportation and finance industries will be used to demonstrate the applications and the limitations of these techniques.
+================================================================================
+ID: C045 | type: course
+PROGRAM: MSCS / MS Data Science (CSE catalog) | COURSE: Computational Neuroscience CSE 528
+TEXT: Introduction to computational methods for understanding nervous systems and the principles governing their operation. Topics include representation of information by spiking neurons, information processing in neural circuits, and algorithms for adaptation and learning. Recommended: coursework in elementary calculus; linear algebra; and statistics. Offered: jointly with NEURO 528.
+================================================================================
+ID: C046 | type: course
+PROGRAM: MSCS / MS Data Science (CSE catalog) | COURSE: Computer Programming II CSE 143
+TEXT: Continuation of CSE 142. Concepts of data abstraction and encapsulation including stacks, queues, linked lists, binary trees, recursion, instruction to complexity and use of predefined collection classes. Course equivalent to: CSS 143 and TCSS 143. Course overlaps with: CSE 122; CSE 123; CSS 123; CSS 133; and T INFO 473. Prerequisite: CSE 142. Offered: AWSpS.
+================================================================================
+ID: C047 | type: course
+PROGRAM: MSCS / MS Data Science (CSE catalog) | COURSE: Programming Languages and Their Implementation CSE 413
+TEXT: Basic concepts and implementation strategies for modern functional and object-oriented programming languages such as Scheme and Java. Intended for non-majors. Course overlaps with: CSE 341 and CSE 401. Prerequisite: CSE 373.
+================================================================================
+ID: C048 | type: course
+PROGRAM: MSCS / MS Data Science (CSE catalog) | COURSE: Datacenter Systems CSE 453
+TEXT: Datacenter server, network, storage, security, and energy management technologies.  Virtualization, I/O architectures, resource isolation and provisioning, disaggregation, quality of service, and tail latency. Prerequisite: CSE 332 and CSE 333; recommended: CSE 451 or CSE 452.
+================================================================================
+ID: C049 | type: course
+PROGRAM: Online Master of Computer Science (MCS) | COURSE: Operating Systems CSE 330
+TEXT: Operating system structure and services, processor scheduling, concurrent processes, synchronization techniques, memory management, virtual memory, input/output, storage management and file systems.
+================================================================================
+ID: C050 | type: course
+PROGRAM: Online Master of Computer Science (MCS) | COURSE: Computer Organization and Assembly Language Programming CSE 230
+TEXT: Register-level computer organization, instruction set architecture, assembly language, processor organization and design, memory organization, IO programming and exception/interrupt handling.
+================================================================================
+ID: C051 | type: course
+PROGRAM: Online Master of Computer Science (MCS) | COURSE: Data Structures and Algorithms CSE 310
+TEXT: Advanced data structures and algorithms, including stacks, queues, trees (B, B+, AVL), graphs and searching for graphs, hashing and external sorting.
+================================================================================
+ID: C052 | type: course
+PROGRAM: Online Master of Computer Science (MCS) | COURSE: Principles of Programming Languages CSE 340
+TEXT: Formal syntactic and semantic descriptions, compilation and implementation issues, and theoretical foundations for several programming paradigms.
+================================================================================
+ID: P001 | type: posting
+TITLE: Senior Software Engineer | COMPANY: Prestige Staffing | CAT: software engineer
+TEXT: Sr. Software Engineer
+Prestige Staffing has partnered with a leading FinTech company on their search for a Sr. Software Engineer role. They are looking for a back end focused engineer to help them build out the APIs and microservices that power two of their primary applications that allow customers to manager their investments. In this role you will work primarily with Java and Spring Boot, as well as other technologies such as RabbitMQ and Redis.
+This is a great opportunity to work on a small team building enterprise level applications and have true ownership of your code. This is a permanent role and will follow a hybrid schedule (working 3 days a week in their NYC office).
+Responsibilities:
+Design, develop and support RESTful APIs from scratch using JavaBuild microservices leveraging Spring BootWork closely with Product Management team to understand user needs and feature requirementsContribute to documentation for new developmentLeverage RabbitMQ for asynchronous communication
+Requirements:6+ years of development experience, ideally focused on the back endAt least 3 years of professional Java experienceSpring and Spring Boot experienceExperience with RabbitMQ preferredExperience with Redis preferredBachelor's degree in Computer Science or related field
+================================================================================
+ID: P002 | type: posting
+TITLE: Software Engineer | COMPANY: TRG | CAT: software engineer
+TEXT: *This position is fully onsite and requires speaking fluent English as client communication is necessary. *Software Engineer 1, under the guidance of the Manager of Application Development and Senior Software Engineers, will develop code for both external and internal customer projects. They will adhere to established security and coding standards, participating in the Implementation, Testing, and Deployment of projects. Key responsibilities include coding tasks for mobile, desktop, and web applications, maintaining existing software systems, learning, and adopting new technologies, creating unit and regression tests, and contributing to code reviews.
+Essential Functions:Utilize development tools such as VB.Net, C#, .Net Core, MVC, Git, ASP.NET, SQL Server, SSIS, SSRS, HTML, CSS, JSON, REST API, JavaScript, JQuery, Bootstrap.Code basic tasks in mobile, desktop, and web software applications.Investigate, learn, and develop skills in new technologies.Maintain existing software systems by identifying and correcting defects.Create unit and regression tests.Follow the team’s software development process and perform code reviews.Communicate effectively with team members, senior engineers, business analysts, and non-team members.
+Initiative/Independence:Eager to learn and attend internal and external training sessions.Demonstrate initiative by identifying and communicating problems and risks.Recognize the risk of changes and tailor actions accordingly.
+Qualifications:Associate degree in computer science Required.Bachelor’s Degree Preferred.Minimum of 1 year of .NET Framework/VB or C# development experience.Self-starter comfortable working across all levels of an organization, especially external clients.Ability to pass a background check.
+Performance Requirements:Maintain regular and reliable attendance.Operate a computer and other position-related technologies.Work and consult with colleagues, outside stakeholders, and individually.Work flexible hours as needed.Clearly and confidentially communicate with TruWest employees and other stakeholders.Adhere to all TruWest Values at all times.
+Physical Requirements:Remain in a stationary position 75% of the time.Access work locations.Stooping, standing, walking, bending, and staying upright to perform work.Visually read written and digital information.Receive detailed information through oral communication.
+================================================================================
+ID: P003 | type: posting
+TITLE: Software Engineer for global computer software company in Redmond, WA. | COMPANY: OSI Engineering | CAT: software engineer
+TEXT: Software Engineer for global computer software company in Redmond, WA.
+This team is committed to delivering industry-leading security solutions to protect our customers from emerging cyber threats. As part of our team, you will be at the forefront of developing cutting-edge infrastructure tools essential for deploying and managing resources and services across various regions seamlessly. Our team focuses on automating deployment processes, integrating with proprietary and cloud-native frameworks, and ensuring safe deployment practices through innovative automation and observability solutions.
+We are seeking a highly skilled Software Engineer to join our team. You will be responsible for designing, developing, and maintaining automation tools utilized by hundreds of engineers across the organization. You will collaborate closely with partner teams to gather requirements, provide feedback on existing systems, and design innovative solutions to enhance deployment efficiency and reliability.
+Responsibilities:Design, develop, and maintain automation tools for orchestrating the deployment of services across various regions.Collaborate with cross-functional teams to gather requirements and provide feedback on existing infrastructure automation systems.Architect and implement innovative solutions to automate validation processes and enable fully automated deployments.Develop and maintain integrations with Microsoft proprietary and cloud-native deployment frameworks.Design and implement observability tools to enable application teams to collect telemetry and monitor the health of compute clusters.Ensure the scalability, reliability, and performance of automation tools to meet the evolving needs of the organization.Provide technical guidance to junior team members.
+Qualifications: Strong proficiency in C#.Excellent problem-solving skills and the ability to thrive in a fast-paced, collaborative environment.Effective communication skills and the ability to collaborate with cross-functional teams.Experience with containerization technologies such as Docker and container orchestration platforms like Kubernetes.Strong understanding of cloud computing principles and experience with cloud platforms such as Azure, AWS, or Google Cloud Platform.Familiarity with infrastructure-as-code tools such as ARM, Bicep, Terraform, Ansible, or Puppet.Knowledge of continuous integration/continuous deployment (CI/CD) pipelines and related tools.
+Preferred Qualifications:Experience with Microsoft proprietary deployment frameworks such as Azure Resource Manager (ARM) and Ev2Familiarity with observability tools and practices such as Prometheus, Grafana, or ELK stack.
+Education/Experience:Bachelor's degree in computer science, software engineering or relevant field required.8+ years of experience required.Minimum 5 years' experience with .net and C#Minimum 5 years' experience with cloud computing (either Azure, AWS, or Google Cloud).Minimum 3 years' experience with familiarity with 
+================================================================================
+ID: P004 | type: posting
+TITLE: Remote - Software Engineer - OIPA Configurator | COMPANY: State Farm | CAT: software engineer
+TEXT: Overview
+
+We are not just offering a job but a meaningful career! Come join our passionate team!
+
+As a Fortune 50 company, we hire the best employees to serve our customers, making us a leader in the insurance and financial services industry. State Farm embraces diversity and inclusion to ensure a workforce that is engaged, builds on the strengths and talents of all associates, and creates a Good Neighbor culture.
+
+We offer competitive benefits and pay with the potential for an annual financial award based on both individual and enterprise performance. Our employees have an opportunity to participate in volunteer events within the community and engage in a learning culture. We offer programs to assist with tuition reimbursement, professional designations, employee development, wellness initiatives, and more!
+
+Visit our Careers page for more information on our benefits, locations and the process of joining the State Farm team!
+
+REMOTE: Qualified candidates (outside of hub locations listed below) may be considered for remote work arrangements based on where a candidate currently resides or is currently located.
+
+HYBRID: Qualified candidates (in or near hub locations listed below) should plan to spend time working from home and some time working in the office as part of our hybrid work environment.
+
+HUB LOCATIONS: Dunwoody, GA; Richardson, TX; Tempe, AZ; or Bloomington, IL
+
+SPONSORSHIP: Applicants are required to be eligible to lawfully work in the U.S. immediately; employer will not sponsor applicants for U.S. work authorization (e.g. H-1B visa) for this opportunity.
+
+Responsibilities
+
+Grow Your Skills, Grow Your Potential
+
+Do you want to be a part of a tight knit team, who directly impacts the customer experience for a Fortune 50 company? Do you want to be a part of a fast paced, constantly changing environment where passion for how we communicate with our customers is a must? Come join the Life Communications product team at State Farm!
+
+The Life Communications product team is tasked with modernizing the way we communicate with Life Policyholders, through a digital first omnichannel strategy. This team is currently undergoing several modernization projects including a new AWS hosted front end User Initiated Communication tool, the Life Modernization (API, Schemas, LPAT) development work and a transition from antiquated technologies to a more modern solution for populating legacy policy pages. The selected applicant will join the team as a Software Engineer for the Oracle Insurance Policy Administration (OIPA) system and Equisoft Design manager. This team uses the OIPA Platform as its policy administration system for all Life products at State Farm.
+
+This individual should be dedicated to delivering high quality results, digging in, triaging problems and showing that continuous growth and improvement mindset. The Software Engineer should be able to establish a vision that goes beyond the here and now and provides a pathway into the future.
+
+Qualif
+================================================================================
+ID: P005 | type: posting
+TITLE: Senior Data Scientist | COMPANY: Signify Technology | CAT: data scientist
+TEXT: Senior Data ScientistUnited States | Remote | Full-time$190,000 - $250,000 | 15% Bonus | Equity
+About Us:
+A $1 billion FinTech Unicorn is disrupting the financial industry in Europe and expanding into the United States market. Their innovative solutions have redefined financial services, and they are looking for US-based Senior Data Scientists to be a part of their expansion.
+This is an incredible opportunity to come into what is a greenfield project, with the fallback of a billion-dollar company behind you.
+Role Overview:As a Senior Data Scientist, you will play a pivotal role in shaping their fraud detection and prevention strategies as they expand into the US market. Leveraging your expertise in data science and machine learning, you will work closely with cross-functional teams to develop and implement advanced analytics solutions to combat payments fraud effectively.
+Responsibilities:Lead the development and implementation of advanced machine learning algorithms for credit risk assessment and mitigation.Analyze large datasets to identify patterns, trends, and variables indicative of credit risk.Collaborate with risk managers, product managers, and other stakeholders to integrate credit risk assessment models into our lending platforms seamlessly.Conduct thorough evaluations of existing credit risk assessment techniques and recommend improvements to enhance accuracy and efficiency.Stay abreast of industry trends and emerging technologies in credit risk modeling to continuously improve our credit risk assessment strategies.Mentor junior data scientists and provide technical guidance on complex credit risk modeling projects.Present findings and recommendations to senior leadership in a clear and concise manner.
+Qualifications:Minimum of 5 years of experience in a data science role, with a focus on credit risk modeling and assessment.Proficiency in programming languages such as Python, R, or SQL, and experience with data manipulation and analysis libraries (e.g., pandas, NumPy).Strong understanding of statistical modeling techniques, including logistic regression, decision trees, random forests, and gradient boosting.Experience with credit risk modeling frameworks and methodologies, such as PD, LGD, and EAD modeling.Excellent problem-solving skills and the ability to translate business requirements into technical solutions.Strong communication and interpersonal skills, with the ability to collaborate effectively with cross-functional teams.Prior experience working in the financial industry, particularly in lending or credit risk management, is a plus.
+Benefits:Opportunity to work with some incredibly successful leaders in the FinTech space.Equity at a Unicorn company.Fully remote.Full health & dental coverage.
+Does this sound like it might be a good fit for you? Apply below today and we can set up some time to speak.
+================================================================================
+ID: P006 | type: posting
+TITLE: Marketing Analytics - Data Scientist Senior Associate | COMPANY: JPMorgan Chase & Co. | CAT: data scientist
+TEXT: Job Description
+
+Join a talented and diverse group of analysts driving strategy and innovation across Chase Consumer Bank using data-driven approaches.
+
+As a Data Scientist Senior Associate, within the Marketing Analytics team, you will focus on analyzing performance and informing optimal strategy for marketing campaigns for newly on-boarded and tenured customers.
+
+Job Responsibilities
+
+Own end-to-end analytics for multiple campaign strategies which includes, regular campaign performance measurement, unstructured ad hoc analysis of customer behavior, A/B and incrementality test reads, and profitability and optimization analysisConsult on experimental design and data collectionInterpret results and present to stakeholders and senior managementPartner with marketing strategy managers to optimize campaigns and develop new strategiesAble to develop skills to provide best-in-class analytics to the business
+
+Required Qualifications, Capabilities, And Skills
+
+Bachelor’s and Master’s degree in a quantitative discipline (Data Science/Analytics, Mathematics, Statistics, Physics, Engineering, Economics, Finance or related fields)3+ years of experience in applying statistical methods to real world problems3+ years of experience with SQL and at least one of the following analytical tools: SAS, Python, R Experience with visualization techniques for data analysis and presentationExperience with web analytics tools (Google Analytics, Adobe/Omniture Insight/Visual Sciences, Webtrends, CoreMetrics, etc.)Superior written, oral communication and presentation skills with experience communicating concisely and effectively with all levels of management and partners
+
+Preferred Qualifications, Capabilities, And Skills
+
+Tableau and Python preferredIntellectually curious and eager to become subject matter expert in their focus areaA strategic thinker with the ability to focus on business goalsHighly organized and able to prioritize multiple tasks
+
+ABOUT US
+
+Chase is a leading financial services firm, helping nearly half of America’s households and small businesses achieve their financial goals through a broad range of financial products. Our mission is to create engaged, lifelong relationships and put our customers at the heart of everything we do. We also help small businesses, nonprofits and cities grow, delivering solutions to solve all their financial needs.
+
+We offer a competitive total rewards package including base salary determined based on the role, experience, skill set, and location. For those in eligible roles, discretionary incentive compensation which may be awarded in recognition of individual achievements and contributions. We also offer a range of benefits and programs to meet employee needs, based on eligibility. These benefits include comprehensive health care coverage, on-site health and wellness centers, a retirement savings plan, backup childcare, tuition reimbursement, mental health support, financial coaching and more. Additional details about total
+================================================================================
+ID: P007 | type: posting
+TITLE: junior java programmer/data scientist | COMPANY: SynergisticIT | CAT: data scientist
+TEXT: Since 2010 Synergisticit has helped Jobseekers differentiate themselves by providing candidates the requisite skills and experience to outperform at interviews and clients. Here at SynergisticIT We just don’t focus on getting you a tech Job we make careers.In this market also we have been able to help our candidates get multiple job offers and $100k + salaries.please check the below links to see success outcomes of our candidates and our participation at different Tech industry events and how we are different from other organizations in helping Jobseekers secure Tech careershttps://www.synergisticit.com/candidate-outcomes/https://reg.rf.oracle.com/flow/oracle/cwoh23/OCWExhibitorCatalog/page/OCWexhibitorcatalogWe regularly interact with the Top Tech companies to give our candidates a competitive advantage-Please see us exhibiting at Oracle Cloud world /Oracle Java one (Las vegas) -2023/2022 and at Gartner Data Analytics Summit (Florida)-2023All Positions are open for all visas and US citizensWe at Synergisticit understand the problem of the mismatch between employer's requirements and Employee skills and that's why since 2010 we have helped 1000’s of candidates get jobs at technology clients like apple, google, Paypal, western union, bank of america, visa, walmart labs etc to name a few.We have an excellent reputation with the clients. Currently, We are looking for entry-level software programmers, Java Full stack developers, Python/Java developers, Data analysts/ Data Scientists, Machine Learning engineers for full time positions with clients.Who Should Apply Recent Computer science/Engineering /Mathematics/Statistics or Science Graduates or People looking to switch careers or who have had gaps in employment and looking to make their careers in the Tech Industry. We assist in filing for STEM extension and also for H1b and Green card filing to Candidateshttps://www.youtube.com/watch?v=OFoqPTNORewhttps://www.youtube.com/watch?v=-HkNN1ag6Zkhttps://www.youtube.com/watch?v=OAFOhcGy9Z8https://youtu.be/bJJl27D8bh0We are looking for the right matching candidates for our clientsREQUIRED SKILLS For Java /Full stack/Software ProgrammerBachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, ITHighly motivated, self-learner, and technically inquisitiveExperience in programming language Java and understanding of the software development life cycleProject work on the skillsKnowledge of Core Java , javascript , C++ or software programmingSpring boot, Microservices, Docker, Jenkins and REST API's experienceExcellent written and verbal communication skillsFor data Science/Machine learning PositionsREQUIRED SKILLSBachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, ITProject work on the technologies neededHighly motivated, self-learner, and technically inquisitiveExperience in programming language Java and understanding of the sof
+================================================================================
+ID: P008 | type: posting
+TITLE: Trader - Data Scientist | COMPANY: CPS, Inc. | CAT: data scientist
+TEXT: Have you been interested in getting into a Proprietary Trading organization and role? This is your opportunity!
+
+Responsibilities:
+
+Analyze market data and trends to identify trading opportunities.Utilize Python/R/MySQL (or similar tools) for post-trade analysis to assess performance and identify improvements.Collaborate with senior traders to develop and execute trading strategies.Monitor and manage trading positions, risk, and performance.
+
+Requirements:
+
+Bachelor's degree in Computer Science, Computer Engineering, Financial Engineering or a related field.Proficiency in Python and SQL. Strong analytical and quantitative skills.Excellent problem-solving skills.Ability to thrive in a fast-paced and collaborative team environment.No trading industry required. 1-2 years
+
+2+ Years
+
+
+================================================================================
+ID: P009 | type: posting
+TITLE: Data Engineer | COMPANY: Piper Companies | CAT: data engineer
+TEXT: Piper Companies is looking for a Data Engineer for an Investment Firm in Wayne, PA for a Hybrid, Full-Time opportunity.
+
+﻿Responsibilities of the Data Engineer:
+
+ Conduct data profiling, source-target mappings, ETL development, SQL tunings and optimization, testing and implementation Provide business and technical analysis for initiatives focusing on Data Warehouse and Business Intelligence solutions Collaborate with Business Intelligence Developers through dashboard and application development process for requirements gathering, feedback on proposed designs and models, and acceptance testing
+
+Qualifications of the Data Engineer:
+
+ 10 years’ experience, with both hands-on and lead experience in supporting data warehousing solutions Must possess the following technical skills: ETL Tools: Enterprise class ETL tool (Talend is plus) Databases & Utilities: Experience with enterprise relational databases (Snowflake experience preferred) Platforms: Microsoft / Unix Expertise and fluency in SQL language is required Knowledge of scripting languages and job schedulers is required (Powershell, etc.) Experience with various integration patterns (e.g. Flat Files, Web Services, etc.) is required Knowledge of fundamental data modeling concepts (e.g. ER Diagrams, normalization, etc.) is required Familiarity with Python, Snowflake, Talend, XML/XSLT, and Cloud Services (AWS or Azure) are preferred Excellent troubleshooting and problem-solving skills; able to root cause and debug complex code in and efficient manner/with appropriate urgency Bachelor's degree in computer science, information technology or another computer-based discipline
+
+Compensation for the Data Engineer:
+
+ Salary of $120K - $150K Hybrid Scheduling Comprehensive Benefits Package: Medical, Dental, Vision, 401K, PTO
+
+Keywords:
+
+Data, Data analysis, Engineering, Data Engineering, Data Wrangling, Data Manipulation, Data Automation, SQL, MySQL, SQL Server, RDMS, Relational Databases, Relational Database Management Systems, DBA, Database Management, Schemas, Queries, Query, DA, Extract, Transform, Load, scripting, data reports, data visualization, benefits, medical, dental, vision, 401K, pto, vacation, hybrid
+================================================================================
+ID: P010 | type: posting
+TITLE:  GCP Data Engineer (Only W2) | COMPANY: TechWish | CAT: data engineer
+TEXT: Job Title: GCP Data EngineerDuration: Long TermLocation: Remote 
+Responsibilities associated with the position:Data Ingestion Workflows: Design and implement data ingestion workflows on Google Cloud Platform, aligning with business needs and technical specifications.Collaboration and Independence: Work both independently and collaboratively with the team, ensuring effective communication with project leaders.Detailed Specifications: Prepare detailed specifications to guide the development of data ingestion processes.Technical Solutions: Develop and implement technical solutions through code development and tool configuration.SQL Expertise: Utilize SQL (Structured Query Language) to extract relevant data for analysis and troubleshooting.Testing and Documentation: Execute testing (unit, system, integration, and user acceptance) and document results.Project Participation: Participate in project planning and development, handling phases or small projects as needed.Time Tracking and Estimation: Estimate and track time for project budgeting and financial purposes.Code Reviews and Standards: Engage in solution design reviews, adhere to security standards, and provide development standards.
+MUST HAVE SKILLS:Google Pub/Sub - yearsBigQuery - yearsGoogle Dataform – yearsData ingestion to Big Query experience - yearsGoogle Cloud Storage - yearsCloud Composer - yearsFusion Cloud - yearsGitHub - yearsSQL - years
+================================================================================
+ID: P011 | type: posting
+TITLE: Sr Data Engineer with Kafka | COMPANY: ZenithMinds Inc | CAT: data engineer
+TEXT: Data Engineer with Kafka (W2 Only)💯% Remote
+Min 10 to12+ strong development experience neededVery strong experience in Kafka and Kafka data injection Strong exp in working with API.Strong exp in Python with AWS.Experience with Informatica IICS and Snowflake. Expertise in Snowflake's cloud data platform, including data loading, transformation, and querying using Snowflake SQL.Experience with SQL-based development, optimization, and tuning for large-scale data processing.Strong understanding of dimensional modeling concepts and experience in designing and implementing data models for analytics and reporting purposes.hands-on experience in IICS or Informatica Power Center ETL development1+ years of hands-on experience in Linux and shell scripting.1+ years of experience working with git.1+ years of related industry experience in an enterprise environment.1+ years of hands-on experience in Python programming.
+
+================================================================================
+ID: P012 | type: posting
+TITLE: Data Engineer I, Revenue Reporting Service | COMPANY: Amazon | CAT: data engineer
+TEXT: Description
+
+Do you love building tools and data pipelines? Are you excited by the opportunity to create clear effective reports and data visualizations, and partner with stakeholders to answer key business questions? Do you want to be a part of a fast-paced environment and contribute to one of the most visited sites on the Internet?
+
+If this describes you, consider joining us as a Data Engineer. You will have the opportunity to impact the evolution of Amazon technology as well as lead mission critical projects early in your career. Your work will contribute to solving some of the most complex technical challenges in the company.
+
+Responsibilities
+
+As a data engineer I, you will/may:
+
+Design, implement, and automate deployment of our distributed system for collecting and processing data from multiple upstream sources
+
+Design data schema and operate internal data warehouses and SQL/NoSQL database systems
+
+Own the design, development, and maintenance of ongoing metrics, reports, analyses, and dashboards to drive key business decisions
+
+Monitor and troubleshoot operational or data issues in the data pipelines
+
+Drive architectural plans and implementation for future data storage, reporting, and analytic solutions
+
+Work collaboratively with TPMs, Product managers, and other internal partners to identify opportunities/problems
+
+Provide assistance to the team with troubleshooting, researching the root cause, and thoroughly resolving defects in the event of a problem
+
+We are open to hiring candidates to work out of one of the following locations:
+
+Seattle, WA, USA
+
+Basic Qualifications
+
+ 1+ years of data engineering experience Experience with data modeling, warehousing and building ETL pipelines Experience with SQL Experience with one or more query language (e.g., SQL, PL/SQL, DDL, MDX, HiveQL, SparkSQL, Scala) Experience with one or more scripting language (e.g., Python, KornShell) Bachelor's or Master's degree in Engineering with 0-2 years of experience.
+
+Preferred Qualifications
+
+ Experience with big data technologies such as: Hadoop, Hive, Spark, EMR Experience with any ETL tool like, Informatica, ODI, SSIS, BODI, Datastage, etc.
+
+Amazon is committed to a diverse and inclusive workplace. Amazon is an equal opportunity employer and does not discriminate on the basis of race, national origin, gender, gender identity, sexual orientation, protected veteran status, disability, age, or other legally protected status. For individuals with disabilities who would like to request an accommodation, please visit https://www.amazon.jobs/en/disability/us.
+
+Our compensation reflects the cost of labor across several US geographic markets. The base pay for this position ranges from $81,000/year in our lowest geographic market up to $185,000/year in our highest geographic market. Pay is based on a number of factors including market location and may vary depending on job-related knowledge, skills, and experience. Amazon is a total compensation company. Dependent on the
+================================================================================
+ID: P013 | type: posting
+TITLE: Architect, Machine Learning, Field CTO | COMPANY: Snowflake | CAT: machine learning
+TEXT: Build the future of data. Join the Snowflake team.
+
+We’re at the forefront of the data revolution, committed to building the world’s greatest data and applications platform. Our ‘get it done’ culture allows everyone at Snowflake to have an equal opportunity to innovate on new ideas, create work with a lasting impact, and excel in a culture of collaboration.
+
+Our Sales Engineering organization is seeking an Architect, Machine Learning Enterprise Field CTO focused on Machine Learning to join our Enterprise Field CTO team who can provide leadership in working with both technical and business executives in the design and architecture of the Snowflake Cloud Data Platform as a critical component of their enterprise data architecture and overall machine learning ecosystem.
+
+In this role you will work with sales teams, product management, and technology partners to leverage best practices and reference architectures highlighting Snowflake’s Cloud Data Platform as a core technology enabling platform for the emerging Data Science workload throughout an organization.
+
+As an Architect focused on Machine Learning you must share our passion and vision in helping our customers and partners drive faster time to insight through Snowflake’s Cloud Data Platform, thrive in a dynamic environment, and have the flexibility and willingness to jump in and get things done. You are equally comfortable in both a business and technical context, interacting with executives and talking shop with technical audiences.
+
+IN THIS ROLE YOU WILL GET TO:
+
+Apply your data science architecture expertise while presenting Snowflake technology and vision to executives and technical contributors at strategic prospects, customers, and partnersWork with our product management, partners, and sales teams in order to drive innovation in our Cloud Data Platform Partner with sales team and channel partners to understand the needs of our customers, strategize on how to navigate and accelerate winning sales cycles, provide compelling value-based enterprise architecture deliverables and working sessions to ensure customers are set up for success operationally, and support strategic enterprise pilots / proof-of-concepts Provide architectural guidance & hands-on support for strategic enterprise pilots / proof-of-concepts around Snowflake’s AI & ML capabilities. . Collaborate closely with our Product team to effectively influence the Snowflake’s product roadmaps based on field team and customer feedbackPartner with Product Marketing teams to spread awareness and support pipeline building via customer roundtables, conferences, events, blogs, webinars, and whitepapers
+
+
+ON DAY ONE, WE WILL EXPECT YOU TO HAVE:
+
+3+ years of experience building and deploying machine learning solutions in the cloud Deep technical hands on expertise within Data Science tools and ecosystem 2+ years of working with cloud native ML tools Strong presentation skills to both technical and executive audiences, whether impromptu on a 
+================================================================================
+ID: P014 | type: posting
+TITLE: Software Engineer, Machine Learning | COMPANY: Niantic, Inc. | CAT: machine learning
+TEXT: Niantic’s Engineering Team seeks a Software Engineer specialized in Machine Learning Engineering to build platforms that empower engineers and researchers to create innovative user experiences with the emerging Generative AI technologies. Our team powers capabilities across our games, geo-based, and AR platforms through productionizing large scale models. Your work will directly help grow the features in our games as well as the capabilities of our technology platforms.
+
+Niantic Engineering leads the advancement of AR and other immersive technologies while creating engaging apps for a user base in the billions.
+
+Responsibilities
+
+Implement and maintain scalable infrastructure solutions to support the deployment of generative AI models.Develop automation tools and processes to streamline model evaluation and deployment workflows.Optimize infrastructure performance to ensure efficient resource utilization and minimize latency in model inference.Implement and maintain monitoring and alerting systems to ensure the reliability and availability of AI infrastructure components.Collaborate with cross-functional teams to understand requirements and design infrastructure solutions that meet business objectives.Stay up-to-date with the latest advancements in AI infrastructure technologies and best practices, and evaluate their applicability to the organization's needs.Participate in code reviews, design discussions, and architecture planning sessions to maintain high-quality standards in software development practices.Troubleshoot and resolve issues related to AI infrastructure, working closely with stakeholders to identify root causes and implement solutions.Collaborate with cross-functional team members and stakeholders, including regular and reliable attendance and participation in meetings.Required in-office 2 days on Tuesday and Wednesday.
+
+Qualifications
+
+You have at least a Bachelor’s degree in Computer Science, Engineering, or a related field.4+ years of experience in software development, and with data structures/algorithms.2+ years of experience in designing, building, and optimizing distributed systems or cloud-based infrastructure.Strong proficiency in programming languages such as Python, Java, or Go, with experience in developing production-quality code.Ability to work in a fast-paced hybrid environment and handle stress appropriately and/or ability to solve practical problems and be sufficiently adaptable to handle dynamic situations with little advance notice.Experience working on cross-functional teams with ability to communicate effectively through written and verbal communications, including synchronous interactions with others.
+
+Plus If...
+
+You have experience developing and maintaining machine learning platforms.You have experience with machine learning/AI in a cloud native environment.You have experience in Generative AI infrastructure.You have experience with DevOps practices, continuous integration/continuous deployment (CI/CD) pipel
+================================================================================
+ID: P015 | type: posting
+TITLE: Machine Learning Engineer | COMPANY: Jobot | CAT: machine learning
+TEXT: Want to learn more about this role and Jobot? Click our Jobot logo and follow our LinkedIn page!
+
+Job details
+
+Government Contractor Seeks Talented Machine Learning Engineer
+
+This Jobot Job is hosted by Jacob Wolf
+
+Are you a fit? Easy Apply now by clicking the "Easy Apply" button and sending us your resume.
+
+Salary $150,000 - $185,000 per year
+
+A Bit About Us
+
+As a Machine Learning Engineer, you’ll deliver simple solutions to complex. Here, you'll tailor cutting-edge solutions to the unique requirements of our clients. You’ll Rapidly prototype containerized multimodal deep learning solutions and associated data pipelines to enable GeoAI capabilities for improving analytic workflows and addressing key intelligence questions. You will be at the cutting edge of implementing State-of-the-Art (SOTA) Computer Vision (CV) and Vision Language Models (VLM) for conducting image retrieval, segmentation tasks, AI-assisted labeling, object detection, and visual question answering using geospatial datasets such as satellite and aerial imagery, full-motion video (FMV), ground photos, and OpenStreetMap.
+
+
+
+Why join us?
+
+
+ Competitive Base Salary Hybrid Role  Bonus Incentives Solid Benefits Plan
+
+Job Details
+
+ Requires an active TS/SCI Clearance Bachelor or Master' Degree in Computer Science, Artificial Intelligence, Machine Learning, Data Science, or equivalent experience in lieu of degree. 8+ years of relevant experience. Role will be a hybrid remote role with up to the 3 days a week on a government site. Demonstrated experience applying transfer learning and knowledge distillation methodologies to fine-tune pre-trained foundation and computer vision models to quickly perform segmentation and object detection tasks with limited training data using satellite imagery. Demonstrated professional or academic experience building secure containerized Python applications to include hardening, scanning, automating builds using CI/CD pipelines. Demonstrated professional or academic experience using Python to queryy and retrieve imagery from S3 compliant API's perform common image preprocessing such as chipping, augment, or conversion using common libraries like Boto3 and NumPy. Demonstrated professional or academic experience with deep learning frameworks such as PyTorch or Tensorflow to optimize convolutional neural networks (CNN) such as ResNet or U-Net for object detection or segmentation tasks using satellite imagery. Demonstrated professional or academic experience with version control systems such as Gitlab.
+
+Interested in hearing more? Easy Apply now by clicking the "Easy Apply" button.
+
+Want to learn more about this role and Jobot?
+
+Click our Jobot logo and follow our LinkedIn page!
+
+
+================================================================================
+ID: P016 | type: posting
+TITLE: Senior Machine Learning Engineer | COMPANY: Samson Rose | CAT: machine learning
+TEXT: Samson Rose has been exclusively engaged to help an exciting client of ours hire a Senior ML Engineer to work on the Computer Vision elements of their product. The company is still in stealth mode, has top-tier investors, and is comprised of a lean, high-performing team.  In this role, you will be instrumental in creating Al-driven systems for a novel project, the details of which will be provided following the signing of a Non-Disclosure Agreement (NDA). ResponsibilitiesDesign and develop advanced algorithms for object detection, identification, and tracking, leveraging state-of-the-art computer vision techniques.Collaborate closely with cross-functional teams to seamlessly integrate Al technologies into the broader system architecture.Assist in testing and validation process for Al functionalities in various controlled scenarios.Craft high-quality code in line with best practices for Al development within the team.Keep up-to-date with the latest developments in Al and related technological domains.Document development processes and contribute to internal knowledge-sharing.Effectively communicate complex technical details to a diverse team.
+RequirementsMaster's or Ph.D. in Computer Science, Artificial Intelligence, Machine Learning, or a related technical field.Demonstrable experience in computer vision and machine learning with a strong portfolio of relevant work.Proficient in programming with Python, C++, or similar languages and familiar with ML development frameworks.Capable of thriving in a dynamic, fast-paced, and collaborative environment.Excellent analytical, problem-solving, and communication skills.Ability to obtain and hold a Department of Defense Security ClearanceThis role will require up to 25% domestic travel.
+PreferredExperience with Publisher Subscriber architectures.Experience with ROS and similar node-based packages.Experience in handling large amounts of data at high frequency and performing real-time analytics.Experience in data compression, especially image/video (J2K, H.264, H.265, FFMPEG, etc.)DoD Security Clearance is always nice to have.
+What They OfferCompetitive compensation and a comprehensive benefits package.An opportunity to work on groundbreaking and impactful technology initiatives.A team-oriented culture with a focus on professional growth and development.Flexible work options including remote work and unlimited PTO.Fun all-expense-paid company retreats at various destinations across the country
+If this is of interest, please apply with your current resume or reach out for more details.
+================================================================================
+ID: P017 | type: posting
+TITLE: Senior Manager, Cybersecurity Product Management (Cloud/IAM) | COMPANY: Capital One | CAT: cybersecurity
+TEXT: Center 3 (19075), United States of America, McLean, VirginiaSenior Manager, Cybersecurity Product Management (Cloud/IAM)
+
+Capital One is seeking a technical security product leader to deliver game-changing identity and access security solutions based on threat, data, and design thinking. At Capital One, we believe in the values of Excellence and Doing the Right Thing. We are a technology-oriented company delivering financial products to market through modern technology and constant innovation at a massive scale. That innovation includes leveraging technology to deliver the best cybersecurity solutions for our internal and external customers.
+
+As a candidate for this role, you’ll be able to navigate both executive-facing high-level strategic conversations and deep dives into controls and the inner workings of technology solutions. You’ll have experience defining and driving execution of a strategic roadmap that relates security outcomes to value delivered for the business. You are naturally curious and stay on top of emerging trends and threats. You are not afraid to question any existing processes and solutions, yet you display a keen sense of business value proposition and focus on the right priorities. You are a clear thinker, thrive in working across teams, and an expert in dealing with ambiguity. You believe that a core component of security’s role is to enable the business, not just to secure it, and the solutions you bring to life are aligned to the needs of our engineering community and business partners. You thrive in working in a fast paced, technologically forward leaning environment and are not afraid to push the boundaries of security capabilities.
+
+What you'll do...
+
+ Develop and communicate a risk-based and data-driven strategy and outcome-driven roadmaps for enterprise privileged access management services, solutions, and capabilities, in partnership with engineering and operations partners, customers, and other stakeholders  Keep abreast of advances in industry to address the threat landscape  Advise executive decision makers based on business and technology risk grounded in threat  Maintain technical and risk credibility with your own team and with partners across the enterprise  Maintain close ties to various stakeholders, developers, and engineers across the company, ensuring the services we create meet their needs as products evolve  Iterate quickly and see the products through to production and scale  Establish product value propositions, metrics, and key indicators  Recruit, motivate, mentor, and lead those around you to be their best 
+
+About You...
+
+ You have strong consulting and analytical skills  You have the ability to foster collaborative, open, working relationships with technology groups and other stakeholders, including vendor relationships  You have demonstrated clear communication skills and ability to interact effectively at all levels of an organization, and to influence senior management and executives (Includi
+================================================================================
+ID: P018 | type: posting
+TITLE: Manager, Cybersecurity Engineering | COMPANY: T-Mobile | CAT: cybersecurity
+TEXT: Be unstoppable with us!
+
+T-Mobile is synonymous with innovation–and you could be part of the team that disrupted an entire industry! We reinvented customer service, brought real 5G to the nation, and now we’re shaping the future of technology in wireless and beyond. Our work is as exciting as it is rewarding, so consider the career opportunity below as your invitation to grow with us, make big things happen with us, above all, #BEYOU with us. Together, we won’t stop!
+
+
+Job Overview
+
+Do you want to work on the latest Mobile Cybersecurity Technologies and lead an outstanding team of technologists that makes an impact on T-Mobile's business every day? Do you enjoy working with and applying Technology to improve Customer Experience and solve Business Problems? ? Do you want to feel like you are directly contributing to the success of T-Mobile, and be part of the Un-Carrier movement? Look no further! We are looking for an inquisitive, enthusiastic, and creative leader with a history of strategic and tactical execution. This person will lead a team of talented professionals that will drive the evolution and expansion of our Network. We operate in a very fast-paced agile environment with quick decisions. We encourage innovation and expect you to take ownership and initiative. This role provides an outstanding opportunity to drive Technology direction for T-Mobile USA. The Manager of Cybersecurity will facilitate security related interactions with business partners, OEMs, and service partners. Integration with the cybersecurity community internal to T-Mobile and external with partners such as government, industry, and security organizations is necessary. This person will demonstrate strong critical thinking skills, superb communication skills, and effectively manage the time and effort of all individual contributors, projects, and associated initiatives. A solid understanding of security technologies, architecture, and standard processes will be critical to the success of this role. The team maintains corporate data network security infrastructure and provides information security based on the enforcement of the T-Mobile security policies. They coordinate Incident Response, conduct Vulnerability Assessments, install security patches, operate Intrusion Prevention Systems, correlate security related data across the enterprise, administer Firewalls and other access control points, and maintain Anti-Virus systems. The team also assists application owners to understand and implement the security aspects of their applications and advises on best security practices for new company projects and initiatives.
+
+Job Responsibilities:
+
+Technical Expertise: Knowledge of cybersecurity policies and regulatory controls threats, vulnerabilities, and overall risk profile of the enterprise (per team function). Experience with incident handling for Security breaches. Mentor analysts, senior analysts, engineers, architects and cybersecurity individual contributors to promote 
+================================================================================
+ID: P019 | type: posting
+TITLE: Cybersecurity Test Engineer – Remote | COMPANY: Decision Point Security, Inc. | CAT: cybersecurity
+TEXT: Decision Point Security Inc. is currently seeking a dedicated and skilled Cybersecurity Test Engineer to join our growing team.
+As a cybersecurity test engineer you will be responsible for validating the security posture of customer applications and platforms through vulnerability research / analysis and penetration test. Your ability to think creatively about potential threats and develop and execute test cases using latest cyber threat Tactics, Techniques, and Procedures (TTPs) to assess exposure will ensure that our clients achieve and maintain cyber resilience.
+Responsibilities:Plan and execute red / purple team activities, including simulated attacks, application penetration testing, and risk assessments.Lead and participate in threat model developmentEvaluate and analyze identified vulnerabilities to assess risk levels and provide clients with informed recommendations on technical security measures and compliance activities.Develop and Automate testing tools.Identify and provide improvements on existing services, including continuous improvement of methodologies, tools and reports.Ensure quality control measures are adhered to for test execution and the production of delivery artifacts.Write clear and concise reports detailing findings and recommendations for remediation of identified vulnerabilities.Review application and systems for compliance with applicable security standards and best practices.Conduct / contribute to comprehensive risk assessments and vulnerability analyses to identify potential security threats and mitigate risks.The listed responsibilities are not exhaustive and additional responsibilities may be assigned based on the evolving needs of the organization. We are seeking a dynamic individual who is able to adapt and take on new responsibilities as they arise. 
+Preferred Experience and Qualifications:Hold a Bachelor’s degree from an accredited college in a relevant discipline, OR equivalent experience.Experience in a consulting/professional services roleStrong understanding of cybersecurity principles, technologies, and best practices, including encryption, authentication, access control, and secure coding practices.Experience in Application Security and/or Software DevelopmentFamiliarity with software development methodologies and practices, particularly Agile and DevSecOps.Experience with DevOps and/or Security Maturity Modelling (e.g. OWASP SAMM)Cloud Service penetration testing tradecraft and methodologies across one or more service providers (e.g. AWS, GCP, etc.).Network/host-based penetration testing tradecraft and methodologies.Proficiency in web application penetration testing.Skilled at translating technical implementation (infrastructure as code and configuration as code)Experience conducting / contributing to comprehensive risk assessments and vulnerability analysesExperience testing against one or more IT security compliance frameworks, such as PCI, FISMA, HIPAA, FEDRAMP, or HITRUSTAssessment of security cont
+================================================================================
+ID: P020 | type: posting
+TITLE: Sr. Distinguished Cybersecurity Engineer, Cryptography | COMPANY: Capital One | CAT: cybersecurity
+TEXT: 11 West 19th Street (22008), United States of America, New York, New YorkSr. Distinguished Cybersecurity Engineer, Cryptography
+
+Senior Distinguished Engineers are individual contributors who strive to be diverse in thought so we visualize the problem space. At Capital One, we believe diversity of thought strengthens our ability to influence, collaborate and provide the most innovative solutions across organizational boundaries. Distinguished Engineers will significantly impact our trajectory and devise clear roadmaps to deliver next generation technology solutions.
+
+ Deep technical experts and thought leaders that help accelerate adoption of the very best engineering practices, while maintaining knowledge on industry innovations, trends and practices  Visionaries, collaborating on Capital One’s toughest issues, to deliver on business needs that directly impact the lives of our customers and associates  Role models and mentors, helping to coach and strengthen the technical expertise and know-how of our engineering and product community  Evangelists, both internally and externally, helping to elevate the Distinguished Engineering community and establish themselves as a go-to resource on given technologies and technology-enabled capabilities 
+
+As a candidate for this role, you’re able to seamlessly switch from diving deep into technology with engineers to driving high level, strategic discussions around cloud roadmaps and security patterns. You are a naturally curious technologist and stay on top of emerging trends, including hands-on prototyping of nascent technologies. You are not afraid to question any existing processes and solutions, yet you display a keen sense of business value proposition and focus on the right priorities. You feel at home in the cloud and are an expert in designing cloud-native security solutions. You thrive in working in a fast paced, technologically forward leaning environment and are not afraid to push the boundaries of security capabilities.
+
+You take a critical lens to buy vs. build decisions and are not afraid of implementing custom built or open source solutions alongside traditional vendor products. You also love to lead, manage, mentor, and recruit an extremely talented software engineering team to deliver a game changing customer experience across various customer touch points.
+
+Responsibilities:
+
+ Strategic technical lead who will oversee the vision, roadmap, trade-offs and delivery across the enterprise with a relentless focus on balancing security with simplification.  Serve as a cyber security counsel to senior leadership  Operate as a trusted advisor on cyber security as well as for a specific technology, platform and/or capability domain, helping to shape use cases and implementation in an unified and consistent manner  Brings in a larger context to a larger software teams and architects across multiple domains/departments and guide their architecture evolution in response to business changes  Builds awaren
+================================================================================
+ID: P021 | type: posting
+TITLE: Information Security Manager | COMPANY: Select Source International | CAT: information security
+TEXT: Job Title: Information Security ManagerLocation: Santa Clara CA, 95054 (Hybrid)Duration: 8 months
+Description:We need a Security technical lead / Manager with the experience in Zscaler, Qualys, Threat Hunting experience.At least 5-8 years of Cyber Security Knowledge with relevant experience in Tools like Qualys, Zscaler, Defender, Firewalls. Needs to have exposure to Security Standards & Regulations like NIST, GDPR, PCI DSS.Job Description:Work with one of Client’s prized clients in the heart of Silicon Valley by ensuring security for critical infrastructure.We are looking for a talented hands-on security professional that has deep technical knowledge also likes contributing to the strategic direction.In this role you will get to work with the full array of security solutions as well as support the security provisions throughout the environment’s infrastructure – networks, servers, desktops and applications.You will also contribute toward strategic planning based on risk assessments and analysis.
+Required. Skills:Client engagement soft skills are requiredThe ability to present and explain security and risk information for business executives to understandThe ability to lead people of various levels and technical expertiseThe ability to prioritize and persuade in order to move the security program forward amongst competing initiativesExperienced with security solutions (e.g. firewall, VPN, SIEM, IPS, URL filtering, Endpoint protection, MFA, NAC)Strong understanding of NIST 800-53 & CSF, risk assessment and incident response standardsStrong understanding of Microsoft Active Directory, GPOs, Windows DACL/SACL, and LinuxStrong understanding of protocols, such as IPsec, ESP, GRE, SSL/TLS, 802.1x, RADIUS/TACACS, HSRP, GSLB and WCCPAbility to perform and analyze packet capturesAbility to analyze suspicious emails, URLs, and files to ascertain if they are maliciousKnowledge of hacking techniques, vulnerability disclosures, and security analysis techniquesKnowledge of malware families, botnets, threats by sector, attack campaigns and attack methodsScripting language such as PowerShell or PERLFamiliarity with incident tracking, change management and project tracking systems like ServiceNow and Jira.
+Description Ownership of day to day security events, perform incident response using NIST SP 800-61 standards, and determine root causesCreate and lead security initiatives that reduce risk as well as automate detection and protection mechanismsManage and update the cybersecurity plan in order to identify needs and implement comprehensive security controls using multi-layered security and defense in depthBe knowledgeable of customer information security policies, standards, and procedures, as well as the infrastructure equipment, versions and configurations.Collaborate with all operations teams to ensure security controls and configurations are implemented and incorporated in their ongoing operationsServer security through vulnerability management, system patch
+================================================================================
+ID: P022 | type: posting
+TITLE: Lead Information Security Engineer - Directory Security | COMPANY: Wells Fargo | CAT: information security
+TEXT: About This Role
+
+Wells Fargo is seeking a Lead Information Security Engineer that has experience with directory server solutions to join our dynamic team. This team member's responsibilities are to provide technical leadership in designing authentication solution and managing the directory server infrastructure of a large organization. The primary goal for this role is to ensure system reliability of critical business applications with enhanced operational procedures. The secondary goal for this role is to drive application modernization and automation.
+
+This team member's responsibilities will include the installation, configuration, administration of the PingDirectory Server Suite and CA Directory solutions. Additional tasks include the installation, testing and deployment of new versions of software, hotfixes and security fixes. Architecting secure LDAP solutions to meet business requirements. Installation, configuration and use of the SLAMD tool to execute performance testing. Provide consultancy in planning, testing and documenting environment changes which include new integrations as well as the existing environment. Configure connection policies, alert handlers, replication topology, management of bulk transactions, recommend solutions to potential performance issues, etc. Will be actively involved in Audit-related activities and provide second level troubleshooting of PingDirectory Server Suite and CA Directory.
+
+Support production deployments after-hours for PingDirectory Server Suite and CA Directory integrations or other infrastructure maintenance activities which involve communication and coordination with Engineering, Operations, project management, and customer application resources to ensure the scheduled deployments are successful.
+
+This role will allow learning and growth on our directory solutions and security technologies.
+
+In This Role, You Will
+
+Conduct technical investigation of security related incidents and post incident digital forensics to identify causes and recommend future mitigation strategiesProvide security consulting on large projects for internal clients to ensure conformity with corporate information, security policy, and standardsDesign, document, test, maintain, and provide issue resolution recommendations for highly complex security solutions related to networking, cryptography, cloud, authentication and directory services, email, internet, applications, and endpoint securityReview and correlate security logsUtilize subject matter knowledge in industry leading security solutions and best practices to implement one or more components of information security such as availability, integrity, confidentiality, risk management, threat identification, modeling, monitoring, incident response, access management, and business continuityIdentify security vulnerabilities and issues, perform risk assessments, and evaluate remediation alternativesCollaborate and influence all levels of professionals including managersLead 
+================================================================================
+ID: P023 | type: posting
+TITLE: Sr. Information Security Engineer | COMPANY: Bill & Melinda Gates Foundation | CAT: information security
+TEXT: The Foundation
+
+We are the largest nonprofit fighting poverty, disease, and inequity around the world. Founded on a simple premise: people everywhere, regardless of identity or circumstances, should have the chance to live healthy, productive lives. We believe our employees should reflect the rich diversity of the global populations we aim to serve. We provide an exceptional benefits package to employees and their families which include comprehensive medical, dental, and vision coverage with no premiums, generous paid time off, paid family leave, foundation-paid retirement contribution, regional holidays, and opportunities to engage in several employee communities. As a workplace, we’re committed to creating an environment for you to thrive both personally and professionally.
+
+The Team
+
+The Global Security (GS) team is part of the foundation’s operations division. We protect personnel, offices, information and the foundation’s reputation through our work on physical security and information security.
+
+The Information Security team is seeking an experienced and highly skilled individual for our Senior Engineer role. In this role you will work across teams to combine security and business requirements to develop, prototype, document, and communicate technical security controls to ensure security outcomes and manage risk at scale for our foundation and affiliated entities. Additionally, you will design and implement operational security practices performed by implementation teams and service providers and serve as a partner and decision maker related to security operations. Incident response will be a core component of this position, playing the part of leader, investigator, and consulting with service delivery teams on mitigation. This role is critical in performing and contributing to the continuous improvement of the foundation’s global Information Security program. This is an individual contributor role reporting to the Deputy Director, Information Security.
+
+What You’ll Do
+
+Perform Information Security incident investigation and response.Ability to self-manage time and priorities in an environment where projects or goals may be ambiguous.Participate in the Information Security design process focusing on technical controls, including:In partnership with technology delivery teams, further refine, prototype, and continuously improve technical security controls as implemented across our technology environment.Engage with partners to drive secure outcomes for business objectives.Discover, manage, and track security risk through the design, implementation, and operation of security technologies.Continuously improve upon Information Security processes, technology, and services to achieve our core risk management objectives.Lead and perform vulnerability assessments using tailored approaches to the environment or technology solution.Partner with IT teams during solution design and operation to develop implementation steps for security configuration.Com
+================================================================================
+ID: P024 | type: posting
+TITLE: Information Security Director | COMPANY: PBF Energy | CAT: information security
+TEXT: PBF Energy Inc. (NYSE:PBF) is one of the largest independent refiners in North America, operating through its subsidiaries, oil refineries and related facilities. We are seeking a talented Information Security Director to join our team as a pivotal member that would play a key role here at PBF Energy. This role would be located onsite at our Company headquarters in Parsippany, NJ or at one of our refinery locations.
+
+The Director will implement, sustain, and provide continuous improvement of NIST Cyber Security Framework enterprise wide and is responsible for all cyber security related projects regardless of location or scope. In addition, this position will be the primary contact for all internal and external security audits.
+
+Principle Responsibilities
+
+Initial projects include but not limited to:Continue to drive PBF’s alignment with the National Institute of Technology and Standards Cyber Security FrameworkAssessment and recommendation for PBFs future SEIM/SOC stateDevelopment a Supply Chain Management strategy for PBF to successfully manage third party riskResponsible for cost effective support of applications and technologies within remitCollaboratively working across entire IT organization to deliver solutions in cost effective mannerLeadership of individuals (employees as well as 3rd Parties) responsible for working directly within the security team scopeLeadership of multiple parallel project teams working to address business requirements through the implementation of process changes and introduction of enhanced and/or new technologyIdentifying, developing, and sponsoring initiatives which focus on improving relevant processes, procedures, tools, and deliveryBudgetary development, monitoring, and corrective action as necessary which impacts remit; includes Review / Input to the CompanyEnsuring career challenge, measurement, and development of resources within purviewEnsuring documented succession plan is in place and individual(s) are prepared to stand inEnsure awareness and compliance with all security standardsResponsible for the Company IT Incident Response Plan and associated drillsOversight of employee security awareness programs (computer-based training, phishing campaign and others)Coordination and response to various threat intelligence sources both within and outside the refining industryRelationship management for third party security service providers and managed service contractsLead all cyber security steering committees and provide scheduled updates to executive leadershipEngagement with all M&A activity to ensure acquired assets meet the Company security standards in an appropriate time frameReview and approval of all IT projects that introduce new technology or have a security risk associatedDevelop and maintain a Security Risk Assessment framework for all IT assetsDevelops and maintains knowledge of Cyber Security and information risk managementMaintains an awareness of current developments in Cyber SecurityProvides advi
+================================================================================
+ID: P025 | type: posting
+TITLE: Senior DevOps Engineer | COMPANY: Finfare | CAT: devops
+TEXT: About Finfare
+
+Finfare is dedicated to empowering SMBs, by providing the ultimate expense management solution for growing businesses seeking to streamline their financial operations and maximize cash back rewards. Finfare offers easy expense tracking, personalized spend controls, seamless accounting integration, powerful analytics, and reliable charge card services. Our cardholders can tap into our vast network of reward program publishers and card-linked merchant offers, ensuring even bigger cash back rewards for their business.
+
+We are always working on redefining the boundaries of digital financial services and aim to stay one step ahead in the ever-evolving fintech landscape.
+
+About The Role
+
+As an integral part of our engineering team, the Senior DevOps Engineer will perform cloud environment administration, continuous integration, continuous delivery/deployment, and support our software applications. The individual will work closely with software development teams to build and maintain cloud based infrastructure and operation solutions for critical business services. The Senior DevOps Engineer will implement automation, monitoring, and infrastructure as code solutions for our cloud platform. If you are passionate about DevOps, we would like to meet with you!
+
+Responsibilities
+
+Contribute to system and network architecture designs, from POC to production phaseContribute to DevSecOps portfolio development, working closely with developers and team membersDevelop and deploy cloud infrastructure as IaCDockerization for microservices architectureImprove, build, and manage CI/CD pipelinesImplement and maintain application and performance monitoring and alert systemsAutomate and streamline operations and processesSupport engineers and their day to day activities using your environments, pipelines, and internal toolsWork closely with the backend engineering, security, IT, and QA teams to influence decision making and implementation efforts
+
+Knowledge, Skills, And Abilities
+
+Experience in CI/CD pipelines and their tools like CircleCI, Jenkins, GitHub Actions, etc.Knowledge of Docker and KubernetesProficient with AWS and it’s various servicesExperience building IaC like Terraform or AWS CloudFormationKnowledge of cloud security implementation and principlesExperience with data pipelines for log retention, ML/AI training, replication, etc.Fintech Security and Compliance experience with certifications like: PCI, SOC 1 and 2, GDPR, CCPA, ADA
+
+Required
+
+Bachelor’s degree in computer science or data related field5+ years experience of Cloud DevOps in AWS (preferred), GCP or Azure5+ years experience of building and maintaining code deployment pipelinesBonus: AWS certification
+
+Compensation
+
+The salary range for this position is $130K - 160K+ (Depending on experience and level assessed post interviews)
+
+Benefits At Finfare
+
+Competitive health, vision, and dental benefits (covering 100% premium for employee and all dependent(s))Unlimited PTO  401K (with emplo
+================================================================================
+ID: P026 | type: posting
+TITLE: AWS DevOps Engineer | COMPANY: Tech Consulting | CAT: devops
+TEXT: What You Bring to the Role
+At least 12 months of programming experienceminimum of 2 years of IT Related company experienceDeveloper, Cloud Infrastructure, or DevOps Engineer who is comfortable developing on AWS cloud, building highly scalable and fault tolerant cloud infrastructure and DevOps pipeline + building them from the ground upto deliver software development and software builds and releases (which includes the design, development, support of builds, scripts, and installation procedure)by the prospect of optimizing, or even re-designing, a company’s Cloud infrastructure and DevOps pipeline leveraging tools of core AWS services (such as, GIT, Jenkins/CircleCI/Travis, Jira, and coding with Python or Java or C++)and comfortable supporting the automation needs of multiple teams, systems and productsin Computer Science, Information Systems, Electrical Engineering, Mathematics, or equivalent quantitative fieldSQL knowledge with relational databases, query authoring, as well as working familiarity with a variety of databasesEnglish written and verbal communication skillsto travel (80% after Training portion) and live in the U.S.to communicate the logic behind technical decisions to non-tech stakeholdersSQL and NoSQL databasesof Containerization with Docker and Kuberneteslanguages such as Python, Bash, PowerShell, etc.Cloud Certifications
+================================================================================
+ID: P027 | type: posting
+TITLE: DevOps Engineer | COMPANY:  | CAT: devops
+TEXT: Responsibilities:We are looking for someone who can help as an escalation point and will be able to act as a pillar lead for the organization as well.
+Experience:5+ years of experience specifically in Access Management and LDAP, preferably with experience in the Ping Identity Suite (Ping Federate, Ping Directory).
+· Strong understanding of integrating Single Sign-On (SSO) with externally hosted vendor applications using SAML and OAuth with Ping Identity Federation.
+· Proficiency in developing custom plugins, installations, configuration, and integration with various types of applications.
+· Familiarity with various security technologies and controls.
+Qualifications:BS / MS Computer Science
+
+================================================================================
+ID: P028 | type: posting
+TITLE: Senior DevOps Engineer (CLT) | COMPANY: Matlen Silver | CAT: devops
+TEXT: Job Title: Senior DevOps Engineer 
+ Duration: 12-18 MONTHS
+ Location: Charlotte NC
+ Required Pay Scale: 68-72
+ ***Due to client requirements this role is only open to USC or GC candidates***
+ 
+ Job Summary:
+ Must Haves
+7-10+ years IT experience, maximum of 15 years 
+skills in tools required: GIT, Jenkins, Ansible, Artifactory, YAML, Kubernetes, Openshift
+- devops for windows and unix servers
+-strong scripting in an OOP language like java, python, etc
+-strong bash, shell, powershell, linux scripting 
+ Desired Skills
+-XLR is nice to have
+ About Matlen Silver
+ Experience Matters. Let your experience be driven by our experience. For more than 40 years, Matlen Silver has delivered solutions for complex talent and technology needs to Fortune 500 companies and industry leaders. Led by hard work, honesty, and a trusted team of experts, we can say that Matlen Silver technology has created a solutions experience and legacy of success that is the difference in the way the world works.
+ 
+ Matlen Silver is an Equal Opportunity Employer and considers all applicants for all positions without regard to race, color, religion, gender, national origin, age, sexual orientation, veteran status, the presence of a non-job-related medical condition or disability, or any other legally protected status.
+ If you are a person with a disability needing assistance with the application or at any point in the hiring process, please contact us at email and/or phone at: info@matlensilver.com // 908-393-8600
+ 
+================================================================================
+ID: P029 | type: posting
+TITLE: Cloud Engineer | COMPANY: Leidos | CAT: cloud engineer
+TEXT: Description
+
+Leidos has an exciting opportunity a seasoned IT professional to serves as a Cloud Engineer supporting the Department of the Air Force CLOUDworks . Position is located at at Lackland AFB, in San Antonio. The selected individual for this effort is responsible for the following: 1) architecting advanced business enabling solutions for Air Force Commercial Cloud Services (AFC2S) teams utilizing services from IC ITE; 2) providing technical direction for AF customers migrating to C2S; 3) supporting integrating all cloud solutions and strategies into the Risk Management Framework and overall business practices; 4) possessing the technical understanding to provide guidance about AWS, Azure, IC ITE GovCloud, IC ITE Commercial Cloud Services (C2S), and other federal government community or emerging cloud frameworks.
+
+Required Qualifications
+
+DoD 8570 IAT Level II equivalent certificationMust possess a IAT level III certification or obtain within 6 months of hire.Bachelor's degree in computer science or related engineering disciplines & 8 or more years of relevant IT experience.Cloud services experience (AWS, Azure, IBM, Oracle, Google).Demonstrate experience in transitioning large, complex applications to IC ITE Development, Test, and Production environmentsFamiliarity or experience with programming and infrastructure automation (BASH)Experience in deploying enterprise services such as Domain Name System (DNS), Directory Services, and Host Base Security System (HBSS)Strong expertise with the computer systems and analytics.Knowledge of Linux and Windows systemsTeam player capable of high performance and flexibility in a dynamic working environment
+
+Desired Qualifications
+
+Experience designing, developing, deploying, testing in AWS architectureCloud Architecting experienceFamiliarity or hands-on experiences with CloudFormation and Lambda Proficiency and experience with AWS developer tools and workflows (AWSCLI, CloudFormation, etc.)Experience with programming and infrastructure automation (JSON, YAML, Python, Terraform)AWS associate level certification or aboveOther industry certifications a plusFamiliarity with cloud data and computing conceptsExperience implementing Security Technical Implementation Guide (STIG) for various systemsAzure 900 FundamentalsSpecial Access Program (SAP) experience
+
+Original Posting Date
+
+2024-04-05
+
+While subject to change based on business needs, Leidos reasonably anticipates that this job requisition will remain open for at least 3 days with an anticipated close date of no earlier than 3 days after the original posting date as listed above.
+
+Pay Range
+
+Pay Range $101,400.00 - $183,300.00
+
+The Leidos pay range for this job level is a general guideline only and not a guarantee of compensation or salary. Additional factors considered in extending an offer include (but are not limited to) responsibilities of the job, education, experience, knowledge, skills, and abilities, as well as internal equity, alignment with m
+================================================================================
+ID: P030 | type: posting
+TITLE: Cloud Engineer | COMPANY: Computech Corporation | CAT: cloud engineer
+TEXT: Job Description:
+Please do not send devops engineer. Looking for azure cloud engineerHands on experience in Azure cloud Technology and definitely very good hands on experience in Terraform .Design and implement monitoring and alerting strategies to enforce application SLAsDevelop, test, and debug automated tasks (Apps, Systems, Infrastructure)Troubleshoot priority incidents, facilitate blameless post-mortemsWork with development teams throughout the software life cycle ensuring sustainable software releasesPerform analytics on previous incidents and usage patterns to better predict issues and take proactive actionsDesign, write and build tools to improve the reliability, latency, availability and scalability of Client UDAIP next generation cloud platformDefine, drive adoption and enforcement of service level objectives at both service and experience levelsInfluence, design and create new architectures, standards and methods for large-scale enterprise systemsBuild and drive adoption for greater self-healing and resiliency patternsLead and participate in performance tests; identify bottlenecks, opportunities for optimization, and capacity demandsExperience in managing and scaling distributed systems in a public, private, or hybrid cloud environmentAdvise design reviews, operational reviews, and the deployment of highly available infrastructure.Make monitoring and alerting meaningful to support our uptime goals.Operate and maintain infrastructure in multiple public clouds especially Azure CloudExperience with deploying, supporting and monitoring new and existing services, platforms, and application stacksExperience with scale testing, disaster recovery, and capacity planningCloud operations experience in a large scale 24x7 production environment.Manage, innovate and create programs, new software, analytics that drive improvements to the availability, scalability, latency, and efficiency of Clients Applications and services.
+Must Have Skills/Attributes: Azure
+================================================================================
+ID: P031 | type: posting
+TITLE: Cloud Engineer | COMPANY: Harvey Nash | CAT: cloud engineer
+TEXT: Req# 141953 - 1 
+Role: System Engineer 3Location: RemoteDuration: 12 Months with a chance of extension.
+Client: Microsoft 
+Hourly Pay Rate: $65/hr. on W2
+Summary:The main function of a Systems Engineer is to perform a wide variety of installation, configuration, and upgrading of servers and related hardware and software in a LAN, WAN, and stand-alone environment, providing investigation, diagnostic testing, and repair/resolution of system, hardware, software, and infrastructure.
+Job Responsibilities:configuration, installation, and support of equipment to the specifications of the businesssoftware applications and operating systems through regular maintenanceconfiguration and support documentationassigned projects and program components to deliver services by established objectivesthe administration of systems and servers to ensure the availability of services to authorized usersmulti-site network operations, software applications, and operating systems through regular maintenancemalfunctions of hardware, software applications, and security systems to resolve operational issues and restore services.
+Qualification:overall years of experience in the field.ideal resume would contain someone who can execute the commands needed.degree in a technical field such as computer science, computer engineering, or related field required.
+Purpose of the Team: The purpose of this team is to manage and support critical environment platforms and tooling software programs/applications. Support data centers through central applications. This will be a tier-3 role – expect to run into database commands, scripting, and execution resources to manage their critical platform maintenance application.
+Key projects: This role will contribute to operational (80%) and development (20%). CMNS is the main support they control.
+Typical Day in the Role: The role will consist of 10% meetings, 40% heads down, and the remaining 50% teamwork (tier-2 team, other resources, learning, and doing).
+What makes this role interesting? This role provides the opportunity to support global data centers, scaling un-seen paces, cutting-edge in how they manage it and what they are doing, great team culture, learning, and development. Have a really fun team dynamic and organizational culture.
+Top 3 Hard Skills Required:knowledge of IT Systems engineering (5+ YOE)with system capacity and planning, as well as functional configuration and audit (5+ YOE).with system planning and capacity tools and analyses (5+ YOE).
+================================================================================
+ID: P032 | type: posting
+TITLE: AWS Cloud Engineer | COMPANY: Vernovis | CAT: cloud engineer
+TEXT: Job Title: AWS Cloud EngineerLocation/ Work Structure: Hybrid Onsite, Columbus, OhioCome join us:Vernovis is a Total Talent Solutions company that specializes in Technology, Cybersecurity, Finance & Accounting functions. Our consultative and flexible approach to providing talent, to fill gaps and for project work, offers a variety of ways to engage, to meet your needs, and ensure you achieve your business objectives. At Vernovis, we help IT, cybersecurity, accounting, and finance professionals achieve their career goals, matching them with innovative projects and dynamic direct hire opportunities in Ohio and across the Midwest. 
+Vernovis is currently assisting one of our food services client in hiring an AWS Cloud Engineer for their growing team. This person will manage all facets of the AWS cloud environment, including infrastructure, identity management, data, monitoring, alerting, and DevOps functionality. They'll develop strategies for adopting new cloud technologies, provide consultative guidance, and collaborate with stakeholders to understand complex requirements. The ideal candidate should have software development experience in agile Java or PHP environments, prioritize exceptional customer service, and strive for continuous improvement.
+ What You'll Do:Administer and optimize daily cloud-based ecommerce operations to ensure security and reliability for customers and franchise partners.Implement comprehensive monitoring and oversee automated alerting response, while leading recovery efforts during critical failures and conducting root-cause analysis.Evaluate system effectiveness, assist in development strategies for improvement, and create a mature disaster recovery plan with periodic tests.Manage relationships with external cloud partners, oversee cloud data management, and stay updated on industry trends to provide strategic direction and implement new technologies.Maintain and oversee the existing environment, manage daily operations, offer strategic insights, actively participate in troubleshooting, and contribute to forward-looking strategies.
+
+What Experience You'll Have:Minimum of 5 years' experience in cloud environments, with expertise in cloud infrastructure, data management, and DevOps.Proven experience designing and implementing business-critical applications in the cloud, along with proficiency in production monitoring tools like Dynatrace and CloudWatch.Strong background in DevOps and Agile/Scrum methodologies, with a clear understanding of the software development lifecycle (SDLC); E-Commerce Cloud experience is advantageous.
+What Experience is Nice to Have:Experience with Dynatrace or DataDog (alerting tools)DevOps experience.Background as a developer
+================================================================================
+ID: P033 | type: posting
+TITLE: Oracle Database Administrator | COMPANY: System Soft Technologies | CAT: database administrator
+TEXT: Job Description
+
+Oracle Database Administrator (Oracle/MariaDB)
+
+Philadelphia, PA (Hybrid, 3 days/week on-site)
+
+Relocation options (current city/state of residence required on all resumes)
+
+Our Database Administration team is currently seeking an Oracle/MariaDB Database Administrator to join our team! You will leverage your current knowledge of relational database to ensure stability and scalability of our enterprise database platform.
+
+ Scalability - This opportunity offers exposure to our high transaction and high availability financial trading environment consisting of multiple database platforms.
+
+ Collaboration - You will partner closely with fellow database administrators, as well as our development and engineering teams to share ideas and recommendations for solutions that will increase and expand our enterprise database capabilities.
+
+ Automation - As we continue to look for ways to automate and improve our environment, you will have the opportunity to further develop your scripting skills.
+
+Qualifications 5+ years of experience in the following areas:
+
+ Bachelors degree in Computer Science or related technical discipline required
+
+ Oracle and MariaDB required
+
+ Relational database knowledge, troubleshooting, and performance tuning
+
+ Linux operating system and Linux shell scripting
+
+ Thorough understanding of database backup and recovery concepts required
+
+ Monitoring tools such as Oracle Enterprise Manager or Monyog or similar tool
+
+ Cloud experience a plus
+
+
+================================================================================
+ID: P034 | type: posting
+TITLE: SQL Database Administrator | COMPANY: Planet Technology | CAT: database administrator
+TEXT: Planet Technology has partnered with a Cincinnati company to locate a SQL DBA for a contract-to-hire position.
+Responsibilities:Provide for support for MS SQL databases utilizing SSRS, SSIS and SSAS servers and applicationsImplement appropriate level of best practices for constraints, referential integrity, and triggersCreate and support ETL processes for data from SQL and non-SQL platforms into a data warehouseUnderstand and evaluate business requirements and translate them in to specific database solutionsProvide leadership in establishing and documenting data standardsAnalyze impact of various upgrades and take appropriate action to mitigate potential risk (ex: service pack upgrades)Use querying and performance monitoring tools to analyze current and future SQL statements, stored procedures and database designDocument models for new database development and/or changes to existing ones through data flowchartingUnderstand and implement disaster recovery strategies
+Minimum Qualifications/ExperienceAt least 4 years of SQL DBA related professional experienceAssociate’s degree in Computer Science or related field but similar work experience, technical skills or relevant certification may be considered in place of bachelor's degree;Must be up to date on relevant technologies
+Interested candidates can apply here or send a resume directly to sclements@planet-technology.com.
+================================================================================
+ID: P035 | type: posting
+TITLE: Database Administrator 4 | COMPANY: WEX | CAT: database administrator
+TEXT: About The Team & Role
+
+The WEX SQL Server Database Administrator will be responsible for the maintenance, performance, monitoring, and recoverability of the SQL database environments. This role will be part of a team which is responsible for the health and stability of the entire SQL Server Database platform.
+
+ 
+
+How you’ll make an impact
+
+Provide support for production databases including performance monitoring, daily management to prevent data loss, unplanned downtime or performance degradation.Install, administer, and maintain schema and data to ensure maximum availability.Analyzes and resolves problems associated with server hardware and application softwareMonitor and optimize data lake ingestion processesHigh-level knowledge with SQL Server internals, database design, T-SQL, backup/restore, SSIS, security and understanding of performance tuning and troubleshooting.Participates in a 24x7x365 OnCall RotationParticipate in Disaster Recovery planning and testing exercises 
+
+Experience you’ll bring
+
+7+ years of overall IT experience working with SaaS or web development5+ years of hands-on SQL Server Database administration3-5 years experience with SQL Server Extended EventsProficient using Powershell5+ years of managing SQL Server Database in Azure5+ years of hands-on experience with a data ingestion tool (ELT or ETL tools)Experience with Azure DevOpsExperience with AWS Core Services (Amazon CloudWatch, Amazon Security Hub) 
+
+Desired Additional Qualifications
+
+Experience of SQL system DMVs to identify and troubleshoot performance problemsTuning or refactoring stored procedures to improve performanceKnowledge of supporting SQL Server Availability GroupsExperience with SQL 2016+Knowledge with ETL tools and managementKnowledge of SSDT projects and experience with Source Control especially TFS and GitHub in Azure DevOpsKnowledge and experience with industry standard change and incident management proceduresSelf-starter capable of working independently or in groups
+
+The base pay range represents the anticipated low and high end of the pay range for this position. Actual pay rates will vary and will be based on various factors, such as your qualifications, skills, competencies, and proficiency for the role. Base pay is one component of WEX's total compensation package. Most sales positions are eligible for commission under the terms of an applicable plan. Non-sales roles are typically eligible for a quarterly or annual bonus based on their role and applicable plan. WEX's comprehensive and market competitive benefits are designed to support your personal and professional well-being. Benefits include health, dental and vision insurances, retirement savings plan, paid time off, health savings account, flexible spending accounts, life insurance, disability insurance, tuition reimbursement, and more. For more information, check out the "About Us" section.
+
+Salary Pay Range: $103,000.00 - $137,000.00
+================================================================================
+ID: P036 | type: posting
+TITLE: Database Administrator (BOCA RATON) | COMPANY: Ledgent Technology | CAT: database administrator
+TEXT: Ledgent Technology is on the lookout for a skilled Database Administrator to join our client's team in Boca Raton, Florida. This is a full-time, on-site position that demands the presence of the successful candidate five days a week. In this role, you will be instrumental in managing, optimizing, and securing our client's databases to support their dynamic business needs. The ideal candidate will bring a blend of technical prowess, strategic thinking, and a commitment to excellence in managing database systems.
+
+Key Responsibilities:Administer, maintain, and secure SQL Server databases, ensuring their performance, availability, and security.Implement and maintain database backup and recovery strategies, ensuring data integrity and minimal downtime.Monitor database system details within the database, including stored procedures and execution time, and implement efficiency improvements.Work closely with the development team to optimize queries, database schema design, and overall database architecture.Conduct regular system audits to ensure compliance with established standards, policies, and configuration guidelines.Develop and enforce database administration and user standards and procedures.Assess and implement new technologies and processes that enhance database infrastructure.Position Requirements:Bachelor's Degree in Computer Science, Information Technology, or a related field, or equivalent work experience in the IT industry.At least 3 years of experience as a Database Administrator, with a strong background in SQL Server environments.Proficient in database management, maintenance, performance tuning, and troubleshooting.Experience with database security, backup, and recovery techniques.Knowledge of SQL, T-SQL scripting, and database technologies.Familiarity with cloud services and managing database in cloud environments is a plus.Excellent understanding of data integrity, data structures, and database design.Desired Skills & Competencies:Demonstrated ability to work independently as well as part of a team.Strong problem-solving skills and the ability to think algorithmically.Excellent communication skills, capable of effectively articulating complex technical concepts to non-technical team members.Proactive attitude and the ability to handle multiple tasks simultaneously.Commitment to continuous learning and improvement.This role offers an exciting opportunity for a Database Administrator to leverage their skills in a challenging and supportive environment. If you have a passion for database technologies and a track record of excellence in database administration, we encourage you to apply.
+All qualified applicants will receive consideration for employment without regard to race, color, national origin, age, ancestry, religion, sex, sexual orientation, gender identity, gender expression, marital status, disability, medical condition, genetic information, pregnancy, or military or veteran status. We consider all qualified applicants, includi
+================================================================================
+ID: P037 | type: posting
+TITLE: Systems Administrator III | COMPANY: ManTech | CAT: systems administrator
+TEXT: Secure our Nation, Ignite your Future
+
+Become an integral part of a diverse team while working at an Industry Leading Organization, where our employees come first. At ManTech International Corporation, you’ll help protect our national security while working on innovative projects that offer opportunities for advancement.
+
+Currently, ManTech is seeking a motivated, career and customer-oriented Systems Administrator III in Glen Burnie, MD.
+
+Responsibilities include, but are not limited to:
+
+The Systems Administrator III maintains, configures, and ensures the reliable operation of computer systems, network servers, and virtualization. They install and upgrade computer components and software, manage virtual servers, and integrate automation processes. They troubleshoot hardware and software errors by running diagnostics, documenting problems and resolutions, prioritizing problems, and assessing the impact of issues. They provide documentation and technical specifications to IT staff for planning and implementing new or upgraded IT infrastructure. They perform or delegate regular backup operations and implement appropriate processes for data protection, disaster recovery, and failover procedures. They lead desktop and help desk support efforts, ensuring all desktop applications, workstations, and related equipment problems are resolved in a timely manner with limited disruptions. They are responsible for capacity, storage planning, and database performance, and monitoring and managing all installed systems and infrastructure. The Systems Administrator III is a senior role with extensive experience in all aspects of configuring and maintaining IT systems. The Systems Administrator III supervises and mentors subordinate projects and Team ManTech staff.
+
+Minimum Qualifications:
+
+Must be a US citizen. 9+ years of related experience AND Bachelor's degree in a related area OR 11+ years of related experience AND Associate degree in a related area OR 13+ years of related experience AND HS diploma (A candidate holding a relevant master’s degree may be granted 2 years’ experience credit for that extra education. A candidate holding a relevant PhD degree may be granted 4 years’ experience credit for that extra education). DoD 8570.01-m Information Assurance Technical (IAT) Level II Certification by start date. 
+
+Desired Certifications
+
+Bachelor's degree in Systems Administration or Engineering preferred. 
+
+Physical Requirements:
+
+Must be able to remain in a stationary position 50%. Needs to occasionally move about inside the office to access file cabinets, office machinery, etc. Constantly operates a computer and other office productivity machinery, such as a calculator, copy machine and computer printer. Frequently communicates with co-workers, management, and customers, which may involve delivering presentations. Must be able to exchange accurate information in these situations. 
+
+For all positions requiring access to technology/software source code that is s
+================================================================================
+ID: P038 | type: posting
+TITLE: Systems Administrator (Tier 2 Deskside Support), Mid | COMPANY: General Dynamics Information Technology | CAT: systems administrator
+TEXT: Job Description:
+
+Type of Requisition:
+
+Regular
+
+Clearance Level Must Currently Possess:
+
+Top Secret/SCI
+
+Clearance Level Must Be Able To Obtain:
+
+Top Secret SCI + Polygraph
+
+Suitability:
+
+Public Trust/Other Required:
+
+Job Family:
+
+Systems Administration
+
+Skills:
+
+Job Qualifications:
+
+End Users, IT Troubleshooting, Windows System Administration
+
+Certifications:
+
+Security + - CompTIA
+
+Experience:
+
+5 + years of related experience
+
+US Citizenship Required:
+
+Yes
+
+Job Description:
+
+Transform technology into opportunity as a Systems Administrator (Tier 2 Deskside Support) with GDIT. A career in enterprise IT means connecting and enhancing the systems that matter most. At GDIT you'll be at the forefront of innovation and play a meaningful part in improving how agencies operate.
+
+At GDIT, people are our differentiator. As a Systems Administrator (Tier 2 Deskside Support) you will help ensure today is safe and tomorrow is smarter. Our work depends on TS/SCI cleared Systems Administrator (Tier 2 Deskside Support) joining our team to Support our intelligence customer in St. Louis, MO.
+
+Job Description:
+
+HOW A SYSTEMS ADMINISTRATOR WILL MAKE AN IMPACT
+
+The Tier 2 Desktop Support Technician provides Deskside IT Service support to the UDS End User Devices deployed at NCW. End user device equipment consists of workstations (thin and thick clients), monitors, KVMs, print, fax and scan devices, secure tablets and laptops, VoIP devices, Desktop VTCs (DVTCs), removable media, and associated accessories. The individual will fulfil Installation, Move, Add, Change, and Disposal (IMACD) service requests, and support the completion of special projects.
+
+Primary Responsibilities:
+
+Provide support for implementation, maintenance, and incident troubleshooting of IT systemsManage hardware in all stages including unpacking and setup of end user devicesResolve IT incidents from cradle to grave, working close with engineering teams and other ISP Contractor Stakeholders when IT issues require Tier 3 escalation or have dependencies external to the UDS contractInstall application software on end user device workstations via scripted install packagesInventory management of UDS deployed software and end user devicesNetwork and locally attached printersAssist users in accessing and using IT systemsProvide user education and training in basic hardware and software functionsCreate and maintain documentation and SOPs to train new employeesUtilization of a ServiceNow based ticketing database to track, update and resolve break/fix incident tickets and in fulfilling new requests submitted and tracked as Demands and RITMsIdentify and execute process improvements and other enhancements that improve operational efficiency.
+Basic Qualifications:
+
+WHAT YOU’LL NEED TO SUCCEED:
+
+TS/SCI Clearance w/ ability to obtain CI PolyKnowledge in one or more of the following areas:Workstations (thin and thick clients)MonitorsKVMsPrint, Fax and Scan Support ServicesAudio Visual ServicesVoice and VTC Support
+================================================================================
+ID: P039 | type: posting
+TITLE: HPC Systems Administrator | COMPANY: Piper Companies | CAT: systems administrator
+TEXT: Piper Companies is seeking a HPC Systems Administrator with an academic medical center in Philadelphia for a contract-to-hire, remote opportunity.
+
+Responsibilities for the HPC Systems Administrator:
+
+Focused on HPC (High performance computing).Manage Linux-based clustered computing environment (RedHat, CentOS preferred).Working with an underlying storage system running GPFS.Upgrade incoming projects, understand testing, preparation, understand interdependencies, and other variables across environment.Help users with requests, troubleshooting, debugging.
+
+Requirements for the HPC Systems Administrator:
+
+Bachelor's Degree required.Experience with Linux based clustered computing, RedHat and CentOS for supporting servers.Programming skills: Bash, Python, Perl, R.Experience reviewing/debugging scientific computing pipelines, assisting researchers with compilation errorsAcademic medical center environment.InfiniBand network support experience.Cloud experience, using Azure.Familiarity with HIPAA compliance regulations.LSF for job scheduling, Slurm is also a popular tool.
+
+Compensation/Benefits for the HPC Systems Administrator:
+
+Targeting around $60/hour, comparable salary upon conversion.Fully remote. Opportunities for on-site events.Comprehensive benefits package: Medical, dental, vision, 401k
+
+Keywords: compute, computational, infrastructure, engineer, academic, health, medical, health system, hospital, Philadelphia, contract to hire, fully remote, hpc, high performance, lpc, low performance, linux, linux-based, cluster, clusters, clustered computing, storage, GPFS, storage systems, bachelor's degree, redhat, centos, servers, programming, bash, python, perl, r, infiniband, network support, cloud, azure, HIPAA, LSF, Slurm, job scheduling
+
+, , #pando
+
+
+================================================================================
+ID: P040 | type: posting
+TITLE: Network and Systems Administrator | COMPANY: SpotOn | CAT: systems administrator
+TEXT: At SpotOn, we’re helping small businesses and restaurants compete and win with technology to better connect with their customers. Think marketing software, website development, e-commerce, reservations, online ordering, digital loyalty, review management, and both retail and restaurant point-of-sale (POS) solutions.
+
+Recently, SpotOn Has
+
+Raised $300M in Series F funding (valuing SpotOn at $3.6 Billion)Earned awards for Great Places to Work and Built In’s Best Places to WorkEarned award for Inc’s Fastest Growing Company in 2023Rated the top-rated point-of-sale (POS) for Restaurants, Bars, Retail, and Small Business by Capterra usersHelped local businesses succeed with technology and support to battle through the labor shortage while also helping their employees earn more. 
+
+This year, we’re going even bigger—caring hard and moving fast down the path of high growth and positive impact.
+
+That’s where you come in.
+
+SpotOn’s Network & System Administrators are responsible for designing, documenting, installing, and configuring systems, services, LANs, WLANs, WANs, VPNs, Internet and intranet systems, software, and equipment for use by our staff. The day-to-day involves working on SpotOn’s infrastructure to ensure security and stability. Additionally the System & Network Administrator will assist other departments within SpotOn who support Customer Networks for our products and services.
+
+Responsibilities
+
+System AdministrationResponsible for the configuration, maintenance, and administration of our identity provider (IdP) platformsEvaluate systems which enhance or replace those currently in placeCreate and maintain internal support documentation for Systems team and relevant stakeholdersProvide training and mentoring to Systems team Create and maintain detailed documentation on audit events, security incidents and system changes 
+
+Network AdministrationResponsible for LAN, WLAN, VPN, WAN, and ISP resources for SpotOnReview patches and monitor patching, installationFirmware upgrades on network devices (review and apply)Perform physical server and network installs and maintenanceMonitor and address security incidents and vulnerabilitiesEndpoint ManagementAdministrative ownership of our fleet of endpoints using mobile device management toolsCommunication & Productivity AdministrationSupport and administration of all communication and productivity tools. This includes but is not exclusive to Zoom, Atlassian, Google Workspace, Slack, A/V, meeting support and any other communication or productivity tools currently in-use within the organization
+Qualifications
+
+Research shows that women and members of underrepresented groups tend to apply to roles only when they check every box on a job description. We encourage you to apply if you meet the majority of qualifications and if this role is aligned with your career trajectory.
+
+Hands-on experience in building, configuring, and maintaining Identity Providers (IdP) such as Okta and Active Directory.Extensive know
+================================================================================
+ID: P041 | type: posting
+TITLE: Web Developer | COMPANY:  | CAT: web developer
+TEXT: MINIPPS inc. is developing several software applications. We are looking to expand the development team of a project optimizing business flows with the power of AI. It is a cloud-based solution interfacing with the customer's ERP systems.
+Job Requirements:We can offer internship to a student with the passion for software engineering and with the following skills:· Knowledge at React Framework (a must).· Basic experience at Backend development (a must).· Building custom and using external REST APIs.· Experience working with Django framework (Big advantage).· Experience with ABAP development (Big advantage).· Proficiency with Cloud Services (Azure or others)· Excellent communication skills (English is a must).· Auto-deduct abilities.
+Responsibilities:· You will take a major part in designing and implementing complex frontend and backend systems, written in React (JavaScript - frontend), Django (Python - backend)· Implement solutions in AZURE cloud environment.· Learn new technologies and enrich other team members.· Perform code reviews, evaluate implementations, and provide feedback about potential tool improvements.
+Seniority level:Entry level
+Employment type:Full-time Internship
+Location:Working from home or from the office (310 Walnut Bend Cordova, Tennessee 38018 USA)
+================================================================================
+ID: P042 | type: posting
+TITLE: Graphic Designer and Web Developer | COMPANY: Seek | CAT: web developer
+TEXT: Company Description Seek, an Eldridge-backed technology company, is a SaaS platform made up of analytics applications that solve industry-specific business problems. These apps are cloud-native and integrate with your company’s systems at turnkey speed. Our goal is to create one, singular place business professionals can turn to for all insights on data, across departments.  Role Summary The role of Graphic Designer & Web Developer will involve creating highly designed and creatively branded content, as well as developing and updating our website to create an exceptional user experience. The ideal candidate will have a strong ability to take vision and ideas and turn them into compelling visual representations. This individual should have a deep passion for graphical design and marketing.  Duties and Responsibilities Design creative and visually appealing graphics for digital and print, including social media graphics, ads, website design, sales collateral, and overall branding for Seek. Develop and maintain website that is user-friendly and impressive, using WordPress. Collaborate with cross-functional departments, with oversight by Marketing Manager, to understand creative requests and successfully meet objectives and deadlines. Translate strategic direction into high-quality design with an established brand identity.Stay updated on best practices in graphic design, content design, web development, and user experience design.  Required Skills and QualificationsProficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign, etc.) and other design tools. Experience developing or updating websites hosted on WordPress. Excellent communication, organization, presentation, and collaboration skills with the ability to work in a fast-paced environment. Attention to detail, creativity, and passion for design and technology. Ability to manage multiple projects simultaneously and prioritize tasks effectively.Ability to take constructive feedback and apply it to future work.  Preferred Skills and QualificationsBachelor's degree (or equivalent), preferably in graphic design, art, marketing, technology, or related discipline.Previous experience in a professional graphic design role, preferably with a creative or marketing agency or SaaS company.Working knowledge of CSS3, HTML5, and JavaScript. Benefits Health, dental, vision and life insurance. 401k with employer match. Paid time off and holidays. 
+================================================================================
+ID: P043 | type: posting
+TITLE: Web Developer | COMPANY: DataAnnotation | CAT: web developer
+TEXT: DataAnnotation is committed to creating quality AI. Join our team to help train AI chatbots while gaining the flexibility of remote work and choosing your own schedule.
+We are looking for a proficient Web Developer to join our team to train our AI chatbots to code. You will work with the chatbots that we are building in order to measure their progress, as well as write and evaluate code.
+In this role you will need to be proficient in at least one programming language (Python, JavaScript, HTML, C++, C# and SQL) and able to solve coding problems (think LeetCode, HackerRank, etc). For each coding problem, you must be able to explain how your solution solves the problem.
+Benefits:
+This is a full-time or part-time REMOTE positionYou’ll be able to choose which projects you want to work onYou can work on your own scheduleProjects are paid hourly, starting at $40+ USD per hour, with bonuses for high-quality and high-volume work
+Responsibilities:
+Come up with diverse problems and solutions for a coding chatbot Write high-quality answers and code snippetsEvaluate code quality produced by AI models for correctness and performance
+Qualifications:
+Fluency in English (native or bilingual)Proficient in at least one programming language (Python, JavaScript, HTML, C++, C# and SQL)Excellent writing and grammar skillsA bachelor's degree (completed or in progress)
+Note: Data Annotation payment is made via PayPal. We will never ask for any money from you. PayPal will handle any currency conversions from USD.
+================================================================================
+ID: P044 | type: posting
+TITLE: Web Developer and Designer, Senior with Security Clearance | COMPANY: ClearanceJobs | CAT: web developer
+TEXT: Job Number: R0193820 Web Developer and Designer, Senior
+
+The Opportunity: With all the information available today, it takes a skilled professional to know how to organize and visualize data effectively to give their clients the right answers. With the critical decisions made in our government every day, we need someone like you to do just that. As a web developer and designer, you use your specialized technical experience and your attention to detail to generate web products to give your clients the actionable intelligence and context they need. If you have strong analytical skills and a problem-solving mindset, we have an opportunity to use those skills to support our warfighters. As a web developer and designer on our team, you'll help your client by providing web design, development, and improvement of web interfaces, pages, templates, and tools. Using your comprehensive understanding of user experience (UX), user interface (UI), and graphic design, you will design and create interactive graphics and web products to illustrate technical subject matter and generate visual presentations. As an authority on your topic, your client will look to you for creativity, concepts, and proposals, often under pressure. This is a chance to grow your expertise and broaden your skillset in areas like web development, graphic design, analysis, and communication. You'll share your expertise with other colleagues through leadership and mentoring. We focus on growing as a team to deliver the best support to our customers, so you'll have the resources to learn new skills and tools. Join us as we provide the right information at the right time to support the critical needs of our warfighters and nation's leaders. Join us. The world can't wait. You Have: * 8+ years of experience as a web or UI/UX developer * Experience with applying best practices for improving web accessibility, usability, and technical implementation with usability tools * Experience with designing UI graphics and elements, with defined styling, revisions, or improvements * Experience with graphic design principles, including typographic, layout, and production methods * Experience with using Adobe Creative Suite, MS Office Suite, Apple Final Cut Pro, Map Publisher, and SharePoint * Ability to design products for front-end development and web applications * Ability to develop and maintain design guidelines and standards to ensure consistency across all project applications, uses, and workflows * TS/SCI clearance with a polygraph * Bachelor's degree Nice If You Have: * 12+ years of experience with performing web design and development * Experience as a web designer and developer supporting CCMD or component organizations * Experience with Section 508 Digital Design Compliance * Experience with Section 508 Accessibility Requirements Tool (ART) * Possession of excellent verbal and written commun
+
+Crane, IN, United States Logistician with Security Clearance Crane IN 47522 United States Contractor 202
+================================================================================
+ID: P045 | type: posting
+TITLE: Network Engineer | COMPANY: Zufall Health | CAT: network engineer
+TEXT: Welcome to Zufall Health!
+
+Position Summary
+
+The Network Engineer is responsible for the maintenance, expansion and growth of our local area network. The Network Engineer will maintain the essentials such as operating system, business applications, emails, laptops and desktops.
+
+Essential Functions, Duties, And Responsibilities
+
+Support LAN, WAN and intranet systemsMaintain Zufall’s network and computer systemsInstall and configure hardware and softwareMake upgrades and repairs to operating system, software and hardware as neededContinually monitor server and network performanceMake recommendations for necessary upgrades and new technologyContribute to the development and maintenance of IT policies and proceduresProvide Level 1 and 2 support to end usersWork with current Level 3 IT support to resolve issuesEngage in regular network troubleshooting activities and resolve network connectivity issuesAdminister servers, laptop and desktop computers, printers, routers, switches, firewalls, phones, company mobile phones, software deployment and patches
+
+Knowledge, Skills And Abilities
+
+Excellent knowledge of Microsoft server and desktop products.Strong understanding of network infrastructureAbility to implement, administer and troubleshoot network infrastructuresEfficient organizational and time-management skills.Ability to quickly learn technologies and products using documentation and internet resources.Ability to work with all levels of IT staff inside and outside the organization.Ability to think through problems and visualize solutions.Must be able to complete complex projects with minimal to no supervisionGood analytical and problem-solving skills.Dependable and flexible when necessary.
+
+Education, Training And Experience
+
+Associate’s or Bachelor’s Degree in Information Technology or related field of study or related technical degree preferredAt least 1-2 years of experience in an IT related fieldExperience with local area network and wide area network administration.Proven experience in managing networks and help deskKnowledge in managing and configuring Window server and desktop platformsExperience with the following systems:VMWare maintenance and configurationVoIP systems (preferred)VMWare and Nakivo Backup & replication software (preferred)SAN / NAS solution (preferred)Sonicwall firewall (preferred)Electronic Health Records (preferred)Cisco switches and wireless access point (preferred)Ubiquiti network devices (preferred)
+
+As a condition of employment, we require that all staff are fully vaccinated against flu. Therefore, if hired during flu season (typically between September-May), all new employees need to be fully vaccinated against flu and are required to provide documentation of receiving flu vaccines upon hire.
+
+Zufall Health an equal opportunity employer and all qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or expression, national origin,
+================================================================================
+ID: P046 | type: posting
+TITLE: Sr. Radio Frequency Network Engineer, SBG | COMPANY: DSS, Inc. | CAT: network engineer
+TEXT: SBG, a DSS, Inc. company, specializing in engineering, information technology, cyber-security, intelligence, and training, is looking for a hard-working results-oriented Senior RF/Network Engineer to join our team. We are seeking a highly motivated individual with a positive attitude looking to join our rapidly growing company. The ideal candidate for this position is a hard-working experienced individual who can excel in a very fast-paced government contractor environment. The position location is onsite in San Diego, CA. This position is contingent upon client/customer approval.
+
+Overview
+
+The Senior RF/Network Engineer will apply knowledge and expertise to perform technical engineering support and analysis of satellite and ground network infrastructures for the Mobile User Objective System (MUOS).
+
+Responsibilities
+
+Your essential job skills and functions will include but may not be limited to:
+
+ Experience in satellite communication systems: knowledge of satellite communication protocols, and ground infrastructure hardware.  Understanding of space-based network security standards: Given the sensitive nature of space systems, expertise in securing satellite networks and communication links.  Experience with ground station operations: Ability to work with ground terminals to ensure reliable communications with the MUOS spacecraft.  Knowledge of space industry standards: Understanding industry-specific standards and regulations related to space systems for compliance and operational efficiency.  Designing, optimizing, troubleshooting, and managing hardware and software components in a multi-enclave network.  Leading network architecture design, analysis, testing and hardware implementation.  Network design and development to modify, and or improve functionality.  Expertise in network design, implementation, and troubleshooting.  Knowledge in network protocols, security standards, and network performance optimization.  Experience with network monitoring tools and technologies.  Strong ability to analyze requirements based on scientific and engineering guidelines. Including hardware, and software technical baselines.  Participate in modeling, simulation, and analysis of network system performance.  Reviewing hardware and software designs for spacecraft, and ground station elements.  Providing recommendations on systems integration and engineering baseline changes and assessing the technical maturity and risk of development projects.  Providing technical oversight and recommendations related to effective testing and validating system requirements. Reviewing test reports for accuracy and completeness.  Participate in developing / reviewing operational procedures for network management, mission planning, and network handover.  Assessing and integrating engineering activities across multiple projects and multiple program areas.  Preparing, reviewing, and editing reports and briefings.  Attending project meetings and reviews to include technical interc
+================================================================================
+ID: P047 | type: posting
+TITLE: *Hybrid* Network Engineer (Appleton, WI) | COMPANY: TEKsystems | CAT: network engineer
+TEXT: Client is looking for a Network Engineer for a Direct Placement opportunity. This will be hybrid (2 days remote, 3 days on-site) in Appleton, WI. Looking for a SR. level resource they will be the sole network person. 
+
+ Top Skills 
+
+Network Engineering - configuration and administration of routers, switches and firewallsExtreme SwitchesCheckpoint FirewallsWireless experience (Meraki preferred)Experience with Network Segmentation, access points and VPN's
+
+
+ Job Description/Duties 
+
+Leads design, configuration and administration of all network infrastructure including wired, wireless, and site connectivity.Manages firewalls and overall network security including LAN segmentation.Monitors health and performance of network, investigates problems and outages to resolution.Creates and maintains network related documentation, including scopes of work, diagrams, processes, and test plans.Consults with vendors regarding system functionality, upgrades, and maintenance.
+
+
+ Additional Details/experience 
+
+Hands on knowledge working with Extreme Networks (Extreme Switching, Wi-Fi, Extreme Cloud IQ).Solid understanding of firewall policies (Check Point experience preferred.)Understanding of Network Access Control (NAC), Radius, 802.1x, AD, LDAP, DNS)Experience creating and administering VMware virtual networks.Working knowledge of low voltage data cabling and fiber optic design.Working technical knowledge in network design and segmentation. (Illumio experience a plus)Working knowledge managing and deploying enterprise wireless technologies.
+
+
+ About TEKsystems 
+
+We're partners in transformation. We help clients activate ideas and solutions to take advantage of a new world of opportunity. We are a team of 80,000 strong, working with over 6,000 clients, including 80% of the Fortune 500, across North America, Europe and Asia. As an industry leader in Full-Stack Technology Services, Talent Services, and real-world application, we work with progressive leaders to drive change. That's the power of true partnership. TEKsystems is an Allegis Group company.
+
+The company is an equal opportunity employer and will consider all applications without regards to race, sex, age, color, religion, national origin, veteran status, disability, sexual orientation, gender identity, genetic information or any characteristic protected by law.
+================================================================================
+ID: P048 | type: posting
+TITLE: Sr. Network Engineer, AI Infrastructure | COMPANY: Tesla | CAT: network engineer
+TEXT: What To Expect
+Tesla is currently seeking a Sr. Network Engineer to join our data center team. This role will provide network design, implementation and operational support for Tesla's datacenters.
+
+What You'll Do
+
+Help design and build new datacentersWork closely with other team members; help on maintaining and growing existing datacenter networksWork with Tesla’s key application teams to support their growth and provide high availability & reliability to networkRequirements gathering, analyze, and propose solution to networking needsMonitor, analyze, and report metrics of network servicesDevelop automation methods to rapidly deploy, configure and update network equipmentConduct product POC evaluationDocument network knowledge base and operational “Run-Book”Must be able to work occasional weekends, after hours, and holidays. May require unscheduled after-hours workParticipate in on call rotation
+
+
+What You'll Bring
+
+6+ years of experience in mid/large-scale global enterprise networking infrastructureExtensive experience in IP networking, L2/L3 network protocols (spanning-tree, OSPF, BGP), TCP/IP, DHCP, DNS, end to end QOS, RDMA, InfiniBand, VLAN, VRRP, LACP, MC-LAG, EVPN with VXLAN, ACL and infrastructure cablingStrong Experience with Arista switches. Experience with Juniper and SONiC is additionalGood cabling & optics knowledgeExperience with various tools such as Protocol Analyzer, SNMP, flow, IPAM, RADIUS, Splunk, network taps, and load/stress testingExperience with developing scripts to automate infrastructure deployment and collect metricsBasic experience with DevOps tools and technologiesCCNP, JNCIP preferred
+
+
+Benefits
+Compensation and Benefits
+Along with competitive pay, as a full-time Tesla employee, you are eligible for the following benefits at day 1 of hire:
+ Aetna PPO and HSA plans > 2 medical plan options with $0 payroll deduction Family-building, fertility, adoption and surrogacy benefits Dental (including orthodontic coverage) and vision plans, both have options with a $0 paycheck contribution Company Paid (Health Savings Account) HSA Contribution when enrolled in the High Deductible Aetna medical plan with HSA Healthcare and Dependent Care Flexible Spending Accounts (FSA) LGBTQ+ care concierge services 401(k) with employer match, Employee Stock Purchase Plans, and other financial benefits Company paid Basic Life, AD&D, short-term and long-term disability insurance Employee Assistance Program Sick and Vacation time (Flex time for salary positions), and Paid Holidays Back-up childcare and parenting support resources Voluntary benefits to include: critical illness, hospital indemnity, accident insurance, theft & legal services, and pet insurance Weight Loss and Tobacco Cessation Programs Tesla Babies program Commuter benefits Employee discounts and perks program
+
+
+Expected Compensation
+
+$104,000 - $348,000/annual salary + cash and stock awards + benefits
+
+Pay offered may vary depending on multiple individualized factors, including 
+================================================================================
+ID: P049 | type: posting
+TITLE: GME Business Intelligence Analyst II WFH | COMPANY: Talentify.io | CAT: business intelligence
+TEXT: Employer Industry: Healthcare
+
+Why Consider This Job Opportunity
+
+ Competitive salary up to $90,000 Opportunity for career advancement and growth within the organization Comprehensive medical coverage with low or no cost for common services 401(k) Plan with a 100% match on 3% to 9% of pay Employee Stock Purchase Plan with 10% off HCA Healthcare stock Family support through fertility and family building benefits
+
+What To Expect (Job Responsibilities)
+
+ Design Best in Class Dashboards to support 300+ Resident and Fellowship programs Construct and manipulate large electronic claims datasets Develop dashboard designs and analytic solutions Collaborate with internal and external stakeholders to gather and analyze needs Present data or analytic findings in various formats
+
+What Is Required (Qualifications)
+
+ Bachelor's Degree in a data-related field or related field of study required 3 years experience with large health care data sets preferred SQL Experience BI Tools Development (PowerBI, Microstrategy, Tableau, etc.) Master's Degree Preferred
+
+How To Stand Out (Preferred Qualifications)
+
+ 0-2 years of experience as an Rx Technician or Customer Service Representative in a healthcare-related service
+
+#HealthcareServices #DataAnalytics #CareerOpportunity #CompetitivePay #EmployeeBenefits
+
+"At Talentify, we prioritize candidate privacy and champion equal-opportunity employment. Central to our mission is our partnership with companies that share this commitment. We aim to foster a fair, transparent, and secure hiring environment for all. If you encounter any employer not adhering to these principles, please bring it to our attention immediately.
+
+Talentify is not the EOR (Employer of Record) for this position. Our role in this specific opportunity is to connect outstanding candidates with a top-tier employer."
+
+Talentify helps candidates around the world to discover and stay focused on the jobs they want until they can complete a full application in the hiring company career page/ATS.
+================================================================================
+ID: P050 | type: posting
+TITLE: Business Intelligence Analyst | COMPANY: ClickUp | CAT: business intelligence
+TEXT: ClickUp is the world’s only all-in-one productivity platform that flexes to the way people want to work. It replaces all individual workplace productivity tools with a single, unified platform that includes project management, document collaboration, whiteboards, spreadsheets, and AI. Our dedication to enhancing productivity has earned us recognition on prestigious lists including the Forbes Cloud 100, Fast Company's Most Innovative Companies, Inc. Power Partners and #1 on two of G2's Best Software Products Lists for 2023 - #1 Project Management Product and #1 Collaboration and Productivity Product. With our headquarters based in San Diego and a rapidly expanding global presence, we are shaping the future of work. Join our team at ClickUp, one of the fastest-growing SaaS companies worldwide, and help millions of users be more productive - saving them at least one day every week. 🦄
+
+We are seeking a skilled and experienced Business Intelligence Analyst to join our Revenue Operations team. As a key member of the team, you will play a crucial role in analyzing and interpreting complex data sets to drive strategic decision-making and enhance revenue generation. Your insights and recommendations will directly influence the growth and success of our organization.
+
+Responsibilities
+
+Collect, analyze, and interpret large volumes of data relating to revenue operations, sales, customer behavior, market trends, and other relevant factors.Develop and maintain comprehensive reports, dashboards, and visualizations to effectively communicate data-driven insights to stakeholders.Utilize advanced analytics techniques to identify patterns, trends, and opportunities within the data.Collaborate with cross-functional teams including Sales, Marketing, Product, and Finance to understand business objectives and provide analytical support.Conduct regular performance analysis to evaluate the effectiveness of sales strategies and initiatives.Identify areas for process improvement and optimization, making recommendations to streamline revenue operations.Monitor and assess the accuracy and integrity of data sources, ensuring compliance with best practices.Stay updated with industry standards, emerging technologies, and latest trends in business intelligence and revenue operations.
+
+Qualifications
+
+Bachelor's degree in Business, Statistics, Computer Science, or a related field. A Master's degree is preferred.1-4 years of experience in a similar role, preferably within the SaaS industry.Proficiency in data manipulation, analysis, and visualization using tools such as SQL, Python, R, Tableau, or Power BI.Strong understanding of statistical analysis, forecasting, and modeling techniques.Proven experience in generating actionable insights from complex data sets.Excellent problem-solving and critical-thinking skills, with a keen attention to detail.Outstanding communication skills with the ability to present findings to both technical and non-technical audiences.Strong business ac
+================================================================================
+ID: P051 | type: posting
+TITLE: Business Intelligence Analyst | COMPANY: BIGO | CAT: business intelligence
+TEXT: Location: 10250 Constellation Blvd., Century City, Los Angeles, US (3 days in the office-hybrid)
+About This RoleBIGO LIVE is seeking a talented, curious Business Intelligence Analyst who thrives at the intersection of data, product, engineering, and operations. The team is data-driven and results focused. The ideal candidate will have a strong technical, analytical, and operations background – with a hunger to make our platform grow. This position is full-time and is located at our Los Angeles office.
+ResponsibilitiesIndependently own internal team data using SQL, Python, Excel and provide ongoing reportingCreate and manage data pipelines in Excel, SQL or Python to aggregate data for different operations teamBuild, maintain and provide data for the internal operations teams, interact with internal users to establish and clarify requirements in order to develop report specificationsEnsure the KPI & metrics are aligned across the different business functions in the operations teamAdvise leaders and support decisions for launches of in-app initiativesUnderstand ecosystems, behaviors, and long-term trends of live-stream content
+Qualifications:BA or BS degree in a quantitative field: data science, finance, information systems, mathematics, statistics or similarAt least 3 years analyst experience (combination of techincal and practical experience i.e. finding insights and presenting to leaders), preferred 5Experience using SQL, Excel(spreadsheets), and at least one scripting language such as Python, R, javascript, etc.Proficient in converting data sets into actionable business insightsExperience presenting reports and analyses to a non-technical audienceExperience with navigating ambiguity through data-driven decision making and adaptable to fast paced environmentGreat communication and team-work skills
+Benefits: Competitive pay package that includes a base salary and performance-related bonus.Generous paid time off starting at 4 weeks + 10 sick days and 9 Holidays per year.Free medical, dental, and vision insurance401kFree gym membership
+================================================================================
+ID: P052 | type: posting
+TITLE: Senior Business Intelligence Analyst  | COMPANY: Alter Behavioral Health | CAT: business intelligence
+TEXT: Job Description
+
+The Business Intelligence Analyst (BIA) plays a key role in uncovering insights that lead to better informed and successful decision-making. Reporting to the Chief Strategy Officer, this role requires someone who has the knowledge and skills to turn raw data into information and insights. This individual is also responsible for understanding business context, identifying critical data, separating the noise, and then creating comprehensive scorecards (operational and management) of KPIs and KRIs to monitor the health of our business and highlight areas needing attention.
+Business Intelligence sits at the intersection of business and technology, and this role is grounded in both. The work will serve the big picture needs of the business, and the analyst must become fluent in the company operations and quantitative management systems while effectively serving as an internal consultant who can demonstrate insights that measure enterprise business impact and results.
+This is an ideal role for a deeply analytical individual who is a self-starter, a quick learner, and who enjoys structuring and solving ambiguous problems by asking the right questions of stakeholders, understanding the needed data and associated gaps and creating technical solutions.
+
+Position ResponsibilitiesBuild visualizations, models, and metrics from conception to dashboard using specialist tools such as Matillion, Fivetran, Snowflake, DBT Cloud, and Thoughtspot.Transform data sets, quantitative, and qualitative analyses into compelling visuals.Work with Operations, Clinical, Executive Leadership, Marketing, and Finance teams to understand monitoring needs and execute upon that guidance.Provide visual, technical, and editorial expertise and proposals for implementation.Identify data sources and appropriate ways to analyze data.Work with managers to establish briefs for data-related projects.Meets deadlines in a fast-paced environment.Manages projects, often using agile methodology.Works with coworkers in a positive collaborating mindset to gain buy-in and develop projects through execution and implementation.Manage Data Engineer to implement data collection and system updates to support improved business intelligence.Use data analysis techniques to enhance clinical intelligence and psychometrics within our organization.Collaborate with teams to identify opportunities for improving personality assessment software we have developed.Develop and implement strategies to optimize data collection and analysis processes related to client care.Analyze data trends and patterns to identify areas for improvement in client outcomes.Other duties as assigned. Basic Qualifications (Required Skills & Experience)Bachelor’s degreeLocal to Southern California, with the ability to travel to Dana Point, CA6+ year experience delivering data driven insights.Deep experience in data visualization and reporting using open-source libraries/packages and third-party tools (Snowflake, ThoughtSpot
