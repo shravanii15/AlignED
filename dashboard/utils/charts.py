@@ -1,5 +1,5 @@
 """
-utils/charts.py -- one shared Plotly visual theme applied to every chart
+utils/charts.py: one shared Plotly visual theme applied to every chart
 in the dashboard, instead of each page inventing its own margins, grid
 style, and colors.
 
@@ -7,7 +7,7 @@ Why this exists: before this, charts used Plotly's default look
 (borders, heavy gridlines, default font, inconsistent margins) on some
 pages and ad-hoc tweaks on others, so the dashboard's charts didn't read
 as one product. apply_chart_theme() applies one consistent, restrained
-style -- subtle gridlines, no chart border, consistent font/margins --
+style, subtle gridlines, no chart border, consistent font/margins --
 matching the semantic color roles used elsewhere in the CSS (gap red,
 market blue, coverage green).
 """

@@ -1,5 +1,5 @@
-"""sections/course_finder.py -- search/filter real courses across all
-13 programs by keyword or specific tracked skill."""
+"""sections/course_finder.py: search/filter courses across all 13 programs
+by keyword or tracked skill."""
 
 import streamlit as st
 
@@ -8,13 +8,9 @@ from utils.layout import page_header
 
 
 def render_course_finder():
-    page_header(
-        "🔎", "Course Finder",
-        "Looking for courses that build a specific skill (e.g. Python, Docker, Machine Learning)? "
-        "Search or filter below -- no upload needed, this searches real course descriptions across all 13 programs directly.",
-    )
+    page_header("", "Course Finder", "Search course descriptions across all 13 programs, or filter by a tracked skill.")
 
-    search_text = st.text_input("Search course names/descriptions (e.g. 'software', 'security', 'machine learning')")
+    search_text = st.text_input("Search course names and descriptions", placeholder="e.g. security, machine learning")
 
     tracked_skills_df = run_query(
         """
@@ -24,7 +20,7 @@ def render_course_finder():
         ORDER BY s.canonical_name
         """
     )
-    skill_filter = st.multiselect("...or filter by a specific tracked skill", tracked_skills_df["canonical_name"])
+    skill_filter = st.multiselect("Filter by tracked skill", tracked_skills_df["canonical_name"])
 
     base_query = """
         SELECT c.course_name, c.description, p.university, p.program_name
@@ -47,12 +43,12 @@ def render_course_finder():
     base_query += " LIMIT 100"
 
     if not search_text and not skill_filter:
-        st.info("Type a search term or pick a skill above to find matching courses.")
+        st.info("Enter a search term or pick a skill to find matching courses.")
         return
 
     results = run_query(base_query, tuple(params))
-    st.caption(f"{len(results)} matching course(s) found (showing up to 100).")
+    st.markdown(f'<p class="section-eyebrow">{len(results)} matching courses (showing up to 100)</p>', unsafe_allow_html=True)
     for _, row in results.iterrows():
-        with st.expander(f"{row['course_name']}  --  {row['university']}"):
+        with st.expander(f"{row['course_name']} · {row['university']}"):
             st.caption(row["program_name"])
             st.write(row["description"] or "(no description available)")

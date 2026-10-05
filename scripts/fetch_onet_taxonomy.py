@@ -4,11 +4,11 @@ fetch_onet_taxonomy.py
 What this script does, in plain terms:
 This is the O*NET counterpart to fetch_esco_taxonomy.py. O*NET (the
 Occupational Information Network) is the official US Department of Labor
-skills taxonomy -- the one real American employers, career counselors, and
+skills taxonomy, the one real American employers, career counselors, and
 labor economists actually use day to day. We're adding it as our *primary*
 taxonomy going forward, replacing ESCO in that role, for one big reason:
 ESCO only has abstract "skills" (e.g. "use software development tools"),
-while O*NET also has concrete "Technology Skills" -- specific, named,
+while O*NET also has concrete "Technology Skills", specific, named,
 real-world tools like Python, AWS, Docker, Kubernetes, Git, and Tableau.
 That's exactly the kind of thing a job posting or a course syllabus
 actually mentions by name, so it's much more useful for grounding an AI
@@ -16,7 +16,7 @@ model's skill extraction than ESCO's more abstract categories.
 
 Like the ESCO script, we don't pull all of O*NET (which covers every
 occupation from farmers to surgeons). We only pull the computing/tech
-branch -- roughly the "Computer and Mathematical Occupations" major group
+branch, roughly the "Computer and Mathematical Occupations" major group
 (O*NET-SOC codes starting with "15-1" and "15-2"): software developers,
 data scientists, database administrators, network/systems administrators,
 information security analysts, web developers, computer support
@@ -31,16 +31,16 @@ How it works, step by step:
    can occasionally surface a loosely-related occupation (e.g. a "sales
    engineer" that merely mentions software).
 2. For each occupation we find this way, we ask O*NET for three things:
-     - "Technology Skills" -- the named-tool list. This is the headline
+     - "Technology Skills", the named-tool list. This is the headline
        feature ESCO doesn't have, so we also save it as its own file.
-     - "Skills" -- O*NET's general skill descriptors (similar in spirit
+     - "Skills", O*NET's general skill descriptors (similar in spirit
        to ESCO's essential/optional skills).
-     - "Knowledge" -- broader subject-matter areas (e.g. "Computers and
+     - "Knowledge", broader subject-matter areas (e.g. "Computers and
        Electronics"), which ESCO doesn't split out separately.
 3. We combine everything into de-duplicated lists and save them, so later
    scripts (the LLM skill-extraction pipeline) can check their output
    against this real, government-grade taxonomy instead of trusting the
-   AI blindly -- exactly how the ESCO script is used today.
+   AI blindly, exactly how the ESCO script is used today.
 
 A note on things we could not directly test:
 This script was written by reading O*NET's public API reference docs
@@ -168,7 +168,7 @@ def get_all_summary_pages(path):
 
     NOTE: asking for end=50 on the first request is an inference, not
     something the docs explicitly confirm works past an occupation's true
-    total -- REST APIs that paginate this way conventionally just clamp to
+    total, REST APIs that paginate this way conventionally just clamp to
     the real total rather than erroring, and the "next" link keeps this
     correct either way, but a human running this for the first time should
     keep an eye on the printed counts to make sure nothing looks truncated.
@@ -208,7 +208,7 @@ def get_occupation_knowledge(code):
 
 
 def get_occupation_technology_skills(code):
-    """Ask O*NET for one occupation's "Technology Skills" -- the named,
+    """Ask O*NET for one occupation's "Technology Skills", the named,
     concrete tools (this is the standout feature vs. ESCO). Confirmed
     shape (from the docs' worked example):
         {"category": [
@@ -300,7 +300,7 @@ def main():
         # (id / name / description), so we merge both into one skills file,
         # the way ESCO's essential + optional skills get merged. We tag
         # each entry with which of the two it came from (O*NET's API
-        # doesn't include this tag itself -- we add it ourselves here).
+        # doesn't include this tag itself, we add it ourselves here).
         for s in skills:
             sid = s["id"]
             if sid not in all_skills:

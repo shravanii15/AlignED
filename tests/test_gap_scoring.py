@@ -18,7 +18,7 @@ from compute_gap_scores import apply_fdr_correction, two_proportion_z_test
 
 def test_identical_rates_are_not_significant():
     """If a program covers a skill at exactly the same rate as the
-    market demands it, there's no gap at all -- the p-value should be
+    market demands it, there's no gap at all, the p-value should be
     nowhere near significant."""
     z, p_value = two_proportion_z_test(x1=20, n1=100, x2=20, n2=100)
     assert p_value > 0.05
@@ -28,7 +28,7 @@ def test_identical_rates_are_not_significant():
 def test_large_clear_gap_is_significant():
     """A program with 0% coverage of a skill that shows up in 40% of a
     large sample of postings is exactly the kind of real, obvious gap
-    the whole project is built to catch -- this should always come back
+    the whole project is built to catch, this should always come back
     significant."""
     z, p_value = two_proportion_z_test(x1=0, n1=200, x2=664, n2=1660)  # 664/1660 = 40%
     assert p_value < 0.05
@@ -38,7 +38,7 @@ def test_large_clear_gap_is_significant():
 def test_tiny_sample_noise_is_not_falsely_significant():
     """A program with just 1 course out of 5 happening to mention a
     skill (20%) vs. a market demand of 25% is a small, plausible-by-chance
-    difference -- the test should NOT call this significant just because
+    difference, the test should NOT call this significant just because
     the raw percentages differ. This is exactly the "small sample size ->
     noise, not a real signal" problem the z-test exists to guard against."""
     z, p_value = two_proportion_z_test(x1=1, n1=5, x2=415, n2=1660)  # 20% vs 25%
@@ -66,7 +66,7 @@ def test_swapping_groups_flips_sign_but_not_significance():
 
 def test_fdr_correction_never_makes_a_p_value_smaller():
     """Correcting for multiple comparisons can only make a result look
-    LESS significant (or equally significant), never more -- that's the
+    LESS significant (or equally significant), never more, that's the
     whole point of guarding against false positives. Every corrected
     q-value must be >= its original raw p-value."""
     raw_p_values = [0.001, 0.01, 0.03, 0.04, 0.2, 0.5, 0.8]
@@ -78,12 +78,12 @@ def test_fdr_correction_never_makes_a_p_value_smaller():
 
 def test_fdr_correction_filters_noise_but_keeps_real_signal():
     """The whole motivation for this correction, demonstrated directly:
-    simulate 70 tests like a real program would run -- 65 that are pure
+    simulate 70 tests like a real program would run, 65 that are pure
     random noise (no real effect) plus 5 with a genuinely tiny, real
     p-value. Pure chance alone means a handful of the 65 noise p-values
     will land under 0.05 and look "significant" before correction. After
     correction, most/all of that noise should be filtered out, while the
-    5 genuinely strong signals must still survive -- that's exactly the
+    5 genuinely strong signals must still survive, that's exactly the
     behavior that makes the FDR correction worth having."""
     import random
     rng = random.Random(42)

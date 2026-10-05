@@ -1,12 +1,6 @@
-"""sections/methodology.py -- the Methodology & Honest Limitations page.
-Every real trade-off and limitation stated openly, the kind of thing an
-interviewer would ask about directly.
-
-Redesigned in Sprint 6: the original version was accurate but a single
-long wall of markdown text. Same content, now organized into scannable
-cards (Data / Taxonomy / Extraction / Statistics / Role grouping), with
-deep-dive detail tucked into expanders rather than forcing every visitor
-to read the full technical justification just to see the section titles."""
+"""sections/methodology.py: the Methodology & Limitations page. Organized
+into scannable cards (data, taxonomy, extraction, statistics, role
+grouping) with detail in expanders, followed by the known limitations."""
 
 import streamlit as st
 
@@ -14,16 +8,8 @@ from utils.layout import page_header
 
 
 def render_methodology():
-    page_header("🔍", "Methodology & Honest Limitations", "Every real trade-off stated openly -- the kind of thing an interviewer would ask about directly.")
+    page_header("", "Methodology & Limitations", "How each number is produced, and where it should not be over-read.")
 
-    st.markdown(
-        "This page exists on purpose: a portfolio project is only as trustworthy as its documented "
-        "limitations. Every simplification below was a deliberate, explained trade-off -- not an oversight."
-    )
-
-    # The four-layer trust chain every result on this dashboard passes
-    # through -- stated up front so a visitor knows what kind of claim
-    # they're looking at before diving into any one page's evidence.
     st.markdown(
         """
         <div class="howitworks-strip">
@@ -35,157 +21,129 @@ def render_methodology():
         """,
         unsafe_allow_html=True,
     )
-    st.caption("Where did the data come from? How was a skill identified? Is the difference statistically significant? What does the evidence suggest investigating?")
+    st.caption("Where did the data come from? How was a skill identified? Is the difference significant? What does it suggest investigating?")
 
-    st.markdown("---")
     st.info(
-        "**What \"coverage\" and \"demand\" actually mean, read this first:** both are text-mention "
-        "**proxies**, not direct measurements. \"Program coverage\" means a skill's name appears "
-        "somewhere in a course's public description -- not that it's taught in depth or assessed. "
-        "\"Market demand\" means a skill's name appears in this project's sampled job postings -- not "
-        "that every employer strictly requires it. So every gap score should be read as: *this skill "
-        "shows up in job-posting text meaningfully more often than in this program's course-description "
-        "text.* Real and statistically tested, but a text-coverage signal, not a certified measurement "
-        "of what students learn or what every employer requires."
+        "**Read this first.** Coverage and demand are text-mention proxies, not direct measurements. "
+        "Program coverage means a skill's name appears in a course's public description, not that it is taught "
+        "in depth. Market demand means the name appears in the sampled job postings, not that every employer "
+        "requires it. A gap score says a skill appears in posting text meaningfully more often than in a "
+        "program's course text."
     )
 
-    st.markdown('<p class="section-eyebrow">THE METHODOLOGY, BY LAYER</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-eyebrow">Methodology by Layer</p>', unsafe_allow_html=True)
 
     card_col1, card_col2, card_col3 = st.columns(3)
     with card_col1:
         with st.container(border=True):
-            st.markdown("**📚 Data sources**")
-            st.caption("13 real university catalogs + a live daily job-posting pipeline plus historical backfill.")
-            with st.expander("Full detail"):
+            st.markdown("**Data sources**")
+            st.caption("13 university catalogs, a daily job-posting pull, and a historical backfill.")
+            with st.expander("Detail"):
                 st.markdown(
                     """
-                    - **Course data:** scraped directly from 13 real university course catalogs
-                      (Georgia Tech, ASU, UIUC, Northeastern, BU, Wisconsin, UMD, Penn State, UW, Michigan).
-                    - **Job posting data:** a live daily pipeline (Adzuna API, via GitHub Actions) plus a
-                      historical backfill of ~124,000 real postings (Kaggle LinkedIn dataset).
+                    - **Courses:** scraped from 13 university catalogs (Georgia Tech, ASU, UIUC,
+                      Northeastern, BU, Wisconsin, UMD, Penn State, UW, Michigan).
+                    - **Postings:** a daily Adzuna pull via GitHub Actions, plus a historical backfill of
+                      about 124,000 postings (Kaggle LinkedIn dataset).
 
-                    **An honest caveat about the 1,660-posting sample:** this is the same sample built for
-                    role-cluster embedding, deliberately drawn across a fixed set of tech role categories
-                    (software engineering, data science, cybersecurity, DevOps, etc.) so clustering would
-                    have real variety to work with. That makes it a **category-balanced sample**, not a
-                    random draw proportional to the real labor market -- so "demand" on this dashboard
-                    means demand *within this sampled set*, not necessarily the true relative demand
-                    across the entire job market. Phrases like "what the job market wants" should be read
-                    with that in mind.
+                    **The 1,660-posting sample is category-balanced.** It was drawn across a fixed set of
+                    tech role categories (software engineering, data science, cybersecurity, DevOps and
+                    others) for role clustering, not at random in proportion to the labor market. "Demand"
+                    here means demand within this sample.
 
-                    **An honest caveat about course data comparability:** the 13 programs are not
-                    represented by equally complete data. Course counts range from 5 (ASU -- a
-                    representative sample of courses, not a full published catalog) to 295 (Georgia
-                    Tech's main CS catalog -- effectively the complete public course list). Some
-                    programs are represented by a full degree catalog, others by an elective pool, and
-                    others by a smaller representative sample -- these are genuinely different kinds of
-                    corpora, not interchangeable "curricula." Program Explorer flags this directly when
-                    a program's course count is small (under 30), and every comparison should be read
-                    with that in mind: a small corpus can genuinely miss skills that a larger one would
-                    catch, independent of anything about the program's actual quality.
+                    **Course data is not equally complete across programs.** Course counts range from 5
+                    (ASU, a sample) to 295 (Georgia Tech's main CS catalog, close to the full public
+                    list). Some programs are a full degree catalog, others an elective pool or a sample.
+                    Program Explorer flags programs with fewer than 30 courses, because a small corpus can
+                    miss skills a larger one would catch.
                     """
                 )
     with card_col2:
         with st.container(border=True):
-            st.markdown("**🏷️ Skill taxonomy**")
-            st.caption("The official US Department of Labor O\\*NET database -- not an invented list.")
-            with st.expander("Full detail"):
+            st.markdown("**Skill taxonomy**")
+            st.caption("The US Department of Labor O\\*NET database.")
+            with st.expander("Detail"):
                 st.markdown(
-                    "ESCO (the EU equivalent) was used first and is kept in the project history, but "
+                    "ESCO (the EU equivalent) was tried first and kept in the project history. "
                     "O\\*NET was chosen for better coverage of named tools and technologies."
                 )
     with card_col3:
         with st.container(border=True):
-            st.markdown("**🔎 Extraction method**")
-            st.caption("AI (Ollama) benchmarked against a keyword baseline -- AI won, F1 0.400 vs. 0.364.")
-            with st.expander("Full detail"):
+            st.markdown("**Extraction method**")
+            st.caption("Local LLM vs. keyword baseline. LLM F1 0.400, keyword 0.364.")
+            with st.expander("Detail"):
                 st.markdown(
                     """
-                    A local, free AI model (Ollama) was compared against a classical keyword-matching
-                    baseline on a 104-item hand-labeled test set:
+                    A local model (Ollama) was compared with a keyword-matching baseline on a 104-item
+                    hand-labeled set:
 
                     | Method | Precision | Recall | F1 |
                     |---|---|---|---|
-                    | Baseline (keyword) | 0.518 | 0.280 | 0.364 |
-                    | AI (local LLM + embeddings) | 0.407 | 0.392 | **0.400** |
+                    | Keyword baseline | 0.518 | 0.280 | 0.364 |
+                    | LLM + embeddings | 0.407 | 0.392 | **0.400** |
 
-                    The AI method won on F1 -- the harmonic mean of precision and recall, and the metric
-                    that matters most here since it balances both instead of favoring one (F1 is not
-                    "accuracy"). But running the AI method across the *full* 1,378 courses and thousands
-                    of postings would take hours on consumer hardware, so the fast keyword method was used
-                    deliberately for full-scale analysis -- a real "best model for evaluation, faster
-                    model for production scale" trade-off.
+                    The LLM scored higher on F1, which balances precision and recall. Running it over all
+                    1,378 courses and the postings would take hours on consumer hardware, so the keyword
+                    method is used at full scale.
 
-                    **On the gold set itself:** the 104 labels (52 courses, 52 postings) were created by a
-                    single annotator (the project author) against the O\\*NET vocabulary, without a second
-                    reviewer or a measured inter-annotator agreement score. Read this evaluation as an
-                    internal benchmark comparing the two extraction methods against each other -- which is
-                    exactly what it's used for here -- rather than an independently validated,
-                    publication-grade ground truth.
+                    **Limits of the benchmark:** the 104 labels (52 courses, 52 postings) come from a single
+                    annotator with no inter-annotator agreement score, and the similarity threshold was
+                    tuned on the same set it was scored on. Treat it as an internal comparison of the two
+                    methods, not an independent held-out evaluation.
                     """
                 )
 
     card_col4, card_col5 = st.columns(2)
     with card_col4:
         with st.container(border=True):
-            st.markdown("**📐 Statistical analysis**")
-            st.caption("Two-proportion z-test + Benjamini-Hochberg FDR correction -- dropped 231 gaps to 159.")
-            with st.expander("Full detail"):
+            st.markdown("**Statistical analysis**")
+            st.caption("Two-proportion z-test with Benjamini-Hochberg FDR correction. Cut 231 gaps to 159.")
+            with st.expander("Detail"):
                 st.markdown(
                     """
-                    Every program is tested against ~70 skills at once, not just one. Running that many
-                    significance tests together means a few "significant" results are expected to be
-                    false positives from chance alone, even if every individual test is done correctly --
-                    the classic multiple-comparisons problem. To account for this, a Benjamini-Hochberg
-                    false discovery rate (FDR) correction is applied across each program's full set of
-                    tests before anything is called significant. This is a stricter, more defensible bar
-                    than raw p-values alone, and it visibly changed the results: applying it dropped the
-                    count of "significant" gaps from 231 to 159 across all 13 programs -- exactly the kind
-                    of honest tightening a real statistical review should produce.
+                    Each program is tested against about 70 skills at once, so some "significant" results
+                    are expected by chance. A Benjamini-Hochberg false discovery rate correction is applied
+                    across each program's tests before anything is called significant. It reduced the
+                    significant-gap count from 231 to 159 across the 13 programs.
 
-                    **The same correction is applied to trend detection too.** The Skill Demand Trends
-                    page tests ~67 skills for a rising/falling trend simultaneously. Applying FDR
-                    correction there dropped the count of "significant" trends from 9 (using a raw
-                    p-value alone) to **0** at q < 0.05 -- the trends page now shows these as exploratory
-                    directional signals rather than confirmed trends, consistent with the same standard
-                    used for gap scoring.
+                    **Trend detection uses the same correction.** The demand trends page tests about 67
+                    skills at once. Applying FDR correction cut the count of significant trends from 9
+                    (raw p-value) to 0 at q < 0.05, so the page presents them as exploratory signals.
                     """
                 )
     with card_col5:
         with st.container(border=True):
-            st.markdown("**🧩 Role grouping**")
-            st.caption("Sentence embeddings + k-means. Silhouette score: 0.08 -- disclosed, not hidden.")
-            with st.expander("Full detail"):
+            st.markdown("**Role grouping**")
+            st.caption("Sentence embeddings and k-means. Silhouette score 0.08.")
+            with st.expander("Detail"):
                 st.markdown(
                     """
-                    Role groups come from clustering sentence embeddings of job-posting text with k-means.
-                    The resulting silhouette score is modest (0.08) -- normal and expected for real,
-                    overlapping job-posting text (a "DevOps Engineer" and "Cloud Engineer" posting
-                    legitimately share a lot of language). A hand sanity-check of sampled postings per
-                    cluster confirmed most clusters are genuinely coherent by role. Interpret these as
-                    **broad role groups**, not definitive occupations.
+                    Role groups come from k-means clustering of sentence embeddings of posting text. The
+                    silhouette score is modest (0.08), which is expected when postings for related roles
+                    (a DevOps and a Cloud Engineer posting, for example) share much of their language. A
+                    manual check of sampled postings found most groups coherent by role. Treat them as
+                    broad role groups, not definitive occupations.
                     """
                 )
 
-    st.markdown("---")
-    st.markdown('<p class="section-eyebrow">KNOWN, DOCUMENTED LIMITATIONS</p>', unsafe_allow_html=True)
-    st.caption("A master's-level project isn't one with no limitations -- it's one that knows exactly what its limitations are.")
-    with st.expander("Keyword matching can't disambiguate context"):
+    st.markdown('<p class="section-eyebrow">Known Limitations</p>', unsafe_allow_html=True)
+    with st.expander("Keyword matching cannot disambiguate context"):
         st.markdown(
-            "A handful of generic single-word skill names (e.g. \"Design\", \"Science\") were excluded "
-            "from gap/trend analysis because a keyword scanner can't tell them apart from unrelated "
-            "everyday text."
+            "A few generic single-word skill names (such as \"Design\" and \"Science\") were excluded from "
+            "gap and trend analysis because a keyword scanner cannot tell them apart from everyday text."
         )
-    with st.expander("The historical posting dataset's timestamps are skewed"):
+    with st.expander("The historical postings have skewed timestamps"):
         st.markdown(
-            "68% of the ~124,000 postings are dated in a single final week -- almost certainly a "
-            "data-collection artifact, not real hiring activity. Trend analysis was restricted to the 6 "
-            "weeks with real volume (>=100 postings) rather than reporting a misleading result across "
-            "mostly-empty weeks."
+            "68% of the roughly 124,000 postings are dated to a single final week, most likely a "
+            "data-collection artifact. Trend analysis uses only the 6 weeks with at least 100 postings."
         )
-    with st.expander("The AI evaluation's threshold was tuned on the same set it was scored on"):
+    with st.expander("The benchmark is not a held-out evaluation"):
         st.markdown(
-            "The embedding similarity cutoff used in the AI evaluation was tuned against the same "
-            "104-item set used for final reporting -- a known, deliberate simplification for a project "
-            "of this scope (the more textbook-correct approach would use a separate held-out set)."
+            "The embedding similarity cutoff was tuned on the same 104 items used for final reporting. "
+            "A separate held-out set would be the standard approach and is a planned improvement."
+        )
+    with st.expander("The analysis is a snapshot"):
+        st.markdown(
+            "The daily Adzuna pull adds raw postings, but gap scores and trends are not recomputed from "
+            "them. Results reflect the sample and course data as of the last pipeline run."
         )

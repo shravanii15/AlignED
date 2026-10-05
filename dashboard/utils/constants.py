@@ -1,5 +1,5 @@
 """
-utils/constants.py -- shared display/analysis constants used across
+utils/constants.py: shared display/analysis constants used across
 multiple dashboard pages.
 
 Pulling these into one module (rather than repeating them per page)
@@ -24,8 +24,8 @@ TOP_SKILLS_PER_CLUSTER = 15
 # (e.g. "Design", "Science"). A plain keyword scanner can't tell these
 # apart from unrelated everyday text (e.g. "design your career" vs. the
 # actual skill), so they're excluded from analysis everywhere in the
-# project -- gap scoring, trend detection, and here in the personal
-# profile matcher -- to avoid noisy false positives. See
+# project, gap scoring, trend detection, and here in the personal
+# profile matcher, to avoid noisy false positives. See
 # scripts/gap_analysis/compute_gap_scores.py for the original version of
 # this same exclusion list and the full reasoning.
 AMBIGUOUS_GENERIC_TERMS = {

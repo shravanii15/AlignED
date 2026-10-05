@@ -1,32 +1,22 @@
 """
-utils/layout.py -- shared layout helpers so every page has the same
-visual rhythm instead of each page hand-rolling its own header style.
+utils/layout.py: shared layout helpers so every page has the same visual
+rhythm instead of each page hand-rolling its own header style.
 
-Before this, some pages used st.title() + a markdown paragraph, others
-jumped straight into content with no framing at all -- inconsistent
-enough that the 9 pages didn't feel like one product. page_header()
-standardizes it.
-
-Redesign pass: this used to render a filled colored box (icon in a blue
-strip) -- replaced with a thin bottom rule and a large document-style
-title, closer to a research paper section heading than app chrome. The
-icon is kept (small, muted) for a little visual variety across pages
-without dominating the layout.
+page_header() renders a large document-style title with a thin rule under
+it (styled in app.py's CSS) and an optional one-line description.
 """
 
 import streamlit as st
 
 
 def page_header(icon, title, description=None):
-    """Render a consistent page header: a large title with a small muted
-    icon, a thin rule underneath, and an optional one-line description.
-    Use at the top of every page's render_*() function in place of a
-    bare st.title()."""
+    """Render a consistent page header. `icon` is optional (pass "" or
+    None for a text-only title); description is an optional short line."""
+    icon_html = f'<span class="page-header-icon">{icon}</span>' if icon else ""
     st.markdown(
         f"""
         <div class="page-header">
-            <span class="page-header-icon">{icon}</span>
-            <span class="page-header-title">{title}</span>
+            {icon_html}<span class="page-header-title">{title}</span>
         </div>
         """,
         unsafe_allow_html=True,

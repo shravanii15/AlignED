@@ -2,7 +2,7 @@
 extract_common.py
 
 What this script does, in plain terms:
-This is a *library*, not something you run directly -- it holds the pieces
+This is a *library*, not something you run directly, it holds the pieces
 that are shared between our two skill-extraction methods
 (extract_baseline.py, the keyword-matching approach, and extract_llm.py,
 the local-AI approach). Both of those scripts need the exact same two
@@ -14,19 +14,19 @@ Why this lives in its own file instead of being copied into both scripts:
 if the matching logic (e.g. how we normalize "  Python " vs "python") were
 written twice and one copy got tweaked later without updating the other,
 the two extraction methods would silently stop being comparable to each
-other -- which would quietly wreck the whole point of this phase of the
+other, which would quietly wreck the whole point of this phase of the
 project (proving the LLM beats the baseline on the *same* yardstick).
 Keeping one shared copy here means a fix or tweak only has to happen once.
 
 Where the vocabulary comes from:
-- data/taxonomy/onet_computing_skills.json -- 57 O*NET "Skills" and
+- data/taxonomy/onet_computing_skills.json, 57 O*NET "Skills" and
   "Knowledge" entries (e.g. "Programming", "Computers and Electronics").
   Each entry already carries an onet_category field telling us which of
   the two it is, so we just pass that straight through.
-- data/taxonomy/onet_computing_technologies.json -- 98 broad technology
+- data/taxonomy/onet_computing_technologies.json, 98 broad technology
   *categories* (e.g. "Development environment software"), each with a list
   of concrete, named tools under "examples" (e.g. "Python", "Git",
-  "AWS SageMaker"). We don't care about the category grouping here -- we
+  "AWS SageMaker"). We don't care about the category grouping here, we
   just want the flat list of ~1,569 named tools, each tagged as type
   "technology".
 """
@@ -42,12 +42,12 @@ TECHNOLOGIES_PATH = os.path.join(DATA_DIR, "onet_computing_technologies.json")
 
 def normalize_term(term):
     """Turn a term string into a consistent form for comparison purposes
-    only (never for display -- always show the user the original,
+    only (never for display, always show the user the original,
     nicely-cased term). We lowercase and collapse/strip surrounding
     whitespace so that trivial differences like "Python " vs "python"
     or extra spaces don't cause a real match to be missed. This is
     intentionally simple: we are NOT trying to handle plurals, synonyms,
-    or abbreviations here (e.g. "JS" vs "JavaScript") -- that kind of
+    or abbreviations here (e.g. "JS" vs "JavaScript"), that kind of
     fuzzy matching is exactly the sort of judgment call we want the LLM
     to make, and it would be unfair to bake it into the baseline too."""
     if term is None:
@@ -120,11 +120,11 @@ def fuzzy_match_term(raw_term, vocabulary, normalized_lookup, cutoff=0.70):
     vocabulary into every LLM prompt and demanded exact, verbatim
     matches. On a laptop-grade, CPU-only machine that made every prompt
     huge, and the model spent most of its time just *reading* the
-    vocabulary rather than reasoning about the actual text -- in
+    vocabulary rather than reasoning about the actual text, in
     practice this caused near-total request timeouts. This function is
     the fix: the LLM now answers in its own words from a short prompt
-    (fast), and normalization -- matching "AWS" or "amazon web services"
-    back to our real vocabulary entry -- happens here afterward, cheaply,
+    (fast), and normalization, matching "AWS" or "amazon web services"
+    back to our real vocabulary entry, happens here afterward, cheaply,
     in plain Python.
 
     We try an exact (normalized) match first since that's the strongest,

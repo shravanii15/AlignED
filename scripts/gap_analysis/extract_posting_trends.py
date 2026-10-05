@@ -14,7 +14,7 @@ is there right now?"
 Scope decisions made on purpose, and why:
 - We only search for the ~70 named-technology / meaningfully-specific
   skills already identified as relevant during gap scoring (Python,
-  Docker, Kubernetes, etc.) -- not the full ~1,600-term vocabulary. This
+  Docker, Kubernetes, etc.), not the full ~1,600-term vocabulary. This
   keeps each document's scan fast (searching for 70 terms instead of
   1,600 is roughly 20x faster) and keeps the story focused: we already
   know these are the skills worth tracking.
@@ -26,7 +26,7 @@ Scope decisions made on purpose, and why:
   risk of losing progress partway through.
 - The historical dataset only spans about 4.5 months (Dec 2023-Apr 2024).
   That's honestly a short window for "forecasting" in the textbook sense
-  -- it's better described as early trend detection than a mature
+ , it's better described as early trend detection than a mature
   time-series forecast. This is a known, stated limitation, not an
   oversight; the live daily Adzuna pipeline (built in Week 1) keeps
   extending this window every single day going forward.
@@ -134,7 +134,7 @@ def main():
             if time.time() - start_time > TIME_BUDGET_SECONDS:
                 print(f"\nTime budget reached ({TIME_BUDGET_SECONDS}s). Saving checkpoint and stopping early.")
                 # Important: processed_job_ids must be updated here too, not
-                # just at the very end -- otherwise a resumed run would have
+                # just at the very end, otherwise a resumed run would have
                 # no record of which postings were already counted, and
                 # would double-count them into week_totals/skill_week_counts
                 # on the next run. (Caught this exact bug during testing.)

@@ -3,7 +3,7 @@ renormalize.py
 
 What this script does, in plain terms:
 extract_llm.py's first attempt at matching the AI model's answers back to
-our real O*NET vocabulary used plain text similarity (difflib) -- it
+our real O*NET vocabulary used plain text similarity (difflib), it
 checks how similar two strings LOOK, character by character. That's fast
 and needs no extra setup, but it has a real blind spot: it can't tell
 that "cloud infrastructure" and "cloud computing" mean almost the same
@@ -14,7 +14,7 @@ taxonomy's exact wording.
 
 This script fixes that by using *embeddings* instead of spelling. An
 embedding model turns a phrase into a list of numbers (a "vector") that
-captures its MEANING, not its spelling -- two phrases with similar
+captures its MEANING, not its spelling, two phrases with similar
 meaning end up with similar vectors, even if barely any of the actual
 letters match. We use a small, free, fully local embedding model
 (sentence-transformers' "all-MiniLM-L6-v2") to re-match every raw answer
@@ -24,13 +24,13 @@ the predicted_skills field with the improved matches.
 Why this doesn't need to call Ollama again:
 extract_llm.py now saves each item's raw_terms (the AI's answers in its
 own words) alongside predicted_skills. Re-matching is just comparing
-those saved words to our vocabulary -- no need to re-run the slow local
+those saved words to our vocabulary, no need to re-run the slow local
 LLM at all, so this step takes seconds/minutes instead of another 30+
 minute run.
 
 Requires: pip install sentence-transformers
 (this will also pull in torch, which is a genuinely large download --
-a few hundred MB -- so it may take a few minutes the first time.)
+a few hundred MB, so it may take a few minutes the first time.)
 
 Honest methodology note: the SIMILARITY_CUTOFF value below was chosen by
 trying a few values (0.55, 0.65, 0.68) against this same 104-item gold
@@ -40,7 +40,7 @@ on a separate held-out validation split and only report the final F1 on
 data the threshold was never tuned against, to avoid any risk of quietly
 overfitting the threshold to this specific set of examples. That's a
 known, deliberate simplification for a project of this size and scope,
-not an oversight -- worth stating plainly if asked about it.
+not an oversight, worth stating plainly if asked about it.
 """
 
 import json
@@ -57,16 +57,16 @@ LLM_EXTRACTIONS_PATH = os.path.join(DATA_DIR, "llm_extractions.json")
 # A small, fast, well-regarded general-purpose embedding model. "Small"
 # here still means good enough for this kind of short-phrase matching
 # task, and importantly it's light enough to run quickly on a laptop CPU
-# -- we deliberately avoid repeating the "too heavy for this machine"
+#, we deliberately avoid repeating the "too heavy for this machine"
 # mistake from the extraction step itself.
 EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 
 # Cosine similarity cutoff for accepting a match. This is the main dial
 # for trading precision against recall: lower = more matches accepted
 # (higher recall, lower precision), higher = stricter (higher precision,
-# lower recall). We tried 0.55 (too loose -- roughly doubled accepted
+# lower recall). We tried 0.55 (too loose, roughly doubled accepted
 # matches, precision dropped more than recall gained), 0.65 (best
-# result), and 0.68 (slightly worse than 0.65 -- too strict, lost more
+# result), and 0.68 (slightly worse than 0.65, too strict, lost more
 # recall than it gained in precision). 0.65 is the value that actually
 # beat the baseline on F1 in real testing (0.400 vs baseline's 0.364), so
 # it's the default. Can still be overridden from the command line to
@@ -100,7 +100,7 @@ def main():
         raw_terms = entry.get("raw_terms")
         if not raw_terms:
             # Either the LLM call failed for this item (no raw_terms at
-            # all), or the model genuinely returned nothing -- either
+            # all), or the model genuinely returned nothing, either
             # way, there's nothing new to re-match here.
             continue
 

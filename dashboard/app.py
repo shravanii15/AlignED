@@ -1,8 +1,8 @@
 """
-app.py -- AlignED dashboard (entry point)
+app.py: AlignED dashboard (entry point)
 
 What this file does, in plain terms:
-This is the front-facing part of the project -- the part a recruiter,
+This is the front-facing part of the project, the part a recruiter,
 hiring manager, or curious visitor would actually click through, rather
 than reading raw JSON files or console output. It's a Streamlit app,
 meaning it's a Python program that turns into a real interactive web
@@ -48,7 +48,7 @@ isn't duplicated across pages.
 
 Why Streamlit for this project:
 Streamlit turns a plain Python script into a web app with no separate
-frontend code, no JavaScript, and no build step -- ideal for a data
+frontend code, no JavaScript, and no build step, ideal for a data
 science/analytics portfolio piece where the point is showing real
 analysis, not demonstrating web development. It can also be published
 for free to a public URL (Streamlit Community Cloud), so this dashboard
@@ -59,18 +59,18 @@ How to run this locally:
     streamlit run app.py
 Then open the local URL it prints (usually http://localhost:8501).
 
-Page structure (see the sidebar -- grouped into 3 workflows, not one
+Page structure (see the sidebar, grouped into 3 workflows, not one
 flat list, so a visitor knows where to start):
 - Overview: project summary and headline numbers
 - Analyze: Program Explorer (pick a program AND a target role, see
   ranked, explained skill-gap recommendations for that combination) and
   Compare Programs (side-by-side, overall-market view)
 - Explore: Skill Coverage Heatmap, Skill Demand Trends, Role Groups, and
-  Course Finder -- supporting views over the underlying data
-- Personalize: Build Your Profile -- paste your own background, get a
+  Course Finder, supporting views over the underlying data
+- Personalize: Build Your Profile, paste your own background, get a
   personalized skill-gap + role-match report
 - Methodology: the "how this was built, and where it's genuinely
-  limited" page -- the kind of thing an interviewer would ask about
+  limited" page, the kind of thing an interviewer would ask about
   directly, answered up front instead of hidden.
 """
 
@@ -92,10 +92,10 @@ from utils.nav import (
     PAGE_METHODOLOGY, PAGE_PROGRAM_EXPLORER, PAGE_ROLE_GROUPS, PAGE_TRENDS,
 )
 
-st.set_page_config(page_title="AlignED -- Curriculum vs. Job Market Gap Analysis", page_icon="📊", layout="wide")
+st.set_page_config(page_title="AlignED: Curriculum vs. Job Market Gap Analysis", page_icon="📊", layout="wide")
 
 # Design system rewrite (redesign pass): a research-instrument aesthetic
-# -- generous whitespace, a restrained semantic color system, and text
+#, generous whitespace, a restrained semantic color system, and text
 # used as the primary visual language instead of icons/boxes/shadows.
 # Color roles are deliberate, not decorative:
 #   brand blue  = interactive / primary action
@@ -131,9 +131,9 @@ st.markdown(
     h1, h2, h3 { letter-spacing: -0.01em; }
 
     /* ---- Hero (Overview page): a real masthead, not another line of
-       body text -- this is deliberately the single largest, boldest
+       body text, this is deliberately the single largest, boldest
        thing on the page so it reads unmistakably as the product's name,
-       plus one short tagline. That's it -- no stacked kicker/title/
+       plus one short tagline. That's it, no stacked kicker/title/
        subtitle paragraphs before the visual content starts. ---- */
     .hero-wordmark {
         font-size: 2.6rem !important;
@@ -190,6 +190,11 @@ st.markdown(
     .gap-bar-role { background: var(--brand); }
     .gap-bar-value { width: 52px; text-align: right; font-size: 0.82rem !important; font-weight: 700 !important; color: var(--text) !important; flex-shrink: 0; }
 
+    /* Compare Programs: one skill + gap per row inside each program card. */
+    .compare-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.35rem 0; border-top: 1px solid var(--border); }
+    .compare-skill { font-size: 0.92rem !important; font-weight: 600 !important; color: var(--text) !important; }
+    .compare-gap { font-size: 0.9rem !important; font-weight: 800 !important; }
+
     /* ---- Big research-metric numbers (Overview's "THE DATASET"). ---- */
     .stat-block { text-align: left; }
     .stat-number { font-size: 2.1rem !important; font-weight: 800 !important; color: var(--text) !important; line-height: 1.1 !important; }
@@ -242,7 +247,7 @@ st.markdown(
     .sidebar-tagline { font-size: 0.76rem !important; color: #7B87A3 !important; margin-bottom: 1.4rem; }
 
     /* Hide the circle/dot indicator Streamlit renders for each radio
-       option -- it's the first child div inside the option's content
+       option, it's the first child div inside the option's content
        wrapper. Text weight + a left accent bar (below) communicate
        selection instead. */
     section[data-testid="stSidebar"] label[data-testid="stRadioOption"] > div > div:first-child {
@@ -269,7 +274,7 @@ st.markdown(
         color: #FFFFFF !important;
         font-weight: 700 !important;
     }
-    /* NOT position:fixed -- that took the footer out of the sidebar's
+    /* NOT position:fixed, that took the footer out of the sidebar's
        own layout flow entirely, so its text wrapped at the *viewport's*
        width instead of the sidebar's ~250px width and spilled out over
        the main content area. Normal flow (just placed after the nav
@@ -280,14 +285,14 @@ st.markdown(
 
     /* ---- Shared page header (utils/layout.py's page_header()): a
        thin bottom rule and large title instead of a filled colored
-       box -- reads as a document heading, not a UI chrome element. ---- */
+       box, reads as a document heading, not a UI chrome element. ---- */
     .page-header { border-bottom: 1px solid var(--border); padding-bottom: 0.9rem; margin-bottom: 0.5rem; }
     .page-header-icon { font-size: 1rem !important; opacity: 0.55; margin-right: 0.4rem; }
     .page-header-title { font-size: 1.9rem !important; font-weight: 800 !important; color: var(--text) !important; }
     .page-header-desc { color: var(--text-muted) !important; font-size: 0.95rem !important; margin: 0.5rem 0 1.3rem 0; line-height: 1.55 !important; max-width: 760px; }
 
     /* ---- Cards: used selectively (the analysis command-center, a gap
-       card, a signal panel) -- subtle border, no shadow-lift hover
+       card, a signal panel), subtle border, no shadow-lift hover
        animation, small border-radius. ---- */
     div[data-testid="stVerticalBlockBorderWrapper"] {
         border-radius: 8px !important;
@@ -348,7 +353,7 @@ pages_in_group = NAV_GROUPS[group_selection]
 if len(pages_in_group) > 1:
     # Guard: the page previously selected might belong to a DIFFERENT
     # group (e.g. a homepage card jump, or the visitor just switched
-    # groups manually) -- Streamlit's radio widget errors if its bound
+    # groups manually), Streamlit's radio widget errors if its bound
     # session-state value isn't among its current options, so fall back
     # to this group's first page instead of crashing.
     if st.session_state.get(NAV_PAGE_KEY) not in pages_in_group:

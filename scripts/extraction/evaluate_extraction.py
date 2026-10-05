@@ -5,7 +5,7 @@ What this script does, in plain terms:
 This is the script that actually answers the question this whole phase of
 the project exists to answer: "is the AI extractor (extract_llm.py) any
 better than a plain keyword scanner (extract_baseline.py)?" It's the
-single most important deliverable here -- "I built an AI extractor" is a
+single most important deliverable here, "I built an AI extractor" is a
 weak claim on its own, but "I built one and proved, on a hand-labeled
 gold set of 104 real course/job postings, that it beats a classical
 baseline by X points of F1" is a strong one. This script produces that X.
@@ -19,11 +19,11 @@ optional. We treat the union of all three as "the true set" for that item
 because it wasn't "essential," and we don't reward it more for essential
 vs. optional either. That's a deliberate simplification: the gold labels
 distinguish importance, but neither extractor in this project is asked to
-predict importance, only "is this relevant at all" -- so holding them to
+predict importance, only "is this relevant at all", so holding them to
 a finer-grained standard than what we asked them to produce wouldn't be a
 fair test.
 
-The metrics: precision, recall, F1 -- and why "micro-averaged":
+The metrics: precision, recall, F1, and why "micro-averaged":
 For each item we compare its predicted term set against its true term set
 (case-insensitive) and count:
   - true positives  (TP): predicted AND actually true
@@ -35,7 +35,7 @@ counts into one overall score:
     then average those 104 per-item scores.
   - "Micro-average": pool every TP/FP/FN from every item into one giant
     bucket first, then compute precision/recall once from the totals.
-We use MICRO-averaging here, and it's not just a coin flip -- it's the
+We use MICRO-averaging here, and it's not just a coin flip, it's the
 more standard and defensible choice for this kind of task, for two
 concrete reasons: (1) items with very few true skills (e.g. a one-line
 course blurb with just 2 true skills) would otherwise get the same vote
@@ -179,7 +179,7 @@ def main():
     llm_sets = load_predicted_sets(llm_predictions)
 
     # Sanity check: warn (don't crash) if either predictions file doesn't
-    # cover every gold-set item -- this can legitimately happen if
+    # cover every gold-set item, this can legitimately happen if
     # extract_llm.py was stopped partway through a long local-inference
     # run, and the user deserves to know her comparison might be
     # incomplete rather than getting a silently skewed number.

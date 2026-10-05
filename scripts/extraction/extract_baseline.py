@@ -2,7 +2,7 @@
 extract_baseline.py
 
 What this script does, in plain terms:
-This is our "dumb but honest" extractor -- the classical, non-AI baseline
+This is our "dumb but honest" extractor, the classical, non-AI baseline
 that the LLM extractor (extract_llm.py) has to beat in order for us to be
 able to claim "the AI approach is actually worth the extra cost/complexity."
 It does nothing clever: for each of the 104 gold-set items, it scans the
@@ -15,7 +15,7 @@ Because the whole point of this project phase is a *comparison*. Anyone
 can say "I built an AI extractor." A much stronger claim is "I built an
 AI extractor and proved, on a hand-labeled gold set, that it beats simple
 keyword matching by X points of F1." This script is what makes that
-second, stronger claim possible -- it's the yardstick, not the product.
+second, stronger claim possible, it's the yardstick, not the product.
 
 How the matching works:
 We look for each vocabulary term as a whole phrase inside the text,
@@ -33,12 +33,12 @@ What this baseline deliberately does NOT do:
 - No stemming, no plural-handling, no synonym recognition (e.g. it will
   not connect "JS" with "JavaScript" unless "JS" is itself a vocabulary
   term).
-- No understanding of context -- if the text mentions a term only in
+- No understanding of context, if the text mentions a term only in
   passing, or even in a negated sense ("no Python experience required"),
   the baseline still counts it as "found." This is exactly the kind of
   shallow behavior we expect the LLM to improve on, and is the whole
   reason the comparison is interesting.
-- No essential/optional distinction -- the gold-standard labels split
+- No essential/optional distinction, the gold-standard labels split
   skills into essential vs. optional, but a keyword scanner has no way to
   judge importance, so this script only reports "found in text" vs. "not
   found."
@@ -59,7 +59,7 @@ def build_combined_pattern(vocabulary_terms):
     """Compile ALL vocabulary terms into a single regex with alternation,
     instead of one separate compiled pattern per term. This is functionally
     identical to calling build_match_pattern() + .search() once per term --
-    same boundary rules, same case-insensitivity -- but roughly 10x faster
+    same boundary rules, same case-insensitivity, but roughly 10x faster
     in practice, because Python's regex engine only has to scan across the
     text once per document instead of once per document *per vocabulary
     term* (with ~1,600 terms, that's the difference between ~1,600 passes
@@ -97,7 +97,7 @@ def build_match_pattern(term):
 
     We can't just use Python's \\b ("word boundary") marker on both sides
     of the term, because \\b is defined in terms of "word characters"
-    (letters, digits, underscore) -- it breaks down for vocabulary terms
+    (letters, digits, underscore), it breaks down for vocabulary terms
     that start or end with symbols, e.g. "C++", "C#", "Node.js", or
     ".NET". For "C++", a trailing \\b would actually land right after the
     "C" (since neither "+" character counts as a word character), so
@@ -131,7 +131,7 @@ def main():
     print(f"  -> {len(vocabulary)} vocabulary terms loaded.")
 
     # Longer, more specific multi-word terms are compiled the same way as
-    # short ones -- regex boundary matching already prevents a short term
+    # short ones, regex boundary matching already prevents a short term
     # from accidentally matching inside a longer word, so no extra
     # "longest match wins" sorting is needed here. We do de-duplicate by
     # normalized term first though, in case the taxonomy files ever ended

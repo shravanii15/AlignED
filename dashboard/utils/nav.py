@@ -1,5 +1,5 @@
 """
-utils/nav.py -- shared navigation labels and the session-state keys that
+utils/nav.py: shared navigation labels and the session-state keys that
 drive the sidebar's two-tier navigation (group, then page within group).
 
 Why this exists as its own module: app.py owns the actual page-function
@@ -7,13 +7,13 @@ dispatch (it has to import every render_* function), but the Overview
 page's "jump straight to X" action cards also need to reference the
 exact same group/page label strings so clicking a card actually lands on
 the right page. Keeping the label strings here as named constants --
-imported by both app.py and sections/overview.py -- means they can never
+imported by both app.py and sections/overview.py, means they can never
 silently drift out of sync with each other (a typo in one file would
 just be a broken nav link with no error), instead of hand-typing the
 same literal strings in two different files.
 """
 
-# Sidebar section (group) labels. Redesign pass: no emojis at all -- a
+# Sidebar section (group) labels. Redesign pass: no emojis at all, a
 # research-tool sidebar uses small-caps text labels (styled in app.py's
 # CSS), not icons, to read as a serious analytics product rather than a
 # student Streamlit app. "Explore" was renamed to "Market Intelligence"
@@ -48,7 +48,7 @@ NAV_PAGE_KEY = "nav_page_selection"
 
 # Program Explorer's own two dropdowns are ALSO bound to session-state keys
 # (see sections/program_explorer.py), so the Overview page's "Start an
-# analysis" form can pre-fill them before jumping there -- same pattern as
+# analysis" form can pre-fill them before jumping there, same pattern as
 # the nav keys above: set the state, let Streamlit's normal
 # rerun-after-interaction cycle carry it into the widget on the next render.
 EXPLORER_PROGRAM_KEY = "explorer_program_label"

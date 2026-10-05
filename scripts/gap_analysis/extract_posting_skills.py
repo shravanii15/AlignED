@@ -25,7 +25,7 @@ read the file quickly. Reading directly from the mounted project folder
 was slow enough to time out, so this script copies the CSV to fast local
 disk first, then parses it there. (For the record: the file itself turned
 out to be about 124,000 real postings, not the ~3.3 million raw physical
-lines a naive `wc -l` count suggested -- the difference is exactly those
+lines a naive `wc -l` count suggested, the difference is exactly those
 embedded newlines splitting single logical rows across multiple physical
 lines.)
 

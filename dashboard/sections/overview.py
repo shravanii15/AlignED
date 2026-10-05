@@ -1,7 +1,7 @@
-"""sections/overview.py -- the Overview page.
+"""sections/overview.py: the Overview page.
 
 Full redesign pass (not a patch): a light, editorial hero instead of a
-filled blue banner; a live "THE SIGNAL" example -- the single largest
+filled blue banner; a live "THE SIGNAL" example, the single largest
 real gap in the database right now, pulled from the actual data rather
 than hardcoded, so the homepage demonstrates the product instead of just
 describing it; a command-center style analysis form; a lightweight text
@@ -17,19 +17,20 @@ from utils.nav import (
     jump_to, jump_to_program_explorer,
 )
 from sections.program_explorer import OVERALL_MARKET_LABEL
+from utils.formatting import program_label
 
 
 def render_overview():
     # ---- Hero ----
     # Cut down hard from the first redesign pass: that version stacked
     # FOUR separate text blocks (wordmark, kicker, title, subtitle)
-    # before anything visual appeared -- it read as a writeup, not a
+    # before anything visual appeared, it read as a writeup, not a
     # product. This is now: one unmistakable masthead, one short tagline,
     # then straight into a real visual (the Signal panel below).
     st.markdown('<p class="hero-wordmark">AlignED</p>', unsafe_allow_html=True)
     st.markdown(
-        '<p class="hero-tagline">Curriculum &times; Labor-Market Intelligence -- see where a graduate '
-        'curriculum diverges from real job-market demand, with statistical evidence.</p>',
+        '<p class="hero-tagline">Curriculum &times; Labor-Market Intelligence. See where a graduate '
+        'curriculum diverges from job-market demand, with statistical evidence.</p>',
         unsafe_allow_html=True,
     )
     st.markdown("<br>", unsafe_allow_html=True)
@@ -55,9 +56,9 @@ def render_overview():
         cov_pct = sig["program_coverage_rate"] * 100
         dem_pct = sig["market_demand_rate"] * 100
         max_pct = max(cov_pct, dem_pct, 1)
-        st.markdown('<p class="section-eyebrow">The Signal -- a Real Example, Live From the Database</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-eyebrow">The Signal: a Live Example From the Database</p>', unsafe_allow_html=True)
         with st.container(border=True):
-            st.markdown(f'<p class="signal-eyebrow">{sig["university"]} -- {sig["program_name"]}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class="signal-eyebrow">{sig["university"]} · {sig["program_name"]}</p>', unsafe_allow_html=True)
             st.markdown(f'<p class="signal-skill-name">{sig["skill_name"]}</p>', unsafe_allow_html=True)
             st.markdown(
                 f"""
@@ -80,7 +81,7 @@ def render_overview():
             )
             st.button(
                 "Explore this analysis →", key="signal_explore_btn",
-                on_click=jump_to_program_explorer, args=(f"{sig['university']} -- {sig['program_name']}", OVERALL_MARKET_LABEL),
+                on_click=jump_to_program_explorer, args=(program_label(sig['university'], sig['program_name']), OVERALL_MARKET_LABEL),
             )
 
     st.markdown("<br>", unsafe_allow_html=True)
@@ -89,7 +90,7 @@ def render_overview():
     st.markdown('<p class="section-eyebrow">Explore a Curriculum</p>', unsafe_allow_html=True)
     with st.container(border=True):
         programs_df = run_query("SELECT program_id, university, program_name FROM programs ORDER BY university")
-        programs_df["label"] = programs_df["university"] + " -- " + programs_df["program_name"]
+        programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]
         clusters_df = run_query(
             """
             SELECT cluster_id, role_label FROM role_clusters
@@ -191,7 +192,7 @@ def render_overview():
     )
     st.caption(
         "An AI extraction method was benchmarked against a classical keyword baseline on a 104-item hand-labeled "
-        "test set (AI won on F1, 0.400 vs. 0.364) -- full reasoning on the Methodology page."
+        "test set (LLM F1 0.400 vs. 0.364). Details on the Methodology page."
     )
 
     st.markdown("---")

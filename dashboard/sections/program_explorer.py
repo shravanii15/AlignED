@@ -1,4 +1,4 @@
-"""sections/program_explorer.py -- pick a program AND a target role,
+"""sections/program_explorer.py: pick a program AND a target role,
 see its ranked, statistically significant skill-gap recommendations for
 that specific combination, with Excel/PDF export and a per-skill
 evidence drill-down.
@@ -14,7 +14,7 @@ numbers relabeled.
 
 Every recommendation shown here can be expanded into its underlying
 evidence (raw counts, p-value, FDR-adjusted q-value, and the exact
-gap+trend math behind its priority ranking) -- the point being that
+gap+trend math behind its priority ranking), the point being that
 nothing on this page should require the visitor to just trust a number;
 they can always see exactly where it came from.
 """
@@ -26,7 +26,7 @@ from services.database import run_query
 from services.reports_excel import build_excel_report
 from services.reports_pdf import build_pdf_report
 from utils.charts import TIER_COLOR_MAP, apply_chart_theme
-from utils.formatting import safe_filename
+from utils.formatting import program_label, safe_filename
 from utils.layout import page_header
 from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY
 
@@ -36,26 +36,26 @@ FALLING_PENALTY = 0.7  # kept in sync with scripts/gap_analysis/generate_recomme
 
 
 def render_program_explorer():
-    page_header("📋", "Program Explorer", "Pick a program and a target role to see ranked, statistically significant skill gaps -- and what to do about them.")
+    page_header("", "Program Explorer", "Pick a program and a target role to see ranked, statistically significant skill gaps and what to do about them.")
     st.caption(
-        "Skill taxonomy: U.S. Department of Labor O\\*NET -- a real, external standard, not an invented list. "
+        "Skill taxonomy: U.S. Department of Labor O\\*NET. "
         "\"Coverage\" and \"demand\" below are text-mention rates in course descriptions and job postings, not "
-        "measures of instructional depth or job requirement strength -- see Methodology for the full reasoning."
+        "measures of instructional depth or job requirement strength. See Methodology."
     )
 
     programs_df = run_query("SELECT program_id, university, program_name, tier FROM programs ORDER BY university")
-    programs_df["label"] = programs_df["university"] + " -- " + programs_df["program_name"]
+    programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]
 
     # Bound to a session-state key (rather than a bare st.selectbox) so the
     # Overview page's "Start an analysis" form can pre-select a program
-    # before jumping here -- see utils/nav.py's jump_to_program_explorer().
+    # before jumping here, see utils/nav.py's jump_to_program_explorer().
     if EXPLORER_PROGRAM_KEY not in st.session_state or st.session_state[EXPLORER_PROGRAM_KEY] not in list(programs_df["label"]):
         st.session_state[EXPLORER_PROGRAM_KEY] = programs_df["label"].iloc[0]
     selected_label = st.selectbox("Choose a program", programs_df["label"], key=EXPLORER_PROGRAM_KEY)
     selected = programs_df[programs_df["label"] == selected_label].iloc[0]
     program_id = int(selected["program_id"])
 
-    # Only real, coherent role clusters are offered here -- "Mixed" and
+    # Only real, coherent role clusters are offered here, "Mixed" and
     # "Near-duplicate" clusters were excluded from gap analysis entirely
     # (see compute_gap_scores.py), so there's no per-role data for them.
     clusters_df = run_query(
@@ -88,7 +88,7 @@ def render_program_explorer():
 
     course_count = run_query("SELECT COUNT(*) AS n FROM courses WHERE program_id = ?", (program_id,)).iloc[0]["n"]
     # Only show delivery mode (a verifiable fact about the program), never
-    # the "top-ranked"/"mid-tier" part of the tier field -- that's an
+    # the "top-ranked"/"mid-tier" part of the tier field, that's an
     # unsourced prestige classification with no documented ranking
     # methodology behind it, and displaying it next to statistical results
     # would make this dashboard look like it's silently vouching for one
@@ -98,16 +98,15 @@ def render_program_explorer():
 
     # Corpus-size transparency: course counts range from 5 (a
     # representative sample) to 295 (a full catalog) across the 13
-    # programs in this dataset -- treating all of them as equally
+    # programs in this dataset, treating all of them as equally
     # complete "curricula" would overstate what a small corpus can
     # actually show. Flag it plainly when the corpus is small rather
     # than letting the statistics speak as if the input were uniform.
     if course_count < 30:
         st.info(
-            f"**Small course corpus** -- this analysis uses {course_count} course descriptions, a "
-            "representative sample rather than a complete degree catalog. Statistical results here should "
-            "be read with more caution than for programs represented by a larger course corpus (see "
-            "Methodology for how course data was collected for each program).",
+            f"**Small course corpus:** this analysis uses {course_count} course descriptions, a sample rather than a "
+            "complete degree catalog. Read the results with more caution than for programs with a larger corpus "
+            "(see Methodology).",
             icon="⚠️",
         )
 
@@ -131,7 +130,7 @@ def render_program_explorer():
     # True significant-gap count, queried directly from gap_scores rather
     # than taken from len(recs_df). Bug this fixes: recommendations is
     # capped at MAX_RECOMMENDATIONS_PER_PROGRAM (10) per program+scope in
-    # generate_recommendations.py, but gap_scores is NOT capped -- so a
+    # generate_recommendations.py, but gap_scores is NOT capped, so a
     # program with, say, 40 significant gaps only ever gets 10
     # recommendation rows. Using len(recs_df) as "significant gaps found"
     # was quietly wrong for every program with more than 10 gaps.
@@ -151,7 +150,7 @@ def render_program_explorer():
     dl_col1, dl_col2 = st.columns(2)
     report_title_suffix = "" if cluster_id is None else f" (target role: {scope_display_name})"
     with dl_col1:
-        # A real formatted Excel file, not a plain CSV -- CSV is just raw
+        # A real formatted Excel file, not a plain CSV, CSV is just raw
         # comma-separated text, so it fundamentally cannot look
         # "professional" no matter how the columns are arranged (no
         # colors, no bold header, no cell shading). Excel can, while
@@ -179,7 +178,7 @@ def render_program_explorer():
     # Alignment snapshot: real counts only, deliberately NOT a single
     # invented "alignment %" score. This project's whole stance is that
     # gap scoring is a text-coverage signal, not a certified measure of
-    # curriculum quality -- collapsing that into one made-up percentage
+    # curriculum quality, collapsing that into one made-up percentage
     # would undercut the honesty the rest of the dashboard argues for. So
     # this snapshot shows what was actually measured: how much data went
     # in, and how many statistically significant gaps came out.
@@ -194,19 +193,19 @@ def render_program_explorer():
         st.caption(
             f"Against {scope_display_name}, {true_gap_count} skills showed a statistically significant coverage gap "
             f"(after FDR correction). Only the top {len(recs_df)}, ranked by priority signal, are shown below and in "
-            "the exported reports -- a program can have more significant gaps than are practical to list individually."
+            "the exported reports."
         )
     else:
         st.caption(
             f"Against {scope_display_name}, {true_gap_count} skills showed a statistically significant coverage gap "
             "(after FDR correction) out of the skills this program's courses and this scope's postings both touched on. "
-            "A program can genuinely cover many more skills than appear below -- only significant gaps are listed."
+            "Only significant gaps are listed."
         )
 
     st.markdown("---")
     # Reworded from "High/Medium/Low priority" (which reads as an
     # externally validated importance ranking) to "largest observed
-    # gaps" -- the tiers are just a rank-based cut (top 3 / next 4 /
+    # gaps", the tiers are just a rank-based cut (top 3 / next 4 /
     # rest) of gap size adjusted by demand trend, not a claim that a
     # 'high' item objectively matters more in some absolute sense.
     tier_section_titles = {
@@ -215,8 +214,8 @@ def render_program_explorer():
         "low": "Smaller, still-significant gaps",
     }
     st.caption(
-        "Grouped by priority signal (gap size, adjusted for demand trend) -- a ranking within THIS program+scope's "
-        "own results, not an externally validated importance score. See each item's evidence for the exact math."
+        "Grouped by priority signal (gap size, adjusted for demand trend). This ranks results within this program and "
+        "scope only; it is not an externally validated importance score."
     )
     for tier in ["high", "medium", "low"]:
         tier_df = recs_df[recs_df["priority_tier"] == tier]
@@ -234,7 +233,7 @@ def render_program_explorer():
                 st.write(row["rationale"])
 
                 # Gap visualization: curriculum coverage vs. market demand,
-                # side by side -- makes the gap immediately visible instead
+                # side by side, makes the gap immediately visible instead
                 # of requiring the visitor to compare two percentages by eye.
                 st.markdown(
                     f"""
@@ -255,7 +254,7 @@ def render_program_explorer():
                 )
 
                 # Evidence drill-down, as a compact structured card instead
-                # of a wall of markdown bullets -- exact counts, raw and
+                # of a wall of markdown bullets, exact counts, raw and
                 # FDR-corrected significance, and the priority-score math,
                 # so nothing here has to just be taken on faith.
                 x_courses = round(row["program_coverage_rate"] * course_count)
@@ -281,8 +280,8 @@ def render_program_explorer():
                     )
                     st.caption(
                         f"Priority signal = gap ({row['gap_value']*100:.1f} pts) x trend modifier ({trend_desc}) "
-                        f"= {row['priority_score']*100:.1f}. Used only to rank results within this program+scope -- "
-                        f"not a validated measure of real-world importance."
+                        f"= {row['priority_score']*100:.1f}. Used only to rank results within this program and scope, "
+                        f"not as a measure of real-world importance."
                     )
 
     st.markdown("---")

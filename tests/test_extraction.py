@@ -2,7 +2,7 @@
 test_extraction.py
 
 Tests for the keyword-matching logic in extract_baseline.py and
-extract_common.py -- the fast, non-AI extraction method used across the
+extract_common.py, the fast, non-AI extraction method used across the
 whole project at full scale (courses, postings, trend detection). The
 trickiest part of this code is the word-boundary handling for symbols
 like "C++" and "C#" (documented at length in build_match_pattern's
@@ -26,7 +26,7 @@ def test_java_does_not_match_inside_javascript():
 def test_symbol_terms_match_correctly():
     """C++ and C# contain regex-special and non-word characters, which
     is exactly why build_match_pattern() doesn't use Python's plain \\b
-    word-boundary marker (see its docstring) -- these two cases are the
+    word-boundary marker (see its docstring), these two cases are the
     reason that custom boundary logic exists at all."""
     cpp_pattern = build_match_pattern("C++")
     assert cpp_pattern.search("5 years of C++ experience") is not None
@@ -57,7 +57,7 @@ def test_extract_terms_from_text_finds_all_present_terms():
 def test_combined_pattern_matches_same_as_individual_patterns():
     """The combined-regex approach (build_combined_pattern) was built
     purely as a speed optimization over the original one-pattern-per-term
-    approach (build_match_pattern + extract_terms_from_text) -- it must
+    approach (build_match_pattern + extract_terms_from_text), it must
     find the exact same matches, just faster. This test is the guarantee
     that optimization didn't quietly change the results."""
     terms = ["Python", "Docker", "C++", "Git"]

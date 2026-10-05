@@ -2,11 +2,11 @@
 extract_llm.py
 
 What this script does, in plain terms:
-This is our AI extractor -- the counterpart to extract_baseline.py's
+This is our AI extractor, the counterpart to extract_baseline.py's
 plain keyword scanning. Instead of mechanically checking "does this exact
 phrase appear in the text," it sends each of the 104 gold-set items to a
 locally-running large language model (Ollama, running llama3.1:8b on the
-user's own machine -- free, no API key, nothing sent over the internet)
+user's own machine, free, no API key, nothing sent over the internet)
 and asks it to actually *read and understand* the text, then pick out
 which skills/knowledge areas/technologies from our O*NET vocabulary are
 genuinely relevant.
@@ -14,12 +14,12 @@ genuinely relevant.
 Why this can plausibly do better than the baseline:
 A keyword scanner has no idea that a course about "hacking C programs and
 Unix binaries" is really about "Programming" and "Computers and
-Electronics" unless those exact words appear -- it also has no way to
+Electronics" unless those exact words appear, it also has no way to
 tell the difference between a real requirement and a passing mention, or
 to recognize a paraphrase (e.g. "building software using an agile
 process" implying "Software Development"). An LLM can, in principle, do
 both of those things. Whether it *actually* does better in practice is
-exactly what evaluate_extraction.py measures -- we don't just assert it,
+exactly what evaluate_extraction.py measures, we don't just assert it,
 we prove it against the hand-labeled gold set.
 
 Grounding rule (the most important design decision in this script), and
@@ -30,17 +30,17 @@ prompt, with strict instructions to only pick from that list verbatim.
 That's a defensible design on paper, but in practice, on a laptop-grade
 CPU-only machine (no dedicated GPU), it made every prompt so large that
 the model spent most of its time just reading the vocabulary before it
-could even start reasoning about the actual course/posting text -- and
+could even start reasoning about the actual course/posting text, and
 in real testing, that caused nearly every one of the 104 requests to
 time out at 120 seconds.
 
 The fix: we flip the order of operations. Now the model reads ONLY the
-short text and answers in its own words -- a small, fast prompt with no
+short text and answers in its own words, a small, fast prompt with no
 giant list attached. THEN, back in plain Python (no AI, no network, near-
 instant), we take whatever terms the model said and match each one back
 to our real O*NET vocabulary using fuzzy_match_term() from
 extract_common.py. A term that doesn't match anything real closely
-enough gets dropped, exactly like before -- we still never trust the
+enough gets dropped, exactly like before, we still never trust the
 model's word for it, we just moved the grounding check from "inside the
 prompt" to "after the response," which is both faster and, if anything,
 more robust (an LLM asked to search a 1,600-item list by hand is prone to
@@ -50,11 +50,11 @@ job better than the model can).
 A note on things we could not directly test:
 This script talks to Ollama at http://localhost:11434, a server that only
 exists on the *user's own machine* once she has Ollama installed and the
-llama3.1:8b model pulled -- the sandbox this script was written in has no
+llama3.1:8b model pulled, the sandbox this script was written in has no
 network access to anyone's localhost, so it was never possible to run
 this end-to-end here (this is the same kind of limitation noted in
 fetch_onet_taxonomy.py for the O*NET API). The request/response shape
-below was NOT guessed -- it was confirmed by reading Ollama's official
+below was NOT guessed, it was confirmed by reading Ollama's official
 API reference (https://github.com/ollama/ollama/blob/main/docs/api.md),
 specifically the POST /api/generate endpoint, its "format" parameter,
 and the "stream": false response shape (a single JSON object whose
@@ -93,7 +93,7 @@ MODEL_NAME = "llama3.2:3b"
 REQUEST_TIMEOUT_SECONDS = 90
 
 # A short pause between requests so we don't hammer the local server with
-# back-to-back requests the instant one finishes -- mirrors the polite
+# back-to-back requests the instant one finishes, mirrors the polite
 # REQUEST_DELAY_SECONDS pattern used in fetch_onet_taxonomy.py and
 # fetch_esco_taxonomy.py for public APIs, even though here we're the only
 # ones "sharing" this server with ourselves.
@@ -102,8 +102,8 @@ REQUEST_DELAY_SECONDS = 0.3
 # We do NOT ask Ollama for schema-constrained JSON output. In real
 # testing on this project, Ollama's "format": <JSON schema> mode (grammar-
 # constrained, token-by-token decoding) was dramatically slower than plain
-# generation on this machine -- slow enough to time out almost every
-# request -- while a manual, unconstrained "ollama run" test answered in
+# generation on this machine, slow enough to time out almost every
+# request, while a manual, unconstrained "ollama run" test answered in
 # about 15 seconds. So instead we ask for a simple, easy-to-parse plain-
 # text format (one term per line) and parse it loosely in Python, which
 # is both faster and, going by that manual test, actually reliable.
@@ -111,7 +111,7 @@ REQUEST_DELAY_SECONDS = 0.3
 
 def build_prompt(text):
     """Build a short, fast prompt for one gold-set item. No vocabulary is
-    included here on purpose (see the module docstring for why) -- the
+    included here on purpose (see the module docstring for why), the
     model just names what it recognizes, and matching those names back to
     our real taxonomy happens afterward in normalize_predictions()."""
     return (
@@ -127,7 +127,7 @@ def build_prompt(text):
         "mention.\n\n"
         "TEXT:\n"
         f"{text}\n\n"
-        "Respond with ONLY a plain list, one term per line, nothing else -- "
+        "Respond with ONLY a plain list, one term per line, nothing else, "
         "no numbering, no bullets, no extra commentary. For example:\n"
         "Python\n"
         "Machine Learning\n"
@@ -138,7 +138,7 @@ def build_prompt(text):
 
 def call_ollama(prompt):
     """Send one request to the local Ollama server and return the raw
-    text the model produced (plain text, not JSON -- see the module
+    text the model produced (plain text, not JSON, see the module
     docstring for why we dropped the JSON-schema "format" option)."""
     payload = {
         "model": MODEL_NAME,
@@ -166,7 +166,7 @@ def parse_plain_text_response(raw_response):
     assuming the model obeyed exactly. Lines that are empty, or that are
     just the word "None" (our own instruction for "nothing applies"), are
     skipped. Real grounding/validation still happens afterward in
-    normalize_predictions() -- this function's only job is turning loose
+    normalize_predictions(), this function's only job is turning loose
     text into a list of strings to check."""
     terms = []
     for line in raw_response.splitlines():
@@ -186,7 +186,7 @@ def normalize_predictions(raw_terms, vocabulary, normalized_lookup):
     not constrained to our vocabulary) and match each one back to a real
     O*NET vocabulary entry using fuzzy_match_term() from
     extract_common.py. A term with no sufficiently close match is
-    dropped, not force-fit -- we still never trust the model's word for
+    dropped, not force-fit, we still never trust the model's word for
     it, we just do the grounding check here instead of inside the prompt
     (see the module docstring for why). Returns the kept, grounded
     predictions plus a count of how many raw terms didn't match anything
@@ -217,7 +217,7 @@ def load_checkpoint():
     restart) can pick up where it left off instead of starting over from
     item 1. Returns a dict of {item_id: result}, empty if no checkpoint
     file exists yet or it can't be read (a corrupted/partial file from a
-    hard interruption shouldn't crash the whole script -- we just treat
+    hard interruption shouldn't crash the whole script, we just treat
     it as "no checkpoint" and start fresh)."""
     if not os.path.exists(OUTPUT_PATH):
         return {}
@@ -233,7 +233,7 @@ def save_checkpoint(results_by_id):
     """Write the current progress to disk immediately. Called after every
     single item (not just at the very end) specifically because local
     LLM runs on a laptop can degrade or get interrupted partway through a
-    104-item run -- losing an hour of progress to one bad request would
+    104-item run, losing an hour of progress to one bad request would
     be a real cost, not just an inconvenience."""
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
@@ -256,11 +256,11 @@ def main():
         item_id
         for item_id, entry in results_by_id.items()
         # A previously "failed" item (the Ollama call itself timed out or
-        # errored) is deliberately NOT counted as done -- we want to
+        # errored) is deliberately NOT counted as done, we want to
         # retry those automatically on the next run. But an item where
         # the CALL succeeded and we have the model's raw_terms saved IS
         # counted as done, even if predicted_skills ended up empty after
-        # matching -- there's no need to burn another slow LLM call just
+        # matching, there's no need to burn another slow LLM call just
         # to re-derive an answer we already have; a *matching* problem
         # gets fixed by re-running the matching step alone (see
         # renormalize.py), not by asking the model again.
@@ -294,7 +294,7 @@ def main():
 
         # Wrap each call individually so one slow/failed item (a timeout,
         # a malformed response, Ollama not running yet, etc.) can never
-        # kill the whole 104-item run -- matching the try/except-per-item
+        # kill the whole 104-item run, matching the try/except-per-item
         # pattern used throughout fetch_onet_taxonomy.py and
         # fetch_esco_taxonomy.py.
         try:
@@ -330,7 +330,7 @@ def main():
             "raw_terms": raw_terms,
             "call_succeeded": True,
         }
-        # Save after every single item, not just at the end -- see
+        # Save after every single item, not just at the end, see
         # save_checkpoint()'s docstring for why this matters for a long,
         # locally-run process like this one.
         save_checkpoint(results_by_id)
@@ -349,7 +349,7 @@ def main():
         print(
             f"\n{len(still_failed)} item(s) still have no successful "
             f"prediction: {', '.join(sorted(still_failed))}\n"
-            f"Just run this script again -- it will automatically skip "
+            f"Just run this script again, it will automatically skip "
             f"everything that already succeeded and only retry these."
         )
     print("\nDone.")

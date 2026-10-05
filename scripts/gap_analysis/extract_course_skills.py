@@ -4,8 +4,8 @@ extract_course_skills.py
 What this script does, in plain terms:
 Runs our fast, non-AI keyword matcher (the same logic proven out in
 extract_baseline.py, reused here rather than copied) across every one of
-the 1,378 real course descriptions in the database -- not just the small
-104-item gold set -- and records which O*NET skills/knowledge/technologies
+the 1,378 real course descriptions in the database, not just the small
+104-item gold set, and records which O*NET skills/knowledge/technologies
 each course appears to cover. Results are written into the `extractions`
 table, tagged method='baseline_keyword', so later steps (gap scoring) can
 just query the database instead of re-parsing text.
@@ -18,7 +18,7 @@ use the validated-but-slower method for accuracy proof, use the
 fast-and-scalable method for full-corpus analysis. See the progress log
 for the full reasoning.
 
-This script is idempotent -- it clears out any previous 'course' +
+This script is idempotent, it clears out any previous 'course' +
 'baseline_keyword' extractions before inserting fresh ones, so it can be
 re-run safely any time the course data changes.
 """

@@ -1,7 +1,7 @@
 """
 test_recommendations.py
 
-Tests for build_rationale() in generate_recommendations.py -- the
+Tests for build_rationale() in generate_recommendations.py, the
 function that turns raw numbers into the plain-English sentence shown
 for every recommendation in the dashboard and PDF/Excel reports. Since
 this text is user-facing, these tests check that the right numbers
@@ -41,7 +41,7 @@ def test_falling_trend_adds_downward_language():
 
 def test_no_trend_label_does_not_falsely_claim_a_trend():
     """If there's no significant trend, the rationale must not claim one
-    -- it should say plainly that no trend was detected, not silently
+   , it should say plainly that no trend was detected, not silently
     omit the topic (which could read as implying a trend either way)."""
     text = build_rationale(
         skill_name="Git", coverage_rate=0.0, demand_rate=0.07,
@@ -54,7 +54,7 @@ def test_no_trend_label_does_not_falsely_claim_a_trend():
 
 def test_default_scope_reads_as_overall_market():
     """scope_label defaults to 'Overall market' when not passed, so
-    existing callers (and this test) keep working -- the rationale
+    existing callers (and this test) keep working, the rationale
     should read as a generic market comparison, not name a specific role."""
     text = build_rationale(
         skill_name="SQL", coverage_rate=0.1, demand_rate=0.5,
@@ -66,7 +66,7 @@ def test_default_scope_reads_as_overall_market():
 def test_role_specific_scope_names_the_role_in_the_rationale():
     """When a recommendation is generated against a specific role cluster
     (not the overall market), the rationale text must say so explicitly
-    -- a reader shouldn't have to guess whether 'the market' means every
+   , a reader shouldn't have to guess whether 'the market' means every
     posting or just this one target role."""
     text = build_rationale(
         skill_name="AWS", coverage_rate=0.02, demand_rate=0.31,

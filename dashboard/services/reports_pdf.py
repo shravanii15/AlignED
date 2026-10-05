@@ -1,12 +1,12 @@
 """
-services/reports_pdf.py -- branded PDF exports (program-level and
+services/reports_pdf.py: branded PDF exports (program-level and
 personalized profile reports).
 
 Both reports share the same AlignEDReport base class (so every page
 gets a consistent branded footer for free) and the same general layout
 style: a navy title block, an executive summary, a real data table, an
 "explained + evidence" callout section, and a closing methodology/
-sources note -- built to look like something you'd actually hand to a
+sources note, built to look like something you'd actually hand to a
 curriculum committee or keep for yourself, not a plain text dump, and
 auditable rather than just a list of numbers to trust blindly.
 """
@@ -58,10 +58,10 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
     pdf.set_xy(pdf.l_margin, 8)
     pdf.set_text_color(255, 255, 255)
     pdf.set_font("Helvetica", "B", 18)
-    pdf.cell(0, 10, "AlignED -- Curriculum Gap Report")
+    pdf.cell(0, 10, "AlignED: Curriculum Gap Report")
     pdf.set_xy(pdf.l_margin, 20)
     pdf.set_font("Helvetica", "", 11)
-    pdf.cell(0, 8, clean(f"{university} -- {program_name}"))
+    pdf.cell(0, 8, clean(f"{university}, {program_name}"))
     pdf.set_y(40)
 
     n_high = (recs_df["priority_tier"] == "high").sum()
@@ -75,20 +75,20 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
     gap_count = true_gap_count if true_gap_count is not None else len(recs_df)
     capped = gap_count > len(recs_df)
 
-    # Executive summary -- a plain-English paragraph stating exactly what
+    # Executive summary, a plain-English paragraph stating exactly what
     # this report measures and how, so it stands on its own even if
     # printed and handed to someone who's never seen the dashboard.
     write_line("Executive summary", size=13, bold=True, color=(30, 58, 138))
     write_line(
         clean(
-            f"This report compares {university} -- {program_name}'s curriculum ({course_count} courses) "
+            f"This report compares the {program_name} program at {university} ({course_count} courses) "
             f"against {scope_display_name} ({postings_note}). Of the skills tested, {gap_count} showed a "
             f"statistically significant gap after a Benjamini-Hochberg false discovery rate (FDR) correction "
-            f"for running many comparisons at once -- meaning these differences are unlikely to be due to "
+            f"for running many comparisons at once, so these differences are unlikely to be due to "
             f"chance alone." + (f" The {len(recs_df)} highest-priority gaps are detailed below; the report "
             f"doesn't list all {gap_count} individually." if capped else "") +
             f" \"Coverage\" and \"demand\" measure how often a skill's name appears in course "
-            f"descriptions and job postings respectively -- a text-coverage signal, not a direct measurement "
+            f"descriptions and job postings respectively. This is a text-coverage signal, not a direct measurement "
             f"of instructional depth or strict job requirements. Full methodology on the live dashboard."
         ),
         size=9.5,
@@ -102,12 +102,12 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
     pdf.ln(6)
     pdf.set_x(pdf.l_margin)
 
-    # A real data table instead of repeated paragraphs -- far quicker to
+    # A real data table instead of repeated paragraphs, far quicker to
     # scan, and it's what a curriculum committee would actually expect.
     table_title = f"Top {len(recs_df)} ranked gap signals" if capped else "All significant gaps"
     write_line(table_title, size=13, bold=True, color=(30, 58, 138))
     pdf.set_font("Helvetica", "", 9)
-    # Reset fill color to white before the table -- otherwise the navy
+    # Reset fill color to white before the table, otherwise the navy
     # fill_color left over from the header banner above silently bleeds
     # into the table's data-row backgrounds, making the text unreadable
     # (caught by actually rendering the PDF to an image and looking at
@@ -132,7 +132,7 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
             data_row.cell(f"{row['q_value']:.4f}" if "q_value" in row and row["q_value"] is not None else "--")
 
     # A short, readable "top priorities" callout with genuinely varied
-    # phrasing per row -- reusing the exact same sentence template three
+    # phrasing per row, reusing the exact same sentence template three
     # times in a row (as the raw database rationale does) reads robotic
     # and repetitive once you actually read them back to back. Each item
     # also gets its exact evidence (counts + p/q-value), matching what
@@ -148,7 +148,7 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
         }.get(row["trend_label"], "")
         templates = [
             f"{skill} shows up in {dem:.0f}% of job postings we sampled, but almost none of this program's courses ({cov:.0f}%) cover it.{trend_bit}",
-            f"Employers ask for {skill} constantly -- {dem:.0f}% of postings -- yet the curriculum barely touches it ({cov:.0f}% coverage).{trend_bit}",
+            f"Employers ask for {skill} constantly ({dem:.0f}% of postings), yet the curriculum barely touches it ({cov:.0f}% coverage).{trend_bit}",
             f"A clear blind spot: {skill} is expected in {dem:.0f}% of real postings, but this program teaches it in only {cov:.0f}% of its courses.{trend_bit}",
         ]
         return templates[variant % len(templates)]
@@ -176,7 +176,7 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
         pdf.ln(3)
         pdf.set_x(pdf.l_margin)
 
-    # Closing methodology/sources note -- so this PDF is honest and
+    # Closing methodology/sources note, so this PDF is honest and
     # self-contained even printed on its own, without requiring the
     # reader to already know how AlignED works.
     pdf.ln(4)
@@ -187,7 +187,7 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
             "Skill taxonomy: U.S. Department of Labor O*NET. Significance: two-proportion z-test per skill, "
             "Benjamini-Hochberg FDR-corrected across every skill tested for this program+scope together (not "
             "individually) to control for the multiple-comparisons problem. Data: a fixed, dated sample of "
-            "job postings and scraped course catalogs -- not a continuously live labor market. Full honest "
+            "job postings and scraped course catalogs, not a continuously live labor market. Full "
             "limitations, including single-annotator evaluation caveats, are on the dashboard's Methodology page."
         ),
         size=8.5, color=(100, 100, 100),
@@ -199,7 +199,7 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
 def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_df, sample_postings_df):
     """A personalized career-style PDF: which real roles best fit this
     person's background, their strengths and gaps for the top match, and
-    real example job postings pulled from that role -- built with the
+    real example job postings pulled from that role, built with the
     same branded report style as the program-level PDF, so the two feel
     like the same product."""
     def clean(text):
@@ -220,7 +220,7 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
     pdf.set_xy(pdf.l_margin, 8)
     pdf.set_text_color(255, 255, 255)
     pdf.set_font("Helvetica", "B", 18)
-    pdf.cell(0, 10, "AlignED -- Your Personalized Career Report")
+    pdf.cell(0, 10, "AlignED: Your Personalized Career Report")
     pdf.set_xy(pdf.l_margin, 20)
     pdf.set_font("Helvetica", "", 11)
     pdf.cell(0, 8, clean(f"Best-matching role: {top_role_label}"))
@@ -233,8 +233,8 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
     write_line("How your background matches real job roles", size=13, bold=True, color=(30, 58, 138))
     write_line(
         clean(
-            "\"Covered\" means your pasted text matched that many of a role's most in-demand tracked skills -- "
-            "a simple overlap count against real job-posting data, not a validated fit score or probability."
+            "\"Covered\" means your pasted text matched that many of a role's most in-demand tracked skills. "
+            "It is a simple overlap count against job-posting data, not a fit score or probability."
         ),
         size=8.5, color=(100, 100, 100),
     )
@@ -258,13 +258,13 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
     pdf.ln(6)
     pdf.set_x(pdf.l_margin)
     write_line(f"Your strengths for {top_role_label}", size=13, bold=True, color=(22, 163, 74))
-    strengths_text = ", ".join(have_df["canonical_name"].head(10)) if not have_df.empty else "None matched yet -- add more detail to your profile text."
+    strengths_text = ", ".join(have_df["canonical_name"].head(10)) if not have_df.empty else "None matched yet. Add more detail to your profile text."
     write_line(clean(strengths_text), size=10)
 
     pdf.ln(4)
     pdf.set_x(pdf.l_margin)
     write_line(f"Skills to prioritize for {top_role_label}", size=13, bold=True, color=(220, 38, 38))
-    gaps_text = ", ".join(missing_df["canonical_name"].head(10)) if not missing_df.empty else "No major gaps found -- strong match!"
+    gaps_text = ", ".join(missing_df["canonical_name"].head(10)) if not missing_df.empty else "No major gaps found."
     write_line(clean(gaps_text), size=10)
 
     if not sample_postings_df.empty:
@@ -278,7 +278,7 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
     pdf.set_x(pdf.l_margin)
     write_line(
         clean(
-            "How this was matched: simple keyword matching against your pasted text -- the same fast "
+            "How this was matched: simple keyword matching against your pasted text, the same fast "
             "method used for the full-scale program analysis elsewhere in AlignED, benchmarked against an "
             "AI extraction method on a 104-item test set. It can miss skills phrased differently than "
             "expected. Full methodology on the live dashboard."

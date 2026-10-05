@@ -7,7 +7,7 @@ name, and description automatically. Different universities format their
 catalog pages differently (some use a bold heading followed by a paragraph,
 some use a bold heading followed by a bullet point, some don't use bold text
 at all and just rely on plain text lines), so this script has a handful of
-different "parser" functions -- one per distinct page pattern. Each program
+different "parser" functions, one per distinct page pattern. Each program
 in the PROGRAMS list below says which parser function to use for it.
 
 This script is meant to be run on your own computer (not inside an
@@ -46,7 +46,7 @@ def _clean_title(text):
     cleaned = re.sub(r"\(\d+(?:-\d+)?\s*(?:to\s*\d+\s*)?Credits?\)\s*$", "", cleaned, flags=re.IGNORECASE).strip()
     cleaned = re.sub(r"\(\d+(?:-\d+)?\s*Hours?\)\s*$", "", cleaned, flags=re.IGNORECASE).strip()
     # Georgia Tech's main catalog writes credit hours without parentheses,
-    # e.g. "Introduction to Computing. 3 Credit Hours." -- strip that too.
+    # e.g. "Introduction to Computing. 3 Credit Hours.", strip that too.
     cleaned = re.sub(r"\.\s*\d+(?:-\d+)?\s*Credit Hours?\.?\s*$", "", cleaned, flags=re.IGNORECASE).strip()
     cleaned = cleaned.rstrip(".").strip()
     return cleaned
@@ -77,13 +77,13 @@ def scrape_program(name, url):
     actually lists every course 3 times in slightly different HTML layouts
     (a short list, then two fuller sections). The original version of this
     function used `bold_tag.find_next(string=True)`, which grabs the very
-    next text node in the document -- fragile against that repetition, and
+    next text node in the document, fragile against that repetition, and
     it was quietly grabbing the heading text itself back as the
     "description" instead of the real paragraph (e.g. "Deep Learning
     (CS 7643)" instead of the actual multi-sentence description). Fixed by
     reading the whole containing paragraph's text and stripping the
     heading off the front, the same more robust technique used by the
-    newer parsers below -- and by keeping the LONGEST version found across
+    newer parsers below, and by keeping the LONGEST version found across
     all three repeated listings, since "keep the longest description"
     logic was already here but had nothing good to compare against
     before."""
@@ -106,7 +106,7 @@ def scrape_program(name, url):
         # grabbing the whole paragraph's text (like the first version of
         # this fix did) bleeds into the next course(s)' text too. Instead,
         # walk forward node by node and stop the moment we reach another
-        # bold heading -- that's the real boundary of this course's own
+        # bold heading, that's the real boundary of this course's own
         # description, wherever it happens to sit in the page structure.
         description_parts = []
         for node in bold_tag.find_all_next(string=True):
@@ -133,7 +133,7 @@ def scrape_program(name, url):
 # Parser 2: ASU pattern
 # "CSE 230: Title" in bold, immediately followed by a single bullet point
 # (<li>) that holds the whole description.
-# Confidence: HIGH -- verified directly via web_fetch; the bold heading and
+# Confidence: HIGH, verified directly via web_fetch; the bold heading and
 # following "- description" bullet were clearly visible in the fetched page.
 # ---------------------------------------------------------------------------
 
@@ -195,8 +195,8 @@ def scrape_asu_bullet_program(name, url):
 #     by description, then optional Prerequisite/Cross-listed with/Credit
 #     Only Granted for/Restriction/Formerly paragraphs. ENPM was not fetched
 #     directly since it's the same catalog site/software as CMSC, but the
-#     pattern should be identical -- MEDIUM confidence for ENPM specifically).
-#   - UT Austin: MEDIUM/LOW -- the live fetch of this page only returned the
+#     pattern should be identical, MEDIUM confidence for ENPM specifically).
+#   - UT Austin: MEDIUM/LOW, the live fetch of this page only returned the
 #     catalog's navigation sidebar, not the actual course listing content
 #     (the course text likely loads through the same CourseLeaf template but
 #     wasn't captured by this fetch). This parser is written to match the
@@ -249,7 +249,7 @@ def scrape_courseleaf_program(name, url):
     credit: 1 Hour." or "CMSC401 Algorithms for Geospatial Computing
     (3 Credits)", followed by a description paragraph. Some courses have
     extra "Prerequisite(s):"/"Cross-listed with:"/etc. paragraphs after the
-    description -- those are skipped, not treated as the description."""
+    description, those are skipped, not treated as the description."""
     print(f"Fetching: {name}")
     soup = _get_soup(url)
 
@@ -267,7 +267,7 @@ def scrape_courseleaf_program(name, url):
 
         description = _next_courseleaf_description(bold_tag)
         # UT Austin appends a "X Semester Credit Hours." sentence to the end
-        # of the description -- keep it, it's genuine catalog content, no
+        # of the description, keep it, it's genuine catalog content, no
         # need to strip it.
 
         if course_code not in seen or len(description) > len(seen[course_code]["description"]):
@@ -286,7 +286,7 @@ def scrape_courseleaf_program(name, url):
 # A bulleted list where each <li> starts with a bold, linked heading like
 # "CAS CS 511: Formal Methods 1" and the description text follows right
 # after it inside the same list item.
-# Confidence: HIGH -- verified directly via web_fetch.
+# Confidence: HIGH, verified directly via web_fetch.
 # ---------------------------------------------------------------------------
 
 bu_heading_pattern = re.compile(r"^([A-Z]{2,4}\s+[A-Z]{2,4}\s?\d{3,4}):\s*(.+)$")
@@ -331,26 +331,26 @@ def scrape_bu_program(name, url):
 
 # ---------------------------------------------------------------------------
 # Parser 5: University of Wisconsin-Madison "Guide" pattern
-# Bold heading like "COMP SCI 540 -- INTRODUCTION TO ARTIFICIAL
+# Bold heading like "COMP SCI 540, INTRODUCTION TO ARTIFICIAL
 # INTELLIGENCE", then a short "N credits." paragraph, then the real
 # description paragraph, then a "View details" line and a "Requisites:"
 # paragraph that we want to ignore.
-# Confidence: HIGH -- verified directly via web_fetch.
+# Confidence: HIGH, verified directly via web_fetch.
 # Judgment call: some course headings are cross-listed, e.g.
 # "COMP SCI/L I S 102" (the number is shared between both subject codes).
 # For those we only keep the first subject ("COMP SCI") paired with the
-# shared number -- MEDIUM confidence specifically for cross-listed courses.
+# shared number, MEDIUM confidence specifically for cross-listed courses.
 # ---------------------------------------------------------------------------
 
 wisconsin_credits_pattern = re.compile(r"^\d+(?:-\d+)?\s+credits?\.?$", re.IGNORECASE)
 
 
 def _parse_wisconsin_heading(text):
-    """Turn "COMP SCI/L I S 102 -- INTRODUCTION TO AI" into
+    """Turn "COMP SCI/L I S 102, INTRODUCTION TO AI" into
     ("COMP SCI 102", "Introduction To Ai"). Returns None if the text doesn't
     look like a course heading."""
     text = text.replace("​", "")  # drop any zero-width spaces
-    for dash in ("—", "–", "--", "-"):
+    for dash in (",", "–", "--", "-"):
         if dash in text:
             left, _, right = text.partition(dash)
             break
@@ -398,10 +398,10 @@ def _next_wisconsin_description(bold_tag):
 
 def scrape_wisconsin_program(name, url):
     """Handles the University of Wisconsin-Madison course guide pages.
-    Pattern: a bold heading like "COMP SCI 540 -- INTRODUCTION TO
+    Pattern: a bold heading like "COMP SCI 540, INTRODUCTION TO
     ARTIFICIAL INTELLIGENCE", then a "N credits." line, then the
     description paragraph, then a "View details" line and a "Requisites:"
-    paragraph -- the credits line and everything from "Requisites:" onward
+    paragraph, the credits line and everything from "Requisites:" onward
     is ignored."""
     print(f"Fetching: {name}")
     soup = _get_soup(url)
@@ -434,7 +434,7 @@ def scrape_wisconsin_program(name, url):
 # distribution-area abbreviations like "NSc, RSN"), then the description,
 # then a "[View course details in MyPlan: CSE 546]" link that we want to
 # ignore.
-# Confidence: HIGH -- verified directly via web_fetch.
+# Confidence: HIGH, verified directly via web_fetch.
 # ---------------------------------------------------------------------------
 
 uw_heading_pattern = re.compile(r"^([A-Z]{2,6}\s?\d{3})\s+(.+?)\s*\(\d+(?:-\d+)?\)")
@@ -498,18 +498,18 @@ def scrape_uw_program(name, url):
 # documented trade-off, not an oversight.
 #
 # Confidence:
-#   - CMU (both schools): HIGH -- verified directly via web_fetch. Heading
+#   - CMU (both schools): HIGH, verified directly via web_fetch. Heading
 #     like "07-380 Artificial Intelligence and Machine Learning II", next
 #     line "Fall and Spring: 12 units", then description, then optional
 #     "Prerequisites:"/"Course Website:" lines.
-#   - Penn State DAAN: MEDIUM -- verified directly via web_fetch, but the
+#   - Penn State DAAN: MEDIUM, verified directly via web_fetch, but the
 #     heading text wasn't wrapped in visible bold markers the way most other
 #     sites were, so the exact underlying tag is uncertain (could be a
 #     heading tag, a <dt>, or styled with CSS instead of a semantic tag).
 #     The page also repeats each course's code/title/credits a second time
 #     right before the description, which this line-based approach handles
 #     naturally since it just looks for the longest nearby line.
-#   - Michigan EECS: HIGH -- verified directly via web_fetch. Heading like
+#   - Michigan EECS: HIGH, verified directly via web_fetch. Heading like
 #     "EECS 545. Machine Learning (CSE)", description ends with
 #     "CourseProfile (ATLAS)" which we strip off.
 # ---------------------------------------------------------------------------
@@ -586,7 +586,7 @@ michigan_heading_pattern = re.compile(r"^([A-Z]{2,6}\s\d{3})\.\s+(.+)$")
 # Programs to scrape. Each entry says which parser function to use and any
 # extra keyword arguments that parser needs. A program can list either a
 # single "url" or a list of "urls" (used for Boston University, whose
-# course list is split across two pages) -- results from multiple URLs for
+# course list is split across two pages), results from multiple URLs for
 # the same program are merged together and deduplicated by course code.
 # ---------------------------------------------------------------------------
 
@@ -686,8 +686,8 @@ PROGRAMS = [
         # Replaces UT Austin, which returned 0 courses when actually run
         # (its real page structure didn't match what we could see in
         # advance). Georgia Tech's main CS catalog is a different, richer
-        # page than the two OMS pages already scraped above -- it covers
-        # the full CS department, undergrad through grad -- and uses the
+        # page than the two OMS pages already scraped above, it covers
+        # the full CS department, undergrad through grad, and uses the
         # same CourseLeaf-style pattern already verified to work.
         "name": "Georgia Tech - Main CS Course Catalog",
         "url": "https://catalog.gatech.edu/coursesaz/cs/",

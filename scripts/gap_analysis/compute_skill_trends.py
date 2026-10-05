@@ -23,7 +23,7 @@ comparison):
    'rising' / 'falling' / 'no clear trend' label.
 
 An honest scope note: the historical dataset only covers about 4.5
-months (17 real weeks, with 2 weeks missing from the raw data -- a real
+months (17 real weeks, with 2 weeks missing from the raw data, a real
 data quality gap, not a bug in our code). That's a short window for
 serious time-series forecasting, so what this really produces is early
 trend *detection* over the available window, not a long-range forecast.
@@ -48,14 +48,14 @@ MIN_WEEKS_REQUIRED = 5  # need a reasonable number of points before trying to fi
 
 def apply_fdr_correction(p_values):
     """Benjamini-Hochberg FDR correction across every skill's trend test
-    run together -- same technique and same reasoning as
+    run together, same technique and same reasoning as
     compute_gap_scores.py's apply_fdr_correction(): ~67 skills are tested
     for a trend simultaneously here, and without this correction, a few
     "significant" results are expected to be false positives from chance
     alone even if every individual test is done correctly (the classic
     multiple-comparisons problem). Verified on this project's real data:
     9 skills looked significant at raw p<0.05, but 0 survived this
-    correction at q<0.05 -- exactly the kind of honest tightening gap
+    correction at q<0.05, exactly the kind of honest tightening gap
     scoring already applies, now applied consistently here too."""
     if not p_values:
         return []
@@ -65,7 +65,7 @@ def apply_fdr_correction(p_values):
 # totals before trusting any trend numbers: postings in this historical
 # dataset are NOT evenly spread across the ~4.5 month window. The first
 # 10 of 17 weeks combined have only ~26 postings total, while the single
-# last week alone has 84,744 -- 68% of the entire dataset. This is almost
+# last week alone has 84,744, 68% of the entire dataset. This is almost
 # certainly a data-collection artifact (e.g. a bulk export/scrape
 # timestamp), not real listing activity concentrated in one week. Trying
 # to fit a trend across weeks with only 1-6 postings would just be fitting
@@ -76,7 +76,7 @@ MIN_POSTINGS_PER_WEEK = 100
 
 def classify_trend(slope, q_value):
     """Classification now uses the FDR-corrected q-value, not the raw
-    p-value -- see apply_fdr_correction()'s docstring for why."""
+    p-value, see apply_fdr_correction()'s docstring for why."""
     if q_value >= SIGNIFICANCE_THRESHOLD:
         return "no clear trend"
     return "rising" if slope > 0 else "falling"
@@ -88,7 +88,7 @@ def main():
         state = json.load(f)
 
     if not state.get("done"):
-        print("WARNING: checkpoint is not marked done -- extract_posting_trends.py may not have finished. Proceeding anyway with whatever data is present.")
+        print("WARNING: checkpoint is not marked done, extract_posting_trends.py may not have finished. Proceeding anyway with whatever data is present.")
 
     week_totals = state["week_totals"]
     skill_week_counts = state["skill_week_counts"]
@@ -126,7 +126,7 @@ def main():
     cur.execute("DELETE FROM skill_trends")
 
     # Pass 1: compute the raw linear-regression trend test for every
-    # skill first, WITHOUT classifying anything yet -- FDR correction
+    # skill first, WITHOUT classifying anything yet, FDR correction
     # needs to see every p-value in the whole family of tests at once
     # (same two-pass pattern as compute_gap_scores.py: raw p-values
     # first, then one correction pass across all of them, then classify).
@@ -208,11 +208,11 @@ def main():
     print(
         f"\n{raw_sig_count} skills looked significant at raw p<{SIGNIFICANCE_THRESHOLD} before FDR correction; "
         f"{len(rising) + len(falling)} survive after Benjamini-Hochberg correction across all {len(results)} tests "
-        "(this is the honest number -- see Methodology)."
+        "(this is the honest number, see Methodology)."
     )
 
     print("\n" + "=" * 78)
-    print(f"RISING skills ({len(rising)}) -- statistically significant upward trend, q < {SIGNIFICANCE_THRESHOLD} (FDR-corrected)")
+    print(f"RISING skills ({len(rising)}), statistically significant upward trend, q < {SIGNIFICANCE_THRESHOLD} (FDR-corrected)")
     print("=" * 78)
     for r in rising:
         print(
@@ -221,7 +221,7 @@ def main():
         )
 
     print("\n" + "=" * 78)
-    print(f"FALLING skills ({len(falling)}) -- statistically significant downward trend, q < {SIGNIFICANCE_THRESHOLD} (FDR-corrected)")
+    print(f"FALLING skills ({len(falling)}), statistically significant downward trend, q < {SIGNIFICANCE_THRESHOLD} (FDR-corrected)")
     print("=" * 78)
     for r in falling:
         print(

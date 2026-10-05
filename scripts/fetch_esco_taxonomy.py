@@ -4,18 +4,18 @@ fetch_esco_taxonomy.py
 What this script does, in plain terms:
 Before we can ask an AI model to pull skills out of a job posting or course
 description, we need a trustworthy, pre-existing list of what "skills"
-even are -- otherwise the model could invent categories that sound
+even are, otherwise the model could invent categories that sound
 reasonable but aren't grounded in anything real. This script downloads
 that list from ESCO (European Skills, Competences, Qualifications and
 Occupations), a free, public skills taxonomy maintained by the European
 Commission. It's a placeholder for O*NET (the equivalent US taxonomy)
-until our O*NET account gets approved -- at that point we can add a
+until our O*NET account gets approved, at that point we can add a
 similar script for O*NET and compare/merge the two.
 
 We don't download the *entire* ESCO taxonomy (it covers every occupation
 that exists, from florists to pilots). Instead, we walk just the
 computing/technology branch: software development, web development,
-database and network professionals, and ICT technicians -- the occupation
+database and network professionals, and ICT technicians, the occupation
 families our 13 university programs actually map to.
 
 How it works, step by step:
@@ -24,7 +24,7 @@ How it works, step by step:
 2. For each group, ask ESCO's API for every specific occupation inside it
    (e.g. "software developer", "web developer", "software architect").
 3. For each of those occupations, ask ESCO for its "essential" and
-   "optional" skills -- these come straight from the API, no guessing.
+   "optional" skills, these come straight from the API, no guessing.
 4. Combine everything into one de-duplicated skill list and save it,
    along with the occupation list, so later scripts (the LLM skill
    extraction pipeline) can check their output against this real,
@@ -45,7 +45,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (AlignED research project; educational use
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "taxonomy")
 
 # ISCO-08 occupation-group codes covering computing/technology roles.
-# Each maps to a real branch of ESCO's classification tree -- see
+# Each maps to a real branch of ESCO's classification tree, see
 # https://esco.ec.europa.eu/en/classification/occupation_main for the
 # full tree if we ever want to widen this list.
 ISCO_GROUPS = {

@@ -1,11 +1,11 @@
 """
-services/reports_excel.py -- real, formatted .xlsx export for the
+services/reports_excel.py: real, formatted .xlsx export for the
 Program Explorer page.
 
 A CSV is just raw text with commas; it fundamentally can't look
 "professional" no matter how the columns are chosen. This builds a real
-Excel file -- colored header, bold title block, color-coded priority
-cells, sensible column widths, a frozen header row -- while staying just
+Excel file, colored header, bold title block, color-coded priority
+cells, sensible column widths, a frozen header row, while staying just
 as easy to sort/filter/re-use as a CSV would be.
 """
 
@@ -26,14 +26,14 @@ def build_excel_report(university, program_name, course_count, recs_df):
 
     navy = "1E3A8A"
     ws.merge_cells("A1:G1")
-    ws["A1"] = "AlignED -- Curriculum Gap Report"
+    ws["A1"] = "AlignED: Curriculum Gap Report"
     ws["A1"].font = Font(size=16, bold=True, color="FFFFFF")
     ws["A1"].fill = PatternFill("solid", fgColor=navy)
     ws["A1"].alignment = Alignment(vertical="center")
     ws.row_dimensions[1].height = 28
 
     ws.merge_cells("A2:G2")
-    ws["A2"] = f"{university} -- {program_name}"
+    ws["A2"] = f"{university}, {program_name}"
     ws["A2"].font = Font(size=11, italic=True, color="475569")
 
     ws.merge_cells("A3:G3")

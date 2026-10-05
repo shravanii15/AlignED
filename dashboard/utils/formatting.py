@@ -1,9 +1,34 @@
 """
-utils/formatting.py -- small display/output formatting helpers shared
+utils/formatting.py: small display/output formatting helpers shared
 across dashboard pages.
 """
 
 import re
+
+
+PROGRAM_LABEL_SEPARATOR = " · "
+
+
+def program_label(university, program_name):
+    """The one place a program's display label is built. Used by every
+    page that shows or matches a program by its label (including the
+    Overview -> Program Explorer pre-fill), so the strings can never
+    drift apart."""
+    return f"{university}{PROGRAM_LABEL_SEPARATOR}{program_name}"
+
+
+def format_posting_details(row):
+    """Plain-text detail line for a job posting (location, salary,
+    posted date), or None when the posting has none of them."""
+    details = []
+    if row.get("location"):
+        details.append(str(row["location"]))
+    lo, hi = row.get("salary_min"), row.get("salary_max")
+    if lo or hi:
+        details.append(f"${lo:,.0f} to ${hi:,.0f}" if lo and hi else f"${(lo or hi):,.0f}")
+    if row.get("posted_date"):
+        details.append(str(row["posted_date"]))
+    return "  ·  ".join(details) if details else None
 
 
 def safe_filename(text):

@@ -3,7 +3,7 @@ fetch_kaggle_backfill.py
 
 What this script does, in plain terms:
 Our live job-posting pipeline (fetch_adzuna_jobs.py) only pulls a handful
-of fresh postings each day -- that's realistic for a live, scheduled
+of fresh postings each day, that's realistic for a live, scheduled
 pipeline, but it means we don't have much historical depth to look at
 trends over time. This script downloads a big, already-collected dataset
 of real LinkedIn job postings from 2023-2024 (published on Kaggle by
@@ -43,7 +43,7 @@ print(f"Downloaded to a temporary cache folder: {download_path}")
 # project's data folder, so everything AlignED uses lives in one place.
 # This dataset ships extra CSVs (skills, companies, salaries) inside
 # subfolders like "jobs/" and "mappings/", not just the main postings.csv
-# at the top level -- we walk every subfolder so we don't miss them, and
+# at the top level, we walk every subfolder so we don't miss them, and
 # keep each file's subfolder name as a prefix so nothing overwrites
 # another file that happens to share a name.
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -68,5 +68,5 @@ for filename in copied:
     print(f"  - {filename} ({size_mb:.1f} MB)")
 
 print("\nDone. These files are excluded from Git (see .gitignore) since")
-print("they're large and easy to re-download -- only the code that fetches")
+print("they're large and easy to re-download, only the code that fetches")
 print("them is tracked.")

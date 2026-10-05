@@ -5,7 +5,7 @@ What this script does, in plain terms:
 Before we can compute skill gaps, the database needs three things it
 doesn't have yet:
 1. The `skills` table filled in with our real O*NET vocabulary (right now
-   it's empty -- we've only ever used the vocabulary as JSON files).
+   it's empty, we've only ever used the vocabulary as JSON files).
 2. The `postings` table filled in with the 1,660-posting market-demand
    sample from clustering, so it's queryable like any other real data,
    not just a JSON file on disk.
@@ -15,8 +15,8 @@ doesn't have yet:
    hand sanity-check we already did (e.g. cluster 0 = "Cybersecurity").
 
 Why this matters: the whole point of using a real relational database
-(instead of just JSON files everywhere) is that later steps -- gap
-scoring, and eventually the dashboard -- can ask real questions like
+(instead of just JSON files everywhere) is that later steps, gap
+scoring, and eventually the dashboard, can ask real questions like
 "which skills does Program X's coursework cover?" with a SQL query,
 instead of every script re-parsing raw JSON by hand. This script is what
 finally makes that possible.
@@ -42,7 +42,7 @@ POSTING_CLUSTERS_PATH = os.path.join(CLUSTERING_DIR, "posting_clusters.json")
 # Plain-English role labels for each of the 11 clusters, based on the
 # hand sanity-check we did on cluster_sanity_check.txt. Clusters 8 and 9
 # are honestly labeled as weak/low-quality rather than pretending they're
-# clean -- see the progress log for why.
+# clean, see the progress log for why.
 CLUSTER_LABELS = {
     0: "Cybersecurity / Information Security",
     1: "Data Science / Data Engineering",
@@ -52,7 +52,7 @@ CLUSTER_LABELS = {
     5: "DevOps / Cloud Engineering",
     6: "Business Intelligence",
     7: "Network Engineering",
-    8: "Mixed (weak cluster -- multiple roles blended together)",
+    8: "Mixed (weak cluster, multiple roles blended together)",
     9: "Near-duplicate postings (data quality quirk, not a real role group)",
     10: "Database Administration",
 }

@@ -2,10 +2,10 @@
 compute_gap_scores.py
 
 What this script does, in plain terms:
-This is the actual "gap analysis" -- the payoff of everything built so
+This is the actual "gap analysis", the payoff of everything built so
 far. For every university program, and for every real O*NET skill, it
 answers one question: "Is this skill significantly more in-demand than
-it's covered in this program's coursework?" -- and it now answers that
+it's covered in this program's coursework?", and it now answers that
 question twice, at two different scopes:
 
 1. Overall market (cluster_id = NULL): program coverage vs. demand
@@ -16,10 +16,10 @@ question twice, at two different scopes:
    program coverage vs. demand within ONE specific role's postings only
    (e.g. just the "Data Science / Data Engineering" cluster). This is
    what actually answers "what does this program prepare me for, for
-   THIS target role" -- a program's overall-market gap in AWS might be
+   THIS target role", a program's overall-market gap in AWS might be
    small, but its gap specifically against Cloud/DevOps postings could
    be much larger. Without this, the whole "role clusters" feature built
-   earlier was cosmetic -- clusters existed in the database but nothing
+   earlier was cosmetic, clusters existed in the database but nothing
    in the gap analysis actually used them (every gap_scores row had
    cluster_id = NULL). This is the fix for that.
 
@@ -27,18 +27,18 @@ How it works, step by step, for EACH scope (overall or one cluster):
 1. For each program, compute its "coverage rate" for a skill: what
    fraction of that program's courses mention the skill at least once
    (from the extractions table, source_type='course'). This does not
-   change between scopes -- a program's curriculum doesn't change
+   change between scopes, a program's curriculum doesn't change
    depending on which job role you're comparing it to.
 2. Compute the "market demand rate" for the same skill, WITHIN THIS
    SCOPE: what fraction of postings in this scope (all 1,660, or just
    the postings mapped to this one role cluster) mention it.
 3. The raw gap is market_demand_rate - program_coverage_rate. A
    positive number means the market (at this scope) wants it more than
-   the curriculum covers it -- a real candidate gap.
+   the curriculum covers it, a real candidate gap.
 4. Run a two-proportion z-test per (program, skill) pair within this
    scope, exactly as before.
 5. Apply a Benjamini-Hochberg FDR correction across every skill tested
-   in THIS (program, scope) family together -- a cluster's postings are
+   in THIS (program, scope) family together, a cluster's postings are
    a smaller sample than the overall market, so each scope gets its own
    independent correction rather than being lumped in with any other
    scope's tests.
@@ -47,7 +47,7 @@ How it works, step by step, for EACH scope (overall or one cluster):
    per-cluster rows).
 
 A note on cluster quality: two of the eleven role clusters are excluded
-from per-cluster analysis entirely -- "Mixed (weak cluster)" and
+from per-cluster analysis entirely, "Mixed (weak cluster)" and
 "Near-duplicate postings (data quality quirk)". Computing a "gap" against
 a cluster that isn't actually a coherent role would produce a number
 that looks precise but means nothing; see the Methodology page for the
@@ -56,8 +56,8 @@ full honest discussion of clustering quality (silhouette score 0.08).
 Why this matters for the project:
 Anyone can eyeball two lists and guess "this program seems light on
 cloud skills." This script instead makes that claim with a real,
-falsifiable statistical basis -- the same two-proportion z-test used in
-A/B testing and clinical trials -- and, as of this version, can make
+falsifiable statistical basis, the same two-proportion z-test used in
+A/B testing and clinical trials, and, as of this version, can make
 that claim specific to an actual target role, not just a generic
 "the market" blur.
 """
@@ -72,7 +72,7 @@ DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
 
 SIGNIFICANCE_THRESHOLD = 0.05
 TOP_N_PER_PROGRAM = 15
-# Ignore skills a scope's postings barely mention -- a skill mentioned in
+# Ignore skills a scope's postings barely mention, a skill mentioned in
 # only 1-2 postings isn't a meaningful "demand" signal, and including it
 # just adds noise to the z-test at these tiny counts. Applied per-scope,
 # so a smaller role cluster naturally tests a smaller (but still
@@ -84,13 +84,13 @@ MIN_MARKET_MENTIONS = 10
 # English words (e.g. "Design", "Science", "Writing"). A plain keyword
 # scanner can't tell "data science" or "computer science" apart from a
 # sentence like "we're a science-based company" or "design your career
-# with us" -- it just sees the word "science" or "design" and counts it,
+# with us", it just sees the word "science" or "design" and counts it,
 # which massively inflates their apparent market demand with false
 # positives. This is exactly the kind of context-blindness the Week 2
 # LLM-vs-baseline comparison already proved the AI method is better at.
 # Rather than let a handful of noisy generic words dominate every
 # program's "top gaps" list, we exclude them here from the full-scale
-# scan and document why -- the named technologies (Python, Docker,
+# scan and document why, the named technologies (Python, Docker,
 # Kubernetes, etc.) don't have this ambiguity problem and are the more
 # trustworthy signal at this stage of the project.
 AMBIGUOUS_GENERIC_TERMS = {
@@ -134,7 +134,7 @@ def apply_fdr_correction(p_values):
     list of raw p-values from *multiple* tests run together (here: every
     skill tested for one program within one scope), returning the
     corrected "q-values" in the same order. Each q-value is always >=
-    the raw p-value it came from -- correction can only make a result
+    the raw p-value it came from, correction can only make a result
     look less significant, never more, which is exactly the conservative
     direction you want when guarding against false positives from
     running many tests at once. An empty input returns an empty list
@@ -171,7 +171,7 @@ def compute_significant_gaps(program_id, n_courses, skill_ids, coverage_counts, 
         )
 
     # FDR correction has to see the full family of tests run for this
-    # program within THIS scope at once -- correcting one skill's
+    # program within THIS scope at once, correcting one skill's
     # p-value in isolation would defeat the whole point.
     q_values = apply_fdr_correction([c["p_value"] for c in candidates])
     for c, q_value in zip(candidates, q_values):
@@ -329,14 +329,14 @@ def main():
     conn.close()
 
     print(f"\nSaved {len(all_gap_rows)} statistically significant gap rows across {len(scopes)} scopes (overall market + {len(scopes) - 1} role clusters).")
-    print("(Significance is based on the FDR-corrected q-value within each program+scope's own family of tests -- see the module docstring for why.)")
+    print("(Significance is based on the FDR-corrected q-value within each program+scope's own family of tests, see the module docstring for why.)")
     print("\n" + "=" * 78)
     print("TOP GAPS PER PROGRAM, PER SCOPE (skills the market wants significantly more than the curriculum covers)")
     print("=" * 78)
     for scope_label, scope_total_n, n_relevant_skills, program_summaries in scope_summaries:
         print(f"\n\n### SCOPE: {scope_label}  ({scope_total_n} postings, {n_relevant_skills} skills tested)")
         for university, program_name, n_courses, gaps in program_summaries:
-            print(f"\n{university} -- {program_name} ({n_courses} courses)")
+            print(f"\n{university}, {program_name} ({n_courses} courses)")
             if not gaps:
                 print("  No statistically significant gaps found.")
                 continue

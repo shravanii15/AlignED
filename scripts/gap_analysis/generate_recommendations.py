@@ -8,11 +8,11 @@ takes the statistically significant gaps found by compute_gap_scores.py
 in our sampled job postings") and cross-references each one against
 compute_skill_trends.py ("and is demand for this skill rising, falling,
 or flat?") to produce one final, ranked, plain-English recommendation
-list -- the kind of output a real curriculum advisory board or program
+list, the kind of output a real curriculum advisory board or program
 director could actually read and act on, not just a table of raw
 numbers.
 
-As of this version, gap_scores contains rows at TWO scopes -- overall
+As of this version, gap_scores contains rows at TWO scopes, overall
 market (cluster_id NULL) and per real role cluster (cluster_id set) --
 so this script now generates a separate ranked recommendation list for
 EACH (program, scope) combination, not just each program. A program's
@@ -31,7 +31,7 @@ adjust that number up or down based on the trend:
     significant gap today, but worth a lower priority than a rising one)
   - No trend data / no significant trend -> left as-is
 This is a simple, explainable weighting scheme (not a black-box model),
-chosen deliberately -- for a recommendation a real person needs to trust
+chosen deliberately, for a recommendation a real person needs to trust
 and act on, being able to say exactly *why* something is ranked where it
 is matters more than squeezing out a slightly "smarter" black-box score.
 Trend data itself is only tracked at the overall-market level (there
@@ -40,7 +40,7 @@ trend), so the same trend label/slope is used regardless of scope.
 
 Within each (program, scope) combination, the top 3 recommendations by
 adjusted priority are labeled 'high', the next 4 'medium', and the rest
-'low' -- simple, consistent tiers rather than an arbitrary numeric
+'low', simple, consistent tiers rather than an arbitrary numeric
 cutoff.
 """
 
@@ -62,7 +62,7 @@ MAX_RECOMMENDATIONS_PER_PROGRAM = 10
 
 def build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_label, slope, scope_label="Overall market"):
     # Deliberately precise wording: "statistically significant" describes
-    # the *observed text coverage* in this sampled corpus -- it does not
+    # the *observed text coverage* in this sampled corpus, it does not
     # mean "the market really wants this skill" in some absolute sense
     # (the postings sample isn't a random draw from the whole labor
     # market, and "coverage" is a text-mention proxy, not a depth-of-
@@ -75,7 +75,7 @@ def build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_lab
     )
     base = (
         f"{skill_name} appears in {demand_phrase}, "
-        f"but only {coverage_rate * 100:.0f}% of this program's courses cover it -- "
+        f"but only {coverage_rate * 100:.0f}% of this program's courses cover it, "
         f"a {gap_value * 100:.0f} percentage-point gap that's a statistically significant "
         f"difference in observed text coverage, not noise from a small sample."
     )
@@ -112,7 +112,7 @@ def main():
 
     cur.execute("DELETE FROM recommendations")
 
-    # Group by (program_id, cluster_id) -- each combination gets its own
+    # Group by (program_id, cluster_id), each combination gets its own
     # independently ranked top-N list, since "top gaps vs. the overall
     # market" and "top gaps vs. Data Scientist postings" are different
     # questions with different answers.
@@ -151,7 +151,7 @@ def main():
     all_recommendations = []
     insert_rows = []
     report_lines = []
-    report_lines.append("AlignED -- Curriculum Gap Recommendations")
+    report_lines.append("AlignED, Curriculum Gap Recommendations")
     report_lines.append("=" * 78)
     report_lines.append(
         "Each recommendation combines a statistically significant skill gap "
@@ -167,7 +167,7 @@ def main():
         if items:
             n_scopes_with_recs += 1
 
-        report_lines.append(f"\n{data['university']} -- {data['program_name']}  [scope: {data['scope_label']}]")
+        report_lines.append(f"\n{data['university']}, {data['program_name']}  [scope: {data['scope_label']}]")
         report_lines.append("-" * 78)
 
         for rank, item in enumerate(items):
