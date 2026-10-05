@@ -81,6 +81,7 @@ from sections.compare import render_compare
 from sections.course_finder import render_course_finder
 from sections.heatmap import render_heatmap
 from sections.methodology import render_methodology
+from sections.match_job import render_match_job
 from sections.overview import render_overview
 from sections.profile import render_profile_builder
 from sections.program_explorer import render_program_explorer
@@ -88,7 +89,7 @@ from sections.trends import render_trends
 from utils.nav import (
     GROUP_ANALYZE, GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_OVERVIEW, GROUP_PERSONALIZE,
     NAV_GROUP_KEY, NAV_PAGE_KEY,
-    PAGE_BUILD_PROFILE, PAGE_COMPARE, PAGE_COURSE_FINDER, PAGE_HEATMAP,
+    PAGE_BUILD_PROFILE, PAGE_COMPARE, PAGE_MATCH_JOB, PAGE_COURSE_FINDER, PAGE_HEATMAP,
     PAGE_METHODOLOGY, PAGE_PROGRAM_EXPLORER, PAGE_ROLE_GROUPS, PAGE_TRENDS,
 )
 
@@ -238,6 +239,7 @@ st.markdown(
     .skill-card-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.1rem; }
     .skill-rank { display: inline-flex; align-items: center; justify-content: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--navy); color: #FFFFFF !important; font-size: 0.8rem !important; font-weight: 700 !important; flex-shrink: 0; }
     .skill-card-name { font-size: 1.25rem !important; font-weight: 800 !important; color: var(--text) !important; }
+    .answer-banner-sub { font-size: 0.9rem !important; color: var(--text-muted) !important; margin: 0.5rem 0 0.4rem 0; }
     .skill-card-meta { font-size: 0.82rem !important; color: var(--text-muted) !important; margin: 0 0 0.5rem 2.4rem; }
 
     /* ---- Metrics: flatten Streamlit's boxed default into plain
@@ -352,6 +354,7 @@ NAV_GROUPS = {
         PAGE_COURSE_FINDER: render_course_finder,
     },
     GROUP_PERSONALIZE: {
+        PAGE_MATCH_JOB: render_match_job,
         PAGE_BUILD_PROFILE: render_profile_builder,
     },
     GROUP_METHODOLOGY: {PAGE_METHODOLOGY: render_methodology},

@@ -34,7 +34,8 @@ PAGE_HEATMAP = "Skills by Program"
 PAGE_TRENDS = "Rising and Falling Skills"
 PAGE_ROLE_GROUPS = "Job Families"
 PAGE_COURSE_FINDER = "Course Finder"
-PAGE_BUILD_PROFILE = "My Skill Plan"
+PAGE_MATCH_JOB = "Match a Job"
+PAGE_BUILD_PROFILE = "Which Jobs Fit Me"
 PAGE_METHODOLOGY = "Methodology & Limitations"
 
 # The st.session_state keys the sidebar's two radio widgets are bound to
@@ -97,6 +98,19 @@ def jump_to_course_finder(skill_name):
 
     jump_to(GROUP_EXPLORE, PAGE_COURSE_FINDER)
     st.session_state[COURSE_FINDER_SKILLS_KEY] = [skill_name]
+
+
+MATCH_JOB_TEXT_KEY = "match_job_text"
+MATCH_RUN_KEY = "match_run"
+
+
+def start_job_match(job_text):
+    """Callback: open Match a Job with the pasted posting already in place."""
+    import streamlit as st
+
+    jump_to(GROUP_PERSONALIZE, PAGE_MATCH_JOB)
+    st.session_state[MATCH_JOB_TEXT_KEY] = job_text
+    st.session_state[MATCH_RUN_KEY] = False
 
 
 def start_skill_plan(text):

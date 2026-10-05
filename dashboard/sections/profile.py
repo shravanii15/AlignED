@@ -16,7 +16,7 @@ from utils.text import extract_user_skills
 
 def render_profile_builder():
     page_header(
-        "", "My Skill Plan",
+        "", "Which Jobs Fit Me",
         "Paste your skills, resume text, or courses taken. We match them against each family of jobs in the "
         "data and show the best fit, what to learn next, and example postings.",
     )
@@ -31,7 +31,7 @@ def render_profile_builder():
     # The run flag persists in session state so results stay on screen when
     # the visitor clicks the PDF download (which reruns the script) or when
     # the Home page starts the plan with text already entered.
-    if st.button("Make my skill plan", type="primary"):
+    if st.button("Find jobs that fit me", type="primary"):
         st.session_state[PROFILE_RUN_KEY] = True
     if not st.session_state.get(PROFILE_RUN_KEY):
         st.info("Paste your background above and click the button.")

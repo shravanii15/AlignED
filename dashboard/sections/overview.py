@@ -3,8 +3,8 @@
 Built around the two questions a visitor actually arrives with, not
 around the analysis behind them:
 
-  1. "I'm choosing a program: does it teach what employers want?"
-  2. "I want a job: what should I learn?"
+  1. "I found a job: do I match it, what do I learn first?"
+  2. "I am choosing a program: does it teach what employers want?"
 
 Each gets one card with its own action. A real example from the data
 sits underneath, and the deeper data pages are one small row of links.
@@ -16,9 +16,9 @@ from services.database import run_query
 from sections.program_explorer import OVERALL_MARKET_LABEL
 from utils.formatting import evidence_strength, program_label
 from utils.nav import (
-    GROUP_EXPLORE, GROUP_METHODOLOGY,
-    PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_ROLE_GROUPS, PAGE_TRENDS,
-    jump_to, jump_to_program_explorer, start_skill_plan,
+    GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_PERSONALIZE,
+    PAGE_BUILD_PROFILE, PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_ROLE_GROUPS, PAGE_TRENDS,
+    jump_to, jump_to_program_explorer, start_job_match,
 )
 
 # Skill-gap example is only drawn from programs with enough courses that
@@ -57,6 +57,18 @@ def render_overview():
     left, right = st.columns(2, gap="large")
     with left:
         with st.container(border=True):
+            st.markdown('<p class="path-title">I found a job I want</p>', unsafe_allow_html=True)
+            st.markdown('<p class="path-desc">Paste the posting. See which skills it asks for, which you already have, and what to learn first.</p>', unsafe_allow_html=True)
+            job_text = st.text_area(
+                "Job posting", key="home_job_text", height=122,
+                placeholder="Paste a job description here",
+            )
+            st.button(
+                "Check how I match →", key="home_match_btn", type="primary", use_container_width=True,
+                on_click=start_job_match, args=(job_text,),
+            )
+    with right:
+        with st.container(border=True):
             st.markdown('<p class="path-title">I am choosing a program</p>', unsafe_allow_html=True)
             st.markdown('<p class="path-desc">See which skills employers want that a program\'s courses do not mention.</p>', unsafe_allow_html=True)
             program_choice = st.selectbox("Program", programs_df["label"], index=default_idx, key="home_program_choice")
@@ -64,18 +76,6 @@ def render_overview():
             st.button(
                 "Show me the gaps →", key="home_analyze_btn", type="primary", use_container_width=True,
                 on_click=jump_to_program_explorer, args=(program_choice, role_choice),
-            )
-    with right:
-        with st.container(border=True):
-            st.markdown('<p class="path-title">I want to know what to learn</p>', unsafe_allow_html=True)
-            st.markdown('<p class="path-desc">Paste your skills, resume text, or courses. See which jobs fit you and what to learn next.</p>', unsafe_allow_html=True)
-            profile_text = st.text_area(
-                "Your skills", key="home_profile_text", height=122,
-                placeholder="e.g. Python, SQL, statistics, a machine learning course",
-            )
-            st.button(
-                "Make my skill plan →", key="home_plan_btn", type="primary", use_container_width=True,
-                on_click=start_skill_plan, args=(profile_text,),
             )
 
     st.markdown("<br>", unsafe_allow_html=True)
@@ -132,7 +132,8 @@ def render_overview():
 
     # ---- Deeper pages, one quiet row ----
     st.markdown('<p class="section-eyebrow">Dig Deeper</p>', unsafe_allow_html=True)
-    more1, more2, more3, more4 = st.columns(4)
+    more0, more1, more2, more3, more4 = st.columns(5)
+    more0.button("Which jobs fit me", key="more_fit_btn", use_container_width=True, on_click=jump_to, args=(GROUP_PERSONALIZE, PAGE_BUILD_PROFILE))
     more1.button("Skills by program", key="more_heatmap_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP))
     more2.button("Rising and falling skills", key="more_trends_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_TRENDS))
     more3.button("Job families", key="more_families_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_ROLE_GROUPS))

@@ -36,9 +36,10 @@ Scrape course catalogs, extract skills, normalize them to O\*NET, compare each p
 
 Built around two questions: "does this program teach what employers want?" and "what should I learn?"
 
-- **Home:** two starting points, one for choosing a program and one for planning your skills.
+- **Home:** two starting points, one for a job you found and one for choosing a program.
+- **Match a Job:** paste a job posting and your skills to see what you have, what is missing, and what to learn first (ordered by how common each skill is across 1,660 postings), with a copyable summary.
 - **Skill Gaps:** pick a program and a type of job. The top five missing skills appear as cards, each with a button to find courses that mention it and a collapsed "How we know" panel with the statistics. Excel and PDF downloads.
-- **My Skill Plan:** paste your skills to see which job families fit you, what to learn next, and example postings, with a PDF.
+- **Which Jobs Fit Me:** paste your skills to see which job families fit you, what to learn next, and example postings, with a PDF.
 - **Compare Programs:** top gaps for 2 to 3 programs side by side.
 - **Explore the Data:** skills by program, rising and falling skills, job families from embedding-based clustering, and a course search.
 - **Methodology:** how the numbers are produced, and their limits.
