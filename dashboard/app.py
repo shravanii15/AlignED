@@ -378,6 +378,7 @@ st.markdown(
 
     .hero-panel .hero-wordmark { font-size: 2.4rem !important; font-weight: 800 !important; letter-spacing: -0.02em; text-transform: none; color: #FFFFFF !important; margin-bottom: 0.7rem !important; }
     .hero-wordmark .wm-ed { color: #7AA2FF; }
+    .hero-motto { font-size: 0.95rem !important; font-weight: 600 !important; color: #8FA8FF !important; margin: -0.3rem 0 1.1rem 0 !important; letter-spacing: 0.01em; }
     .hero-headline { font-size: 2.5rem !important; font-weight: 800 !important; color: #FFFFFF !important; line-height: 1.15 !important; letter-spacing: -0.02em; margin: 0 0 0.9rem 0 !important; max-width: 520px; }
     .hero-card-sub { font-size: 0.82rem !important; color: #667085 !important; margin: 0.1rem 0 0.6rem !important; }
     .ex-legend { display: flex; gap: 1rem; font-size: 0.75rem; color: #667085; margin-bottom: 0.6rem; }
