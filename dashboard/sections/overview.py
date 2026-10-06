@@ -68,7 +68,7 @@ def render_overview():
                 <span><i class="ad-key ad-key-no"></i>Missing plank</span>
             </div>
             <p class="bridge-caption">Each plank is a skill employers want most. <b>{n_ok} of {len(items)}</b> are solid at
-            {first["university"]} ({first["program_name"]}).</p>
+            {first["university"]}.</p>
         </div>"""
     st.markdown(
         f"""
