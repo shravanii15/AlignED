@@ -45,6 +45,19 @@ def render_trends():
     else:
         st.success(f"{n_fdr_significant} of {len(trends_df)} skills show a trend that held up after correcting for multiple checks.")
 
+    with st.expander("Why does everything say \"no clear trend\"?"):
+        st.markdown(
+            f"""
+            This is the honest result, not a bug.
+
+            - **Many skills are checked at once.** With {len(trends_df)} skills tested, a few will look like they are changing purely by chance. We correct for that, and none of the {n_raw_significant} that looked promising held up.
+            - **The time window is short.** The data covers about 17 weeks, with 2 weeks missing from the source. That is too little time to confirm a trend.
+            - **The numbers are small.** Most skills appear in only 0.1% to 2% of postings, so a rise from 0.3% to 0.5% is a handful of postings.
+
+            More weeks of postings would change this. The project's job-posting pull keeps adding data, so some skills may clear the bar later.
+            """
+        )
+
     st.markdown('<p class="section-eyebrow">Biggest Movers (Early Hints)</p>', unsafe_allow_html=True)
     st.caption("Ordered by how consistent the change is. Only changes that held up under the stricter check are marked confirmed.")
 
