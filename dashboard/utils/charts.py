@@ -20,6 +20,8 @@ GAP_RED = "#D94A4A"
 MARKET_BLUE = "#4C7DFF"
 COVERAGE_GREEN = "#1F9D68"
 
+COLORWAY = ["#315CF5", "#1F9D68", "#F5A524", "#7C3AED", "#D94A4A", "#0E7490"]
+
 TIER_COLOR_MAP = {"high": GAP_RED, "medium": "#E08A3C", "low": COVERAGE_GREEN}
 
 
@@ -35,6 +37,11 @@ def apply_chart_theme(fig, height=None):
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0, title=None),
         hoverlabel=dict(bgcolor="white", font_size=12, bordercolor=BORDER),
     )
+    fig.update_layout(colorway=COLORWAY, bargap=0.3)
+    try:
+        fig.update_layout(barcornerradius=8)  # rounded bar ends (newer Plotly only)
+    except (ValueError, TypeError):
+        pass
     if height:
         fig.update_layout(height=height)
     fig.update_xaxes(showgrid=True, gridcolor=BORDER, gridwidth=1, zeroline=False, linecolor=BORDER)

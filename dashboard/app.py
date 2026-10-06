@@ -442,6 +442,70 @@ st.markdown(
     /* ---- Footer credit line (Overview page). ---- */
     .site-footer { color: var(--text-muted) !important; font-size: 0.85rem !important; }
     .site-footer a { color: var(--brand); text-decoration: none; }
+
+    /* ======== Unified visual system (loaded last so it wins) ========
+       One look for every page: rich gradient bars, card shadows with a
+       colored top edge, navy answer panels, bold section markers. */
+    :root {
+        --grad-blue: linear-gradient(90deg, #7AA2FF 0%, #315CF5 100%);
+        --grad-green: linear-gradient(90deg, #4ADE9A 0%, #1F9D68 100%);
+        --grad-red: linear-gradient(90deg, #FF8A8A 0%, #D94A4A 100%);
+        --grad-navy: linear-gradient(135deg, #0B1220 0%, #1E3A8A 100%);
+        --shadow-card: 0 6px 18px rgba(16, 24, 40, 0.07);
+    }
+    .stApp { background: linear-gradient(180deg, #EEF2FF 0%, #F7F8FA 280px) !important; }
+
+    /* Bars: thicker, rounded, gradient, on a visible track */
+    .signal-track { height: 18px !important; border-radius: 999px !important; background: #E3E8F4 !important; }
+    .gap-bar-track { height: 16px !important; border-radius: 999px !important; background: #E3E8F4 !important; }
+    .signal-fill, .gap-bar-fill, .mini-fill { border-radius: 999px !important; }
+    .signal-fill-coverage, .gap-bar-curriculum { background: var(--grad-green) !important; }
+    .signal-fill-market, .gap-bar-market { background: var(--grad-blue) !important; }
+    .gap-bar-role { background: var(--grad-blue) !important; }
+    .mini-track { height: 12px !important; background: #E3E8F4 !important; }
+    .signal-value, .gap-bar-value { font-weight: 800 !important; }
+    .signal-label { color: #475467 !important; }
+
+    /* Cards */
+    div[data-testid="stVerticalBlockBorderWrapper"] {
+        border-radius: 16px !important;
+        border: 1px solid #DCE3F2 !important;
+        border-top: 4px solid var(--brand) !important;
+        background: #FFFFFF !important;
+        box-shadow: var(--shadow-card) !important;
+    }
+    .vcard, .stat-tile, .result-hero, .course-card, .step { box-shadow: var(--shadow-card) !important; border-color: #DCE3F2 !important; }
+    .vcard-accent { border-top-width: 5px !important; }
+    .result-hero { border-left: 6px solid var(--brand) !important; }
+    .stat-tile-row .stat-tile:nth-child(1) { border-top-color: #315CF5; }
+    .stat-tile-row .stat-tile:nth-child(2) { border-top-color: #D94A4A; }
+    .stat-tile-row .stat-tile:nth-child(3) { border-top-color: #1F9D68; }
+    .stat-tile-row .stat-tile:nth-child(4) { border-top-color: #F5A524; }
+    .stat-tile-value { color: #0B1220 !important; font-size: 1.9rem !important; }
+
+    /* Answer panel: same navy gradient as the hero banners */
+    .answer-banner { background: var(--grad-navy) !important; border: none !important; border-radius: 16px !important; padding: 1.3rem 1.6rem 0.8rem 1.6rem !important; box-shadow: var(--shadow-card); }
+    .answer-banner-label { color: #8FA8FF !important; }
+    .answer-banner-text { color: #FFFFFF !important; font-size: 1.25rem !important; }
+    .answer-banner-sub { color: #C7D2FE !important; }
+    .answer-banner .signal-track { background: rgba(255,255,255,0.22) !important; }
+    .answer-banner .skill-chip-missing { background: #FFFFFF; color: #B42318 !important; border-color: #FFFFFF; }
+
+    /* Rank badges, chips, section markers */
+    .skill-rank { background: var(--grad-blue) !important; width: 2rem !important; height: 2rem !important; font-size: 0.9rem !important; box-shadow: 0 3px 8px rgba(49,92,245,0.35); }
+    .skill-chip { font-weight: 700 !important; border-radius: 999px !important; padding: 0.32rem 0.85rem !important; }
+    .skill-chip-have { background: #D8F5E6 !important; border-color: #A9E4C5 !important; color: #0E5E3D !important; }
+    .skill-chip-missing { background: #FDE2E2 !important; border-color: #F7BDBD !important; color: #A8261F !important; }
+    .section-eyebrow { color: #1D2939 !important; font-size: 0.82rem !important; display: flex; align-items: center; gap: 0.55rem; }
+    .section-eyebrow::before { content: ""; width: 5px; height: 1.05rem; border-radius: 3px; background: var(--grad-blue); display: inline-block; }
+
+    /* Buttons */
+    button[kind="primary"] { background: linear-gradient(135deg, #4C7DFF 0%, #315CF5 100%) !important; border: none !important; border-radius: 10px !important; box-shadow: 0 4px 12px rgba(49,92,245,0.35) !important; }
+    button[kind="primary"]:hover { filter: brightness(1.08); }
+    button[kind="secondary"] { border-radius: 10px !important; border-color: #C9D3EE !important; font-weight: 600 !important; }
+    button[kind="secondary"]:hover { border-color: var(--brand) !important; color: var(--brand) !important; }
+    div[data-testid="stDataFrame"] { border: 1px solid #DCE3F2; border-radius: 12px; box-shadow: var(--shadow-card); }
+    div[data-testid="stAlert"] { border-radius: 12px !important; }
     </style>
     """,
     unsafe_allow_html=True,
