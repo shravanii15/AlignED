@@ -393,6 +393,20 @@ st.markdown(
     .ex-fill { height: 100%; border-radius: 999px; }
     .ex-fill-m { background: #4C7DFF; } .ex-fill-c { background: #1F9D68; }
 
+
+    /* ---- Home hero example: ring + checklist ---- */
+    .chk-head { display: flex; align-items: center; gap: 0.9rem; margin: 0.5rem 0 0.8rem 0; }
+    .chk-head .ring-wrap { flex: 0 0 auto; }
+    .chk-title { font-size: 1rem !important; font-weight: 800 !important; color: #101828 !important; line-height: 1.3 !important; margin: 0 !important; }
+    .chk-row { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0; border-top: 1px solid #EEF1F6; font-size: 0.85rem; }
+    .chk-icon { flex: 0 0 auto; width: 1.5rem; height: 1.5rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; color: #FFFFFF; }
+    .chk-ok { background: #1F9D68; } .chk-warn { background: #F5A524; } .chk-no { background: #D94A4A; }
+    .chk-skill { font-weight: 800; color: #101828; width: 5.2rem; flex: 0 0 auto; }
+    .chk-demand { color: #667085; flex: 1; font-size: 0.78rem; }
+    .chk-tag { font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 999px; white-space: nowrap; }
+    .chk-tag-ok { background: #D8F5E6; color: #0E5E3D; } .chk-tag-warn { background: #FEF0CC; color: #8A5A00; } .chk-tag-no { background: #FDE2E2; color: #A8261F; }
+    .hero-card { flex: 0 1 430px !important; }
+
     /* ---- Page banner (every inner page) ---- */
     .page-banner {
         display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;

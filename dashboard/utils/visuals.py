@@ -10,13 +10,13 @@ RING_RADIUS = 52
 RING_CIRCUMFERENCE = 2 * 3.14159265 * RING_RADIUS
 
 
-def ring_svg(fraction, center_text, caption="", color="#1F9D68"):
+def ring_svg(fraction, center_text, caption="", color="#1F9D68", size=140):
     """Donut progress ring. `fraction` in 0..1."""
     fraction = max(0.0, min(1.0, fraction))
     dash = RING_CIRCUMFERENCE * fraction
     return (
         '<div class="ring-wrap">'
-        '<svg viewBox="0 0 140 140" width="140" height="140" aria-hidden="true">'
+        f'<svg viewBox="0 0 140 140" width="{size}" height="{size}" aria-hidden="true">'
         f'<circle cx="70" cy="70" r="{RING_RADIUS}" fill="none" stroke="#E4E7EC" stroke-width="14"/>'
         f'<circle cx="70" cy="70" r="{RING_RADIUS}" fill="none" stroke="{color}" stroke-width="14" stroke-linecap="round" '
         f'stroke-dasharray="{dash:.1f} {RING_CIRCUMFERENCE:.1f}" transform="rotate(-90 70 70)"/>'
