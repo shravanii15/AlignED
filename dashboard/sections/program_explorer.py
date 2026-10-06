@@ -100,6 +100,23 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
 STRENGTHS_SHOWN = 6
 
 
+def _strengths(program_id):
+    """(skill, n_courses) pairs most often named in the program's course descriptions."""
+    covered = run_query(
+        """
+        SELECT s.canonical_name, COUNT(DISTINCT e.source_id) AS n_courses
+        FROM extractions e
+        JOIN courses c ON c.course_id = CAST(e.source_id AS INTEGER)
+        JOIN skills s ON s.skill_id = e.skill_id
+        WHERE e.source_type = 'course' AND e.method = 'baseline_keyword' AND c.program_id = ?
+        GROUP BY s.skill_id ORDER BY n_courses DESC, s.canonical_name
+        """,
+        (program_id,),
+    )
+    covered = covered[~covered["canonical_name"].str.strip().str.lower().isin(AMBIGUOUS_GENERIC_TERMS)].head(STRENGTHS_SHOWN)
+    return [(r["canonical_name"], int(r["n_courses"])) for _, r in covered.iterrows()]
+
+
 def _render_strengths(program_id, course_count):
     """What the program's course descriptions DO name, so each program has
     its own profile and the page is not only a list of what is missing."""
@@ -284,7 +301,7 @@ def render_program_explorer():
         pdf_bytes = build_pdf_report(
             selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
             scope_display_name=scope_display_name, scope_total_postings=scope_total_postings,
-            true_gap_count=true_gap_count,
+            true_gap_count=true_gap_count, strengths=_strengths(program_id),
         )
         st.download_button(
             "Download PDF", data=pdf_bytes, file_name=base_name + ".pdf",
