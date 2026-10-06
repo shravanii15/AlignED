@@ -8,6 +8,7 @@ from services.database import run_query
 from utils.charts import TIER_COLOR_MAP, apply_chart_theme
 from utils.formatting import program_label
 from utils.layout import page_header
+from utils.visuals import mini_bar
 
 
 def render_compare():
@@ -43,20 +44,39 @@ def render_compare():
         all_gap_rows.append(recs)
 
         with col:
-            with st.container(border=True):
-                st.markdown(f'<p class="signal-eyebrow">{prog["university"]}</p>', unsafe_allow_html=True)
-                st.markdown(f'<p class="signal-title">{prog["program_name"]}</p>', unsafe_allow_html=True)
-                st.caption(f"{course_count} courses analyzed")
-                if recs.empty:
-                    st.write("No significant gaps found.")
-                else:
-                    for _, row in recs.iterrows():
-                        color = TIER_COLOR_MAP.get(row["priority_tier"], "#667085")
-                        st.markdown(
-                            f'<div class="compare-row"><span class="compare-skill">{row["canonical_name"]}</span>'
-                            f'<span class="compare-gap" style="color:{color} !important;">+{row["gap_value"]*100:.0f} pts</span></div>',
-                            unsafe_allow_html=True,
-                        )
+            max_gap = max(float(recs["gap_value"].max()), 0.01) if not recs.empty else 0.01
+            rows_html = "".join(
+                f'<div class="vcard-row"><span class="vcard-name">{r["canonical_name"]}</span>'
+                f'{mini_bar(r["gap_value"] / max_gap, TIER_COLOR_MAP.get(r["priority_tier"], "#667085"))}'
+                f'<span class="vcard-val">{r["gap_value"]*100:.0f} pts</span></div>'
+                for _, r in recs.iterrows()
+            ) or "<p>No significant gaps found.</p>"
+            st.markdown(
+                f"""
+                <div class="vcard vcard-accent">
+                    <p class="signal-eyebrow">{prog["university"]}</p>
+                    <p class="vcard-title">{prog["program_name"]}</p>
+                    <p class="vcard-sub">{course_count} courses analyzed</p>
+                    {rows_html}
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+    nonempty = [set(r["canonical_name"]) for r in all_gap_rows if not r.empty]
+    if len(nonempty) >= 2:
+        shared = sorted(set.intersection(*nonempty))
+        st.markdown("<br>", unsafe_allow_html=True)
+        if shared:
+            chips = "".join(f'<span class="skill-chip skill-chip-missing">{n}</span>' for n in shared)
+            st.markdown(
+                f'<div class="result-hero"><div class="result-hero-text"><p class="result-hero-label">In common</p>'
+                f'<p class="result-hero-title">{len(shared)} top gaps show up in every program you picked.</p>'
+                f'<div class="skill-chip-row">{chips}</div></div></div>',
+                unsafe_allow_html=True,
+            )
+        else:
+            st.info("These programs have no top gaps in common, so they differ in what they leave out.")
 
     combined = pd.concat([r for r in all_gap_rows if not r.empty], ignore_index=True) if any(not r.empty for r in all_gap_rows) else pd.DataFrame()
     if not combined.empty:

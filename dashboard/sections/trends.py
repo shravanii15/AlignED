@@ -11,6 +11,7 @@ import streamlit as st
 
 from services.database import run_query
 from utils.layout import page_header
+from utils.visuals import mini_bar, stat_tiles
 
 SIGNIFICANCE_THRESHOLD = 0.05
 TOP_SIGNALS_SHOWN = 10
@@ -48,18 +49,34 @@ def render_trends():
     st.caption("Ordered by how consistent the change is. Only changes that held up under the stricter check are marked confirmed.")
 
     top_signals = trends_df.head(TOP_SIGNALS_SHOWN).copy()
-    for _, row in top_signals.iterrows():
+    max_rate = max(float(top_signals[["first_half_rate", "second_half_rate"]].max().max()), 0.01)
+    rising = int((top_signals["slope"] > 0).sum())
+    stat_tiles([
+        (str(len(trends_df)), "skills tracked"),
+        (str(rising), "of the top movers rising"),
+        (str(len(top_signals) - rising), "of the top movers falling"),
+        (str(n_fdr_significant), "confirmed trends"),
+    ])
+    cols = st.columns(2, gap="medium")
+    for i, (_, row) in enumerate(top_signals.iterrows()):
         confirmed = row["q_value"] < SIGNIFICANCE_THRESHOLD
-        direction = "Rising" if row["slope"] > 0 else "Falling"
-        badge = f"{direction}, confirmed" if confirmed else f"{direction} (early hint, not confirmed)"
-        with st.container(border=True):
-            st.markdown(f'<p class="signal-skill-name" style="font-size:1.15rem !important; margin-bottom:0.2rem;">{row["canonical_name"]}</p>', unsafe_allow_html=True)
-            st.caption(badge)
-            sig_col1, sig_col2, sig_col3 = st.columns(3)
-            sig_col1.metric("Change per week", f"{row['slope']*100:+.2f} pts")
-            sig_col2.metric("Earlier weeks", f"{row['first_half_rate']*100:.1f}%")
-            sig_col3.metric("Later weeks", f"{row['second_half_rate']*100:.1f}%")
-    
+        up = row["slope"] > 0
+        chip = f'<span class="arrow-chip {"arrow-up" if up else "arrow-down"}">{"▲ Rising" if up else "▼ Falling"}</span>'
+        status = "confirmed" if confirmed else "early hint"
+        color = "#1F9D68" if up else "#D94A4A"
+        with cols[i % 2]:
+            st.markdown(
+                f"""
+                <div class="vcard vcard-accent" style="border-top-color:{color}; margin-bottom:0.9rem;">
+                    <p class="vcard-title">{row["canonical_name"]} &nbsp;{chip}</p>
+                    <p class="vcard-sub">{status} &middot; {row["slope"]*100:+.2f} pts per week</p>
+                    <div class="vcard-row"><span class="vcard-name">Earlier weeks</span>{mini_bar(row["first_half_rate"] / max_rate, "#98A2B3")}<span class="vcard-val">{row["first_half_rate"]*100:.1f}%</span></div>
+                    <div class="vcard-row"><span class="vcard-name">Later weeks</span>{mini_bar(row["second_half_rate"] / max_rate, color)}<span class="vcard-val">{row["second_half_rate"]*100:.1f}%</span></div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
     st.markdown('<p class="section-eyebrow">All Tracked Skills</p>', unsafe_allow_html=True)
     st.caption("Full table with the statistics (p-value and FDR-adjusted q-value).")
 

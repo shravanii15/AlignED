@@ -1,11 +1,17 @@
 """sections/course_finder.py: search/filter courses across all 13 programs
 by keyword or tracked skill."""
 
+import html
+
 import streamlit as st
 
 from services.database import run_query
 from utils.layout import page_header
 from utils.nav import COURSE_FINDER_SKILLS_KEY
+
+
+def _pick_skill(skill):
+    st.session_state[COURSE_FINDER_SKILLS_KEY] = [skill]
 
 
 def render_course_finder():
@@ -48,12 +54,26 @@ def render_course_finder():
     base_query += " LIMIT 100"
 
     if not search_text and not skill_filter:
-        st.info("Enter a search term or pick a skill to find matching courses.")
+        st.markdown('<p class="section-eyebrow">Popular Skills to Try</p>', unsafe_allow_html=True)
+        popular = [s for s in ["Python", "SQL", "Docker", "Kubernetes", "Git", "Linux", "AWS", "Tableau"] if s in valid_skills]
+        for col, skill in zip(st.columns(len(popular) or 1), popular):
+            col.button(skill, key=f"cf_pop_{skill}", use_container_width=True, on_click=_pick_skill, args=(skill,))
+        st.caption("Click a skill to see every course across the 13 programs that mentions it.")
         return
 
     results = run_query(base_query, tuple(params))
     st.markdown(f'<p class="section-eyebrow">{len(results)} matching courses (showing up to 100)</p>', unsafe_allow_html=True)
     for _, row in results.iterrows():
-        with st.expander(f"{row['course_name']} · {row['university']}"):
-            st.caption(row["program_name"])
-            st.write(row["description"] or "(no description available)")
+        desc = (row["description"] or "(no description available)").strip()
+        if len(desc) > 320:
+            desc = desc[:320].rsplit(" ", 1)[0] + "..."
+        st.markdown(
+            f"""
+            <div class="course-card">
+                <p class="course-card-title">{html.escape(row["course_name"])}</p>
+                <p class="course-card-uni">{html.escape(row["university"])} &middot; {html.escape(row["program_name"])}</p>
+                <p class="course-card-desc">{html.escape(desc)}</p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )

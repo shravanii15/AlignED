@@ -12,6 +12,7 @@ from utils.formatting import format_posting_details
 from utils.layout import page_header
 from utils.nav import PROFILE_RUN_KEY, PROFILE_TEXT_KEY
 from utils.text import extract_user_skills
+from utils.visuals import ring_svg
 
 
 def render_profile_builder():
@@ -98,7 +99,22 @@ def render_profile_builder():
         })
     role_matches_df = pd.DataFrame(match_rows).sort_values("match_score", ascending=False).reset_index(drop=True)
 
-    st.markdown('<p class="section-eyebrow">Jobs That Fit You Best</p>', unsafe_allow_html=True)
+    best = role_matches_df.iloc[0]
+    st.markdown(
+        f"""
+        <div class="result-hero">
+            {ring_svg(best["match_score"], f'{int(best["skills_covered"])}/{int(best["n_core_skills"])}', "top skills covered", "#315CF5")}
+            <div class="result-hero-text">
+                <p class="result-hero-label">Your best fit</p>
+                <p class="result-hero-title">{best["role_label"]}</p>
+                <p class="result-hero-sub">You already mention {int(best["skills_covered"])} of the {int(best["n_core_skills"])} most requested skills for this kind of job. {len(matched_skill_ids)} skills were detected in your text.</p>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown('<p class="section-eyebrow">All Job Families, Ranked</p>', unsafe_allow_html=True)
     st.caption("Shows how many of a job family's most requested skills your text mentions. It is a simple count, not a score.")
     for _, row in role_matches_df.head(5).iterrows():
         pct = min(row["match_score"], 1.0) * 100

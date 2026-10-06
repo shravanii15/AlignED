@@ -13,6 +13,7 @@ from services.database import run_query
 from utils.charts import BRAND, apply_chart_theme
 from utils.formatting import format_posting_details
 from utils.layout import page_header
+from utils.visuals import mini_bar
 
 
 def render_clusters():
@@ -45,21 +46,38 @@ def render_clusters():
                 f"The silhouette score is modest ({silhouette:.2f}), which is expected when related roles use similar language."
             )
 
-    chart_col, pie_col = st.columns([3, 2])
-    with chart_col:
-        st.markdown('<p class="section-eyebrow">Postings per Family</p>', unsafe_allow_html=True)
-        chart_df = clusters_df.sort_values("n_postings", ascending=True)
-        fig = px.bar(chart_df, x="n_postings", y="role_label", orientation="h", labels={"n_postings": "Sampled postings", "role_label": ""})
-        fig.update_traces(marker_color=BRAND)
-        apply_chart_theme(fig, height=420)
-        st.plotly_chart(fig, use_container_width=True)
-    with pie_col:
-        st.markdown('<p class="section-eyebrow">Share of Sample</p>', unsafe_allow_html=True)
-        fig_pie = px.pie(clusters_df, names="role_label", values="n_postings", hole=0.55)
-        fig_pie.update_traces(textposition="inside", textinfo="percent")
-        apply_chart_theme(fig_pie, height=420)
-        fig_pie.update_layout(showlegend=False)
-        st.plotly_chart(fig_pie, use_container_width=True)
+    total_postings = max(int(clusters_df["n_postings"].sum()), 1)
+    top_skills = run_query(
+        """
+        SELECT pcm.cluster_id, s.canonical_name, COUNT(DISTINCT e.source_id) AS n
+        FROM extractions e
+        JOIN posting_cluster_map pcm ON pcm.posting_id = e.source_id
+        JOIN skills s ON s.skill_id = e.skill_id
+        WHERE e.source_type = 'posting' AND e.method = 'baseline_keyword'
+        GROUP BY pcm.cluster_id, s.skill_id
+        """
+    )
+    palette = ["#315CF5", "#1F9D68", "#7C3AED", "#E08A3C", "#0E7490", "#D94A4A", "#4C7DFF", "#B45309", "#475569", "#BE185D"]
+    st.markdown('<p class="section-eyebrow">The Families</p>', unsafe_allow_html=True)
+    cols = st.columns(3, gap="medium")
+    for i, (_, fam) in enumerate(clusters_df.iterrows()):
+        share = fam["n_postings"] / total_postings
+        skills = top_skills[top_skills["cluster_id"] == fam["cluster_id"]].sort_values("n", ascending=False).head(4)
+        chips = "".join(f'<span class="skill-chip skill-chip-have">{n}</span>' for n in skills["canonical_name"])
+        color = palette[i % len(palette)]
+        with cols[i % 3]:
+            st.markdown(
+                f"""
+                <div class="vcard vcard-accent" style="border-top-color:{color}; margin-bottom:0.9rem;">
+                    <p class="vcard-title">{fam["role_label"]}</p>
+                    <p class="vcard-sub">{int(fam["n_postings"])} postings &middot; {share*100:.0f}% of the sample</p>
+                    {mini_bar(share / (clusters_df["n_postings"].max() / total_postings), color)}
+                    <p class="vcard-sub" style="margin-top:0.7rem !important;">Most asked for</p>
+                    <div class="skill-chip-row">{chips or "No tracked skills"}</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
     st.markdown('<p class="section-eyebrow">Browse Postings in a Family</p>', unsafe_allow_html=True)
     cluster_choice = st.selectbox("Job family", clusters_df["role_label"])

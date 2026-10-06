@@ -337,6 +337,37 @@ st.markdown(
        thin bottom rule and large title instead of a filled colored
        box, reads as a document heading, not a UI chrome element. ---- */
 
+
+    /* ---- Visual components: ring, stat tiles, cards ---- */
+    .ring-wrap { text-align: center; }
+    .ring-caption { font-size: 0.8rem !important; color: var(--text-muted) !important; margin-top: -0.2rem; }
+    .stat-tile-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin: 0 0 1.2rem 0; }
+    .stat-tile { flex: 1 1 150px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 0.9rem 1.1rem; border-top: 4px solid var(--brand); }
+    .stat-tile-value { font-size: 1.7rem !important; font-weight: 800 !important; color: var(--text) !important; line-height: 1.15; }
+    .stat-tile-label { font-size: 0.8rem !important; color: var(--text-muted) !important; margin-top: 0.15rem; }
+    .mini-track { height: 8px; background: #F1F3F6; border-radius: 999px; overflow: hidden; }
+    .mini-fill { height: 100%; border-radius: 999px; }
+    .result-hero { display: flex; flex-wrap: wrap; align-items: center; gap: 1.6rem; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 1.4rem 1.8rem; margin-bottom: 1rem; }
+    .result-hero-text { flex: 1 1 300px; }
+    .result-hero-label { font-size: 0.72rem !important; font-weight: 700 !important; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand) !important; margin: 0 !important; }
+    .result-hero-title { font-size: 1.6rem !important; font-weight: 800 !important; color: var(--text) !important; line-height: 1.25 !important; margin: 0.2rem 0 0.4rem !important; }
+    .result-hero-sub { font-size: 0.95rem !important; color: var(--text-muted) !important; margin: 0 !important; }
+    .vcard { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.1rem 1.2rem; height: 100%; }
+    .vcard-accent { border-top: 5px solid var(--brand); }
+    .vcard-title { font-size: 1.1rem !important; font-weight: 800 !important; color: var(--text) !important; margin: 0 0 0.15rem 0 !important; line-height: 1.3 !important; }
+    .vcard-sub { font-size: 0.8rem !important; color: var(--text-muted) !important; margin: 0 0 0.7rem 0 !important; }
+    .vcard-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.45rem; font-size: 0.85rem; }
+    .vcard-row .vcard-name { width: 7.2rem; color: var(--text); font-weight: 600; flex: 0 0 auto; }
+    .vcard-row .mini-track { flex: 1; }
+    .vcard-row .vcard-val { width: 3.2rem; text-align: right; font-weight: 700; color: var(--text); }
+    .arrow-chip { display: inline-block; font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.6rem; border-radius: 999px; }
+    .arrow-up { background: var(--coverage-green-soft); color: var(--coverage-green); }
+    .arrow-down { background: var(--gap-red-soft); color: var(--gap-red); }
+    .course-card { background: var(--surface); border: 1px solid var(--border); border-left: 5px solid var(--brand); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 0.7rem; }
+    .course-card-title { font-size: 1rem !important; font-weight: 700 !important; color: var(--text) !important; margin: 0 !important; }
+    .course-card-uni { font-size: 0.78rem !important; font-weight: 600 !important; color: var(--brand) !important; margin: 0.1rem 0 0.4rem !important; }
+    .course-card-desc { font-size: 0.85rem !important; color: var(--text-muted) !important; line-height: 1.5 !important; margin: 0 !important; }
+
     /* ---- Page banner (every inner page) ---- */
     .page-banner {
         display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;

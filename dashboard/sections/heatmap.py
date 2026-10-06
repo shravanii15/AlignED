@@ -8,6 +8,7 @@ import streamlit as st
 from services.database import run_query
 from utils.charts import apply_chart_theme
 from utils.layout import page_header
+from utils.visuals import stat_tiles
 
 
 def render_heatmap():
@@ -112,6 +113,15 @@ def render_heatmap():
             hovertemplate="Program: %{y}<br>Skill: %{x}<br>Courses mentioning it: %{z:.1%}<extra></extra>",
         )
     )
+    best_skill = matrix.max(axis=0).idxmax()
+    best_prog = matrix.mean(axis=1).idxmax()
+    blank = float((matrix.values == 0).mean())
+    stat_tiles([
+        (f"{blank*100:.0f}%", "of cells have no course mentioning the skill"),
+        (str(best_skill), f"most mentioned skill ({matrix[best_skill].max()*100:.0f}% of one program's courses)"),
+        (str(best_prog), "program mentioning these skills most"),
+        (f"{data_max*100:.0f}%", "highest single value"),
+    ])
     apply_chart_theme(fig, height=max(420, len(matrix.index) * 34))
     fig.update_layout(xaxis_tickangle=-35)
     fig.update_xaxes(showgrid=False)

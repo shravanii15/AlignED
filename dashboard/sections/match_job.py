@@ -15,6 +15,7 @@ from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.layout import page_header
 from utils.nav import MATCH_RUN_KEY, jump_to_course_finder
 from utils.text import extract_user_skills
+from utils.visuals import ring_svg
 
 JOB_TEXT_KEY = "match_job_text"
 MY_SKILLS_KEY = "match_my_skills"
@@ -105,23 +106,24 @@ def render_match_job():
 
     # ---- Headline ----
     if my_text.strip():
-        pct = len(have) / n_total * 100
+        frac = len(have) / n_total
         headline = f"You have {len(have)} of the {n_total} skills this job asks for."
         sub = "Learn the missing ones below, starting with the most common." if missing else "You cover every skill we could detect in this posting."
-        track = (
-            f'<div class="signal-track" style="height:14px;"><div class="signal-fill signal-fill-coverage" style="width:{pct:.0f}%"></div></div>'
-        )
+        color = "#1F9D68" if frac >= 0.67 else ("#F5A524" if frac >= 0.34 else "#D94A4A")
+        ring = ring_svg(frac, f"{len(have)}/{n_total}", "skills matched", color)
     else:
         headline = f"This job asks for {n_total} skills we can detect."
         sub = "Add your skills above and click Check my match to see how you compare."
-        track = ""
+        ring = ring_svg(0, str(n_total), "skills in the posting", "#4C7DFF")
     st.markdown(
         f"""
-        <div class="answer-banner">
-            <p class="answer-banner-label">Your match</p>
-            <p class="answer-banner-text">{headline}</p>
-            {track}
-            <p class="answer-banner-sub">{sub}</p>
+        <div class="result-hero">
+            {ring}
+            <div class="result-hero-text">
+                <p class="result-hero-label">Your match</p>
+                <p class="result-hero-title">{headline}</p>
+                <p class="result-hero-sub">{sub}</p>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
