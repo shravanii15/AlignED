@@ -84,6 +84,55 @@ def load_true_sets(gold_labels):
     return true_sets
 
 
+class PredictionValidationError(ValueError):
+    """Raised when a predictions file cannot be trusted as a complete,
+    well-formed benchmark input. Metrics are never computed or saved when
+    this is raised."""
+
+
+def validate_predictions(name, gold_ids, predictions):
+    """Fail closed: a benchmark is only valid if the predictions cover
+    exactly the gold-set items. Checks, for one extractor's output:
+      - the file is a list of dict entries, each with a string "id"
+      - no duplicate ids
+      - no ids that are not in the gold set
+      - no gold-set ids missing (an interrupted LLM run, for example)
+      - every entry has a "predicted_skills" list of {"term": str} dicts
+    Raises PredictionValidationError listing every problem found. Without
+    this, an incomplete run silently scored its missing items as zero and
+    wrote a legitimate-looking evaluation_results.json."""
+    problems = []
+    if not isinstance(predictions, list):
+        raise PredictionValidationError(f"{name}: predictions must be a list of entries, got {type(predictions).__name__}")
+
+    seen = set()
+    duplicates = set()
+    for index, item in enumerate(predictions):
+        if not isinstance(item, dict) or not isinstance(item.get("id"), str):
+            problems.append(f"entry #{index} is malformed (needs a dict with a string 'id')")
+            continue
+        item_id = item["id"]
+        if item_id in seen:
+            duplicates.add(item_id)
+        seen.add(item_id)
+        skills = item.get("predicted_skills")
+        if not isinstance(skills, list) or not all(isinstance(p, dict) and isinstance(p.get("term"), str) for p in skills):
+            problems.append(f"{item_id}: 'predicted_skills' must be a list of dicts with a string 'term'")
+
+    gold_ids = set(gold_ids)
+    missing = sorted(gold_ids - seen)
+    unknown = sorted(seen - gold_ids)
+    if duplicates:
+        problems.append(f"duplicate ids: {sorted(duplicates)}")
+    if unknown:
+        problems.append(f"ids not in the gold set: {unknown}")
+    if missing:
+        problems.append(f"missing {len(missing)} gold-set id(s): {missing}")
+
+    if problems:
+        raise PredictionValidationError(f"{name} predictions are not a valid benchmark input:\n  - " + "\n  - ".join(problems))
+
+
 def load_predicted_sets(predictions):
     """Build {item_id: set_of_normalized_predicted_terms} from either
     extractor's output file (both extract_baseline.py and extract_llm.py
@@ -171,26 +220,17 @@ def main():
     print(f"Loading baseline predictions from: {BASELINE_PREDICTIONS_PATH}")
     with open(BASELINE_PREDICTIONS_PATH, "r", encoding="utf-8") as f:
         baseline_predictions = json.load(f)
-    baseline_sets = load_predicted_sets(baseline_predictions)
 
     print(f"Loading LLM predictions from: {LLM_PREDICTIONS_PATH}")
     with open(LLM_PREDICTIONS_PATH, "r", encoding="utf-8") as f:
         llm_predictions = json.load(f)
-    llm_sets = load_predicted_sets(llm_predictions)
 
-    # Sanity check: warn (don't crash) if either predictions file doesn't
-    # cover every gold-set item, this can legitimately happen if
-    # extract_llm.py was stopped partway through a long local-inference
-    # run, and the user deserves to know her comparison might be
-    # incomplete rather than getting a silently skewed number.
-    for name, predicted_sets in [("baseline", baseline_sets), ("LLM", llm_sets)]:
-        missing = set(true_sets.keys()) - set(predicted_sets.keys())
-        if missing:
-            print(
-                f"  !! WARNING: {name} predictions are missing "
-                f"{len(missing)} item(s) present in the gold set: "
-                f"{sorted(missing)}"
-            )
+    # Validate BEFORE computing anything. Any problem raises, so a partial
+    # or malformed run can never produce or overwrite evaluation_results.json.
+    validate_predictions("baseline", true_sets.keys(), baseline_predictions)
+    validate_predictions("LLM", true_sets.keys(), llm_predictions)
+    baseline_sets = load_predicted_sets(baseline_predictions)
+    llm_sets = load_predicted_sets(llm_predictions)
 
     baseline_metrics = compute_micro_metrics(true_sets, baseline_sets)
     llm_metrics = compute_micro_metrics(true_sets, llm_sets)

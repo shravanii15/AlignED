@@ -13,14 +13,26 @@ What this script does, in plain terms:
 import json
 import os
 import sqlite3
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from db_utils import atomic_replace, foreign_key_violations  # noqa: E402
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # .../AlignED
-DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
+DB_PATH = os.environ.get("ALIGNED_DB_PATH") or os.path.join(BASE_DIR, "database", "aligned.db")
 SCHEMA_PATH = os.path.join(BASE_DIR, "database", "schema.sql")
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
-print(f"Building database at: {DB_PATH}")
-conn = sqlite3.connect(DB_PATH)
+# Build into a temporary file and only swap it into place once it is
+# complete and passes PRAGMA foreign_key_check. A failed rebuild therefore
+# never destroys the working database, and there is nothing to DELETE
+# (the old approach deleted courses and programs in place, which fails with
+# a FOREIGN KEY error once gap_scores/recommendations reference them).
+BUILD_PATH = DB_PATH + ".new"
+if os.path.exists(BUILD_PATH):
+    os.remove(BUILD_PATH)
+print(f"Building database at: {BUILD_PATH} (will replace {DB_PATH} when complete)")
+conn = sqlite3.connect(BUILD_PATH)
 conn.execute("PRAGMA foreign_keys = ON")
 cur = conn.cursor()
 
@@ -30,12 +42,8 @@ with open(SCHEMA_PATH) as f:
 print("Tables created.\n")
 
 # Step 2: load each scraped program + its real courses.
-# Clear out any courses/programs from a previous run first, so running
-# this script twice gives the same clean result instead of duplicates -
-# this script is meant to rebuild from the source files every time,
-# not add to whatever was there before.
-cur.execute("DELETE FROM courses")
-cur.execute("DELETE FROM programs")
+# The database is built fresh, so there is nothing to clear first. Running
+# this script again rebuilds from the source files every time.
 
 # Every program we've successfully scraped so far. As we scrape more
 # of the 15, we just add a line here - nothing else needs to change.
@@ -193,5 +201,11 @@ print("\nSample courses pulled back out of the database:")
 for row in cur.fetchall():
     print(" -", row[0], "-", row[1])
 
+violations = foreign_key_violations(conn)
 conn.close()
+if violations:
+    os.remove(BUILD_PATH)
+    raise SystemExit(f"Rebuild aborted, foreign key violations in the new database: {violations[:3]}")
+atomic_replace(BUILD_PATH, DB_PATH)
 print("\nDatabase built and verified successfully.")
+print("NOTE: this is a fresh database. Re-run the later stages (build_lookup_tables, extraction, gap scoring, recommendations) to repopulate it.")

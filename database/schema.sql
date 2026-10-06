@@ -109,6 +109,7 @@ CREATE TABLE IF NOT EXISTS gap_scores (
     market_demand_rate REAL,         -- fraction of postings that mention the skill
     gap_value REAL,                  -- market_demand_rate - program_coverage_rate (positive = real gap)
     p_value REAL,                    -- raw two-proportion z-test p-value, before correction
+    test_method TEXT,                -- 'z_test' or 'fisher_exact' (exact test used when expected cell counts < 5)
     q_value REAL,                    -- Benjamini-Hochberg FDR-corrected p-value, adjusted for running
                                       -- ~70 tests per program at once (this is what actually decides
                                       -- significance -- see compute_gap_scores.py for why)

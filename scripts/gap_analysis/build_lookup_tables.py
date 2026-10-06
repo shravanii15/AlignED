@@ -29,9 +29,13 @@ courses/programs.
 import json
 import os
 import sqlite3
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from db_utils import clear_table_and_dependents  # noqa: E402
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # .../AlignED
-DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
+DB_PATH = os.environ.get("ALIGNED_DB_PATH") or os.path.join(BASE_DIR, "database", "aligned.db")
 TAXONOMY_DIR = os.path.join(BASE_DIR, "data", "taxonomy")
 CLUSTERING_DIR = os.path.join(BASE_DIR, "data", "clustering")
 
@@ -66,7 +70,9 @@ def populate_skills(conn):
     """Load the O*NET vocabulary and insert one row per unique skill/
     knowledge/technology term into the `skills` table."""
     cur = conn.cursor()
-    cur.execute("DELETE FROM skills")
+    # extractions, gap_scores, recommendations and skill_trends all reference
+    # skills, so they are cleared first (they are recomputed by later stages).
+    clear_table_and_dependents(conn, "skills")
 
     with open(SKILLS_PATH, "r", encoding="utf-8") as f:
         skills_and_knowledge = json.load(f)
@@ -106,8 +112,12 @@ def populate_postings_and_clusters(conn):
     - link every posting to its cluster in `posting_cluster_map`
     """
     cur = conn.cursor()
-    cur.execute("DELETE FROM posting_cluster_map")
-    cur.execute("DELETE FROM role_clusters")
+    # role_clusters is referenced by posting_cluster_map, gap_scores and
+    # recommendations; clear those first, in dependency order.
+    clear_table_and_dependents(
+        conn, "role_clusters",
+        extra_deletes=[("DELETE FROM extractions WHERE source_type = 'posting' AND source_id LIKE 'kaggle_%'", ())],
+    )
     cur.execute("DELETE FROM postings WHERE source = 'kaggle_sample'")
 
     with open(POSTING_CLUSTERS_PATH, "r", encoding="utf-8") as f:

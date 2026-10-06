@@ -184,7 +184,7 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
     write_line("Methodology & sources", size=12, bold=True, color=(30, 58, 138))
     write_line(
         clean(
-            "Skill taxonomy: U.S. Department of Labor O*NET. Significance: two-proportion z-test per skill, "
+            "Skill taxonomy: U.S. Department of Labor O*NET. Significance: two-proportion z-test per skill (Fisher's exact test when counts are small), "
             "Benjamini-Hochberg FDR-corrected across every skill tested for this program+scope together (not "
             "individually) to control for the multiple-comparisons problem. Data: a fixed, dated sample of "
             "job postings and scraped course catalogs, not a continuously live labor market. Full "

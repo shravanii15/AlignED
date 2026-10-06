@@ -70,7 +70,7 @@ import time
 
 import requests
 
-from extract_common import build_normalized_lookup, fuzzy_match_term, load_vocabulary
+from extract_common import build_normalized_lookup, build_variant_index, fuzzy_match_term, load_vocabulary
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "data", "gold_set")
 GOLD_SET_PATH = os.path.join(DATA_DIR, "gold_set_combined.json")
@@ -181,30 +181,29 @@ def parse_plain_text_response(raw_response):
     return terms
 
 
-def normalize_predictions(raw_terms, vocabulary, normalized_lookup):
+def normalize_predictions(raw_terms, vocabulary, normalized_lookup, variant_index=None):
     """Take whatever free-text terms the model returned (its own words,
-    not constrained to our vocabulary) and match each one back to a real
-    O*NET vocabulary entry using fuzzy_match_term() from
-    extract_common.py. A term with no sufficiently close match is
-    dropped, not force-fit, we still never trust the model's word for
-    it, we just do the grounding check here instead of inside the prompt
-    (see the module docstring for why). Returns the kept, grounded
-    predictions plus a count of how many raw terms didn't match anything
-    real, so main() can print an honest summary."""
+    not constrained to our vocabulary) and ground each one to a real O*NET
+    vocabulary entry with ground_term() from extract_common.py (exact
+    match, then explicit alias, then a strict spelling/plural variant
+    match). A term that grounds to nothing is dropped, not force-fit to
+    the nearest string. Returns the kept, grounded predictions plus a
+    count of dropped terms, so main() can print an honest summary."""
+    if variant_index is None:
+        variant_index = build_variant_index(normalized_lookup)
     kept = []
     dropped_count = 0
     for raw_term in raw_terms:
         if not isinstance(raw_term, str):
             dropped_count += 1
             continue
-        entry = fuzzy_match_term(raw_term, vocabulary, normalized_lookup)
+        entry = fuzzy_match_term(raw_term, vocabulary, normalized_lookup, variant_index)
         if entry is None:
             dropped_count += 1
             continue
         # Avoid listing the same vocabulary entry twice for one item if
-        # the model happened to mention it more than once in different
-        # words (e.g. "AWS" and "Amazon Web Services" both landing on
-        # the same vocabulary entry).
+        # the model mentioned it in different words (e.g. "AWS" and
+        # "Amazon Web Services" both grounding to the same entry).
         if any(k["term"] == entry["term"] for k in kept):
             continue
         kept.append({"term": entry["term"], "type": entry["type"]})

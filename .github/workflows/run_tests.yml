@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install the packages the tests need
-        run: pip install pytest scipy
+        run: pip install -r requirements-test.txt
 
       - name: Run the test suite
         run: python -m pytest tests/ -v

@@ -1,0 +1,80 @@
+[
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6035",
+    "course_name": "Introduction to Information Security",
+    "description": "A full spectrum of information security: threats, software vulnerabilities, programming for malice, basic cryptography, operating systems protections, network security, privacy, data mining, computer crime."
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "PUBP 6725",
+    "course_name": "Information Security Policies and Strategies",
+    "description": "This course introduces students to the policy and management aspects of cybersecurity. It is divided into four modules. The first involves basic concepts and definitions regarding policy, governance, and threats;\u00a0the second deals with cybersecurity management and policy at the organizational level; the third deals with cybersecurity public policy at the national level; and\u00a0the fourth deals with cyber conflict, policy, and diplomacy at the transnational level. This course situates cybersecurity in the overall Internet ecosystem."
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6260",
+    "course_name": "Applied Cryptography",
+    "description": "Classical goals of cryptography such as data privacy, authenticity and integrity. Design principles of cryptographic primitives such as pseudorandom functions, block ciphers, symmetric encryption schemes, hash functions, message authentication codes (MACs), authenticated encryption, PKI, public-key (asymmetric) encryption, digital signatures, signcryption, secret sharing, key exchange."
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6238",
+    "course_name": "Secure Computer Systems",
+    "description": "Design principles of secure systems, authentication, access control and authorization, discretionary and mandatory security policies, secure kernel design, and secure databases."
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6262",
+    "course_name": "Network Security",
+    "description": "Design principles of secure network protocols and systems, authentication, integrity, confidentiality, privacy, information hiding, digital watermarking, access control, firewall, intrusion detection and case studies."
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6265",
+    "course_name": "Information Security Lab Reversed Engeneering and Binary",
+    "description": "Computer systems and network vulnerabilities, information warfare, network and operating system security techniques, security analysis tools."
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6264",
+    "course_name": "Information Security Lab: System and Network Defense",
+    "description": "Elective Courses (6 hours) Special Note Select two courses from the list. Advanced Operating Systems (CS 6210) Computer Networks (CS 6250) Software Development Process (CS 6300) Database System Concepts & Design (CS 6400) Advanced Topics in Malware Analysis (CS 6747) Enterprise Cybersecurity Management (CS 8803) Malware Analysis and Defense (CS 8813) Practicum (5 hours)"
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "CS 6266",
+    "course_name": "Information Security Practicum",
+    "description": "Capstone independent study placing students in a commercial, industrial, academic or government setting where they must solve real-world security problems. This course will have the same learning objectives and will be taught in a coordinated fashion across all specializations. Cyber-Physical Systems Track The Cyber-Physical Systems track focuses on the specialized concerns for keeping control of the operations and information embedded in components involved in energy creation, storage, and transmission. Although the focus is on electrical power systems, the concepts you learn and the knowledge you gain can be applied to other domains such as manufacturing, chemical processing, agriculture, and others. Core Courses (9 hours)"
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "ECE 6320",
+    "course_name": "Power Systems Control and Operation",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "ECE 6374",
+    "course_name": "Introduction to Cyber-Physical Electric Energy Systems",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "ECE 6770",
+    "course_name": "Introduction to Cyber \u2013 Physical Systems Security",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "ECE 6266",
+    "course_name": "Energy Systems Practicum",
+    "description": "Capstone independent study placing students in a commercial, industrial, academic or government setting where they must solve real-world security problems. This course will have the same learning objectives and will be taught in a coordinated fashion across all specializations. Policy Track The Policy track approaches cybersecurity from the management aspect, including the administrative, market, and public policy tools used to keep cyberspace safe. This concentration focuses on the way IT security is affected by organizational, national, and international policies. Topics covered include security policy frameworks, global internet governance, privacy technologies and law, critical infrastructure policies, cyberspace as a domain for international conflict, and multilateral cyber norm development. Core Courses (9 hours)"
+  },
+  {
+    "program": "Georgia Tech - MS Cybersecurity (OMS Cybersecurity)",
+    "course_code": "PUBP 6266",
+    "course_name": "Policy Practicum",
+    "description": "Capstone independent study placing students in a commercial, industrial, academic or government setting where they must solve real-world security problems. This course will have the same learning objectives and will be taught in a coordinated fashion across all specializations. SIGN UP FOR UPDATES Stay up-to-date on important deadlines, updates, and news. Also get tips for writing a stellar application! Sign Up Connect With Us Remote learning doesn\u2019t mean missing out. Be part of our growing social network with other students. Questions? Want to know how a degree in cybersecurity online can help you advance your career? Want to stay current on important deadlines, updates, and news? Need more details? Contact Us Programs Browse by Subject Courses Certificates Degrees Military Programs ESL Georgia Tech Online Train at Your Location Event Services Virtual & Hybrid Events Global Learning Center Savannah Facilities Academic Conferences About Us Executive Leadership Leadership Searches Impact Report Savannah Campus The Language Institute Accreditation Contact Us FAQs General Emergency Information Report Website Issue Legal Legal and Privacy Information Accessibility Accountability GTPE EU GDPR Privacy Notice Title IX/Sexual Misconduct \u00a9 2026 Georgia Institute of Technology Facebook LinkedIn Email YouTube Professional Education Georgia Institute of Technology Georgia Tech Global Learning Center 84 5th St NW Atlanta GA 30308 USA window.NREUM||(NREUM={});NREUM.info={\"beacon\":\"bam.nr-data.net\",\"licenseKey\":\"NRJS-d0a566e8b1fc1c61aba\",\"applicationID\":\"1552472047\",\"transactionName\":\"NgBbbUsFCkcHBRVQWQ9KekxKEAtZSRAIXEFPFlxYSwcMGhYHBlxpUA==\",\"queueTime\":0,\"applicationTime\":4883,\"atts\":\"GkdYGwMfGUk=\",\"errorBeacon\":\"bam.nr-data.net\",\"agent\":\"\"}"
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 501",
+    "course_name": "Computer Science Practicum",
+    "description": "Various applications of computer science that vary semester to semester. Please contact the CAS Computer Science Department for detailed descriptions."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 505",
+    "course_name": "Introduction to Natural Language Processing",
+    "description": "Undergraduate Prerequisites: CASCS 365 OR (CASCS 440 and CASMA 225) - Natural language processing (NLP) is a field of AI which aims to equip computers with the ability to intelligently process natural (human) language. This course explores statistical and machine learning techniques for the automatic analysis of natural language data."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 506",
+    "course_name": "Data Science Tools and Applications",
+    "description": "Undergraduate Prerequisites: CAS CS 108 or CAS CS 111; CAS CS 132 or CAS MA 242 or CAS MA 442. CAS CS 112 is recommended. - Covers practical skills in working with data and introduces a wide range of techniques that are commonly used in the analysis of data, such as clustering, classification, regression, and network analysis. Emphasizes hands-on application of methods via programming. Effective Fall 2019, this course fulfills a single unit in each of the following BU Hub areas: Research and Information Literacy, Teamwork/Collaboration. BU Hub Learn More Research and Information Literacy Teamwork/Collaboration"
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 511",
+    "course_name": "Formal Methods 1",
+    "description": "Undergraduate Prerequisites: (CASCS320 OR CASCS330 OR CASCS350) - Introduction to formal specification, analysis, and verification of computer system behavior. Topics include formal logical reasoning about computer programs and systems, automated and semi-automated verification, and algorithmic methodologies for ascertaining that a software system satisfies its formally specified properties. Cannot be taken for credit in addition to the course with the same number formerly entitled \"Object-Oriented Software Principles.\""
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 516",
+    "course_name": "Software Foundations via Formal Languages",
+    "description": "Undergraduate Prerequisites: (CASCS320 & CASCS330) or equivalent courses approved by the instructor. - Study of the hierarchy of formal languages with a focus on algorithms on the formalisms. Experimentation with these algorithms using a computer toolset. Applications of these algorithms to compiler construction, implementation of finite-state control devices, and formal methods."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 519",
+    "course_name": "Spark! Software Engineering X-Lab Practicum",
+    "description": "Undergraduate Prerequisites: (CASCS 411 OR CDSDS 310) or equivalent experience in software development and consent of instructor. - Consent provided upon successful completion of pass/fail diagnostic test that assesses student readiness to take the course. This course offers students in computing disciplines the opportunity to apply their programming and system development skills by working on real-world projects provided from partnering organizations within and outside of BU, which are curated by Spark! The course offers a range of project options where students can improve their technical skills, while also gaining the soft skills necessary to deliver projects aligned to the partner's goals. These include teamwork and communications skills and software development processes. Effective Spring 2022, this course fulfills a single unit in each of the following BU Hub areas: Ethical Reasoning, Oral and/or Signed Communication, Teamwork/Collaboration. BU Hub Learn More Ethical Reasoning Oral and/or Signed Communication Teamwork/Collaboration"
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 523",
+    "course_name": "Deep Learning",
+    "description": "Prerequisites: CASCS 541 or CASCS 542 - Mathematical and machine learning background for deep learning. Feed-forward networks., Backpropagation. Training strategies for deep networks. Architectures such as convolutional, recurrent, transformer networks. Deep reinforcement and unsupervised learning. Exposure to modern programming tools and libraries. Other recent topics, time permitting."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 525",
+    "course_name": "Compiler Design Theory",
+    "description": "Undergraduate Prerequisites: (CASCS 320) or consent of instructor. - Graduate Prerequisites: (CASCS 320 OR CASCS 332) - Covers the basic mathematical theory underlying the design of compilers and other language processors and shows how to use that theory in practical design situations. Topics may include lexical analysis, parsing, syntax-directed translation, code optimization, and code generation."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 528",
+    "course_name": "Cloud Computing",
+    "description": "Undergraduate Prerequisites: CASCS 210. - CASCS 350 or CASCS 351 are recommended. Fundamentals of cloud computing covering IaaS platforms, OpenStack, key Big Data platforms, and data center scale systems. Examines influential publications in cloud computing. Culminates in a group project supervised by a mentor from industry or academia."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 530",
+    "course_name": "Advanced Algorithms",
+    "description": "Undergraduate Prerequisites: (CASCS330) or consent of instructor. - Graduate Prerequisites: (CASCS330) or consent of instructor. - Studies the design and efficiency of algorithms in several areas of computer science. Topics are chosen from graph algorithms, sorting and searching, NP-complete problems, pattern matching, parallel algorithms, and dynamic programming."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 531",
+    "course_name": "Advanced Optimization Algorithms",
+    "description": "Undergraduate Prerequisites: CAS MA 123 & 124, or equivalent and CAS CS 132 or equivalent; or conse nt of instructor. - Optimization algorithms, highlighting the fruitful interactions between discrete and continuous. Intended audience is advanced master students and doctoral students. Topics include gradient descent algorithms, online optimization, linear and semidefinite programming, duality, network optimization, submodular optimization, approximation algorithms via continuous relaxations."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 535",
+    "course_name": "Complexity Theory",
+    "description": "Prerequisites: Prerequisites: CS330. - CASCS 332 is recommended. Covers topics of current interest in the theory of computation chosen from computational models, games and hierarchies of problems, abstract complexity theory, informational complexity theory, time-space trade-offs, probabilistic computation, and recent work on particular combinatorial problems."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 537",
+    "course_name": "Randomness in Computing",
+    "description": "Undergraduate Prerequisites: (CASCS 330 OR CASCS 530). CASCS 535 is recommended or consent of instructor. - Graduate Prerequisites: CASCS 330 or CASCS 530 is recommended. - Survey of probabilistic ideas of the theory of computation. Topics may include Monte Carlo and Las Vegas probabilistic computations; average case complexity and analysis; random and pseudorandom strings; games and cryptographic protocol; information; inductive inference; reliability; others. (Offered alternate years.)"
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 538",
+    "course_name": "Fundamentals of Cryptography",
+    "description": "Undergraduate Prerequisites: (CASCS131 & CASCS237 & CASCS357) or consent of instructor. - Graduate Prerequisites: (CASCS332) - Basic Algorithms to guarantee confidentiality and authenticity of data. Definitions and proofs of security for practical constructions. Topics include perfectly secure encryption, pseudorandom generators, RSA and Elgamal encryption, Diffie-Hellman key agreement, RSA signatures, secret sharing, block and stream ciphers."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 541",
+    "course_name": "Applied Machine Learning",
+    "description": "Undergraduate Prerequisites: CS111 (CS112 recommended); CS132 or MA242 (or EK103); CS237 or MA581 ( or EK381.) CS365 is recommended. - Covers practical skills in machine learning including techniques for clustering, classification, regression, feature selection, and model compression. Emphasizes hands-on application of methods via programming on real- world datasets."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 542",
+    "course_name": "Principles of Machine Learning",
+    "description": "Undergraduate Prerequisites: (CASCS365) - Introduction to modern machine learning concepts, techniques, and algorithms. Topics include regression, kernels, support vector machines, feature selection, boosting, clustering, hidden Markov models, and Bayesian networks. Programming assignments emphasize taking theory into practice, through applications on real-world data sets."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 543",
+    "course_name": "Algorithmic Techniques for Taming Big Data",
+    "description": "Undergraduate Prerequisites: exposure to basic data structures and algorithms or consent of instruc tor. - Growing amounts of available data lead to significant challenges in processing them efficiently. In many cases, it is no longer possible to design feasible algorithms that can freely access the entire data set. Instead of that we often have to resort to techniques that allow for reducing the amount of data such as sampling, sketching, dimensionality reduction, and core sets. Also explores scenarios in which large data sets are distributed across several machines or even geographical locations and the goal is to design efficient communication protocols or MapReduce algorithms. Includes a final project and programming assignments in which we explore the performance of our techniques when applied to publicly available data sets. Effective Fall 2021, this course fulfills a single unit in each of the following BU Hub areas: Quantitative Reasoning II, Creativity/Innovation. BU Hub Learn More Creativity/Innovation Quantitative Reasoning II"
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 548",
+    "course_name": "Advanced Cryptography",
+    "description": "Undergraduate Prerequisites: (CASCS 538) or consent of instructor. - Continuation of CASCS 538. Advanced techniques to preserve confidentiality and authenticity against active attacks, zero-knowledge proofs; Fiat-Shamir signature schemes; non-malleable public-key encryption; authenticated symmetric encryption; secure multiparty protocols for tasks ranging from Byzantine agreement to mental poker to threshold cryptography."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 549",
+    "course_name": "Spark! Machine Learning X-Lab Practicum",
+    "description": "Undergraduate Prerequisites: (CASCS505 OR CASCS542 OR CASCS585) or consent of instructor. Consent provided upon successful completion of pass/fail diagnostic test that will assess student readiness to tak e the course. - The Spark! Practicum offers students in computing disciplines the opportunity to apply their knowledge in algorithms, inferential analytics, and software development by working on real-world projects provided from partnering organizations within BU and from outside. The course offers a range of project options where students can improve their technical skills, while also gaining the soft skills necessary to deliver projects aligned to the partner's goals. These include teamwork and communications skills and software development processes. All students participating in the course are expected to complete a project focused on an application of inferential analytics or machine learning, including a final presentation to the partner organization. Effective Spring 2022, this course fulfills a single unit in each of the following BU Hub areas: Ethical Reasoning, Research and Information Literacy, Teamwork/Collaboration. BU Hub Learn More Ethical Reasoning Research and Information Literacy Teamwork/Collaboration"
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 551",
+    "course_name": "Streaming and Event-driven Systems",
+    "description": "Prerequisites: CASCS 350 or CASCS 351. - CASCS 460 is recommended. Fundamentals of stream processing and event-driven systems. Topics include Pub/Sub systems; Distributed streaming systems; Dataflow programming; Fault-tolerance and processing guarantees; State management; Windowing semantics; Complex event processing; Microservice architectures; Serverless functions; Examines current and emerging architectures and use-cases."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 552",
+    "course_name": "Introduction to Operating Systems",
+    "description": "Undergraduate Prerequisites: (CASCS 112 & CASCS 210) and competency with C/C++. CASCS 350 is recommended, or consent of instructor. - Examines process synchronization; I/O techniques, buffering, file systems; processor scheduling; memory management; virtual memory; job scheduling, resource allocation; system modeling; and performance measurement and evaluation."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 561",
+    "course_name": "Data Systems Architectures",
+    "description": "Undergraduate Prerequisites: CAS CS 210 or equivalent and CAS CS 460/660. - Discusses the design of data systems that can address the modern challenges of managing and accessing large, ever-growing, diverse sets of data, often streaming from heterogenous sources, in the context of continuously evolving hardware and software. We use examples from several data management areas including relational systems, distributed database systems, key value stores, newSQL and NoSQL systems, data systems for machine learning (and machine learning for data systems), interactive analytics, and data management as a service. Effective Spring 2021, this course fulfills a single unit in each of the following BU Hub areas: Oral and/or Signed Communication, Research and Information Literacy. BU Hub Learn More Oral and/or Signed Communication Research and Information Literacy"
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 565",
+    "course_name": "Algorithmic Data Mining",
+    "description": "Undergraduate Prerequisites: (CASCS 112 & CASCS 330 & CASCS 365). - Introduction to data mining concepts and techniques. Topics include association and correlation discovery, classification and clustering of large datasets, outlier detection. Emphasis on the algorithmic aspects as well as the application of mining in real-world problems."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 581",
+    "course_name": "Computational Fabrication",
+    "description": "Undergraduate Prerequisites: CAS CS 112 and CAS CS 132 or CAS MA 242; CAS 480/GRS CS 680 recommende d. - Introduces 3D printing technology and computational methods for creating physical prototypes from geometric models. Student-led paper presentations cover research from prominent Computer Graphics and Human Computer Interaction conferences. Culminates in a design project involving a computational component and physical prototyping."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 582",
+    "course_name": "Geometry Processing",
+    "description": "Undergraduate Prerequisites: CAS CS 112 (or equivalent), CAS CS 132 or CAS MA 242 (or equivalent), CAS MA 225 (or equivalent). - Algorithms and data structures for digital processing of triangle meshes and point clouds. Topics include: surface smoothing, parametrization, and deformation; half- edge data structures; discretized curvature measures; and spectral analysis of surfaces. Numerical methods for linear algebra and optimization also discussed."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 585",
+    "course_name": "Image and Video Computing",
+    "description": "Undergraduate Prerequisites: (CASCS132 OR CASMA242) and CASCS112 or equivalent programming experience and familiarity with calculus. - Introduction to images and video as multimedia data types and algorithms for image and video understanding based on color, shading, stereo, and motion. Topics include face recognition, human-computer interfaces, animal and vehicle tracking, and medical image analysis."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 599",
+    "course_name": "Advanced Topics in Computer Science",
+    "description": "Various advanced topics in computer science that vary semester to semester. Please contact the CAS Computer Science Department for detailed descriptions."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 611",
+    "course_name": "Object-oriented Software Principles and Design",
+    "description": "Graduate Prerequisites: Graduate standing or permission of instructor. - Introduces principles and techniques of object-oriented programming. Focuses on specification, programming, analysis of large-scale, reliable, and reusable Java software using object-oriented design. Includes object models, memory models, inheritance, exceptions, namespaces, data abstraction, design against failure, design patterns, reasoning about objects."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 630",
+    "course_name": "Graduate Algorithms",
+    "description": "Undergraduate Prerequisites: (CASCS330) - Examines advanced algorithmic topics and methods for CS graduate students, including matrix decomposition techniques and applications, linear programming, fundamental discrete and continuous optimization methods, probabilistic algorithms, NP-hard problems and approximation techniques, and algorithms for very large data sets."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 640",
+    "course_name": "Artificial Intelligence",
+    "description": "Undergraduate Prerequisites: (CASCS330) and CASCS132 or CASMA242, or consent of instructor. - Studies computer systems that exhibit intelligent behavior, in particular, perceptual and robotic systems. Topics include human computer interfaces, computer vision, robotics, game playing, pattern recognition, knowledge representation, planning."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 651",
+    "course_name": "Distributed Systems",
+    "description": "Undergraduate Prerequisites: (CASCS112 & CASCS210) - Programming-centric introduction to how networks of computers are structured to operate as coherent single systems. Introducing principles of architecture, processes, communications, naming, synchronization, consistency and replication, fault tolerance and security, and paradigms such as web-based, object-based, file system, and consistency-based."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 654",
+    "course_name": "Embedded Systems Development",
+    "description": "Lab-based course exploring concepts, techniques, best practices, and tools for the development of connected embedded systems, including: signal processing; sensing, control and actuation; programming and debugging on microprocessors; 1/0 interfacing and development of device drivers; and time-critical data handling."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 655",
+    "course_name": "Graduate Computer Networks",
+    "description": "Graduate Prerequisites: (CASCS112 & CASCS210) CAS CS350 is recommended; or consent of instructor. - Concepts underlying the design of high-performance computer networks and scalable protocols. Topics include Internet design principles and methodology, TCP/IP implementation, packet switching and routing algorithms, multicast, quality of service considerations, error detection and correction, and performance evaluation."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 660",
+    "course_name": "Graduate Introduction to Database Systems",
+    "description": "Undergraduate Prerequisites: (CASCS112) CASCS350 recommended. - Graduate introduction to database management systems. Examines entity-relationship, relational, and object-oriented data models; commercial query languages: SQL, relational algebra, relational calculus, and QBE; file organization, indexing and hashing, query optimization, transaction processing, concurrency control and recovery, integrity, and security."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 680",
+    "course_name": "Graduate Introduction to Computer Graphics",
+    "description": "Undergraduate Prerequisites: (CASCS112) and CASCS132 or CASMA242. - Introduction to computer graphics algorithms, programming methods, and applications. Focus on fundamentals of two- and three-dimensional raster graphics: scan-conversion, clipping, geometric transformations, and camera modeling. Introduces concepts in computational geometry, computer-human interfaces, animation, and visual realism. Effective Fall 2019, this course fulfills a single unit in the following BU Hub area: Digital/Multimedia Expression. BU Hub Learn More Digital/Multimedia Expression"
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 697",
+    "course_name": "Computer Science Graduate Initiation",
+    "description": "Description: Graduate Prerequisite: enrollment in Computer Science Ph.D. or M.A. degree program.- Guidance for graduate students embarking on a research career in computer science. Topics include: research resources and methodologies, the research project development process, refereeing and reviewing, written and oral presentations, the dissertation, writing effective research proposals, ethics, and career planning. (Required of first-year doctoral candidates; open to interested CS Master's students.)"
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 698",
+    "course_name": "CS Teaching Fellow Training",
+    "description": "Covers topics needed to be successful computer science teaching fellow. These include goals, content, and methods of instruction in computer science, and general teaching/learning issues. Required once of all teaching fellows."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 901",
+    "course_name": "Internship in Computer Science",
+    "description": "Graduate Prerequisites: admission to a Master's program, including those with specializations, in the Department of Computer Science. - For Master's students in Computer Science, this internship course gives students substantive practical experience in the computing industry. This course may be taken once, with approval from the Director of the Master's Program. Bi-weekly and final reports required."
+  },
+  {
+    "program": "Boston University - Graduate CS Courses",
+    "course_code": "CAS CS 995",
+    "course_name": "Directed Study: Computer Science",
+    "description": "Graduate-level directed study in a topic in computer science."
+  }
+]

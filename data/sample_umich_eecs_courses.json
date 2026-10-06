@@ -1,0 +1,1220 @@
+[
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 110",
+    "course_name": "Discover Computer Science",
+    "description": "Introduction to basic CS concepts (variables, conditionals, loops, functions) using an introductory programming language, such as Python. Students interact with researchers and computing professionals to learn about real-world, interdisciplinary applications of CS. Intended for students without prior programming experience to (optionally) take prior to EECS 183 or ENGR 101."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 180",
+    "course_name": "Exam/Transfer Introductory Computer Programming Credit",
+    "description": "Credit for college-level introductory programming coursework based on a satisfactory score on an approved exam (e.g., a score of 5 on the AP Computer Science A exam) or on transfer credit for an approved introductory programming course at another college. Indicates preparedness to proceed to EECS 280."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 183",
+    "course_name": "Elementary Programming Concepts",
+    "description": "Fundamental concepts and skills of programming in a high-level language. Flow of control: selection, iteration, subprograms. Data structures: strings, arrays, records, lists, tables. Algorithms using selection and iteration (decision making, finding maxima/minima, searching, sorting, simulation, etc.) Good program design, structure and style are emphasized. Testing and debugging. Not intended for Engineering students (who should take ENGR 101), nor for CS majors in LSA who qualify to enter EECS 280."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 198",
+    "course_name": "Special Topics",
+    "description": "Topics of current interest selected by the faculty."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 200",
+    "course_name": "Electrical Engineering Systems Design I",
+    "description": "Gain a systems engineering perspective of electrical engineering centered around a design competition to address a societally-relevant challenge. Apply electrical engineering concepts in circuits, computing, control, sensors, optics, power, signal processing, and wireless communications to a system such as a robot, and adapt the system to achieve competition objectives within defined engineering constraints. Projects are overseen and graded by faculty and may also involve mentoring by representatives from industrial, governmental and/or non-profit organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 201",
+    "course_name": "Computer Science Pragmatics",
+    "description": "The essentials of using a computer effectively. Topics covered include shells, environment, scripting, Makefiles, compilers, debugging tools, and version control."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 203",
+    "course_name": "Discrete Mathematics",
+    "description": "Introduction to the mathematical foundations of computer science. Topics covered include: propositional and predicate logic, set theory, functions and relations, growth of functions and asymptotic notation, introduction to algorithms, elementary combinatorics, and graph theory, and discrete probability theory."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 215",
+    "course_name": "Introduction to Electronic Circuits",
+    "description": "Basic Concepts of voltage and current; Kirchhoff\u2019s voltage and current laws; Ohm\u2019s law; voltage and current sources; Thevenin and Norton equivalent circuits; DC and low frequency active circuits using operational amplifiers, diodes, and transistors; small signal analysis; energy and power. Time- and frequency-domain analysis of RLC circuits. Basic passive and active electronic filters. Laboratory experience with electrical signals and circuits."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 216",
+    "course_name": "Introduction to Signals and Systems",
+    "description": "Theory and practice of signals and systems engineering in continuous and discrete time. Continuous-time linear time-invariant systems, impulse response, convolution. Fourier series, Fourier transforms, spectrum, frequency response and filtering. Sampling leading to basic digital signal processing using the discrete-time Fourier and the discrete Fourier transform. Laplace transforms, transfer functions, poles and zeros, stability. Applications of Laplace transform theory to RLC circuit analysis. Introduction to communications, control and signal processing. Weekly recitations and hardware/Matlab software laboratories."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 230",
+    "course_name": "Electromagnetics I",
+    "description": "Vector calculus. Electrostatics. Magnetostatics. Time-varying fields: Faraday\u2019s Law and displacement current. Maxwell\u2019s equations in differential form. Traveling waves and phasors. Uniform plane waves. Reflection and transmission at normal incidence. Transmission lines. Laboratory segment may include experiments with transmission lines, the use of computer-simulation exercises, and classroom demonstrations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 245",
+    "course_name": "Mathematics for Machine Learning",
+    "description": "Mathematical foundations of machine learning and artificial intelligence, focusing primarily on linear algebra, along with select topics from calculus and probability. Topics include matrices, vectors, projections, spans, least squares, and eigenvalue and eigenvector problems. Includes mathematical theory as well as application to concrete data sets in a modern programming language."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 270",
+    "course_name": "Introduction to Logic Design",
+    "description": "Boolean algebra, digital design techniques, logic gates, logic and state minimization, standard combinational circuits, latches and flip-flops, sequential circuits, synthesis of synchronous sequential circuits, state machines, FPGAs, memories, arithmetic circuits, and computer-aided design. Laboratory involves CAD-based design implemented on an FPGA including elementary interfacing."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 280",
+    "course_name": "Programming and Introductory Data Structures",
+    "description": "Algorithm development and effective programming, top-down analysis, structured programming, testing and program correctness. Program language syntax and static and runtime semantics. Scope, procedure instantiation, recursion, abstract data types and parameter passing methods. Structured data types, pointers, linked data structures, stacks, queues, arrays, records and trees."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 281",
+    "course_name": "Data Structures and Algorithms",
+    "description": "Introduction to algorithm analysis and O-notation; Fundamental data structures including lists, stacks, queues, priority queues, hash tables, binary trees, search trees, balanced trees, and graphs; searching and sorting algorithms; recursive algorithms; basic graph algorithms; introduction to greedy algorithms and divide and conquer strategy. Several programming assignments."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 285",
+    "course_name": "Practical Programming in Java",
+    "description": "Introduction to Java programming, including language features, design principles, and programming practices. Topics include: Java syntax and semantics, object-oriented design, exception handling, graphical user interfaces, mobile-application development, asynchronous programming, and unit testing."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 291",
+    "course_name": "Applied Data Structures and Algorithms",
+    "description": "Advanced programming including data structures and algorithms and their application to scientific and engineering problems. Topics include data structure design and performance implications, algorithm design and analysis, efficiency and optimization, and software-engineering principles. Prepares students to use this knowledge to build effective and efficient solutions to scientific and engineering challenges."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 295",
+    "course_name": "Empathetic Leadership and the Social Context of Computing",
+    "description": "Examines the social impacts of technology products and tools, with a focus on designing to prevent or reduce harmful outcomes. Students build the skills and mindsets needed to identify potential social harms and intentionally design to mitigate them. Emphasizes proactive, empathetic approaches to people-centered design through real-world case studies, guided reflections, and mini-projects."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 298",
+    "course_name": "Special Topics",
+    "description": "Topics of current interest selected by the faculty and pilot versions of new courses."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 300",
+    "course_name": "Electrical Engineering Systems Design II",
+    "description": "Principles of engineering design for electrical engineering systems. Integration of electrical engineering foundational concepts to address system-level objectives. Semester-long, open-ended design based on a societally-relevant challenge. Technical topics include embedded systems fundamentals, sensing, power and energy tradeoffs, and addressing realistic constraints of project requirements. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 301",
+    "course_name": "Probabilistic Methods in Engineering",
+    "description": "Basic concepts of probability theory. Random variables: discrete, continuous and conditional probability distributions; averages; independence. Statistical inference: hypothesis testing and estimation. Introduction to discrete and continuous random processes."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 311",
+    "course_name": "Analog Circuits",
+    "description": "DC and AC circuit models for diodes, bipolar junction transistors and field-effect transistors; small-signal and piecewise analysis of nonlinear circuits; analysis and design of single-stage and multi-stage transistor amplifiers: gain, biasing and frequency response; op-amp based filter design; non-ideal op-amps. Design projects. Lecture and laboratory. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 312",
+    "course_name": "Digital Integrated Circuits",
+    "description": "Review of MOSFET device operation. Design of digital circuits, including static CMOS, ratioed, dynamic, and pass-transistor logic. Memory structures, including static and dynamic RAM; sequential elements; and interconnects. Analysis of circuit delay, power, and noise margins. Use of circuit simulation in analysis and design."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 314",
+    "course_name": "Electrical Circuits, Systems, and Applications",
+    "description": "Students will learn about electrical systems operation, specifications and interactions with other modules. Theory will be motivated by the use of examples taken from a variety of fields. Topics covered include circuit fundamentals, frequency response and transients, analog and digital electronics. In lab, students will build and analyze circuits including amplifiers, filters and temperature controllers."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 320",
+    "course_name": "Introduction to Semiconductor Devices",
+    "description": "Introduction to semiconductors in terms of atomic bonding and electron energy bands. Equilibrium statistics of electrons and holes. Carrier dynamics; continuity, drift and diffusion currents; generation and recombination processes, including important optical processes. Introduction to: PN junctions, metal-semiconductor junctions, light detectors and emitters; bipolar junction transistors, junction and MOSFETs."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 330",
+    "course_name": "Introduction to Antennas and Wireless Systems",
+    "description": "Electromagnetic fields and waves applied to antennas and wireless systems. \u00a0The course covers wave reflection and transmission, dipoles, arrays, horn and patch antennas, waveguides, microstrip lines, resonators, and their applications in communication and radar systems. \u00a0Introduction to advanced electromagnetics, communication systems, sensor systems, remote sensing and global navigation systems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 334",
+    "course_name": "Principles of Optics",
+    "description": "Basic principles of optics: light sources and propagation of light; geometrical optics, lenses and imaging; ray tracing and lens aberrations; interference of light waves, coherent and incoherent light beams; Fresnel and Fraunhofer diffraction. Overview of modern optics with laboratory demonstrations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 351",
+    "course_name": "Introduction to Digital Signal Processing",
+    "description": "DSP methods and applications. Sampling and reconstruction, difference equations, convolution, stability, z-transform, transfer function, frequency response, FIR and IIR, DTFT, DFT, FFT, windows, spectrogram, computer-aided filter design, correlation, multi-rate, basic image processing, discrete time wavelets, filter banks. Applications: filtering, denoising, deconvolution, classification, others.\u00a0Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 353",
+    "course_name": "Introduction to Communication Systems",
+    "description": "Mathematical analysis of signals and signal processing used in analog and digital communication systems; sampling; quantization: pulse transmission: inter symbol interference; Nyquist criterion; partial response signals; eye diagrams; equalization; mixing; analog modulation and demodulation; receiver architectures; phase-locked loops; signal to noise ratio analysis; digital modulation and demodulation; spread spectrum communications."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 370",
+    "course_name": "Introduction to Computer Organization",
+    "description": "Basic concepts of computer organization and hardware. Instructions executed by a processor and how to use these instructions in simple assembly-language programs. Stored-program concept. Datapath and control for multiple implementations of a processor. Performance evaluation, pipelining, caches, virtual memory, input/output."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 373",
+    "course_name": "Introduction to Embedded System Design",
+    "description": "Principles of designing application-specific computer systems that interact with the physical world. Covers memory-mapped I/O, interrupts, analog interfacing, microprocessors, reconfigurable hardware, sensors, and actuators. Complex hardware/software system design and implementation. Substantial student-defined team design project."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 376",
+    "course_name": "Foundations of Computer Science",
+    "description": "An introduction to theory of computation. Models of computation: finite state machines, Turing machines. Decidable and undecidable problems. Polynomial time computability and paradigms of algorithm design. Computational complexity emphasizing NP-hardness. Coping with intractability. Exploiting intractability: cryptography."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 388",
+    "course_name": "Introduction to Computer Security",
+    "description": "Introduction to the principles and practices of computer security as applied to software, host systems, and networks. Covers the foundations of building, using and managing secure systems. Topics include standard cryptographic functions and protocols, threats and defenses for real-world systems, incident response, and computer forensics."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 390",
+    "course_name": "Programming Paradigms",
+    "description": "Survey of programming language features and paradigms and how to effectively use them. Introduces common features for program execution, data, and resource management. Exploration of paradigms including imperative, functional, object-oriented, and declarative programming, as well as advanced programming techniques. Students will gain experience in large projects that incorporate these paradigms."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 398",
+    "course_name": "Special Topics",
+    "description": "Topics of current interest selected by faculty."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 399",
+    "course_name": "Directed Study",
+    "description": "This course provides an opportunity for undergraduate students to work on research problems in EECS or areas of special interest such as design problems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 400",
+    "course_name": "ECE Major Design Experience",
+    "description": "Design and project management principles for multidisciplinary team projects, team strategies, entrepreneurial skills, ethics, social and environmental awareness, and lifelong learning."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 401",
+    "course_name": "Special Topics Capstone Project",
+    "description": "Undergraduate students are given an opportunity to do a capstone project on special topics."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 402",
+    "course_name": "Computer Programming For Scientists and Engineers",
+    "description": "Presents concepts and hands-on experience for designing and writing programs using one or more"
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 403",
+    "course_name": "Graduate Foundations of Data Structures and Algorithms",
+    "description": "Introduction to algorithm analysis and O-notation; Fundamental data structures including lists, stacks, queues, priority queues, hash tables, binary trees, search trees, balanced trees and graphs; searching and sorting algorithms; recursive algorithms; basic graph algorithms; introduction to greedy algorithms and divide and conquer strategy. Several programming assignments."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 404",
+    "course_name": "Game Engine Architecture and Data-Oriented Programming",
+    "description": "Study and application of industrial programming topics in the creation of a game engine. Topics include: multi-language programming, design patterns and maintainability, data-oriented programming / memory layout, library integration, physics engines, advanced C++, and game engine history / ecosystem. Students individually develop a singular, long-term codebase in iterative, autograded fashion."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 408",
+    "course_name": "Advanced Operating Systems Projects",
+    "description": "multiprocessors, building and using spinlocks, suspending and waking processors with interprocessor interrupts, inheriting address spaces, sharing data through copy-on-write, managing locks dynamically, and enabling increased concurrency in multithreaded systems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 409",
+    "course_name": "Data Science Seminar",
+    "description": "The MIDAS Seminar Series features leading data scientists from around the world and across the U-M campuses addressing a variety of topics in data science, and sharing their vision regarding the future of the field.\u00a0 These thought leaders are invited from academia, industry and government."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 411",
+    "course_name": "Microwave Circuits I",
+    "description": "Transmission-line theory, microstrip and coplanar lines, S-parameters, signal-flow graphs, matching networks, directional couplers, low-pass and band-pass filters, diode detectors. Design, fabrication and measurements (1-10GHz) of microwave-integrated circuits using CAD tools and network analyzers. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 413",
+    "course_name": "Monolithic Amplifier Circuits",
+    "description": "Micro electro mechanical systems (MEMS), devices and technologies. Micro-machining and microfabrication techniques, including planar thin-film processing, silicon etching, wafer bonding, photolithography, deposition and etching. Transduction mechanisms and modeling in different energy domains. Analysis of micromachined capacitive, piezoresistive and thermal sensors/actuators and applications. Computer-aided design for MEMS layout, fabrication and analysis."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 416",
+    "course_name": "Elec for Bio",
+    "description": "Electrical biophysics of nerve and muscle; electrical conduction in excitable tissue; quantitative models for nerve and muscle, including the Hodgkin Huxley equations; biopotential mapping, cardiac electrophysiology, and functional electrical stimulation; group projects."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 418",
+    "course_name": "Power Electronics",
+    "description": "Generation of forces and torques in electromechanical devices. Power electronic drives, motion control. DC machines. AC machines, surface mount permanent magnet machines, induction machines. Applications examined include electric propulsion drives for electric/hybrid vehicles, generators for wind turbines, and high-speed motor/alternators for flywheel energy storage systems. Laboratory experience with electric drives."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 421",
+    "course_name": "Properties of Transistors",
+    "description": "In depth understanding of the device physics and working principle of some basic IC components: metal-semiconductor junctions, P-N junctions, metal-oxide-semiconductor junctions, MOSFETs and BJTs."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 423",
+    "course_name": "Micro/Nano Device Fabrication and Characterization",
+    "description": "Basic principles and hands-on experience with semiconductor micro/nano-fabrication technologies. Students will perform computer simulations of fabrication steps, and will practice some of the key processing steps used in fabricating different devices in modern IC manufacturing. Students will test and/or analyze electrical properties of various devices and compare results to theory."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 425",
+    "course_name": "Integrated Microsystems Laboratory",
+    "description": "Development of a complete integrated microsystem, from functional definition to final test. MEMS-based transducer design and electrical, mechanical and thermal limits. Design of MOS interface circuits. MEMS and MOS chip fabrication. Mask making, pattern transfer, oxidation, ion implantation and metallization. Packaging and testing challenges. Students work in interdisciplinary teams. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 427",
+    "course_name": "Very Large Scale Integrated (VLSI) Design I",
+    "description": "Design techniques for full-custom VLSI circuits. Design rule checking, logic and circuit simulation. CMOS circuit delay and power analysis. High performance and low power VLSI systems. CMOS logic circuit families, adders, multipliers, memory arrays, sequential circuits, and interconnects. Clock and power distribution. Major design project to implement a RISC processor. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 428",
+    "course_name": "Introduction to Quantum Nanotechnology",
+    "description": "This course introduces students to the emerging new field of quantum base nanotechnology.\u00a0 The course includes a range of topics such as the quantum vibrator, resonant tunneling, quantum circuits, a quantum flip flop, quantum information, quantum vacuum, and the role of quantum behavior in nano-devices and materials."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 429",
+    "course_name": "Semiconductor Optoelectronic Devices",
+    "description": "Introduction to photonics, opto-electronics, lasers and fiber-optics. Topics include mirrors, interferometers, modulators and propagation in waveguides and fibers. The second half treats photons in semiconductors, including semi-conductor lasers, detectors and noise effects. System applications include fiber lightwave systems, ultra-high-peak power lasers and display technologies. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 435",
+    "course_name": "Fourier Optics",
+    "description": "Basic physical optics treated from the viewpoint of Fourier analysis. Fourier-transform relations in optical systems. Theory of image formation and Fourier transformation by lenses. Frequency response of diffraction-limited and aberrated imaging systems. Coherent and incoherent light. Comparison of imagery with coherent and with incoherent light. Resolution limitations. Optical information processing, including spatial matched filtering."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 438",
+    "course_name": "Advanced Lasers and Optics Laboratory",
+    "description": "Construction and design of lasers; gaussian beams; nonlinear optics; fiber optics; detectors; dispersion; Fourier optics; spectroscopy. Project requires the design and set-up of a practical optical system."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 440",
+    "course_name": "Extended Reality for Social Impact",
+    "description": "include: virtual reality, augmented reality, game engines, ethics / accessibility, interaction design patterns, agile project management, stakeholder outreach, XR history / culture, and portfolio construction. Student teams develop and exhibit socially impactful new VR / AR applications."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 441",
+    "course_name": "Mobile App Development for Entrepreneurs",
+    "description": "Best practices in the software engineering of mobile applications and best practices of software entrepreneurs in the design, production and marketing of mobile apps. Students will engage in the hands-on practice of entrepreneurship by actually inventing, building and marketing their own mobile apps."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 442",
+    "course_name": "Computer Vision",
+    "description": "An introduction to 2D and 3D computer vision. Topics include: cameras models, the geometry of multiple views; shape reconstruction methods from visual cues; low-level image processing techniques such as feature detection; high-level vision problems such as object recognition and scene understanding."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 443",
+    "course_name": "Senior Thesis",
+    "description": "Students develop and carry out a research plan in collaboration with a sponsoring faculty member. Students present a research proposal to be approved by both the faculty member and the chief program advisor or designate. Students submit and present a thesis to be evaluated by the sponsoring faculty member and second reader. Eligibility is limited to students who have a concentration GPA of 3.5 or better."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 444",
+    "course_name": "Analysis of Societal Networks",
+    "description": "In the modern world we depend on the efficiency of a myriad of societal networks to transact many activities. This course analyzes them (how they are connected, how they form, and how processes and transactions occur on them) using mathematical tools from graph theory, linear algebra, probability and game theory."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 445",
+    "course_name": "Introduction to Machine Learning",
+    "description": "Theory and implementation of state-of-the-art machine learning algorithms for large-scale real-world applications. Topics include supervised learning (regression, classification, kernel methods, neural networks, and regularization) and unsupervised learning (clustering, density estimation, and dimensionality reduction). For each topic, mathematical principles, key algorithmic ideas, and implementation will be highlighted."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 447",
+    "course_name": "Machine Learning Research Experience",
+    "description": "Introduction to research in machine learning. Takes students through the broad strokes of doing research, with both autonomy and sufficient scaffolding, to allow students to explore cutting-edge machine learning research while expanding their understanding of the research process. Culminates with a conference-like experience complete with talks, posters, paper submissions and peer reviews."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 448",
+    "course_name": "Applied Machine Learning for Modeling Human Behavior",
+    "description": "Machine learning, with a focus on human behavior, across multiple modalities including speech and text. Teams complete projects based primarily on their individual interests centered on modeling an aspect of human behavior. Prior experience with speech/language or other data modeling is not needed."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 449",
+    "course_name": "Conversational Artificial Intelligence",
+    "description": "learn about and leverage advances in these areas to create conversational virtual assistants spanning natural language processing, dialogue management, response generation, and other applications."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 452",
+    "course_name": "Digital Signal Processing Design Laboratory",
+    "description": "Architecture features of single-chip DSP processors are introduced in lecture.\u00a0Laboratory exercises using two different state-of-the-art fixed-point processors include sampling, A/D and D/A conversion, digital waveform generators, real-time FIR and II filter implementation.\u00a0The central component of this course is a 12-week team project in real-time DSP Design (including software and hardware development). Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 453",
+    "course_name": "Principles of Machine Learning",
+    "description": "Covers fundamental principles of machine learning, including unsupervised learning (e.g., clustering, mixture models, dimension reduction), supervised learning (e.g., regression, classification, neural networks & deep learning), and reinforcement learning. For each topic, mathematical principles, key algorithmic ideas, and basic theoretical insights will be highlighted."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 455",
+    "course_name": "Wireless Communications Systems",
+    "description": "Digital communication signals and systems; fundamental limits on reliable communications, energy and bandwidth efficiency trade-offs; optimum receiver principles, modulation techniques including phase shift keying, quadrature modulation and OFDM; block and convolutional coding and decoding; applications to wireless communication systems; optional topics include synchronization, quantization and lossless compression of signals, fundamental limits of compression, role of entropy."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 456",
+    "course_name": "Internet Foundations",
+    "description": "Students design and construct functioning biomedical instruments. \u00a0Hardware includes instrumentation amplifiers and active filters constructed using operational amplifiers. \u00a0Signal acquisition, processing analysis and display are performed. \u00a0Project modules include measurement or respiratory volume and flow rates, biopotentials (electrocardiogram), and optical analysis of arterial blood oxygen saturation (pulse-oximetry)."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 460",
+    "course_name": "Control Systems Analysis and Design",
+    "description": "Basic techniques for analysis and design of controllers applicable in any industry (e.g. automotive, aerospace, computer, communication, chemical, bioengineering, power, etc.) are discussed. Both time- and frequency-domain methods are covered. Root locus, Nyquist and Bode plot-based techniques are outlined. Computer-based experiment and discussion sessions are included in the course."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 461",
+    "course_name": "Embedded Control Systems",
+    "description": "Basic interdisciplinary concepts needed to implement a microprocessor based control system. Sensors and actuators. Quadrature decoding. Pulse width modulation. DC motors. Force feedback algorithms for human computer interaction. Real time operating systems. Networking. Use of MATLAB to model hybrid dynamical systems. Autocode generation for rapid prototyping."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 463",
+    "course_name": "Power Systems Design and Operation",
+    "description": "A hands-on, project based introduction to the principles of robotics and robot design. \u00a0Multiple team projects consisting of design and implementation of a robot. \u00a0Theory: motors, kinematics & mechanisms, sensing/filtering, planning, pinhole cameras. \u00a0Practice: servo control, project management; fabrication; software design for robotics. \u00a0Significant after hours lab time investment."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 467",
+    "course_name": "Autonomous Robotics Design Experience",
+    "description": "Software methods and implementation for robot perception, world mapping, and control, using physical robots. Topics include: sensors, sensor processing, control, motion planning, localization and mapping, and forward and inverse kinematics. Multiple team projects, culminating in a major design experience (MDE) project."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 470",
+    "course_name": "Computer Architecture",
+    "description": "Design and organization of a computer\u2019s components including processors, memories, peripherals, and I/Os. Examines and defines trade-offs on how hardware and software interact to perform tasks efficiently. Topics include instruction sets, speculation, parallel execution, memory hierarchies, branch prediction, virtual memory, cache design, and multiprocessing. Students gain insights into hardware algorithm implementation by designing processor components using an HDL."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 471",
+    "course_name": "Applied Parallel Programming with GPUs",
+    "description": "Parallel computing and application development for massively parallel processors such as GPUs. Focuses on forms of parallelism, programming models such as CUDA, mapping computations to parallel hardware, efficient data structures, and paradigms for efficient parallel algorithms. Students will gain hands-on experience in programming assignments and projects."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 472",
+    "course_name": "Computer Architecture Project",
+    "description": "Team-based design of an advanced (e.g. out-of-order, multi-core, SMT) processor using an HDL. Students will design, build, and verify the processor using state-of-the-art design tools and techniques. Coverage includes testing strategies, advanced memory system design (e.g. LSQs, non-blocking caches), and performance evaluation and debugging."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 473",
+    "course_name": "Advanced Embedded Systems",
+    "description": "Design of hardware and software for modern embedded systems. Real-time operating systems. Device drivers for general operating systems. PCB design including power integrity and electromagnetic interference. Radio frequency and wireless communication. Low-power design. DC/DC converter design for PCBs. Rapid prototyping of embedded systems. Groups will design a complete embedded system."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 474",
+    "course_name": "Algorithms for Data Science",
+    "description": "science and machine learning. Topics include randomized algorithms (sketching), streaming algorithms (frequent items), dimensionality reduction (Johnson-Lindenstrauss embeddings), matrix approximation (randomized singular value decomposition), optimization (stochastic gradient descent, Newton\u2019s method), and graph algorithms (spectral clustering)."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 475",
+    "course_name": "Introduction to Cryptography",
+    "description": "Covers fundamental concepts, algorithms, and protocols in cryptography. Topics: ancient ciphers, Shannon theory, symmetric encryption, public key encryption, hash functions, digital signatures, key distribution. Emphasizes attack models, precise definitions of security, reductions, and proof techniques."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 476",
+    "course_name": "Data Mining",
+    "description": "Fundamental concepts and methods in data mining, and practical skills for mining massive, real data on distributed frameworks (e.g., Hadoop). Topics include big data systems, frequent itemsets, similarity and cluster analysis, classification, dimensionality reduction, mining of networks, time series and data streams, and applications (e.g., social network analysis, web search)."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 477",
+    "course_name": "Introduction to Algorithms",
+    "description": "Fundamental techniques for designing efficient algorithms and basic mathematical methods for analyzing their performance. Paradigms for algorithm design: divide-and-conquer, greedy methods, graph search techniques, dynamic programming. Design of efficient data structures and analysis of the running time and space requirements of algorithms in the worst and average cases."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 478",
+    "course_name": "Logic Circuit Synthesis and Optimization",
+    "description": "Advanced design of logic circuits. Technology constraints. Theoretical foundations. Computer-aided design algorithms. Two-level and multilevel optimization of combinational circuits. Optimization of finite-state machines. High-level synthesis techniques: modeling, scheduling and binding. Verification and testing. Emerging technologies. Lab projects on CAD software development."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 479",
+    "course_name": "Introduction to Quantum Computing",
+    "description": "A practical approach towards exploring how each layer of the computing stack is impacted by quantum computing. Quantum logic design using classical oracles, phase kickback, and entanglement. Quantum algorithms including Deutsch-Jozsa, Grover\u2019s, and Shor\u2019s. Error correction schemes including Shor and Steane codes. Building fault-tolerant architectures. Several programming assignments."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 480",
+    "course_name": "Social Computing Systems",
+    "description": "Design and creation of computing systems that mediate, facilitate , or augment social interactions.\u00a0Introduces social computing research, and relevant web-based tools for creating systems that allow multiple users to interact.\u00a0 A team project provides experience designing a system with multiple stake holders and constraints, and building a complex interactive multi-user system."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 481",
+    "course_name": "Software Engineering",
+    "description": "Pragmatic aspects of the production of software systems, dealing with structuring principles, design methodologies and informal analysis. Emphasis is given to development of large, complex software systems. A term project is usually required."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 482",
+    "course_name": "Introduction to Operating Systems",
+    "description": "Operating system design and implementation: multi-tasking; concurrency and synchronization; inter-process communication; deadlock; scheduling; resource allocation; memory and storage management; input-output; file systems; protection and security. Students write several substantial programs dealing with concurrency and synchronization in a multi-task environment, with file systems and with memory management."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 483",
+    "course_name": "Compiler Construction",
+    "description": "Introduction to compiler construction. Topics covered will include the following: lexical scanning, parsing (top-down and bottom-up), abstract syntax trees, semantic analysis, code generation and optimization. Students will build a working compiler for a high-level programming language."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 484",
+    "course_name": "Database Management Systems",
+    "description": "Concepts and methods for the design, creation, query and management of large enterprise databases. Functions and characteristics of the leading database management systems. Query languages such as SQL, forms, embedded SQL, and application development tools. Database design, integrity, normalization, access methods, query optimization, transaction management and concurrency control and recovery."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 485",
+    "course_name": "Web Systems",
+    "description": "Concepts surrounding web systems, applications, and internet scale distributed systems. Topics covered include client/server protocols, security, information retrieval and search engines, scalable data processing, and fault tolerant systems. The course has substantial projects involving development of web applications and web systems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 486",
+    "course_name": "Informational Retrieval and Web Search",
+    "description": "Covers background and recent advances in information retrieval (IR): indexing, processing, querying, classifying data. Basic retrieval models, algorithms, and IR system implementations. Focuses on textual data, but also looks at images/videos, music/audio, and geospatial information. Web search, including Web crawling, link analysis, search engine development, social media, and crowdsourcing."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 487",
+    "course_name": "Introduction to Natural Language Processing",
+    "description": "Fundamental theories and practical methods in natural language processing (NLP). Topics include syntax and parsing, lexical semantics and compositional semantics, discourse analysis, as well as applications in information extraction, sentiment analysis, question answering, summarization, dialogue systems, machine translation, and text generation."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 489",
+    "course_name": "Computer Networks",
+    "description": "Protocols and architectures of computer networks with a specific focus on the Internet. Topics include socket programming, naming and addressing, video streaming and content distribution, flow and congestion control, routing, and cloud, datacenter, and software-defined networks. Students write several substantial programs implementing protocols at different layers of the network stack."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 490",
+    "course_name": "Programming Languages",
+    "description": "Programming languages are rich mathematical structures and powerful user interfaces. Student will learn about modern languages from the perspective of both language designers and users, building up from mathematical first principles, and covering human factors in language design, language prototyping, and techniques for reasoning about program behavior."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 491",
+    "course_name": "Introduction to Distributed Systems",
+    "description": "Design and implementation of scalable, performant, and reliable distributed systems. Covers abstractions for simplifying development of distributed systems, techniques used to implement these abstractions, and case studies on the use of these techniques in real-world systems. Includes topics such as replicated state machines, reasoning about time in distributed systems, replication, concurrency control, data consistency models, techniques for scaling, and multi-tenancy."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 492",
+    "course_name": "Introduction to Artificial Intelligence",
+    "description": "Introduction to the core concepts of AI, organized around building computational agents. Emphasizes the application of AI techniques. \u00a0Topics include search, logic, knowledge representation, reasoning, planning, decision making under uncertainty, and machine learning."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 493",
+    "course_name": "User Interface Development",
+    "description": "Concepts and techniques for designing computer system user interfaces to be easy to learn and use, with an introduction to their implementation. Task analysis, design of functionality, display and interaction design, and usability evaluation. Interface programming using an object-oriented application framework. Fluency in a standard object-oriented programming language is assumed."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 494",
+    "course_name": "Computer Game Design and Development",
+    "description": "Design, development, and application of digital games. Topics include: game engines, design patterns, shaders and graphics programming, agile development methods, iterative game/experience design, project management and resource allocation, virtual reality, classic games, multidisciplinary relationships, product exhibition, and portfolio construction. Students work in teams to develop and exhibit new games."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 495",
+    "course_name": "Accessible Computing",
+    "description": "Team-based development of technology systems focused on disability, accessibility, or chronic illness. Students work closely with people with disabilities to develop technologies addressing a specific need. Covers design methods and problem-solving strategies; human factors; human-machine interfaces; community perspectives; social and ethical aspects; and accessible technology for disability or chronic illness."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 496",
+    "course_name": "Major Design Experience Professionalism",
+    "description": "Design principles for multidisciplinary team projects, team strategies, entrepreneurial skills, ethics, social and environmental awareness, and life long learning."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 497",
+    "course_name": "Human-Centered Software and Design and Development",
+    "description": "Team-based, user-centered design and development of complex software systems incorporating effective design strategies and project management methodologies. Topics include customer discovery, contextual inquiry, prototyping, process models, creative problem solving, inclusive thinking, team dynamics, social concerns, and testing strategies. Teams of 3-5 students complete projects based primarily on their individual interests."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 498",
+    "course_name": "Special Topics",
+    "description": "Topics of current interest selected by the faculty. Lecture, seminar or laboratory."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 499",
+    "course_name": "Directed Study",
+    "description": "This course provides an opportunity for undergraduate students to work on substantial research problems in EECS or areas of special interest such as design problems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 500",
+    "course_name": "Tutorial System Science",
+    "description": "Students are introduced to the frontiers of System Science research. Sections 01, 02 and 03 are devoted, respectively, to Communications, Control, and Signal Processing. The tutorials are delivered by leaders of the respective research fields, invited from academia and industry. The presentations are self-contained and accessible to all graduate students in System Science."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 501",
+    "course_name": "Probability and Random Processes",
+    "description": "Introduction to probability and random processes. Topics include probability axioms, sigma algebras, random vectors, expectation, probability distributions and densities, Poisson and Wiener processes, stationary processes, autocorrelation, spectral density, effects of filtering, linear least-squares estimation and convergence of random sequences."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 502",
+    "course_name": "Stochastic Processes",
+    "description": "Correlations and spectra. Quadratic mean calculus, including stochastic integrals and representations, wide-sense stationary processes (filtering, white noise, sampling, time averages, moving averages, autoregression). Renewal and regenerative processes, Markov chains, random walk and run, branching processes, Markov jump processes, uniformization, reversibility and queuing applications."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 503",
+    "course_name": "Introduction to Numerical Electromagnetics",
+    "description": "Introduction to numerical methods in electromagnetics including finite difference, finite element and integral equation methods for static, harmonic and time dependent fields; use of commercial software for analysis and design purposes; applications to open and shielded transmission lines, antennas, cavity resonances and scattering."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 504",
+    "course_name": "Foundations of Computer Vision",
+    "description": "EECS 442 and"
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 505",
+    "course_name": "Computational Data Science and Machine Learning",
+    "description": "Introduction to computational methods for identifying patterns and outliers in large data sets. Topics include the singular and eigenvalue decomposition, independent component analysis, graph analysis, clustering, linear, regularized, sparse and non-linear model fitting, deep, convolutional and recurrent neural networks. Students program methods; lectures and labs emphasize computational thinking and reasoning."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 506",
+    "course_name": "Design of Power Electronics",
+    "description": "The course presents both the theoretical and practical design, analysis, construction, and measurement of circuits and components in different types of power converters. The course will teach concepts and present case studies through lectures, homework, design problems, and a final project."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 507",
+    "course_name": "Introduction to Embedded System Research",
+    "description": "Establish a foundation in research related to embedded system analysis, design, and synthesis. Lectures, assigned reading, and student presentations used to survey fundamental embedded systems topics. The second half-semester focuses on an important and timely research topic. Survey-only (3 credit) and project (4 credit) versions."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 509",
+    "course_name": "BioMEMS",
+    "description": "Focuses on the plasma chemistry and plasma-surface interactions occurring in low temperature plasmas as used in, for example, materials processing, chemical conversion, biotechnology, environmental remediation, and photon sources. Emphasis is on the atomic and molecular processes that produce chemically reactive species by electron and ion-molecule collisions, neutral-neutral reactions; and reactions with inorganic, organic and liquid surfaces. Plasma-surface interactions will be addressed that result in deposition, etching and sputtering. Radiation transport producing photoionization and photodissociation, and trapping will be discussed."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 511",
+    "course_name": "Integrated Analog/Digital Interface Circuits",
+    "description": "Covers most of the well known analog to digital conversion schemes. These include the flash, folding, multi-step and pipeline Nyquist rate, architectures. Oversampling converters are also discussed. Practical design work is a significant part of this course. Students design and model complete converters. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 512",
+    "course_name": "Amorphous and Microcrystalline Semiconductor Thin Film Devices",
+    "description": "Introduction and fundamentals of physical, optical and electrical properties of amorphous and microcrystalline semiconductor based devices: MIM structures, Schottky diodes, p-i-n junctions, heterojunctions, MIS structures, thin-film transistors, solar cells, threshold and memory switching devices and large area x-ray radiation detectors."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 513",
+    "course_name": "Flat Panel Displays",
+    "description": "Introduction and fundamentals to the passive, active, reflective and emissive flat panel display technologies. This course will discuss the physics, operating principles, properties and technology of the flat panel displays."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 514",
+    "course_name": "Advanced MEMS Devices and Technologies",
+    "description": "Advanced micro electro mechanical systems (MEMS) devices and technologies. Transduction techniques, including piezoelectric, electrothermal, and resonant techniques. Chemical, gas, and biological sensors, microfluidic and biomedical devices. Micromachining technologies such as laser machining and microdrilling, EDM, materials such as SiC and diamond. Sensor and actuator analysis and design through CAD."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 515",
+    "course_name": "Integrated Microsystems",
+    "description": "Addresses the science and technology of low temperature, partially ionized, non-equilibrium plasmas as used for materials processing, biotechnology/medicine, environment/energy, lasers, displays and lighting. The course topics include the fundamentals of electron-atom/molecule collisions, electron and ion transport; and electrostatic, magnetostatic and electromagnetic interactions with plasmas. Fundamental aspects of the kinetics of plasmas, electron energy distributions and diagnostics are addressed. Applications of these fundamentals to electrical discharges and plasma sources are discussed."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 520",
+    "course_name": "Solid State Physics",
+    "description": "Crystal structure; Phonons; Introduction to Quantum Mechanics, Free electron Fermi gas; Low dimensional conductor; Electronic structure \u2013 Energy bands; Properties of semiconductors; Dielectrics response; Light absorption and emission; Magnetic effects; Superconductivity."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 521",
+    "course_name": "Solid State Devices",
+    "description": "Physics of operation of three terminal device structures important for high frequency analog or high speed digital applications. Emphasis on proven field-effect and bipolar-junction transistors, also including current and speculative nanoelectronic devices. Detailed study of static current-voltage characteristics and models for small and large signal behavior."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 522",
+    "course_name": "Analog Integrated Circuits",
+    "description": "Review of integrated circuit fabrication technologies and BJT and MOS transistor models. Detailed analysis and design of analog integrated circuits, including power amplifiers, voltage references, voltage regulators, rectifiers, oscillators, multipliers, mixers, phase detectors and phase-locked loops. Design projects."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 523",
+    "course_name": "Digital Integrated Technology",
+    "description": "Integrated circuit fabrication overview, relationships between processing choices and device performance characteristics. Long-channel device I-V review, short-channel MOSFET I-V characteristics including velocity saturation, mobility degradation, hot carriers, gate depletion. MOS device scaling strategies, silicon-on-insulator, lightly-doped drain structures, on-chip interconnect parasitics and performance. Major CMOS scaling challenges. Process and circuit simulation."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 525",
+    "course_name": "Advanced Solid State Microwave Circuits",
+    "description": "General properties and design of linear and nonlinear solid state microwave circuits including: amplifier gain blocks, low-noise, broadband and power amplifiers, oscillators, mixer and multiplier circuits, packaging, system implementation for wireless communication. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 526",
+    "course_name": "Plasmonics",
+    "description": "This is the study of optical phenomena related to the electromagnetic response of conductors. This course will provide basic knowledge to understand and apply principles of plasmonics. Students will be introduced to nanofabrication and characterization techniques. Optical, electronic, magnetic, thermal and biomedical applications of plasmonics will be discussed."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 527",
+    "course_name": "Power Semiconductor Devices",
+    "description": "Introduction to power semiconductor devices. Analysis of DC and switching behavior of power MOSFETs, IGBT, HEMT, thyristor, Schottky diode, PiN diode, and emerging devices. Power semiconductor materials, device fabrication, packaging, and thermal modeling. Use of commercial numerical simulation software to model power device performance."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 528",
+    "course_name": "Principles of Microelectronics Process Technology",
+    "description": "Theoretical analysis of the chemistry and physics of process technologies used in micro-electronics fabrication. Topics include: semiconductor growth, material characterization, lithography tools, photo-resist models, thin film deposition, chemical etching, plasma etching, electrical contact formation, micro-structure processing and process modeling."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 529",
+    "course_name": "Semiconductor Lasers and LEDs",
+    "description": "Optical processes in semiconductors, spontaneous emission, absorption gain, stimulated emission. Principles of light-emitting diodes, including transient effects, spectral and spatial radiation fields. Principles of semiconducting lasers; gain-current relationships, radiation fields, optical confinement and transient effects."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 531",
+    "course_name": "Antenna Theory and Design",
+    "description": "Theory, systems and applications of active and passive microwave remote sensing: \u00a0radiative transfer; blackbody radiation; microwave radiometry; atmospheric propagation and emission; radiometer receivers; surface and volume scattering and emission; radar systems; resolution techniques; calibration; synthetic aperture radar; scatterometers; applications to meteorology, oceanography and hydrology."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 533",
+    "course_name": "Microwave Measurements Laboratory",
+    "description": "Advanced topics in microwave measurements: power spectrum and noise measurement, introduction to state-of-the-art microwave test equipment, methods for measuring the dielectric constant of materials, polarimetric radar cross section measurements, near field antenna pattern measurements, electromagnetic emission measurement (EM compatibility). Followed by a project that will include design, analysis, and construction of a microwave subsystem."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 534",
+    "course_name": "Analysis of Electric Power Distribution Systems and Loads",
+    "description": "This course covers the fundamentals of electric power distribution systems and electric loads, including distribution grid components, topologies, and operational strategies; three-phase unbalanced power flow; electric load modeling, analysis, and control; and emerging topics such as photovoltaic and electric vehicle interconnection, distribution automation, and advanced metering infrastructure."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 535",
+    "course_name": "Power System Dynamics and Control",
+    "description": "The course introduces angle and voltage stability concepts and considers control strategies for improving dynamic performance. It provides an overview of nonlinear dynamical systems, Lyapunov methods and bifurcation analysis. Models of dynamical devices are developed. Small disturbance (linear) analysis techniques are presented, along with methods for assessing large disturbance (nonlinear) behavior."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 536",
+    "course_name": "Power System Markets & Optimization",
+    "description": "Introduction to nonrelativistic quantum mechanics. Summary of classical mechanics, postulates of quantum mechanics and operator formalism, stationary state problems (including quantum wells, harmonic oscillator, angular momentum theory and spin, atoms and molecules, band theory in solids), time evolution, approximation methods for time independent and time dependent interactions including electromagnetic interactions, scattering."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 542",
+    "course_name": "Advanced Topics in Computer Vision",
+    "description": "models, generative methods such as denoising diffusion and energy-based models, discriminative methods such as contrastive learning and few-shot classification, neural net architectures, model optimization and compression, current research on recognition, detection, segmentation, tracking, inferring depth, reconstructing scenes in 2D, 3D, and 4D, multimodal perception and robotics."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 544",
+    "course_name": "Analysis of Societal Networks",
+    "description": "In the modern world we depend on the efficiency of a myriad of societal networks to transact many activities. This course analyzes them (how they are connected, how they form, and how processes and transactions occur on them) using mathematical tools from graph theory, linear algebra, probability and game theory."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 545",
+    "course_name": "Machine Learning (CSE)",
+    "description": "Information is everywhere. We encounter it in our everyday lives in the form of E-mail, newspapers, television, the Web, and even in conversations with each other. Information is hidden in a variety of media: text, images, sounds, videos. While casual information consumers can simply enjoy its abundance and appreciate the existence of search engines that can help them find what they want, information professionals are responsible for building the underlying technology that search engines use. Building a search engine involves a lot more than indexing some documents \u2014 information retrieval is the study of the interaction between users and large information environments. It covers concepts such as information need, documents and queries, indexing and searching, retrieval evaluation, multimedia and hypertext search, Web search, as well as bibliographical databases. In this course, students go over some classic concepts of information retrieval and then quickly jump to the current state of the art in the field, where crawlers, spiders, and hard-of-hearing personal butlers roam."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 550",
+    "course_name": "Information Theory",
+    "description": "Measures of information, such as entropy, conditional entropy, mutual and directed information and Kullback-Leibler divergence; fundamental limits to the performance of communication systems, including source coding (data compression) and channel coding (reliable transmission through noisy media); elementary source and channel coding techniques; information theoretic bounds on the performance of estimation/decision systems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 551",
+    "course_name": "Matrix Methods for Signal Processing, Data Analysis and Machine Learning",
+    "description": "This course covers the basics of fibers and applications in fields as diverse as high power and broadband lasers, bio-medical diagnostics and therapeutics, telecommunications and internet communications. Propagation, optical amplification and nonlinearities in fibers are discussed, and examples include transmission systems and lasers. Biomedical applications include dermatology, cardiology and ophthalmology."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 553",
+    "course_name": "Machine Learning (ECE)",
+    "description": "Fundamentals of supervised, unsupervised, and sequential learning, including linear and nonlinear regression, logistic regression, support vector machines and kernel methods, decision trees, ensemble methods, neural networks and deep learning, dimension reduction, clustering, and probabilistic models. Emphasis on algorithms and their derivation from fundamental principles, includes applications to real-world data. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 554",
+    "course_name": "Introduction to Digital Communication and Coding",
+    "description": "Digital transmission of information across discrete and analog channels. Sampling; quantization; noiseless source codes for data compression: Huffman\u2019s algorithm and entropy; block and convolutional channel codes for error correction; channel capacity; digital modulation methods: PSK, MSK, FSK, QAM; matched filter receivers. Performance analysis: power, bandwidth, data rate and error probability."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 555",
+    "course_name": "Digital Communication Theory",
+    "description": "Theory of digital modulation and coding. Optimum receivers in Gaussian noise. Signal space and decision theory. Signal design. Bandwidth and dimensionality. Fundamental limits in coding and modulation. Capacity and cutoff rate. Block, convolutional and trellis coding. Continuous phase modulation. Filtered channels and intersymbol interference. Equalization. Spread-spectrum. Fading channels. Current topics."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 556",
+    "course_name": "Image Processing",
+    "description": "Sampling, filtering, 2D Fourier transforms, interpolation, edge detection, enhancement, denoising, restoration, segmentation, random field models of images, Bayesian methods, wavelets and sparsity models. Applications include optical imaging, biomedical images, video and image compression. Student projects based on recent image processing literature. Projects are overseen/graded by faculty and may also involve mentoring by representatives from external organizations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 557",
+    "course_name": "Communication Networks",
+    "description": "System architectures. Data link control: error correction, protocol analysis, framing. Message delay: Markov processes, queuing, delays in statistical multiplexing, multiple users with reservations, limited service, priorities. Network delay: Kleinrock independence, reversibility, traffic flows, throughput analysis, Jackson networks. Multiple access networks: ALOHA and splitting protocols, carrier sensing, multi-access reservations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 558",
+    "course_name": "Stochastic Control",
+    "description": "Analysis and optimization of controlled stochastic systems. Models: linear and nonlinear stochastic controlled systems, controlled Markov chains. Optimization of systems described by Markov processes; dynamic programming under perfect and imperfect information, finite and infinite horizons. System identification: off-line, recursive. Stochastic adaptive control: Markov chains, self-tuning regulators, bandit problems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 559",
+    "course_name": "Optimization Methods in Signal Processing and Machine Learning",
+    "description": "Linear spaces and linear operators. Bases, subspaces, eigenvalues and eigenvectors, canonical forms. Linear differential and difference equations. Mathematical representations: state equations, transfer functions, impulse response, matrix fraction and polynomial descriptions. System-theoretic concepts: causality, controllability, observability, realizations, canonical decomposition, stability."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 563",
+    "course_name": "Hybrid Systems, Analysis, and Control",
+    "description": "Introduction to analysis and design of hybrid systems and hybrid control systems. Hybrid system modeling formalisms, specifications (automata theory, temporal logics), verification (barrier certificates, reachable sets, abstraction-based methods) and control synthesis. Stability of switched/hybrid systems. Applications of convex geometry and convex optimization in control. Model-predictive control of hybrid systems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 564",
+    "course_name": "Estimation, Filtering, and Detection",
+    "description": "Principles of estimation, linear filtering and detection. Estimation: linear and nonlinear minimum mean squared error estimation, and other strategies. Linear filtering: Wiener and Kalman filtering. Detection: simple, composite, binary and multiple hypotheses. Neyman-Pearson and Bayesian approaches."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 565",
+    "course_name": "Linear Feedback Control Systems",
+    "description": "Control design concepts for linear multivariable systems. Review of single variable systems and extensions to multivariable systems. Purpose of feedback. Sensitivity, robustness, and design tradeoffs. Design formulations using both frequency domain and state space descriptions. Pole placement/observer design. Linear quadratic Gaussian based design methods. Design problems unique to multivariable systems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 566",
+    "course_name": "Discrete Event Systems",
+    "description": "Modeling, analysis, and control of discrete event dynamical systems. \u00a0Modeling formalisms considered include state machines, Petri nets, and recursive processes. \u00a0Supervisory control theory; notions of controllable and observable languages. \u00a0Analysis and control of Petri nets. Communicating sequential processes. \u00a0Applications to database, management, manufacturing, and communication protocols."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 567",
+    "course_name": "Reinforcement Learning Theory",
+    "description": "Theory and applications of probabilistic techniques for autonomous mobile robotics. This course will present and critically examine contemporary algorithms for robot perception (using a variety of modalities), state estimation, mapping, and path planning. Topics include Bayesian filtering; stochastic representations of the environment; motion and sensor models for mobile robots; algorithms for mapping, localization, planning and control in the presence of uncertainty; application to autonomous marine, ground and air vehicles."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 570",
+    "course_name": "Parallel Computer Architecture",
+    "description": "Architectures for explicit parallelism. Multithreaded processors, small- and large-scale multiprocessor systems. Shared-memory coherence and consistency. Effect of architecture on communication latency, bandwidth, and overhead. Latency tolerance techniques. Interconnection networks. Case studies. Term projects."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 571",
+    "course_name": "Principles of Real-Time Computing",
+    "description": "Principles of real-time computing based on high performance, ultra reliability and environmental interface. Architectures, algorithms, operating systems and applications that deal with time as the most important resource. Real-time scheduling, communications and performance evaluation."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 572",
+    "course_name": "Randomness and Computation",
+    "description": "Fundamentals of randomness and its pervasive use in computer science, including the probabilistic method, the design and analysis of algorithms, computational complexity, cryptography, combinatorics, logic and proof systems, and related topics."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 573",
+    "course_name": "Microarchitecture",
+    "description": "Graduate-level introduction to the foundations of high performance microprocessor implementation. Problems involving instruction supply, data supply and instruction processing. Compile-time vs. run-time tradeoffs. Aggressive branch prediction. Wide-issue processors, in-order vs. out-of-order execution, instruction retirement. Case studies taken from current microprocessors."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 574",
+    "course_name": "Computational Complexity",
+    "description": "Fundamentals of the theory of computation and complexity theory. Computability, undecidability, and logic. Relations between complexity classes, NP-completeness, P-completeness, and randomized computation. Applications in selected areas such as cryptography, logic programming, theorem proving, approximation of optimization problems, or parallel computing."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 575",
+    "course_name": "Advanced Cryptography",
+    "description": "A rigorous introduction to the design of cryptosystems and to cryptanalysis. Topics include cryptanalysis of classical cryptosystems; theoretical analysis of one-way functions; DES and differential cryptanalysis; the RSA cryptosystem; ElGamal, elliptic, hyperelliptic and hidden mononomial cryptosystems; attacks on signature schemes, identification schemes and authentication codes; secret sharing; and zero knowledge."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 576",
+    "course_name": "Advanced Data Mining",
+    "description": "Advanced topics in data mining. A mix of lectures, readings, and a semester-long group project will familiarize the students with recent methods for analyzing large-scale, real-world data and networks, and applications in various domains (e.g., web science, social science, neuroscience)."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 577",
+    "course_name": "Formal Verification of Hardware and Software Systems",
+    "description": "Scalable formal automated reasoning for checking the compliance of a state transition system with its safety requirements. Focus is on application to discrete finite-state systems that model hardware and software as well as infinite-state systems that model distributed protocols. Topics include propositional satisfiability (SAT) and SAT modulo theories (SMT) solving, predicate and data abstraction, and minimal unsatisfiable subset (MUS) extraction. Includes hands-on use of state-of-the-art formal verification tools."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 578",
+    "course_name": "Correct Operation for Processors and Embedded Systems",
+    "description": "introduction to topics in correctness of modern processors, embedded systems, and accelerator designs (e.g., GPUs). Robust and reliable design \u00a0techniques. Hardware security assurance. Design verification: simulation, formal techniques, and post-silicon validation. Quality of services and energy management for correctness of implementation. Term projects."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 579",
+    "course_name": "Digital Systems Testing",
+    "description": "Overview of fault-tolerant computing. Fault sources and models. Testing process. Combinational circuit testing. D-Algorithm and PODEM. Sequential circuit testing. Checking experiments. RAM and microprocessor testing. Fault simulation. Design for testability. Testability measures. Self-testing circuits and systems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 582",
+    "course_name": "Advanced Operating Systems",
+    "description": "Course discusses advanced topics and research issues in operating systems. Topics will be drawn from a variety of operating systems areas such as distributed systems and languages, networking, security and protection, real-time systems, modeling and analysis, etc."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 583",
+    "course_name": "Advanced Compilers",
+    "description": "In-depth study of compiler back-end design for high-performance architectures. Topics include control-flow and data-flow analysis, optimization, instruction scheduling, register allocation. Advanced topics include memory hierarchy management, instruction-level parallelism, predicated and speculative execution. The class focus is processor-specific compilation techniques, thus familiarity with both computer architecture and compilers is recommended."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 584",
+    "course_name": "Advanced Database Systems",
+    "description": "Advanced topics and research issues in database management systems. Distributed databases, advanced query optimization, query processing, transaction processing, data models and architectures. Data management for emerging application areas, including bioinformatics, the internet, OLAP and data mining. A substantial course project allows in-depth exploration of topics of interest."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 585",
+    "course_name": "Advanced Scalable Systems",
+    "description": "Advanced topics and research issues in cloud computing that deal with massive computation, data, and user base. Topics include challenges faced when designing, developing, and deploying web-scale distributed systems for emerging systems for Big Data and AI/ML workloads running in the cloud, observed through diverse perspectives such as operating systems, networking, distributed systems, compiler and programming language, database, security/privacy, etc."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 586",
+    "course_name": "Design and Analysis of Algorithms",
+    "description": "Design of algorithms for nonnumeric problems involving sorting, searching, scheduling, graph theory and geometry. Design techniques such as approximation, branch-and-bound, divide-and-conquer, dynamic programming, greed and randomization applied to polynomial and NP-hard problems. Analysis of time and space utilization."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 587",
+    "course_name": "Parallel Computing",
+    "description": "The development of programs for parallel computers. Basic concepts such as speedup, load balancing, latency, system taxonomies. Design of algorithms for idealized models. Programming on parallel systems such as shared or distributed memory machines, networks. Grid Computing. Performance analysis. Course includes a substantial term project."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 588",
+    "course_name": "Computer and Network Security",
+    "description": "Survey of advanced topics and research issues in computer and network security. Topics will be drawn from a variety of areas such as mandatory and discretionary security policies, secure storage, security kernels, trust management, preventing software vulnerabilities, applied cryptography, network security."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 589",
+    "course_name": "Advanced Computer Networks",
+    "description": "Advanced topics and research issues in computer networks. Topics include routing protocols, multicast delivery, congestion control, quality of service support, network security, pricing and accounting and wireless access and mobile networking. Emphasis is placed on performance trade-offs in protocol and architecture designs. Readings assigned from research publications. A course project allows in-depth exploration of topics of interest."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 590",
+    "course_name": "Advanced Programming Languages",
+    "description": "Fundamental concepts in Programming Languages (PL) as well as recent topics and trends in PL research. Topics include semantics, type systems, program verification using theorem provers, software model checking, and program analysis. Course focuses on applying PL concepts to improve software reliability. Course includes a semester-long individual research project."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 590",
+    "course_name": "Skills for Success in Graduate Studies",
+    "description": "Seminars by faculty and staff from EECS, the College of Engineering, and the Rackham graduate school to assist incoming graduate students with the transition to graduate school. Provides introductions to various campus resources as well as insights on how to succeed in graduate school."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 591",
+    "course_name": "Distributed Systems",
+    "description": "Principles and practice of distributed system design. Computations, consistency semantics and failure models. Programming paradigms including group communication, RPC, distributed shared memory, and distributed objects. Operating system kernel support; distributed system services including replication, caching, file system management, naming, clock synchronization and multicast communication."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 592",
+    "course_name": "Foundations of Artificial Intelligence",
+    "description": "An advanced introduction to AI emphasizing its theoretical underpinnings. Topics include search, logic, knowledge representation, reasoning planning, decision making under uncertainty, and machine learning."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 593",
+    "course_name": "Human-Computer Interaction",
+    "description": "Principles (e.g., human-centered systems design, usability, accessibility) and methods (e.g., requirements gathering, functional prototyping, user study evaluation) of technical Human-Computer Interaction (HCI) research. Survey of HCI research threads including Human-AI Interaction, Social Computing, Behavior Modeling, Education Technologies. Group assignments give students exposure to HCI research methods."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 594",
+    "course_name": "Human-AI Interaction & Systems",
+    "description": "Principles and methods of designing and evaluating human-AI interaction and systems that are useful, usable, and ethical. Topics include human-AI teaming and collaboration, crowdsourcing and human computation, explainable AI, fairness and auditing. Students will design, develop, and evaluate human-AI systems, addressing real-world needs and ethical considerations."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 596",
+    "course_name": "Engineering Interactive Systems",
+    "description": "Engineering Interactive Systems, encompassing research areas in Human-Computer Interaction, Ubiquitous Computing, and Mobile Systems. Covers principles of designing, prototyping, and evaluating interactive computing systems, focusing on practical applications in the Internet of Things, health, wearables, and smart environments."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 596",
+    "course_name": "Master of Engineering Team Project",
+    "description": "This course introduces a body of quantitative techniques for modeling and analyzing natural language and for extracting useful information from texts. \u00a0The theory includes Hidden Markov Models and the noisy channel model, information theory, supervised and unsupervised machine learning, and probabilistic context-free and context-sensitive grammars. \u00a0Aspects of natural language analysis include phrasal lexicon induction, part of speech assignment, entity recognition, parsing, and statistical machine translation."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 598",
+    "course_name": "Special Topics",
+    "description": "Topics of current interest in computer science and engineering."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 598",
+    "course_name": "Special Topics",
+    "description": "Topics of current interest in electrical computer and engineering."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 599",
+    "course_name": "Directed Study",
+    "description": "Individual study of selected advanced topics in computer science and engineering. May include experimental work or reading."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 599",
+    "course_name": "Directed Study",
+    "description": "Introduction to the description and analysis of systems using function analytic methods. Metric spaces, normed linear spaces, Hilbert spaces, resolution spaces. Emphasis on using these concepts in systems problems."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 601",
+    "course_name": "Introduction to CSE Graduate Research",
+    "description": "An introduction for incoming Ph.D. students and research-focused Master\u2019s students to a wide range of topics critical to academic research. Rotating speakers will give perspective on the research process, time management, publishing in CS, managing the highs and lows of grad school, advisor interactions, career paths, etc."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 605",
+    "course_name": "Data Science and Machine Learning Design Laboratory",
+    "description": "This course uses a sequence of hands-on projects to bring into sharper focus the following concepts in the data-to-decision cycle: 1. how smart (or bad) data can positively (or negatively) affect decisions in the design and operation of an engineering system; 2. how to acquire such data, clean and store it via appropriate pre-processing and post-processing it for aiding reproducibility; 3. how to display, render, deploy and interpret it in the context of a real or simulated close-up loop type cloud based engineering system; and finally, 4. how to communicate the shortcomings and vulnerabilities of such systems, including plug-and-play systems using pre-trained off-the-shelf deep learning models, when integrated into a decision-making system; 5. conceptualization and execution of an open-ended, reproducible cloud-based design project."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 620",
+    "course_name": "Electronic and Optical Properties of Semiconductors",
+    "description": "The course discusses in detail the theory behind important semiconductor-based experiments such as Hall effect and Hall mobility measurement; velocity-field measurement; photoluminescence; gain; pump-probe studies; pressure and strain-dependent studies. Theory will cover: Bandstructure in quantum wells; effect of strain on bandstructure; transport theory; Monte Carlo methods for high field transport; excitons, optical absorption, luminescence and gain."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 627",
+    "course_name": "VLSI Design II",
+    "description": "Advanced very large scale integrated (VLSI) circuit design. Design methodologies (architectural simulation, hardware description language design entry, silicon compilation, and verification), microarchitectures, interconnect, packaging, noise sources, circuit techniques, design for testability, design rules, VLSI technologies (silicon and GaAs) and yield. Projects in chip design."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "EECS 628",
+    "course_name": "Advanced High Performance VLSI Design",
+    "description": "Advanced issues in VLSI design addressing the areas of high performance, low power and reliability. Topics covered include recent approaches in leakage control, high speed on-chip communication, memory design, soft error failures, noise analysis and control, error tolerant design and new circuit families. (Students will complete an advanced project.) (A 4-credit option is available with addition of a substantial design and simulation component to the project.)"
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 631",
+    "course_name": "Electromagnetic Scattering",
+    "description": "Boundary conditions, field representations. Low and high frequency scattering. Scattering by half plane (Wiener-Hopf method) and wedge (Maliuzhinets method); edge diffraction. Scattering by a cylinder and sphere: Watson transformation, Airy and Fock functions, creeping waves. Geometrical and physical theories of diffraction."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 633",
+    "course_name": "Numerical Methods in Electromagnetics",
+    "description": "This is a graduate course introducing computational models of information processing in mammalian central nervous system. \u00a0Following a brief overview, the course will examine: (1) Biological principles governing brain computation (e.g., population coding, computation maps, adaptive plasticity, self-organization and modularization, etc.); (2) Mechanisms underlying single neuron computation, via either passive membrane properties (equivalent cylinder model and cable equation for dendrites; integrate-and-fire or Lapique model) or active membrane properties (Hodgkins-Huxley dynamics; F-N reduced system and phase-space analysis); (3) Architectures of artificial neural network (connectionism), including models of simple perception, multi-layered feed-forward network (with supervised, back-propagated error correction learning rule), associative network (Hopfield network and Boltman machine with unsupervised, Hebbian learning rule), and reinforcement (partially supervised) learning algorithms."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 650",
+    "course_name": "Channel Coding Theory",
+    "description": "The theory of channel coding for reliable communication and computer memories. Error correcting codes; linear, cyclic and convolutional codes; encoding and decoding algorithms; performance evaluation of codes on a variety of channels."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 659",
+    "course_name": "Adaptive Signal Processing",
+    "description": "Theory and applications of adaptive filtering in systems and signal processing. Iterative methods of optimization and their convergence properties: transversal filters; LMS (gradient) algorithms. Adaptive Kalman filtering and least-squares algorithms. Specialized structures for implementation: e.g., least-squares lattice filters, systolic arrays. Applications to detection, noise canceling, speech processing and beam forming."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 670",
+    "course_name": "Special Topics in Computer Architecture",
+    "description": "Current topics of interest in computer architecture."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 692",
+    "course_name": "Advanced Artificial Intelligence",
+    "description": "Exploration of advanced topics in Artificial Intelligence, intended as preparation for research in the field. \u00a0Emphasizes research methods and practice, through explicit instruction, analysis of current literature, and a term project devoted to replicating published findings. \u00a0Coursework comprises extensive reading, research and writing assignments, presentations, quizzes, and the replication project."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 698",
+    "course_name": "Master\u2019s Thesis",
+    "description": "To be elected by CSE students pursuing the master\u2019s thesis option."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 698",
+    "course_name": "Master\u2019s Thesis",
+    "description": "To be elected by ECE students pursuing the master\u2019s thesis option."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 699",
+    "course_name": "Research Work in CSE",
+    "description": "Students working under the supervision of a faculty member plan and execute a research project. A formal report must be submitted."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 699",
+    "course_name": "Research Work in ECE",
+    "description": "Students working under the supervision of a faculty member plan and execute a research project. A formal report must be submitted."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 700",
+    "course_name": "Special Topics in System Theory",
+    "description": "Special topics of current interest in system theory."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 720",
+    "course_name": "Special Topics in Solid-State Devices, Integrated Circuits, and Physical Electronics",
+    "description": "Special topics of current interest in solid-state devices, integrated circuits, microwave devices, quantum devices, noise, plasmas."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 730",
+    "course_name": "Special Topics in Electromagnetics",
+    "description": "Special topics of current interest in electromagnetics."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 735",
+    "course_name": "Special Topics in the Optical Sciences",
+    "description": "Key topics of current research interest in ultrafast phenomena, short wavelength lasers, atomic traps, integrated optics, nonlinear optics and spectroscopy."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 750",
+    "course_name": "Special Topics in Communication and Information Theory",
+    "description": "Special topics of current interest related to communication and information theory."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 755",
+    "course_name": "Special Topics in Signal Processing",
+    "description": "Advanced topics in Signal and/or image processing. The specific topics vary with each offering."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 760",
+    "course_name": "Special Topics in Control Theory",
+    "description": "Special topics of current interest related to control theory."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 765",
+    "course_name": "Special Topics in Stochastic Systems and Control",
+    "description": "Advanced topics on stochastic systems such as stochastic calculus, nonlinear filtering, stochastic adaptive control, decentralized control and queuing networks."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 820",
+    "course_name": "Seminar in Solid-State Electronics",
+    "description": "Advanced graduate seminar devoted to discussing current research topics in areas of solid-state electronics. Specific topics vary each time the course is offered."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 990",
+    "course_name": "Dissertation/Pre-Candidate",
+    "description": "Dissertation work by doctoral student not yet admitted to status as candidate. The defense of the dissertation, that is, the final oral examination, must be held under a full-term candidacy enrollment."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 990",
+    "course_name": "Dissertation/Pre-Candidate",
+    "description": "dissertation, that is, the final oral examination, must be held under a full-term candidacy enrollment."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "CSE 995",
+    "course_name": "Dissertation/Candidate",
+    "description": "Election for dissertation work by a doctoral student who has been admitted to candidate status. The defense of the dissertation, that is, the final oral examination, must be held under a full-term candidacy enrollment."
+  },
+  {
+    "program": "University of Michigan - EECS Course Bulletin",
+    "course_code": "ECE 995",
+    "course_name": "Dissertation/Candidate",
+    "description": "Election for dissertation work by a doctoral student who has been admitted to candidate status. The defense of the dissertation, that is, the final oral examination, must be held under a full-term candidacy enrollment."
+  }
+]

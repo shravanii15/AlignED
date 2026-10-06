@@ -38,7 +38,7 @@ import sqlite3
 from scipy.stats import false_discovery_control, linregress
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # .../AlignED
-DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
+DB_PATH = os.environ.get("ALIGNED_DB_PATH") or os.path.join(BASE_DIR, "database", "aligned.db")
 CHECKPOINT_PATH = os.path.join(BASE_DIR, "data", "gap_analysis", "trend_extraction_checkpoint.json")
 OUTPUT_JSON_PATH = os.path.join(BASE_DIR, "data", "gap_analysis", "skill_trends.json")
 

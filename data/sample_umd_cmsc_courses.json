@@ -1,0 +1,572 @@
+[
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC401",
+    "course_name": "Algorithms for Geospatial Computing",
+    "description": "An introduction to fundamental geospatial objects and geometric algorithms for spatio-temporal data processing and analysis. Point data representation and analysis: spatial data models and data structures, algorithms for spatial queries, point clustering algorithms. Surface and scalar field modeling, such as terrains: raster and triangle-based models (TINs), algorithms for building and querying TINs. Algorithms for natural and urban terrain analysis: morphology computation and visibility analysis. Applications to processing and analysis of LiDAR (Light Detection And Ranging) data in the context of terrain reconstruction, urban modeling, forest management and bathymetry reconstruction for coastal data management. Road network computation and analysis: algorithms for route computation in road networks, and for road network reconstruction from GPS and satellite data."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC411",
+    "course_name": "Computer Systems Architecture",
+    "description": "Input/output processors and techniques. Intra-system communication, buses, caches. Addressing and memory hierarchies. Microprogramming, parallelism, and pipelining."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC412",
+    "course_name": "Operating Systems",
+    "description": "A hands-on introduction to operating systems, including topics in: multiprogramming, communication and synchronization, memory management, IO subsystems, and resource scheduling polices. The laboratory component consists of constructing a small kernel, including functions for device IO, multi-tasking, and memory management."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC414",
+    "course_name": "Computer and Network Security",
+    "description": "An introduction to the topic of security in the context of computer systems and networks. Identify, analyze, and solve network-related security problems in computer systems. Fundamentals of number theory, authentication, and encryption technologies, as well as the practical problems that have to be solved in order to make those technologies workable in a networked environment, particularly in the wide-area Internet environment."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC416",
+    "course_name": "Introduction to Parallel Computing",
+    "description": "Introduction to parallel computing. Topics include programming for shared memory and distributed memory parallel architectures, and fundamental issues in design, development, and performance analysis of parallel programs."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC417",
+    "course_name": "Computer Networks",
+    "description": "Computer networks and architectures. The OSI model including discussion and examples of various network layers. A general introduction to existing network protocols. Communication protocol specification, analysis, and testing."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC420",
+    "course_name": "Advanced Data Structures",
+    "description": "Description, properties, and storage allocation functions of data structures including balanced binary trees, B-Trees, hash tables, skiplists, tries, KD-Trees and Quadtrees. Algorithms for manipulating structures. Applications from areas such as String Processing, Computer Graphics, Information Retrieval, Computer Networks, Computer Vision, and Operating Systems."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC421",
+    "course_name": "Introduction to Artificial Intelligence",
+    "description": "Introduces a range of ideas and methods in AI, varying semester to semester but chosen largely from: automated heuristic search, planning, games, knowledge representation, logical and statistical inference, learning, natural language processing, vision, robotics, cognitive modeling, and intelligent agents. Programming projects will help students obtain a hands-on feel for various topics."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC422",
+    "course_name": "Introduction to Machine Learning",
+    "description": "Machine Learning studies representations and algorithms that allow machines to improve their performance on a task from experience. This is a broad overview of existing methods for machine learning and an introduction to adaptive systems in general. Emphasis is given to practical aspects of machine learning and data mining."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC423",
+    "course_name": "Computational Genomics",
+    "description": "Computers have revolutionized modern biological research by enabling the management and analysis of the large amounts of data generated through high-throughput experiments. This course provides insight into some of the biological problems that can be addressed using computational methods and introduces the main data structures and algorithms used to solve problems related to biological sequences such as DNA, RNA, and proteins. Many of the techniques taught in this course are applicable beyond the bioinformatics domain, as they are relevant to and commonly used in other areas of computer science. No knowledge of biology is required for this course."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC424",
+    "course_name": "Database Design",
+    "description": "Students are introduced to database systems and motivates the database approach as a mechanism for modeling the real world. An in-depth coverage of the relational model, logical database design, query languages, and other database concepts including query optimization, concurrency control; transaction management, and log based crash recovery. Distributed and Web database architectures are also discussed."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC425",
+    "course_name": "Game Programming",
+    "description": "An introduction to the principles and practice of computer game programming and design. This includes an introduction to game hardware and systems, the principles of game design, object and terrain modeling, game physics, artificial intelligence for games, networking for games, rendering and animation, and aural rendering. Course topics are reinforced through the design and implementation of a working computer game."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC426",
+    "course_name": "Computer Vision",
+    "description": "An introduction to basic concepts and techniques in computervision. This includes low-level operations such as image filtering and edge detection, 3D reconstruction of scenes using stereo and structure from motion, and object detection, recognition and classification."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC427",
+    "course_name": "Computer Graphics",
+    "description": "An introduction to 3D computer graphics, focusing on the underlying building blocks and algorithms for applications such as 3D computer games, and augmented and virtual reality (AR/VR). Covers the basics of 3D image generation and 3D modeling, with an emphasis on interactive applications. Discusses the representation of 3D geometry, 3D transformations, projections, rasterization, basics of color spaces, texturing and lighting models, as well as programming of modern Graphics Processing Units (GPUs). Includes programming projects where students build their own 3D rendering engine step-by-step."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC430",
+    "course_name": "Introduction to Compilers",
+    "description": "Topics include lexical analysis, parsing, intermediate representations, program analysis, optimization, and code generation."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC431",
+    "course_name": "Privacy Engineering",
+    "description": "Explores the intersection of technology and privacy, including technical mechanisms for data privacy, legal and regulatory privacy regimes, and mediation of interpersonal privacy through technology."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC433",
+    "course_name": "Programming Language Technologies and Paradigms",
+    "description": "Programming language technologies (e.g., object-oriented programming), their implementations and use in software design and implementation."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC434",
+    "course_name": "Introduction to Human-Computer Interaction",
+    "description": "Assess usability by quantitative and qualitative methods. Conduct task analyses, usability tests, expert reviews, and continuing assessments of working products by interviews, surveys, and logging. Apply design processes and guidelines to develop professional quality user interfaces. Build low-fidelity paper mockups, and a high-fidelity prototype using contemporary tools such as graphic editors and a graphical programming environment (eg: Visual Basic, Java)."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC435",
+    "course_name": "Software Engineering",
+    "description": "State-of-the-art techniques in software design and development. Laboratory experience in applying the techniques covered. Structured design, structured programming, top-down design and development, segmentation and modularization techniques, iterative enhancement, design and code inspection techniques, correctness, and chief-programmer teams. The development of a large software project."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC436",
+    "course_name": "Programming Handheld Systems",
+    "description": "Fundamental principles and concepts that underlie the programming of handheld systems, such as mobile phones, personal digital assistants, and tablet computers. Particular emphasis will be placed on concepts such as limited display size, power, memory and CPU speed; and new input modalities, where handheld systems differ substantially from non-handheld systems, and thus require special programming tools and approaches. Students will apply these concepts and principles in the context of an existing handset programming platform."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC437",
+    "course_name": "Introduction to Quantum Software Laboratory",
+    "description": "Introductory Programming/Software laboratory for quantum computing. Understand the existing programming tools for quantum computers and the characteristics of quantum hardware. Develop quantum application prototypes and tools to characterize and mitigate the limitations of quantum hardware."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC451",
+    "course_name": "Design and Analysis of Computer Algorithms",
+    "description": "Fundamental techniques for designing efficient computer algorithms, proving their correctness, and analyzing their complexity. General topics include graph algorithms, basic algorithm design paradigms (such as greedy algorithms, divide-and-conquer, and dynamic programming), network flows, NP-completeness, and other selected topics in algorithms."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC452",
+    "course_name": "Elementary Theory of Computation",
+    "description": "Techniques are developed to determine the difficulty of a problem relative to a model of computation. Topics include Finite Automata, P, NP, decidability, undecidability, and communication complexity."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC454",
+    "course_name": "Algorithms for Data Science",
+    "description": "Fundamental methods for processing a high volume of data. Methods include stream processing, locally sensitive hashing, web search methods, page rank computation, network and link analysis, dynamic graph algorithms as well as methods to handle high dimensional data/dimensionality reduction."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC456",
+    "course_name": "Cryptography",
+    "description": "The theory, application, and implementation of mathematical techniques used to secure modern communications. Topics include symmetric and public-key encryption, message integrity, hash functions, block-cipher design and analysis, number theory, and digital signatures."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC457",
+    "course_name": "Introduction to Quantum Computing",
+    "description": "An introduction to the concept of a quantum computer, including algorithms that outperform classical computation and methods for performing quantum computation reliably in the presence of noise. As this is a multidisciplinary subject, the course will cover basic concepts in theoretical computer science and physics in addition to introducing core quantum computing topics. No previous background in quantum mechanics is required."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC460",
+    "course_name": "Computational Methods",
+    "description": "Basic computational methods for interpolation, least squares, approximation, numerical quadrature, numerical solution of polynomial and transcendental equations, systems of linear equations and initial value problems for ordinary differential equations. Emphasis on methods and their computational properties rather than their analytic aspects. Intended primarily for students in the physical and engineering sciences."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC466",
+    "course_name": "Introduction to Numerical Analysis I",
+    "description": "Floating point computations, direct methods for linear systems, interpolation, solution of nonlinear equations."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC470",
+    "course_name": "Introduction to Natural Language Processing",
+    "description": "Introduction to fundamental techniques for automatically processing and generating natural language with computers. Machine learning techniques, models, and algorithms that enable computers to deal with the ambiguity and implicit structure of natural language. Application of these techniques in a series of assignments designed to address a core application such as question answering or machine translation."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC471",
+    "course_name": "Introduction to Data Visualization",
+    "description": "Datasets are becoming increasingly large and complex, requiring intuitive ways to explore and interpret them quickly and efficiently. In this case, a picture is worth a thousand words: visualizations enable us to transform data into images that are easier to understand and reason about, compared to raw numbers and raw text. Visualizations are critical tools in externalizing and organizing our knowledge and insights, whether to explore collected datasets to improve our understanding of the physical world, to assess and debug analysis/experimental workflows, or to present new and interesting results to diverse audiences. In this course we will study techniques and algorithms for creating effective visualizations based on principles from graphic design, perceptual psychology, and cognitive science. Students will learn how to design and build interactive visualizations for the web, using the D3.js (Data-Driven Documents) framework."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC472",
+    "course_name": "Introduction to Deep Learning",
+    "description": "An introduction to deep learning, a machine learning technique, as well as its applications to a variety of domains. Provides a broad overview of deep learning concepts including neural networks, convolutional neural networks, recurrent neural networks, generative models, and deep reinforcement learning, and an intuitive introduction to basics of machine learning such as simple models, learning paradigms, optimization, overfitting, importance of data, and training caveats."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC473",
+    "course_name": "Capstone in Machine Learning",
+    "description": "Semester-long project course in which each student will identify and carry out a project related to machine learning, with the goal of publishing a research paper or software tool."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC474",
+    "course_name": "Introduction to Computational Game Theory",
+    "description": "Game theory deals with interactions among agents (either human or computerized) whose objectives and preferences may differ from the objectives and preferences of the other agents. It will also provide a comprehensive introduction to game theory, concentrating on its computational aspects."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC475",
+    "course_name": "Combinatorics and Graph Theory",
+    "description": "General enumeration methods, difference equations, generating functions. Elements of graph theory, matrix representations of graphs, applications of graph theory to transport networks, matching theory and graphical algorithms."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC477",
+    "course_name": "Robotics Perception and Planning",
+    "description": "A hands-on introduction to perception and planning for robotics, including rigid body transformations and rotations, dynamics and control of mobile robots/drones, graph based and sampling based planning algorithms, Bayseian and Kalman filtering, camera models and calibration, projective geometry, visual features, optical flow, pose estimation, RANSAC and Hough transform, structure from motion, visual odometry, machine learning basics, visual recognition and learning."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC488",
+    "course_name": "Special Topics in Computer Science",
+    "description": "Seminar courses that allow students to pursue new and emerging areas of Computer Science."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC498",
+    "course_name": "Selected Topics in Computer Science",
+    "description": "An individualized course designed to allow a student or students to pursue a selected topic not taught as a part of the regular course offerings under the supervision of a Computer Science faculty member. In addition, courses dealing with topics of special interest and/or new emerging areas of computer science will be offered with this number. Selected topics courses will be structured very much like a regular course with homework, project and exams. Credit according to work completed"
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC499",
+    "course_name": "Independent Undergraduate Research",
+    "description": "Students are provided with an opportunity to participate in a computer science research project under the guidance of a faculty advisor. Format varies. Students and supervising faculty member will agree to a research plan which must be approved by the department. As part of each research plan, students should produce a final paper delineating their contribution to the field."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC601",
+    "course_name": "Computational and Mathematical Analysis of Biological Networks across Scales",
+    "description": "Describe, implement and analyze algorithms that solve fundamental problems in biological network analysis: descriptive summaries of network structure and properties, probabilistic and dynamical network models, statistical models for networked data and network visualization."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC614",
+    "course_name": "Computer and Network Security",
+    "description": "Advanced topics in computer and network security, including: anonymity, privacy, memory safety, malware, denial of service attacks, trusted hardware, security design principles, and empirically measuring security \"in the wild\". This will be a largely paper-driven course (there is no textbook), preparing students for research in (or around) the broad area of security. Students will gain first-hand experience launching attacks in controlled environments. The bulk of the grade will be based on a final, semester-long group project."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC616",
+    "course_name": "Foundations of Parallel Computing",
+    "description": "Covers the foundations of parallel computing. Topics include programming for shared memory and distributed memory parallel architectures, and fundamental issues in design, development and analysis of parallel programs."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC630",
+    "course_name": "Foundations of Software Verification",
+    "description": "Topics in program verification. Operational semantics of programs. Preconditions and postconditions. Axiomatic proof systems and predicate transformers. Temporal logic and model checking. Process algebra, semantic equivalences and algebraic reasoning."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC631",
+    "course_name": "Program Analysis and Understanding",
+    "description": "Techniques for static analysis of source code and modern programming paradigms. Analysis techniques: data flow analysis, program dependence graphs, program slicing, abstract interpretation. The meaning of programs: denotational semantics, partial evaluation. Advanced treatment of abstraction mechanisms: polymorphic types, operation overloading, inheritance, object-oriented programming and ML-like programming languages."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC634",
+    "course_name": "Empirical Research Methods for Computer Science",
+    "description": "A graduate-level introductory course on empirical reseach methods for computer scientists. Experimental techniques for evaluating software systems and processes, human performance using interfaces, programming environments, and software engineering methods. Introduction to constructs and methods of measurements, qualitative and quantitative design, quasi-experimental and non-experimental design, baseline design, and statistical analysis."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC642",
+    "course_name": "Big Data Systems",
+    "description": "An overview of data management systems for performing data science on large volumes of data, including relational databases, and NoSQL systems. The topics covered include: different types of data management systems, their pros and cons, how and when to use those systems, and best practices for data modeling."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC643",
+    "course_name": "Principles of Machine Learning",
+    "description": "A broad introduction to machine learning and statistical pattern recognition. Topics include: Supervised learning: Bayes decision theory, discriminant functions, maximum likelihood estimation, nearest neighbor rule, linear discriminant analysis, support vector machines, neural networks, deep learning networks. Unsupervised learning: clustering, dimensionality reduction, PCA, auto-encoders. The course will also discuss recent applications of machine learning, such as computer vision, data mining, autonomous navigation, and speech recognition."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC651",
+    "course_name": "Analysis of Algorithms",
+    "description": "Efficiency of algorithms, orders of magnitude, recurrence relations, lower-bound techniques, time and space resources, NP-complete problems, polynomial hierarchies, and approximation algorithms. Sorting, searching, set manipulation, graph theory, matrix multiplication, fast Fourier transform, pattern matching, and integer and polynomial arithmetic."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC656",
+    "course_name": "Introduction to Cryptography",
+    "description": "Introduction to modern cryptography. Topics include symmetric-key encryption, hash functions, message-authentication codes, block-cipher design, theoretical foundations, number theory, public-key encryption, and digital signatures."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC657",
+    "course_name": "Introduction to Quantum Information Processing",
+    "description": "An introduction to the field of quantum information processing. Students will be prepared to pursue further study in quantum computing, quantum information theory, and related areas."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC660",
+    "course_name": "Scientific Computing I",
+    "description": "Fundamental techniques in scientific computation with an introduction to theory and software for each topic. Computer numbers and sources of errors, numerical linear algebra, optimization, and Monte Carlo methods."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC661",
+    "course_name": "Scientific Computing II",
+    "description": "Numerical methods for solving ordinary and partial differential equations (elliptic, parabolic, hyperbolic, and dispersive): motivation, analysis, and implementation. Finite difference methods, finite element methods, Fourier and Chebyshev spectral methods, and meshless methods."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC662",
+    "course_name": "Computer Organization and Programming for Scientific Computing",
+    "description": "This course presents fundamental issues of computer hardware, software parallel computing, and scientific data management for programming for scientific computation."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC663",
+    "course_name": "Advanced Scientific Computing I",
+    "description": "In the sequence Advanced Scientific Computing I & Advanced Scientific Computing II, ( CMSC663 / CMSC663 and AMSC664 / CMSC664 , respectively) students work on a year-long individual project to develop software for a scientific task in a high performance computing environment. Lectures will be given on available computational environments, code development, implementation of parallel algorithms."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC664",
+    "course_name": "Advanced Scientific Computing II",
+    "description": "In the sequence Advanced Scientific Computing I & Advanced Scientific Computing II, ( AMSC663 / CMSC663 and CMSC664 / CMSC664 , respectively) students work on a year-long individual project to develop software for a scientific task in a high performance computing environment. Lectures will be given on available computational environments, code development, implementation of parallel algorithms."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC665",
+    "course_name": "Scientific Computing III: Data-Driven and Machine Learning Methods",
+    "description": "This course introduces graduate students to contemporary numerical methods and techniques for data generation and analysis. The course program includes numerical approximation theory, neural-network-based methods for solving PDEs and inverse problems, neural operators for parametric PDEs, methods for dimensional reduction, including diffusion maps and autoencoders, generative models, and graph data analysis (if time allows)."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC666",
+    "course_name": "Numerical Analysis I",
+    "description": "Approximation theory, numerical solution of initial-value problems, iterative methods for linear systems, optimization."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC673",
+    "course_name": "Capstone in Machine Learning",
+    "description": "Semester-long project course in which each student will identify and carry out a project related to machine learning, with the goal of publishing a research paper or software tool."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC701",
+    "course_name": "Computational Genomics",
+    "description": "An introduction to the algorithms and heuristics used in the analysis of biological sequences. Includes an introduction to string matching and alignment algorithms, phylogenetic analysis, string reconstruction (genome assembly), and sequence pattern recognition (gene and motif finding). A particular emphasis will be placed on the design of efficient algorithms and on techniques for analyzing the time and space complexity of these algorithms. Computational concepts will be presented in the context of current biological applications. No prior knowledge of biology necessary."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC702",
+    "course_name": "Algorithmic Evolutionary Biology",
+    "description": "Covers fundamental computational problems from comparative genomics and evolutionary biology. Topics include multiple sequence alignment and the reconstruction of evolutionary histories (e.g., phylogenetic trees and networks). These tasks are typically framed as NP-hard optimization problems, motivating the development of heuristics based on constraints, graph algorithms, and more recently machine learning. We analyze algorithms from the empirical and theoretical perspectives (e.g., computational complexity, optimality guarantees, and statistical consistency under popular models of evolution). Lastly, we discuss how algorithms are leveraged in emerging applications, like evolutionary analyses of tumors and pathogens, along with their limitations and directions for future research."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC711",
+    "course_name": "Computer Networks",
+    "description": "Priciples, design, and performance evaluation of computer networks. Network architectures including the ISO model and local area networks (LANs). Communication protocols and network topology."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC714",
+    "course_name": "High Performance Computing Systems",
+    "description": "Slected topics in high-performance systems, including contemporary architectures, interconnection topologies, shared memory and message-passing systems, multi-threaded kernels, latency avoidance and hiding techniques, methods for data and workload partitioning performance profiling, debugging."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC715",
+    "course_name": "Wireless and Mobile Systems for the IoT",
+    "description": "Research on the Internet of Things (IoT), from the perspective of wireless networking and mobile sensing. Various techniques, algorithms, and systems that leverage the sensors in smartphones, smartwatches, drones, and IoT devices, to deliver real-world applications"
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC722",
+    "course_name": "Artificial Intelligence Planning",
+    "description": "Automated planning of actions to accomplish some desired goals. Basic algorithms, important systems, and new directions in the field of artificial intelligence planning systems."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC723",
+    "course_name": "Natural Language Processing",
+    "description": "Introduce fundamental concepts, techniques, and algorithms for the computational handling of natural language. Statistical and machine learning techniques, models, and algorithms that enable computers to deal with the ambiguity and implicit structure of human language. Approaches that focus on uncovering linguistic structure, such as syntactic or semantic parsing, as well as those that focus on manipulating text in useful ways, such as question answering or machine translation."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC724",
+    "course_name": "Database Management Systems",
+    "description": "Theoretical and implementation issues in advanced database systems. Topics include distributed databases, parallel databases, database client-server architectures, multimedia access methods, advanced query optimization techniques, data semantics and models, object-oriented databases, and deductive and expert database systems."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC725",
+    "course_name": "Geographical Information Systems and Spatial Databases",
+    "description": "Topics in geographic information systems and spatial databases. Integrates related results from databases, cartography, geography, computer graphics, file access methods, computational geometry, image processing, data structures, and programming languages. Topics include: cartographic modeling, principles of cartography, methods from computational geometry, principles of spatial databases, access methods, and spatial data structures. The architecture of some existing spatial databases and geographic information systems will be examined in greater detail."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC726",
+    "course_name": "Machine Learning",
+    "description": "An introduction to modern statistical data analysis using machine learning techniques. The course quickly surveys elementary statistical models (decision trees, nearest neighbors and linear regression) and moves on to more complex algorithms such as support vector machines, boosting, neural networks, structured prediction, apprenticeship learning, online learning, bandits, recommender systems and reinforcement learning. Throughout an emphasis is placed on mathematical rigor."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC727",
+    "course_name": "Neural Modeling",
+    "description": "Fundamental methods of neural modeling. Surveys historical development and recent research results from both the computational and dynamical systems perspective. Logical neurons, perceptrons, linear adaptive networks, attractor neural networks, competitive activation methods, error back-propagation, self-organizing maps, and related topics. Applications in artificial intelligence, cognitive science, and neuroscience."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC730",
+    "course_name": "Interactive Technologies in Human-Computer Interaction",
+    "description": "Ubiquitous and mobile computing, wearables, virtual/augmented reality, natural user interfaces, tangible UIs, interactive fabrication."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC732",
+    "course_name": "Human Factors in Security and Privacy",
+    "description": "Introducing a variety of important topics at the intersection of human factors and privacy and security, and developing skills in designing human-subjects studies to evaluate problems and solutions related to these topics."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC733",
+    "course_name": "Computer Processing of Pictorial Information",
+    "description": "Input, output, and storage of pictorial information. Pictures as information sources, efficient encoding, sampling, quantization, approximation. Position-invariant operations on pictures, digital and optical implementations, the pax language, applications to matched and spatial frequency filtering. Picture quality, image enhancement and image restoration. Picture properties and pictorial pattern recognition. Processing of complex pictures; figure extraction, properties of figures. Data structures for pictures description and manipulation; picture languages. Graphics systems for alphanumeric and other symbols, line drawings of two- and three-dimensional objects, cartoons and movies."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC734",
+    "course_name": "Information  Visualization",
+    "description": "Information visualization defined in relation to graphics, scientific visualization, databases, data mining, and human-computer interaction. Visualizations for dimensional, temporal, hierarchical and network data. Examines design alternatives, algorithms and data structures, coordinated views, and human factors evaluations of efficacy."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC740",
+    "course_name": "Advanced Computer Graphics",
+    "description": "An introduction to advanced concepts in computer graphics. Includes an introduction to realistic rendering based on physical properties of light transport, radiometric concepts, and the rendering equation; Monte Carlo integration techniques to solve the rendering equation such as path tracing and multiple importance sampling; and neural network techniques for efficient sampling and denoising. Further discusses recent advances in 3D modeling and reconstruction, such as neural network-based 3D reconstruction; inverse rendering using neural radiance fields and differentiable rendering; and generative modeling for images, videos, and 3D data."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC742",
+    "course_name": "Algorithms in Machine Learning: Guarantees and Analyses",
+    "description": "Machine learning studies automatic methods for learning to make accurate predictions, to understand patterns in observed features and to make useful decisions based on past observations. This course introduces theoretical machine learning, including mathematical models of machine learning, and the design and rigorous analysis of learning algorithms. Topics include: (1) Learning theory (traditional and modern), including PAC learning basics, Boosting theory and PAC learning in neural nets. (2) Latent variable graphical models, including spectral methods for learning latent variable models. (3) Reinforcement learning theory, including algorithms, sample complexity and analyses."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC751",
+    "course_name": "Parallel Algorithms",
+    "description": "A presentation of the theory of parallel computers and parallel processing. Models of parallel processing and the relationships between these models. Techniques for the design and analysis of efficient parallel algorithms including parallel prefix, searching, sorting, graph problems, and algebraic problems. Theoretical limits of parallelism."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC752",
+    "course_name": "Ramsey Theory and its Applications",
+    "description": "Theorems about when a coloring of a graph (or other objects) has to yield a nice monochromatic object. Applications will be to computer science theory and to mathematics."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC754",
+    "course_name": "Computational Geometry",
+    "description": "Introduction to algorithms and data structures for computational problems in discrete geometry (for points, lines, and polygons) primarily in two and three dimensions. Topics include triangulations and planar subdivisions, geometric search and intersection, convex hulls, Voronoi diagrams, Delaunay triangulations, line arrangements, visibility, and motion planning."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC756",
+    "course_name": "Robotics",
+    "description": "Overview on fundamental components of robotic systems, including the sensing and actuation, control and modeling of motion and perception, dynamics and kinematics, motion planning and manipulation of robots."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC763",
+    "course_name": "Advanced Linear Numerical Analysis",
+    "description": "Advanced topics in numerical linear algebra, such as dense eigenvalue problems, sparse elimination, iterative methods, and other topics."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC764",
+    "course_name": "Advanced Numerical Optimization",
+    "description": "Modern numerical methods for solving unconstrained and constrained nonlinear optimization problems in finite dimensions. Design of computational algorithms and the analysis of their properties."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC773",
+    "course_name": "Computational Linguistics II",
+    "description": "Natural language processing with a focus on corpus-based statistical techniques. Topics inlcude: stochastic language modeling, smoothing, noisy channel models, probabilistic grammars and parsing; lexical acquisition, similarity-based methods, word sense disambiguation, statistical methods in NLP applications; system evaluation."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC798",
+    "course_name": "Master's Non-Thesis Research",
+    "description": "Master's Non-Thesis Research"
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC799",
+    "course_name": "Master's Thesis Research",
+    "description": ""
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC800",
+    "course_name": "How to Conduct Great Research",
+    "description": "Develop research skills so as to promote high quality and high impact."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC801",
+    "course_name": "Department Internal Research Seminar",
+    "description": "Research overviews from faculty to help introduce departmental research to graduate students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC818",
+    "course_name": "Advanced Topics in Computer Systems",
+    "description": "Advanced topics selected by the faculty from the literature of computer systems to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC828",
+    "course_name": "Advanced Topics in Information Processing",
+    "description": "Advanced topics selected by the faculty from the literature of information processing to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC829",
+    "course_name": "Advanced Topics in Bioinformatics and Computational Biology",
+    "description": "Advanced topics selected by the faculty from the literature of bioinformatics to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC838",
+    "course_name": "Advanced Topics in Programming Languages",
+    "description": "Advanced topics selected by faculty from the literature of programming languages to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC839",
+    "course_name": "Advanced Topics in Human-Computer Interaction",
+    "description": "Advanced topics selected by the faculty from the literature of human-computer interaction to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC848",
+    "course_name": "Selected Topics in Information Processing",
+    "description": "Selected topics by the faculty from the literature of information processing to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC858",
+    "course_name": "Advanced Topics in Theory of Computing",
+    "description": "Advanced topics selected by the faculty from the literature of theory of computing to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC878",
+    "course_name": "Advanced Topics in Numerical Methods",
+    "description": "Advanced topics selected by the faculty from the literature of numerical methods to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC898",
+    "course_name": "Pre-Candidacy Research",
+    "description": "Advanced topics selected by the faculty from the literature of applications of computer science to suit the interest and background of students."
+  },
+  {
+    "program": "University of Maryland - CMSC Graduate Catalog",
+    "course_code": "CMSC899",
+    "course_name": "Doctoral Dissertation Research",
+    "description": "Undergraduate"
+  }
+]

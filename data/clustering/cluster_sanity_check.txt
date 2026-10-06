@@ -1,0 +1,124 @@
+Role cluster sanity check -- best k = 11, silhouette score = 0.0816
+======================================================================
+
+CLUSTER 0 -- 226 postings
+----------------------------------------
+  - IT Infrastructure & Cybersecurity Advisor (Impact Networking, LLC)
+  - Cybersecurity Engineer (Hussmann)
+  - Director, Cybersecurity Architect l Forensic and Litigation Consulting (FTI Consulting)
+  - Senior Cybersecurity Field Engineer (Emerson)
+  - Manager, Information Security Office (ISO) Consultant (Capital One)
+  - Information Security Sr. Manager Application Security Enablement (Wells Fargo)
+  - SVP of Information Security  (Glocomms)
+  - Manager, Information Security Office (ISO) Consultant (Capital One)
+
+CLUSTER 1 -- 211 postings
+----------------------------------------
+  - Staff Data Scientist, Ecosystem (Dice)
+  - Senior Software Engineer (Complete Staffing Solutions)
+  - Sr Data Engineer (Apex Systems)
+  - Supply Chain Senior Data Scientist (Conagra Brands)
+  - Data Engineer II (Advantis Global is becoming INSPYR Solutions)
+  - Databricks Data Engineer (Smart IT Frame LLC)
+  - Senior Data Engineer - Python (Avesta Computer Services)
+  - Data Engineer (Piper Companies)
+
+CLUSTER 2 -- 169 postings
+----------------------------------------
+  - Senior Web Developer (ICE)
+  - Software Engineer (Rose International)
+  - Manager, Software Engineering, Back End (Capital One)
+  - FE/Fullstack Software Engineer (QueryPal)
+  - Web Developer ()
+  - Senior Software Engineer (Codeliq)
+  - Principal Software Engineer (Yahoo)
+  - Web Developer (Alaka`ina Foundation Family of Companies)
+
+CLUSTER 3 -- 94 postings
+----------------------------------------
+  - Systems Administrator (Absolute Resolutions Corporation)
+  - Systems Administrator (Intone)
+  - IT Network Engineer (Nexstar Media Group, Inc.)
+  - Middleware Systems Administrator (TechTriad)
+  - Systems Administrator (AMP EEDRS) (COLSA)
+  - Jr. Systems Administrator (Apex Systems)
+  - Senior Systems Administrator- CC&B (Orlando Utilities Commission (OUC - The Reliable One))
+  - Systems Administrator (INSPYR Solutions)
+
+CLUSTER 4 -- 146 postings
+----------------------------------------
+  - Senior Developer Relationship Manager – Physics Informed Machine Learning (NVIDIA)
+  - Machine Learning Engineer - Remote (Orbit Recruitment Group )
+  - Senior Data Scientist (Enterprise Peak)
+  - Senior Software Engineer, AI Developer Tools - Cloud Software (NVIDIA)
+  - Senior Product Manager, Machine Learning Frameworks, Google Cloud (Google)
+  - HPC Network Engineer (Algo Capital Group)
+  - Architect, Machine Learning, Field CTO (Snowflake)
+  - Senior Machine Learning Engineer (Harnham)
+
+CLUSTER 5 -- 250 postings
+----------------------------------------
+  - Azure DevOps Engineer (Motion Recruitment)
+  -  DevOps Engineer II (Perfict)
+  - Azure Cloud Engineer  (Smart IT Frame LLC)
+  - Sr DevOps Engineer (Shakti Solutions)
+  - Senior DevOps Engineer  (Apexon)
+  - Senior DevOps Engineer (VueJS, Node.js, IoT Devices, Lambda, AWS, medical device domain) (Cube Hub Inc.)
+  - VP of Cloud Engineering  (Optimum Healthcare IT)
+  - Senior Cloud Engineer(Golang) (BayOne Solutions)
+
+CLUSTER 6 -- 119 postings
+----------------------------------------
+  - Sr. Director/Head of Business Intelligence (Glocomms)
+  - Business Intelligence Supervisor (Plymouth Rock Assurance)
+  - Business Intelligence Intern (Kopco)
+  - Business Intelligence Consultant (Insight Global)
+  - Advanced Business Intelligence Analyst (Trinity Health)
+  - Senior Business Intelligence Analyst (Quantum Health)
+  - Business Intelligence Consultant (Indotronix Avani Group)
+  - Business Intelligence Analyst (Wis-Pak, Inc.)
+
+CLUSTER 7 -- 123 postings
+----------------------------------------
+  - Network Engineer / Hybrid @ Irvine, CA (IdeaHelix, Inc)
+  - Senior Network Engineer (Blue Mantis)
+  - Network Engineer Principal (SAIC)
+  - Mainframe Network Engineer (Remote) (General Dynamics Information Technology)
+  - Senior Network Engineer (TEKsystems)
+  - Senior System/Network Engineer - Managed Services (Bowman Williams)
+  - Senior Network Engineer (HyperThinkUS)
+  - Senior Manager Network Engineering (Emerson United Inc- Strategic Search and Recruitment)
+
+CLUSTER 8 -- 173 postings
+----------------------------------------
+  - Senior Software Engineer - Kubernetes Platform Engineering team (Marqeta)
+  - Associate Managing Consultant, Cybersecurity (Mastercard)
+  - Product Cybersecurity Engineer (Torc Robotics)
+  - AWS Cloud Network Engineer (G-Research)
+  - Social Media Business Intelligence Senior Manager (Verizon)
+  - Forward Deployed Data Engineer - TS/SCI Full Scope Polygraph (Sayari)
+  - Senior Data Scientist, Experimentation & Personalization (Capital One)
+  - Senior Business Intelligence Analyst (Digital Turbine)
+
+CLUSTER 9 -- 30 postings
+----------------------------------------
+  - Web Developer (DataAnnotation)
+  - Web Developer (DataAnnotation)
+  - Web Developer (DataAnnotation)
+  - Web Developer (DataAnnotation)
+  - Web Developer (DataAnnotation)
+  - Web Developer (DataAnnotation)
+  - Web Developer (DataAnnotation)
+  - Web Developer (DataAnnotation)
+
+CLUSTER 10 -- 119 postings
+----------------------------------------
+  - Database Administrator (BCforward)
+  - SQL Database Administrator (KPG99 INC)
+  - Database Administrator (Software Technology Inc.)
+  - Database Administrator (Software Technology Inc.)
+  - Database Administrator (Sumeru Inc)
+  - Database Administrator (InfoVision21, Inc)
+  - Database Administrator (SeaHill Consulting Group)
+  - Sybase Database Administrator - Michigan (Skywalk Global)
+

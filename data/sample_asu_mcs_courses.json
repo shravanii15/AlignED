@@ -1,0 +1,32 @@
+[
+  {
+    "program": "ASU - Online Master of Computer Science",
+    "course_code": "CSE 230",
+    "course_name": "Computer Organization and Assembly Language Programming",
+    "description": "Register-level computer organization, instruction set architecture, assembly language, processor organization and design, memory organization, IO programming and exception/interrupt handling."
+  },
+  {
+    "program": "ASU - Online Master of Computer Science",
+    "course_code": "CSE 310",
+    "course_name": "Data Structures and Algorithms",
+    "description": "Advanced data structures and algorithms, including stacks, queues, trees (B, B+, AVL), graphs and searching for graphs, hashing and external sorting."
+  },
+  {
+    "program": "ASU - Online Master of Computer Science",
+    "course_code": "CSE 330",
+    "course_name": "Operating Systems",
+    "description": "Operating system structure and services, processor scheduling, concurrent processes, synchronization techniques, memory management, virtual memory, input/output, storage management and file systems."
+  },
+  {
+    "program": "ASU - Online Master of Computer Science",
+    "course_code": "CSE 340",
+    "course_name": "Principles of Programming Languages",
+    "description": "Formal syntactic and semantic descriptions, compilation and implementation issues, and theoretical foundations for several programming paradigms."
+  },
+  {
+    "program": "ASU - Online Master of Computer Science",
+    "course_code": "CSE 355",
+    "course_name": "Introduction to Theoretical Computer Science",
+    "description": "Introduces formal language theory and automata, Turing machines, decidability/undecidability, recursive function theory and complexity theory."
+  }
+]

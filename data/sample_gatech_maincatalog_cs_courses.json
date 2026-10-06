@@ -1,0 +1,1772 @@
+[
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01100",
+    "course_name": "Pathways in Computing",
+    "description": "Small group discussions with first year students are led by one or more faculty members and include a variety of foundational, motivational, and topical subjects for computationalist."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01171",
+    "course_name": "Introductory Computing in MATLAB",
+    "description": "For students with a solid introductory computing background needing to demonstrate proficiency in the MATLAB language."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01301",
+    "course_name": "Introduction to Computing",
+    "description": "Introduction to computing principles and programming practices with an emphasis on the design, construction and implementation of problem solutions use of software tools."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01301R",
+    "course_name": "Introduction to Computing for Computer Science Recitation",
+    "description": "Recitation for CS\u00a01301 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01315",
+    "course_name": "Introduction to Media Computation",
+    "description": "Introduction to computation (algorithmic thinking, data structures, data transformation and processing, and programming) in a media and communication context. Credit not awarded for both CS 4452 and CS\u00a01315 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01315R",
+    "course_name": "CS 1315 Recitation",
+    "description": "Recitation for CS\u00a01315 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01331",
+    "course_name": "Introduction to Object Oriented Programming",
+    "description": "Introduction to techniques and methods of object-oriented programming such an encapsulation, inheritance, and polymorphism. Emphasis on software development and individual programming skills."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01331R",
+    "course_name": "CS 1331 Recitation",
+    "description": "Recitation for CS\u00a01331 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01332",
+    "course_name": "Data Structures and Algorithms for Applications",
+    "description": "Computer data structures and algorithms in the context of object-oriented programming. Focus on software development towards applications."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01332R",
+    "course_name": "CS 1332 Recitation",
+    "description": "Recitation for CS\u00a01332 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01371",
+    "course_name": "Computing for Engineers",
+    "description": "Foundations of computing with an introduction to design and analysis of algorithms and an introduction to design and construction of programs for engineering problem-solving."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01371R",
+    "course_name": "CS 1371 Recitation",
+    "description": "Recitation for CS\u00a01371 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a01803",
+    "course_name": "Special Topics",
+    "description": "Courses of timely interest to the profession, conducted by resident or visiting faculty."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02050",
+    "course_name": "Introduction to Discrete Mathematics for Computer Science",
+    "description": "Proof methods, strategy, correctness of algorithms over discrete structures.  Induction and recursion.  Complexity and order of growth.  Number theoretic principles and algorithms.  Counting and computability.  Credit not allowed for both CS\u00a02050 and CS\u00a02051 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02050R",
+    "course_name": "CS 2050 Recitation",
+    "description": "Recitation for CS\u00a02050 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02051",
+    "course_name": "Honors - Induction to Discrete Mathematics for Computer Science",
+    "description": "Proof methods, strategy, correctness of algorithms over discrete structures.  Induction and recursion.  Complexity and order of growth.  Number theoretic principles and algorithms.  Counting and computability.  Credit not allowed for both CS\u00a02051 and CS\u00a02050 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02110",
+    "course_name": "Computer Organization and Programming",
+    "description": "An introduction to basic computer hardware, machine language, assembly language, and C programming."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02200",
+    "course_name": "Computer Systems and Networks",
+    "description": "A broad exposure to computer system structure and networking including software abstractions in operating systems for orchestrating the usage of the computing resources."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02261",
+    "course_name": "Media Device Architectures",
+    "description": "Controlling the interface between hardware and software in media devices. Machine-level programming (e.g., in C) to create graphics, generate sound, and support user interaction."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02316",
+    "course_name": "Data Manipulation for Science and Industry",
+    "description": "Reading, manipulating, and exporting data for engineering, business, and scientific applications.  Covers GUI's, File I/O, basic SQL, and web scraping.  Emphasis on software development."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02316R",
+    "course_name": "CS 2316 Recitation",
+    "description": "Recitation for CS\u00a02316 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02340",
+    "course_name": "Objects and Design",
+    "description": "Object-oriented programming methods for dealing with large programs.  Focus on quality processes, effective debugging techniques, and testing to assure a quality product."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02698",
+    "course_name": "Undergraduate Research Assistantship",
+    "description": "Independent research conducted under the guidance of a faculty member."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02699",
+    "course_name": "Undergraduate Research",
+    "description": "Independent research conducted under the guidance of a faculty member."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02701",
+    "course_name": "Startup Lab: Introduction to Technology Ventures",
+    "description": "Elements of technology venture creation including opportunity identification and validation, ideation, customer discovery, markey analysis, minimum viable product development, business models, intellectual property, and capital raises. Cross-listed with COE\u00a02701 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02740",
+    "course_name": "Foundations of Mathematics and Computing",
+    "description": "This course introduces the essential mathematical concepts and computational techniques that form the basis of modern computing."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02801",
+    "course_name": "Special Topics",
+    "description": "Courses of timely interest to the profession, conducted by resident or visiting faculty."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02802",
+    "course_name": "Special Topics",
+    "description": "Courses of timely interest to the profession, conducted by resident or visiting faculty."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a02803",
+    "course_name": "Special Topics",
+    "description": "Courses of timely interest to the profession, conducted by resident or visiting faculty."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03001",
+    "course_name": "Computing, Society, and Professionalism",
+    "description": "Examines the role and impact of information and communication technology in society, with emphasis on ethical, professional, and public policy issues."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03101",
+    "course_name": "Computer Science Ventures",
+    "description": "Students will learn how computer-science-based ventures are developed.  The course is project-based.  Students propose, analylze, pitch, design, implement, package and market web-2.0 and virtual-world-based products and services."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03210",
+    "course_name": "Design of Operating Systems",
+    "description": "Operating systems concepts, including multi-threading, scheduling, synchronization, communication, and access control.  Projects will cover design and implementation of several operating systems components."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03220",
+    "course_name": "Computer Structures: Hardware/Software Codesign of a Processor",
+    "description": "Principles in pipelined processor design, with emphasis on the need for a close interaction between code generation and architecture."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03235",
+    "course_name": "Introduction to Information Security",
+    "description": "Terms/concepts for threats; controls; problem definition; comprehensive information security model; security for operating systems, databases, network/distributed systems; administering security."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03237",
+    "course_name": "Human Dimension of Cybersecurity: People, Organizations, Societies",
+    "description": "This course will illuminate the human dimension of cybersecurity, and explore the attitudes, behaviors and perceptions associated with different stakeholders in cybersecurity."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03240",
+    "course_name": "Languages and Computation",
+    "description": "Interpreters as abstract machines and the tools used to construct them, such as scanners and parsers. An introduction to models of computation as embodied by different programming languages.  Limits of and relationships between these models."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03251",
+    "course_name": "Computer Networking I",
+    "description": "Introduction to problems in computer networking, including error recovery, medium access, routing, flow control, and transport. Emphasis on current best practice.  Includes programming of networked applications."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03300",
+    "course_name": "Introduction to Software Engineering",
+    "description": "Team-based project class to introduce and apply software engineering principles and practices."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03311",
+    "course_name": "Part 1 of a 2 semester project design and implementation sequence conjoined with Tech Communications",
+    "description": "Part 1 of a 2 semester project design and implementation sequence conjoined with Technical Communications. Prepare requirements, design and project plans.  Develop a basic prototype of the desired system. Project is completed in CS\u00a03312 -Project Implementation. Credit will not be awared for CS\u00a03311 and CS 4911."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03312",
+    "course_name": "Project Implementation",
+    "description": "The second part of a 2 semester project design and implementation sequence conjoined with Technical Communications. Implement a project designed in CS\u00a03311 . Credit will not be awarded for CS\u00a03312 and CS 4911."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03451",
+    "course_name": "Computer Graphics",
+    "description": "Geometric constuctions; transformations; perception; reflection models; photorealistic; non-photorealistic, and image-based rendering; rendering software and API's; triangle-mesh processing; graphic acceleration; user-interaction, design and animation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03510",
+    "course_name": "Design and Analysis of Algorithms",
+    "description": "Basic techniques of design and analysis of efficient algorithms for standard computational problems. NP-Completeness.  Credit not allowed for both CS\u00a03510 and CS\u00a03511 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03511",
+    "course_name": "Design and Analysis of Algorithms, Honors",
+    "description": "Techniques of design and analysis of efficient algorithms for standard computational problems.  NP-Completeness Project.  Credit not allowed for both CS\u00a03511 and CS\u00a03510 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03600",
+    "course_name": "Introduction to Artificial Intelligence",
+    "description": "An introduction to artificial intelligence and machine learning. Topics include intelligent system design methodologies, search and problem solving, supervised and reinforced learning."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03630",
+    "course_name": "Introduction to Perception and Robotics",
+    "description": "Covers fundamental problems and leading solutions for computer and robot perception and action from the point of view of autonomous robot navigation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03651",
+    "course_name": "Prototyping Intelligent Devices",
+    "description": "Hands-on course teaching the fundamentals of electronics of electrical and mechanical prototyping."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03743",
+    "course_name": "Analysis of Emerging Technologies",
+    "description": "Analysis of emerging technologies and their impacts for firm practice, market practice, policy, and society. Credit not allowed for both CS\u00a03743 and MGT\u00a03743 or ME\u00a03743 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03744",
+    "course_name": "Managing Product, Service & Technology Development",
+    "description": "Analysis of the managerial challenges of the product development process."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03750",
+    "course_name": "Human Computer Interface Design and Evaluation",
+    "description": "Human computer interface is considered in terms of user-system compatibility. Concepts in human factors and interface design are covered in relation to capabilities of both humans and computers. Crosslisted with PSYC\u00a03750 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03751",
+    "course_name": "Introduction to User Interface Design",
+    "description": "Describes the characteristics of interaction between humans and computers and demonstrates techniques for the design and evaluation of user interfaces and computational systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03790",
+    "course_name": "Introduction to Cognitive Science",
+    "description": "Multidisciplinary perspectives on cognitive science. Interdisciplinary approaches to issues in cognition, including memory, language, problem solving, learning, perception, and action. Crosslisted with PST, PSYC, and ISYE\u00a03790 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03801",
+    "course_name": "Special Topics",
+    "description": "Courses of timely interest to the profession, conducted by resident or visiting faculty."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03803",
+    "course_name": "Special Topics",
+    "description": "Courses of timely interest to the profession, conducted by resident or visiting faculty."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a03873",
+    "course_name": "Special Topics",
+    "description": "Special Topics in Computer Science."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04001",
+    "course_name": "Computing, Society, and Professionalism",
+    "description": "Examines the role and impact of information and communication technology in society, with emphasis on ethical, professional, and public policy issues. Credit not allowed for both CS\u00a04001 and 4002 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04002",
+    "course_name": "Robots and Society",
+    "description": "Examines the role and impact of robotics, distributed sensing and actuation, ubiquitous computing and related technology in society, emphasizing ethical, professional and public policy issues. Credit not allowed for both CS\u00a04001 and 4002 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04003",
+    "course_name": "AI, Ethics, and Society",
+    "description": "This course covers various Artificial Intelligence and bias mitigation techniques that can be used to counterbalance the potential misuse and abuse of learning from data."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04010",
+    "course_name": "Introduction to Computer Law",
+    "description": "Provides an introduction to copyrights, patents, trade secrets, trademarks, and commercial law pertaining to computer software and hardware."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04057",
+    "course_name": "Business Process Analysis and Design",
+    "description": "Business processes are the mechanisms by which work is organized and performed. This course covers the analysis of business technology. Credit will not be awarded for both CS\u00a04057 and MGT\u00a04057 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04117",
+    "course_name": "Introduction to Malware Reverse Engineering",
+    "description": "This course exposes students to an immersive, hands-on experience in the dissection and analysis of the code, structure, and functionality of malicious software."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04210",
+    "course_name": "Advanced Operating Systems",
+    "description": "Operating system abstractions and their implementations, multi-threading, efficient inter-address communication, high-level synchronization, introduction to multi-processor and distributed operating systems, real-time systems. Credit is not awarded for both CS\u00a04210 and CS\u00a06210 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04220",
+    "course_name": "Programming Embedded Systems",
+    "description": "Design principles, programming techniques, and case studies of embedded real-time systems.  Interface techniques and devices.  Representations and reasoning about physical processes.Credit not awarded for both CS\u00a04220 and CS\u00a06235 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04235",
+    "course_name": "Introduction to Information Security",
+    "description": "Terms/concepts, threats, controls; problem definition; comprehensive information security model; security for operating systems, databases, network/distributed systems; administering security; legal/ethical/policy issues.  Credit not allowed for both CS\u00a04235 and CS\u00a06035 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04238",
+    "course_name": "Computer Systems Security",
+    "description": "Trusted computing base, hardware support for protection and virtualization, authentication, access control and authorization, discretionary and mandatory security policies, secure kernel design, and secure databases. Students cannot receive credit for CS\u00a04238 and CS\u00a06238 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04239",
+    "course_name": "Enterprise Cybersecurity Management",
+    "description": "The duties and concerns of an enterprise Chief Information Security Officer including strategy, cybersecurity operations, risk management, and governance."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04240",
+    "course_name": "Compilers, Interpreters, and Program Analyzers",
+    "description": "Study of techniques for the design and implementation of compilers, interpreters, and program analyzers, with consideration of the particular characteristics of widely used programming languages."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04243",
+    "course_name": "Cyber Warfare",
+    "description": "This course provides students with a framework for understanding cyber warfare from a technological and political standpoint."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04251",
+    "course_name": "Computer Networking II",
+    "description": "Principles of computer networks, including medium access, ARQ protocols, routing, congestion avoidance, and control. Emphasis on design options and tradeoffs. Includes significant network application programming."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04261",
+    "course_name": "Mobile Applications and Services for Converged Networks",
+    "description": "This course provides an introduction to mobile applications and services with an emphasis on voice and data service integration in modern commercial networks."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04262",
+    "course_name": "Network Security",
+    "description": "Fundamental concepts of network information security, including applied cryptography, secure access methods, and vulnerabilities in network protocols and network applications. Students cannot receive credit for CS\u00a04262 and CS\u00a06262 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04263",
+    "course_name": "Psychology of Cybersecurity",
+    "description": "This course will explore psychological processes relevant to cybersecurity. Students will gain an appreciation for psychological influence factors inherent in the current cyberspace environment."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04265",
+    "course_name": "Technical Introduction to Blockchain and Cryptocurrencies",
+    "description": "Undergraduate Introduction to Blockchain and cryptocurrencies, building on formal crypto and distributed systems.  Cover fundamental and practical aspects.  Includes programming projects and a report."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04267",
+    "course_name": "Critical Infrastructures Security and Resilience",
+    "description": "Critical infrastructures are large cyber-physical networks essential to the well-being of the societies they serve. We study their resilience and security against a range of disruptions."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04271",
+    "course_name": "Cybersecurity of Autonomous Vehicles",
+    "description": "The course covers introductory topics in the security and privacy of cyber-physical systems especially unmanned aerial vehicles (UAVs) or drones. The goal is to expose students to fundamental security primitives specific to cyber-physical systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04290",
+    "course_name": "Advanced Computer Organization",
+    "description": "Topics concerning the hardware design of computer systems. Advanced techniques in high-performance pipelined central processing units. Memory and I/O systems. Parallel processors including shared-memory multiprocessors and cluster computers.  Credit is not allowed for both CS\u00a04290 and any of the following courses: CS\u00a06290 , ECE\u00a04100 , ECE\u00a06100 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04365",
+    "course_name": "Introduction to Enterprise Computing",
+    "description": "A survey of basic software tools and techniques used in mission-critical systems and applications, combined with in-depth study of fundamental principles underlying enterprise computing.  Credit not allowed for both 4365 and CS\u00a06365 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04392",
+    "course_name": "Programming Languages",
+    "description": "Fundamentals of programming language design and theory. Topics include formal semantics and type systems for imperative, functional, and parallel languages; lambda calculus and its variants; the Curry-Howard Correspondence; techniques for proving language properties and verifying program specifications."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04400",
+    "course_name": "Introduction to Database Systems",
+    "description": "Comprehensive coverage of mainstream database concepts such as the entity-relationship model, relational databases, query languages, and database design methodology. Includes a project.  Credit not allowed for both CS\u00a04400 and CS\u00a06402 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04420",
+    "course_name": "Database System Implementation",
+    "description": "Study of fundamental software components/algorithms of a database system, including the file manager, query engine, lock manager, and recovery manager.  Includes a project component.  Credit not allowed for both CS\u00a04420 and CS\u00a06422 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04423",
+    "course_name": "Advanced Database System Implementation",
+    "description": "Study of advanced topics in implementing a database system, including the query optimizer, concurrency control and recovery protocols. Includes a project component."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04440",
+    "course_name": "Emerging Database Technologies and Applications",
+    "description": "The course will cover current developments including distributed, object-oriented, temporal-spatial, Web-based, mobile, and active database technologies, and data warehousing and mining applications."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04455",
+    "course_name": "Video Game Design and Programming",
+    "description": "Techniques for electronic game design and programming, including graphics game engines, motion generation, behavioral control for autonomous characters, interaction structure, social and interface issues of multi-user play, and the business aspects of game development.  Credit not allowed for both CS\u00a04455 and CS\u00a06457 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04460",
+    "course_name": "Introduction to Information Visualization",
+    "description": "Introduction to principles and techniques of information visualization, the presentation of primarily abstract data to help people understand, analyze and make sense of data. Students cannot receive credit for both CS\u00a04460 and CS\u00a06730 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04460R",
+    "course_name": "CS 4460 Recitation",
+    "description": "This recitation supports the information visualization ( CS\u00a04460 ) course. Sessions will focus on introducing students to technical work with visualization programming languages and grammars important to the course."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04462",
+    "course_name": "Animal-Centered Computing",
+    "description": "Explores current research, techniques, and methods in computing as applied to animals, both domestic and wild.  Covers technology for understanding animal cognition and behavior, animal communication, animal welfare and enrichment, and conservation, as well as ethics of computing for animals."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04464",
+    "course_name": "Computational Journalism",
+    "description": "A study of computational and technological advancements in journalism with emphasis on technologies for developing new tools and their potential impact on news and information.  Credit not allowed for both CS\u00a04464 and CS\u00a06465 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04470",
+    "course_name": "Introduction to User Interface Software",
+    "description": "Concepts, techniques, structures, and strategies for implementation of interactive software. Credit not awarded for both CS\u00a04470 and CS\u00a06456 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04472",
+    "course_name": "Design of Online Communities",
+    "description": "Introduction to the design of online communities.  Students study an existing community in depth.  Credit not allowed for both CS\u00a04472 and CS\u00a06470 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04475",
+    "course_name": "Computational Photography",
+    "description": "An introductory course on the scientific, technical, perceptual, and aesthetic principles of pictures. Emphasis is on the techniques of image formation, analysis, merging, modification and their use for depiction of reality on a 2D medium of photographs."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04476",
+    "course_name": "Introduction to Computer Vision",
+    "description": "Introduction to computer vision including fundamentals of image formation, camera imaging geometry, feature detection and matching, stereo, motion estimation and tracking, image classification and scene understanding. Credit will not be awarded for both CS\u00a04476 and CS\u00a04495 or CS\u00a06476 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04488",
+    "course_name": "Procedural Content Generation",
+    "description": "Students will learn algorithmic techniques for creating geometric models and images that can be used for games, feature films or virtual reality."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04495",
+    "course_name": "Computer Vision",
+    "description": "An introduction to computer vision and machine perception. An intensive study of the process of generating a symbolic description of the scene by interpretation of images(s)."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04496",
+    "course_name": "Computer Animation",
+    "description": "Motion techniques for computer animation and interactive games (keyframing, procedural methods, motion capture, and simulation) and principles for storytelling, composition, lighting, and interactivity."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04497",
+    "course_name": "Computational Aesthetics",
+    "description": "Aesthetics plays a key role in society and economy.  Students will invent and test beautification algorithms for colors, music, and animations and more."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04510",
+    "course_name": "Automata and Complexity Theory",
+    "description": "Computational machine models and their language classes. Undecidability. Resource-bounded computations. Central complexity-theoretic concepts such as complexity classes, reducibility and completeness."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04540",
+    "course_name": "Advanced Algorithms",
+    "description": "Advanced techniques for designing and analyzing efficient algorithms for combinatorial, algebraic, and number theoretic problems.  Credit not allowed for both CS\u00a04540 and CS 6505 or CS\u00a04540 and CS\u00a06515 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04590",
+    "course_name": "Principles and Applications of Computer Audio",
+    "description": "A well-rounded exploration of digital audio and its importance in current research and applications. Exposes students to the principles, technology, and current research of computer audio."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04605",
+    "course_name": "Mobile and Ubiquitous Computing",
+    "description": "Investigates the infrastructure required to develop mobile and ubiquitous computing applications and establishes major research themes and experimental practices.Credit not awarded for both CS\u00a04605 and CS\u00a07470 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04615",
+    "course_name": "Knowledge-Based Modeling and Design",
+    "description": "Information-processing theories of modeling and design; topics include design decision-making, problem-solving and learning, and knowledge-based modeling and design."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04625",
+    "course_name": "Intelligent and Interactive Systems",
+    "description": "Explores how human-computer interaction and machine learning can interact to create personalized information environments. Emphasis on current research efforts from both fields."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04635",
+    "course_name": "Knowledge-Based Artificial Intelligence",
+    "description": "Structured knowledge representation; knowledge-based methods of reasoning and learning; problem-solving, modeling and design."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04641",
+    "course_name": "Machine Learning",
+    "description": "Machine learning techniques and applications. Topics include foundational issues; inductive, analytical, numerical, and theoretical approaches; and real-world applications. Credit not awarded for both CS\u00a04641 and CS\u00a07641 / CSE\u00a06740 / ISYE\u00a06740 / ECE\u00a04252 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04644",
+    "course_name": "Deep Learning",
+    "description": "This course will cover the fundamental underpinnings and practice of deep learning, including neural network architectures, optimization algorithms, and applications to perception and Artificial Intelligence."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04646",
+    "course_name": "Machine Learning for Trading",
+    "description": "This course introduces students to the real world challenges of implementing machine learning based strategies including the algorithmic steps from information gathering to market orders.Credit not awarded for both CS\u00a04646 and CS\u00a07646 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04649",
+    "course_name": "Robot Intelli Planning",
+    "description": "We investigate algorithms for robots and complex systems that make intelligent decisions.  Emphasis on the theoretical and empirical properties of classical, geometric, stochastic/dynamic planning."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04650",
+    "course_name": "Natural Language Understanding",
+    "description": "Methodologies for designing systems that comprehend natural language. Topics include lexical analysis, parsing, interpretation of sentences, semantic representation, organization of knowledge, and inference mechanisms.  Credit not allowed for both CS\u00a04650 and CS\u00a07650 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04660",
+    "course_name": "Introduction to Educational Technology",
+    "description": "Introduction to the theory and practice of educational technology. Covers learning theory applicable to educational technology, explains major research findings. Credit not awarded for both CS\u00a04660 and CS\u00a06460 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04665",
+    "course_name": "Educational Technology: Design and Evaluation",
+    "description": "Intensive project class in which students design, implement, and evaluate a piece of educational technology, applying the theory learned in Introduction  to Educational Technology."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04670",
+    "course_name": "Computer-Supported Collaborative Learning",
+    "description": "Research and practice in computer-supported collaborative learning. Review of existing systems and research, as well as evaluation and design methods."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04675",
+    "course_name": "Internet Computing Systems, Services and Applications",
+    "description": "Focusing on fundamental issues, concepts, techniques, and technical challenges that are critical for designing and developing Internet systems, services and applications.  Credit not allowed for both CS\u00a04675 and CS\u00a06675 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04690",
+    "course_name": "Empirical Methods for User Interface Design and Evaluation",
+    "description": "Introduction to empirical methods for gathering requirements and evaluating the end-user and usability of software systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04698",
+    "course_name": "Undergraduate Research Assistantship",
+    "description": "Independent research conducted under the guidance of a faculty member."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04699",
+    "course_name": "Undergraduate Research",
+    "description": "Independent research conducted under the guidance of a faculty member."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04711",
+    "course_name": "Health Sensing & Interventions",
+    "description": "Through understanding the principles physiology, medical devices and health technologies, we experiment with and design precision health sensing and feedback hardware and software."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04723",
+    "course_name": "Inter Capstone Design",
+    "description": "Entrepreneurial Junior Design. Teams comprised of CS, ECE, and ME students will design and build prototypes of their invention ideas and explore market fit."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04725",
+    "course_name": "Information Security Strategies and Policies",
+    "description": "Information security vulnerabilities and risks; legal, cost, privacy, and technology constraints; derivation of strategies; technical and procedural means of achieving desired results. Credit will not be awarded for both CS\u00a04725 and CS\u00a06725 or MGT\u00a04725 or MGT\u00a06725 or PUBP\u00a04725 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04726",
+    "course_name": "Privacy, Technology, Policy, and Law",
+    "description": "This course takes a multi-disciplinary approach to privacy, a topic of great interest in the technology, policy, ethics, law, and business realms. Credit will not be awarded for both CS\u00a04726 and MGT\u00a04726 or MGT\u00a06726 or CS\u00a06726 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04731",
+    "course_name": "Game AI",
+    "description": "Examines the expressive possibilities of artificial intelligence techniques in computer games. Students learn AI programming techniques, and how they strongly interface with game design."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04741",
+    "course_name": "Integrative Management Development-Project Preparation",
+    "description": "Individual and group-based experiential learning activities to develop integrated human system management skills that prepare students for more successful capstone collaboration and learning.  Credit not allowed for both CS\u00a04741 and MGT\u00a04741 or ME\u00a04741 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04742",
+    "course_name": "Integrated Computing and Management Capstone Project",
+    "description": "Project-based course for students in Computing and Management minor to work in interdisciplinary teams on projects provided by corporate affiliates.  Credit not allowed for both CS\u00a04742 and MGT\u00a04742 or ME\u00a04742 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04745",
+    "course_name": "Information and Communication Technologies and Global Development",
+    "description": "Focus on technology design, adoption, and use as seen through the lens of global development."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04770",
+    "course_name": "Mixed Reality Experience Design",
+    "description": "Focuses on informal design, integration of  media theory, HCI and technology issues. Significant group design projects. Credit not awarded for both CS\u00a04770 and LMC\u00a04733 /6340/ CS\u00a06770 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04795",
+    "course_name": "GPU Programming for Video Games",
+    "description": "3-D graphics pipelines. Physically-based rendering. Game engine architectures. GPU architectures. Graphics APIs. Vertex and pixel shader programming. Post-processing effects. Deferred rendering."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04801",
+    "course_name": "Special Topics",
+    "description": "Courses of timely interest to the profession, conducted by resident or visiting faculty."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04803",
+    "course_name": "Special Topics",
+    "description": "Courses of timely interest to the profession, conducted by resident or visiting faculty."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04816",
+    "course_name": "Special Topics",
+    "description": "Special Topics."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04854",
+    "course_name": "Special Topics",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04863",
+    "course_name": "Special Topics",
+    "description": "Special Topics."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04873",
+    "course_name": "Special Topics",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04883",
+    "course_name": "Special Topics",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04893",
+    "course_name": "Special Topics",
+    "description": "Special Topics for CS (lecture + lab)."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04901",
+    "course_name": "Special Problems",
+    "description": "An investigation of significant areas of information in computer science. Guided study and research."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04902",
+    "course_name": "Special Problems",
+    "description": "An investigation of significant areas of information and computer science. Guided study and research."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04903",
+    "course_name": "Special Problems",
+    "description": "An investigation of significant areas of information and computer science. Guided study and research."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a04980",
+    "course_name": "Research Capstone Project",
+    "description": "CS\u00a04XXX.  Computer Sci Elective.  1-21 Credit Hours."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06035",
+    "course_name": "Introduction to Information Security",
+    "description": "A broad spectrum of information security: threats, basic cryptography, software vulnerabilities, programming for malice, operating system protections, network security, privacy, data mining, computer crime."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06150",
+    "course_name": "Computing For Good",
+    "description": "Exploring challenges faced by underserved populations and developing countries from a computing perspective."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06200",
+    "course_name": "Graduate Introduction to Operating Systems",
+    "description": "This course teaches operating system abstractions, mechanisms, and their implementations, including for concurrency (threads) and synchronization, resource management (CPU, memory, I/O), and distributed services."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06210",
+    "course_name": "Advanced Operating Systems",
+    "description": "Introduction to graduate-level topics in operating systems using research papers, textbook excerpts, and projects. Provides students thorough comprehension of distributed and parallel computer systems. Credit is not awarded for both CS\u00a04210 and CS\u00a06210 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06211",
+    "course_name": "System Design for Cloud Computing",
+    "description": "Through in-depth presentations and hands-on projects for each layer of the full stack of cloud technologies, learners acquire the systems design skills for cloud computing."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06220",
+    "course_name": "Big Data Systems and Analytics",
+    "description": "This course will cover the concepts, techniques, algorithms, and systems of big data systems and data analytics, with strong emphasis on big data processing systems, fundamental models and optimizations for data analytics and machine learning, which are widely deployed in real world big data analytics and applications."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06222",
+    "course_name": "Machine Learning Systems",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06235",
+    "course_name": "Real-Time System Concepts and Implementation",
+    "description": "Principles of real-time systems, as occurring in robotics and manufacturing, interactive, and multimedia applications. Reviews and uses real-time operating systems.Credit not awarded for both CS\u00a06235 and CS\u00a04220 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06238",
+    "course_name": "Secure Computer Systems",
+    "description": "Design principles of secure systems, authentication, access control and authorization, discretionary and mandatory security policies, secure kernel design, and secure databases."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06239",
+    "course_name": "Enterprise Cybersecurity Management",
+    "description": "The duties and concerns of an enterprise Chief Information Security Officer including strategy, cybersecurity operations, risk management, and governance."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06241",
+    "course_name": "Design and Implementation of Compilers",
+    "description": "Design and implementation of modern compilers, focusing upon optimization and code generation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06245",
+    "course_name": "Compiling for Parallelism",
+    "description": "Design and implementation of compilers for parallel and distributed computers, focusing upon optimization and code generation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06250",
+    "course_name": "Computer Networks",
+    "description": "Principles and practice of computer networks, including signaling and framing, error control, medium access, routing, congestion control, end-to-end transport, and network APIs."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06260",
+    "course_name": "Applied Cryptography",
+    "description": "Cryptographic algorithms, cryptanalysis, symmetric cryptography, public key cryptography, DES, AES, RSA, hash and MAC functions, digital signatures, pseudo-random generators, cryptographic protocols, SSL//TLS, SET. Credit not allowed for both CS\u00a06260 and ECE\u00a06280 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06261",
+    "course_name": "Security Operations and Incident Response",
+    "description": "The course covers the principles and technologies utilized in and the processes followed in responding to cybersecurity incidents and crises. The course utilizes real-life case studies to develop how these technologies and processes are applied within the cybersecurity industry."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06262",
+    "course_name": "Network Security",
+    "description": "Design principles of secure network protocols and systems, authentication, integrity, confidentiality, privacy, information hiding, digital watermarking, access control, firewall, intrusion detection, and case studies."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06263",
+    "course_name": "Intro to Cyber-Physical Systems Security",
+    "description": "This course provides an introduction to security issues relating to various cyber-physical systems including industrial control systems and those considered critical infrastructure systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06264",
+    "course_name": "Information Security Lab: System and Network Defenses",
+    "description": "This course will help students develop both in-depth knowledge and hands-on skills in a number of important cybersecurity areas, including software security, malware and threat analysis, end-point security, network security, web security, mobile security, and machine learning based security analytics."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06265",
+    "course_name": "Information Security Lab: Binary Exploitation",
+    "description": "This course covers advanced techniques for writing exploits, taught\nthrough an intense, hands-on security laboratory, following a\ncyberspace war game called Capture-The-Flag."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06266",
+    "course_name": "Information Security Practicum",
+    "description": "Capstone independent study placing each student in a commercial, industrial, academic, or government setting where they must solve real-world security problems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06267",
+    "course_name": "Critical Infrastructures Security and Resilience",
+    "description": "Critical infrastructures are large cyber-physical networks essential to the well-being of the societies they serve. We study their resilience and security against a range of disruptions."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06268",
+    "course_name": "Psychology of Cybersecurity",
+    "description": "This course will explore psychological processes relevant to cybersecurity. Students will gain an appreciation for psychological influence factors inherent in the current cyberspace environment."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06270",
+    "course_name": "Technical Introduction to Blockchain and Cryptocurrencies",
+    "description": "Graduate Introduction to Blockchain and cryptocurrencies, building on formal crypto and distributed systems.  Cover fundamental and practical aspects.  Includes programming projects and research presentation. Students may not receive academic credit for both CS\u00a04265 and CS\u00a06270 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06271",
+    "course_name": "Cybersecurity of Drones",
+    "description": "The course covers introductory topics in the security and privacy of cyber-physical systems especially unmanned aerial vehicles (UAVs) or drones. The goal is to expose students to fundamental security primitives specific to cyber-physical systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06290",
+    "course_name": "High-Performance Computer Architecture",
+    "description": "Topics concerning very high-performance computers including techniques exploiting parallelism in single and multiple processor systems.  Credit not allowed for both CS\u00a06290 and any of the following courses: CS\u00a04290 , ECE\u00a04100 , ECE\u00a06100 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06291",
+    "course_name": "Embedded Software Optimizations",
+    "description": "First, this course introduces the student to embedded domain-specific processor and instruction set design issues.  Next, machine-specific optimizations for performance and for energy consumption are discussed."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06300",
+    "course_name": "Software Development Process",
+    "description": "The process of developing software systems. Includes development and assessment of processes, their instantiation in actual product development, and techniques ensuring quality of developed products."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06301",
+    "course_name": "Advanced Topics in Software Engineering",
+    "description": "This project-based course will cover fundamental principles, advanced techniques, and tools for the development of high-quality, industrial-strength software."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06310",
+    "course_name": "Software Architecture and Design",
+    "description": "Principles and concepts involved in the design and analysis of large software systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06340",
+    "course_name": "Advanced Topics in Software Analysis and Testing",
+    "description": "Fundamental prinicples and advanced techniques for static and dynamic program analysis and software testing. Software reliability, resilience, and trustworthiness."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06365",
+    "course_name": "Introduction to Enterprise Computing",
+    "description": "Survey of basic software concepts and techniques used in mission-critical systems and applications, combined with in-depth study of fundamental principles underlying enterprise computing.  Credit not allowed for both CS\u00a06365 and CS\u00a04365 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06390",
+    "course_name": "Programming Language Design",
+    "description": "Design, structure, and goals of programming languages. Object-oriented, logic, functional, and traditional languages.  Semantic models.   Parallel programming languages."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06400",
+    "course_name": "Database Systems Concepts and Design",
+    "description": "Study of fundamental concepts with regard to relational databases. Topics covered include database design, query processing, concurrency control, and recovery. Credit not given for both CS\u00a06400 and CS 6754."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06402",
+    "course_name": "Databases and Information Security",
+    "description": "Fundamentals of designing and using databases:  conceptual data models to database-specific models, SQL, storage structures.  Security-related topics include privacy, access control, backup, recovery, SQL injection.  Credit not allowed for both CS\u00a06402 and CS\u00a04400 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06422",
+    "course_name": "Database System Implementation",
+    "description": "Design and implementation of a database system covering: storage manager, query optimizer, transaction manager, and recovery manager.  Study of the advantages of different implementation algorithms.  Credit not allowed for both CS\u00a06422 and CS\u00a04420 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06423",
+    "course_name": "Advanced Database System Implementation",
+    "description": "Study of advanced topics in implementing a database system, including the query optimizer, concurrency control and recovery protocols. Includes a project component."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06435",
+    "course_name": "Digital Health Equity",
+    "description": "This course introduces individual, interpersonal, and societal influences on health; how these create health disparities, and how digital health technologies can help achieve health equity."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06440",
+    "course_name": "Introduction to Health Informatics",
+    "description": "A broad review of the US health system and the application of informatics to the clinical practice of medicine, digital imaging, public health and bioinformatics."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06441",
+    "course_name": "Personal Health Informatics",
+    "description": "This course will cover the design of personal health technologies. Students will apply the taught design issues to a semester-long\nhealth application design project."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06451",
+    "course_name": "Introduction to Human-Centered Computing",
+    "description": "Introduction to the range of issues across the HCC disciplines, including design and research methodologies: cognitive, social, and cultural theories; assessment and evaluation: ethical issues."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06452",
+    "course_name": "Prototyping Interactive Systems",
+    "description": "Introduction to design, prototyping and implementation of systems for human-centered computing. Focuses on core concepts in computer science and implications for interactive systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06454",
+    "course_name": "Qualitative Methods for Design of Human Computer Interaction",
+    "description": "Qualitative methods for HCI including data collection through interviews, observations and design, analysis using research and industry standards, and methods for communicating findings to industry."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06455",
+    "course_name": "User Interface Design and Evaluation",
+    "description": "Examines usability in the software development process with an emphasis on usability, requirements, methodology, design, and evaluation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06456",
+    "course_name": "Principles of User Interface Software",
+    "description": "Considers the architectural and algorithmic principles behind the implementation of interactive software systems and the tools that support them. Credit not awarded for CS\u00a06456 and CS\u00a04470 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06457",
+    "course_name": "Video Game Design and Programming",
+    "description": "Techniques for electronic game design and programming, including graphics, game engines, animation, behavioral control for autonomous characters, interaction, social and interface issues of multi-user play.  Credit not allowed for both CS\u00a06457 and CS\u00a04455 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06458",
+    "course_name": "Educational Game Design",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06460",
+    "course_name": "Educational Technology: Conceptual Foundations",
+    "description": "Introduction to educational technology, with an emphasis on theoretical foundations.  Introduces basic philosophies, approaches, and technologies.  Analyzes issues surrounding technology's impact on education. Credit not awarded for both CS\u00a04660 and CS\u00a06460 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06461",
+    "course_name": "CS Education Research",
+    "description": "Introduction to computing education research (CER). History and influential early work. Learning goals for different populations. Design of research studies in CER."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06465",
+    "course_name": "Computational Journalism",
+    "description": "Technology is rapidly affecting how news information is gathered, reported, visualized, aggregated, summarized, distributed, and consumed.  This class studies the computational technologies that impact journalism.  Credit not allowed for both CS\u00a06455 and CS\u00a04464 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06470",
+    "course_name": "Design of Online Communities",
+    "description": "Introduction to the design of online communities. Students study an existing community in depth, and then develop a new community design.  Credit not allowed for both CS\u00a06470 and CS\u00a04472 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06471",
+    "course_name": "Computational Social Science",
+    "description": "This graduate seminar focuses on text and network analysis of data with applications to domains such as political science, sociolinguistics, and public health."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06474",
+    "course_name": "Social Computing",
+    "description": "Design and prototype new social computing systems, as well as analyze social media data."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06475",
+    "course_name": "Computational Photography",
+    "description": "This class explores the impact of computation on the entire workflow of photography, from how light is captured by a camera, to how the images are processed, enhanced, and improved to generate novel photographs."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06476",
+    "course_name": "Introduction to Computer Vision GR",
+    "description": "Introduction to computer vision including fundamentals of image formation, camera imaging geometry, feature detection and matching, stereo, motion estimation and tracking, image classification and scene understanding. Credit not awarded for both CS\u00a06476 and CS\u00a04495 or CS\u00a04476 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06491",
+    "course_name": "Foundations of Computer Graphics",
+    "description": "Mathematical/physical/perceptual principles and modeling/rendering techniques used to create, represent, display, and animate models of 3D shapes and their properties."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06492",
+    "course_name": "Shape Grammars",
+    "description": "Shape grammars are production systems using shape rewriting rules to perform computations with shapes."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06497",
+    "course_name": "Computational Aesthetics",
+    "description": "Aesthetics play a key role in society and economy. Students will invent and test beautification algorithms for colors, music, and animations and more."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06515",
+    "course_name": "Introduction to Graduate Algorithms",
+    "description": "Design and analysis of algorithms on a graduate level, including dynamic programming, divide and conquer, FFT, graph and flow algorithms, RSA, linear programming, and NP-completedness."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06520",
+    "course_name": "Computational Complexity Theory",
+    "description": "Introduction to resource-bounded computations, central complexity-theoretic concepts such as complexity classes, reducibility, completeness, and intractability."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06550",
+    "course_name": "Design and Analysis of Algorithms",
+    "description": "Advanced techniques for designing and analyzing efficient algorithms for combinatorial, algebraic, and number-theoretic problems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06601",
+    "course_name": "Artificial Intelligence",
+    "description": "Basic concepts and methods of artificial intelligence including both symbolic/conceptual and numerical/probabilistic techniques."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06603",
+    "course_name": "AI, Ethics, and Society",
+    "description": "This course covers various Artificial Intelligence and bias mitigation techniques that can be used to counterbalance the potential misuse and abuse of learning from data."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06604",
+    "course_name": "Conversational Artificial Intelligence",
+    "description": "This course will provide students with an in-depth understanding of the current state-of-the-art in Conversational AI with an emphasis on deep learning and NLP."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06675",
+    "course_name": "Advanced Internet Computing Systems and Applications",
+    "description": "Survey of basic Internet computing concepts and techniques used in Internet systems and applications, combined with in-depth study of fundamental principles underlying Internet computing.  Credit not allowed for both CS\u00a06675 and CS\u00a04675 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06705",
+    "course_name": "Applications of Artificial Intelligence",
+    "description": "A study of the principles and practice of artificial intelligence in areas other than computer science, with particular focus on engineering, science, and business applications. Computer science majors cannot receive credit for this course."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06725",
+    "course_name": "Information Security Strategies and Policies",
+    "description": "Information security vulnerabilities and risks; legal, cost, privacy, and technology constraints; derivation of strategies; technical and procedural means of achieving desired ends. Credit not awarded for both CS\u00a06725 and CS\u00a04725 / MGT\u00a04725 /6725/ PUBP\u00a04725 /6725."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06726",
+    "course_name": "Privacy, Technology, Policy, and Law",
+    "description": "This course takes a multi-disciplinary approach to privacy, a topic of great interest in the technology, policy, ethics, law, and business realms. Credit will not be awarded for both CS\u00a06726 and CS\u00a04726 or MGT\u00a04726 or MGT\u00a06726 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06727",
+    "course_name": "Cyber Security Practicum",
+    "description": "Capstone independent study project placing each student in a commercial, academic or government setting where he or she identifies a major cyber security problem, and explores and evaluates a solution that addresses it with realistic assumptions about the organizational context. The chose problem must be approved by course instructor. Cross-listed with ECE and PUBP\u00a06727 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06730",
+    "course_name": "Data Visualization: Principles and Applications",
+    "description": "Introductory course on design principles and applications of data visualization. This course teaches best practices for visualizing datasets from diverse domains intended to help people make sense of data. Students cannot receive credit for both CS\u00a06730 and CS\u00a04460 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06745",
+    "course_name": "Information and Communication Technologies and Global Development",
+    "description": "Focus on technology design, adoption, and use as seen through the lens of global development."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06747",
+    "course_name": "Advanced Topics in Malware Analysis",
+    "description": "This course covers advanced approaches for the analysis of malicious software and explores recent research and unsolved problems in software protection and forensics."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06750",
+    "course_name": "Human-Computer Interaction",
+    "description": "Describes the characteristics of interaction between humans and computers and demonstrates techniques for the evaluation of user-centered systems. Crosslisted with PSYC\u00a06750 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06753",
+    "course_name": "Human-Computer Interaction-Professional Preparation and Practice",
+    "description": "Preparation for a professional career in HCI. Hands-on workshops in resume and portfolio building, interviewing, public speaking, team work. HCI career choices and trajectories."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06755",
+    "course_name": "Human-Computer Interaction Foundations",
+    "description": "Describes the theory and practice of designing effective and efficient interactions between people and technology. Students do not receive credit for both CS\u00a06755 and PSYC\u00a06755 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06756",
+    "course_name": "Human-Computer Interaction Applications",
+    "description": "This course supports MS-HCI students in a semester-long team project that is research-focused and results in portfolio-ready artifacts."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06763",
+    "course_name": "Design of Design Environments",
+    "description": "Analysis of design processes; analysis of current design tools at both the user interface and functional levels; procedures for developing better design tools. Credit not allowed for both CS\u00a06763 and ID\u00a06763 or COA 6763."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06764",
+    "course_name": "Geometric Modeling",
+    "description": "Software development course focusing on 3D geometric constructions and modeling; emphasizes solid modeling and its role in design. Crosslisted with COA 6764."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06770",
+    "course_name": "Mixed Reality Experience Design",
+    "description": "Introduction to the design of Mixed Reality experiences. Focuses on informal design, integration of media theory, HCI and technology issues. Significant group design projects.Credit not awarded for both CS\u00a06770 and CS\u00a04770 / LMC\u00a04733 /6340."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06795",
+    "course_name": "Introduction to Cognitive Science",
+    "description": "Multidisciplinary perspectives on cognitive science. Interdisciplinary approaches to issues in cognition, including memory, language, problem solving, learning, perception, and action. Crosslisted with ISYE and PSYC 6795."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06998",
+    "course_name": "HCI Master's Project",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a06999",
+    "course_name": "Master's Project",
+    "description": "Final project for students completing a master's degree in the College of Computing.  Repeatable for multi-semester projects."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07000",
+    "course_name": "Master's Thesis",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07001",
+    "course_name": "Overview of Graduate Studies in Computing",
+    "description": "Research tools including computer systems, as well as fundamental problem-solving skills, are introduced. Lectures on current computing research are presented and projects are required. Credit not allowed in a program of study for a graduate degree."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07210",
+    "course_name": "Distributed Computing",
+    "description": "Fundamental concepts in distributed systems, including global states, logical clocks, and failure models. Distributed algorithms and their implementations using advanced distributed programming systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07240",
+    "course_name": "Modern Internet Research Methods",
+    "description": "A research course on techniques, platforms and datasets related to Internet freedom and security, familiarizing the students with the research cycle and delivering their results through an academic paper and presentation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07260",
+    "course_name": "Internetworking Architectures and Protocols",
+    "description": "Detailed discussion of the problems and solution techniques that arise in internetworking. Topics include routing, addressing, quality of service, and security."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07263",
+    "course_name": "Advanced Topics in Network Security and Measurement",
+    "description": "Exploration of advanced network security and empirical topics and methodologies. Goals: broader understanding of empirical considerations, ability to apply such methodologies to one\u2019s own research."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07280",
+    "course_name": "Network Science: Methods and Applications",
+    "description": "Characteristics of real networks in nature and technology, network measurement methods, network analysis, evolving networks, dynamic network processes, co-evolution of structure and function."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07290",
+    "course_name": "Advanced Topics in Microarchitecture and organization of high-performance processors",
+    "description": "Low-level organization and hardware algorithms for the implementation of modern high-performance microprocessors including concept designs and real-world case studies."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07292",
+    "course_name": "Reliability and Security in Computer Architecture",
+    "description": "Hardware support for process isolation, virtualization, debugging, and protection from side-channel attacks. Faults and failures, error tolerance, error rate budgeting, lifetime realiability of devices."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07295",
+    "course_name": "GPU Hardware and Software",
+    "description": "The course explores GPU software and hardware, covering GPU programming, optimizations, GPU architecture, compiler techniques, and performance analysis."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07400",
+    "course_name": "Introduction to Quantum Computing",
+    "description": "Provide background on quantum computing and equip students with the skills to write code and optimize quantum programs on real quantum computers."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07450",
+    "course_name": "Information Visualization",
+    "description": "Study of computer visualization principles, techniques, and tools used for explaining and understanding symbolic, structured, and/or hierarchical information. Includes data and software visualization."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07451",
+    "course_name": "Human-Centered Data Analysis",
+    "description": "This course covers the role of people in data science and visual data analysis, including cognitive processes, bias, perception, and decision-making theories and frameworks."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07455",
+    "course_name": "Issues in Human-Centered Computing",
+    "description": "In-depth focus on theoretical, methodological, conceptual, and technical issues across the HCC disciplines associated with humans (cognitive, biological, socio-cultural); design; ethics; and analysis and evaluation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07462",
+    "course_name": "Animal-Centered Computing",
+    "description": "Explores current research, techniques, and methods in computing as applied to animals, both domestic and wild.  Covers technology for understanding animal cognition and behavior, animal communication, animal welfare and enrichment, and conservation, as well as ethics of computing for animals."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07465",
+    "course_name": "Educational Technology:  Design and Evaluation",
+    "description": "Intensive project class in which students design, implement, and evaluate a piece of educational technology, applying the theory learned in Educational Technology: Conceptual Foundations."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07470",
+    "course_name": "Mobile and Ubiquitous Computing",
+    "description": "Investigates the infrastructure required to develop mobile and ubiquitous computing applications and establishes major research themes and experimental practices. Credit not awarded for both CS\u00a07470 and CS\u00a04605 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07476",
+    "course_name": "Advanced Computer Vision",
+    "description": "Advanced topics in computer vision, which includes a deep dive into both the theoretical foundations of computer vision to the practical issues of building real systems that use computer vision. Credit will not be awarded for CS\u00a07476 and CS 7495."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07490",
+    "course_name": "Advanced Image Synthesis",
+    "description": "Advanced techniques in realistic image synthesis based on the physics of light.  Anti-aliasing, textures, surface reflectance, distribution ray tracing, volume rendering, radiosity, and image-based rendering."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07492",
+    "course_name": "Simulation of Biological Systems",
+    "description": "Study different computer simulation methods for use in investigating biological systems, including bio-molecules, cells and full organisms."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07496",
+    "course_name": "Computer Animation",
+    "description": "Motion techniques for computer animation and interactive games (keyframing, procedural methods, motion capture, and simulation) and principles for storytelling, composition, lighting, and interactivity."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07497",
+    "course_name": "Virtual Environments",
+    "description": "An introduction to virtual reality and virtual environments. Issues covered will include VR technology, software design, 3D human-computer interaction, and applications for VR."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07499",
+    "course_name": "3D Reconstruction and Mapping in Computer Vision, Robotics, and Augmented Reality",
+    "description": "In this course we study the principles and algorithms underlying 3D Reconstruction and Mapping in Computer Vision, Robotics, and Augmented Reality."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07510",
+    "course_name": "Graph Algorithms",
+    "description": "Algorithms for graph problems such as maximum flow, matching, network reliability, minimum cuts, covering, coloring, planarity, shortest paths, and connectivity. Crosslisted with MATH 7510 and ISYE\u00a07510 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07520",
+    "course_name": "Approximation Algorithms",
+    "description": "Approximation algorithms for NP-hard optimization problems, design and analysis techniques for such algorithms.  Credit not allowed for both CS\u00a07520 and CS 4520."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07525",
+    "course_name": "Algorithmic Game Theory and Economics",
+    "description": "Algorithmic aspects of game theory covering topics at the intersection of computer science, economics, and game theory with applications to domains such as internet."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07530",
+    "course_name": "Randomized Algorithms",
+    "description": "Techniques for designing and analyzing randomized algorithms, derandomization techniques.  Credit not allowed for both CS\u00a07530 and CS 4530."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07535",
+    "course_name": "Markov Chain Monte Carlo Algorithms",
+    "description": "This course studies Markov Chain Monte Carlo algorithms, widely-used in a variety of scientific fields, focusing on mathematical techniques for analyzing their convergence rates."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07540",
+    "course_name": "Spectral Algorithms and Representations",
+    "description": "Spectral methods mathematics and algorithmic insights driving applications with large data sets in domains such as web-search, information-retrieval, and medical diagnosis and prediction."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07545",
+    "course_name": "Theoretical Foundations of Machine Learning",
+    "description": "This course provides a basic arsenal of powerful mathematical tools for the analysis of learning algorithms, focusing on both statistical and computational aspects."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07560",
+    "course_name": "Theoretical Foundations of Cryptography",
+    "description": "One-way functions, pseudorandomness, public-key and identity-based cryptography, commitment and zero knowledge."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07616",
+    "course_name": "Pattern Recognition",
+    "description": "This course provides an introduction to the theory and practice of pattern recognition.  It emphasizes unifying concepts and the analysis of real-world datasets."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07626",
+    "course_name": "Introduction to Behavioral Imaging",
+    "description": "An introduction to the use of sensor data and machine learning methods to measure and model human behavior objectively and automatically for health applications."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07630",
+    "course_name": "Autonomous Robotics",
+    "description": "The principles and practice of autonomous robotics including behavior-based design and architectures, adaptive learning and team behavior, and the role of perception within robotic systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07631",
+    "course_name": "Autonomous Multi-Robot Systems",
+    "description": "In-depth examination of the current research on multi-robot systems.  Students develop and critically analyze a multi-robot system."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07632",
+    "course_name": "Game Artificial Intelligence",
+    "description": "An exploration of how artificial intelligence is used in modern digital computer games. Credit will not be awarded for CS\u00a07632 and CS\u00a04731 , CS\u00a07632 and LCC 4731 or CS\u00a07632 and LMC\u00a04731 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07633",
+    "course_name": "Human-Robot Interaction",
+    "description": "Survey of the state of the art in HRI research, introduction to statistical methods for HRI research, research project studio."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07634",
+    "course_name": "AI Storytelling in Virtual Worlds",
+    "description": "An exploration of how artificial intelligence can enable us to use stories in virtual worlds for the purpose of entertaining, educatintg, and training human users."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07636",
+    "course_name": "Computational Perception",
+    "description": "Study of statistical and algorithmic methods for sensing people using video and audio.  Topics include face detection and recognition, figure tracking, and audio-visual sensing."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07637",
+    "course_name": "Knowledge-Based AI",
+    "description": "Structured knowledge representation; knowledge-based methods of reasoning and learning; problem-solving, modeling and design."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07638",
+    "course_name": "Artificial Intelligence Techniques for Robotics",
+    "description": "AI techniques with applications to autonomous vehicles. Extensive programming exercises. Topics include probabilistic inference, Kalman/particle filters, planning/search algorithms, PID control, SLAM."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07639",
+    "course_name": "Cyber Physical Design and Analysis",
+    "description": "Cyber Physical Systems (CPS), including examples. Design methods. Formalisms: Different equations, finite-state machines. Analysis. Formal methods. Design processes, Model-Based Systems Engineering, Reference documents and regulations."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07641",
+    "course_name": "Machine Learning",
+    "description": "Machine learning techniques and applications. Topics include foundational issues; inductive, analytical, numerical, and theoretical approaches; and real-world applications. Credit not awarded for both CS\u00a07641 and CS\u00a04641 / CSE\u00a06740 / ISYE\u00a06740 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07642",
+    "course_name": "Reinforcement Learning and Decision Making",
+    "description": "Efficient algorithms for multiagent planning, and approaches to learning near-optimal decisions using possibly partially observable Markov decision processes; stochastic and repeated games; and reinforcement learning."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07643",
+    "course_name": "Deep Learning",
+    "description": "This course will cover theory and practice of deep learning, including neural network and structured models, optimization algorithms, and applications to perception and Artificial Intelligence."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07644",
+    "course_name": "Machine Learning for Robotics",
+    "description": "Overview of a portfolio of machine learning techniques useful for robotic application: from regression to deep learning, applied on simulated real-time mobile robotic applications."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07646",
+    "course_name": "Machine Learning for Trading",
+    "description": "Introduces machine learning based trading strategies. Topics:  Information processing, probabilistic analysis, portfolio construction, generation of market orders, KNN, random forests. Credit not awarded for both CS\u00a04646 and CS\u00a07646 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07647",
+    "course_name": "Machine Learning with Limited Supervision",
+    "description": "Explore advanced techniques in learning from visual data with limited human supervision through study of recently published research papers and completing a semester-long research project."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07648",
+    "course_name": "Interactive Robot Learning",
+    "description": "This course combines lectures in CS (Machine and Reinforcement Learning) and CogSci with a research seminar to enable students to develop learning from demonstration systems."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07649",
+    "course_name": "Robot Intelligence: Planning",
+    "description": "We investigate algorithms for robots and complex systems that make intelligent decisions.  Emphasis on the theoretical and empirical properties of classical, geometric, stochastic/dynamic planning."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07650",
+    "course_name": "Natural Language",
+    "description": "Topics include lexical analysis, parsing, interpretation of sentences, semantic representation, organization of knowledge, inference mechanisms.  Newer approaches combining statistical language processing and information retrieval techniques.  Credit not allowed for both CS\u00a07650 and CS\u00a04650 ."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07651",
+    "course_name": "Human and Machine Learning",
+    "description": "Explores the gap between empirical research on human learning and models from machine learning. Covers symbolic, statistical, semantic space, neural network, unsupervised, and other approaches."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07652",
+    "course_name": "Large Language Models",
+    "description": "This course aims to explore cutting-edge research topics surrounding pre-trained language models, covering their technical foundations, pre-training and post-training techniques, efficiency, fine-tuning and adaptation, etc."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07695",
+    "course_name": "Philosophy of Cognition",
+    "description": "Examines problems in the foundations of cognition in relation to current issues in cognitive sciences. Topics include meaning, mental imagery, consciousness, and mind/body problem."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07711",
+    "course_name": "Health Sensing & Interventions",
+    "description": "Through understanding the principles physiology, medical devices and health technologies, we experiment with and design precision health sensing and feedback hardware and software."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07741",
+    "course_name": "Robotics Professional Preparation",
+    "description": "Preparation for a professional career in Robotics. Local & visiting speakers. Program introduction. Technical resume preparation. GT Robotics labs & resources."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07742",
+    "course_name": "Robotics Professional Preparation 2",
+    "description": "Preparation for a professional career in Robotics. Local & visiting speakers. Selecting and applying for Internship. Developing capstone project proposal. Public speaking practice and preparation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07743",
+    "course_name": "Robotics Professional Preparation 3",
+    "description": "Preparation for a professional career in Robotics. Local & visiting speakers. Interview preparation & career search. Technical report writing and presentation."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07750",
+    "course_name": "Mathematical Foundations of Machine Learning",
+    "description": "Provides the mathematical background for two of the pillars of modern data science: linear algebra and applied probability."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07751",
+    "course_name": "Probabilistic Graphical Models in Machine Learning",
+    "description": "The course provides an introduction to theory and practice of graphical models in machine learning. It covers three main aspects; representation, probabilistic inference, and learning."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07785",
+    "course_name": "Introduction to Robotics Research",
+    "description": "Familiarizes students with the core areas of robotics; mechanics, control, perception, AI, and autonomy. Provides an introduction to the mathematical tools required in robotics research."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07790",
+    "course_name": "Cognitive Modeling",
+    "description": "A hands-on course covering a range of cognitive modeling methodologies.  It explores the analysis, development, construction, and evaluation of models of cognitive processing. Crosslisted with ISYE and PSYC 7790."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a07999",
+    "course_name": "Preparation for Doctoral Qualifying Exams",
+    "description": "Consent of the College required."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08001",
+    "course_name": "Seminar",
+    "description": "Group discussion of advanced topics in information and computer science. May not be used by computer science majors for degree credit."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08740",
+    "course_name": "Robotics Internship",
+    "description": "Graduate Internship at a partner company, GTRI or a GT Robotics lab."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08741",
+    "course_name": "Robotics Capstone Project",
+    "description": "Teams or individuals apply the knowledge and skills acquired throughout the MS program to a faculty supervised robotics project."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08750",
+    "course_name": "Robotics Research Foundation I",
+    "description": "Multidisciplinary research course supervised by two robotics faculty from different schools participating in the robotics Ph.D. program."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08751",
+    "course_name": "Robotics Research Foundation II",
+    "description": "Continuation of AE\u00a08751 (Robotics Research Foundation I)."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08795",
+    "course_name": "Colloquium in Cognitive Sciences",
+    "description": "Reading of research papers by leading cognitive scientists, attendance at their colloquia and meeting with them to discuss research. Crosslisted with ISYE and PSYC 8795."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08801",
+    "course_name": "Special Topics",
+    "description": "Special topics of current interest. Treatment of new developments in various areas of computing."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08803",
+    "course_name": "Special Topics",
+    "description": "Special topics of current interest.  Treatment of new developments in various areas of computing."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08813",
+    "course_name": "Special Topics",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08816",
+    "course_name": "Special Topics",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08902",
+    "course_name": "Special Problems",
+    "description": "Small-group or individual investigation of advanced topics in computing. Guided study and research."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08903",
+    "course_name": "Special Problems",
+    "description": "Small-group or individual investigation of advanced topics in computing.  Guided study and research."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08997",
+    "course_name": "Teaching Assistantship",
+    "description": "For graduate students holding graduate teaching assistantships."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08998",
+    "course_name": "Research Assistantship",
+    "description": "For graduate students holding graduate research assistantships."
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a08999",
+    "course_name": "Doctoral Thesis Preparation",
+    "description": ""
+  },
+  {
+    "program": "Georgia Tech - Main CS Course Catalog",
+    "course_code": "CS\u00a09000",
+    "course_name": "Doctoral Thesis",
+    "description": "Offices and Departments"
+  }
+]

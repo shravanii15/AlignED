@@ -11,9 +11,16 @@ venv/
 data/*.json
 data/*.csv
 data/kaggle_backfill/
-data/taxonomy/
-data/clustering/
 data/gap_analysis/
+
+# Small derived inputs that ARE committed, because rebuilding the database
+# needs them and they cannot be regenerated without external services
+# (scraping live catalogs, the O*NET API, a local embedding run): the
+# scraped course catalogs, the O*NET vocabulary, and the 1,660-posting
+# clustering sample. The 530 MB Kaggle CSV stays external (see README).
+!data/sample_*_courses.json
+!data/taxonomy/
+!data/clustering/
 
 # Gold-set extraction *run outputs* are regenerated every time the
 # pipeline runs, so they're excluded like other raw pulls. The gold-set

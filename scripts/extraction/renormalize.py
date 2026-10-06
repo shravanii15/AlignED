@@ -49,7 +49,10 @@ import sys
 
 from sentence_transformers import SentenceTransformer, util
 
-from extract_common import load_vocabulary, normalize_term
+from extract_common import (
+    GROUNDING_LOG, build_normalized_lookup, build_variant_index, ground_term,
+    is_lexical_conflict, load_vocabulary, normalize_term,
+)
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "data", "gold_set")
 LLM_EXTRACTIONS_PATH = os.path.join(DATA_DIR, "llm_extractions.json")
@@ -71,10 +74,36 @@ EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 # beat the baseline on F1 in real testing (0.400 vs baseline's 0.364), so
 # it's the default. Can still be overridden from the command line to
 # experiment further, e.g.: python renormalize.py 0.70
-SIMILARITY_CUTOFF = float(sys.argv[1]) if len(sys.argv) > 1 else 0.65
+SIMILARITY_CUTOFF = 0.65  # overridable from the command line in main(), never at import time
+
+
+def ground_with_embeddings(raw_term, vocabulary, lookup, variant_index, similarity_row):
+    """Ground one raw term, in order of trust:
+      1. exact / alias / variant match (extract_common.ground_term)
+      2. embedding similarity, but only if the best candidate clears
+         SIMILARITY_CUTOFF AND is not a lexical conflict (see
+         extract_common.is_lexical_conflict), so SQL can never become
+         NoSQL or MySQL just because the embeddings are close.
+    Returns (entry_or_None, method). similarity_row is a sequence of cosine
+    scores of this raw term against every vocabulary term."""
+    entry, method = ground_term(raw_term, vocabulary, lookup, variant_index)
+    if entry is not None:
+        return entry, method
+    best_idx = max(range(len(similarity_row)), key=lambda i: float(similarity_row[i]))
+    if float(similarity_row[best_idx]) < SIMILARITY_CUTOFF:
+        return None, "none"
+    candidate = vocabulary[best_idx]
+    if is_lexical_conflict(normalize_term(raw_term), normalize_term(candidate["term"])):
+        GROUNDING_LOG.append((raw_term, candidate["term"], "rejected_conflict"))
+        return None, "none"
+    GROUNDING_LOG.append((raw_term, candidate["term"], "embedding"))
+    return candidate, "embedding"
 
 
 def main():
+    global SIMILARITY_CUTOFF
+    if len(sys.argv) > 1:
+        SIMILARITY_CUTOFF = float(sys.argv[1])
     print(f"Using similarity cutoff: {SIMILARITY_CUTOFF}")
     print(f"Loading embedding model ({EMBEDDING_MODEL_NAME})... this may take a moment the first time.")
     model = SentenceTransformer(EMBEDDING_MODEL_NAME)
@@ -84,6 +113,8 @@ def main():
     vocab_terms = [entry["term"] for entry in vocabulary]
     print(f"  -> {len(vocabulary)} vocabulary terms loaded.")
 
+    lookup = build_normalized_lookup(vocabulary)
+    variant_index = build_variant_index(lookup)
     print("Computing embeddings for the vocabulary (once, then reused for every item)...")
     vocab_embeddings = model.encode(vocab_terms, convert_to_tensor=True)
 
@@ -112,9 +143,10 @@ def main():
 
         matched = {}  # keyed by vocabulary term, to de-duplicate
         for i, raw_term in enumerate(raw_terms):
-            best_score, best_idx = similarity_matrix[i].max(), similarity_matrix[i].argmax()
-            if float(best_score) >= SIMILARITY_CUTOFF:
-                matched_entry = vocabulary[int(best_idx)]
+            matched_entry, _method = ground_with_embeddings(
+                raw_term, vocabulary, lookup, variant_index, similarity_matrix[i]
+            )
+            if matched_entry is not None:
                 matched[matched_entry["term"]] = matched_entry
 
         entry["predicted_skills"] = [
@@ -125,7 +157,13 @@ def main():
     with open(LLM_EXTRACTIONS_PATH, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
 
-    print(f"Re-matched {items_with_raw_terms} items using embeddings instead of text similarity.")
+    from collections import Counter
+    methods = Counter(m for _raw, _matched, m in GROUNDING_LOG)
+    audit_path = os.path.join(DATA_DIR, "grounding_audit.json")
+    with open(audit_path, "w", encoding="utf-8") as f:
+        json.dump([{"raw": r, "matched": m, "method": k} for r, m, k in GROUNDING_LOG], f, indent=2)
+    print(f"Grounding methods used: {dict(methods)}  (full audit: {audit_path})")
+    print(f"Re-matched {items_with_raw_terms} items: exact/alias/variant first, embeddings only as a fallback.")
     print(f"Total predicted skills before: {total_before}")
     print(f"Total predicted skills after:  {total_after}")
     print(f"\nUpdated: {LLM_EXTRACTIONS_PATH}")

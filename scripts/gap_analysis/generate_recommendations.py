@@ -49,7 +49,7 @@ import os
 import sqlite3
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # .../AlignED
-DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
+DB_PATH = os.environ.get("ALIGNED_DB_PATH") or os.path.join(BASE_DIR, "database", "aligned.db")
 OUTPUT_JSON_PATH = os.path.join(BASE_DIR, "data", "gap_analysis", "recommendations.json")
 OUTPUT_REPORT_PATH = os.path.join(BASE_DIR, "data", "gap_analysis", "recommendations_report.txt")
 

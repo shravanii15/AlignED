@@ -1,0 +1,6 @@
+# Minimal dependencies for the unit/integration test suite (and CI).
+# Deliberately excludes the heavy pipeline stack (sentence-transformers,
+# torch, Ollama client) and Streamlit, which the tests do not import.
+pytest>=7.4
+pandas>=2.0
+scipy>=1.11

@@ -1,0 +1,206 @@
+[
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CSE 6040",
+    "course_name": "Introduction for Computing for Data Analytics",
+    "description": "Computational techniques needed for data analysis; programming, accessing databases, multidimensional arrays, basic numerical computing, and visualization; hands-on applications and case studies. Credit will not be awarded for both CSE 6040 and CX 4240."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6501",
+    "course_name": "Introduction to Analytics Modeling",
+    "description": "This course gives a basic introduction to a wide variety of analytics models and techniques, including the basic ideas behind the models, experience using software to solve/analyze them, and case studies dealing with combining models to find a complete solution. Modeling approaches covered include classification, clustering, change detection, time series modeling, regression models, design of experiments, probability distributions, probability-based models and simulation, PCA, and optimization. Cross-cutting topics like data preparation, model validation, and variable selection are also covered."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "MGT 6201",
+    "course_name": "Business Fundamentals for Analytics",
+    "description": "An accelerated introduction to the basics of management and the language of business. The course provides a framework that will enhance a person's effectiveness in the business world. Advanced Core Requirements (6 hours)"
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CSE 6242",
+    "course_name": "Data and Visual Analytics",
+    "description": "The course introduces students to analysis and visualization of complex high dimensional data. Both theory and applications will be covered including several practical case studies."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "MGT 6203",
+    "course_name": "Data Analytics in Business",
+    "description": "Teaches the scientific process of transforming data into insights for making better business decisions. It covers methodologies, algorithms, and challenges related to analyzing business data. Completion of MGT 6203 is required before starting the practicum. Suggested prerequisite: ISYE 6501 Statistics Electives (6 hours) Special Note Select at least two courses from the list.\u00a0All C-track students must take ISYE 6740 as either a Statistics elective or a C-track elective."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6420",
+    "course_name": "Bayesian Statistics",
+    "description": "This course covers the fundamentals of Bayesian statistics, including both the underlying models and methods of Bayesian computation, and how they are applied. Modeling topics include conditional probability and Bayes\u2019 formula, Bayesian inference, credible sets, conjugate and noninformative priors, hypothesis testing, Bayesian regression, empirical Bayes models, and hierarchical Bayesian models. Computational topics include Monte Carlo methods, MCMC, Metropolis-Hasting algorithms, Gibb\u2019s sampling, variational Bayes, and other methods for posterior approximation. Various applications of Bayesian statistics will be discussed. Prerequisite: Calculus based Introductory Statistics Course."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6740",
+    "course_name": "Computational Data Analysis",
+    "description": "*required for Computational Data Analytics Track Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed. The course is designed to answer the most fundamental questions about machine learning: What are the most important methods to know about, and why? How can we answer the question 'is this method better than that one' using asymptotic theory? How can we answer the question 'is this method better than that one' for a specific dataset of interest? What can we say about the errors our method will make on future data? What's the 'right' objective function? What does it mean to be statistically rigorous? This course is designed to give graduate students a thorough grounding in the methods, theory, mathematics and algorithms needed to do research and applications in machine learning. The course covers topics from machine learning, classical statistics, and data mining. Students entering the class with a pre-existing working knowledge of probability, statistics and algorithms will be Analytical Tools an advantage, but the class has been designed so that anyone with a strong numerate background can catch up and fully participate. Some experience with coding are expected."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6414",
+    "course_name": "Regression Analysis",
+    "description": "This course covers the fundamentals of Bayesian statistics, including both the underlying models and methods of Bayesian computation, and how they are applied. Modeling topics include conditional probability and Bayes\u2019 formula, Bayesian inference, credible sets, conjugate and noninformative priors, hypothesis testing, Bayesian regression, empirical Bayes models, and hierarchical Bayesian models. Computational topics include Monte Carlo methods, MCMC, Metropolis-Hasting algorithms, Gibbs sampling, variational Bayes, and other methods for posterior approximation. Various applications of Bayesian statistics will be discussed. Prerequisite: Calculus-based Introductory Statistics Course"
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6402",
+    "course_name": "Time Series Analysis",
+    "description": "Basic forecasting and methods, ARIMA models, transfer functions."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 7406",
+    "course_name": "Data Mining and Statistical Learning",
+    "description": "An introduction to some commonly used data mining and statistical learning algorithms such as K-nearest neighbor (KNN) algorithm, linear methods for regression and classification, tree-based methods, ensemble methods, support vector machine, neural networks, and Kmeans clustering algorithm. This course focuses on the understanding of methodology, motivation, and assumptions of different algorithms as well as implementation of these algorithms with data examples using the R statistical software."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6525",
+    "course_name": "High-dimensional Data Analytics",
+    "description": "This course focuses on analysis of high-dimensional structured data including profiles, images, and other types of functional data using statistical machine learning. A variety of topics such as functional data analysis, image processing, multilinear algebra and tensor analysis, and regularization in highdimensional regression and its applications including low rank and sparse learning is covered. Optimization methods commonly used in statistical modeling and machine learning and their computational aspects are also discussed - convex conic optimization, which is a significant generalization of linear optimization. The fourth and final module is on integer optimization, which augments the previously covered optimization models with the flexibility of integer decision variables. The course blends optimization theory and computation with various applications to modern data analytics. Operations Elective (3 hours) Special Note Select one course from the list."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6644",
+    "course_name": "Simulation",
+    "description": "Covers modeling of discrete-event dynamic systems and introduces methods for using these models to solve engineering design and analysis problems."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6669",
+    "course_name": "Deterministic Optimization",
+    "description": "The course will teach basic concepts, models, and algorithms in linear optimization, integer optimization, and convex optimization. The first module of the course is a general overview of key concepts in linear algebra, calculus, and optimization. The second module of the course is on linear optimization, covering modeling techniques, basic polyhedral theory, simplex method, and duality theory. Track Electives (6 hours) Special Note The number of elective hours required depends on how many Introductory Core courses (if any) are replaced with electives. Students who take two of these additional electives from the Track Electives list of either the Business Analytics track or the Computational Data Analytics track will satisfy the requirements for two tracks. To satisfy the Computational Data Analytics Track, students must have taken ISYE 6740 as one of their Statistics, Track, or Additional Electives."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 8803",
+    "course_name": "Topics on High-dimensional Data Analytics",
+    "description": "This course focuses on analysis of highdimensional structured data including profiles, images, and other types of functional data using statistical machine learning. A variety of topics such as functional data analysis, image processing, multilinear algebra and tensor analysis, and regularization in high-dimensional regression and its applications including low rank and sparse learning is covered. Optimization methods commonly used in statistical modeling and machine learning and their computational aspects are also discussed - convex conic optimization, which is a significant generalization of linear optimization. The fourth and final module is on integer optimization, which augments the previously covered optimization models with the flexibility of integer decision variables. The course blends optimization theory and computation with various applications to modern data analytics. Operations Research Elective (3 hours) Special Note The number of elective hours required depends on how many Introductory Core courses (if any) are replaced with electives. Students who take two of these additional electives from the Track Electives list of either the Business Analytics track or the Computational Data Analytics track will satisfy the requirements for two tracks. To satisfy the Computational Data Analytics Track, students must have taken ISYE 6740 as one of their Statistics, Track, or Additional Electives."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CSE 6250",
+    "course_name": "Big Data Analytics in Healthcare",
+    "description": "The course introduces students to analysis and visualization of complex high dimensional data. Both theory and applications will be covered including several practical case studies."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CS 6400",
+    "course_name": "Database Systems Concepts and Design",
+    "description": "Study of fundamental concepts with regard to rational databases. Topics covered include database design, query processing, concurrency control, and recovery. Credit not given for both CS 6400 and CS 6754."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CS 6601",
+    "course_name": "Artificial Intelligence",
+    "description": "This course is a survey of the field of Artificial Intelligence and will often be taken as the first graduate course in the area. It is designed to be challenging and involves significant independent work, readings, and assignments. The course covers most of the required textbook Artificial Intelligence A Modern Approach 3rd edition, which is a keystone of Georgia Tech\u2019s Intelligent Systems PhD qualifier exam."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CS 6750",
+    "course_name": "Human Computer Interaction",
+    "description": "This course is an introductory course on human-computer interaction. It does not presuppose any earlier knowledge of human-computer interaction, computer science, or psychology. The class covers three broad categories of topics within human-computer interaction: (a) the principles and characteristics of the interaction between humans and computers; (b) the techniques for designing and evaluating user-centered systems; and (c) current areas of cuttingedge research and development in human-computer interaction."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CS 7280",
+    "course_name": "Network Science",
+    "description": "It is often the case that complex systems, both living and man-made, can be represented as static or dynamic networks of many interacting components. These components are typically much simpler in terms of behavior or function than the overall system, implying that the additional complexity of the latter is an emergent network property. Network science is a relatively new discipline that investigates the topology and dynamics of such complex networks, aiming to better understand the behavior, function and properties of the underlying systems. The applications of network science cover physical, informational, biological, cognitive, and social systems. In this course, we will study algorithmic, computational, and statistical methods of network science, as well as various applications in social, communication and biological networks. A significant component of the course will focus on the overlap between machine learning and network science, covering methods for network inference, generative network models, graph embeddings using deep neural networks, and other state of the art topics."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CS 7637",
+    "course_name": "Knowledge-based AI",
+    "description": "The twin goals of knowledge-based artificial intelligence (AI) are to build AI agents capable of human-level intelligence and gain insights into human cognition. The learning goals of the Knowledge-Based AI course are to develop an understanding of (1) the basic architectures, representations and techniques for building knowledge-based AI agents, and (2) issues and methods of knowledge-based AI. The main learning strategies are learning-by-example and learning-by-doing. Thus, the course puts a strong emphasis on homework assignments and programming projects. The course will cover three kinds of topics: core topics such as knowledge representation, planning, constraint satisfaction, case-based reasoning, knowledge revision, incremental concept learning, and explanation based learning; common tasks such as classification, diagnosis, and design; and advanced topics such as analogical reasoning, visual reasoning, and meta-reasoning."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CS 7642",
+    "course_name": "Reinforcement Learning",
+    "description": "Reinforcement Learning is a subarea of Machine Learning, that area of Artificial Intelligence that is concerned with computational artifacts that modify and improve their performance through experience. This course focuses on automated computational decision making through a combination of classic papers and more recent work. It examines efficient algorithms, where they exist, for single-agent and multiagent planning as well as approaches to learning near optimal decisions from experience. Topics include Markov decision processes; stochastic and repeated games; partially observable Markov decision processes; reinforcement learning; and interactive reinforcement learning. The class is particularly interested in issues of generalization, exploration, and representation."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CS 7643",
+    "course_name": "Deep Learning",
+    "description": "Deep learning is a sub-field of machine learning that focuses on learning complex, hierarchical feature representations from raw data. The dominant method for achieving this, artificial neural networks, has revolutionized the processing of data (e.g. images, videos, text, and audio) as well as decision-making tasks (e.g. game-playing). Its success has enabled a tremendous amount of practical commercial applications and has had significant impact on society. In this course, students will learn the fundamental principles, underlying mathematics, and implementation details of deep learning. This includes the concepts and methods used to optimize these highly parameterized models (gradient descent and backpropagation, and more generally computation graphs), the modules that make them up (linear, convolution, and pooling layers, activation functions, etc.), and common neural network architectures (convolutional neural networks, recurrent neural networks, etc.). Applications ranging from computer vision to natural language processing, and decision-making (reinforcement learning) will be demonstrated. Through in-depth programming assignments, students will learn how to implement these fundamental building blocks as well as how to put them together using a popular deep learning library, PyTorch. In the final project, students will apply what they have learned to real-world scenarios by exploring these concepts with a problem that they are passionate about."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CS 7646",
+    "course_name": "Machine Learning for Trading",
+    "description": "This course introduces students to the real-world challenges of implementing machine learning based trading strategies including the algorithmic steps from information gathering to market orders. The focus is on how to apply probabilistic machine learning approaches to trading decisions. We consider statistical approaches like linear regression, Q-Learning, KNN, and regression trees and how to apply them to actual stock trading situations. Modeling,"
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CSE 6742",
+    "course_name": "Simulation, & Military Gaming",
+    "description": "Computer modeling and simulation offers a unique perspective on events because of the ability to hold some variables constant and change others and run a scenario repeatedly searching for underlying themes. Computer simulation has been used as an analytical tool in the natural sciences, business, commerce, government, and politics. This course focuses on the creation and application of computer simulations to model strategic international events concerning warfare. The course is project-based, requiring computing and international affairs students to work together in multidisciplinary teams to analyze specific questions utilizing computer-based modeling and simulation tools (largely, but not exclusively \u201cNet Logo\u201d)."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CSE 8803",
+    "course_name": "Applied Natural Language Processing",
+    "description": "The primary objective of this course is to introduce you to broad classes of techniques and tools for analyzing text data using Natural Language Processing (NLP) algorithms and techniques. The class will emphasize applying pre-processing, processing, and post-processing NLP techniques to analyze and develop NLP models using conventional and deep learning machine learning methods. Additional Electives (0-9 hours) Special Note The number of elective hours required depends on how many Introductory Core courses (if any) are replaced with electives. Students who take two of these additional electives from the Track Electives list of either the Business Analytics track or the Analytical Tools track will\u00a0satisfy the requirements for two tracks. To satisfy the Computational Data Analytics Track, students must have taken or ISYE 6740 as one of their Statistics, Track, or Additional\u00a0Electives."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "MGT 6311",
+    "course_name": "Digital Marketing",
+    "description": "Become familiar with the key concepts and techniques utilized in modern digital marketing. Understand the primary characteristics of various online channels including mobile marketing, email marketing, and social media marketing. Gain awareness of important concepts and best practices in the use of digital marketing tools (search engine optimization, pay-per-click advertising, etc.)."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "MGT 8813",
+    "course_name": "Financial Modeling",
+    "description": "Students will create spreadsheets using pivot tables, Excel functions, solver, goal seek, and VBA. The course will also include topics such as time value of money, stock and bond valuation, firm valuation, financial statements, cost of capital, option pricing models, and portfolio optimization. This course is intended to prepare students to build financial models."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "MGT 8823",
+    "course_name": "Data Analysis for Continuous Improvement",
+    "description": "Because it is one thing to know how to analyze data and another thing to actually use it to solve problems, the purpose of this course is to show how mastery of data analysis can be applied to the real world. In doing so, we will explore the development of key performance indicators (KPIs) and how to use KPIs to drive improvement in an organization. We will also discuss the four methods of continuous improvement and how data analysis can be leveraged in each method. Because the course weaves examples from both industry and everyday life, what is learned can be directly applied to both your personal and professional lives. In addition to the practical knowledge gained, students will also be shown tools that are outside of the typical analytics course and provided with the knowledge of how to use these tools on their own and in conjunction with the data analysis. Because one must know not only how to analyze data but also how to determine from where the actual data should come, the tools chosen will assist the student in coming up with what to analyze in the first place."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "MGT 6727",
+    "course_name": "Privacy for Professionals",
+    "description": "Because it is one thing to know how to analyze data and another thing to use it to solve problems, the purpose of this course is to show how mastery of data analysis can be applied to the real world. In doing so, we will explore the development of key performance indicators (KPIs) and how to use KPIs to drive improvement in an organization. We will also discuss the four methods of continuous improvement and how data analysis can be leveraged in each method. Because the course weaves examples from both industry and everyday life, what is learned can be directly applied to both your personal and professional lives. In addition to the practical knowledge gained, students will also be shown tools that are outside of the typical analytics course and provided with the knowledge of how to use these tools on their own and in conjunction with the data analysis. Because one must know not only how to analyze data but also how to determine from where the actual data should come, the tools chosen will assist the student in coming up with what to analyze in the first place."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "PUBP 6725",
+    "course_name": "Information Security Policies and Strategies",
+    "description": "This course introduces students to the policy and management aspects of cybersecurity. It is based on the idea that cybersecurity policy can be sorted into three \u201clayers\u201d representing different levels of social organization: individual organization, the national level, and the transnational level. The course is divided into four modules: the first exposes students to basic concepts and definitions regarding policy, governance, and threats; the second deals with cybersecurity policy at the organizational level; the third deals with cybersecurity public policy at the national level; the fourth deals with cyber conflict, policy, and diplomacy at the transnational level. This course situates cybersecurity in the overall Internet ecosystem. Additional Electives (0-9 hours) Special Note The number of elective hours required depends on how many Introductory Core courses (if any) are replaced with electives. Students who take two of these additional electives from the Track Electives list of either the Analytical Tools track or the Computational Data Analytics track will\u202fsatisfy the requirements for two tracks. To satisfy the Computational Data Analytics Track, students must have taken ISYE 6740 as one of their Statistics, Track, or Additional\u202fElectives."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "ISYE 6748",
+    "course_name": "Applied Analytics Practicum",
+    "description": "A practical analytics experience that enables you to apply previously learned concepts and classroom teachings to a project of significant interest, either within your current organization or within a Georgia Tech-sponsored company (partnering companies pre-determine their projects). The objective of the practicum is to properly define and scope the analytics project, apply appropriate methodologies, create value, manage the project, and provide results in writing. The practicum project can be a project at a self-secured internship or work you do for your current employer. If either apply, you still must gain approval to register for (and fulfill the requirements of) the Applied Analytics Practicum course within the semester you are doing the project work. This course is by permit. The prerequisites for registration are completion of at least eight courses, including Data and Visual Analytics (CSE 6242) and Data Analytics in Business (MGT 6203) prior to (not concurrent with) the practicum. Offered: Fall, Spring, Summer Business Analytics Track The Business Analytics track explores the understanding, framing, and solution of problems in marketing, operations, finance, management of information technology, human resources, and accounting in order to develop and execute analytics projects within businesses. Introductory Core Requirements (9 hours) Special Note Students with sufficient background in any of these areas may apply to replace one or more of these courses with an elective."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "MGT 8833",
+    "course_name": "Privacy for Professionals",
+    "description": "Because it is one thing to know how to analyze data and another thing to actually use it to solve problems, the purpose of this course is to show how mastery of data analysis can be applied to the real world. In doing so, we will explore the development of key performance indicators (KPIs) and how to use KPIs to drive improvement in an organization. We will also discuss the four methods of continuous improvement and how data analysis can be leveraged in each method. Because the course weaves examples from both industry and everyday life, what is learned can be directly applied to both your personal and professional lives. In addition to the practical knowledge gained, students will also be shown tools that are outside of the typical analytics course and provided with the knowledge of how to use these tools on their own and in conjunction with the data analysis. Because one must know not only how to analyze data but also how to determine from where the actual data should come, the tools chosen will assist the student in coming up with what to analyze in the first place. Applied Analytics Practicum (6 hours)"
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "MGT 6748",
+    "course_name": "Applied Analytics Practicum",
+    "description": "A practical analytics experience that enables you to apply previously learned concepts and classroom teachings to a project of significant interest, either within your current organization or within a Georgia Tech-sponsored company (partnering companies pre-determine their projects). The objective of the practicum is to properly define and scope the analytics project, apply appropriate methodologies, create value, manage the project, and provide results in writing. The practicum project can be a project at a self-secured internship or work you do for your current employer. If either apply, you still must gain approval to register for (and fulfill the requirements of) the Applied Analytics Practicum course within the semester you are doing the project work. This course is by permit. The prerequisites for registration are completion of at least eight courses, including Data and Visual Analytics (CSE 6242) and Data Analytics in Business (MGT 6203) prior to (not concurrent with) the practicum. Offered: Fall, Spring, Summer Computational Data Analytics Track The Computational Data Analytics track explores a deeper understanding of big data\u2014including how to acquire, preprocess, store, manage, analyze, and visualize large datasets. Introductory Core Requirements (9 hours) Special Note Students with sufficient background in any of these areas may apply to replace one or more of these courses with an elective."
+  },
+  {
+    "program": "Georgia Tech - MS Analytics (OMS Analytics)",
+    "course_code": "CSE 6748",
+    "course_name": "Applied Analytics Practicum",
+    "description": "A practical analytics experience that enables you to apply previously learned concepts and classroom teachings to a project of significant interest, either within your current organization or within a Georgia Tech sponsored company (partnering companies pre-determine their projects). The objective of the practicum is to properly define and scope the analytics project, apply appropriate methodologies, create value, manage the project, and provide results in writing. The practicum project can be a project at a self-secured internship or work you do for your current employer. If either apply, you still must gain approval to register for (and fulfill the requirements of) the Applied Analytics Practicum course within the semester you are doing the project work. This course is by permit. The prerequisites for registration are completion of at least eight courses, including Data and Visual Analytics (CSE 6242) and Data Analytics in Business (MGT 6203) prior to (not concurrent with) the practicum. Offered: Fall, Spring, Summer SIGN UP FOR UPDATES Stay up-to-date on important deadlines, updates, and news. Also get tips for writing a stellar application! Sign Up Connect With Us Remote learning doesn\u2019t mean missing out. Be part of our growing social network with other students. Questions? Want to know how an OMS Analytics degree can help you advance your career? Want to stay current on important deadlines, updates, and news? Need more details? Contact Us Programs Browse by Subject Courses Certificates Degrees Military Programs ESL Georgia Tech Online Train at Your Location Event Services Virtual & Hybrid Events Global Learning Center Savannah Facilities Academic Conferences About Us Executive Leadership Leadership Searches Impact Report Savannah Campus The Language Institute Accreditation Contact Us FAQs General Emergency Information Report Website Issue Legal Legal and Privacy Information Accessibility Accountability GTPE EU GDPR Privacy Notice Title IX/Sexual Misconduct \u00a9 2026 Georgia Institute of Technology Facebook LinkedIn Email YouTube Professional Education Georgia Institute of Technology Georgia Tech Global Learning Center 84 5th St NW Atlanta GA 30308 USA window.NREUM||(NREUM={});NREUM.info={\"beacon\":\"bam.nr-data.net\",\"licenseKey\":\"NRJS-d0a566e8b1fc1c61aba\",\"applicationID\":\"1552472047\",\"transactionName\":\"NgBbbUsFCkcHBRVQWQ9KekxKEAtZSRAIXEFPFlxYSwcMGhYHBlxpUA==\",\"queueTime\":0,\"applicationTime\":4883,\"atts\":\"GkdYGwMfGUk=\",\"errorBeacon\":\"bam.nr-data.net\",\"agent\":\"\"}"
+  }
+]

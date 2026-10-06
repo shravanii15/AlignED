@@ -32,7 +32,7 @@ from extract_baseline import build_combined_pattern, extract_terms_from_text_fas
 from extract_common import load_vocabulary, normalize_term  # noqa: E402
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # .../AlignED
-DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
+DB_PATH = os.environ.get("ALIGNED_DB_PATH") or os.path.join(BASE_DIR, "database", "aligned.db")
 
 
 def main():

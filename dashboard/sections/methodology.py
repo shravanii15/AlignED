@@ -97,14 +97,18 @@ def render_methodology():
     with card_col4:
         with st.container(border=True):
             st.markdown("**Statistical analysis**")
-            st.caption("Two-proportion z-test with Benjamini-Hochberg FDR correction. Cut 231 gaps to 159.")
+            st.caption("Two-proportion z-test (Fisher's exact test for small counts) with Benjamini-Hochberg FDR correction. Cut 236 gaps to 170.")
             with st.expander("Detail"):
                 st.markdown(
                     """
                     Each program is tested against about 70 skills at once, so some "significant" results
                     are expected by chance. A Benjamini-Hochberg false discovery rate correction is applied
-                    across each program's tests before anything is called significant. It reduced the
-                    significant-gap count from 231 to 159 across the 13 programs.
+                    across each program's tests before anything is called significant. Each
+                    comparison uses a two-proportion z-test, except that Fisher's exact test is
+                    used when any expected cell count is below 5, because the z-test's normal
+                    approximation is unreliable for small samples (some programs have only 5 to 19
+                    course descriptions). The correction reduced the
+                    significant-gap count from 236 to 170 across the 13 programs.
 
                     **Trend detection uses the same correction.** The demand trends page tests about 67
                     skills at once. Applying FDR correction cut the count of significant trends from 9

@@ -31,7 +31,6 @@ Where the vocabulary comes from:
   "technology".
 """
 
-import difflib
 import json
 import os
 
@@ -111,45 +110,137 @@ def build_normalized_lookup(vocabulary):
     return lookup
 
 
-def fuzzy_match_term(raw_term, vocabulary, normalized_lookup, cutoff=0.70):
-    """Take a free-text term (something the LLM said in its own words,
-    NOT constrained to our vocabulary) and find the closest real
-    vocabulary entry, if any is close enough to trust.
+# Explicit aliases for abbreviations and common spoken forms that a model
+# (or a person) uses but the O*NET vocabulary spells differently. The value
+# is the exact vocabulary term to ground to. An alias is only applied when
+# that term really exists in the vocabulary passed in, so a stale alias can
+# never invent a term.
+ALIAS_MAP = {
+    "sql": "Structured query language SQL",
+    "aws": "Amazon Web Services AWS software",
+    "amazon web services": "Amazon Web Services AWS software",
+    "kafka": "Apache Kafka",
+    "airflow": "Apache Airflow",
+    "t-sql": "Microsoft transact-structural query language T-SQL",
+    "tsql": "Microsoft transact-structural query language T-SQL",
+    "postgres": "PostgreSQL",
+    "k8s": "Kubernetes",
+    "js": "JavaScript",
+}
 
-    Why this exists: the original design fed the entire ~1,600-term
-    vocabulary into every LLM prompt and demanded exact, verbatim
-    matches. On a laptop-grade, CPU-only machine that made every prompt
-    huge, and the model spent most of its time just *reading* the
-    vocabulary rather than reasoning about the actual text, in
-    practice this caused near-total request timeouts. This function is
-    the fix: the LLM now answers in its own words from a short prompt
-    (fast), and normalization, matching "AWS" or "amazon web services"
-    back to our real vocabulary entry, happens here afterward, cheaply,
-    in plain Python.
+# Pairs a similarity-based matcher must never convert between, even when
+# the scores are high. "SQL"/"NoSQL"/"MySQL" are three different skills,
+# "Machine Learning" is not "Active Learning", and "statistics" is not the
+# STATISTICA software. Keys are (normalized raw term, normalized candidate).
+BLOCKED_PAIRS = {
+    ("sql", "nosql"), ("sql", "mysql"), ("sql", "postgresql"),
+    ("machine learning", "active learning"),
+    ("statistics", "statistica"),
+    ("java", "javascript"),
+}
 
-    We try an exact (normalized) match first since that's the strongest,
-    most trustworthy signal. Only if there's no exact match do we fall
-    back to difflib's sequence-similarity scoring, and only accept a
-    fuzzy match if it clears `cutoff` (0.0-1.0 similarity). 0.82 was
-    chosen deliberately conservative: high enough to catch minor
-    casing/spacing/pluralization differences ("Python" vs "python ") and
-    close paraphrases, but not so loose that unrelated terms get matched
-    to each other just because they share a few letters. Returns the
-    matched vocabulary entry dict, or None if nothing was close enough --
-    a term with no good match is dropped, not force-fit to the nearest
-    (and possibly wrong) vocabulary entry."""
+
+def is_lexical_conflict(raw_norm, candidate_norm):
+    """True when a similarity-based match between these two normalized
+    strings must be rejected: it is an explicitly blocked pair, or a word of
+    the raw term only appears inside a longer, different word of the
+    candidate (sql inside nosql or mysql, java inside javascript) and is
+    never a whole word of the candidate. A whole-word match such as
+    'azure' inside 'microsoft azure software' is fine."""
+    if (raw_norm, candidate_norm) in BLOCKED_PAIRS:
+        return True
+    raw_toks = _tokens(raw_norm)
+    cand_toks = _tokens(candidate_norm)
+    for tok in raw_toks:
+        if len(tok) < 2 or tok in cand_toks:
+            continue
+        if any(tok in ct and ct != tok for ct in cand_toks):
+            return True
+    return False
+
+
+# Last-resort "variant" matching. Character-similarity matching (difflib)
+# was removed on purpose: it scores "SQL" vs "NoSQL", "Machine Learning" vs
+# "Active Learning" and "statistics" vs "STATISTICA" as near-identical
+# because they share most letters, but they are different skills, and one
+# wrong grounding silently turns a correct prediction into a false positive
+# plus a missed true positive. A variant match instead requires the terms to
+# be identical after removing case, punctuation and plural endings, which
+# catches "pythons" or "machine-learning" but nothing that changes meaning.
+
+# Every grounding decision made by ground_term() is appended here as
+# (raw_term, matched_term_or_None, method) so a run can be audited, e.g.
+# printing how many terms were grounded by alias or variant and to what.
+GROUNDING_LOG = []
+
+
+def _tokens(normalized):
+    return normalized.replace("-", " ").replace("/", " ").split()
+
+
+def _variant_key(normalized):
+    """Canonical key used for variant matching: lowercase alphanumerics
+    (keeping + and # so C++ and C# stay distinct), with a trailing plural
+    's' removed from each word of length > 3."""
+    cleaned = "".join(ch if (ch.isalnum() or ch in "+#") else " " for ch in normalized)
+    tokens = []
+    for tok in cleaned.split():
+        if len(tok) > 3 and tok.endswith("s") and not tok.endswith("ss"):
+            tok = tok[:-1]
+        tokens.append(tok)
+    return " ".join(tokens)
+
+
+def build_variant_index(normalized_lookup):
+    """{variant_key: [entries]} so variant matching can detect ambiguity
+    (two vocabulary terms that collapse to the same key)."""
+    index = {}
+    for norm_term, entry in normalized_lookup.items():
+        index.setdefault(_variant_key(norm_term), []).append(entry)
+    return index
+
+
+def ground_term(raw_term, vocabulary, normalized_lookup, variant_index=None):
+    """Ground a free-text term to a real vocabulary entry. Returns
+    (entry_or_None, method) where method is 'exact', 'alias', 'variant',
+    or 'none'.
+
+    Order of trust:
+      1. exact normalized match
+      2. explicit alias (ALIAS_MAP), only if its target is in the vocabulary
+      3. variant match (case/punctuation/plural only), rejected when more
+         than one vocabulary term shares the key
+    Anything else is dropped rather than force-fit to the nearest string."""
     normalized_raw = normalize_term(raw_term)
     if not normalized_raw:
-        return None
+        return None, "none"
 
     exact = normalized_lookup.get(normalized_raw)
     if exact is not None:
-        return exact
+        GROUNDING_LOG.append((raw_term, exact["term"], "exact"))
+        return exact, "exact"
 
-    all_normalized_terms = list(normalized_lookup.keys())
-    close = difflib.get_close_matches(
-        normalized_raw, all_normalized_terms, n=1, cutoff=cutoff
-    )
-    if not close:
-        return None
-    return normalized_lookup[close[0]]
+    alias_target = ALIAS_MAP.get(normalized_raw)
+    if alias_target is not None:
+        entry = normalized_lookup.get(normalize_term(alias_target))
+        if entry is not None:
+            GROUNDING_LOG.append((raw_term, entry["term"], "alias"))
+            return entry, "alias"
+
+    if variant_index is None:
+        variant_index = build_variant_index(normalized_lookup)
+    candidates = variant_index.get(_variant_key(normalized_raw), [])
+    if len(candidates) == 1:
+        GROUNDING_LOG.append((raw_term, candidates[0]["term"], "variant"))
+        return candidates[0], "variant"
+
+    GROUNDING_LOG.append((raw_term, None, "ambiguous" if candidates else "none"))
+    return None, "none"
+
+
+def fuzzy_match_term(raw_term, vocabulary, normalized_lookup, variant_index=None):
+    """Backwards-compatible wrapper around ground_term() that returns just
+    the matched vocabulary entry (or None). Despite the historical name,
+    this no longer does character-similarity matching; see ground_term()."""
+    entry, _method = ground_term(raw_term, vocabulary, normalized_lookup, variant_index)
+    return entry

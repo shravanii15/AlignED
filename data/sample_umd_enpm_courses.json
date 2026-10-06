@@ -1,0 +1,350 @@
+[
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM604",
+    "course_name": "Machine Learning Techniques Applied to Cybersecurity",
+    "description": "Focuses on applying machine learning techniques to cybersecurity, and includes labs to be done independently, as well as an overview of the latest machine learning algorithms and their application to cyber. A brief overview of which techniques should be applied to particular cyber problems will be provided, and the course culminates in students researching the latest applications of Machine learning to cyber, allowing the students to each develop a niche of expertise in that specific subtopic. As such, the students should be increasingly employable in their area of cyber expertise by industries searching for solutions to their cyber problem space."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM605",
+    "course_name": "Python Applications for Robotics",
+    "description": "This hands-on course will look at the use of Python 3 with the Robot Operating System (ROS) in order to control a mobile robot in Gazebo simulated environments."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM611",
+    "course_name": "Software Engineering",
+    "description": "Software engineering concepts, methods, and practices important to both the theorist and the practitioner will be covered. The entire range of responsibilities expected of a software engineer are presented. The fundamental areas of requirements development, software design, programming languages, and testing are covered extensively. Sessions on supporting areas such as systems engineering, project management, and software estimation are also included."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM612",
+    "course_name": "System and Software Requirements",
+    "description": "Focus will be placed on the theoretical and practical aspects of requirements development. Students will recognize the place of requirements, how to work with users, requirements methods and techniques, the various requirements types, how to set requirements development schedules, requirements evolution, how to model and prototype requirements, how to evaluate and manage risk in requirements, techniques to test requirements, how to manage the requirements process, and how to write an effective requirements document."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM613",
+    "course_name": "Software Design and Architecture",
+    "description": "Covers the software design process, from understanding the need or problem, to creating suitable architecture and detailed design solutions, to preserving and evolving the design during implementation and maintenance. The main study topics include: requirements analysis models; user centered design; architecture design through decomposition and composition; architecture styles and architecture tactics for supporting various quality attributes such as security and usability; design for reuse and with reuse; detailed design object-oriented principles (such as SOLID) and design patterns; approaches for evaluating, comparing, and selecting design solutions; standard notations for documenting architecture views, detailed design, and analysis models; and industry standards for creating design deliverables. Students will acquire not only technical knowledge, but also soft skills such as communication, collaborations, critical thinking, leadership, negotiation, and time management."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM614",
+    "course_name": "Software Testing & Maintenance",
+    "description": "The purpose of this course is to provide an overview of software testing and maintenance and how these activities fit into the Software Engineering Life-Cycle. Many examples used in the lectures are derived from analysis of various NASA systems. Topics include various forms of testing such as Functional Testing, Combinatorial Testing, Structural Testing, Model-Based Testing, Security-oriented testing as well as Software Architecture's role in testability & maintainability, Regression Testing, Automated Testing, Testing Coverage including MC/DC coverage and testing standards."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM615",
+    "course_name": "Embedded Systems",
+    "description": "Introduction to embedded systems design and evaluation: requirements, specification, architecture, hardware and software components, integration and performance evaluation. Topics include instruction sets, CPU, embedded computing platform, program design and analysis, operating systems, hardware accelators, multiprocessors, networks, and system analysis. Real-life embedded systems design examples will be used throughput the course to illustrate these concepts."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM621",
+    "course_name": "Heat Pumps and Beyond: Decarbonization Strategies and Software Tools for Modern Thermal Systems",
+    "description": "This course provides a comprehensive understanding of thermal engineering with a focus on heat pump systems, building thermal networks, and their role in national electrification and decarbonization. It covers fundamentals like thermodynamics, heat transfer, and cycle analysis, including alternative refrigerants and property chart methods, and emphasizes hands-on learning using advanced software tools for load estimation, system design, and optimization. Students will explore HVAC&R applications across residential, commercial, industrial buildings, and data centers, focusing on integrating buildings with electric grids and car charging infrastructure to support decarbonization. The course also examines transient behaviors of heat pumps and their connection to grid-edge technologies, energy storage, and renewable energy deployment for sustainable building operations. Special emphasis is placed on the role of data centers in energy systems, highlighting their potential for demand-side management, energy storage, waste heat utilization, and contribution to resilient, low-carbon smart grids."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM622",
+    "course_name": "Energy Conversion I - Stationary Power",
+    "description": "Thermal engineering of modern power generation systems. Cycle analysis of various modern power generation technologies including gas turbine, combined cycle, waste burning and cogeneration. Energy storage and energy transport."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM623",
+    "course_name": "Engineering Combustion Emissions for Air Pollution Control",
+    "description": "Analysis of the sources and mechanisms of combustion generated air pollution. Air pollution due to internal combustion engines, power generation and industrial emissions. Techniques to minimize and control emission."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM624",
+    "course_name": "Renewable Energy Applications",
+    "description": "Thermodynamics and heat transfer of renewable energy sources for heating, power generation and transportation. Wind energy, solar thermal, photovoltaic, biomass, waste burning, and hydropower. Broad overview of the growing use of renewable energy sources in the world economy with detailed analysis of specific applications."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM625",
+    "course_name": "Heating, Ventilation and Air Conditioning of Buildings",
+    "description": "Fundamentals of heating, ventilation and air conditioning analysis and design. Thermodynamics, heat transfer and fluid mechanics principles applied to field problems. Quantitative analyses stressed. Topics include psychometrics, thermal loads, incompressible flow in ducts and pipes, heat exchangers, cooling towers, and refrigeration."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM626",
+    "course_name": "Environmental Energy Security",
+    "description": "The overall objective of this course is to develop a toolkit to evaluate the energy security - and in particular, the environmental energy security - of available energy resources and conversion technologies, including those in current use, and those that might be used in the foreseeable future. Energy security is evaluated using a simple three-dimensional model based in the academic literature. This is an engineering class, and while we must occasionally delve into related economics and policy issues, we will focus on the core technical competencies in energy conversion needed to navigate the current world of energy."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM627",
+    "course_name": "Environmental Risk Analysis",
+    "description": "Covers fundamental aspects of environmental risk analysis and methods used to perform environmental risk analyses. Topics covered in the class include: establishing the scope of an analysis, developing alternate conceptual models, representing source term release, modeling contaminant transport in environmental media (e.g., surface water, groundwater, air), modeling food chains, conducting an exposure assessment, understanding basic human toxicology, characterizing the dose-response relationship, and effectively communicating about and managing risk. This course covers fundamental aspects of designing a risk analysis as well as common pitfalls to avoid and major sources of uncertainty in environmental risk analyses."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM631",
+    "course_name": "Advanced Networking",
+    "description": "Exploration of how such a variety of devices can use a big range of technologies to connect seamlessly to each other. In the second half of the course we translate the basic knowledge of the protocols to more hands-on exercises in containerization (Docker) and at the end we give an introduction to Kubernetes, that is an open-source system for automating deployment and management of containerized applications."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM634",
+    "course_name": "Penetration Testing",
+    "description": "This course offers a hands-on deep dive into advanced penetration testing and red teaming. Building on foundational security tools covered in the prerequisite course, students will learn to research and write custom exploits, move through networks post-exploitation, and practice operational security. The course also covers vulnerability disclosure and how to effectively communicate findings to both technical and executive audiences."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM635",
+    "course_name": "Thermal Systems Design Analysis",
+    "description": "Evaluates the trade-offs associated with thermal systems. Use of software for system simulation, evaluation and optimization. Applications include power and refrigeration systems, pipe flow systems, distillation columns, dehumidifying coils, and co-generation systems."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM636",
+    "course_name": "Applied Additive Manufacturing",
+    "description": "In-depth understanding of Additive Manufacturing (AM) technologies and their applicability and limitations is important for future engineers and researchers in developing new engineering systems and identifying emerging opportunities in developing new products and processes. Real-life projects and the advancements that are realized through utilization of AM techniques will be presented in this course."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM637",
+    "course_name": "Managing Software Engineering Projects",
+    "description": "Addresses the breadth of managing software engineering projects. It will help in transforming inspiring software engineers to software project leaders. The course will impart advanced principles, methods and tools for management of software projects in a realistic software engineering context. A hybrid project management will be taught with more focused on Agile Project Management paradigms. The course will also impart a cutting-edge scalable, modular, and integrated patterns of the Scaled Agile Framework (SAFe) 4.0 for the software engineering program and portfolios management. In addition, the course will also instill DevOps best practices to build much more responsible organizations that can move quickly in ever-changing circumstances. Methods for managing and optimizing the software development process are discussed along with techniques for performing each phase of the systems development lifecycle."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM640",
+    "course_name": "Rehabilitation Robotics",
+    "description": "An introduction to a field of robotics dedicated to improving the lives of people with disabilities. The course is designed for students wishing to learn more about rehabilitation robotics, one of the fasting growing fields of robotics. Rehabilitation robotics is the application of robots to overcome disabilities resulting from neurologic injuries and physical trauma, and improve quality of life. This course considers not only engineering design and development, but also the human factors that make some innovative technologies successful and others commercial failures. Engineering innovation by itself, without considering other factors such as evidence-based R&D and product acceptance, may mean that some technologies don't become or remain available or are inefficacious to aid their intended beneficiaries. This course differs from medical robotics in its focus on improving the quality of life through robot-mediated rehabilitation treatments, rather than improving or enhancing applications such as surgical interventions."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM645",
+    "course_name": "Human-Robot Interaction",
+    "description": "To define the intersection of human-robot interactions to include human-computer interfaces, as well as robotic emotions and facial expressions emulations. The result will provide a basis for students to assess the best approaches for interacting effectively with robots. Areas to be covered include biologically-inspired robotics, cognitive robotics, cultural and social aspects of robotics, data mining, examples of human systems interfaces, and machine learning with respect to A.I. principles and limitations."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM650",
+    "course_name": "Solar Thermal Energy Systems",
+    "description": "Covers a review of related fundamentals, including limitations imposed by thermodynamics, solar spectral characteristics, measurement, and analytical models to predict solar irradiance with respect to time, location and orientation. The course will then examine the characteristics of various components in solar thermal systems with particular emphasis on flat plate and concentrating collectors, fixed and tracking collector systems, heat exchangers and thermal storage to understand how they work and how their performance is influenced by their design. The course will then lead to an examination of systems and system performance, including system design, predicted energy savings and related economics. The course will introduce low temperature applications such as solar hot water, space heating and water distillation, as well as concentrating solar energy for solar thermo-chemical processes to produce hydrogen and solar power generation systems. A project of importance to the development of Solar Thermal Power Systems will be assigned."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM651",
+    "course_name": "Heat Transfer for Modern Application",
+    "description": "Presents the three modes of heat transfer: conduction, convection, and radiation. One- and two-dimensional steady-state and transient conductions are studied. The lumped capacitance analysis is used for transient conduction when suitable. Convection heat transfer is studied in both external and internal flow cases and under laminar and turbulent flow regimes. Free convection is also studied where the heat transfer is due to flow-induced by fluid buoyancy. Radiation heat transfer is studied by considering both the general characteristics of radiation along with the properties of radiating surfaces and radiation heat transfer between surfaces. For each subject, real engineering examples will be tackled by using Engineering Equations Solver and Coil Designer software. As an application of multi-mode heat transfer principles, the design and optimization of air-to-refrigerant heat exchangers are studied in the course."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM652",
+    "course_name": "Applied Finite Element Methods",
+    "description": "Introduces the Finite Element Method (FEM), widely used to perform analyses in areas such as structural/solid mechanics, fluid mechanics, heat transfer. This course presents an introduction to the mathematical and physical concepts underpinning the FEM framework. Additionally, ANSYS Workbench software will be used to demonstrate engineering-scale examples for stress and thermal analysis problems. There are no formal requirements for this course although students will benefit from a familiarity with basic concepts in linear algebra, calculus, differential equations, solid mechanics, and heat transfer."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM654",
+    "course_name": "Energy Systems Management",
+    "description": "Covers a wide range of energy management and energy efficiency topics including energy auditing, energy efficient lighting systems and motors, demand limiting and control, control strategies for optimization, direct digital control, integrated building automation systems, communication networks, distributed generation, cogeneration, combined heat and power, process energy management and the associated economic analyses. Included will be the latest internet based technologies for accessing real-time energy pricing and managing energy demand remotely for multiple buildings or campuses."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM655",
+    "course_name": "AI-Based Software Systems",
+    "description": "The goal of this new course is to address the important problem of specifying, developing, and testing software systems that are based on artificial intelligence (AI) components."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM656",
+    "course_name": "Energy Conversion II -- Mobile Power",
+    "description": "Designed to give students an understanding of the principles and design concepts associated with important fuel - engine aspects of modern and advanced mobility power systems. Emphasis is given to state of the art and emerging IC engine technologies such as those applied to modern and advanced automotive (i.e. self-propelled) vehicles. Electric Vehicles will also be explored."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM657",
+    "course_name": "Applied Cryptography",
+    "description": "The goal of this course is to provide students with a foundational understanding of cryptography as used in the real world. Students will learn about private-key encryption, message authentication codes, key-exchange protocols, public-key encryption, and digital signatures, in addition to learning about underlying primitives such as pseudorandom number generators, block ciphers, and hash functions. The course will also try to convey the \"cryptographic mindset,\" including formal threat modeling and proofs of security. We will emphasize real-world usage of cryptography by covering standards and best practices, discussing attacks on deployed systems, and giving programming assignments meant to reinforce the concepts covered in class."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM660",
+    "course_name": "Wind Energy Engineering",
+    "description": "An examination of four central topics in wind energy engineering: the nature of wind energy as a resource for generating electricity; the aerodynamics of wind turbines by which the wind energy is converted into mechanical energy; the mechanics and dynamics of the wind energy system (tower, rotor, hub, drive train, and generator); and the electrical aspects of wind turbines. Additional topics to be included in the course include:Wind turbine design; wind turbine control; wind turbine siting, system design, and integration; Wind energy system economics; and wind energy systems environmental impacts and aspects. The course is intended to pass along substantial subject matter knowledge and skills, it can only be treated as an introduction to this extensive, multidisciplinary topic. However, students are expected to emerge with a substantial knowledge of wind energy systems and the methods used to analyze such systems."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM661",
+    "course_name": "Planning for Autonomous Robots",
+    "description": "Planning is a fundamental capability needed to realize autonomous robots. Planning in the context of autonomous robots is carried out at multiple different levels. At the top level, task planning is performed to identify and sequence the tasks needed to meet mission requirements. At the next level, planning is performed to determine a sequence of motion goals that satisfy individual task goals and constraints. Finally, at the lowest level, trajectory planning is performed to determine actuator actions to realize the motion goals. Different algorithms are used to achieve planning at different levels. This graduate course will introduce planning techniques for realizing autonomous robots. In addition to covering traditional motion planning techniques, this course will emphasize the role of physics in the planning process. This course will also discuss how the planning component is integrated with control component. Mobile robots will be used as examples to illustrate the concepts during this course. However, techniques introduced in the course will be equally applicable to robot manipulators."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM662",
+    "course_name": "Introduction to Robot Modeling",
+    "description": "This course introduces basic principles for modeling a robot. Most of the course is focused on modeling manipulators based on serial mechanisms. The course begins with a description of the homogenous transformation and rigid motions. It then introduces concepts related to kinematics, inverse kinematics, and Jacobians. This course then introduces Eulerian and Lagrangian Dynamics. Finally, the course concludes by introducing basic principles for modeling manipulators based on parallel mechanisms. The concepts introduced in this course are subsequently utilized in control and planning courses."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM663",
+    "course_name": "Building a Manufacturing Robotic Software System",
+    "description": "This hands-on course will look at the components of manufacturing robots, including architectures, planning/control, simulation, and measurement science. Students will explore the work that is being researched around the world in each of these areas, and will perform small hands-on exercises in most of the classes to gain a deeper understanding of how a selected set of these technologies can be applied to real-world challenges."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM664",
+    "course_name": "Embedded System Hacking and Security",
+    "description": "The purpose of this course is to reveal the tools, techniques and procedures (TTPs) employed by adversaries to exploit and subvert the security of embedded systems. This course will cover the core concepts and techniques to analyze and characterize the behavior of embedded systems and platforms. Concepts will be introduced and discussed within the context of an adversary intent on altering or subverting the behavior of such systems. The course does not expect students to have any prior embedded systems experience."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM665",
+    "course_name": "Cloud Security",
+    "description": "Covers the fundamentals of securing cloud-based workloads from the ground up with many hands-on examples. Through these hands-on exercises the course will demonstrate where the similarities and differences are when securing the cloud compared to securing traditional IT."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM667",
+    "course_name": "Control of Robotic Systems",
+    "description": "This is a basic course on the design of controllers for robotic systems. The course starts with mainstay principles of linear control, including a review of elementary concepts of systems, and discusses applications to independent joint control. The second part of the course introduces a physics-based approach to control design that uses energy and optimization principles to tackle the design of controllers that exploit the underlying dynamics of robotic systems. The course ends with an introduction to force control and basic principles of geometric control if time allows."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM670",
+    "course_name": "Energy Audits for Decarbonization and Sustainability Enhancement",
+    "description": "Provides students with fundamentals and applications of energy audit, modeling, and management in building energy systems. It will cover key definitions, units, the supply/demand fundamentals for the various energy sources, the challenges of decarbonization (across several sectors), drivers of energy demand in the buildings sector (residential, commercial, manufacturing), energy audit procedures for various types of systems, economics/life-cycle costing and more. Students will gain experience conducting energy audits through real-world project(s), different modeling tools (e.g. System Advisor Models), and data sources necessary to conduct core analyses across sectors will be covered."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM671",
+    "course_name": "Advanced Mechanics of Materials",
+    "description": "Formulate and quantitatively state the mechanical/physical responses of structural components and configurations subjected to loads, temperature, pre-strains etc. The two methods of anlysis employed are the mechanics of materials approach and the theory of elasticity approach. Analysis and design of components of structural/machine systems as experienced in aeronautical, civil, mechanical and nuclear engineering."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM672",
+    "course_name": "Fundamentals for Thermal Systems",
+    "description": "Included in this course is an introduction to thermodynamics, fluid mechanics and heat transfer. Emphasis is on gaining an understanding of the physical concepts through the solving of numerical problems associated with simple thermal fluid processes and cycles. Both ideal gases and multiphase fluids will be considered as the working fluids."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM673",
+    "course_name": "Perception for Autonomous Robots",
+    "description": "This course offers a foundation in computer vision. Students will learn techniques and algorithms that can be used to solve an abundance of perception problems. This course is dedicated to anyone interested in giving their autonomous system (e.g., robot, autonomous driving car, or simply a smart camera) means to understand their surrounding world. Throughout the projects of this course students will gain hands-on experience in solving real-life problems such as lane detection for autonomous driving, computing velocities of moving objects, and building a 3D model of an object using 2D images from cameras. Moreover, students will gain experience with state-of-the-art tools such as programming using OpenCV, Python and introduction to Machine Learning using PyTorch."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM680",
+    "course_name": "Introduction to Secure Coding for Software Engineering",
+    "description": "Covers core concepts and techniques to analyze and characterize such security bugs, and potential ways to mitigate them. Concepts will be introduced and discussed within the context of an adversary intent on altering or subverting the behavior of the software with security impacts."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM685",
+    "course_name": "Security Tools for Information Security",
+    "description": "Students will perform host- and network-based security tasks relating to security, investigation, compliance verification and auditing using a wide selection of commonly used tools on both Windows and Linux platforms, with emphasis on open source tools."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM686",
+    "course_name": "Information Assurance",
+    "description": "The first half of lectures provides an overview of cybersecurity. One third of these lectures focuses on the fundamentals of cybersecurity like authentication, access control, and security models. The second third focuses on the practice of cybersecurity using Unix and Windows NT as case studies. The last third is dedicated to security in distributed systems including network security, and World Wide Web security. The second half of the lectures focuses on the information assurance process. First, information assets are enumerated and classified. Second, the main vulnerabilities and threats are identified. Third, a risk assessment is conducted by considering the probability and impact of the undesired events. Finally, a risk management plan is developed that includes countermeasures involving mitigating, eliminating, accepting, or transferring the risks, and considers prevention, detection, and response."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM687",
+    "course_name": "Digital Forensics and Incident Response",
+    "description": "Students will implement a robust incident response methodology, including proper forensic handling of evidence, and cover legal aspects of national and international law regarding forensics. The bulk of the course covers evidence acquisition, preservation, analysis and reporting on multiple platforms."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM690",
+    "course_name": "Robot Learning",
+    "description": "Machine learning may be used to greatly expand the capabilities of robotic systems, and has been applied to a variety of robotic system functions including planning, control, and perception. Adaptation and learning are particularly important for development of autonomous robotic systems that must operate in dynamic or uncertain environments. Ultimately we would like for the robots to expand their knowledge and improve their own performance through learning while operating in the environment (on-line and/or lifelong learning). This graduate course will explore the application of machine learning techniques, paradigms, and control design to robotic systems, focusing primarily on key useful representations and model building techniques for application in non-stationary robotic systems."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM691",
+    "course_name": "Hacking of C programs and Unix Binaries",
+    "description": "Teaches the fundamentals of secure programming in C. An in depth discussion on various security vulnerabilities (e.g., buffer overflows) in C applications will be taught with hands-on demo of concepts during the class. Students will learn how a C program runs \"under-the-hood\". The course will teach nitty-gritty of C programs by analyzing at the assembly level. The course discusses best practices (e.g., coding standards) and design principles for secure programming so that security can be built-in during design time. In addition to assignments, students are required to present papers related to this course."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM692",
+    "course_name": "Manufacturing and Automation",
+    "description": "Covers automation and product realization, digital factories, and disruptive manufacturing technologies. The role of additive manufacturing, sustainability, and performance simulation in selected manufacturing scenarios will be explored alongside automation strategies for rapid product development."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM693",
+    "course_name": "Network Security",
+    "description": "Introduction to various approaches to design security protocols used in data networks; familiarization with some current technologies. Security threats and countermeasures, communication security and basic encryption techniques, authentication protocols, data confidentiality and integrity, analysis of cryptographic protocols, and access control in large systems and networks."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM694",
+    "course_name": "Networks and Protocols",
+    "description": "Provides an in-depth review of the Internet with a focus on the end-to-end effects of technologies and protocols that operate in different layers. All protocols and technologies are covered in a holistic framework with an emphasis on their effect on the network and application performance. The course also includes a brief introduction of more modern concepts in the field of networking such as SDN and NFV to encourage deeper study of those topics."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM695",
+    "course_name": "Secure Operating Systems",
+    "description": "Operating systems are the basic building block on which programmers build applications and on which security-minded professionals rely, whether they are monitoring activity on a computer, testing applications for security, or determining how malicious code affected their network. This course covers advanced topics in operating systems including process management and communication, remote procedure calls, memory management (including shared memory and virtual memory), checkpointing and recovery, file system, I/O subsystem and device management, distributed file systems and security. The course consists of reading and discussing research papers and includes a course project."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM696",
+    "course_name": "Reverse Software Engineering",
+    "description": "An in-depth understanding of software reverse engineering concepts and hands-on training with reverse engineering tools, including disassemblers, decompilers, and code analyzers. Students will become familiar with both low-level software and the x86 instruction set through binary reversing sessions. This course also provides insights into many subjects such as system security, source code analysis, software design, and program understanding that will be beneficial in a variety of fields."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM697",
+    "course_name": "Secure Software Testing and Construction",
+    "description": "As software gets more complex, there is even more potential for vulnerabilities to remain in the production version. While traditional and emerging software testing methods are very good at detecting a large majority of \"bugs\" in the software, modifications to the methods are necessary to ensure vulnerabilities related to security are discovered and mitigated prior to release. In industry, there is also a cost-benefit analysis that determines the limits to pre-release testing, further enforcing the need to uniquely identify security vulnerabilities, potentially prioritizing their correction over other vulnerabilities. This course will cover methods of building security in from the beginning of development and testing the resulting software to ensure security vulnerabilities are detected. The course will use a mixture of textbook principles and research papers to cover the concepts. Students will also complete a course project."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM700",
+    "course_name": "Software Development for Robotics",
+    "description": "Teaches the tools and processes to develop professional quality software for deployed systems and products. Students will learn the best practices of taking new ideas or prototypes, and understanding what it takes to build the complex software that is so important to today's commercialized robotic systems."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM701",
+    "course_name": "Autonomous Robotics",
+    "description": "This is a hands-on course exploring the principles of robotic autonomy. Students will explore the theoretical, algorithmic, and implementation aspects of autonomous robotic modeling and controls, perception, localization and SLAM, planning, and decision making. These techniques will be applied through completion of a semester-long hands-on project employing the course material, ground-based mobile robots, and Python."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM702",
+    "course_name": "Introductory Robot Programming",
+    "description": "This hands-on course will introduce students to the C++ programming language and is specifically designed for students who have had little to no programming experience in their previous studies."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM703",
+    "course_name": "Fundamentals of AI and Deep Learning",
+    "description": "Fundamentals of machine learning techniques with a deep dive into cutting edge concepts that enabled neural networks to achieve state of the art performance in many visual, textual, and biomedical problems. Fundamental concepts like forward networks, convolution networks, recurrent neural networks, back propagation, loss functions, batch gradient descent, and stochastic optimization will be studied."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM808",
+    "course_name": "Advanced Topics in Engineering",
+    "description": "Advanced topics selected by the faculty for students in the professional master of engineering program. May be taken for repeated credit when identified by topic title."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM809",
+    "course_name": "Special Topics in Engineering",
+    "description": "Special topics selected by the faculty for students in the professional master of engineering and graduate certificate in engineering program. May be taken for repeated credit when identified by topic title."
+  },
+  {
+    "program": "University of Maryland - ENPM Graduate Catalog",
+    "course_code": "ENPM818",
+    "course_name": "Variable Topics in Engineering",
+    "description": "Variable topics selected by the faculty for students in the professional master of engineering and graduate certificate in engineering program. May be taken for repeated credit when identified by topic title."
+  }
+]

@@ -69,6 +69,7 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
             on_click=jump_to_course_finder, args=(row["canonical_name"],),
         )
 
+        test_name = "Fisher's exact test" if row["test_method"] == "fisher_exact" else "two-proportion z-test"
         x_courses = round(row["program_coverage_rate"] * course_count)
         x_postings = round(row["market_demand_rate"] * scope_total_postings)
         trend_desc = {
@@ -84,7 +85,7 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
                 | In job postings | **{x_postings} of {scope_total_postings}** postings ({dem_pct:.1f}%) |
                 | Gap | **{row['gap_value']*100:.1f} percentage points** |
                 | Strength of evidence | **{evidence_strength(row['q_value'])}** (the gap is unlikely to be due to chance) |
-                | Technical detail | p = {row['p_value']:.4f}, FDR-adjusted q = {row['q_value']:.4f} (two-proportion z-test, Benjamini-Hochberg correction) |
+                | Technical detail | p = {row['p_value']:.4f}, FDR-adjusted q = {row['q_value']:.4f} ({test_name}, Benjamini-Hochberg correction) |
                 """
             )
             st.caption(
@@ -157,7 +158,7 @@ def render_program_explorer():
 
     rec_query = """
         SELECT r.skill_id, r.gap_value, r.trend_label, r.priority_score, r.priority_tier, r.rationale,
-               g.program_coverage_rate, g.market_demand_rate, g.p_value, g.q_value, g.period
+               g.program_coverage_rate, g.market_demand_rate, g.p_value, g.q_value, g.period, g.test_method
         FROM recommendations r
         JOIN gap_scores g ON g.program_id = r.program_id AND g.skill_id = r.skill_id AND g.cluster_id IS r.cluster_id
         WHERE r.program_id = ? AND r.cluster_id IS {}

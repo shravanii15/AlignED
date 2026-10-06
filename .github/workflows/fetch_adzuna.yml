@@ -1,4 +1,9 @@
-name: Daily Adzuna Job Pull
+name: Adzuna Raw Pull (experimental)
+
+# EXPERIMENTAL raw ingestion. This writes data/sample_adzuna_pull.json only.
+# It does NOT feed the dashboard: gap scores, trends and recommendations are
+# computed from the committed database snapshot (Kaggle historical postings),
+# and nothing here updates them.
 
 # This section decides WHEN this runs automatically:
 # - every day at 6:00 AM UTC (the "cron" line below)

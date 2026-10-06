@@ -65,10 +65,10 @@ that claim specific to an actual target role, not just a generic
 import os
 import sqlite3
 
-from scipy.stats import false_discovery_control, norm
+from scipy.stats import false_discovery_control, fisher_exact, norm
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # .../AlignED
-DB_PATH = os.path.join(BASE_DIR, "database", "aligned.db")
+DB_PATH = os.environ.get("ALIGNED_DB_PATH") or os.path.join(BASE_DIR, "database", "aligned.db")
 
 SIGNIFICANCE_THRESHOLD = 0.05
 TOP_N_PER_PROGRAM = 15
@@ -129,6 +129,45 @@ def two_proportion_z_test(x1, n1, x2, n2):
     return z, p_value
 
 
+MIN_EXPECTED_CELL_COUNT = 5  # rule of thumb below which the normal approximation is unreliable
+
+
+def expected_cell_counts(x1, n1, x2, n2):
+    """Expected counts of the 2x2 table [[x1, n1-x1], [x2, n2-x2]] under
+    the null hypothesis that both groups share one success rate."""
+    total = n1 + n2
+    successes = x1 + x2
+    failures = total - successes
+    return [n1 * successes / total, n1 * failures / total, n2 * successes / total, n2 * failures / total]
+
+
+def compare_proportions(x1, n1, x2, n2):
+    """Compare two proportions and say which test was used.
+    Returns (statistic, p_value, method) with method one of
+    'z_test', 'fisher_exact', or 'none' (nothing testable).
+
+    The two-proportion z-test relies on a normal approximation that is
+    unreliable when any expected cell count is below 5, which really
+    happens here: some programs have only 5, 13 or 19 courses. In that case
+    Fisher's exact test is used instead. Example: 0 of 5 courses vs 50 of
+    100 postings gives p = 0.029 with the z-test (looks significant) but
+    p = 0.058 with Fisher's exact test (is not), so the choice changes
+    conclusions. For Fisher's test the returned statistic is the odds
+    ratio (inf when a cell is zero)."""
+    if n1 <= 0 or n2 <= 0:
+        return 0.0, 1.0, "none"
+    if not (0 <= x1 <= n1 and 0 <= x2 <= n2):
+        raise ValueError(f"counts out of range: {x1}/{n1}, {x2}/{n2}")
+    successes = x1 + x2
+    if successes == 0 or successes == n1 + n2:
+        return 0.0, 1.0, "none"  # same rate (0% or 100%) in both groups: nothing to test
+    if min(expected_cell_counts(x1, n1, x2, n2)) < MIN_EXPECTED_CELL_COUNT:
+        odds_ratio, p_value = fisher_exact([[x1, n1 - x1], [x2, n2 - x2]], alternative="two-sided")
+        return float(odds_ratio), float(p_value), "fisher_exact"
+    z, p_value = two_proportion_z_test(x1, n1, x2, n2)
+    return z, p_value, "z_test"
+
+
 def apply_fdr_correction(p_values):
     """Apply a Benjamini-Hochberg false discovery rate correction to a
     list of raw p-values from *multiple* tests run together (here: every
@@ -159,7 +198,7 @@ def compute_significant_gaps(program_id, n_courses, skill_ids, coverage_counts, 
         coverage_rate = x_courses / n_courses
         demand_rate = x_postings / total_n
         gap_value = demand_rate - coverage_rate
-        _, p_value = two_proportion_z_test(x_courses, n_courses, x_postings, total_n)
+        _, p_value, test_method = compare_proportions(x_courses, n_courses, x_postings, total_n)
         candidates.append(
             {
                 "skill_id": skill_id,
@@ -167,6 +206,7 @@ def compute_significant_gaps(program_id, n_courses, skill_ids, coverage_counts, 
                 "demand_rate": demand_rate,
                 "gap_value": gap_value,
                 "p_value": p_value,
+                "test_method": test_method,
             }
         )
 
@@ -191,6 +231,7 @@ def compute_significant_gaps(program_id, n_courses, skill_ids, coverage_counts, 
                     "gap_value": c["gap_value"],
                     "p_value": c["p_value"],
                     "q_value": c["q_value"],
+                    "test_method": c["test_method"],
                 }
             )
     gaps.sort(key=lambda g: g["gap_value"], reverse=True)
@@ -205,6 +246,14 @@ def relevant_skills_for_scope(demand_counts, skill_info):
         sid for sid, count in demand_counts.items()
         if count >= MIN_MARKET_MENTIONS and skill_info[sid][0].strip().lower() not in AMBIGUOUS_GENERIC_TERMS
     ]
+
+
+def ensure_test_method_column(conn):
+    """Additive migration: older databases have no gap_scores.test_method
+    column (it records 'z_test' or 'fisher_exact' per row)."""
+    columns = [row[1] for row in conn.execute("PRAGMA table_info(gap_scores)")]
+    if "test_method" not in columns:
+        conn.execute("ALTER TABLE gap_scores ADD COLUMN test_method TEXT")
 
 
 def main():
@@ -290,6 +339,7 @@ def main():
         cluster_total = cluster_total_postings.get(cluster_id, 0)
         scopes.append((cluster_id, role_label, cluster_total, cluster_demand))
 
+    ensure_test_method_column(conn)
     print("Clearing previous gap_scores rows...")
     cur.execute("DELETE FROM gap_scores")
 
@@ -313,7 +363,7 @@ def main():
             for g in gaps:
                 all_gap_rows.append(
                     (program_id, g["skill_id"], cluster_id, period_label, g["coverage_rate"],
-                     g["demand_rate"], g["gap_value"], g["p_value"], g["q_value"])
+                     g["demand_rate"], g["gap_value"], g["p_value"], g["q_value"], g["test_method"])
                 )
             program_summaries.append((university, program_name, n_courses, gaps))
 
@@ -321,8 +371,8 @@ def main():
 
     cur.executemany(
         """INSERT INTO gap_scores
-           (program_id, skill_id, cluster_id, period, program_coverage_rate, market_demand_rate, gap_value, p_value, q_value)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+           (program_id, skill_id, cluster_id, period, program_coverage_rate, market_demand_rate, gap_value, p_value, q_value, test_method)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
         all_gap_rows,
     )
     conn.commit()
