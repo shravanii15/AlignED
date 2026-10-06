@@ -15,6 +15,7 @@ import streamlit as st
 from services.database import run_query
 from sections.program_explorer import OVERALL_MARKET_LABEL
 from utils.formatting import evidence_strength, program_label
+from utils.visuals import bridge_svg
 from utils.nav import (
     GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_PERSONALIZE,
     PAGE_BUILD_PROFILE, PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_ROLE_GROUPS, PAGE_TRENDS,
@@ -51,29 +52,23 @@ def render_overview():
             if total > best_total:
                 best_pid, best_total = pid, total
         ex = example[example["program_id"] == best_pid].head(5)
-        MENTIONED_AT = 0.05  # a skill counts as "mentioned" when 5%+ of courses name it
-        marks = []
-        n_ok = 0
+        MENTIONED_AT = 0.05  # a skill counts as "taught" when 5%+ of courses name it
+        items = []
         for _, r in ex.iterrows():
             kind = "ok" if r["cov"] >= MENTIONED_AT else ("warn" if r["cov"] > 0 else "no")
-            n_ok += kind == "ok"
-            marks.append(f'<span class="ad-skill ad-{kind}">{r["skill_name"]}</span>')
+            items.append((r["skill_name"], kind))
+        n_ok = sum(1 for _, k in items if k == "ok")
         first = ex.iloc[0]
-        skill_line = ", ".join(marks[:-1]) + (" and " + marks[-1] if len(marks) > 1 else "")
         card = f"""
-        <div class="hero-card ad-card">
-            <p class="ad-kicker">Example job posting</p>
-            <p class="ad-title">Software Engineer</p>
-            <p class="ad-body">We are hiring an engineer to build and ship reliable software.
-            Day to day you will work with {skill_line}. You collaborate with
-            data and product teams and own features from idea to launch.</p>
-            <div class="ad-legend">
-                <span><i class="ad-key ad-key-ok"></i>Taught in courses</span>
+        <div class="bridge-card">
+            {bridge_svg(items)}
+            <div class="bridge-legend">
+                <span><i class="ad-key ad-key-ok"></i>Courses teach it</span>
                 <span><i class="ad-key ad-key-warn"></i>Barely mentioned</span>
-                <span><i class="ad-key ad-key-no"></i>Missing</span>
+                <span><i class="ad-key ad-key-no"></i>Missing plank</span>
             </div>
-            <p class="ad-score"><b>{n_ok} of {len(ex)}</b> skills in this ad appear in the courses of<br>
-            <span>{first["university"]}, {first["program_name"]}</span></p>
+            <p class="bridge-caption">Each plank is a skill employers want most. <b>{n_ok} of {len(items)}</b> are solid at
+            {first["university"]} ({first["program_name"]}).</p>
         </div>"""
     st.markdown(
         f"""

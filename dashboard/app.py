@@ -424,6 +424,15 @@ st.markdown(
     .ad-score { font-size: 0.9rem !important; color: #101828 !important; margin: 0.8rem 0 0 0 !important; line-height: 1.5 !important; }
     .ad-score span { font-size: 0.78rem; color: #667085; }
 
+
+    /* ---- Home hero: skill bridge ---- */
+    .bridge-card { flex: 1 1 460px; min-width: 0; }
+    .bridge-svg { width: 100%; height: auto; display: block; }
+    .bridge-legend { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; font-size: 0.78rem; color: #AEBBE6; margin-top: 0.4rem; }
+    .bridge-card .ad-key { margin-right: 0.35rem; }
+    .bridge-caption { font-size: 0.85rem !important; color: #C7D2FE !important; text-align: center; margin: 0.7rem auto 0 auto !important; max-width: 520px; line-height: 1.5 !important; }
+    .bridge-caption b { color: #FFFFFF; }
+
     /* ---- Page banner (every inner page) ---- */
     .page-banner {
         display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
