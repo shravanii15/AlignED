@@ -15,6 +15,7 @@ from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.layout import page_header
 from utils.nav import MATCH_RUN_KEY, jump_to_course_finder
 from utils.text import extract_user_skills
+from utils.resume import resume_uploader
 from utils.visuals import ring_svg
 
 JOB_TEXT_KEY = "match_job_text"
@@ -65,12 +66,13 @@ def render_match_job():
     col_job, col_me = st.columns(2, gap="large")
     with col_job:
         job_text = st.text_area(
-            "The job posting", key=JOB_TEXT_KEY, height=230,
+            "The job posting", key=JOB_TEXT_KEY, height=290,
             placeholder="Paste the full job description here",
         )
     with col_me:
+        resume_uploader("Upload your resume (optional)", MY_SKILLS_KEY, "match_resume_upload")
         my_text = st.text_area(
-            "Your skills", key=MY_SKILLS_KEY, height=230,
+            "Your skills", key=MY_SKILLS_KEY, height=170,
             placeholder="Paste your resume text, or just list your skills and the courses you have taken",
         )
 

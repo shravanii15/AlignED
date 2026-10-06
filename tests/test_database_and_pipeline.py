@@ -229,7 +229,9 @@ def test_ci_installs_every_third_party_package_the_tests_import():
     assert "pip install -r requirements-test.txt" in workflow
     requirements = open(os.path.join(BASE_DIR, "requirements-test.txt"), encoding="utf-8").read().lower()
     declared = {re.split(r"[<>=!~\[ ]", line.strip())[0] for line in requirements.splitlines() if line.strip() and not line.startswith("#")}
-    missing = {pkg for pkg in third_party_imports_in_tests() if pkg.lower() not in declared}
+    # A few packages are imported under a different name than they install as.
+    import_to_package = {"docx": "python-docx", "fpdf": "fpdf2"}
+    missing = {pkg for pkg in third_party_imports_in_tests() if import_to_package.get(pkg, pkg).lower() not in declared}
     assert not missing, f"tests import packages that CI would not install: {missing}"
 
 

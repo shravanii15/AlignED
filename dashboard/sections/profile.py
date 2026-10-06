@@ -12,6 +12,7 @@ from utils.formatting import format_posting_details
 from utils.layout import page_header
 from utils.nav import PROFILE_RUN_KEY, PROFILE_TEXT_KEY
 from utils.text import extract_user_skills
+from utils.resume import resume_uploader
 from utils.visuals import ring_svg
 
 
@@ -23,6 +24,7 @@ def render_profile_builder():
         art="fit", pills=("Paste your skills", "Get job families"),
     )
 
+    resume_uploader("Upload your resume (optional)", PROFILE_TEXT_KEY, "profile_resume_upload")
     user_text = st.text_area(
         "Your skills, resume text, or courses taken",
         key=PROFILE_TEXT_KEY,
