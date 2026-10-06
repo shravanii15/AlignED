@@ -195,15 +195,16 @@ def render_program_explorer():
         f"""
         <div class="answer-banner">
             <p class="answer-banner-label">The short answer</p>
-            <p class="answer-banner-text">{true_gap_count} skills that employers ask for ({scope_display_name}) are missing
-            from this program's course descriptions. The biggest:</p>
+            <p class="answer-banner-text">{true_gap_count} {"skill" if true_gap_count == 1 else "skills"} that employers ask for ({scope_display_name}) {"is" if true_gap_count == 1 else "are"} missing
+            from this program's course descriptions. {"The biggest:" if true_gap_count > 1 else "It is:"}</p>
             <div class="skill-chip-row">{chips}</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-    st.markdown(f'<p class="section-eyebrow">Top {len(top)} Skills to Look For</p>', unsafe_allow_html=True)
+    heading = f"Top {len(top)} Skills to Look For" if len(top) > 1 else "The Skill to Look For"
+    st.markdown(f'<p class="section-eyebrow">{heading}</p>', unsafe_allow_html=True)
     for rank, (_, row) in enumerate(top.iterrows(), start=1):
         _skill_card(row, rank, course_count, scope_total_postings, key_prefix="top")
 

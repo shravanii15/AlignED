@@ -38,13 +38,15 @@ def render_overview():
     # ---- Two paths ----
     programs_df = run_query(
         "SELECT p.program_id, p.university, p.program_name, "
-        "(SELECT COUNT(*) FROM courses c WHERE c.program_id = p.program_id) AS n_courses "
+        "(SELECT COUNT(*) FROM courses c WHERE c.program_id = p.program_id) AS n_courses, "
+        "(SELECT COUNT(*) FROM recommendations r WHERE r.program_id = p.program_id AND r.cluster_id IS NULL) AS n_gaps "
         "FROM programs p ORDER BY p.university"
     )
     programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]
-    # Default to the first program with a full course set, so the first
+    # Default to the full-size program with the most gaps, so the first
     # click shows real results instead of an "only 5 courses" empty state.
-    default_idx = int((programs_df["n_courses"] >= EXAMPLE_MIN_COURSES).idxmax())
+    eligible = programs_df[programs_df["n_courses"] >= EXAMPLE_MIN_COURSES]
+    default_idx = int(eligible["n_gaps"].idxmax())
     clusters_df = run_query(
         """
         SELECT cluster_id, role_label FROM role_clusters
