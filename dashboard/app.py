@@ -152,6 +152,41 @@ st.markdown(
         margin-bottom: 0;
     }
 
+
+    /* ---- Home hero panel ---- */
+    .hero-panel {
+        display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between;
+        background: linear-gradient(135deg, #0B1220 0%, #16213A 100%);
+        border-radius: 20px; padding: 2.2rem 2.4rem;
+    }
+    .hero-left { flex: 1 1 340px; }
+    .hero-panel .hero-wordmark { color: #FFFFFF !important; font-size: 3rem !important; }
+    .hero-panel .hero-tagline { color: #C7D2FE !important; font-size: 1.15rem !important; max-width: 480px; }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+    .hero-pills span {
+        background: #315CF5; color: #FFFFFF; font-size: 0.85rem; font-weight: 600;
+        padding: 0.35rem 0.9rem; border-radius: 999px;
+    }
+    .hero-card {
+        flex: 0 1 380px; background: #FFFFFF; border-radius: 14px; padding: 1.3rem 1.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .hero-card p { margin: 0 !important; }
+    .hero-card-eyebrow { font-size: 0.7rem !important; font-weight: 700 !important; letter-spacing: 0.1em; text-transform: uppercase; color: #667085 !important; }
+    .hero-card-skill { font-size: 1.9rem !important; font-weight: 800 !important; color: #101828 !important; margin: 0.2rem 0 0.8rem !important; }
+    .hero-card-row { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.55rem; font-size: 0.85rem; color: #667085; }
+    .hero-card-row span { width: 5.2rem; }
+    .hero-card-row b { width: 2.6rem; text-align: right; color: #101828; }
+    .hero-card-track { flex: 1; height: 12px; background: #F1F3F6; border-radius: 999px; overflow: hidden; }
+    .hero-card-fill { height: 100%; border-radius: 999px; }
+    .hero-card-fill-c { background: #1F9D68; }
+    .hero-card-fill-m { background: #4C7DFF; }
+    .hero-card-gap {
+        display: inline-block; margin-top: 0.5rem !important; background: #FBEAEA; color: #D94A4A !important;
+        font-weight: 700 !important; font-size: 0.95rem !important; padding: 0.25rem 0.8rem; border-radius: 999px;
+    }
+    .hero-card-src { font-size: 0.75rem !important; color: #98A2B3 !important; margin-top: 0.6rem !important; }
+
     /* ---- Small-caps section eyebrow, used throughout ---- */
     .section-eyebrow {
         font-size: 0.74rem !important;

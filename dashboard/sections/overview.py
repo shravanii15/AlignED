@@ -27,10 +27,51 @@ EXAMPLE_MIN_COURSES = 30
 
 
 def render_overview():
-    st.markdown('<p class="hero-wordmark">AlignED</p>', unsafe_allow_html=True)
+    programs_total = int(run_query("SELECT COUNT(*) AS n FROM programs").iloc[0]["n"])
+    courses_total = int(run_query("SELECT COUNT(*) AS n FROM courses").iloc[0]["n"])
+    signal_row = run_query(
+        f"""
+        SELECT p.university, p.program_name, s.canonical_name AS skill_name,
+               g.program_coverage_rate, g.market_demand_rate, g.gap_value, g.q_value
+        FROM recommendations r
+        JOIN gap_scores g ON g.program_id = r.program_id AND g.skill_id = r.skill_id AND g.cluster_id IS r.cluster_id
+        JOIN programs p ON p.program_id = r.program_id
+        JOIN skills s ON s.skill_id = r.skill_id
+        WHERE r.cluster_id IS NULL
+          AND g.program_coverage_rate > 0
+          AND (SELECT COUNT(*) FROM courses c WHERE c.program_id = r.program_id) >= {EXAMPLE_MIN_COURSES}
+        ORDER BY g.gap_value DESC
+        LIMIT 1
+        """
+    )
+    if not signal_row.empty:
+        h = signal_row.iloc[0]
+        h_cov, h_dem = h["program_coverage_rate"] * 100, h["market_demand_rate"] * 100
+        h_max = max(h_cov, h_dem, 1)
+        card = f"""
+        <div class="hero-card">
+            <p class="hero-card-eyebrow">What an answer looks like</p>
+            <p class="hero-card-skill">{h["skill_name"]}</p>
+            <div class="hero-card-row"><span>Courses</span><div class="hero-card-track"><div class="hero-card-fill hero-card-fill-c" style="width:{max(h_cov/h_max*100, 2):.0f}%"></div></div><b>{h_cov:.0f}%</b></div>
+            <div class="hero-card-row"><span>Job postings</span><div class="hero-card-track"><div class="hero-card-fill hero-card-fill-m" style="width:{h_dem/h_max*100:.0f}%"></div></div><b>{h_dem:.0f}%</b></div>
+            <p class="hero-card-gap">{h["gap_value"]*100:.0f}-point gap</p>
+            <p class="hero-card-src">{h["university"]}, {h["program_name"]}</p>
+        </div>"""
+    else:
+        card = ""
     st.markdown(
-        '<p class="hero-tagline">Does a graduate program teach what employers ask for? '
-        'Compare 13 programs with 1,660 job postings, skill by skill.</p>',
+        f"""
+        <div class="hero-panel">
+            <div class="hero-left">
+                <p class="hero-wordmark">AlignED</p>
+                <p class="hero-tagline">Does a graduate program teach what employers ask for? Find out, skill by skill, and get a plan for what to learn next.</p>
+                <div class="hero-pills">
+                    <span>{programs_total} programs</span><span>{courses_total:,} courses</span><span>1,660 job postings</span>
+                </div>
+            </div>
+            {card}
+        </div>
+        """,
         unsafe_allow_html=True,
     )
     st.markdown("<br>", unsafe_allow_html=True)
@@ -83,53 +124,6 @@ def render_overview():
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ---- A real example, pulled live ----
-    signal_row = run_query(
-        f"""
-        SELECT p.university, p.program_name, s.canonical_name AS skill_name,
-               g.program_coverage_rate, g.market_demand_rate, g.gap_value, g.q_value
-        FROM recommendations r
-        JOIN gap_scores g ON g.program_id = r.program_id AND g.skill_id = r.skill_id AND g.cluster_id IS r.cluster_id
-        JOIN programs p ON p.program_id = r.program_id
-        JOIN skills s ON s.skill_id = r.skill_id
-        WHERE r.cluster_id IS NULL
-          AND (SELECT COUNT(*) FROM courses c WHERE c.program_id = r.program_id) >= {EXAMPLE_MIN_COURSES}
-        ORDER BY g.gap_value DESC
-        LIMIT 1
-        """
-    )
-    if not signal_row.empty:
-        sig = signal_row.iloc[0]
-        cov_pct = sig["program_coverage_rate"] * 100
-        dem_pct = sig["market_demand_rate"] * 100
-        max_pct = max(cov_pct, dem_pct, 1)
-        st.markdown('<p class="section-eyebrow">What an Answer Looks Like</p>', unsafe_allow_html=True)
-        with st.container(border=True):
-            st.markdown(f'<p class="signal-eyebrow">{sig["university"]} · {sig["program_name"]}</p>', unsafe_allow_html=True)
-            st.markdown(f'<p class="signal-skill-name">{sig["skill_name"]}</p>', unsafe_allow_html=True)
-            st.markdown(
-                f"""
-                <div class="signal-row">
-                    <div class="signal-label">Courses</div>
-                    <div class="signal-track"><div class="signal-fill signal-fill-coverage" style="width:{cov_pct/max_pct*100:.1f}%"></div></div>
-                    <div class="signal-value">{cov_pct:.1f}%</div>
-                </div>
-                <div class="signal-row">
-                    <div class="signal-label">Job postings</div>
-                    <div class="signal-track"><div class="signal-fill signal-fill-market" style="width:{dem_pct/max_pct*100:.1f}%"></div></div>
-                    <div class="signal-value">{dem_pct:.1f}%</div>
-                </div>
-                <div class="signal-gap-line">
-                    <span class="signal-gap-value">{sig['gap_value']*100:.0f}-point gap</span>
-                    &nbsp;&middot;&nbsp; evidence: {evidence_strength(sig['q_value']).lower()}
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-            st.caption(
-                "Course descriptions are short, so a skill missing from them may still be taught in class. "
-                "Read gaps as a prompt to check the syllabus."
-            )
-
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ---- Deeper pages, one quiet row ----
