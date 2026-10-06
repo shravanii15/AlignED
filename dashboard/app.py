@@ -368,6 +368,13 @@ st.markdown(
     .course-card-uni { font-size: 0.78rem !important; font-weight: 600 !important; color: var(--brand) !important; margin: 0.1rem 0 0.4rem !important; }
     .course-card-desc { font-size: 0.85rem !important; color: var(--text-muted) !important; line-height: 1.5 !important; margin: 0 !important; }
 
+
+    /* ---- Home: three-step "how it helps" strip ---- */
+    .steps-strip { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+    .step { flex: 1 1 220px; display: flex; gap: 0.8rem; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 0.9rem 1.1rem; font-size: 0.85rem; color: var(--text-muted); line-height: 1.45; }
+    .step b { color: var(--text); font-size: 0.92rem; }
+    .step-num { flex: 0 0 auto; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--brand); color: #FFFFFF; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
+
     /* ---- Page banner (every inner page) ---- */
     .page-banner {
         display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;

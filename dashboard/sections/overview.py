@@ -74,6 +74,16 @@ def render_overview():
         """,
         unsafe_allow_html=True,
     )
+    st.markdown(
+        """
+        <div class="steps-strip">
+            <div class="step"><span class="step-num">1</span><div><b>Start with a job or a program</b><br>Paste a job posting, or pick a graduate program.</div></div>
+            <div class="step"><span class="step-num">2</span><div><b>See what is missing</b><br>We compare skills employers ask for with what courses mention.</div></div>
+            <div class="step"><span class="step-num">3</span><div><b>Know what to learn first</b><br>Get a ranked list, with courses that cover each skill.</div></div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ---- Two paths ----
