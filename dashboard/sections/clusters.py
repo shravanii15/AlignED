@@ -20,6 +20,7 @@ def render_clusters():
         "", "Job Families",
         "Job postings sorted into broad families of similar jobs, so programs can be compared against what a "
         "kind of job generally needs instead of one company's posting.",
+        art="families", pills=("1,660 postings", "Grouped by similarity"),
     )
 
     clusters_df = run_query(

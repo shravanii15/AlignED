@@ -19,6 +19,7 @@ def render_profile_builder():
         "", "Which Jobs Fit Me",
         "Paste your skills, resume text, or courses taken. We match them against each family of jobs in the "
         "data and show the best fit, what to learn next, and example postings.",
+        art="fit", pills=("Paste your skills", "Get job families"),
     )
 
     user_text = st.text_area(

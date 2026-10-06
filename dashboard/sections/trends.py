@@ -21,6 +21,7 @@ def render_trends():
         "", "Rising and Falling Skills",
         "Which skills are being asked for more or less often in job postings. This covers only a short window, "
         "so treat it as an early hint, not a forecast.",
+        art="trend", pills=("Job postings over time", "Early hints only"),
     )
 
     trends_df = run_query(

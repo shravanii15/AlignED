@@ -8,7 +8,7 @@ from utils.layout import page_header
 
 
 def render_methodology():
-    page_header("", "Methodology & Limitations", "How each number is produced, and where it should not be over-read.")
+    page_header("", "Methodology & Limitations", "How each number is produced, and where it should not be over-read.", art="method", pills=("Tests and corrections", "Known limits"))
 
     st.markdown(
         """

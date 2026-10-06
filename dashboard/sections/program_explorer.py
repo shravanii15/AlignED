@@ -95,7 +95,7 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
 
 
 def render_program_explorer():
-    page_header("", "Skill Gaps", "Choose a program and a type of job to see which skills employers ask for that the program's courses do not mention.")
+    page_header("", "Skill Gaps", "Choose a program and a type of job to see which skills employers ask for that the program's courses do not mention.", art="gaps", pills=("Ranked by gap size", "Courses vs jobs"))
 
     programs_df = run_query(
         "SELECT p.program_id, p.university, p.program_name, p.tier, "

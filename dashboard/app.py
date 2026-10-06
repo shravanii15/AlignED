@@ -336,6 +336,21 @@ st.markdown(
     /* ---- Shared page header (utils/layout.py's page_header()): a
        thin bottom rule and large title instead of a filled colored
        box, reads as a document heading, not a UI chrome element. ---- */
+
+    /* ---- Page banner (every inner page) ---- */
+    .page-banner {
+        display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+        border-radius: 18px; padding: 1.6rem 2rem; margin-bottom: 1.4rem;
+    }
+    .page-banner-text { flex: 1 1 auto; min-width: 0; }
+    .page-banner-title { font-size: 2rem !important; font-weight: 800 !important; color: #FFFFFF !important; line-height: 1.15 !important; margin: 0 !important; letter-spacing: -0.01em; }
+    .page-banner-desc { font-size: 1rem !important; color: #DBE4FF !important; line-height: 1.55 !important; margin: 0.55rem 0 0 0 !important; max-width: 640px; }
+    .page-banner-pills { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.9rem; }
+    .page-banner-pills:empty { display: none; }
+    .page-banner-pills span { background: rgba(255,255,255,0.16); color: #FFFFFF; font-size: 0.8rem; font-weight: 600; padding: 0.28rem 0.8rem; border-radius: 999px; }
+    .page-banner-art { flex: 0 0 150px; width: 150px; height: auto; }
+    @media (max-width: 700px) { .page-banner-art { display: none; } .page-banner { padding: 1.3rem 1.2rem; } }
+
     .page-header { border-bottom: 1px solid var(--border); padding-bottom: 0.9rem; margin-bottom: 0.5rem; }
     .page-header-icon { font-size: 1rem !important; opacity: 0.55; margin-right: 0.4rem; }
     .page-header-title { font-size: 1.9rem !important; font-weight: 800 !important; color: var(--text) !important; }

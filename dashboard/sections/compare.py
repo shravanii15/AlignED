@@ -11,7 +11,7 @@ from utils.layout import page_header
 
 
 def render_compare():
-    page_header("", "Compare Programs", "Pick 2 or 3 programs to see their largest skill gaps against the same job-market sample.")
+    page_header("", "Compare Programs", "Pick 2 or 3 programs to see their largest skill gaps against the same job-market sample.", art="compare", pills=("2 to 3 programs", "Same job data"))
 
     programs_df = run_query("SELECT program_id, university, program_name FROM programs ORDER BY university")
     programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]

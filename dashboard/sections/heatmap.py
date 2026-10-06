@@ -15,6 +15,7 @@ def render_heatmap():
         "", "Skills by Program",
         "How many of each program's courses mention each skill. Darker blue means more courses. Most cells are "
         "blank because course descriptions rarely name specific tools.",
+        art="grid", pills=("Program by skill", "Darker means more courses"),
     )
 
     num_skills = st.slider("Skills to show", min_value=5, max_value=20, value=10)

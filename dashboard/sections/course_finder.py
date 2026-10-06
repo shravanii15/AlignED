@@ -9,7 +9,7 @@ from utils.nav import COURSE_FINDER_SKILLS_KEY
 
 
 def render_course_finder():
-    page_header("", "Course Finder", "Find courses across all 13 programs that mention a skill you want to learn.")
+    page_header("", "Course Finder", "Find courses across all 13 programs that mention a skill you want to learn.", art="search", pills=("13 programs", "1,378 courses"))
 
     search_text = st.text_input("Search course names and descriptions", placeholder="e.g. security, machine learning")
 

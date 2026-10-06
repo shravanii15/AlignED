@@ -54,6 +54,7 @@ def render_match_job():
     page_header(
         "", "Match a Job",
         "Paste a job posting you like and your own skills. See what you already have, what is missing, and what to learn first.",
+        art="match", pills=("Paste a posting", "Get a learning order"),
     )
 
     top_col, btn_col = st.columns([3, 1])
