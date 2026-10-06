@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.svg" alt="AlignED banner" width="100%"></p>
+
 # AlignED
 
 [![Run Tests](https://github.com/shravanii15/AlignED/actions/workflows/run_tests.yml/badge.svg)](https://github.com/shravanii15/AlignED/actions/workflows/run_tests.yml)
@@ -12,7 +14,11 @@ AlignED compares 1,378 course descriptions from 13 graduate programs against 1,6
 
 ## Screenshots
 
-<!-- screenshots go here -->
+| Home | Skill Gaps |
+|---|---|
+| ![Home](docs/screenshots/home.png) | ![Skill Gaps](docs/screenshots/skill-gaps.png) |
+| **Match a Job** | **Which Jobs Fit Me** |
+| ![Match a Job](docs/screenshots/match-job.png) | ![Which Jobs Fit Me](docs/screenshots/fit-me.png) |
 
 ## Key results
 
