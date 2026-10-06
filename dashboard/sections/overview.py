@@ -27,59 +27,57 @@ EXAMPLE_MIN_COURSES = 30
 
 
 def render_overview():
-    programs_total = int(run_query("SELECT COUNT(*) AS n FROM programs").iloc[0]["n"])
-    courses_total = int(run_query("SELECT COUNT(*) AS n FROM courses").iloc[0]["n"])
-    signal_row = run_query(
+    # Example program for the hero: the full-size program whose top gaps
+    # show the most visible course coverage, so the bars are not all empty.
+    example = run_query(
         f"""
-        SELECT p.university, p.program_name, s.canonical_name AS skill_name,
-               g.program_coverage_rate, g.market_demand_rate, g.gap_value, g.q_value
+        SELECT r.program_id, p.university, p.program_name, s.canonical_name AS skill_name,
+               g.program_coverage_rate AS cov, g.market_demand_rate AS dem, g.gap_value,
+               (SELECT COUNT(*) FROM gap_scores x WHERE x.program_id = r.program_id AND x.cluster_id IS NULL) AS n_gaps
         FROM recommendations r
         JOIN gap_scores g ON g.program_id = r.program_id AND g.skill_id = r.skill_id AND g.cluster_id IS r.cluster_id
         JOIN programs p ON p.program_id = r.program_id
         JOIN skills s ON s.skill_id = r.skill_id
         WHERE r.cluster_id IS NULL
-          AND g.program_coverage_rate > 0
           AND (SELECT COUNT(*) FROM courses c WHERE c.program_id = r.program_id) >= {EXAMPLE_MIN_COURSES}
-        ORDER BY g.gap_value DESC
-        LIMIT 1
+        ORDER BY r.program_id, g.gap_value DESC
         """
     )
-    if not signal_row.empty:
-        h = signal_row.iloc[0]
-        h_cov, h_dem = h["program_coverage_rate"] * 100, h["market_demand_rate"] * 100
-        h_max = max(h_cov, h_dem, 1)
+    card = ""
+    if not example.empty:
+        best_pid, best_total = None, -1.0
+        for pid, grp in example.groupby("program_id"):
+            total = grp.head(5)["cov"].sum()
+            if total > best_total:
+                best_pid, best_total = pid, total
+        ex = example[example["program_id"] == best_pid].head(5)
+        max_rate = max(float(ex["dem"].max()), float(ex["cov"].max()), 0.01)
+        rows = "".join(
+            f'<div class="ex-row"><span class="ex-skill">{r["skill_name"]}</span>'
+            f'<div class="ex-bars">'
+            f'<div class="ex-bar"><div class="ex-track"><div class="ex-fill ex-fill-m" style="width:{r["dem"]/max_rate*100:.0f}%"></div></div><b>{r["dem"]*100:.0f}%</b></div>'
+            f'<div class="ex-bar"><div class="ex-track"><div class="ex-fill ex-fill-c" style="width:{max(r["cov"]/max_rate*100, 1.5):.1f}%"></div></div><b>{r["cov"]*100:.1f}%</b></div>'
+            f'</div></div>'
+            for _, r in ex.iterrows()
+        )
+        first = ex.iloc[0]
         card = f"""
         <div class="hero-card">
-            <p class="hero-card-eyebrow">What an answer looks like</p>
-            <p class="hero-card-skill">{h["skill_name"]}</p>
-            <div class="hero-card-row"><span>Courses</span><div class="hero-card-track"><div class="hero-card-fill hero-card-fill-c" style="width:{max(h_cov/h_max*100, 2):.0f}%"></div></div><b>{h_cov:.1f}%</b></div>
-            <div class="hero-card-row"><span>Job postings</span><div class="hero-card-track"><div class="hero-card-fill hero-card-fill-m" style="width:{h_dem/h_max*100:.0f}%"></div></div><b>{h_dem:.1f}%</b></div>
-            <p class="hero-card-gap">{h["gap_value"]*100:.0f}-point gap</p>
-            <p class="hero-card-src">{h["university"]}, {h["program_name"]}</p>
+            <p class="hero-card-eyebrow">Real example: {first["university"]}</p>
+            <p class="hero-card-sub">{first["program_name"]}</p>
+            <div class="ex-legend"><span><i class="ex-dot ex-dot-m"></i>Employers ask for</span><span><i class="ex-dot ex-dot-c"></i>Courses mention</span></div>
+            {rows}
+            <p class="hero-card-gap">{int(first["n_gaps"])} skills missing in total</p>
         </div>"""
-    else:
-        card = ""
     st.markdown(
         f"""
         <div class="hero-panel">
             <div class="hero-left">
                 <p class="hero-wordmark">AlignED</p>
-                <p class="hero-tagline">Does a graduate program teach what employers ask for? Find out, skill by skill, and get a plan for what to learn next.</p>
-                <div class="hero-pills">
-                    <span>{programs_total} programs</span><span>{courses_total:,} courses</span><span>1,660 job postings</span>
-                </div>
+                <p class="hero-headline">Is your degree missing the skills employers want?</p>
+                <p class="hero-tagline">Paste a job or pick a program. We show the missing skills, ranked, and courses that teach them.</p>
             </div>
             {card}
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        """
-        <div class="steps-strip">
-            <div class="step"><span class="step-num">1</span><div><b>Start with a job or a program</b><br>Paste a job posting, or pick a graduate program.</div></div>
-            <div class="step"><span class="step-num">2</span><div><b>See what is missing</b><br>We compare skills employers ask for with what courses mention.</div></div>
-            <div class="step"><span class="step-num">3</span><div><b>Know what to learn first</b><br>Get a ranked list, with courses that cover each skill.</div></div>
         </div>
         """,
         unsafe_allow_html=True,

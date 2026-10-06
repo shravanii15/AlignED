@@ -375,6 +375,22 @@ st.markdown(
     .step b { color: var(--text); font-size: 0.92rem; }
     .step-num { flex: 0 0 auto; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--brand); color: #FFFFFF; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
 
+
+    .hero-panel .hero-wordmark { font-size: 1.1rem !important; letter-spacing: 0.12em; text-transform: uppercase; color: #8FA8FF !important; margin-bottom: 0.9rem !important; }
+    .hero-headline { font-size: 2.5rem !important; font-weight: 800 !important; color: #FFFFFF !important; line-height: 1.15 !important; letter-spacing: -0.02em; margin: 0 0 0.9rem 0 !important; max-width: 520px; }
+    .hero-card-sub { font-size: 0.82rem !important; color: #667085 !important; margin: 0.1rem 0 0.6rem !important; }
+    .ex-legend { display: flex; gap: 1rem; font-size: 0.75rem; color: #667085; margin-bottom: 0.6rem; }
+    .ex-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 0.35rem; }
+    .ex-dot-m { background: #4C7DFF; } .ex-dot-c { background: #1F9D68; }
+    .ex-row { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.55rem; }
+    .ex-skill { width: 5.6rem; font-weight: 700; font-size: 0.9rem; color: #101828; flex: 0 0 auto; }
+    .ex-bars { flex: 1; }
+    .ex-bar { display: flex; align-items: center; gap: 0.5rem; height: 12px; margin: 2px 0; }
+    .ex-bar b { font-size: 0.7rem; color: #101828; width: 2.6rem; flex: 0 0 auto; }
+    .ex-track { flex: 1; height: 9px; background: #F1F3F6; border-radius: 999px; overflow: hidden; }
+    .ex-fill { height: 100%; border-radius: 999px; }
+    .ex-fill-m { background: #4C7DFF; } .ex-fill-c { background: #1F9D68; }
+
     /* ---- Page banner (every inner page) ---- */
     .page-banner {
         display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
