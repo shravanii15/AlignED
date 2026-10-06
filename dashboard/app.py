@@ -407,6 +407,23 @@ st.markdown(
     .chk-tag-ok { background: #D8F5E6; color: #0E5E3D; } .chk-tag-warn { background: #FEF0CC; color: #8A5A00; } .chk-tag-no { background: #FDE2E2; color: #A8261F; }
     .hero-card { flex: 0 1 430px !important; }
 
+
+    /* ---- Home hero: highlighted job posting ---- */
+    .ad-card { position: relative; padding: 1.5rem 1.7rem 1.3rem 1.7rem !important; border-left: 6px solid #315CF5; }
+    .ad-card::after { content: ""; position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 34px 34px 0; border-color: transparent #E4E9F7 transparent transparent; border-top-right-radius: 14px; }
+    .ad-kicker { font-size: 0.68rem !important; font-weight: 700 !important; letter-spacing: 0.12em; text-transform: uppercase; color: #98A2B3 !important; }
+    .ad-title { font-size: 1.5rem !important; font-weight: 800 !important; color: #101828 !important; margin: 0.15rem 0 0.7rem !important; }
+    .ad-body { font-size: 1rem !important; line-height: 2.05 !important; color: #344054 !important; margin: 0 0 0.9rem 0 !important; }
+    .ad-skill { font-weight: 800; padding: 0.12rem 0.5rem; border-radius: 6px; white-space: nowrap; }
+    .ad-ok { background: #D8F5E6; color: #0E5E3D; box-shadow: inset 0 -3px 0 #1F9D68; }
+    .ad-warn { background: #FEF0CC; color: #8A5A00; box-shadow: inset 0 -3px 0 #F5A524; }
+    .ad-no { background: #FDE2E2; color: #A8261F; box-shadow: inset 0 -3px 0 #D94A4A; text-decoration: none; }
+    .ad-legend { display: flex; flex-wrap: wrap; gap: 0.9rem; font-size: 0.74rem; color: #667085; padding-top: 0.7rem; border-top: 1px dashed #D0D5DD; }
+    .ad-key { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 0.35rem; vertical-align: -1px; }
+    .ad-key-ok { background: #1F9D68; } .ad-key-warn { background: #F5A524; } .ad-key-no { background: #D94A4A; }
+    .ad-score { font-size: 0.9rem !important; color: #101828 !important; margin: 0.8rem 0 0 0 !important; line-height: 1.5 !important; }
+    .ad-score span { font-size: 0.78rem; color: #667085; }
+
     /* ---- Page banner (every inner page) ---- */
     .page-banner {
         display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;

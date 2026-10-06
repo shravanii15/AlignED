@@ -15,7 +15,6 @@ import streamlit as st
 from services.database import run_query
 from sections.program_explorer import OVERALL_MARKET_LABEL
 from utils.formatting import evidence_strength, program_label
-from utils.visuals import ring_svg
 from utils.nav import (
     GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_PERSONALIZE,
     PAGE_BUILD_PROFILE, PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_ROLE_GROUPS, PAGE_TRENDS,
@@ -53,36 +52,28 @@ def render_overview():
                 best_pid, best_total = pid, total
         ex = example[example["program_id"] == best_pid].head(5)
         MENTIONED_AT = 0.05  # a skill counts as "mentioned" when 5%+ of courses name it
-        statuses = []
+        marks = []
+        n_ok = 0
         for _, r in ex.iterrows():
-            if r["cov"] >= MENTIONED_AT:
-                statuses.append(("ok", "&#10003;", "Mentioned in courses"))
-            elif r["cov"] > 0:
-                statuses.append(("warn", "~", "Rarely mentioned"))
-            else:
-                statuses.append(("no", "&#10005;", "Not in any course"))
-        n_ok = sum(1 for k, _, _ in statuses if k == "ok")
-        rows = "".join(
-            f'<div class="chk-row"><span class="chk-icon chk-{k}">{icon}</span>'
-            f'<span class="chk-skill">{r["skill_name"]}</span>'
-            f'<span class="chk-demand">in {r["dem"]*100:.0f}% of jobs</span>'
-            f'<span class="chk-tag chk-tag-{k}">{label}</span></div>'
-            for (k, icon, label), (_, r) in zip(statuses, ex.iterrows())
-        )
+            kind = "ok" if r["cov"] >= MENTIONED_AT else ("warn" if r["cov"] > 0 else "no")
+            n_ok += kind == "ok"
+            marks.append(f'<span class="ad-skill ad-{kind}">{r["skill_name"]}</span>')
         first = ex.iloc[0]
-        ring = ring_svg(n_ok / len(ex), f"{n_ok}/{len(ex)}", "", "#1F9D68" if n_ok >= 4 else ("#F5A524" if n_ok >= 2 else "#D94A4A"), size=84)
+        skill_line = ", ".join(marks[:-1]) + (" and " + marks[-1] if len(marks) > 1 else "")
         card = f"""
-        <div class="hero-card">
-            <p class="hero-card-eyebrow">Example: {first["university"]}</p>
-            <div class="chk-head">
-                {ring}
-                <div>
-                    <p class="chk-title">{n_ok} of the {len(ex)} skills employers want most show up in its courses</p>
-                    <p class="hero-card-sub">{first["program_name"]}</p>
-                </div>
+        <div class="hero-card ad-card">
+            <p class="ad-kicker">Example job posting</p>
+            <p class="ad-title">Software Engineer</p>
+            <p class="ad-body">We are hiring an engineer to build and ship reliable software.
+            Day to day you will work with {skill_line}. You collaborate with
+            data and product teams and own features from idea to launch.</p>
+            <div class="ad-legend">
+                <span><i class="ad-key ad-key-ok"></i>Taught in courses</span>
+                <span><i class="ad-key ad-key-warn"></i>Barely mentioned</span>
+                <span><i class="ad-key ad-key-no"></i>Missing</span>
             </div>
-            {rows}
-            <p class="hero-card-gap">{int(first["n_gaps"])} skills missing in total</p>
+            <p class="ad-score"><b>{n_ok} of {len(ex)}</b> skills in this ad appear in the courses of<br>
+            <span>{first["university"]}, {first["program_name"]}</span></p>
         </div>"""
     st.markdown(
         f"""
