@@ -376,7 +376,8 @@ st.markdown(
     .step-num { flex: 0 0 auto; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--brand); color: #FFFFFF; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
 
 
-    .hero-panel .hero-wordmark { font-size: 1.1rem !important; letter-spacing: 0.12em; text-transform: uppercase; color: #8FA8FF !important; margin-bottom: 0.9rem !important; }
+    .hero-panel .hero-wordmark { font-size: 2.4rem !important; font-weight: 800 !important; letter-spacing: -0.02em; text-transform: none; color: #FFFFFF !important; margin-bottom: 0.7rem !important; }
+    .hero-wordmark .wm-ed { color: #7AA2FF; }
     .hero-headline { font-size: 2.5rem !important; font-weight: 800 !important; color: #FFFFFF !important; line-height: 1.15 !important; letter-spacing: -0.02em; margin: 0 0 0.9rem 0 !important; max-width: 520px; }
     .hero-card-sub { font-size: 0.82rem !important; color: #667085 !important; margin: 0.1rem 0 0.6rem !important; }
     .ex-legend { display: flex; gap: 1rem; font-size: 0.75rem; color: #667085; margin-bottom: 0.6rem; }
@@ -539,7 +540,7 @@ NAV_GROUPS = {
     GROUP_METHODOLOGY: {PAGE_METHODOLOGY: render_methodology},
 }
 
-st.sidebar.markdown('<p class="sidebar-logo">AlignED</p>', unsafe_allow_html=True)
+st.sidebar.markdown('<p class="sidebar-logo">Align<span style="color:#7AA2FF;">ED</span></p>', unsafe_allow_html=True)
 st.sidebar.markdown('<p class="sidebar-tagline">Does your program teach what employers ask for?</p>', unsafe_allow_html=True)
 
 group_selection = st.sidebar.radio("Section", list(NAV_GROUPS.keys()), key=NAV_GROUP_KEY, label_visibility="collapsed")

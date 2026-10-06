@@ -73,7 +73,7 @@ def render_overview():
         f"""
         <div class="hero-panel">
             <div class="hero-left">
-                <p class="hero-wordmark">AlignED</p>
+                <p class="hero-wordmark">Align<span class="wm-ed">ED</span></p>
                 <p class="hero-headline">Is your degree missing the skills employers want?</p>
                 <p class="hero-tagline">Paste a job or pick a program. We show the missing skills, ranked, and courses that teach them.</p>
             </div>
