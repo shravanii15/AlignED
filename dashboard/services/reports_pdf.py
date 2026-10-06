@@ -287,3 +287,59 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
     )
 
     return bytes(pdf.output())
+
+
+def build_match_pdf_report(have, missing, n_total):
+    """One-page learning plan for a pasted job posting.
+
+    `have` is a list of skill names the person already has. `missing` is a
+    list of (skill_name, demand_rate) tuples, already ordered with the
+    most common first."""
+    def clean(text):
+        return str(text).encode("latin-1", "replace").decode("latin-1")
+
+    def write_line(text, size=10, bold=False, color=(20, 20, 20)):
+        pdf.set_text_color(*color)
+        pdf.set_font("Helvetica", "B" if bold else "", size)
+        pdf.multi_cell(0, 6, text)
+        pdf.set_x(pdf.l_margin)
+
+    pdf = AlignEDReport()
+    pdf.set_auto_page_break(auto=True, margin=20)
+    pdf.add_page()
+    pdf.set_fill_color(30, 58, 138)
+    pdf.rect(0, 0, pdf.w, 32, style="F")
+    pdf.set_xy(pdf.l_margin, 8)
+    pdf.set_text_color(255, 255, 255)
+    pdf.set_font("Helvetica", "B", 18)
+    pdf.cell(0, 10, "AlignED: Your Job Match Plan")
+    pdf.set_xy(pdf.l_margin, 20)
+    pdf.set_font("Helvetica", "", 11)
+    pdf.cell(0, 8, f"You have {len(have)} of the {n_total} skills this job asks for")
+    pdf.set_y(40)
+
+    write_line(f"Generated {datetime.date.today().isoformat()}", size=9, color=(90, 90, 90))
+    pdf.ln(4)
+    write_line("Skills you already have", size=13, bold=True, color=(22, 163, 74))
+    write_line(clean(", ".join(have)) if have else "None detected yet.", size=10)
+
+    pdf.ln(4)
+    write_line("Learn these first", size=13, bold=True, color=(220, 38, 38))
+    write_line(
+        "Ordered by how often each skill appears across the 1,660 tech job postings in the AlignED sample, "
+        "so the first ones help with the most jobs.",
+        size=8.5, color=(100, 100, 100),
+    )
+    if missing:
+        for rank, (name, demand) in enumerate(missing, start=1):
+            write_line(clean(f"{rank}.  {name}  (in {demand * 100:.0f}% of postings)"), size=10.5)
+    else:
+        write_line("Nothing missing. You cover every skill we detected in this posting.", size=10)
+
+    pdf.ln(6)
+    write_line(
+        "Skills are matched by name against about 250 tools and technologies from the US Department of Labor's "
+        "O*NET database. Soft skills and skills phrased in other words can be missed.",
+        size=8, color=(130, 130, 130),
+    )
+    return bytes(pdf.output())

@@ -19,7 +19,8 @@ def test_base_rationale_includes_skill_name_and_percentages():
     )
     assert "Python" in text
     assert "40%" in text  # demand rate
-    assert "0%" in text  # coverage rate
+    assert "no course description in this program names it" in text  # zero coverage is not shown as "0%"
+    assert "0%" not in text.replace("40%", "")
 
 
 def test_rising_trend_adds_upward_language():
@@ -74,3 +75,20 @@ def test_role_specific_scope_names_the_role_in_the_rationale():
         scope_label="Data Science / Data Engineering",
     )
     assert "Data Science / Data Engineering postings" in text
+
+
+def test_tiny_coverage_is_not_rounded_to_zero_percent():
+    text = build_rationale(
+        skill_name="Linux", coverage_rate=0.004, demand_rate=0.15,
+        gap_value=0.146, trend_label="no clear trend", slope=None,
+    )
+    assert "fewer than 1%" in text
+    assert "0%" not in text.replace("15%", "")
+
+
+def test_normal_coverage_is_shown_as_a_percentage():
+    text = build_rationale(
+        skill_name="SQL", coverage_rate=0.12, demand_rate=0.30,
+        gap_value=0.18, trend_label="no clear trend", slope=None,
+    )
+    assert "only 12%" in text

@@ -485,6 +485,9 @@ st.markdown(
     .site-footer { color: var(--text-muted) !important; font-size: 0.85rem !important; }
     .site-footer a { color: var(--brand); text-decoration: none; }
 
+    .gap-compare-label { width: 110px !important; white-space: nowrap; }
+    @media (max-width: 900px) { .stat-tile { flex: 1 1 42% !important; } }
+
     /* ======== Unified visual system (loaded last so it wins) ========
        One look for every page: rich gradient bars, card shadows with a
        colored top edge, navy answer panels, bold section markers. */

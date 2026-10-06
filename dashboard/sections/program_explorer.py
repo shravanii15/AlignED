@@ -19,6 +19,7 @@ from services.reports_pdf import build_pdf_report
 from utils.charts import TIER_COLOR_MAP, apply_chart_theme
 from utils.formatting import evidence_strength, program_label, safe_filename
 from utils.layout import page_header
+from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.visuals import stat_tiles
 from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY, jump_to_course_finder
 
@@ -35,6 +36,7 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
     cov_pct = row["program_coverage_rate"] * 100
     dem_pct = row["market_demand_rate"] * 100
     max_pct = max(cov_pct, dem_pct, 1)
+    cov_text = "none named" if cov_pct == 0 else ("<1%" if cov_pct < 1 else f"{cov_pct:.1f}%")
     meta = f"{row['gap_value']*100:.0f}-point gap  ·  evidence: {evidence_strength(row['q_value']).lower()}"
     if trend_note:
         meta += f"  ·  {trend_note}"
@@ -53,7 +55,7 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
                 <div class="gap-compare-row">
                     <div class="gap-compare-label">Courses</div>
                     <div class="gap-bar-track"><div class="gap-bar-fill gap-bar-curriculum" style="width:{cov_pct/max_pct*100:.1f}%"></div></div>
-                    <div class="gap-bar-value">{cov_pct:.1f}%</div>
+                    <div class="gap-bar-value">{cov_text}</div>
                 </div>
                 <div class="gap-compare-row">
                     <div class="gap-compare-label">Job postings</div>
@@ -82,7 +84,7 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
                 f"""
                 | | |
                 |---|---|
-                | In course descriptions | **{x_courses} of {course_count}** courses ({cov_pct:.1f}%) |
+                | In course descriptions | **{x_courses} of {course_count}** courses ({cov_pct:.1f}%). A skill missing here may still be taught |
                 | In job postings | **{x_postings} of {scope_total_postings}** postings ({dem_pct:.1f}%) |
                 | Gap | **{row['gap_value']*100:.1f} percentage points** |
                 | Strength of evidence | **{evidence_strength(row['q_value'])}** (the gap is unlikely to be due to chance) |
@@ -93,6 +95,35 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
                 f"Ranking score = gap ({row['gap_value']*100:.1f} pts) x demand-trend adjustment ({trend_desc}) "
                 f"= {row['priority_score']*100:.1f}. Used only to order this list."
             )
+
+
+STRENGTHS_SHOWN = 6
+
+
+def _render_strengths(program_id, course_count):
+    """What the program's course descriptions DO name, so each program has
+    its own profile and the page is not only a list of what is missing."""
+    covered = run_query(
+        """
+        SELECT s.canonical_name, COUNT(DISTINCT e.source_id) AS n_courses
+        FROM extractions e
+        JOIN courses c ON c.course_id = CAST(e.source_id AS INTEGER)
+        JOIN skills s ON s.skill_id = e.skill_id
+        WHERE e.source_type = 'course' AND e.method = 'baseline_keyword' AND c.program_id = ?
+        GROUP BY s.skill_id ORDER BY n_courses DESC, s.canonical_name
+        """,
+        (program_id,),
+    )
+    covered = covered[~covered["canonical_name"].str.strip().str.lower().isin(AMBIGUOUS_GENERIC_TERMS)].head(STRENGTHS_SHOWN)
+    if covered.empty:
+        return
+    chips = "".join(
+        f'<span class="skill-chip skill-chip-have">{r["canonical_name"]} &middot; {int(r["n_courses"])} of {int(course_count)} courses</span>'
+        for _, r in covered.iterrows()
+    )
+    st.markdown('<p class="section-eyebrow">What This Program Does Name</p>', unsafe_allow_html=True)
+    st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
+    st.caption("The skills most often named in this program's course descriptions.")
 
 
 def render_program_explorer():
@@ -210,6 +241,8 @@ def render_program_explorer():
         """,
         unsafe_allow_html=True,
     )
+
+    _render_strengths(program_id, course_count)
 
     heading = f"Top {len(top)} Skills to Look For" if len(top) > 1 else "The Skill to Look For"
     st.markdown(f'<p class="section-eyebrow">{heading}</p>', unsafe_allow_html=True)

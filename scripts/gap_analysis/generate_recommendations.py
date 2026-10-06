@@ -68,10 +68,16 @@ def build_rationale(skill_name, coverage_rate, demand_rate, gap_value, trend_lab
         if scope_label == "Overall market"
         else f"{demand_rate * 100:.0f}% of the {scope_label} postings we looked at"
     )
-    base = (
-        f"{skill_name} appears in {demand_phrase}, "
-        f"but in only {coverage_rate * 100:.0f}% of this program's course descriptions."
-    )
+    # "0%" reads as "the program does not teach this", which course
+    # descriptions cannot show. Say what is actually true: no description
+    # names the skill (it may still be taught).
+    if coverage_rate <= 0:
+        coverage_phrase = "but no course description in this program names it."
+    elif coverage_rate < 0.01:
+        coverage_phrase = "but fewer than 1% of this program's course descriptions name it."
+    else:
+        coverage_phrase = f"but only {coverage_rate * 100:.0f}% of this program's course descriptions name it."
+    base = f"{skill_name} appears in {demand_phrase}, {coverage_phrase}"
     if trend_label == "rising":
         return base + f" Demand for {skill_name} has also been rising recently."
     if trend_label == "falling":
