@@ -52,8 +52,8 @@ def render_overview():
         <div class="hero-card">
             <p class="hero-card-eyebrow">What an answer looks like</p>
             <p class="hero-card-skill">{h["skill_name"]}</p>
-            <div class="hero-card-row"><span>Courses</span><div class="hero-card-track"><div class="hero-card-fill hero-card-fill-c" style="width:{max(h_cov/h_max*100, 2):.0f}%"></div></div><b>{h_cov:.0f}%</b></div>
-            <div class="hero-card-row"><span>Job postings</span><div class="hero-card-track"><div class="hero-card-fill hero-card-fill-m" style="width:{h_dem/h_max*100:.0f}%"></div></div><b>{h_dem:.0f}%</b></div>
+            <div class="hero-card-row"><span>Courses</span><div class="hero-card-track"><div class="hero-card-fill hero-card-fill-c" style="width:{max(h_cov/h_max*100, 2):.0f}%"></div></div><b>{h_cov:.1f}%</b></div>
+            <div class="hero-card-row"><span>Job postings</span><div class="hero-card-track"><div class="hero-card-fill hero-card-fill-m" style="width:{h_dem/h_max*100:.0f}%"></div></div><b>{h_dem:.1f}%</b></div>
             <p class="hero-card-gap">{h["gap_value"]*100:.0f}-point gap</p>
             <p class="hero-card-src">{h["university"]}, {h["program_name"]}</p>
         </div>"""
