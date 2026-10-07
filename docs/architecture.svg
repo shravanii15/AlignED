@@ -52,7 +52,7 @@
   <g>
     <rect x="510" y="288" width="230" height="60" rx="10" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
     <text x="625" y="312" text-anchor="middle" font-size="12.5" font-weight="700" fill="#166534">LLM extraction (Ollama) + embeddings</text>
-    <text x="625" y="330" text-anchor="middle" font-size="10.5" fill="#475569">validated on 104-item gold set (F1 0.400 vs 0.364)</text>
+    <text x="625" y="330" text-anchor="middle" font-size="10.5" fill="#475569">validated on 104-item gold set (F1 0.426 vs 0.364)</text>
   </g>
 
   <path d="M500,264 L345,284" stroke="#94A3B8" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>

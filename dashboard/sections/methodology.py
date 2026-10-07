@@ -70,7 +70,7 @@ def render_methodology():
     with card_col3:
         with st.container(border=True):
             st.markdown("**Extraction method**")
-            st.caption("Local LLM vs. keyword baseline. LLM F1 0.400, keyword 0.364.")
+            st.caption("Local LLM vs. keyword baseline. LLM F1 0.426, keyword 0.364.")
             with st.expander("Detail"):
                 st.markdown(
                     """
@@ -80,7 +80,7 @@ def render_methodology():
                     | Method | Precision | Recall | F1 |
                     |---|---|---|---|
                     | Keyword baseline | 0.518 | 0.280 | 0.364 |
-                    | LLM + embeddings | 0.407 | 0.392 | **0.400** |
+                    | LLM + embeddings | 0.443 | 0.409 | **0.426** |
 
                     The LLM scored higher on F1, which balances precision and recall. Running it over all
                     1,378 courses and the postings would take hours on consumer hardware, so the keyword

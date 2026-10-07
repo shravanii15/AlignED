@@ -17,7 +17,7 @@ AlignED compares 1,378 course descriptions from 13 graduate programs against 1,6
 - **170 significant skill gaps** across the 13 programs (two-proportion z-test, or Fisher's exact test for small counts, with Benjamini-Hochberg FDR correction).
 - **Hands-on tools are the consistent gap.** Python, Docker, Kubernetes, Linux, Git and Tableau are under-covered in most programs, often by 10 to 40 percentage points.
 - **No demand trend survived correction.** 9 of 67 skills looked significant on a raw p-value and 0 held up after FDR correction, so the trends page labels them early hints.
-- **An LLM edged out a keyword baseline** on a 104-item hand-labeled set (F1 0.400 vs. 0.364). It had higher recall and lower precision, and it was too slow on consumer hardware, so the full-scale run used the keyword method. See Limitations for why these numbers are due a re-run.
+- **An LLM edged out a keyword baseline** on a 104-item hand-labeled set (F1 0.426 vs. 0.364). It had higher recall and lower precision, and it was too slow on consumer hardware, so the full-scale run used the keyword method. See Limitations for the caveats on this benchmark.
 
 ## Screenshots
 
@@ -35,7 +35,7 @@ AlignED compares 1,378 course descriptions from 13 graduate programs against 1,6
 | Job postings used for gap scoring | 1,660 (category-balanced sample) |
 | Significant skill gaps | 170 in the overall-market scope |
 | Recommendations | 69 overall-market, 724 across all program and job-family scopes |
-| Skill extraction benchmark | LLM F1 0.400 vs. keyword baseline 0.364, on 104 hand-labeled items |
+| Skill extraction benchmark | LLM F1 0.426 vs. keyword baseline 0.364, on 104 hand-labeled items |
 | Skills with a confirmed demand trend | 0 of 67 after FDR correction |
 
 ## How it works
@@ -107,7 +107,7 @@ The 170 gaps in the results table are the overall-market scope. The database hol
 - **Coverage is a text signal.** "Covered" means a skill name appears in a course description, not that it is taught in depth. "Demand" means it appears in the sampled postings.
 - **The posting sample is category-balanced**, not proportional to the real labor market, so demand figures describe this sample only.
 - **Corpus sizes differ by program**, which affects coverage rates.
-- **The benchmark is internal.** The 0.400 vs. 0.364 comparison uses the same 104 items used during development, not a held-out set. The LLM's raw answers were matched to the taxonomy by embedding similarity, which can confuse near neighbors (SQL with MySQL, for example). The matching step now tries exact, alias and spelling-variant matches first and blocks known confusions, but the benchmark numbers above predate that change and will be re-run.
+- **The benchmark is internal.** The 0.426 vs. 0.364 comparison uses the same 104 items used during development, not a held-out set. The LLM's raw answers were matched to the taxonomy by embedding similarity, which can confuse near neighbors (SQL with MySQL, for example). The matching step now tries exact, alias and spelling-variant matches first and blocks known confusions, and the benchmark numbers above were re-run after that change.
 - **The dashboard reads a snapshot.** The daily job now loads new postings into SQLite with validation and deduplication, but the committed database is updated only when a snapshot is replayed into it, and the live postings are not part of gap scoring or trends. Content-based deduplication also treats one posting listed in several cities as a single posting, which is right for measuring skill demand and wrong for counting openings.
 - **Trend detection** uses about 124,000 historical postings, restricted to the weeks with enough volume (68% were dated to a single week by a collection artifact), and no trend is confirmed after correction.
 

@@ -9,12 +9,12 @@
     "f1": 0.36363636363636365
   },
   "llm": {
-    "true_positives": 182,
-    "false_positives": 265,
-    "false_negatives": 282,
-    "precision": 0.407158836689038,
-    "recall": 0.3922413793103448,
-    "f1": 0.3995609220636663
+    "true_positives": 190,
+    "false_positives": 239,
+    "false_negatives": 274,
+    "precision": 0.4428904428904429,
+    "recall": 0.40948275862068967,
+    "f1": 0.425531914893617
   },
-  "f1_improvement_llm_minus_baseline": 0.03592455842730263
+  "f1_improvement_llm_minus_baseline": 0.06189555125725338
 }

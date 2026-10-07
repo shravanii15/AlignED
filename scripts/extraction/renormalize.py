@@ -71,7 +71,7 @@ EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 # matches, precision dropped more than recall gained), 0.65 (best
 # result), and 0.68 (slightly worse than 0.65, too strict, lost more
 # recall than it gained in precision). 0.65 is the value that actually
-# beat the baseline on F1 in real testing (0.400 vs baseline's 0.364), so
+# beat the baseline on F1 in real testing (0.426 vs baseline's 0.364), so
 # it's the default. Can still be overridden from the command line to
 # experiment further, e.g.: python renormalize.py 0.70
 SIMILARITY_CUTOFF = 0.65  # overridable from the command line in main(), never at import time
