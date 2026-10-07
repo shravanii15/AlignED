@@ -32,7 +32,7 @@ class AlignEDReport(FPDF):
 
 
 def build_pdf_report(university, program_name, course_count, recs_df, scope_display_name="the overall market",
-                     scope_total_postings=None, true_gap_count=None, strengths=None):
+                     scope_total_postings=None, true_gap_count=None, strengths=None, picture=None):
     """Plain-language skill gap report for one program.
 
     Written for students, parents and faculty, not statisticians: it opens
@@ -50,6 +50,9 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
         pdf.set_x(pdf.l_margin)
 
     def heading(text):
+        if pdf.get_y() > pdf.h - 50:  # keep a heading together with its content
+            pdf.add_page()
+            pdf.set_y(20)
         pdf.ln(4)
         write_line(text, size=13, bold=True, color=(30, 58, 138))
         pdf.ln(1)
@@ -80,16 +83,21 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
 
     # ---- The short answer ----
     heading("The short answer")
-    top_names = [clean(n) for n in recs_df["canonical_name"].head(5)]
-    if gap_count == 0 or recs_df.empty:
-        answer = "No clear skill gaps were found for this program against this set of jobs."
-    else:
-        noun = "skill" if gap_count == 1 else "skills"
-        answer = (
-            f"{gap_count} {noun} that employers ask for are not named in this program's course descriptions. "
-            f"The biggest: {', '.join(top_names)}."
+    top10 = picture.head(10) if picture is not None else None
+    if top10 is not None and len(top10):
+        named_any = int((top10["coverage"] > 0).sum())
+        write_line(
+            f"Of the {len(top10)} skills employers ask for most, this program's course descriptions name {named_any}.",
+            size=13, bold=True,
         )
-    write_line(answer, size=12, bold=True)
+        missing = [clean(n) for n in top10[top10["coverage"] == 0]["canonical_name"].head(5)]
+        if missing:
+            pdf.ln(1)
+            write_line("Not named in any course description: " + ", ".join(missing) + ".", size=10.5)
+    elif gap_count == 0 or recs_df.empty:
+        write_line("No clear skill gaps were found for this program against this set of jobs.", size=12, bold=True)
+    else:
+        write_line(f"{gap_count} skills that employers ask for are not named in this program's course descriptions.", size=12, bold=True)
     pdf.ln(1)
     write_line(
         "Important: a skill missing from a course description may still be taught in class. Descriptions are short, "
@@ -97,13 +105,52 @@ def build_pdf_report(university, program_name, course_count, recs_df, scope_disp
         size=9.5, color=(90, 90, 90),
     )
 
-    # ---- Top skills with simple bars ----
-    heading("Skills to look for first")
-    write_line(
-        "Blue is how often the skill appears in job postings. Green is how often it is named in this program's course descriptions.",
-        size=9, color=(100, 100, 100),
-    )
-    pdf.ln(2)
+    # ---- Where the program stands on the most requested skills ----
+    if picture is not None and len(picture):
+        heading("The skills employers ask for most")
+        write_line(
+            "Blue is how often the skill appears in job postings. Green is how often it is named in this program's course descriptions.",
+            size=9, color=(100, 100, 100),
+        )
+        pdf.ln(2)
+        label_x = pdf.l_margin
+        bar_x = pdf.l_margin + 34
+        bar_w = 78
+        status_rgb = {"Named": (22, 120, 80), "Rarely named": (176, 110, 0), "Not named": (190, 50, 50)}
+        top = max(float(picture["demand"].max()), float(picture["coverage"].max()), 0.01)
+        for _, r in picture.head(12).iterrows():
+            if pdf.get_y() > pdf.h - 30:
+                pdf.add_page()
+                pdf.set_y(20)
+            y = pdf.get_y()
+            pdf.set_xy(label_x, y)
+            pdf.set_text_color(20, 20, 20)
+            pdf.set_font("Helvetica", "B", 10)
+            pdf.cell(33, 6, clean(r["canonical_name"]))
+            for k, (value, rgb) in enumerate(((r["demand"], (49, 92, 245)), (r["coverage"], (31, 157, 104)))):
+                by = y + 0.8 + k * 3.4
+                pdf.set_fill_color(227, 232, 244)
+                pdf.rect(bar_x, by, bar_w, 2.7, style="F")
+                pdf.set_fill_color(*rgb)
+                pdf.rect(bar_x, by, max(bar_w * value / top, 0.6 if value > 0 else 0), 2.7, style="F")
+            pdf.set_xy(bar_x + bar_w + 3, y)
+            pdf.set_font("Helvetica", "", 8.5)
+            pdf.set_text_color(60, 60, 60)
+            pdf.cell(22, 6, f"{r['demand']*100:.0f}% of jobs")
+            pdf.set_font("Helvetica", "B", 8.5)
+            pdf.set_text_color(*status_rgb.get(r["status"], (60, 60, 60)))
+            pdf.cell(26, 6, r["status"])
+            pdf.set_y(y + 8)
+        pdf.set_x(pdf.l_margin)
+
+    # ---- Confirmed gaps with simple bars ----
+    if len(recs_df):
+        heading("Confirmed gaps: skills to look for first")
+        write_line(
+            "These gaps are big enough to rule out coincidence. Blue is jobs, green is courses.",
+            size=9, color=(100, 100, 100),
+        )
+        pdf.ln(2)
     bar_x = pdf.l_margin + 38
     bar_w = 90
     for rank, (_, row) in enumerate(recs_df.head(5).iterrows(), start=1):

@@ -11,6 +11,7 @@ relabeled.
 """
 
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 
 from services.database import run_query
@@ -19,6 +20,7 @@ from services.reports_pdf import build_pdf_report
 from utils.charts import TIER_COLOR_MAP, apply_chart_theme
 from utils.formatting import evidence_strength, program_label, safe_filename
 from utils.layout import page_header
+from services.skill_picture import market_picture
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.visuals import stat_tiles
 from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY, jump_to_course_finder
@@ -143,6 +145,46 @@ def _render_strengths(program_id, course_count):
     st.caption("The skills most often named in this program's course descriptions.")
 
 
+def _render_gap_list(recs_df, course_count, scope_display_name, scope_total_postings, true_gap_count, program_id):
+    """The answer banner, strengths and ranked gap cards."""
+    # ---- The answer, first ----
+    biggest = recs_df.iloc[0]
+    stat_tiles([
+        (f"{course_count}", "courses analyzed"),
+        (f"{true_gap_count}", "skills missing"),
+        (f"{biggest['canonical_name']}", "top priority skill"),
+        (f"{biggest['gap_value']*100:.0f} pts", "its gap size"),
+    ])
+    top = recs_df.head(TOP_SKILLS_SHOWN)
+    chips = "".join(f'<span class="skill-chip skill-chip-missing">{name}</span>' for name in top["canonical_name"])
+    st.markdown(
+        f"""
+        <div class="answer-banner">
+            <p class="answer-banner-label">The short answer</p>
+            <p class="answer-banner-text">{true_gap_count} {"skill" if true_gap_count == 1 else "skills"} that employers ask for ({scope_display_name}) {"is" if true_gap_count == 1 else "are"} missing
+            from this program's course descriptions. {"The biggest:" if true_gap_count > 1 else "It is:"}</p>
+            <div class="skill-chip-row">{chips}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    _render_strengths(program_id, course_count)
+
+    heading = f"Top {len(top)} Skills to Look For" if len(top) > 1 else "The Skill to Look For"
+    st.markdown(f'<p class="section-eyebrow">{heading}</p>', unsafe_allow_html=True)
+    for rank, (_, row) in enumerate(top.iterrows(), start=1):
+        _skill_card(row, rank, course_count, scope_total_postings, key_prefix="top")
+
+    rest = recs_df.iloc[TOP_SKILLS_SHOWN:]
+    if not rest.empty:
+        with st.expander(f"Show {len(rest)} more skills"):
+            for rank, (_, row) in enumerate(rest.iterrows(), start=TOP_SKILLS_SHOWN + 1):
+                _skill_card(row, rank, course_count, scope_total_postings, key_prefix="more")
+    if true_gap_count > len(recs_df):
+        st.caption(f"The list shows the {len(recs_df)} biggest of {true_gap_count} gaps found.")
+
+
 def render_program_explorer():
     page_header("", "Skill Gaps", "Choose a program and a type of job to see which skills employers ask for that the program's courses do not mention.", art="gaps", pills=("Ranked by gap size", "Courses vs jobs"))
 
@@ -231,59 +273,25 @@ def render_program_explorer():
         true_gap_count = int(run_query(gap_count_query.format("?"), (program_id, cluster_id)).iloc[0]["n"])
 
     if recs_df.empty:
-        st.warning(
-            f"No clear skill gaps were found for this program against {scope_display_name}. "
-            "This can happen when a program has few courses or a job type has few postings."
+        st.info(
+            f"No single skill gap was strong enough to confirm for this program against {scope_display_name}. "
+            "That can happen when a program has few courses or a job type has few postings. "
+            "The chart below still shows what employers ask for and what the courses name."
         )
-        return
 
-    # ---- The answer, first ----
-    biggest = recs_df.iloc[0]
-    stat_tiles([
-        (f"{course_count}", "courses analyzed"),
-        (f"{true_gap_count}", "skills missing"),
-        (f"{biggest['canonical_name']}", "top priority skill"),
-        (f"{biggest['gap_value']*100:.0f} pts", "its gap size"),
-    ])
-    top = recs_df.head(TOP_SKILLS_SHOWN)
-    chips = "".join(f'<span class="skill-chip skill-chip-missing">{name}</span>' for name in top["canonical_name"])
-    st.markdown(
-        f"""
-        <div class="answer-banner">
-            <p class="answer-banner-label">The short answer</p>
-            <p class="answer-banner-text">{true_gap_count} {"skill" if true_gap_count == 1 else "skills"} that employers ask for ({scope_display_name}) {"is" if true_gap_count == 1 else "are"} missing
-            from this program's course descriptions. {"The biggest:" if true_gap_count > 1 else "It is:"}</p>
-            <div class="skill-chip-row">{chips}</div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    if not recs_df.empty:
+        _render_gap_list(recs_df, course_count, scope_display_name, scope_total_postings, true_gap_count, program_id)
 
-    _render_strengths(program_id, course_count)
-
-    heading = f"Top {len(top)} Skills to Look For" if len(top) > 1 else "The Skill to Look For"
-    st.markdown(f'<p class="section-eyebrow">{heading}</p>', unsafe_allow_html=True)
-    for rank, (_, row) in enumerate(top.iterrows(), start=1):
-        _skill_card(row, rank, course_count, scope_total_postings, key_prefix="top")
-
-    rest = recs_df.iloc[TOP_SKILLS_SHOWN:]
-    if not rest.empty:
-        with st.expander(f"Show {len(rest)} more skills"):
-            for rank, (_, row) in enumerate(rest.iterrows(), start=TOP_SKILLS_SHOWN + 1):
-                _skill_card(row, rank, course_count, scope_total_postings, key_prefix="more")
-    if true_gap_count > len(recs_df):
-        st.caption(f"The list shows the {len(recs_df)} biggest of {true_gap_count} gaps found.")
-
-    # ---- Chart ----
-    st.markdown('<p class="section-eyebrow">The Gaps at a Glance</p>', unsafe_allow_html=True)
-    chart_df = recs_df.sort_values("gap_value", ascending=True)
-    fig = px.bar(
-        chart_df, x="gap_value", y="canonical_name", orientation="h",
-        color="priority_tier", color_discrete_map=TIER_COLOR_MAP,
-        labels={"gap_value": "Gap (share of postings minus share of courses)", "canonical_name": ""},
-    )
-    fig.update_layout(xaxis_tickformat=".0%", showlegend=False)
-    apply_chart_theme(fig, height=max(280, len(chart_df) * 32))
+    # ---- Chart: the full picture, not only the tested gaps ----
+    picture = market_picture(program_id, cluster_id, course_count, scope_total_postings)
+    st.markdown('<p class="section-eyebrow">What Employers Ask For vs What Courses Name</p>', unsafe_allow_html=True)
+    st.caption("The 10 skills most requested in job postings, and how often this program's course descriptions name each one.")
+    chart_df = picture.head(10).iloc[::-1]
+    fig = go.Figure()
+    fig.add_bar(y=chart_df["canonical_name"], x=chart_df["coverage"], name="Named in courses", orientation="h", marker_color="#1F9D68")
+    fig.add_bar(y=chart_df["canonical_name"], x=chart_df["demand"], name="Asked for in jobs", orientation="h", marker_color="#315CF5")
+    fig.update_layout(barmode="group", xaxis_tickformat=".0%")
+    apply_chart_theme(fig, height=max(340, len(chart_df) * 44))
     st.plotly_chart(fig, use_container_width=True)
 
     # ---- Downloads ----
@@ -292,7 +300,10 @@ def render_program_explorer():
     dl_col1, dl_col2, _ = st.columns([1, 1, 2])
     base_name = safe_filename(f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations")
     with dl_col1:
-        excel_bytes = build_excel_report(selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df)
+        excel_bytes = build_excel_report(
+            selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
+            picture=picture, strengths=_strengths(program_id), scope_name=scope_display_name,
+        )
         st.download_button(
             "Download Excel", data=excel_bytes, file_name=base_name + ".xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", use_container_width=True,
@@ -301,7 +312,7 @@ def render_program_explorer():
         pdf_bytes = build_pdf_report(
             selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
             scope_display_name=scope_display_name, scope_total_postings=scope_total_postings,
-            true_gap_count=true_gap_count, strengths=_strengths(program_id),
+            true_gap_count=true_gap_count, strengths=_strengths(program_id), picture=picture,
         )
         st.download_button(
             "Download PDF", data=pdf_bytes, file_name=base_name + ".pdf",

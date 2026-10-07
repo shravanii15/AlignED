@@ -63,3 +63,15 @@ def safe_filename(text):
         return ""
     cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", str(text))
     return cleaned.strip("_")
+
+
+NAMED_WELL_AT = 0.05  # a skill counts as "named" when 5% or more of a program's courses name it
+
+
+def status_for(coverage):
+    """Plain label for how often a program's course descriptions name a skill."""
+    if coverage <= 0:
+        return "Not named"
+    if coverage < NAMED_WELL_AT:
+        return "Rarely named"
+    return "Named"
