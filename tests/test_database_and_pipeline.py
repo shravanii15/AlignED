@@ -210,7 +210,7 @@ def third_party_imports_in_tests():
     stdlib = set(sys.stdlib_module_names) if hasattr(sys, "stdlib_module_names") else set()
     # Packages inside scripts/ (e.g. scripts/ingest) are local code, not third party.
     local_packages = {d for d in os.listdir(os.path.join(BASE_DIR, "scripts")) if os.path.isdir(os.path.join(BASE_DIR, "scripts", d))}
-    local = {"conftest", "api"} | local_packages | {f[:-3] for d in ("scripts", os.path.join("scripts", "gap_analysis"), os.path.join("scripts", "extraction"), "tests", "dashboard")
+    local = {"conftest", "api", "export_sources"} | local_packages | {f[:-3] for d in ("scripts", os.path.join("scripts", "gap_analysis"), os.path.join("scripts", "extraction"), "tests", "dashboard")
                            for f in os.listdir(os.path.join(BASE_DIR, d)) if f.endswith(".py")} | {"utils", "services", "sections"}
     found = set()
     tests_dir = os.path.join(BASE_DIR, "tests")

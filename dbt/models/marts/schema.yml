@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_program_skill_gaps
+    description: One row per significant skill gap, with names, evidence strength and the matching recommendation.
+    tests:
+      - unique_combination_of_columns:
+          combination: [program_id, skill_id, cluster_id]
+    columns:
+      - name: gap_id
+        tests: [unique, not_null]
+      - name: evidence_strength
+        tests:
+          - accepted_values: {values: ['very strong', 'strong', 'moderate']}
+  - name: dim_program_summary
+    description: One row per program with size and gap totals.
+    columns:
+      - name: program_id
+        tests: [unique, not_null]
+      - name: course_count
+        tests: [not_null]
+  - name: fct_skill_market_coverage
+    description: One row per skill across programs, overall-market scope.
+    columns:
+      - name: skill_id
+        tests: [unique, not_null]

@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: stg_programs
+    columns:
+      - name: program_id
+        tests: [unique, not_null]
+      - name: program_label
+        tests: [unique, not_null]
+  - name: stg_courses
+    columns:
+      - name: course_id
+        tests: [unique, not_null]
+      - name: program_id
+        tests:
+          - not_null
+          - relationships: {to: ref('stg_programs'), field: program_id}
+  - name: stg_skills
+    columns:
+      - name: skill_id
+        tests: [unique, not_null]
+      - name: skill_name
+        tests: [unique, not_null]
+  - name: stg_role_clusters
+    columns:
+      - name: cluster_id
+        tests: [unique, not_null]
+  - name: stg_gap_scores
+    columns:
+      - name: gap_id
+        tests: [unique, not_null]
+      - name: program_id
+        tests:
+          - not_null
+          - relationships: {to: ref('stg_programs'), field: program_id}
+      - name: skill_id
+        tests:
+          - not_null
+          - relationships: {to: ref('stg_skills'), field: skill_id}
+      - name: cluster_id
+        tests:
+          - relationships: {to: ref('stg_role_clusters'), field: cluster_id}
+      - name: test_method
+        tests:
+          - not_null
+          - accepted_values: {values: ['z_test', 'fisher_exact']}
+      - name: q_value
+        tests: [not_null]
+  - name: stg_recommendations
+    columns:
+      - name: recommendation_id
+        tests: [unique, not_null]
+      - name: priority_tier
+        tests:
+          - accepted_values: {values: ['high', 'medium', 'low']}

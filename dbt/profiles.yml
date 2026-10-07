@@ -1,0 +1,8 @@
+# Profile kept in the repo so `dbt build --profiles-dir dbt` works anywhere (no secrets: it is a local file database).
+aligned:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: dbt/target/aligned.duckdb
+      threads: 2

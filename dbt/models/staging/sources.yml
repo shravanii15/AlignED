@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: aligned
+    description: Tables exported from database/aligned.db by dbt/export_sources.py.
+    meta:
+      external_location: "read_csv_auto('dbt/data/{name}.csv', header=true)"
+    tables:
+      - name: programs
+      - name: courses
+      - name: skills
+      - name: role_clusters
+      - name: gap_scores
+      - name: recommendations

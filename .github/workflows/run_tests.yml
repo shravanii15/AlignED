@@ -44,6 +44,23 @@ jobs:
       - name: Run the test suite
         run: python -m pytest tests/ -v
 
+  dbt:
+    # Builds the dbt models on the committed database and runs all 50 data tests.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dbt
+        run: pip install -r requirements-dbt.txt
+      - name: Export the tables dbt reads
+        run: python dbt/export_sources.py
+      - name: Build models and run data tests
+        run: dbt build --project-dir dbt --profiles-dir dbt
+        env:
+          DBT_SEND_ANONYMOUS_USAGE_STATS: "false"
+
   docker:
     needs: [lint, test]
     runs-on: ubuntu-latest

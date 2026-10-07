@@ -49,7 +49,7 @@ def test_pipeline_requirements_cover_what_the_pipeline_scripts_import():
 
 def test_workflows_parse_and_ci_gates_docker_on_lint_and_tests():
     ci = yaml.safe_load(_read(".github", "workflows", "run_tests.yml"))
-    assert set(ci["jobs"]) == {"lint", "test", "docker"}
+    assert set(ci["jobs"]) == {"lint", "test", "dbt", "docker"}
     assert set(ci["jobs"]["docker"]["needs"]) == {"lint", "test"}
     ingest = yaml.safe_load(_read(".github", "workflows", "fetch_adzuna.yml"))
     assert "ingest" in ingest["jobs"]
