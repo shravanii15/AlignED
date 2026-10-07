@@ -32,5 +32,8 @@ COPY scripts/ scripts/
 COPY database/schema.sql database/schema.sql
 COPY data/raw/ data/raw/
 COPY data/sample_adzuna_pull.json data/sample_adzuna_pull.json
+# The pipeline writes report files under data/gap_analysis, so the unprivileged
+# user needs to own the app folder (COPY leaves it owned by root).
+RUN mkdir -p data/gap_analysis && chown -R aligned:aligned /app
 USER aligned
 CMD ["python", "scripts/rebuild_all.py", "--derived-only"]

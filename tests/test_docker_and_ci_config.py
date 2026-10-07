@@ -58,3 +58,11 @@ def test_workflows_parse_and_ci_gates_docker_on_lint_and_tests():
 def test_secrets_never_get_baked_into_images():
     ignore = _read(".dockerignore").splitlines()
     assert ".env" in ignore
+
+
+def test_pipeline_image_user_can_write_where_the_pipeline_writes():
+    """The rebuild writes under data/gap_analysis; the image runs as a non-root
+    user, so the app folder must be owned by that user."""
+    pipeline_stage = _read("Dockerfile").split("AS pipeline", 1)[1]
+    assert "chown -R aligned" in pipeline_stage
+    assert pipeline_stage.index("chown -R aligned") < pipeline_stage.index("USER aligned")
