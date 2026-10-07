@@ -168,6 +168,19 @@ def test_database_is_opened_read_only(db_path):
         Repository(db_path)._connect().execute("DELETE FROM programs")
 
 
+def test_docs_offer_an_authorize_button_and_no_stray_key_parameter(client):
+    spec = client.get("/openapi.json").json()
+    schemes = spec["components"]["securitySchemes"]
+    assert any(s["type"] == "apiKey" and s["name"] == "X-API-Key" for s in schemes.values())
+    params = [p["name"] for p in spec["paths"]["/v1/programs"]["get"]["parameters"]]
+    assert "key" not in params and "provided" not in params
+
+
+def test_root_redirects_to_docs(client):
+    r = client.get("/", follow_redirects=False)
+    assert r.status_code == 307 and r.headers["location"] == "/docs"
+
+
 def test_openapi_documents_all_v1_routes(client):
     paths = client.get("/openapi.json").json()["paths"]
     assert {"/health", "/v1/programs", "/v1/programs/{program_id}/gaps", "/v1/clusters", "/v1/match"} <= set(paths)

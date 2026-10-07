@@ -4,7 +4,7 @@ import hmac
 import time
 from collections import defaultdict, deque
 
-from fastapi import HTTPException, Request
+from fastapi import HTTPException, Request, Security
 from fastapi.security import APIKeyHeader
 
 api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
@@ -43,12 +43,12 @@ def key_is_valid(candidate, valid_keys):
     return ok
 
 
-def require_api_key(request: Request, key: str = None):
-    """Dependency: authenticate, then rate-limit by key. Returns the key's short id for logging."""
+def require_api_key(request: Request, provided: str = Security(api_key_header)):
+    """Dependency: authenticate, then rate-limit by key. Returns the key's short id for logging.
+    Declaring the header through Security() is what adds the Authorize button to /docs."""
     settings = request.app.state.settings
     if not settings.api_keys:
         raise HTTPException(status_code=503, detail="API keys are not configured on the server.")
-    provided = request.headers.get("X-API-Key")
     if not key_is_valid(provided, settings.api_keys):
         raise HTTPException(status_code=401, detail="Missing or invalid API key.", headers={"WWW-Authenticate": "ApiKey"})
     allowed, retry_after = request.app.state.limiter.check(provided)

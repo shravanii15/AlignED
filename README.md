@@ -75,6 +75,8 @@ Built around two questions: "does this program teach what employers want?" and "
 
 ## REST API
 
+![API demo: authorize, list programs, match a job](docs/api-demo.gif)
+
 The same analysis is available over HTTP (`api/`, FastAPI). It is read-only, versioned under `/v1`, and protected by an API key.
 
 ```bash

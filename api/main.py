@@ -18,7 +18,7 @@ import time
 import uuid
 
 from fastapi import APIRouter, Depends, FastAPI, HTTPException, Query, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 
 from api.config import Settings
 from api.repository import Repository
@@ -103,6 +103,10 @@ def create_app(settings: Settings = None) -> FastAPI:
         except Exception:
             db = "unavailable"
         return {"status": "ok" if db == "ok" else "degraded", "database": db, "version": VERSION}
+
+    @app.get("/", include_in_schema=False)
+    def root():
+        return RedirectResponse("/docs")
 
     app.include_router(v1)
     return app
