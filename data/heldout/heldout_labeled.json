@@ -1,0 +1,1464 @@
+[
+  {
+    "id": "HC001",
+    "source_type": "course",
+    "identifying_info": "MGT 6203 Data Analytics in Business",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Judgment and Decision Making",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC002",
+    "source_type": "course",
+    "identifying_info": "ISYE 8803 Topics on High-dimensional Data Analytics",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Optimization software"
+      },
+      {
+        "title": "Computational statistics software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC003",
+    "source_type": "course",
+    "identifying_info": "CS 7643 Deep Learning",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC004",
+    "source_type": "course",
+    "identifying_info": "CS 6260 Applied Cryptography",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Encryption software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC005",
+    "source_type": "course",
+    "identifying_info": "CS 6238 Secure Computer Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Database security software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC006",
+    "source_type": "course",
+    "identifying_info": "CS\u00a03751 Introduction to User Interface Design",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Technology Design",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Evaluation",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "User interface design software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC007",
+    "source_type": "course",
+    "identifying_info": "CS\u00a07240 Modern Internet Research Methods",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Writing",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Speaking",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Science",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC008",
+    "source_type": "course",
+    "identifying_info": "CSE 355 Introduction to Theoretical Computer Science",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC009",
+    "source_type": "course",
+    "identifying_info": "CS\u00a0101 Intro Computing: Engrg & Sci",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Science",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC010",
+    "source_type": "course",
+    "identifying_info": "CS\u00a0447 Natural Language Processing",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "English Language",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC011",
+    "source_type": "course",
+    "identifying_info": "CS\u00a02000 Introduction to Program Design and Implementation",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Data visualization software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC012",
+    "source_type": "course",
+    "identifying_info": "CS\u00a06510 Advanced Software Development",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Coordination",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Management of Personnel Resources",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC013",
+    "source_type": "course",
+    "identifying_info": "CS\u00a07870 Seminar in Theoretical Computer Science",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Reading Comprehension",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Speaking",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC014",
+    "source_type": "course",
+    "identifying_info": "CAS CS 525 Compiler Design Theory",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Compilers"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC015",
+    "source_type": "course",
+    "identifying_info": "CAS CS 565 Algorithmic Data Mining",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC016",
+    "source_type": "course",
+    "identifying_info": "CAS CS 660 Graduate Introduction to Database Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL"
+      },
+      {
+        "title": "Relational database management software"
+      },
+      {
+        "title": "Database management software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC017",
+    "source_type": "course",
+    "identifying_info": "COMP SCI 471 Introduction To Computational Statistics",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Computational statistics software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC018",
+    "source_type": "course",
+    "identifying_info": "COMP SCI 762 Advanced Deep Learning",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC019",
+    "source_type": "course",
+    "identifying_info": "CMSC477 Robotics Perception and Planning",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Physics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC020",
+    "source_type": "course",
+    "identifying_info": "CMSC724 Database Management Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Distributed database management software"
+      },
+      {
+        "title": "Database management software"
+      },
+      {
+        "title": "Parallel systems software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HC021",
+    "source_type": "course",
+    "identifying_info": "CMSC801 Department Internal Research Seminar",
+    "essential_skills_or_knowledge": [],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC022",
+    "source_type": "course",
+    "identifying_info": "ENPM637 Managing Software Engineering Projects",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Administration and Management",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Management of Personnel Resources",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Coordination",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC023",
+    "source_type": "course",
+    "identifying_info": "ENPM645 Human-Robot Interaction",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Psychology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Sociology and Anthropology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC024",
+    "source_type": "course",
+    "identifying_info": "ENPM703 Fundamentals of AI and Deep Learning",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC025",
+    "source_type": "course",
+    "identifying_info": "DAAN 810 Artificial Intelligence in Practice",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC026",
+    "source_type": "course",
+    "identifying_info": "DAAN 820 Generative Artificial Intelligence",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC027",
+    "source_type": "course",
+    "identifying_info": "CSE 452 Introduction to Distributed Systems",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC028",
+    "source_type": "course",
+    "identifying_info": "CSE 582 Ethics in Artificial Intelligence",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Critical Thinking",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Sociology and Anthropology",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC029",
+    "source_type": "course",
+    "identifying_info": "ECE 544 Analysis of Societal Networks",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HC030",
+    "source_type": "course",
+    "identifying_info": "ECE 564 Estimation, Filtering, and Detection",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Telecommunications",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HP001",
+    "source_type": "posting",
+    "identifying_info": "Network Engineer",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Telecommunications",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Writing",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python"
+      },
+      {
+        "title": "Wireshark"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP002",
+    "source_type": "posting",
+    "identifying_info": "Sr. Software Engineer- Warehousing Modernization",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Troubleshooting",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Writing",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Administration and Management",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft Excel"
+      },
+      {
+        "title": "Microsoft Word"
+      },
+      {
+        "title": "Microsoft PowerPoint"
+      },
+      {
+        "title": "Microsoft Visio"
+      },
+      {
+        "title": "Microsoft Project"
+      },
+      {
+        "title": "Database management software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP003",
+    "source_type": "posting",
+    "identifying_info": "Communications and Network Engineer - Early Career",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Telecommunications",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Simulation software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP004",
+    "source_type": "posting",
+    "identifying_info": "Radio Access Network Engineer",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Telecommunications",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Troubleshooting",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "UNIX"
+      },
+      {
+        "title": "Linux"
+      },
+      {
+        "title": "Microsoft Excel"
+      },
+      {
+        "title": "Microsoft Visual Basic for Applications VBA"
+      },
+      {
+        "title": "Operating system shells"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP005",
+    "source_type": "posting",
+    "identifying_info": "Information Security Consultant",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Evaluation",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Critical Thinking",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Writing",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Speaking",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Judgment and Decision Making",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HP006",
+    "source_type": "posting",
+    "identifying_info": "Business Intelligence Consultant",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft Power BI"
+      },
+      {
+        "title": "Structured query language SQL"
+      },
+      {
+        "title": "Data visualization software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP007",
+    "source_type": "posting",
+    "identifying_info": "Associate Cybersecurity Engineer",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Monitoring",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Judgment and Decision Making",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Security incident management software"
+      },
+      {
+        "title": "MITRE ATT&CK software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP008",
+    "source_type": "posting",
+    "identifying_info": "Systems Administrator",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Troubleshooting",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Customer and Personal Service",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Monitoring",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "SAP software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP009",
+    "source_type": "posting",
+    "identifying_info": "Web Developer",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Writing",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Evaluation",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "JavaScript"
+      },
+      {
+        "title": "React"
+      },
+      {
+        "title": "React Redux"
+      },
+      {
+        "title": "Node.js"
+      },
+      {
+        "title": "C#"
+      },
+      {
+        "title": "Oracle Java"
+      },
+      {
+        "title": "Go"
+      },
+      {
+        "title": "Source code management SCM software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP010",
+    "source_type": "posting",
+    "identifying_info": "Middleware Systems Administrator",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Administration and Management",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Coordination",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Persuasion",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Speaking",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "IBM WebSphere MQ"
+      },
+      {
+        "title": "IBM WebSphere"
+      },
+      {
+        "title": "Apache Kafka"
+      },
+      {
+        "title": "Amazon Web Services AWS software"
+      },
+      {
+        "title": "Puppet"
+      },
+      {
+        "title": "BMC Software Control-M"
+      },
+      {
+        "title": "Oracle Java"
+      },
+      {
+        "title": "Microsoft PowerShell"
+      },
+      {
+        "title": "Python"
+      },
+      {
+        "title": "Node.js"
+      },
+      {
+        "title": "Microsoft Windows"
+      },
+      {
+        "title": "Linux"
+      },
+      {
+        "title": "Microsoft PowerPoint"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP011",
+    "source_type": "posting",
+    "identifying_info": "Business Intelligence Consultant",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Complex Problem Solving",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Time Management",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft Power BI"
+      },
+      {
+        "title": "Structured query language SQL"
+      },
+      {
+        "title": "Data visualization software"
+      },
+      {
+        "title": "Microsoft Azure software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP012",
+    "source_type": "posting",
+    "identifying_info": "DevOps Consultant",
+    "essential_skills_or_knowledge": [],
+    "essential_technologies": [
+      {
+        "title": "Python"
+      },
+      {
+        "title": "Flask"
+      },
+      {
+        "title": "Google Cloud software"
+      },
+      {
+        "title": "BigQuery"
+      },
+      {
+        "title": "Jenkins CI"
+      },
+      {
+        "title": "Kubernetes"
+      },
+      {
+        "title": "Docker"
+      },
+      {
+        "title": "Git"
+      },
+      {
+        "title": "Elasticsearch"
+      },
+      {
+        "title": "RESTful API"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP013",
+    "source_type": "posting",
+    "identifying_info": "System And Database Administrator",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Troubleshooting",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Evaluation",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Education and Training",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Telecommunications",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Repairing",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft Access"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP014",
+    "source_type": "posting",
+    "identifying_info": "Systems Administrator/DBA",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Troubleshooting",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Writing",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "IBM WebSphere"
+      },
+      {
+        "title": "IBM WebSphere MQ"
+      },
+      {
+        "title": "IBM FileNet Content Manager"
+      },
+      {
+        "title": "IBM DB2"
+      },
+      {
+        "title": "Perforce software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP015",
+    "source_type": "posting",
+    "identifying_info": "Staff Data Scientist",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Critical Thinking",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Speaking",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Administration and Management",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Education and Training",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python"
+      },
+      {
+        "title": "R"
+      },
+      {
+        "title": "Oracle Java"
+      },
+      {
+        "title": "Apache Hadoop"
+      },
+      {
+        "title": "Apache Spark"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP016",
+    "source_type": "posting",
+    "identifying_info": "Language Data Scientist, Artificial General Intelligence (AGI)",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Mathematics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Structured query language SQL"
+      },
+      {
+        "title": "Python"
+      },
+      {
+        "title": "R"
+      },
+      {
+        "title": "SAS"
+      },
+      {
+        "title": "The MathWorks MATLAB"
+      },
+      {
+        "title": "Perl"
+      },
+      {
+        "title": "Statistical software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP017",
+    "source_type": "posting",
+    "identifying_info": "Machine Learning Engineer",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Evaluation",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [],
+    "optional": []
+  },
+  {
+    "id": "HP018",
+    "source_type": "posting",
+    "identifying_info": "Senior Cloud Engineer - GCP",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Systems Analysis",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Troubleshooting",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Monitoring",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Education and Training",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Engineering and Technology",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Complex Problem Solving",
+        "onet_category": "skill"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Google Cloud software"
+      },
+      {
+        "title": "Kubernetes"
+      },
+      {
+        "title": "Docker"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP019",
+    "source_type": "posting",
+    "identifying_info": "Data Engineer",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Programming",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Troubleshooting",
+        "onet_category": "skill"
+      },
+      {
+        "name": "Education and Training",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Design",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Economics and Accounting",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Microsoft SQL Server"
+      },
+      {
+        "title": "Transact-SQL"
+      },
+      {
+        "title": "Structured query language SQL"
+      },
+      {
+        "title": "Microsoft .NET Framework"
+      },
+      {
+        "title": "Microsoft Visual Studio"
+      },
+      {
+        "title": "RESTful API"
+      },
+      {
+        "title": "Microsoft SQL Server Reporting Services SSRS"
+      },
+      {
+        "title": "Microsoft PowerShell"
+      },
+      {
+        "title": "Perl"
+      },
+      {
+        "title": "Python"
+      },
+      {
+        "title": "Database management software"
+      }
+    ],
+    "optional": []
+  },
+  {
+    "id": "HP020",
+    "source_type": "posting",
+    "identifying_info": "Information Security Engineer",
+    "essential_skills_or_knowledge": [
+      {
+        "name": "Public Safety and Security",
+        "onet_category": "knowledge"
+      },
+      {
+        "name": "Computers and Electronics",
+        "onet_category": "knowledge"
+      }
+    ],
+    "essential_technologies": [
+      {
+        "title": "Python"
+      },
+      {
+        "title": "Microsoft PowerShell"
+      },
+      {
+        "title": "Kubernetes"
+      },
+      {
+        "title": "Splunk Enterprise"
+      }
+    ],
+    "optional": []
+  }
+]

@@ -1,0 +1,4 @@
+Names that are not in the vocabulary (left out of scoring if you accept them):
+HP012: Helm
+HP014: IBM Datacap, CA Workload Automation
+HP020: Terraform

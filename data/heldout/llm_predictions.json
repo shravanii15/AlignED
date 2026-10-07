@@ -1,0 +1,941 @@
+[
+  {
+    "id": "HC001",
+    "predicted_skills": [
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Machine Learning",
+      "SQL"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC002",
+    "predicted_skills": [
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Machine Learning",
+      "SQL",
+      "Convex Optimization",
+      "Linear Optimization"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC003",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "PyTorch",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Deep Learning",
+      "Python",
+      "PyTorch",
+      "Machine Learning",
+      "Artificial Neural Networks",
+      "Convolutional Neural Networks",
+      "Recurrent Neural Networks",
+      "Gradient Descent",
+      "Backpropagation"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC004",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Cryptography",
+      "Hash Functions",
+      "Symmetric Encryption",
+      "PKI",
+      "Public-Key Encryption",
+      "Digital Signatures"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC005",
+    "predicted_skills": [
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      },
+      {
+        "term": "Amazon Web Services AWS software",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Security",
+      "SQL",
+      "AWS"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC006",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Human-Computer Interaction",
+      "User Interface Design",
+      "Computational Systems"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC007",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Database Administration",
+      "Internet Research"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC008",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Formal Language Theory",
+      "Automata",
+      "Turing Machines",
+      "Decidability",
+      "Undecidability",
+      "Recursive Function Theory",
+      "Complexity Theory"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC009",
+    "predicted_skills": [
+      {
+        "term": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "raw_terms": [
+      "Computing",
+      "Mathematics",
+      "Algorithms",
+      "Data Structures"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC010",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Linguistics",
+      "Morphology",
+      "Lexical Semantics",
+      "Syntax",
+      "Compositional Semantics",
+      "CS",
+      "Math",
+      "CS",
+      "ECE",
+      "STAT",
+      "BIOE"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC011",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Python",
+      "Data Analysis",
+      "Graph Construction",
+      "Database",
+      "Ethics"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC012",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Software Design",
+      "Team Collaboration",
+      "Database Administration"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC013",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Theoretical Computer Science"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC014",
+    "predicted_skills": [
+      {
+        "term": "Mathematics",
+        "type": "knowledge"
+      }
+    ],
+    "raw_terms": [
+      "Compiler Design",
+      "Mathematics",
+      "CASCS 320",
+      "CASCS 332"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC015",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Data Mining",
+      "Classification",
+      "Clustering",
+      "Association",
+      "Correlation",
+      "Outlier Detection",
+      "Python",
+      "SQL"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC016",
+    "predicted_skills": [
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "SQL",
+      "Relational Algebra",
+      "Relational Calculus",
+      "QBE",
+      "Database Administration",
+      "File Organization",
+      "Indexing",
+      "Hashing",
+      "Query Optimization",
+      "Transaction Processing",
+      "Concurrency Control",
+      "Recovery",
+      "Integrity",
+      "Security"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC017",
+    "predicted_skills": [],
+    "raw_terms": [],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC018",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Deep Learning",
+      "Neural Architecture Design",
+      "Robustness and Reliability",
+      "Lifelong Machine Learning",
+      "Deep Generative Modeling",
+      "Interpretable Deep Learning"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC019",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Geometry",
+      "Optimization",
+      "Python",
+      "Statistics",
+      "Bayesian Filters",
+      "Kalman Filters",
+      "Machine Learning",
+      "Computer Vision",
+      "Robotics",
+      "Dynamics",
+      "Control Systems",
+      "Graph Theory",
+      "Hough Transform",
+      "RANSAC",
+      "Machine Learning",
+      "Optical Flow",
+      "Visual Recognition",
+      "Deep Learning"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC020",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Database Administration",
+      "Distributed Databases",
+      "Parallel Databases",
+      "Client-Server Architectures",
+      "Multimedia Access Methods",
+      "Query Optimization",
+      "Data Semantics",
+      "Object-Oriented Databases",
+      "Deductive Database Systems",
+      "Expert Database Systems"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC021",
+    "predicted_skills": [],
+    "raw_terms": [],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC022",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Agile Project Management",
+      "SAFe 4.0",
+      "DevOps",
+      "Software Development Life Cycle",
+      "Project Management"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC023",
+    "predicted_skills": [],
+    "raw_terms": [],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC024",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Machine Learning",
+      "Convolution Networks",
+      "Recurrent Neural Networks",
+      "Back Propagation",
+      "Loss Functions",
+      "Batch Gradient Descent",
+      "Stochastic Optimization"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC025",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing",
+      "Computer Vision",
+      "Reinforcement Learning"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC026",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Generative AI",
+      "Low-Code/No-Code Tools",
+      "Ethics"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC027",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Cloud Computing",
+      "Distributed Systems",
+      "Database Administration"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC028",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Ethics",
+      "Machine Learning",
+      "Research"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC029",
+    "predicted_skills": [],
+    "raw_terms": [],
+    "call_succeeded": true
+  },
+  {
+    "id": "HC030",
+    "predicted_skills": [],
+    "raw_terms": [],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP001",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Wireshark",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Python",
+      "Networking",
+      "SDLC",
+      "Systems Engineering",
+      "IT Performance Management",
+      "IT Operations",
+      "Operational Monitoring",
+      "Security Monitoring",
+      "KPIs",
+      "IT Infrastructure",
+      "ITILv3",
+      "Wireshark"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP002",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Python",
+      "Data Analysis",
+      "Database Administration",
+      "Enterprise Resource Planning",
+      "Supply Chain Management",
+      "IT Project Management",
+      "Security Best Practices",
+      "Visio",
+      "PowerPoint",
+      "Excel"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP003",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "RF",
+      "Python",
+      "Network Analysis",
+      "DSP",
+      "Antenna Design",
+      "Spectrum Analysis",
+      "Signal Processing",
+      "Networking"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP004",
+    "predicted_skills": [
+      {
+        "term": "UNIX",
+        "type": "technology"
+      },
+      {
+        "term": "Linux",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "RAN",
+      "Scripting",
+      "UNIX",
+      "Linux",
+      "Microsoft Office",
+      "Excel",
+      "VB"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP005",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Security Assessment",
+      "Networking",
+      "Data Protection",
+      "Database Administration"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP006",
+    "predicted_skills": [
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      },
+      {
+        "term": "Microsoft Power BI",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Power BI",
+      "SQL",
+      "Microsoft Power BI"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP007",
+    "predicted_skills": [],
+    "raw_terms": [
+      "Cybersecurity",
+      "SIEM",
+      "Regex",
+      "Regular Expressions",
+      "YARA",
+      "Cloud Access Security Broker",
+      "Data Loss Prevention",
+      "Information Rights Management",
+      "Network Detection and Response",
+      "Security Orchestration",
+      "Automation and Response",
+      "Web Application Firewall",
+      "Web Security",
+      "Email Security"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP008",
+    "predicted_skills": [
+      {
+        "term": "Linux",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Linux",
+      "Windows",
+      "SAP",
+      "Transport Domain",
+      "Transport Group",
+      "Transport Layer",
+      "Transport Paths",
+      "Database Administration",
+      "Transport",
+      "Error Analysis",
+      "Client Copy"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP009",
+    "predicted_skills": [
+      {
+        "term": "JavaScript",
+        "type": "technology"
+      },
+      {
+        "term": "React",
+        "type": "technology"
+      },
+      {
+        "term": "C#",
+        "type": "technology"
+      },
+      {
+        "term": "Go",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "JavaScript",
+      "React",
+      "Redux",
+      "Rxjs",
+      "Source Code Management",
+      "Release Pipelines",
+      "C#",
+      "Nodejs",
+      "Java",
+      "Go",
+      "React"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP010",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Node.js",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Middleware",
+      "Database Administration",
+      "IT Project Management",
+      "Confluent Kafka",
+      "Cloud AWS",
+      "PowerPoint",
+      "Java",
+      "PowerShell",
+      "Python",
+      "Node.js",
+      "Scripting",
+      "Windows",
+      "RHEL"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP011",
+    "predicted_skills": [
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Power BI",
+      "DAX",
+      "SQL",
+      "Supply Chain Management",
+      "Data Analytics",
+      "Data Visualization",
+      "Agile Methodologies",
+      "Project Management",
+      "Microsoft Azure",
+      "Supply Chain Operations"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP012",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Flask",
+        "type": "technology"
+      },
+      {
+        "term": "Kubernetes",
+        "type": "technology"
+      },
+      {
+        "term": "Docker",
+        "type": "technology"
+      },
+      {
+        "term": "Git",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Python",
+      "REST API",
+      "Flask",
+      "GCP",
+      "GKE",
+      "Big Query",
+      "Big Table",
+      "Pub/Sub",
+      "Networking",
+      "Looker",
+      "Jenkins",
+      "Pipelines",
+      "Kubernetes",
+      "Helm",
+      "Docker",
+      "Shell",
+      "Git",
+      "Elastic Search",
+      "Logstash",
+      "Istio",
+      "Anthos"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP013",
+    "predicted_skills": [
+      {
+        "term": "Microsoft Access",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Microsoft Access",
+      "API",
+      "Database Administration",
+      "Fixed Asset System",
+      "Data Migration",
+      "Data Cleanup",
+      "Database Backup",
+      "Security Permissions",
+      "Networking",
+      "Hardware Installation",
+      "Software Installation"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP014",
+    "predicted_skills": [
+      {
+        "term": "Bash",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Websphere",
+      "DB2",
+      "FileNet",
+      "IBM MQ",
+      "Datacap",
+      "Bash",
+      "Ksh",
+      "Scripting",
+      "Perforce",
+      "CA Workload Automation",
+      "System Administration"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP015",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "R",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Data Science",
+      "Machine Learning",
+      "Python",
+      "Bayesian",
+      "Statistical Modelling",
+      "Java",
+      "R",
+      "Hadoop",
+      "Spark"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP016",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Python",
+      "Machine Learning",
+      "Data Science",
+      "Statistics",
+      "SQL",
+      "Database Administration"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP017",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Machine Learning",
+      "Deep Learning",
+      "Edge AI",
+      "Python",
+      "Accelerators",
+      "Image/Video Generation",
+      "Multimedia",
+      "Java",
+      "SQL"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP018",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Monitoring",
+        "type": "skill"
+      }
+    ],
+    "raw_terms": [
+      "GCP",
+      "Cloud Architecture",
+      "Security",
+      "Networking",
+      "Virtualization",
+      "Containers",
+      "Microservices",
+      "Python",
+      "Java",
+      "Scripting",
+      "ITIL",
+      "Operations Management",
+      "Monitoring",
+      "Log Analysis",
+      "Vendor Management",
+      "Cloud Security"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP019",
+    "predicted_skills": [
+      {
+        "term": "Structured query language SQL",
+        "type": "technology"
+      },
+      {
+        "term": "Microsoft transact-structural query language T-SQL",
+        "type": "technology"
+      },
+      {
+        "term": "Perl",
+        "type": "technology"
+      },
+      {
+        "term": "Python",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "SQL",
+      "MS SQL Server",
+      "T-SQL",
+      ".NET Framework",
+      "Visual Studio",
+      "ETL",
+      "SSAS",
+      "SSRS",
+      "SSIS",
+      "DAC",
+      "PowerShell",
+      "Perl",
+      "Python",
+      "Agile",
+      "Database Administration",
+      "Cloud",
+      "On-prem"
+    ],
+    "call_succeeded": true
+  },
+  {
+    "id": "HP020",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Kubernetes",
+        "type": "technology"
+      }
+    ],
+    "raw_terms": [
+      "Prisma Cloud",
+      "Python",
+      "PowerShell",
+      "Terraform",
+      "Kubernetes",
+      "DevSecOps",
+      "Splunk",
+      "IAM",
+      "API",
+      "IaC",
+      "PaC",
+      "CISSP",
+      "GIAC",
+      "Agile Scrum",
+      "Kanban",
+      "CIS",
+      "NIST"
+    ],
+    "call_succeeded": true
+  }
+]

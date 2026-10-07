@@ -1,0 +1,61 @@
+{
+  "num_items": 50,
+  "baseline": {
+    "true_positives": 56,
+    "false_positives": 31,
+    "false_negatives": 217,
+    "precision": 0.6436781609195402,
+    "recall": 0.20512820512820512,
+    "f1": 0.31111111111111106
+  },
+  "llm": {
+    "true_positives": 32,
+    "false_positives": 18,
+    "false_negatives": 241,
+    "precision": 0.64,
+    "recall": 0.11721611721611722,
+    "f1": 0.1981424148606811
+  },
+  "f1_difference_llm_minus_baseline": -0.11296869625042996,
+  "bootstrap_rounds": 5000,
+  "baseline_f1_ci95": [
+    0.23423423423423423,
+    0.3765903307888041
+  ],
+  "llm_f1_ci95": [
+    0.12549019607843137,
+    0.26999999999999996
+  ],
+  "difference_ci95": [
+    -0.1774474004520953,
+    -0.04560021727322111
+  ],
+  "verdict": "Keyword baseline better than LLM (95% interval for the difference is below zero)",
+  "development_set": {
+    "num_gold_items": 104,
+    "baseline": {
+      "true_positives": 130,
+      "false_positives": 121,
+      "false_negatives": 334,
+      "precision": 0.5179282868525896,
+      "recall": 0.2801724137931034,
+      "f1": 0.36363636363636365
+    },
+    "llm": {
+      "true_positives": 190,
+      "false_positives": 239,
+      "false_negatives": 274,
+      "precision": 0.4428904428904429,
+      "recall": 0.40948275862068967,
+      "f1": 0.425531914893617
+    },
+    "f1_improvement_llm_minus_baseline": 0.06189555125725338
+  },
+  "frozen_code_sha256": {
+    "extract_baseline.py": "93fe109b08b9f940d32926d2c88471390a034d43c94f32991f0c886be646e7f7",
+    "extract_llm.py": "5e17af4856c77f67d274d12e318582aa2f68fd8c4cf4d0236681caf7c49ed827",
+    "extract_common.py": "ad7c2e501a686a7cde9d66f4fca61b79f38cd22c6defb1c228679d7be1590997",
+    "renormalize.py": "ef1bbec8416bda4cff02a0ec75d61a290a5f7f937584c09aa5bbe228c9088cc4"
+  },
+  "labels_sha256": "d31630e5293ba0236b140be07d36ba242c956b891ee0349dbd9d7a8b64f69008"
+}

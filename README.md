@@ -17,7 +17,7 @@ AlignED compares 1,378 course descriptions from 13 graduate programs against 1,6
 - **170 significant skill gaps** across the 13 programs (two-proportion z-test, or Fisher's exact test for small counts, with Benjamini-Hochberg FDR correction).
 - **Hands-on tools are the consistent gap.** Python, Docker, Kubernetes, Linux, Git and Tableau are under-covered in most programs, often by 10 to 40 percentage points.
 - **No demand trend survived correction.** 9 of 67 skills looked significant on a raw p-value and 0 held up after FDR correction, so the trends page labels them early hints.
-- **An LLM edged out a keyword baseline** on a 104-item hand-labeled set (F1 0.426 vs. 0.364). It had higher recall and lower precision, and it was too slow on consumer hardware, so the full-scale run used the keyword method. See Limitations for the caveats on this benchmark.
+- **The keyword baseline beat the LLM on a fresh test.** On the 104 items used while the methods were built, the LLM scored higher (F1 0.426 vs. 0.364). On 50 new items labeled before either method ran, the order reversed: keyword baseline F1 0.311 (95% interval 0.234 to 0.377) against LLM 0.198 (0.125 to 0.270). The 95% interval for the difference, -0.177 to -0.046, excludes zero. The full-scale pipeline uses the keyword method, which this result supports. See Limitations for the caveats.
 
 ## Screenshots
 
@@ -35,7 +35,7 @@ AlignED compares 1,378 course descriptions from 13 graduate programs against 1,6
 | Job postings used for gap scoring | 1,660 (category-balanced sample) |
 | Significant skill gaps | 170 in the overall-market scope |
 | Recommendations | 69 overall-market, 724 across all program and job-family scopes |
-| Skill extraction benchmark | LLM F1 0.426 vs. keyword baseline 0.364, on 104 hand-labeled items |
+| Skill extraction benchmark | Held-out, 50 new items: keyword F1 0.311 vs. LLM 0.198. Development set, 104 items: LLM 0.426 vs. keyword 0.364 |
 | Skills with a confirmed demand trend | 0 of 67 after FDR correction |
 
 ## How it works
@@ -66,6 +66,7 @@ Built around two questions: "does this program teach what employers want?" and "
   - Loaded Adzuna postings never change a dashboard number. Gap scores and trends use only the Kaggle historical sample.
 - **Orchestration with Prefect** (`scripts/orchestration/flows.py`). A daily flow runs ingest, then the integrity check, then the derived-table rebuild, and publishes a run report. A failed fetch is retried (3 times, 60 s apart) but a data-quality failure is not, since fetching the same bad data again would not fix it. A backfill flow replays every raw snapshot in order and is safe to repeat. Failed runs call an alert hook that posts to a webhook when `ALERT_WEBHOOK_URL` is set. Run it with `python scripts/orchestration/flows.py daily`, or `serve` to run on a schedule.
 - **dbt models with data tests** (`dbt/`). The analytics layer is modelled in dbt (DuckDB): staging views over the exported tables, then three marts (`fct_program_skill_gaps`, `dim_program_summary`, `fct_skill_market_coverage`). 50 checks run on every build: keys unique and not null, foreign keys resolve, accepted values, plus rules written for this project (every gap has q < 0.05, gap equals demand minus coverage, rates are proportions, no program or scope with gaps is left without recommendations). Run it with `python dbt/export_sources.py && dbt build --project-dir dbt --profiles-dir dbt`; CI runs it too.
+- **Held-out evaluation** (`data/heldout/`, protocol in `PROTOCOL.md`). A fresh sample of 50 items (30 courses, 20 postings), none from the development set, labeled before the methods ran (AI-drafted, then checked by a human, enforced by the importer) and scored once with settings frozen. Paired-bootstrap 95% intervals are reported for each F1 and for the difference, and hashes of the extractor code and labels are stored in `heldout_results.json`. Result: keyword baseline 0.311 vs. LLM 0.198 (see Key results). By source: on postings the LLM was more precise (0.78 vs. 0.66) but found fewer skills (recall 0.16 vs. 0.24); on courses it found almost none (recall 0.03).
 - **Rebuild and validation.** `scripts/rebuild_all.py` recomputes the derived tables on a temporary copy, runs `scripts/validate_database.py` (foreign keys, duplicates, gap and recommendation invariants, trend consistency, ingestion audit) and swaps the result in atomically.
 - **Fail-closed evaluation.** The extraction benchmark refuses to publish metrics unless predictions cover exactly the gold-set items.
 - **Schema.** `database/schema.sql` is the source of truth, with enforced foreign keys and additive migrations.
@@ -138,7 +139,7 @@ The 170 gaps in the results table are the overall-market scope. The database hol
 - **Coverage is a text signal.** "Covered" means a skill name appears in a course description, not that it is taught in depth. "Demand" means it appears in the sampled postings.
 - **The posting sample is category-balanced**, not proportional to the real labor market, so demand figures describe this sample only.
 - **Corpus sizes differ by program**, which affects coverage rates.
-- **The benchmark is internal.** The 0.426 vs. 0.364 comparison uses the same 104 items used during development, not a held-out set. The LLM's raw answers were matched to the taxonomy by embedding similarity, which can confuse near neighbors (SQL with MySQL, for example). The matching step now tries exact, alias and spelling-variant matches first and blocks known confusions, and the benchmark numbers above were re-run after that change.
+- **Read the benchmark with care.** The 0.426 vs. 0.364 result is on the development set, which the methods were tuned on, so it is optimistic. The held-out result (keyword 0.311, LLM 0.198) is the more trustworthy one, but it has limits: 50 items give wide intervals; the labels were drafted by an AI and checked by one human (no second annotator, and a reviewer can anchor on a draft); the development labels also included lower-priority "optional" skills while the held-out labels did not; and the O*NET skill list has no entry for subjects such as machine learning or statistics, so both methods have low recall (about 0.2 and 0.1). The reversal could come from the similarity threshold having been tuned on the development set, from the different labeling style, or from chance, and this data cannot tell which. The matching step tries exact, alias and spelling-variant matches first and blocks known confusions (SQL with MySQL, for example).
 - **The dashboard reads a snapshot.** The daily job now loads new postings into SQLite with validation and deduplication, but the committed database is updated only when a snapshot is replayed into it, and the live postings are not part of gap scoring or trends. Content-based deduplication also treats one posting listed in several cities as a single posting, which is right for measuring skill demand and wrong for counting openings.
 - **Trend detection** uses about 124,000 historical postings, restricted to the weeks with enough volume (68% were dated to a single week by a collection artifact), and no trend is confirmed after correction.
 
@@ -159,7 +160,7 @@ Dockerfile, docker-compose.yml, requirements-*.txt
 
 ## What I would build next
 
-Held-out evaluation with confidence intervals, a hosted Prefect deployment, and raw snapshots stored in object storage.
+A larger skill vocabulary and a second annotator for the held-out set, a hosted Prefect deployment, and raw snapshots stored in object storage.
 
 ## Author
 

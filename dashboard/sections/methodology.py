@@ -70,26 +70,32 @@ def render_methodology():
     with card_col3:
         with st.container(border=True):
             st.markdown("**Extraction method**")
-            st.caption("Local LLM vs. keyword baseline. LLM F1 0.426, keyword 0.364.")
+            st.caption("Local LLM vs. keyword baseline. On new test items the keyword method won: F1 0.311 vs. 0.198.")
             with st.expander("Detail"):
                 st.markdown(
                     """
-                    A local model (Ollama) was compared with a keyword-matching baseline on a 104-item
-                    hand-labeled set:
+                    A local model (Ollama) was compared with a keyword-matching baseline twice.
 
-                    | Method | Precision | Recall | F1 |
-                    |---|---|---|---|
-                    | Keyword baseline | 0.518 | 0.280 | 0.364 |
-                    | LLM + embeddings | 0.443 | 0.409 | **0.426** |
+                    **Fresh test (50 new items, labeled before either method ran):**
 
-                    The LLM scored higher on F1, which balances precision and recall. Running it over all
-                    1,378 courses and the postings would take hours on consumer hardware, so the keyword
-                    method is used at full scale.
+                    | Method | Precision | Recall | F1 | 95% interval for F1 |
+                    |---|---|---|---|---|
+                    | Keyword baseline | 0.644 | 0.205 | **0.311** | 0.234 to 0.377 |
+                    | LLM + embeddings | 0.640 | 0.117 | 0.198 | 0.125 to 0.270 |
 
-                    **Limits of the benchmark:** the 104 labels (52 courses, 52 postings) come from a single
-                    annotator with no inter-annotator agreement score, and the similarity threshold was
-                    tuned on the same set it was scored on. Treat it as an internal comparison of the two
-                    methods, not an independent held-out evaluation.
+                    The keyword method was better, and the 95% interval for the difference (-0.177 to
+                    -0.046) does not include zero.
+
+                    **Development set (104 items the methods were built on):** LLM F1 0.426, keyword 0.364.
+                    That result is optimistic, because the similarity cutoff was tuned on those same items.
+
+                    The keyword method is also the one used at full scale: running the LLM over all 1,378
+                    courses and the postings would take hours on consumer hardware.
+
+                    **Limits:** only 50 fresh items; their labels were drafted by an AI and checked by one
+                    human; the skill list (O*NET) has no entry for subjects such as machine learning, so both
+                    methods miss a lot (recall about 0.2 and 0.1). The change between the two tests could
+                    come from tuning, from labeling style or from chance, and these data cannot tell which.
                     """
                 )
 
@@ -141,10 +147,12 @@ def render_methodology():
             "68% of the roughly 124,000 postings are dated to a single final week, most likely a "
             "data-collection artifact. Trend analysis uses only the 6 weeks with at least 100 postings."
         )
-    with st.expander("The benchmark is not a held-out evaluation"):
+    with st.expander("The development benchmark is optimistic"):
         st.markdown(
-            "The embedding similarity cutoff was tuned on the same 104 items used for final reporting. "
-            "A separate held-out set would be the standard approach and is a planned improvement."
+            "The embedding similarity cutoff was tuned on the same 104 items used for the first benchmark, "
+            "so that result (LLM 0.426, keyword 0.364) is optimistic. A fresh 50-item test, labeled before "
+            "either method ran, reversed it (keyword 0.311, LLM 0.198). Treat the fresh test as the "
+            "more trustworthy result."
         )
     with st.expander("The analysis is a snapshot"):
         st.markdown(

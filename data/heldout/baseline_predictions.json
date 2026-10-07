@@ -1,0 +1,584 @@
+[
+  {
+    "id": "HC001",
+    "predicted_skills": [
+      {
+        "term": "C",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HC002",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC003",
+    "predicted_skills": [
+      {
+        "term": "Programming",
+        "type": "skill"
+      },
+      {
+        "term": "Mathematics",
+        "type": "skill"
+      },
+      {
+        "term": "PyTorch",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HC004",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      }
+    ]
+  },
+  {
+    "id": "HC005",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      }
+    ]
+  },
+  {
+    "id": "HC006",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      }
+    ]
+  },
+  {
+    "id": "HC007",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC008",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC009",
+    "predicted_skills": [
+      {
+        "term": "Programming",
+        "type": "skill"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HC010",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC011",
+    "predicted_skills": [
+      {
+        "term": "Programming",
+        "type": "skill"
+      },
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HC012",
+    "predicted_skills": [
+      {
+        "term": "Programming",
+        "type": "skill"
+      },
+      {
+        "term": "Design",
+        "type": "knowledge"
+      }
+    ]
+  },
+  {
+    "id": "HC013",
+    "predicted_skills": [
+      {
+        "term": "Science",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HC014",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "Compilers",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HC015",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC016",
+    "predicted_skills": [
+      {
+        "term": "Database management systems",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HC017",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC018",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      }
+    ]
+  },
+  {
+    "id": "HC019",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC020",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC021",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC022",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC023",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC024",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC025",
+    "predicted_skills": [
+      {
+        "term": "Programming",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HC026",
+    "predicted_skills": [
+      {
+        "term": "Programming",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HC027",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC028",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      }
+    ]
+  },
+  {
+    "id": "HC029",
+    "predicted_skills": []
+  },
+  {
+    "id": "HC030",
+    "predicted_skills": []
+  },
+  {
+    "id": "HP001",
+    "predicted_skills": [
+      {
+        "term": "Monitoring",
+        "type": "skill"
+      },
+      {
+        "term": "Writing",
+        "type": "skill"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      },
+      {
+        "term": "Wireshark",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP002",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HP003",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "R",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP004",
+    "predicted_skills": [
+      {
+        "term": "Telecommunications",
+        "type": "knowledge"
+      },
+      {
+        "term": "Linux",
+        "type": "technology"
+      },
+      {
+        "term": "UNIX",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP005",
+    "predicted_skills": []
+  },
+  {
+    "id": "HP006",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "Microsoft Power BI",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP007",
+    "predicted_skills": [
+      {
+        "term": "Monitoring",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HP008",
+    "predicted_skills": [
+      {
+        "term": "C",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP009",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "Geography",
+        "type": "knowledge"
+      },
+      {
+        "term": "C",
+        "type": "technology"
+      },
+      {
+        "term": "Go",
+        "type": "technology"
+      },
+      {
+        "term": "React",
+        "type": "technology"
+      },
+      {
+        "term": "JavaScript",
+        "type": "technology"
+      },
+      {
+        "term": "C#",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP010",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      },
+      {
+        "term": "Node.js",
+        "type": "technology"
+      },
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Puppet",
+        "type": "technology"
+      },
+      {
+        "term": "IBM WebSphere",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP011",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HP012",
+    "predicted_skills": [
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Docker",
+        "type": "technology"
+      },
+      {
+        "term": "Kubernetes",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP013",
+    "predicted_skills": [
+      {
+        "term": "Monitoring",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": "HP014",
+    "predicted_skills": [
+      {
+        "term": "Troubleshooting",
+        "type": "skill"
+      },
+      {
+        "term": "IBM DB2",
+        "type": "technology"
+      },
+      {
+        "term": "Bash",
+        "type": "technology"
+      },
+      {
+        "term": "IBM WebSphere",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP015",
+    "predicted_skills": [
+      {
+        "term": "Critical Thinking",
+        "type": "skill"
+      },
+      {
+        "term": "Programming",
+        "type": "skill"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      },
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "R",
+        "type": "technology"
+      },
+      {
+        "term": "LinkedIn",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP016",
+    "predicted_skills": [
+      {
+        "term": "Mathematics",
+        "type": "skill"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      },
+      {
+        "term": "Go",
+        "type": "technology"
+      },
+      {
+        "term": "Perl",
+        "type": "technology"
+      },
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "R",
+        "type": "technology"
+      },
+      {
+        "term": "SAS",
+        "type": "technology"
+      },
+      {
+        "term": "Mathematical software",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP017",
+    "predicted_skills": [
+      {
+        "term": "Design",
+        "type": "knowledge"
+      }
+    ]
+  },
+  {
+    "id": "HP018",
+    "predicted_skills": [
+      {
+        "term": "Monitoring",
+        "type": "skill"
+      },
+      {
+        "term": "Design",
+        "type": "knowledge"
+      }
+    ]
+  },
+  {
+    "id": "HP019",
+    "predicted_skills": [
+      {
+        "term": "Monitoring",
+        "type": "skill"
+      },
+      {
+        "term": "Programming",
+        "type": "skill"
+      },
+      {
+        "term": "Design",
+        "type": "knowledge"
+      },
+      {
+        "term": "Science",
+        "type": "skill"
+      },
+      {
+        "term": "Microsoft .NET Framework",
+        "type": "technology"
+      },
+      {
+        "term": "Perl",
+        "type": "technology"
+      },
+      {
+        "term": "Python",
+        "type": "technology"
+      }
+    ]
+  },
+  {
+    "id": "HP020",
+    "predicted_skills": [
+      {
+        "term": "Monitoring",
+        "type": "skill"
+      },
+      {
+        "term": "Python",
+        "type": "technology"
+      },
+      {
+        "term": "Kubernetes",
+        "type": "technology"
+      }
+    ]
+  }
+]

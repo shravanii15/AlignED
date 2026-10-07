@@ -1,0 +1,352 @@
+[
+  {
+    "id": "HC001",
+    "source_type": "course",
+    "context": "Georgia Tech: MS Analytics (OMS Analytics)",
+    "title": "MGT 6203 Data Analytics in Business",
+    "text": "Teaches the scientific process of transforming data into insights for making better business decisions. It covers methodologies, algorithms, and challenges related to analyzing business data. Completion of MGT 6203 is required before starting the practicum. Suggested prerequisite: ISYE 6501 Statistics Electives (6 hours) Special Note Select at least two courses from the list.\u00a0All C-track students must take ISYE 6740 as either a Statistics elective or a C-track elective."
+  },
+  {
+    "id": "HC002",
+    "source_type": "course",
+    "context": "Georgia Tech: MS Analytics (OMS Analytics)",
+    "title": "ISYE 8803 Topics on High-dimensional Data Analytics",
+    "text": "This course focuses on analysis of highdimensional structured data including profiles, images, and other types of functional data using statistical machine learning. A variety of topics such as functional data analysis, image processing, multilinear algebra and tensor analysis, and regularization in high-dimensional regression and its applications including low rank and sparse learning is covered. Optimization methods commonly used in statistical modeling and machine learning and their computational aspects are also discussed - convex conic optimization, which is a significant generalization of linear optimization. The fourth and final module is on integer optimization, which augments the previously covered optimization models with the flexibility of integer decision variables. The course blends optimization theory and computation with various applications to modern data analytics. Operations Research Elective (3 hours) Special Note The number of elective hours required depends on how many Introductory Core courses (if any) are replaced with electives. Students who take two of these additional electives from the Track Electives list of either the Business Analytics track or the Computational Data Analytics track will satisfy the requirements for two tracks. To satisfy the Computational Data Analytics Track, students must have taken ISYE 6740 as one of their Statistics, Track, or Additional Electives."
+  },
+  {
+    "id": "HC003",
+    "source_type": "course",
+    "context": "Georgia Tech: MS Analytics (OMS Analytics)",
+    "title": "CS 7643 Deep Learning",
+    "text": "Deep learning is a sub-field of machine learning that focuses on learning complex, hierarchical feature representations from raw data. The dominant method for achieving this, artificial neural networks, has revolutionized the processing of data (e.g. images, videos, text, and audio) as well as decision-making tasks (e.g. game-playing). Its success has enabled a tremendous amount of practical commercial applications and has had significant impact on society. In this course, students will learn the fundamental principles, underlying mathematics, and implementation details of deep learning. This includes the concepts and methods used to optimize these highly parameterized models (gradient descent and backpropagation, and more generally computation graphs), the modules that make them up (linear, convolution, and pooling layers, activation functions, etc.), and common neural network architectures (convolutional neural networks, recurrent neural networks, etc.). Applications ranging from computer vision to natural language processing, and decision-making (reinforcement learning) will be demonstrated. Through in-depth programming assignments, students will learn how to implement these fundamental building blocks as well as how to put them together using a popular deep learning library, PyTorch. In the final project, students will apply what they have learned to real-world scenarios by exploring these concepts with a problem that they are passionate about."
+  },
+  {
+    "id": "HC004",
+    "source_type": "course",
+    "context": "Georgia Tech: MS Cybersecurity (OMS Cybersecurity)",
+    "title": "CS 6260 Applied Cryptography",
+    "text": "Classical goals of cryptography such as data privacy, authenticity and integrity. Design principles of cryptographic primitives such as pseudorandom functions, block ciphers, symmetric encryption schemes, hash functions, message authentication codes (MACs), authenticated encryption, PKI, public-key (asymmetric) encryption, digital signatures, signcryption, secret sharing, key exchange."
+  },
+  {
+    "id": "HC005",
+    "source_type": "course",
+    "context": "Georgia Tech: MS Cybersecurity (OMS Cybersecurity)",
+    "title": "CS 6238 Secure Computer Systems",
+    "text": "Design principles of secure systems, authentication, access control and authorization, discretionary and mandatory security policies, secure kernel design, and secure databases."
+  },
+  {
+    "id": "HC006",
+    "source_type": "course",
+    "context": "Georgia Tech: MS Computer Science (main CS catalog)",
+    "title": "CS\u00a03751 Introduction to User Interface Design",
+    "text": "Describes the characteristics of interaction between humans and computers and demonstrates techniques for the design and evaluation of user interfaces and computational systems."
+  },
+  {
+    "id": "HC007",
+    "source_type": "course",
+    "context": "Georgia Tech: MS Computer Science (main CS catalog)",
+    "title": "CS\u00a07240 Modern Internet Research Methods",
+    "text": "A research course on techniques, platforms and datasets related to Internet freedom and security, familiarizing the students with the research cycle and delivering their results through an academic paper and presentation."
+  },
+  {
+    "id": "HC008",
+    "source_type": "course",
+    "context": "Arizona State University: Online Master of Computer Science (MCS)",
+    "title": "CSE 355 Introduction to Theoretical Computer Science",
+    "text": "Introduces formal language theory and automata, Turing machines, decidability/undecidability, recursive function theory and complexity theory."
+  },
+  {
+    "id": "HC009",
+    "source_type": "course",
+    "context": "University of Illinois Urbana-Champaign: MS Computer Science / MCS-DS (CS course catalog)",
+    "title": "CS\u00a0101 Intro Computing: Engrg & Sci",
+    "text": "Fundamental principles, concepts, and methods of computing, with emphasis on applications in the physical sciences and engineering. Basic problem solving and programming techniques; fundamental algorithms and data structures; use of computers in solving engineering and scientific problems. Intended for engineering and science majors. Prerequisite: One of MATH\u00a0220 or MATH\u00a0221 or MATH\u00a0231 or MATH\u00a0241 . This course satisfies the General Education Criteria for: Quantitative Reasoning II"
+  },
+  {
+    "id": "HC010",
+    "source_type": "course",
+    "context": "University of Illinois Urbana-Champaign: MS Computer Science / MCS-DS (CS course catalog)",
+    "title": "CS\u00a0447 Natural Language Processing",
+    "text": "Part-of-speech tagging, parsing, semantic analysis and machine translation. Relevant linguistics concepts from morphology (word formation) and lexical semantics (the meaning of words) to syntax (sentence structure) and compositional semantics (the meaning of sentences). 3 undergraduate hours. 3 or 4 graduate hours. Prerequisite: One of CS\u00a0173 or MATH\u00a0213 ; CS\u00a0225 ; CS\u00a0374 or ECE\u00a0374 ; one of CS\u00a0361 , STAT\u00a0361 , ECE\u00a0313 , MATH\u00a0362 , MATH\u00a0461 , MATH\u00a0463 , STAT\u00a0400 or BIOE\u00a0310 ; one of MATH\u00a0225 , MATH\u00a0257 , MATH\u00a0415 , MATH\u00a0416 , ASRM\u00a0406 or BIOE\u00a0210 ."
+  },
+  {
+    "id": "HC011",
+    "source_type": "course",
+    "context": "Northeastern University: MS Computer Science (Align / CS catalog)",
+    "title": "CS\u00a02000 Introduction to Program Design and Implementation",
+    "text": "Introduces computer science and data science to students with no prior programming experience. Starts by building programs with numbers, text, and images. Explores real, complex datasets both interactively and through coding by doing data analysis, constructing graphs, and computing interesting results. Offers students an opportunity to build a solid foundation and practice coding with a popular industrial coding language with a professional programmer\u2019s interface to the code. Covers skills needed to identify and respond to ethical challenges that arise in the program design process."
+  },
+  {
+    "id": "HC012",
+    "source_type": "course",
+    "context": "Northeastern University: MS Computer Science (Align / CS catalog)",
+    "title": "CS\u00a06510 Advanced Software Development",
+    "text": "Designed to integrate academic concepts and practical experience of software design by having students work as part of a programming team, with an option to lead a subteam. Offers students an opportunity to study, in-depth, some aspects of the development process. The goal is to have students participate in a large-scale project, taking time to reflect and analyze the work and the process, rather than concentrating exclusively on the final product. Students who do not meet course prerequisites may seek permission of instructor."
+  },
+  {
+    "id": "HC013",
+    "source_type": "course",
+    "context": "Northeastern University: MS Computer Science (Align / CS catalog)",
+    "title": "CS\u00a07870 Seminar in Theoretical Computer Science",
+    "text": "Gives students the opportunity to read and present various survey and research papers in theoretical computer science. Faculty supervisor and topics vary from semester to semester. May be repeated three times for a maximum of 16 total semester hours."
+  },
+  {
+    "id": "HC014",
+    "source_type": "course",
+    "context": "Boston University: MS Computer Science (graduate CS courses)",
+    "title": "CAS CS 525 Compiler Design Theory",
+    "text": "Undergraduate Prerequisites: (CASCS 320) or consent of instructor. - Graduate Prerequisites: (CASCS 320 OR CASCS 332) - Covers the basic mathematical theory underlying the design of compilers and other language processors and shows how to use that theory in practical design situations. Topics may include lexical analysis, parsing, syntax-directed translation, code optimization, and code generation."
+  },
+  {
+    "id": "HC015",
+    "source_type": "course",
+    "context": "Boston University: MS Computer Science (graduate CS courses)",
+    "title": "CAS CS 565 Algorithmic Data Mining",
+    "text": "Undergraduate Prerequisites: (CASCS 112 & CASCS 330 & CASCS 365). - Introduction to data mining concepts and techniques. Topics include association and correlation discovery, classification and clustering of large datasets, outlier detection. Emphasis on the algorithmic aspects as well as the application of mining in real-world problems."
+  },
+  {
+    "id": "HC016",
+    "source_type": "course",
+    "context": "Boston University: MS Computer Science (graduate CS courses)",
+    "title": "CAS CS 660 Graduate Introduction to Database Systems",
+    "text": "Undergraduate Prerequisites: (CASCS112) CASCS350 recommended. - Graduate introduction to database management systems. Examines entity-relationship, relational, and object-oriented data models; commercial query languages: SQL, relational algebra, relational calculus, and QBE; file organization, indexing and hashing, query optimization, transaction processing, concurrency control and recovery, integrity, and security."
+  },
+  {
+    "id": "HC017",
+    "source_type": "course",
+    "context": "University of Wisconsin-Madison: MS Computer Sciences / MS Data Science (elective pool)",
+    "title": "COMP SCI 471 Introduction To Computational Statistics",
+    "text": "Classical statistical procedures arise where closed-form mathematical expressions are available for various inference summaries (e.g. linear regression; analysis of variance). A major emphasis of modern statistics is the development of inference principles in cases where both more complex data structures are involved and where more elaborate computations are required. Topics from numerical linear algebra, optimization, Monte Carlo (including Markov chain Monte Carlo), and graph theory are developed, especially as they relate to statistical inference (e.g., bootstrapping, permutation, Bayesian inference, EM algorithm, multivariate analysis)."
+  },
+  {
+    "id": "HC018",
+    "source_type": "course",
+    "context": "University of Wisconsin-Madison: MS Computer Sciences / MS Data Science (elective pool)",
+    "title": "COMP SCI 762 Advanced Deep Learning",
+    "text": "Explore methods and applications of deep learning. Covers cutting-edge topics, including neural architecture design, robustness and reliability of deep learning, learning with less supervision, lifelong machine learning, deep generative modeling, theoretical understanding of deep learning, and interpretable deep learning."
+  },
+  {
+    "id": "HC019",
+    "source_type": "course",
+    "context": "University of Maryland: MS Computer Science (CMSC catalog)",
+    "title": "CMSC477 Robotics Perception and Planning",
+    "text": "A hands-on introduction to perception and planning for robotics, including rigid body transformations and rotations, dynamics and control of mobile robots/drones, graph based and sampling based planning algorithms, Bayseian and Kalman filtering, camera models and calibration, projective geometry, visual features, optical flow, pose estimation, RANSAC and Hough transform, structure from motion, visual odometry, machine learning basics, visual recognition and learning."
+  },
+  {
+    "id": "HC020",
+    "source_type": "course",
+    "context": "University of Maryland: MS Computer Science (CMSC catalog)",
+    "title": "CMSC724 Database Management Systems",
+    "text": "Theoretical and implementation issues in advanced database systems. Topics include distributed databases, parallel databases, database client-server architectures, multimedia access methods, advanced query optimization techniques, data semantics and models, object-oriented databases, and deductive and expert database systems."
+  },
+  {
+    "id": "HC021",
+    "source_type": "course",
+    "context": "University of Maryland: MS Computer Science (CMSC catalog)",
+    "title": "CMSC801 Department Internal Research Seminar",
+    "text": "Research overviews from faculty to help introduce departmental research to graduate students."
+  },
+  {
+    "id": "HC022",
+    "source_type": "course",
+    "context": "University of Maryland: Cybersecurity (ENPM catalog)",
+    "title": "ENPM637 Managing Software Engineering Projects",
+    "text": "Addresses the breadth of managing software engineering projects. It will help in transforming inspiring software engineers to software project leaders. The course will impart advanced principles, methods and tools for management of software projects in a realistic software engineering context. A hybrid project management will be taught with more focused on Agile Project Management paradigms. The course will also impart a cutting-edge scalable, modular, and integrated patterns of the Scaled Agile Framework (SAFe) 4.0 for the software engineering program and portfolios management. In addition, the course will also instill DevOps best practices to build much more responsible organizations that can move quickly in ever-changing circumstances. Methods for managing and optimizing the software development process are discussed along with techniques for performing each phase of the systems development lifecycle."
+  },
+  {
+    "id": "HC023",
+    "source_type": "course",
+    "context": "University of Maryland: Cybersecurity (ENPM catalog)",
+    "title": "ENPM645 Human-Robot Interaction",
+    "text": "To define the intersection of human-robot interactions to include human-computer interfaces, as well as robotic emotions and facial expressions emulations. The result will provide a basis for students to assess the best approaches for interacting effectively with robots. Areas to be covered include biologically-inspired robotics, cognitive robotics, cultural and social aspects of robotics, data mining, examples of human systems interfaces, and machine learning with respect to A.I. principles and limitations."
+  },
+  {
+    "id": "HC024",
+    "source_type": "course",
+    "context": "University of Maryland: Cybersecurity (ENPM catalog)",
+    "title": "ENPM703 Fundamentals of AI and Deep Learning",
+    "text": "Fundamentals of machine learning techniques with a deep dive into cutting edge concepts that enabled neural networks to achieve state of the art performance in many visual, textual, and biomedical problems. Fundamental concepts like forward networks, convolution networks, recurrent neural networks, back propagation, loss functions, batch gradient descent, and stochastic optimization will be studied."
+  },
+  {
+    "id": "HC025",
+    "source_type": "course",
+    "context": "Penn State World Campus: MS Data Analytics (DAAN)",
+    "title": "DAAN 810 Artificial Intelligence in Practice",
+    "text": "This course offers a comprehensive exploration of the foundational concepts, techniques, and applications of Artificial Intelligence (AI). Designed to cater to a wide range of learners, including those with limited programming experience, this course emphasizes practical hands-on learning.  Students will delve into key AI topics such as search algorithms, multi-agent systems, data processing, machine learning, deep learning, natural language processing, computer vision, and reinforcement learning. The course also features a group project, enabling participants to collaborate on solving real-world problems using AI.  The course is structured to be accessible for those without extensive programming experience, utilizing low-code/no-code tools to facilitate learning and hands-on case studies from accounting, finance, marketing, innovation, creative work and entrepreneurship."
+  },
+  {
+    "id": "HC026",
+    "source_type": "course",
+    "context": "Penn State World Campus: MS Data Analytics (DAAN)",
+    "title": "DAAN 820 Generative Artificial Intelligence",
+    "text": "Generative AI is a transformative technology that is reshaping industries such as healthcare, finance, education, and entertainment. Understanding its technical fundamentals and ethical implications is essential for any AI practitioner or leader. This comprehensive course is designed to provide students with in-depth knowledge of generative AI, from foundational models to advanced techniques, while emphasizing the importance of ethical considerations.  Students will gain hands-on insights into the intricacies of building, training, and optimizing foundation models, exploring the diverse applications of generative AI, and understanding its broader impact on society. The course emphasizes a human-centric approach, ensuring that the development and deployment of AI technologies align with ethical standards and societal values.  The course is structured to be accessible for those without extensive programming experience, utilizing low-code/no-code tools to facilitate learning and hands-on case studies from accounting, finance, marketing, innovation, creative work and entrepreneurship."
+  },
+  {
+    "id": "HC027",
+    "source_type": "course",
+    "context": "University of Washington: MSCS / MS Data Science (CSE catalog)",
+    "title": "CSE 452 Introduction to Distributed Systems",
+    "text": "Covers abstractions and implementation techniques in the construction of distributed systems, including cloud computing, distributed storage systems, and distributed caches. Prerequisite: CSE 332 and CSE 333. ; recommended: CSE 451"
+  },
+  {
+    "id": "HC028",
+    "source_type": "course",
+    "context": "University of Washington: MSCS / MS Data Science (CSE catalog)",
+    "title": "CSE 582 Ethics in Artificial Intelligence",
+    "text": "Real-world people-facing artificial intelligence (AI) applications, ethical implications in their design, and technical solutions to mitigate ethical risks. Topics in the intersection of AI, ethics, and computing for social good, centered around foundational and recent research. Foundations of research ethics, case studies in ethical AI, ethical challenges in developing intelligent systems, and machine learning approaches to address these issues. Prerequisite: CSE 446 or CSE 546."
+  },
+  {
+    "id": "HC029",
+    "source_type": "course",
+    "context": "University of Michigan: MS Computer Science and Engineering (EECS catalog)",
+    "title": "ECE 544 Analysis of Societal Networks",
+    "text": "In the modern world we depend on the efficiency of a myriad of societal networks to transact many activities. This course analyzes them (how they are connected, how they form, and how processes and transactions occur on them) using mathematical tools from graph theory, linear algebra, probability and game theory."
+  },
+  {
+    "id": "HC030",
+    "source_type": "course",
+    "context": "University of Michigan: MS Computer Science and Engineering (EECS catalog)",
+    "title": "ECE 564 Estimation, Filtering, and Detection",
+    "text": "Principles of estimation, linear filtering and detection. Estimation: linear and nonlinear minimum mean squared error estimation, and other strategies. Linear filtering: Wiener and Kalman filtering. Detection: simple, composite, binary and multiple hypotheses. Neyman-Pearson and Bayesian approaches."
+  },
+  {
+    "id": "HP001",
+    "source_type": "posting",
+    "context": "Network Engineering | ",
+    "title": "Network Engineer",
+    "text": "Secunetics provides network infrastructure intelligence services to government agencies and commercial clients. We work with our clients to fully profile network structures, behaviors, and security. We are a focused team of enthusiastic colleagues working together on a diverse and challenging set of projects.We are looking for Network Engineers to interface with our team and our clients to help assess the performance of IT infrastructures, establish baselines, and identify opportunities for optimization/improvement. This is a highly visible, client-facing role. We value creative, strategic thinkers with demonstrated interest and skills in optimizing network performance.\nWho you are:You are a US citizen or a Green Card holderYou are passionate and curious about technologyYou are committed to work with a like-minded team to learn and grow in your field of expertiseYou have an eye for detail and consistencyYou have strong communication skills that are used to solicit and incorporate feedback in your workYou have a strong interest in infrastructure performanceYou enjoy interacting with clients to satisfy their goals and objectives\nWe are looking for team members with the following skills/experience:Undergraduate or graduate degree in Computer Science, Electrical Engineering, Computer Engineering, or a related fieldMinimum of 2 years of network and security experienceProgramming skills in PythonSolid understanding of networking technologies (routing, switching, TCP/IP, Ethernet traffic analysis tool, TAPs, traffic brokers)Experience working with or integrating various enterprise management systems (e.g. HP BSM / OpenView / BTO and/or similar products)Excellent understanding of technology concepts such as SDLC, systems engineering, IT performance management, IT operations, operational monitoring, security monitoring, and KPIsKnowledge of various IT infrastructure technologies (e.g. applications, servers, networks, storage)Excellent verbal and written communication skills including technical writing\n If you have any of the following, it would be a bonus:Experience in packet analysis (Wireshark)Familiarity with enterprise management and performance engineering conceptsFamiliarity with ITILv3 concepts especially Service OperationsSecunetics is committed to creating a diverse environment and is proud to be an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, national origin, religion, creed, physical or mental disability, marital status, sexual orientation, veteran status, age, gender identity, or any other applicable basis that is protected by foreign, federal, state or local law, ordinance or regulation."
+  },
+  {
+    "id": "HP002",
+    "source_type": "posting",
+    "context": "Software / Web Development | Publix Super Markets",
+    "title": "Sr. Software Engineer- Warehousing Modernization",
+    "text": "DescriptionThe Warehousing Modernization team is currently seeking a Sr. Software Engineer to lead the development efforts for modernizing our legacy warehousing systems. This key role involves leading initiatives to modernize and warehousing processes like Invoicing, Store Order Processing, integrating with other Warehousing Systems, and Reporting that currently supports our expanding distribution network, encompassing 10 Distribution Centers and 33 warehouses dedicated to servicing over 1360 retail stores.\nFurther details will include:Leading initiatives to develop and implement systems using various coding languages, methods, tools, and utilities.Overseeing full systems development life cycle (SDLC), as well as coding, debugging, documenting, and configuring packagesApproving design of technical solutions while collaborating with architects, engineers, other technical resources, and business areasServing as a liaison between business subject matter experts (SME) and technical teams to translate business requests into project system requirements.Conducting interviews with business SMEs to understand, model, prioritize, specify, and validate business requirements.Documenting business and technical requirements using Microsoft Office 365 technologies (e.g., Word, Excel, PowerPoint, Visio, Project)Analyzing and translating business requirements into technology solutions that consider system architecture, performance, usability, quality, cross-system interdependencies, and scalability.Collaborating and coordinating cross platform releases with business SMEs and technical teamsMaintaining system components, technical and user documentation for new and existing programsPerforming problem determination and resolution for complex problems; analyzing root cause by researching current application code, then designing, coding, and testing a solutionEnsuring adherence to security best practices and standards for various platformsPerforming data analysis by creating and executing complex queries, interpreting results, and communicating findings to technical and non-technical audiencesCollaborating and communicating with IT management on project and resource planning, including effort estimationThe most suitable hire for this position will be a candidate with full development life cycle experience with distributed development, project leadership experience implementing solutions, and systems and data analytic experience identifying and solving business problems. They exemplify servant leadership with the heart of teacher and the knowledge, expertise, and motivation to drive results.\nRequired Qualifications\nBachelor\u2019s degree in computer science or other analytical disciplines or equivalent experience5+ years of experience analyzing supply chain business problems and translating business requirements into technology solutions with functional knowledge of receiving, shipping, and inventory5+ years of experience working with enterprise database management system"
+  },
+  {
+    "id": "HP003",
+    "source_type": "posting",
+    "context": "Mixed (weak cluster -- multiple roles blended together) | MITRE",
+    "title": "Communications and Network Engineer - Early Career",
+    "text": "Why choose between doing meaningful work and having a fulfilling life? At MITRE, you can have both. That's because MITRE people are committed to tackling our nation's toughest challenges\u2014and we're committed to the long-term well-being of our employees. MITRE is different from most technology companies. We are a not-for-profit corporation chartered to work for the public interest, with no commercial conflicts to influence what we do. The R&D centers we operate for the government create lasting impact in fields as diverse as cybersecurity, healthcare, aviation, defense, and enterprise transformation. We're making a difference every day\u2014working for a safer, healthier, and more secure nation and world. Our workplace reflects our values. We offer competitive benefits, exceptional professional development opportunities, and a culture of innovation that embraces diversity, inclusion, flexibility, collaboration, and career growth. If this sounds like the choice you want to make, then choose MITRE\u2014and make a difference with us.\n\nDepartment Summary:\n\nThe MITRE Corporation\u2019s Resilient Communications Department (N152) focuses on creating and fielding adaptive communications and networking infrastructure to successfully execute different mission areas for Operations in Contested Environments (OCE). Our work involves modernizing currently fielded communications systems while developing/fielding the next generation communications capabilities used by the United States military and international partners across all domains from underwater to aerial to space-based. Our primary areas of concentration include RF communications, networking, modeling and simulation, systems integration, systems engineering, and software development.\n\nJob Description:\n\nYou will leverage an understanding of wireless communications, RF/analog hardware, antenna systems, RF propagation, or other similar technical disciplines to support a variety of projects depending on your development goals and sponsor needs. This position may also involve working as an individual contributor in a collaborative team environment to analyze advanced networking concepts and address networking challenges to support a variety of projects and sponsor needs.\n\nYou will use laboratory instrumentation (e.g. spectrum analyzer, network analyzer, signal & waveform generators) to characterize the performance of commercial and military communications systems\n\nYou will analyze RF system performance (range, data throughout, coverage, co-location performance) using various modeling and/or testing techniques\n\nBasic Qualifications:\n\nYou are eager to learn new skills and technologiesTypically requires less than 1 year of related experience with a related Bachelor\u2019s degree, or equivalent combination of related education and work experience.You have an interest in wireless communications, RF/analog hardware, antenna design, digital signal processing (DSP), networking or other related technical disciplinesExperience using labo"
+  },
+  {
+    "id": "HP004",
+    "source_type": "posting",
+    "context": "Network Engineering | Avacend Inc",
+    "title": "Radio Access Network Engineer",
+    "text": "Job Title:- RAN Engineer/ RAN Support Engineer \u2013 Tier 1Location: Plano, TX, USA,\nMust have depth knowledge in RAN & Scripting\nRequirements:\u2022 Knowledgeable on 4G and 5G technologies would be a plus\u2022 At least 2 years in a TAC/ Tier2 support organization or equivalent experience supporting a telecommunications vendor\u2022 User-level experience using UNIX/ LINUX commands is must (Advanced Unix skills is a plus)\u2022 Excellent Microsoft Office Skills required - Advanced Excel Skills with macro/VB is a plus\u2022 Shell scripting or any scripting knowledge is a plus\n"
+  },
+  {
+    "id": "HP005",
+    "source_type": "posting",
+    "context": "Cybersecurity / Information Security | Centraprise",
+    "title": "Information Security Consultant",
+    "text": "Job Description :6+ years of information security & audit experience with increased responsibilities\u00b7 In-depth knowledge of security assessment/audit principles\u00b7 Understanding of networking principles and data protection\u00b7 Ability to identify problems, analyze data and present conclusions.\u00b7 Strong verbal, written and presentations skills\u00b7 Knowledge of information security frameworks such as ISO 27001 /NIST CSF ispreferred.\u00b7 CISA, CISSP, CISM, certifications are preferred.\u00b7 Excellent English communication skills.\u00b7 Able to work as part of a virtual global team with cultural, language, and time zonedifferences.\u00b7 Able to deal with ambiguity and work independently with minimal supervision/guidance. Experience Required: + 6 YearsRoles & Responsibilities\u2022 Demonstrate strong knowledge in IT controls, risk assessments, and testing of security measures\u2022 Identify opportunities to continuously innovate and improve the program and value delivered to organization\u2022 Ensure successful completion of the annual supplier cybersecurity assessment.\u2022 Perform on-site control validation to ensure the highest impact suppliers have the proper cybersecurity controls in place.\u2022 Independently and proactively plans and performs assigned audit engagements related to security, confidentiality, integrity, information protection and availability of data\u2022 Conduct audit & evaluate in alignment to the supply cyber security control framework.\u2022 Ensure effectiveness of approved controls and drive risk remediation or changes from previous audit for existing certified suppliers\u2022 Inform and advise business leaders on supplier\u2019s information security risks\u2022 Provide subject matter expertise in third-party risk management.\u2022 Post audit assessment reports and update stakeholders on findings"
+  },
+  {
+    "id": "HP006",
+    "source_type": "posting",
+    "context": "Business Intelligence | Quantum World Technologies Inc.",
+    "title": "Business Intelligence Consultant",
+    "text": "Role :- Power BI DeveloperLocation - Hybrid Troy MIDuration - 1 year+ \n*** We need: Two mid-level (7+ years) to senior Power BI developer with excellent experience working with SQL and Design, develop, and build mockups, reports, and dashboards using business intelligence and data visualization tools, such as Microsoft Power BI **Candidates must have Long Projects/Good Tenure, Excellent communication skills\nRequired Location: Hybrid/ TROY, MI / 3 days a week.Interview Required: Video\n*** PLEASE Only send me candidates in TROY, MI area Open to Hybrid."
+  },
+  {
+    "id": "HP007",
+    "source_type": "posting",
+    "context": "Mixed (weak cluster -- multiple roles blended together) | GM Financial",
+    "title": "Associate Cybersecurity Engineer",
+    "text": "Overview\n\nOpportunity to work in a hybrid model: Potential to work 4 days onsite and 1 day remote \n\nWhy GM Financial?\n\nGM Financial is the wholly owned captive finance subsidiary of General Motors and is headquartered in Fort Worth, U.S. We are a global provider of auto finance solutions, with operations in North America, South America and the Asia Pacific region. Through our long-standing relationships with auto dealers, we offer attractive retail financing and lease programs to meet the needs of each customer. We also offer commercial lending products to dealers to help them finance and grow their businesses.\n\nAt GM Financial, our team members define and shape our culture \u2014 an environment that welcomes new ideas, fosters integrity and creates a sense of community and belonging. Here we do more than work \u2014 we thrive.\n\nOur Purpose: We pioneer the innovations that move and connect people to what matters.\n\nResponsibilities\n\nAbout the role\n\nThe Associate Cybersecurity Engineer is responsible for maintaining and building upon a fundamental skill set in alert triage, on-going monitoring, detection, investigation, and incident response activities to identify and mitigate threats to the corporate network, assets, and users. This team member will collaborate with stakeholders to perform on-going alerting and tuning on various technologies. Security technologies may include but are not limited to: Data Loss Prevention (DLP), Security Incident Event Management (SIEM), Web Application Firewall (WAF), Cloud Access Security Broker (CASB), Information Rights Management (IRM), Zero Trust Network Access (ZTNA), Network Detection and Response (NDR), Security Orchestration, Automation and Response (SOAR), and Web/Email Security Products.\n\nJob Duties\n\nTriage, investigate, escalate, and assist with alerts and incidents from multiple sources of varying technical levelsInvestigate security incidents from detection to resolution, engaging in any containment, eradication and recovery actions as neededWrite and execute search commands within a SIEM to find relevant informationNavigate various security products and solutions for pertinent data and insightsDevelop custom rules and detections using Regular Expression (Regex) and YARARemain up to date on the latest Cybersecurity trends and tactics, techniques, and procedures (TTP)Attention to detail and ability to formulate decisions based on evidence gathering\n\nQualifications\n\nWhat makes an ideal candidate?\n\nStrong technical skills and hands on experience in Cybersecurity as it relates to alert triage, on-going monitoring, detection, investigation, and incident response activitiesUnderstanding of Cybersecurity concepts such as Endpoint security, Network security, Cloud security, Data Loss Prevention/Data Privacy, and Web/Email securityFamiliarity with the NIST Incident Response Life Cycle and the MITRE ATT&CK FrameworkStrong knowledge of the OSI model and security that is associated with each layerStrong knowledge of core I"
+  },
+  {
+    "id": "HP008",
+    "source_type": "posting",
+    "context": "Systems Administration | Intone",
+    "title": "Systems Administrator",
+    "text": "Role - PRISM Systems AdministratorJob Title: PRISM Systems Administrator\nLength: (C/CTH/DH): 1440 hour contract to hireCitizenship Status: USC*MUST BE VACCINATED*The PRISM System Administrator duties will include:Configuring transport domains, transport groups, transport layer and transport paths.Create accountsAnswer customer questionsExecute and monitor transports.Analyze and delete errors during transports.Install SAP or other IT systems support packages changes and SAP notes.Planning and executing client copies and transports."
+  },
+  {
+    "id": "HP009",
+    "source_type": "posting",
+    "context": "Software / Web Development | Ascendion",
+    "title": "Web Developer",
+    "text": "About Ascendion:Ascendion is a full-service digital engineering solutions company. We make and manage software platforms and products that power growth and deliver captivating experiences to consumers and employees. Our engineering, cloud, data, experience design, and talent solution capabilities accelerate transformation and impact for enterprise clients. Headquartered in New Jersey, our workforce of 6,000+ Ascenders delivers solutions from around the globe. Ascendion is built differently to engineer the next.\nAscendion | Engineering to elevate life\nWe have a culture built on opportunity, inclusion, and a spirit of partnership. Come, change the world with us:Build the coolest tech for world\u2019s leading brandsSolve complex problems \u2013 and learn new skillsExperience the power of transforming digital engineering for Fortune 500 clientsMaster your craft with leading training programs and hands-on experience\nExperience a community of change makers!\nJoin a culture of high-performing innovators with endless ideas and a passion for tech. Our culture is the fabric of our company, and it is what makes us unique and diverse. The way we share ideas, learning, experiences, successes, and joy allows everyone to be their best at Ascendion.\nAbout the Role:\nJob Title: Web Developer\nLocation: Onsite in Redmond, WA\nJob Summary:\nSummary:The main function of the Web Developer is to design, code, and create system specifications, analyze, evaluate, test, debug, document, and implement complex software applications.\nJob Responsibilities:Design, code, test, document, implement, and maintain application programs and interfacesDevise or modify procedures to solve complex problems considering computer equipment capacity and limitations, operating time, and form of desired resultsModify, install, and prepare technical documentation for system software applicationsMonitor systems capacity and performance, plan and execute disaster recovery procedures, and provide technical supportIdentify, escalate and document production impact issuesEvaluate user requests for new or modified computer programs to determine feasibility, cost, time required and compatibility with current systems and capabilities\nTop 3 Hard Skills Required + Years of ExperienceExpertise in the frontend space with Javascript, React, Redux, Rxjs \u2013 4+Source code management and release pipelines - 4+Expertise in backend space with either C#, Nodejs, Java or Go \u2013 4+\nSalary Range: The salary for this position is between $126,000 \u2013 $136,000 annually. Factors which may affect pay within this range may include geography/market, skills, education, experience, and other qualifications of the successful candidate.\nBenefits: The Company offers the following benefits for this position, subject to applicable eligibility requirements: [medical insurance] [dental insurance] [vision insurance] [401(k) retirement plan] [long-term disability insurance] [short-term disability insurance] [5 personal days accrued each calendar year. T"
+  },
+  {
+    "id": "HP010",
+    "source_type": "posting",
+    "context": "Systems Administration | TechTriad",
+    "title": "Middleware Systems Administrator",
+    "text": "Middleware Systems AdministratorNYC, NY/Dallas, TX/Winston Salem, NC (Hybrid)Full TimePosition summary:The Middleware Systems Administrator role will be responsible for architecting, implementing, and the day-to-day activities related to the Technology Infrastructure and Platform Systems portfolio within TCH Operations and Technology with oversight and governance for key systems administration initiatives ensuring the integrity of the distributed and mainframe platform services for our customer facing applications and corporate systems portfolio. The Middleware Systems Admin role is specific to Middleware Technologies such as Sterling Connect Direct, IBM MQ, IBM WebSphere Application Server, and Confluent Kafka.Qualifications required:B.S. degree in Computer Science/Engineering, MIS or equivalent5-10 years as an infrastructure subject matter expert in IT/financial servicesAbility to travel up to 20% (between NYC, NC and TX)Strong facilitation skills with working committees and steering committeesVery good knowledge within the Infrastructure ecosystem in execution of implementation initiatives, capacity management efforts, and design of high availability and backup & recover solutionsPositive track record of delivering large scale complex projects & initiativesAbility to communicate with highly technical/quantitative as well as non-technical partnersQualifications desired:Master\u2019s degree or education/training/certification in an IT related fieldWorking knowledge of Confluent Kafka, Cloud AWSTechnical Project and\\or Product Management ExperienceProficient with the MS Office Suite with a focused ability to create concise and compelling presentations in PowerPoint in a demanding and quick paced environmentCollaborative team player that connects across groups with proven ability to influence stakeholdersDemonstrates commitment to excellence anticipating needs, mitigating risks and minimizing challengesStrong attention to detailCommunicates crisply and candidlyProficient in multiple infrastructure disciplines and functionsExtensive experience designing and developing enterprise software solutionsExperience with agile development methodologiesExperience working across large infrastructure environments and distributed across multiple data centersEssential functions and responsibilities:Provide subject matter expertise and support all aspects of the Systems Administration environment including administration and maintenance, business continuity, backup and recovery, capacity management, change management, security management, and installation\\configuration management in production and non-production environments.Strong knowledge of Sterling Connect Direct, IBM MQ, IBM WebSphere Application Server (WAS)Working knowledge of Configuration Management using Puppet.Working knowledge of Enterprise Scheduling using BMC Control-M.Strong knowledge of scripting in Java, PowerShell, Python and Node.js.Good understanding of supported Operating Systems, Windows, RHEL, "
+  },
+  {
+    "id": "HP011",
+    "source_type": "posting",
+    "context": "Business Intelligence | Indotronix Avani Group",
+    "title": "Business Intelligence Consultant",
+    "text": "Job #: 98718042024Job Title: Power BI Developer - Supply Chain & LogisticsContract Duration: 6 months (Potential for Conversion)Location: Remote or Hybrid (Parsippany, NJ) - Needs to respond to emails promptly (*within 1-2 hours)Schedule & Hours Per Week: 40 hours per week, M-F First Shift\nHM's Tips and what he needs - 5 years min experience. Medical Device Industry is NOT required. No job hopping - well-presented job history. Someone who can understand and has had experience interpreting the language of Suppy Chain KPIs specifically and can translate them to Power BI. HM will need to hear or see examples of this experience that has been done before. The important part is to translate the Supply Chain business KPIs and conform that to PowerBI. Excellent communication is a requirement. Experience with KPIs, data sphere, Power BI and queries that are pre-built and ready for action on necessary. Any examples of work previously done will bring you to the top for submissions! Capgemini experience is required - whether the candidates likes it or dosent like it - the HM wants to hear their input. For this req, examples and any artifacts of proven experience is needed.\nPurpose of Role: Join our dynamic Supply Chain team as a Power BI Developer where you will harness data from our data lake, integrating inputs from our ERP and third-party vendors to create compelling, informative visualizations that drive business decisions.\nResponsibilities:Quickly assimilate and extract relevant supply chain data from our extensive data lake.Develop, design, and maintain advanced Power BI reports and dashboards specific to supply chain metrics.Utilize complex data sources in a Supply Chain context, including but not limited to inventory levels, logistics performance, and vendor management.Transform raw data into meaningful insights through engaging visuals and interactive reports.Work closely with Supply Chain stakeholders to identify key data points and metrics for visualization.Ensure data accuracy and integrity in all reporting and analytics solutions.\nQualifications:Bachelor\u2019s degree in Computer Science, Informatics, Supply Chain Management, or related field.Minimum of [Specify Number] years of dedicated experience in Power BI development, with a focus on supply chain analytics.Proven track record of working with ERP data and third-party vendor information.Strong foundation in supply chain and logistics operations, principles, and best practices.Proficiency in SQL, DAX, and other relevant data retrieval and analysis languages.Experience in creating custom visuals and utilizing advanced Power BI functionalities.Excellent problem-solving skills, with an ability to manage multiple projects in a fast-paced environment.\nNice-to-Have:Prior experience in a data-driven supply chain or logistics role.Knowledge of Microsoft Azure, SQL Data Warehouse, and familiarity with ETL concepts.Experience with Agile methodologies and project management."
+  },
+  {
+    "id": "HP012",
+    "source_type": "posting",
+    "context": "DevOps / Cloud Engineering | Nityo Infotech",
+    "title": "DevOps Consultant",
+    "text": "Job title: : DevOps ConsultantLocation: \u2013 San Jose CA (Remote is fine)Hire Type: Fulltime Job Description:5-7 years of experience in Python, Python REST API, Python FLASKStrong knowledge of GCP services like GKE, Big Query, Big Table, Pub/Sub, Networking services, Looker StudioExperience in setting up Jenkins Pipelines, Kubernetes, Helm, Docker, Shell Scripts, GitExperience in Elastic Search, Logstash, Istio/Anthos Service Mesh is a Plus"
+  },
+  {
+    "id": "HP013",
+    "source_type": "posting",
+    "context": "Database Administration | Amtex Systems Inc.",
+    "title": "System And Database Administrator",
+    "text": "Database Administrators with Applications experience are responsible for data migration, data cleanup, data reporting, as well as managing and maintaining the hardwired lines and wireless connections in a system and the hardware that hooks up to that system. Applicants are expected to have at least ten years of relevant work experience, ideally in a school or educational agency, managing school nutrition data applications, and automated processes. Job duties specific to the applicant may include:Proficient in Microsoft AccessFixed Asset System IntegrationsTesting/Piloting operationsSchool rolloutGrading user interface reportsAPI connectionsCreating QR codesData migration and data cleanupAnalyzing and figuring out the system needs of an organizationResearch and developmentKeeping systems operating efficiently by performing any necessary upgrades and repairs Planning a strategy to maintain system security on the computers and the network as a whole Optimizing and evaluating the system regularlyAssigning and updating security permissions for the system networkTraining or directing users on the correct use of software and hardware within the systemPerforming problem-solving tasks when alerted by a user or monitoring systemTracking, installing, and configuring software updates and performing database backups to restore and protect user informationInstalling hardware and software for the networkAny other duties as assigned"
+  },
+  {
+    "id": "HP014",
+    "source_type": "posting",
+    "context": "Database Administration | INSPYR Solutions",
+    "title": "Systems Administrator/DBA",
+    "text": "Title: Systems Administrator/DBA\n\nLocation: Carson City, NV (100% Onsite)\n\nDuration: 25+ months\n\nCompensation: $40-50/hr.\n\nWork Requirements: US Citizen, GC Holders or Authorized to Work in the U.S.\n\nProject Overview\n\nOur Government client seeks a System Administrator and DBA contractor. We are looking for an individual skilled in multiple areas of IT to assist the Operations Center with tasks, in support of ongoing projects and development efforts. The chosen candidate will be required to work a standard 8:00 am to 5:00 pm shift as well as support additional activities both after hours and on weekends, as necessary to achieve project deadlines.\n\nSCOPE OF WORK - The chosen contractor will be responsible for:\n\nAssisting system administrators with applying patches to and upgrading middleware components of the CLIENT environment including but not limited to WebSphere Application Server, IBM MQ, FileNet, and DB2.Assisting with FileNet suite management, cleanup, and FileNet security policy as it applies to scanning of sensitive documents.Support vendor staff as they continue to work on projects including configuration of WebSphere family of products, requests for log reviews, assistance with troubleshooting, and service and/or server restarts.\n\nEXPERIENCE Required \n\nContractor must have demonstrated experience and depth in the following areas:3+ years of experience with IBM Websphere Application Server installation, maintenance, and support3+ years of experience with IBM DB2 database installation, maintenance, and support3+ years of experience with IBM FileNet maintenance and support3+ years IBM Datacap maintenance and support including but not limited to Task Master, Rule Runner, and associated IIS components.3+ years of experience with command line shells bash and ksh, and scripting. \nExperience And Skills Preferred\n\n3+ years of experience with IBM WebSphere Application Server installation, maintenance, and support.3+ years of experience with IBM DB2 database installation, maintenance, and support3+ years of experience with IBM FileNet maintenance and support3+ years of experience with IBM MQ maintenance and support3+ years IBM Datacap maintenance and support including but not limited to Task Master, Rule Runner, and associated IIS components.3+ years of experience with command line shells bash and ksh, and scripting.Experience with other IBM / WebSphere products.Experience with Perforce Helix CoreExperience with CA Workload Automation \n\nDELIVERABLES/TASKS\n\nSkills\n\nThe contractors must have the skillset to provide the following for each of the projects or activities they will be assigned to do:\n\nSystem Documentation: The chosen candidate will be responsible for assisting Client system and database administrators with creating and maintaining system documentation for active projects, systems, databases, and development efforts already in progress. System Administration: The chosen candidate will be responsible for assisting CLIENT System Administrato"
+  },
+  {
+    "id": "HP015",
+    "source_type": "posting",
+    "context": "Data Science / Data Engineering | Jobot Consulting",
+    "title": "Staff Data Scientist",
+    "text": "Want to learn more about this role and Jobot Consulting? Click our Jobot Consulting logo and follow our LinkedIn page!\n\nJob details\n\nGlobally Recognized Brand, 100% Remote Position\n\nThis Jobot Consulting Job is hosted by Duran Workman\n\nAre you a fit? Easy Apply now by clicking the \"Easy Apply\" button and sending us your resume.\n\nSalary $90 - $110 per hour\n\nA Bit About Us\n\nWe are seeking a dynamic and innovative Consulting Staff Data Scientist to join our leading technology company. The ideal candidate will be responsible for leveraging their advanced data science skills to provide strategic insights and solutions to complex business problems. This role is crucial to our organization as it plays a significant role in decision-making processes, product development, and business strategy. As a Consulting Staff Data Scientist, you will work closely with various teams, including engineering, product, and business strategy, to drive data-driven decisions and implement effective solutions. This is an excellent opportunity for a seasoned data scientist who is looking to make a significant impact in a fast-paced, innovative technology environment.\n\n\n\nWhy join us?\n\n\n Conversion to FTE at 6 months Remote Position Competitive total rewards package Cutting Edge Technology and Upward Mobility\n\nJob Details\n\nResponsibilities\n\n Apply advanced data science techniques to analyze and interpret complex data sets Develop and implement machine learning models to solve business problems Utilize Bayesian statistical modelling to provide insights and predictions Collaborate with cross-functional teams to understand business needs and provide data-driven solutions Present findings and insights to stakeholders, providing actionable recommendations Stay up-to-date with the latest technology trends and advancements in data science Mentor junior data scientists and contribute to the overall growth of the data science team\n\nQualifications\n\n Ph.D. in Data Science, Statistics, Computer Science, or a related field Minimum of 3 years of experience as a Data Scientist in the technology industry Proven experience in Bayesian statistical modelling and machine learning model development Strong knowledge of data structures, data modelling, and software architecture Proficient in programming languages such as Python, R, or Java Exceptional analytical, problem-solving, and critical thinking skills Excellent communication skills with the ability to explain complex concepts to non-technical stakeholders Strong project management skills with the ability to lead projects from conception to completion Experience with big data technologies such as Hadoop, Spark, or similar is a plus\n\nThe ideal candidate will be a strategic thinker with a passion for leveraging data to drive business results. If you are a seasoned data scientist looking for a challenging and rewarding role, we would love to hear from you.\n\nInterested in hearing more? Easy Apply now by clicking the \"Easy Apply\" button.\n\nWant to l"
+  },
+  {
+    "id": "HP016",
+    "source_type": "posting",
+    "context": "Machine Learning / AI | Amazon",
+    "title": "Language Data Scientist, Artificial General Intelligence (AGI)",
+    "text": "Description\n\nAmazon is seeking a Language Data Scientist to join the Alexa Artificial Intelligence (AI) team as domain expert. This role focuses on expanding analysis and evaluation of speech and interaction data deliverables. The Language Data Scientist is an expert in dialog evaluation processes, working closely with a team of skilled analysts and machine learning scientists and engineers, and is a key member in developing new conventions for relevant annotation workflows. The Language Data Scientist will be asked to handle unique data analysis and research requests that support the training and evaluation of machine learning models and the overall processing of a data collection.\n\nKey job responsibilities\n\nTo be successful in this role, you must have a passion for data, efficiency, and accuracy. Specifically, you will:\n\n Own data analyses for customer-facing features, including launch go/no-go metrics for new features and accuracy metrics for existing features Handle unique data analysis requests from a range of stakeholders, including quantitative and qualitative analyses to elevate customer experience with speech interfaces Lead and evaluate changing dialog evaluation conventions, test tooling developments, and pilot processes to support expansion to new data areas Continuously evaluate workflow tools and processes and offer solutions to ensure they are efficient, high quality, and scalable Provide expert support for a large and growing team of data analysts Provide support for ongoing and new data collection efforts as a subject matter expert on conventions and use of the data Conduct research studies to understand speech and customer-Alexa interactions Assist scientists, program and product managers, and other stakeholders in defining and validating customer experience metrics\n\nWe are open to hiring candidates to work out of one of the following locations:\n\nBoston, MA, USA | Seattle, WA, USA\n\nBasic Qualifications\n\n 3+ years of data querying languages (e.g. SQL), scripting languages (e.g. Python) or statistical/mathematical software (e.g. R, SAS, Matlab, etc.) experience 2+ years of data scientist experience Bachelor's degree Experience applying theoretical models in an applied environment\n\nPreferred Qualifications\n\n Experience in Python, Perl, or another scripting language Experience in a ML or data scientist role with a large technology company Master's degree in a quantitative field such as statistics, mathematics, data science, business analytics, economics, finance, engineering, or computer science\n\nAmazon is committed to a diverse and inclusive workplace. Amazon is an equal opportunity employer and does not discriminate on the basis of race, national origin, gender, gender identity, sexual orientation, protected veteran status, disability, age, or other legally protected status. For individuals with disabilities who would like to request an accommodation, please visit https://www.amazon.jobs/en/disability/us.\n\nOur compensation reflect"
+  },
+  {
+    "id": "HP017",
+    "source_type": "posting",
+    "context": "Machine Learning / AI | eTeam",
+    "title": "Machine Learning Engineer",
+    "text": "Job Title: Machine Learning EngineerLocation: San Jose, CA 95134(Onsite)Duration: 6 Months(Contract), possible extensionPay: $85.00/hr on W2\nIn new product design roles: Develops and Analyzes the AI models that can be run on the mobile systems. Analyze the open-source Large Language, Vision and Multi-modal etc., Models developed for Edge AI and look at the customizations possible for deploying them into the Mobile devices for performance and power analysis. Deploy the Models developed internally and also the open-source models on different accelerators to analyze the performance. Work with the Third-party AI application developers to get custom models with the needed hooks for analyzing Memory and Storage requirements. Can work with large scale computing frameworks, data analysis systems and modeling environments. 5-7 years of experience working in AI Accelerators and doing performance analysis, experience working on Multimedia applications and Image/Video generation models."
+  },
+  {
+    "id": "HP018",
+    "source_type": "posting",
+    "context": "DevOps / Cloud Engineering | Kroger",
+    "title": "Senior Cloud Engineer - GCP",
+    "text": "The Kroger Company is currently looking to hire a Senior Cloud Engineer \u2013 GCP on a full time, permanent basis. This opportunity offers a flexible hybrid remote/onsite work schedule and will be based out of any of the following locations within the United States: Cincinnati, OH (preferred), Charlotte, NC, Chicago, IL, Boca Raton, FL, Portland, OR, or San Jose, CA. This role must be worked in accordance with Eastern Standard Time Zone.\nTitle: Senior Cloud Engineer \u2013 GCPLocation: Hybrid, based out of either Cincinnati, OH (preferred), Charlotte, NC, Chicago, IL, Boca Raton, FL, Portland, OR, or San Jose, CA\nSummary:Provide advanced and/or cross-technology engineering through all phases of the Technology/Project Life Cycle. Accountable for the overall systems infrastructure including engineering, implementation and integration, and technical services and support. Design, implement/install, maintain and administer infrastructure systems including hardware, software, and various configurations. Monitor overall performance to proactively identify potential issues and tune appropriately. Perform root cause analysis on failed components and implement corrective measures. Mentor and coach others to establish and improve processes and procedures. Demonstrate the company s core values of respect, honesty, integrity, diversity, inclusion, and safety.\nResponsibilities:and successfully implement overall infrastructure components per project with infrastructure teams, ensuring that overall solution is designed to meet SLA, DR, monitoring, security, and scalability needs required by the solution.that post-production operational processes/deliverables are well designed and implemented prior to the project moving into the solution support phase.scripts and templates required for the automatic provisioning of resources, on prem, cloud and distributed.install, and execute processes and standards for optimal use of cloud service provider offerings.technical issues inside a complex stack involving virtualization, containers and microservices.with the engineering teams to enable their applications to run on Cloud infrastructure.and create operational procedures, processes, and scripts.secure operations of infrastructure technologies (security updates, vulnerability management, role access management, configuration hardening)in the evaluation, selection, and implementation of new technologies to ensure adherence to architecture guidelines.vendor technical and support capabilities.technical leadership on enterprise work and establishing standards/guidelines.implement and support multiple moderately complex systems or applications with multiple concurrent users, ensuring control, integrity, and accessibility.enhanced production monitoring and additional capability.and maintain infrastructure solutions utilizing required tools and technologies.off-hours support (24 x 7) as required.be able to perform the essential job functions of this position with or without reasonable ac"
+  },
+  {
+    "id": "HP019",
+    "source_type": "posting",
+    "context": "Data Science / Data Engineering | CNA Search",
+    "title": "Data Engineer",
+    "text": "CNA Search is looking for a Data Engineer for a Direct Hire position. This role is in Atlanta and will be Hybrid Work Schedule. The ideal candidate should have a strong background in SQL Server. Must be US/GreenCard. \nManage multiple enterprise databases across cloud and on-prem environments.Design and develop solutions to support multiple data-related functions.Assist development teams with database architecture to ensure models are following best practices.Work with stakeholders to develop a database migration strategy in-line with company\u2019s long-term storage goals.Ensure data integrity and quality in database systems.Maintain standard policies for database development activities.Prepare documentation regarding database design, configuration and change management tasks.Mentor members of the database administrator team to manage the company databases effectively.Develop database functions, scripts, stored procedures and triggers to support application development and operations.Perform space management, archiving, partitioning and compression techniques for performance and manageability.Provide training aid to other teams on topics related to data management.Develop tools to automate database tasks such as deployments, data corrections, integrity checks, and usage statistics.Query optimization, including regular tuning of indexes.Troubleshoot SQL Server Problems as they occur (including after-hours and weekends) in relation to our in-house products.Use Agile development practices to refine User and Technical stories.\nThe database engineer will possess in-depth knowledge of our database structures, our business applications, and data flow dependencies between operational systems. This individual is a proficient coder that can work to automate routine database tasks and troubleshoot issues in high pressure business critical production environments.Bachelor\u2019s degree in areas such as computer science, engineering or information systems5-7 years of related work experience3+ years MS SQL Server experienceExceptional T-SQL skills, specifically with the use of sub-queries, aggregate functions and joins.Deep understanding of the principles involved in a relational database (indexing, triggers, execution plans, etc.)Working with the Microsoft .NET Framework and Visual StudioWorking with RESTful applicationsExperience developing and monitoring ETL servicesFamiliarity with SSAS, SSRS, and SSIS is a plusProven background authoring and maintaining ETL jobs from various data sourcesWorking with SQL Server data-tier applications (DAC and DACPAC)Working with SaaS applications and Continuous Integration + Continuous Deployment modelScripting/Programming experience (PowerShell, Perl, Python, etc.)Strong attention to detail is a must as the job will involve lengthy operations against live production data.Accounting industry background or a willingness to procure industry knowledge through independent research."
+  },
+  {
+    "id": "HP020",
+    "source_type": "posting",
+    "context": "Cybersecurity / Information Security | Dice",
+    "title": "Information Security Engineer",
+    "text": "Dice is the leading career destination for tech experts at every stage of their careers. Our client, Collabera LLC, is seeking the following. Apply via Dice today!\n\nMust Have:\n\n 5+ years of information security experience  1+ year of deep Prisma Cloud Enterprise experience, or experience with a similar Cloud Security Posture Management tool  Proven experience creating Prisma Cloud Enterprise custom policies via RQL, or experience with policy development for a similar Cloud Security Posture Management tool  Extensive cloud Security knowledge of services, workloads and hardening practices  Experience with Agile Scrum or Kanban methodologies  Knowledge/experience with scripting/automation languages such as Terraform, Python and/or PowerShell  Knowledge and understanding of CIS and NIST Cybersecurity frameworks.  Proven ability to work independently, as well as having strong interpersonal skills to work effectively within a Team and with partner Teams \n\nNiceToHave:\n\n 2+ years of Kubernetes experience  Experience with creation of Build policy subtype in Prisma Cloud Enterprise using YAML  Knowledge and understanding of DevSecOps and deployment automation to cloud environments  Familiarity with of various cloud security and related risk frameworks (COBIT, Cloud Security Alliance (CSA), FedRAMP, etc.)  Experience enabling auto-remediation via Prisma Cloud  Experience with IAM & Data protection expertise for monitoring and responding to related incidents  Expertise and experience with API driven automation of policy creation  Expertise and experience with Infrastructure as Code (IaC) and/or Policy as Code (PaC) concepts/tools  Experience with change and incident management practices in medium to large enterprise environments  Knowledge and understanding of Splunk  Security certifications such as Certified Information Systems Security Professional (CISSP), Global Information Assurance Certification (GIAC), or equivalent \n\nInformation Security Engineer"
+  }
+]
