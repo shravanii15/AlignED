@@ -77,7 +77,7 @@ def bridge_svg(items):
         t = (hx - x0 + plank_w / 2) / deck_w
         cable_y = 70 + 4 * 84 * (t - 0.5) ** 2 * 1.0  # parabola, lowest in the middle
         hangers.append(f'<line x1="{hx}" y1="{cable_y:.1f}" x2="{hx}" y2="{deck_y}" stroke="#7C8DB5" stroke-width="2" opacity="0.7"/>')
-    xl_top, xr_top = left_w - 10, x0 + deck_w + 10
+    xl_top, xr_top = left_w - 10, x0 + deck_w + 22  # towers mirror each other, 10px onto each cliff
     cable = (
         f'<path d="M {xl_top} 70 Q {(xl_top + xr_top)/2} 160 {xr_top} 70" fill="none" stroke="#A9B8E0" stroke-width="3.5" stroke-linecap="round"/>'
     )
@@ -92,7 +92,7 @@ def bridge_svg(items):
         '<g transform="translate(34 178)"><path d="M20 0 L40 9 L20 18 L0 9 Z" fill="#FFFFFF"/>'
         '<path d="M9 14 v9 q11 8 22 0 v-9 l-11 5 z" fill="#CBD5F5"/><line x1="40" y1="9" x2="40" y2="22" stroke="#FFFFFF" stroke-width="2"/></g>'
     )
-    bx = x0 + deck_w + 10 + 34
+    bx = xr_top + 24
     briefcase = (
         f'<g transform="translate({bx} 162)"><rect x="0" y="8" width="40" height="28" rx="5" fill="#FFFFFF"/>'
         '<path d="M13 8 v-4 a3 3 0 0 1 3 -3 h8 a3 3 0 0 1 3 3 v4" fill="none" stroke="#CBD5F5" stroke-width="3"/>'
