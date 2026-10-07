@@ -64,6 +64,7 @@ Built around two questions: "does this program teach what employers want?" and "
   - Every run is recorded in `ingest_runs`, and every rejected posting in `rejected_postings` with its reason. A run is marked degraded when more than 30% of postings are rejected, and the scheduled job then fails, which is the alert.
   - Loading is idempotent: replaying a snapshot inserts nothing new. Raw snapshots are committed, so the postings can always be rebuilt from them.
   - Loaded Adzuna postings never change a dashboard number. Gap scores and trends use only the Kaggle historical sample.
+- **Orchestration with Prefect** (`scripts/orchestration/flows.py`). A daily flow runs ingest, then the integrity check, then the derived-table rebuild, and publishes a run report. A failed fetch is retried (3 times, 60 s apart) but a data-quality failure is not, since fetching the same bad data again would not fix it. A backfill flow replays every raw snapshot in order and is safe to repeat. Failed runs call an alert hook that posts to a webhook when `ALERT_WEBHOOK_URL` is set. Run it with `python scripts/orchestration/flows.py daily`, or `serve` to run on a schedule.
 - **Rebuild and validation.** `scripts/rebuild_all.py` recomputes the derived tables on a temporary copy, runs `scripts/validate_database.py` (foreign keys, duplicates, gap and recommendation invariants, trend consistency, ingestion audit) and swaps the result in atomically.
 - **Fail-closed evaluation.** The extraction benchmark refuses to publish metrics unless predictions cover exactly the gold-set items.
 - **Schema.** `database/schema.sql` is the source of truth, with enforced foreign keys and additive migrations.
@@ -126,7 +127,7 @@ Dockerfile, docker-compose.yml, requirements-*.txt
 
 ## What I would build next
 
-Held-out evaluation with confidence intervals, orchestration of the pipeline stages with retries and backfill, dbt models with tests for the scoring tables, and raw snapshots stored in object storage.
+Held-out evaluation with confidence intervals, a hosted Prefect deployment, dbt models with tests for the scoring tables, and raw snapshots stored in object storage.
 
 ## Author
 
