@@ -73,4 +73,4 @@ def test_ingestion_workflow_keeps_the_git_tree_clean_before_pulling():
     ingestion run modifies database/aligned.db. The workflow must save the
     database as an artifact first, then discard the change, then pull."""
     text = _read(".github", "workflows", "fetch_adzuna.yml")
-    assert text.index("upload-artifact") < text.index("git checkout -- database/aligned.db") < text.index("git pull --rebase")
+    assert text.index("upload-artifact") < text.index("git checkout -- database/aligned.db") < text.index("git pull --rebase origin main")
