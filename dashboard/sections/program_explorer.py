@@ -20,7 +20,7 @@ from services.reports_pdf import build_pdf_report
 from utils.charts import TIER_COLOR_MAP, apply_chart_theme
 from utils.formatting import evidence_strength, program_label, safe_filename
 from utils.layout import page_header
-from services.skill_picture import market_picture
+from services.skill_picture import market_picture, program_matrix
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.visuals import stat_tiles
 from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY, jump_to_course_finder
@@ -283,7 +283,7 @@ def render_program_explorer():
         _render_gap_list(recs_df, course_count, scope_display_name, scope_total_postings, true_gap_count, program_id)
 
     # ---- Chart: the full picture, not only the tested gaps ----
-    picture = market_picture(program_id, cluster_id, course_count, scope_total_postings)
+    picture = market_picture(program_id, cluster_id, course_count, scope_total_postings, top_n=25)
     st.markdown('<p class="section-eyebrow">What Employers Ask For vs What Courses Name</p>', unsafe_allow_html=True)
     st.caption("The 10 skills most requested in job postings, and how often this program's course descriptions name each one.")
     chart_df = picture.head(10).iloc[::-1]
@@ -300,9 +300,11 @@ def render_program_explorer():
     dl_col1, dl_col2, _ = st.columns([1, 1, 2])
     base_name = safe_filename(f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations")
     with dl_col1:
+        matrix, courses = program_matrix(picture["skill_id"].tolist())
         excel_bytes = build_excel_report(
             selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
             picture=picture, strengths=_strengths(program_id), scope_name=scope_display_name,
+            matrix=matrix, courses=courses, selected_label=program_label(selected["university"], selected["program_name"]),
         )
         st.download_button(
             "Download Excel", data=excel_bytes, file_name=base_name + ".xlsx",

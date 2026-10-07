@@ -42,18 +42,9 @@ def test_skill_gap_pdf_builds_with_and_without_strengths():
     assert build_pdf_report("Uni", "MS CS", 100, recs.iloc[0:0], "all jobs", 1660, 0).startswith(b"%PDF-")
 
 
-def test_excel_report_is_plain_language_and_keeps_numbers_numeric():
-    import io
-
-    from openpyxl import load_workbook
-    from services.reports_excel import build_excel_report
-
-    wb = load_workbook(io.BytesIO(build_excel_report("Uni", "MS CS", 100, _sample_recs())))
-    assert wb.sheetnames == ["Overview", "Confirmed gaps", "How to read this"]
-    ws = wb["Confirmed gaps"]
-    headers = [c.value for c in ws[6]]
-    assert "How common in jobs" in headers and "q-value" not in " ".join(str(h) for h in headers)
-    assert ws["C7"].value == 0.40 and isinstance(ws["D7"].value, (int, float))
+def _sample_picture_with_ids():
+    pic = _sample_picture()
+    return pic
 
 
 def _sample_picture():
@@ -74,9 +65,10 @@ def test_reports_are_useful_even_with_zero_confirmed_gaps():
     from services.reports_pdf import build_pdf_report
 
     empty = _sample_recs().iloc[0:0]
-    wb = load_workbook(io.BytesIO(build_excel_report("Uni", "MS CS", 100, empty, picture=_sample_picture(), strengths=[("Git", 10)])))
-    assert wb.sheetnames == ["Overview", "Top skills employers want", "Confirmed gaps", "How to read this"]
-    assert wb["Top skills employers want"]["F5"].value == "Not named"
+    wb = load_workbook(io.BytesIO(build_excel_report("Uni", "MS CS", 100, empty, picture=_sample_picture())))
+    assert wb.sheetnames == ["Skills", "Notes"]
+    ws = wb["Skills"]
+    assert ws["F5"].value == "Not named" and ws["G5"].value == "No"
     assert build_pdf_report("Uni", "MS CS", 100, empty, "all jobs", 1660, 0, picture=_sample_picture()).startswith(b"%PDF-")
 
 
@@ -86,3 +78,26 @@ def test_market_picture_statuses():
     assert status_for(0) == "Not named"
     assert status_for(NAMED_WELL_AT / 2) == "Rarely named"
     assert status_for(NAMED_WELL_AT) == "Named"
+
+
+def test_excel_opens_on_a_table_and_adds_all_programs_sheet():
+    import io
+
+    import pandas as pd
+    from openpyxl import load_workbook
+    from services.reports_excel import build_excel_report
+
+    pic = _sample_picture()
+    matrix = pd.DataFrame({"Uni A": [0.0, 0.1, 0.5], "Uni B": [0.2, 0.0, 0.0]}, index=pic["skill_id"].tolist())
+    wb = load_workbook(io.BytesIO(build_excel_report(
+        "Uni A", "MS CS", 100, _sample_recs(), picture=pic, matrix=matrix, courses={"Uni A": 100, "Uni B": 50}, selected_label="Uni A",
+    )))
+    assert wb.sheetnames == ["Skills", "All programs", "Notes"]
+    skills = wb["Skills"]
+    headers = [c.value for c in skills[4]]
+    assert "Asked for in jobs" in headers and "q-value" not in " ".join(str(h) for h in headers)
+    assert skills["C5"].value == 0.40 and skills["G5"].value == "Yes"
+    assert skills.auto_filter.ref is not None
+    programs = wb["All programs"]
+    assert programs["C4"].value == "Uni A" and programs["D4"].value == "Uni B"
+    assert programs["D6"].value == 0.2
