@@ -66,3 +66,11 @@ def test_pipeline_image_user_can_write_where_the_pipeline_writes():
     pipeline_stage = _read("Dockerfile").split("AS pipeline", 1)[1]
     assert "chown -R aligned" in pipeline_stage
     assert pipeline_stage.index("chown -R aligned") < pipeline_stage.index("USER aligned")
+
+
+def test_ingestion_workflow_keeps_the_git_tree_clean_before_pulling():
+    """`git pull --rebase` fails (exit 128) with uncommitted changes, and the
+    ingestion run modifies database/aligned.db. The workflow must save the
+    database as an artifact first, then discard the change, then pull."""
+    text = _read(".github", "workflows", "fetch_adzuna.yml")
+    assert text.index("upload-artifact") < text.index("git checkout -- database/aligned.db") < text.index("git pull --rebase")
