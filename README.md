@@ -3,7 +3,7 @@
 # AlignED
 
 [![Run Tests](https://github.com/shravanii15/AlignED/actions/workflows/run_tests.yml/badge.svg)](https://github.com/shravanii15/AlignED/actions/workflows/run_tests.yml)
-[![Adzuna raw pull (experimental)](https://github.com/shravanii15/AlignED/actions/workflows/fetch_adzuna.yml/badge.svg)](https://github.com/shravanii15/AlignED/actions/workflows/fetch_adzuna.yml)
+[![Daily Ingestion](https://github.com/shravanii15/AlignED/actions/workflows/fetch_adzuna.yml/badge.svg)](https://github.com/shravanii15/AlignED/actions/workflows/fetch_adzuna.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **Do graduate computing programs teach what the job market asks for?**
@@ -11,6 +11,13 @@
 AlignED compares 1,378 course descriptions from 13 graduate programs against 1,660 sampled job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested for statistical significance.
 
 **[Live dashboard](https://aligned-shravanikulkarni.streamlit.app)**
+
+## What I found
+
+- **170 significant skill gaps** across the 13 programs (two-proportion z-test, or Fisher's exact test for small counts, with Benjamini-Hochberg FDR correction).
+- **Hands-on tools are the consistent gap.** Python, Docker, Kubernetes, Linux, Git and Tableau are under-covered in most programs, often by 10 to 40 percentage points.
+- **No demand trend survived correction.** 9 of 67 skills looked significant on a raw p-value and 0 held up after FDR correction, so the trends page labels them early hints.
+- **An LLM edged out a keyword baseline** on a 104-item hand-labeled set (F1 0.400 vs. 0.364). It had higher recall and lower precision, and it was too slow on consumer hardware, so the full-scale run used the keyword method. See Limitations for why these numbers are due a re-run.
 
 ## Screenshots
 
@@ -26,11 +33,10 @@ AlignED compares 1,378 course descriptions from 13 graduate programs against 1,6
 |---|---|
 | Programs / courses | 13 programs, 1,378 courses |
 | Job postings used for gap scoring | 1,660 (category-balanced sample) |
-| Significant skill gaps | 170 across all programs, overall-market scope (two-proportion z-test, or Fisher's exact test for small counts, with Benjamini-Hochberg FDR correction) |
+| Significant skill gaps | 170 in the overall-market scope |
+| Recommendations | 69 overall-market, 724 across all program and job-family scopes |
 | Skill extraction benchmark | LLM F1 0.400 vs. keyword baseline 0.364, on 104 hand-labeled items |
-| Skills with a confirmed demand trend | 0 of 67 after FDR correction (9 had raw p < 0.05) |
-
-Python, Docker, Kubernetes, Linux, Git and Tableau show up as significant gaps in most programs, often by 10 to 40 percentage points.
+| Skills with a confirmed demand trend | 0 of 67 after FDR correction |
 
 ## How it works
 
@@ -43,22 +49,28 @@ Scrape course catalogs, extract skills, normalize them to O\*NET, compare each p
 Built around two questions: "does this program teach what employers want?" and "what should I learn?"
 
 - **Home:** two starting points, one for a job you found and one for choosing a program.
-- **Match a Job:** paste a job posting and your skills to see what you have, what is missing, and what to learn first (ordered by how common each skill is across 1,660 postings), with a copyable summary.
-- **Skill Gaps:** pick a program and a type of job. The top five missing skills appear as cards, each with a button to find courses that mention it and a collapsed "How we know" panel with the statistics. Excel and PDF downloads.
-- **Which Jobs Fit Me:** paste your skills to see which job families fit you, what to learn next, and example postings, with a PDF.
+- **Match a Job:** paste a job posting, or upload a resume (PDF, DOCX, TXT), to see what you have, what is missing and what to learn first. Includes a downloadable PDF plan.
+- **Skill Gaps:** pick a program and a type of job. Top gaps appear as cards with a "How we know" panel, a chart of the skills employers ask for most, and Excel and PDF downloads. The Excel file has a filterable skills table and a heatmap across all 13 programs.
+- **Which Jobs Fit Me:** paste your skills to see which job families fit you, what to learn next and example postings, with a PDF.
 - **Compare Programs:** top gaps for 2 to 3 programs side by side.
 - **Explore the Data:** skills by program, rising and falling skills, job families from embedding-based clustering, and a course search.
 - **Methodology:** how the numbers are produced, and their limits.
 
-## Engineering
+## Data engineering
 
-- pytest suite covering the statistical core (z-tests, FDR correction, trend classification) and recommendation logic, run on every push by GitHub Actions
-- SQLite schema in `database/schema.sql` with enforced foreign keys and additive migrations
-- `scripts/rebuild_all.py` recomputes the derived tables on a temporary copy, validates them, and swaps them in atomically; database resets clear dependent tables in foreign-key order instead of disabling constraints
-- Evaluation fails closed: the extraction benchmark refuses to publish metrics unless predictions cover exactly the gold-set items
-- Dashboard split into per-page modules with shared `services/` and `utils/`
+- **Daily ingestion** (`scripts/ingest_adzuna.py`, run by GitHub Actions). Fetches Adzuna postings with retries and exponential backoff, saves the untouched response as a dated raw snapshot (`data/raw/adzuna/`), then validates, deduplicates and loads into SQLite.
+  - Validation rejects postings with no id, no title, a description too short to extract skills from, or an unreadable or future date. Impossible salary ranges are blanked, not rejected.
+  - Deduplication skips a repeated id and also a repost under a new id, using a content fingerprint of title, company and description.
+  - Every run is recorded in `ingest_runs`, and every rejected posting in `rejected_postings` with its reason. A run is marked degraded when more than 30% of postings are rejected, and the scheduled job then fails, which is the alert.
+  - Loading is idempotent: replaying a snapshot inserts nothing new. Raw snapshots are committed, so the postings can always be rebuilt from them.
+  - Loaded Adzuna postings never change a dashboard number. Gap scores and trends use only the Kaggle historical sample.
+- **Rebuild and validation.** `scripts/rebuild_all.py` recomputes the derived tables on a temporary copy, runs `scripts/validate_database.py` (foreign keys, duplicates, gap and recommendation invariants, trend consistency, ingestion audit) and swaps the result in atomically.
+- **Fail-closed evaluation.** The extraction benchmark refuses to publish metrics unless predictions cover exactly the gold-set items.
+- **Schema.** `database/schema.sql` is the source of truth, with enforced foreign keys and additive migrations.
+- **Docker.** One Dockerfile with two targets (dashboard and pipeline) and a compose file. Pipeline jobs are opt-in.
+- **CI.** On every push: lint (ruff), the full pytest suite on lightweight requirements, then both Docker images build and the dashboard container must report healthy.
 
-**Stack:** Python, SQLite, Streamlit, Plotly, pandas, scipy, scikit-learn, sentence-transformers, Ollama, BeautifulSoup, GitHub Actions
+**Stack:** Python, SQLite, Streamlit, Plotly, pandas, scipy, scikit-learn, sentence-transformers, Ollama, BeautifulSoup, Docker, GitHub Actions
 
 ## Run it
 
@@ -69,16 +81,24 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+With Docker:
+
+```bash
+docker compose up dashboard                              # dashboard at http://localhost:8501
+docker compose --profile pipeline run --rm ingest        # fetch, validate, load postings (needs .env)
+docker compose --profile pipeline run --rm rebuild       # recompute gap scores and recommendations
+```
+
 Tests: `pip install -r requirements-test.txt`, then `python -m pytest tests/`.
 
 ## Reproducing the database
 
 The committed `database/aligned.db` is a snapshot. What can be reproduced depends on the inputs:
 
-- **From the repository alone:** `python scripts/rebuild_all.py` recomputes the derived tables (gap scores and recommendations) from the raw tables in the snapshot. It works on a temporary copy, runs `scripts/validate_database.py` (foreign keys, duplicates, gap and recommendation invariants, tier and trend consistency), and replaces the real database only if every check passes.
-- **From raw sources:** `python scripts/rebuild_all.py --full` runs every stage in order and checks each stage's inputs first. Committed inputs: the scraped course catalogs (`data/sample_*_courses.json`), the O\*NET vocabulary (`data/taxonomy/`) and the 1,660-posting clustering sample (`data/clustering/`). Not committed, because of size or credentials: the 530 MB Kaggle postings CSV (`scripts/fetch_kaggle_backfill.py`, needs Kaggle credentials), the O\*NET and Adzuna API keys (copy `.env.example` to `.env`), and a local Ollama model for the LLM benchmark. The scraping and API scripts under `scripts/` regenerate the committed inputs if you want to start from the web.
+- **From the repository alone:** `python scripts/rebuild_all.py` recomputes the derived tables (gap scores and recommendations) from the raw tables in the snapshot. It works on a temporary copy, validates it, and replaces the real database only if every check passes.
+- **From raw sources:** `python scripts/rebuild_all.py --full` runs every stage in order and checks each stage's inputs first. Committed inputs: the scraped course catalogs (`data/sample_*_courses.json`), the O\*NET vocabulary (`data/taxonomy/`), the 1,660-posting clustering sample (`data/clustering/`) and the raw Adzuna snapshots (`data/raw/adzuna/`). Not committed, because of size or credentials: the 530 MB Kaggle postings CSV (needs Kaggle credentials), the O\*NET and Adzuna API keys (copy `.env.example` to `.env`), and a local Ollama model for the LLM benchmark.
 
-Stage order: `setup_database.py`, `gap_analysis/build_lookup_tables.py`, `extract_course_skills.py`, `extract_posting_skills.py`, `extract_posting_trends.py`, `compute_skill_trends.py`, `compute_gap_scores.py`, `generate_recommendations.py`. `setup_database.py` builds a new database file and swaps it in only when complete.
+Stage order: `setup_database.py`, `gap_analysis/build_lookup_tables.py`, `extract_course_skills.py`, `extract_posting_skills.py`, `extract_posting_trends.py`, `compute_skill_trends.py`, `compute_gap_scores.py`, `generate_recommendations.py`. `setup_database.py` builds a new database file, replays every raw Adzuna snapshot through the validating loader, and swaps the result in only when complete.
 
 The 170 gaps in the results table are the overall-market scope. The database holds 1,040 gap rows in total, because each program is also compared against each job family separately.
 
@@ -86,23 +106,29 @@ The 170 gaps in the results table are the overall-market scope. The database hol
 
 - **Coverage is a text signal.** "Covered" means a skill name appears in a course description, not that it is taught in depth. "Demand" means it appears in the sampled postings.
 - **The posting sample is category-balanced**, not proportional to the real labor market, so demand figures describe this sample only.
-- **Corpus sizes differ by program** (course counts range widely), which affects coverage rates.
-- **The 0.400 vs. 0.364 benchmark is an internal comparison** on the same 104 items used during development, not a held-out evaluation. The faster keyword method is used at full scale. The LLM's raw answers were matched to the taxonomy by embedding similarity, which can confuse near neighbors (SQL with MySQL, for example). The matching step now tries exact, alias and spelling-variant matches first and blocks known confusions; the benchmark numbers above predate that change and will be re-run.
-- **The database is a historical snapshot.** The Adzuna workflow is an experimental raw pull that writes `data/sample_adzuna_pull.json`. It does not change any dashboard number; gap scores and trends come from the Kaggle historical postings in the committed database.
-- **Trend detection** uses about 124,000 historical postings, restricted to the weeks with enough volume (68% were dated to a single week by a collection artifact).
+- **Corpus sizes differ by program**, which affects coverage rates.
+- **The benchmark is internal.** The 0.400 vs. 0.364 comparison uses the same 104 items used during development, not a held-out set. The LLM's raw answers were matched to the taxonomy by embedding similarity, which can confuse near neighbors (SQL with MySQL, for example). The matching step now tries exact, alias and spelling-variant matches first and blocks known confusions, but the benchmark numbers above predate that change and will be re-run.
+- **The dashboard reads a snapshot.** The daily job now loads new postings into SQLite with validation and deduplication, but the committed database is updated only when a snapshot is replayed into it, and the live postings are not part of gap scoring or trends. Content-based deduplication also treats one posting listed in several cities as a single posting, which is right for measuring skill demand and wrong for counting openings.
+- **Trend detection** uses about 124,000 historical postings, restricted to the weeks with enough volume (68% were dated to a single week by a collection artifact), and no trend is confirmed after correction.
 
 More detail is on the dashboard's Methodology page.
 
 ## Repository layout
 
 ```
-scripts/      collection, extraction, gap analysis
+scripts/      collection, ingestion, extraction, gap analysis
 dashboard/    Streamlit app
 database/     schema and committed SQLite snapshot
-data/gold_set/ 104-item hand-labeled evaluation set
+data/         course catalogs, taxonomy, raw Adzuna snapshots, 104-item gold set
 tests/        pytest suite
+Dockerfile, docker-compose.yml, requirements-*.txt
 ```
+
+## What I would build next
+
+Held-out evaluation with confidence intervals, orchestration of the pipeline stages with retries and backfill, dbt models with tests for the scoring tables, and raw snapshots stored in object storage.
 
 ## Author
 
-Shravani Kulkarni, MS Data Science
+Shravani Kulkarni, M.S. Data Science, Analytics and Engineering, Arizona State University (May 2027)  
+[GitHub](https://github.com/shravanii15) · [Live dashboard](https://aligned-shravanikulkarni.streamlit.app)

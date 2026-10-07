@@ -208,7 +208,9 @@ def test_full_rebuild_refuses_to_start_when_an_input_is_missing(monkeypatch):
 
 def third_party_imports_in_tests():
     stdlib = set(sys.stdlib_module_names) if hasattr(sys, "stdlib_module_names") else set()
-    local = {"conftest"} | {f[:-3] for d in ("scripts", os.path.join("scripts", "gap_analysis"), os.path.join("scripts", "extraction"), "tests", "dashboard")
+    # Packages inside scripts/ (e.g. scripts/ingest) are local code, not third party.
+    local_packages = {d for d in os.listdir(os.path.join(BASE_DIR, "scripts")) if os.path.isdir(os.path.join(BASE_DIR, "scripts", d))}
+    local = {"conftest"} | local_packages | {f[:-3] for d in ("scripts", os.path.join("scripts", "gap_analysis"), os.path.join("scripts", "extraction"), "tests", "dashboard")
                            for f in os.listdir(os.path.join(BASE_DIR, d)) if f.endswith(".py")} | {"utils", "services", "sections"}
     found = set()
     tests_dir = os.path.join(BASE_DIR, "tests")
@@ -230,7 +232,7 @@ def test_ci_installs_every_third_party_package_the_tests_import():
     requirements = open(os.path.join(BASE_DIR, "requirements-test.txt"), encoding="utf-8").read().lower()
     declared = {re.split(r"[<>=!~\[ ]", line.strip())[0] for line in requirements.splitlines() if line.strip() and not line.startswith("#")}
     # A few packages are imported under a different name than they install as.
-    import_to_package = {"docx": "python-docx", "fpdf": "fpdf2"}
+    import_to_package = {"docx": "python-docx", "fpdf": "fpdf2", "yaml": "pyyaml"}
     missing = {pkg for pkg in third_party_imports_in_tests() if import_to_package.get(pkg, pkg).lower() not in declared}
     assert not missing, f"tests import packages that CI would not install: {missing}"
 
@@ -257,12 +259,18 @@ def test_rebuild_inputs_are_committed_not_ignored():
         assert not ignored, f"{path} is required to rebuild the database but is gitignored"
 
 
-def test_adzuna_workflow_and_readme_do_not_claim_a_live_feed():
+def test_ingestion_workflow_and_readme_do_not_overclaim():
     workflow = open(os.path.join(BASE_DIR, ".github", "workflows", "fetch_adzuna.yml"), encoding="utf-8").read()
     readme = open(os.path.join(BASE_DIR, "README.md"), encoding="utf-8").read()
-    assert "experimental" in workflow.splitlines()[0].lower()
-    assert "does not change any dashboard number" in readme
+    assert "never change a dashboard number" in workflow
+    assert "never change a dashboard number" in readme
     assert "Daily Job Pull" not in readme
+    assert "live labor market" not in readme.lower() or "not" in readme.lower()
+
+
+def test_readme_has_no_dash_punctuation():
+    readme = open(os.path.join(BASE_DIR, "README.md"), encoding="utf-8").read()
+    assert "\u2014" not in readme and " -- " not in readme
 
 
 def test_readme_documents_the_rebuild_entry_point_and_its_modes():

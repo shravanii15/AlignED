@@ -30,7 +30,9 @@ CREATE TABLE IF NOT EXISTS postings (
     description TEXT,
     salary_min REAL,
     salary_max REAL,
-    posted_date TEXT
+    posted_date TEXT,
+    content_hash TEXT,               -- fingerprint of title+company+description, catches reposts under new ids
+    ingested_at TEXT                 -- when the ingestion job loaded it (NULL for the historical backfill)
 );
 
 CREATE TABLE IF NOT EXISTS skills (
@@ -117,3 +119,29 @@ CREATE TABLE IF NOT EXISTS gap_scores (
     FOREIGN KEY (skill_id) REFERENCES skills(skill_id),
     FOREIGN KEY (cluster_id) REFERENCES role_clusters(cluster_id)
 );
+
+-- Ingestion audit trail: one row per ingestion run, plus every rejected
+-- posting with its reason, so data quality is visible over time.
+CREATE TABLE IF NOT EXISTS ingest_runs (
+    run_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    source TEXT NOT NULL,
+    started_at TEXT NOT NULL,
+    finished_at TEXT,
+    snapshot_path TEXT,
+    fetched INTEGER,
+    rejected INTEGER,
+    duplicate_ids INTEGER,
+    duplicate_content INTEGER,
+    inserted INTEGER,
+    warnings INTEGER,
+    status TEXT
+);
+CREATE TABLE IF NOT EXISTS rejected_postings (
+    rejection_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    run_id INTEGER NOT NULL,
+    posting_id TEXT,
+    title TEXT,
+    reason TEXT NOT NULL,
+    FOREIGN KEY (run_id) REFERENCES ingest_runs(run_id)
+);
+CREATE INDEX IF NOT EXISTS idx_postings_source_hash ON postings(source, content_hash);

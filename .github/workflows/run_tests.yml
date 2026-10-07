@@ -1,10 +1,10 @@
 name: Run Tests
 
-# This runs automatically on every push and every pull request to main,
-# so anyone looking at the repo can see -- via the badge in the README --
-# whether the statistical core of the project (gap scoring, trend
-# detection, recommendation text, extraction matching) is actually
-# passing its tests right now, not just "at some point in the past."
+# CI on every push and pull request to main:
+#   lint    ruff catches real bugs (syntax errors, undefined names, mutable defaults)
+#   test    the full pytest suite on the lightweight test requirements
+#   docker  both images build, and the dashboard container starts and reports healthy
+# The docker job only runs once lint and tests pass.
 on:
   push:
     branches: [main]
@@ -13,6 +13,18 @@ on:
   workflow_dispatch:
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ruff
+        run: pip install ruff
+      - name: Lint
+        run: ruff check .
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -23,9 +35,53 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-test.txt
 
       - name: Install the packages the tests need
         run: pip install -r requirements-test.txt
 
       - name: Run the test suite
         run: python -m pytest tests/ -v
+
+  docker:
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build the dashboard image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: dashboard
+          load: true
+          tags: aligned-dashboard:ci
+          cache-from: type=gha,scope=dashboard
+          cache-to: type=gha,mode=max,scope=dashboard
+
+      - name: Build the pipeline image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: pipeline
+          load: true
+          tags: aligned-pipeline:ci
+          cache-from: type=gha,scope=pipeline
+          cache-to: type=gha,mode=max,scope=pipeline
+
+      - name: Start the dashboard container and wait for it to be healthy
+        run: |
+          docker run -d --name dash -p 8501:8501 aligned-dashboard:ci
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:8501/_stcore/health; then echo " healthy"; exit 0; fi
+            sleep 2
+          done
+          docker logs dash
+          exit 1
+
+      - name: Run the pipeline image's derived-table rebuild against a copy of the database
+        run: |
+          mkdir -p /tmp/db && cp database/aligned.db /tmp/db/aligned.db && chmod -R a+rwX /tmp/db
+          docker run --rm -v /tmp/db:/app/database aligned-pipeline:ci

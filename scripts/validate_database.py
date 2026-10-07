@@ -97,6 +97,32 @@ def validate_database(conn):
     if bad_trends:
         problems.append(f"skill_trends: {bad_trends} row(s) whose label disagrees with q_value/slope")
 
+    # Ingestion: loaded postings must be unique by content, and every run
+    # must be closed out with a status.
+    tables = {r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type = 'table'")}
+    if "ingest_runs" in tables:
+        dup_content = conn.execute(
+            """
+            SELECT COUNT(*) FROM (
+                SELECT 1 FROM postings WHERE source = 'adzuna' AND content_hash IS NOT NULL
+                GROUP BY content_hash HAVING COUNT(*) > 1
+            )
+            """
+        ).fetchone()[0]
+        if dup_content:
+            problems.append(f"postings: {dup_content} duplicated adzuna content hash(es) (reposts that should have been skipped)")
+        open_runs = conn.execute("SELECT COUNT(*) FROM ingest_runs WHERE status IS NULL OR finished_at IS NULL").fetchone()[0]
+        if open_runs:
+            problems.append(f"ingest_runs: {open_runs} run(s) never finished")
+        bad_arith = conn.execute(
+            """
+            SELECT COUNT(*) FROM ingest_runs
+            WHERE fetched != rejected + duplicate_ids + duplicate_content + inserted
+            """
+        ).fetchone()[0]
+        if bad_arith:
+            problems.append(f"ingest_runs: {bad_arith} run(s) whose counts do not add up to the number fetched")
+
     return problems
 
 

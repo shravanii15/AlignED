@@ -1,0 +1,11 @@
+.git
+.github
+**/__pycache__
+**/*.pyc
+.env
+Research
+Project Documentation
+data/kaggle_backfill
+data/gap_analysis
+tests
+docs

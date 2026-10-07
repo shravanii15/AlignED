@@ -1,0 +1,44 @@
+# One command runs the dashboard:
+#     docker compose up dashboard          ->  http://localhost:8501
+#
+# Pipeline jobs are opt-in (they belong to the "pipeline" profile) and share
+# the ./database folder with the host, so results persist:
+#     docker compose --profile pipeline run --rm ingest     # fetch + validate + load postings
+#     docker compose --profile pipeline run --rm rebuild    # recompute gap scores and recommendations
+#
+# The ingest job needs ADZUNA_APP_ID and ADZUNA_APP_KEY in a local .env file
+# (copy .env.example). Without them it exits with a clear message.
+
+services:
+  dashboard:
+    build:
+      context: .
+      target: dashboard
+    image: aligned-dashboard
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+
+  ingest:
+    build:
+      context: .
+      target: pipeline
+    image: aligned-pipeline
+    profiles: ["pipeline"]
+    env_file:
+      - path: .env
+        required: false
+    command: ["python", "scripts/ingest_adzuna.py"]
+    volumes:
+      - ./database:/app/database
+      - ./data/raw:/app/data/raw
+
+  rebuild:
+    build:
+      context: .
+      target: pipeline
+    image: aligned-pipeline
+    profiles: ["pipeline"]
+    command: ["python", "scripts/rebuild_all.py", "--derived-only"]
+    volumes:
+      - ./database:/app/database

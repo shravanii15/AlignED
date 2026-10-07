@@ -1,49 +1,73 @@
-name: Adzuna Raw Pull (experimental)
+name: Daily Ingestion
 
-# EXPERIMENTAL raw ingestion. This writes data/sample_adzuna_pull.json only.
-# It does NOT feed the dashboard: gap scores, trends and recommendations are
-# computed from the committed database snapshot (Kaggle historical postings),
-# and nothing here updates them.
+# Every day: pull postings from Adzuna, validate and de-duplicate them, load
+# them into SQLite, and keep the untouched raw response as a dated snapshot.
+#
+# - The raw snapshot (data/raw/adzuna/YYYY-MM-DD.json) is committed. It is the
+#   immutable raw layer: the database can be rebuilt from these files.
+# - The loaded database is uploaded as a workflow artifact, not committed
+#   (a 9 MB binary every day would bloat the repository).
+# - If the API is unreachable (exit 2) or more than 30% of postings fail
+#   validation (exit 3) the run fails, and GitHub emails the repository owner.
+#   That is the alert.
+# - Loaded Adzuna postings never change a dashboard number: gap scores and
+#   trends use only the Kaggle historical sample.
 
-# This section decides WHEN this runs automatically:
-# - every day at 6:00 AM UTC (the "cron" line below)
-# - or any time you want to trigger it by hand from GitHub's website
 on:
   schedule:
     - cron: "0 6 * * *"
   workflow_dispatch:
 
-# Gives this workflow permission to push commits back to the repo
-# (GitHub's default token is read-only unless we say otherwise).
 permissions:
   contents: write
 
 jobs:
-  fetch-jobs:
+  ingest:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repository code
+      - name: Check out the repository
         uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-test.txt
 
-      - name: Install the packages this script needs
-        run: pip install requests python-dotenv
+      - name: Install dependencies
+        run: pip install requests
 
-      - name: Run the Adzuna fetch script
-        working-directory: scripts
+      - name: Ingest postings (fetch, validate, deduplicate, load)
+        id: ingest
         env:
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
-        run: python fetch_adzuna_jobs.py
+        run: |
+          set +e
+          python scripts/ingest_adzuna.py | tee ingest_report.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
 
-      - name: Save the updated data back to the repository
+      - name: Commit the raw snapshot
         run: |
           git config user.name "AlignED Bot"
           git config user.email "actions@github.com"
-          git add -f data/sample_adzuna_pull.json
-          git commit -m "Automated daily job data update" || echo "No changes to commit"
+          git add data/raw/adzuna/
+          git commit -m "Daily raw Adzuna snapshot" || echo "No new snapshot"
+          git pull --rebase origin main
           git push
+
+      - name: Keep the loaded database and report for 14 days
+        uses: actions/upload-artifact@v4
+        with:
+          name: ingestion-${{ github.run_id }}
+          path: |
+            database/aligned.db
+            ingest_report.txt
+          retention-days: 14
+
+      - name: Fail the run if ingestion failed or data quality degraded
+        if: steps.ingest.outputs.exit_code != '0'
+        run: |
+          echo "Ingestion exited with code ${{ steps.ingest.outputs.exit_code }} (2 = fetch failed, 3 = data quality degraded)"
+          exit 1

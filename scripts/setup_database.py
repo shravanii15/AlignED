@@ -162,29 +162,22 @@ for prog in SCRAPED_PROGRAMS:
 
 print(f"\nLoaded {len(SCRAPED_PROGRAMS)} programs and {total_courses} real courses total.")
 
-# Step 3: load the sample Adzuna job postings.
-with open(os.path.join(DATA_DIR, "sample_adzuna_pull.json")) as f:
-    adzuna_data = json.load(f)
+# Step 3: load Adzuna postings through the same validated, de-duplicating
+# loader the daily ingestion job uses (scripts/ingest/). The legacy sample
+# file is replayed first, then every raw snapshot in data/raw/adzuna/.
+# Running this twice therefore loads each posting exactly once.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__))))
+import glob  # noqa: E402
 
-# fetch_adzuna_jobs.py saves a plain list of postings. Handle both that
-# shape and the older wrapper-object shape, so this doesn't break again
-# no matter which version of the file is sitting here.
-postings = adzuna_data if isinstance(adzuna_data, list) else adzuna_data.get("results", [])
-for p in postings:
-    cur.execute(
-        """INSERT OR IGNORE INTO postings
-           (posting_id, source, title, company, location, description, salary_min, salary_max, posted_date)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-        (
-            p["id"], "adzuna", p.get("title"),
-            p.get("company", {}).get("display_name"),
-            p.get("location", {}).get("display_name"),
-            p.get("description"),
-            p.get("salary_min"), p.get("salary_max"),
-            p.get("created"),
-        )
-    )
-print(f"Loaded {len(postings)} real job postings.")
+from ingest.loader import backfill_content_hashes, ensure_ingest_schema, load_snapshot_file  # noqa: E402
+
+ensure_ingest_schema(conn)
+snapshot_files = [os.path.join(DATA_DIR, "sample_adzuna_pull.json")] + sorted(glob.glob(os.path.join(DATA_DIR, "raw", "adzuna", "*.json")))
+for snapshot in snapshot_files:
+    if os.path.exists(snapshot):
+        result = load_snapshot_file(conn, snapshot)
+        print(f"Replayed {os.path.relpath(snapshot, BASE_DIR)}: inserted {result['inserted']}, rejected {result['rejected']}, duplicates {result['duplicate_ids'] + result['duplicate_content']}")
+backfill_content_hashes(conn)
 
 conn.commit()
 
