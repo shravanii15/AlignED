@@ -73,6 +73,33 @@ Built around two questions: "does this program teach what employers want?" and "
 
 **Stack:** Python, SQLite, Streamlit, Plotly, pandas, scipy, scikit-learn, sentence-transformers, Ollama, BeautifulSoup, Docker, GitHub Actions
 
+## REST API
+
+The same analysis is available over HTTP (`api/`, FastAPI). It is read-only, versioned under `/v1`, and protected by an API key.
+
+```bash
+export ALIGNED_API_KEYS=choose-a-long-random-key      # PowerShell: $env:ALIGNED_API_KEYS="..."
+uvicorn api.main:app                                   # or: docker compose up api
+# interactive docs: http://127.0.0.1:8000/docs
+```
+
+| Endpoint | What it returns |
+|---|---|
+| `GET /health` | Liveness and database check (no key needed) |
+| `GET /v1/programs` | Programs, with `university` filter and `limit`/`offset` paging |
+| `GET /v1/programs/{id}/gaps` | Significant skill gaps for a program, ranked by priority, with q-values and rationale; filter by `cluster_id` or `tier` |
+| `GET /v1/clusters` | Job families |
+| `POST /v1/match` | Send a job posting and your skills, get what you have and what is missing, most in-demand first |
+
+```bash
+curl -H "X-API-Key: $ALIGNED_API_KEYS" "http://127.0.0.1:8000/v1/programs/38/gaps?limit=3"
+curl -X POST -H "X-API-Key: $ALIGNED_API_KEYS" -H "Content-Type: application/json" \
+  -d '{"job_text": "Data Engineer. Python, SQL, Docker and Git daily.", "my_skills": "I know Python"}' \
+  http://127.0.0.1:8000/v1/match
+```
+
+Security and operations: keys are compared in constant time and the API refuses every protected call if no key is configured; requests are rate limited per key (default 60 per minute, `429` with `Retry-After`); inputs are validated and capped; SQL is always parameterised; the database is opened read-only; every response carries an `X-Request-ID` and each request is logged as one JSON line.
+
 ## Run it
 
 ```bash
@@ -119,6 +146,7 @@ More detail is on the dashboard's Methodology page.
 ```
 scripts/      collection, ingestion, extraction, gap analysis
 dashboard/    Streamlit app
+api/          REST API (FastAPI)
 database/     schema and committed SQLite snapshot
 data/         course catalogs, taxonomy, raw Adzuna snapshots, 104-item gold set
 tests/        pytest suite

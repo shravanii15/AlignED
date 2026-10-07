@@ -8,3 +8,7 @@ extend-exclude = ["Research", "Project Documentation", "data"]
 [lint]
 select = ["E9", "F", "B006", "B008"]
 ignore = ["F401"]   # re-exports and import-for-side-effect are used on purpose in a few modules
+
+[lint.per-file-ignores]
+# FastAPI declares dependencies as parameter defaults (Depends/Query); that is the documented pattern.
+"api/*.py" = ["B008"]

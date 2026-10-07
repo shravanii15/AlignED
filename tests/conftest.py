@@ -16,6 +16,7 @@ import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # .../AlignED
+sys.path.insert(0, BASE_DIR)
 sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
 sys.path.insert(0, os.path.join(BASE_DIR, "scripts", "gap_analysis"))
 sys.path.insert(0, os.path.join(BASE_DIR, "scripts", "extraction"))

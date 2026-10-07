@@ -34,7 +34,7 @@ def test_every_path_the_dockerfile_copies_exists():
 def test_compose_services_use_real_targets_and_profiles():
     compose = yaml.safe_load(_read("docker-compose.yml"))
     targets = set(re.findall(r"^FROM .* AS (\w+)", _read("Dockerfile"), flags=re.M))
-    assert set(compose["services"]) == {"dashboard", "ingest", "rebuild"}
+    assert set(compose["services"]) == {"dashboard", "api", "ingest", "rebuild"}
     for name, service in compose["services"].items():
         assert service["build"]["target"] in targets, name
     assert "profiles" not in compose["services"]["dashboard"]  # `docker compose up dashboard` just works
@@ -74,3 +74,12 @@ def test_ingestion_workflow_keeps_the_git_tree_clean_before_pulling():
     database as an artifact first, then discard the change, then pull."""
     text = _read(".github", "workflows", "fetch_adzuna.yml")
     assert text.index("upload-artifact") < text.index("git checkout -- database/aligned.db") < text.index("git pull --rebase origin main")
+
+
+def test_api_service_has_its_own_target_healthcheck_and_no_hardcoded_key():
+    compose = yaml.safe_load(_read("docker-compose.yml"))
+    dockerfile = _read("Dockerfile")
+    api_stage = dockerfile.split("AS api", 1)[1].split("\nFROM ", 1)[0]
+    assert "HEALTHCHECK" in api_stage and "USER aligned" in api_stage and "api/" in api_stage
+    key = str(compose["services"]["api"]["environment"]["ALIGNED_API_KEYS"])
+    assert key.startswith("${ALIGNED_API_KEYS"), "the API key must come from the environment, never be written in the file"

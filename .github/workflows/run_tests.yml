@@ -71,6 +71,26 @@ jobs:
           cache-from: type=gha,scope=pipeline
           cache-to: type=gha,mode=max,scope=pipeline
 
+      - name: Build the API image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: api
+          load: true
+          tags: aligned-api:ci
+          cache-from: type=gha,scope=api
+          cache-to: type=gha,mode=max,scope=api
+
+      - name: Start the API container, check health and that the key is enforced
+        run: |
+          docker run -d --name api -p 8000:8000 -e ALIGNED_API_KEYS=ci-key aligned-api:ci
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:8000/health; then echo " healthy"; break; fi
+            sleep 2
+          done
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8000/v1/programs)" = "401"
+          curl -fsS -H "X-API-Key: ci-key" "http://localhost:8000/v1/programs?limit=1"
+
       - name: Start the dashboard container and wait for it to be healthy
         run: |
           docker run -d --name dash -p 8501:8501 aligned-dashboard:ci

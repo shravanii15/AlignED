@@ -1,6 +1,7 @@
-# Two images from one file:
+# Three images from one file:
 #   docker build --target dashboard -t aligned-dashboard .   (the Streamlit app)
 #   docker build --target pipeline  -t aligned-pipeline  .   (ingestion + rebuild jobs)
+#   docker build --target api       -t aligned-api       .   (REST API)
 # docker compose builds and runs both; see docker-compose.yml.
 
 FROM python:3.12-slim AS base
@@ -37,3 +38,17 @@ COPY data/sample_adzuna_pull.json data/sample_adzuna_pull.json
 RUN mkdir -p data/gap_analysis && chown -R aligned:aligned /app
 USER aligned
 CMD ["python", "scripts/rebuild_all.py", "--derived-only"]
+
+# ---------------- api ----------------
+# The REST API. Reads the database read-only; needs ALIGNED_API_KEYS at run time.
+FROM base AS api
+COPY requirements-api.txt requirements-api.txt
+RUN pip install -r requirements-api.txt
+COPY api/ api/
+COPY dashboard/utils/ dashboard/utils/
+COPY database/aligned.db database/aligned.db
+USER aligned
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
+  CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health').status == 200 else 1)"
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
