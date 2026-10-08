@@ -15,7 +15,7 @@ import streamlit as st
 from services.database import run_query
 from sections.program_explorer import OVERALL_MARKET_LABEL
 from utils.formatting import evidence_strength, program_label
-from utils.visuals import bridge_svg
+from utils.visuals import bridge_svg, mini_bar, stat_tiles
 from utils.nav import (
     GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_PERSONALIZE,
     PAGE_BUILD_PROFILE, PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_ROLE_GROUPS, PAGE_TRENDS,
@@ -25,6 +25,60 @@ from utils.nav import (
 # Skill-gap example is only drawn from programs with enough courses that
 # a missing skill is not just a small-sample artifact.
 EXAMPLE_MIN_COURSES = 30
+
+
+def _render_signal():
+    """One real finding, pulled from the data: the top recommended gap for the program with the most gaps.
+    It is the centerpiece of the page, with the numbers and the evidence one click away."""
+    sig = run_query(
+        f"""
+        SELECT p.program_id, p.university, p.program_name, s.canonical_name AS skill_name,
+               g.program_coverage_rate AS cov, g.market_demand_rate AS dem, g.gap_value, g.q_value,
+               (SELECT COUNT(*) FROM courses c WHERE c.program_id = p.program_id) AS n_courses,
+               (SELECT COUNT(*) FROM recommendations x WHERE x.program_id = p.program_id AND x.cluster_id IS NULL) AS n_recs
+        FROM recommendations r
+        JOIN gap_scores g ON g.program_id = r.program_id AND g.skill_id = r.skill_id AND g.cluster_id IS r.cluster_id
+        JOIN programs p ON p.program_id = r.program_id
+        JOIN skills s ON s.skill_id = r.skill_id
+        WHERE r.cluster_id IS NULL
+          AND (SELECT COUNT(*) FROM courses c WHERE c.program_id = p.program_id) >= {EXAMPLE_MIN_COURSES}
+        ORDER BY n_recs DESC, g.gap_value DESC
+        LIMIT 1
+        """
+    )
+    if sig.empty:
+        return
+    r = sig.iloc[0]
+    label = program_label(r["university"], r["program_name"])
+    cov_n = int(round(r["cov"] * r["n_courses"]))
+    st.markdown('<p class="section-eyebrow">A Real Signal From The Data</p>', unsafe_allow_html=True)
+    left, right = st.columns([3, 2], gap="large")
+    with left:
+        st.markdown(
+            f"""
+            <div class="vcard vcard-accent" style="border-top-color:#D94A4A;">
+                <p class="vcard-title">{r["skill_name"]} &nbsp;<span class="arrow-chip arrow-down">{r["gap_value"]*100:+.1f} point gap</span></p>
+                <p class="vcard-sub">{label} compared with the overall job market</p>
+                <div class="vcard-row"><span class="vcard-name">Curriculum</span>{mini_bar(r["cov"], "#98A2B3")}<span class="vcard-val">{r["cov"]*100:.1f}%</span></div>
+                <div class="vcard-row"><span class="vcard-name">Job market</span>{mini_bar(r["dem"], "#D94A4A")}<span class="vcard-val">{r["dem"]*100:.1f}%</span></div>
+                <p class="vcard-sub" style="margin-top:0.6rem;">{cov_n} of {int(r["n_courses"])} course descriptions mention it, against {r["dem"]*100:.0f}% of sampled postings.
+                Statistically significant after correction (q = {r["q_value"]:.3g}). A text mention is a proxy for coverage, not proof of what is taught.</p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    with right:
+        st.markdown("**How to read this**")
+        st.caption(
+            "Each bar is the share of texts that name the skill: course descriptions on one side, job postings on the other. "
+            "The gap is the difference. AlignED tests every gap and corrects for running many tests before it shows one."
+        )
+        st.button(
+            "Explore this analysis →", key="home_signal_btn", type="primary", use_container_width=True,
+            on_click=jump_to_program_explorer, args=(label, OVERALL_MARKET_LABEL),
+        )
+        st.button("Why trust it? See the method", key="home_signal_method_btn", use_container_width=True,
+                  on_click=jump_to, args=(GROUP_METHODOLOGY, PAGE_METHODOLOGY))
 
 
 def render_overview():
@@ -76,7 +130,7 @@ def render_overview():
             <div class="hero-left">
                 <p class="hero-wordmark">Align<span class="wm-ed">ED</span></p>
                 <p class="hero-motto">Align your education with the job market.</p>
-                <p class="hero-headline">Is your degree missing the skills employers want?</p>
+                <p class="hero-headline">Where does graduate education diverge from the job market?</p>
                 <p class="hero-tagline">Paste a job or pick a program. We show the missing skills, ranked, and courses that teach them.</p>
             </div>
             {card}
@@ -84,6 +138,8 @@ def render_overview():
         """,
         unsafe_allow_html=True,
     )
+    st.markdown("<br>", unsafe_allow_html=True)
+    _render_signal()
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ---- Two paths ----
@@ -133,7 +189,16 @@ def render_overview():
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # ---- A real example, pulled live ----
+    # ---- Under the hood ----
+    st.markdown('<p class="section-eyebrow">Under The Hood</p>', unsafe_allow_html=True)
+    stat_tiles([
+        ("13", "programs"), ("1,378", "course descriptions"), ("1,660", "job postings"),
+        ("1,597", "O*NET skills"), ("104 + 50", "development + held-out test items"),
+    ])
+    st.caption(
+        "Gaps use two-proportion and Fisher's exact tests with false-discovery correction. Skills are found with a keyword "
+        "baseline that beat a local LLM on held-out data. Data comes from a validated daily pipeline."
+    )
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ---- Deeper pages, one quiet row ----

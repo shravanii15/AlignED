@@ -6,11 +6,15 @@
 [![Daily Ingestion](https://github.com/shravanii15/AlignED/actions/workflows/fetch_adzuna.yml/badge.svg)](https://github.com/shravanii15/AlignED/actions/workflows/fetch_adzuna.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Do graduate computing programs teach what the job market asks for?**
+**Curriculum x labor-market analysis: do graduate computing programs teach what the job market asks for?**
+
+**[Live app](https://aligned-shravanikulkarni.streamlit.app)** · **[Case study](docs/CASE_STUDY.md)** · **[Data provenance](docs/DATA_PROVENANCE.md)** · **[API demo](#rest-api)**
 
 AlignED compares 1,378 course descriptions from 13 graduate programs against 1,660 sampled job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested for statistical significance.
 
-**[Live dashboard](https://aligned-shravanikulkarni.streamlit.app)**
+![AlignED home](docs/screenshots/home.png)
+
+**Why I built it:** "industry-ready" is usually claimed, not measured. I wanted to measure where curricula and job postings diverge, and to be honest about how far the measurement can be trusted.
 
 ## What I found
 

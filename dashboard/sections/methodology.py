@@ -59,6 +59,12 @@ def render_methodology():
                     with a last-updated date. The feed gives only the first 500 characters of each
                     description, so the fixed sample is re-measured on the same window for that comparison.
 
+                    **The 13 course corpora are different kinds of things.** Four are a program's own course
+                    list (Georgia Tech Analytics and Cybersecurity, Penn State, BU's graduate list), seven are
+                    whole department catalogs, one is an elective pool (Wisconsin) and one is a small sample
+                    (ASU). A gap against a broad catalog means the catalog does not mention a skill, which is
+                    not the same as a degree not teaching it. Full table: docs/DATA_PROVENANCE.md.
+
                     **Course data is not equally complete across programs.** Course counts range from 5
                     (ASU, a sample) to 295 (Georgia Tech's main CS catalog, close to the full public
                     list). Some programs are a full degree catalog, others an elective pool or a sample.
