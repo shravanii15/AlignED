@@ -51,6 +51,11 @@ def render_methodology():
                     others) for role clustering, not at random in proportion to the labor market. "Demand"
                     here means demand within this sample.
 
+                    **Why you may see two posting counts.** The 1,660 historical postings are used in every
+                    statistic and chart. Postings from the daily Adzuna feed are stored in the same database
+                    (a few so far) but are deliberately not counted, so published numbers never change
+                    without notice.
+
                     **Course data is not equally complete across programs.** Course counts range from 5
                     (ASU, a sample) to 295 (Georgia Tech's main CS catalog, close to the full public
                     list). Some programs are a full degree catalog, others an elective pool or a sample.

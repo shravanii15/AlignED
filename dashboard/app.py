@@ -76,6 +76,7 @@ flat list, so a visitor knows where to start):
 
 import streamlit as st
 
+from services.database import run_query
 from sections.clusters import render_clusters
 from sections.compare import render_compare
 from sections.course_finder import render_course_finder
@@ -605,9 +606,26 @@ if len(pages_in_group) > 1:
 else:
     page_selection = next(iter(pages_in_group))
 
+def _posting_counts():
+    """(postings used in the statistics, newer live-feed postings stored but not used). Falls back to the
+    published figure if the query cannot run, so the sidebar can never break the page."""
+    try:
+        rows = run_query("SELECT source = 'kaggle_sample' AS used, COUNT(*) AS n FROM postings GROUP BY used")
+        used = int(rows.loc[rows["used"] == 1, "n"].sum())
+        extra = int(rows.loc[rows["used"] == 0, "n"].sum())
+        return (used or 1660), extra
+    except Exception:
+        return 1660, 0
+
+
+_used_postings, _extra_postings = _posting_counts()
+_feed_note = (
+    f"<br><span style='opacity:0.75'>+ {_extra_postings:,} newer postings from the daily feed are stored but "
+    f"not used in any statistic</span>" if _extra_postings else ""
+)
 st.sidebar.markdown(
     '<p class="sidebar-footer"><b>Based on</b><br>'
-    '13 programs &middot; 1,378 courses &middot; 1,660 job postings</p>',
+    f'13 programs &middot; 1,378 courses &middot; {_used_postings:,} job postings used in the statistics{_feed_note}</p>',
     unsafe_allow_html=True,
 )
 pages_in_group[page_selection]()
