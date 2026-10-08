@@ -54,7 +54,10 @@ def render_methodology():
                     **Why you may see two posting counts.** The 1,660 historical postings are used in every
                     statistic and chart. Postings from the daily Adzuna feed are stored in the same database
                     (a few so far) but are deliberately not counted, so published numbers never change
-                    without notice.
+                    without notice. Instead, a weekly refresh compares recent feed postings with the fixed
+                    sample in a separate "Latest Market Pulse" section (Rising and Falling Skills page),
+                    with a last-updated date. The feed gives only the first 500 characters of each
+                    description, so the fixed sample is re-measured on the same window for that comparison.
 
                     **Course data is not equally complete across programs.** Course counts range from 5
                     (ASU, a sample) to 295 (Georgia Tech's main CS catalog, close to the full public
@@ -162,5 +165,7 @@ def render_methodology():
     with st.expander("The analysis is a snapshot"):
         st.markdown(
             "The daily Adzuna pull adds raw postings, but gap scores and trends are not recomputed from "
-            "them. Results reflect the sample and course data as of the last pipeline run."
+            "them. They reflect the fixed sample and course data. Only the weekly Market Pulse section "
+            "(Rising and Falling Skills page) reflects newer postings, and it compares skill shares, "
+            "not gaps."
         )

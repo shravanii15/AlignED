@@ -15,6 +15,7 @@ FROM base AS dashboard
 COPY dashboard/requirements.txt dashboard/requirements.txt
 RUN pip install -r dashboard/requirements.txt
 COPY dashboard/ dashboard/
+COPY data/market_pulse/ data/market_pulse/
 COPY database/aligned.db database/aligned.db
 USER aligned
 EXPOSE 8501

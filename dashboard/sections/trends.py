@@ -10,11 +10,49 @@ raw p-value and the corrected q-value visible."""
 import streamlit as st
 
 from services.database import run_query
+from services.market_pulse import load_market_pulse, refreshed_date
 from utils.layout import page_header
 from utils.visuals import mini_bar, stat_tiles
 
 SIGNIFICANCE_THRESHOLD = 0.05
 TOP_SIGNALS_SHOWN = 10
+
+
+def render_market_pulse():
+    """This week's postings vs the fixed sample. Separate from every other statistic in the app."""
+    pulse = load_market_pulse()
+    if not pulse:
+        return
+    st.markdown('<p class="section-eyebrow">Latest Market Pulse</p>', unsafe_allow_html=True)
+    st.caption(
+        f"Last updated {refreshed_date(pulse)} · {pulse['recent_postings']:,} recent postings "
+        f"(posted {pulse['posted_from']} to {pulse['posted_to']}) compared with the fixed "
+        f"{pulse['historical_postings']:,}-posting sample. This section is updated weekly and does not change the gap scores or trends elsewhere."
+    )
+    skills = pulse["skills"]
+    confirmed = [r for r in skills if r["shift_confirmed"]]
+    stat_tiles([
+        (f"{pulse['recent_postings']:,}", "recent postings"),
+        (str(len(skills)), "skills seen often enough to compare"),
+        (str(len(confirmed)), "confirmed differences"),
+    ])
+    rows = [
+        {
+            "Skill": r["skill"],
+            "Share of recent postings": f"{r['recent_rate']*100:.1f}%",
+            "Share in fixed sample": f"{r['historical_rate']*100:.1f}%",
+            "Difference (points)": f"{r['difference']*100:+.1f}",
+            "Verdict": "differs (held up after correction)" if r["shift_confirmed"] else "no clear difference",
+        }
+        for r in skills
+    ]
+    st.dataframe(rows, hide_index=True, use_container_width=True)
+    st.caption(
+        f"Like-for-like: the job feed only provides the first {pulse['text_window_chars']} characters of each description, "
+        "so the fixed sample was re-measured on the same window. Skills are found with the keyword method. "
+        "A recent posting set is a different mix of jobs from the balanced sample, so a difference can reflect that "
+        "mix, not a market change. Treat this as a signal to look at, not a trend."
+    )
 
 
 def render_trends():
@@ -24,6 +62,8 @@ def render_trends():
         "so treat it as an early hint, not a forecast.",
         art="trend", pills=("Job postings over time", "Early hints only"),
     )
+
+    render_market_pulse()
 
     trends_df = run_query(
         """

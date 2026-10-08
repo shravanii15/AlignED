@@ -77,6 +77,7 @@ flat list, so a visitor knows where to start):
 import streamlit as st
 
 from services.database import run_query
+from services.market_pulse import load_market_pulse, refreshed_date
 from sections.clusters import render_clusters
 from sections.compare import render_compare
 from sections.course_finder import render_course_finder
@@ -623,9 +624,11 @@ _feed_note = (
     f"<br><span style='opacity:0.75'>+ {_extra_postings:,} newer postings from the daily feed are stored but "
     f"not used in any statistic</span>" if _extra_postings else ""
 )
+_pulse_date = refreshed_date(load_market_pulse())
+_pulse_note = f"<br><span style='opacity:0.75'>Market pulse last updated {_pulse_date}</span>" if _pulse_date else ""
 st.sidebar.markdown(
     '<p class="sidebar-footer"><b>Based on</b><br>'
-    f'13 programs &middot; 1,378 courses &middot; {_used_postings:,} job postings used in the statistics{_feed_note}</p>',
+    f'13 programs &middot; 1,378 courses &middot; {_used_postings:,} job postings used in the statistics{_feed_note}{_pulse_note}</p>',
     unsafe_allow_html=True,
 )
 pages_in_group[page_selection]()

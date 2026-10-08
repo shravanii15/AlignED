@@ -1,0 +1,133 @@
+{
+ "schema_version": 1,
+ "refreshed_at": "2026-10-08T17:35:55+00:00",
+ "recent_postings": 592,
+ "snapshots_used": 2,
+ "posted_from": "2026-09-22",
+ "posted_to": "2026-10-07",
+ "historical_postings": 1660,
+ "method": "baseline_keyword",
+ "text_window_chars": 500,
+ "skills": [
+  {
+   "skill": "Python",
+   "recent_count": 40,
+   "recent_rate": 0.06756756756756757,
+   "historical_count": 113,
+   "historical_rate": 0.06807228915662651,
+   "p_value": 0.966579568927145,
+   "test": "z_test",
+   "q_value": 0.966579568927145,
+   "difference": -0.0005047215890589402,
+   "shift_confirmed": false
+  },
+  {
+   "skill": "C",
+   "recent_count": 13,
+   "recent_rate": 0.02195945945945946,
+   "historical_count": 72,
+   "historical_rate": 0.043373493975903614,
+   "p_value": 0.018912746103512124,
+   "test": "z_test",
+   "q_value": 0.06304248701170709,
+   "difference": -0.021414034516444153,
+   "shift_confirmed": false
+  },
+  {
+   "skill": "Snowflake",
+   "recent_count": 13,
+   "recent_rate": 0.02195945945945946,
+   "historical_count": 13,
+   "historical_rate": 0.00783132530120482,
+   "p_value": 0.00573244024040509,
+   "test": "z_test",
+   "q_value": 0.02866220120202545,
+   "difference": 0.01412813415825464,
+   "shift_confirmed": true
+  },
+  {
+   "skill": "R",
+   "recent_count": 12,
+   "recent_rate": 0.02027027027027027,
+   "historical_count": 27,
+   "historical_rate": 0.016265060240963854,
+   "p_value": 0.5212892903858759,
+   "test": "z_test",
+   "q_value": 0.7279952581908087,
+   "difference": 0.004005210029306417,
+   "shift_confirmed": false
+  },
+  {
+   "skill": "Kubernetes",
+   "recent_count": 8,
+   "recent_rate": 0.013513513513513514,
+   "historical_count": 26,
+   "historical_rate": 0.01566265060240964,
+   "p_value": 0.7127499023916808,
+   "test": "z_test",
+   "q_value": 0.7919443359907564,
+   "difference": -0.0021491370888961255,
+   "shift_confirmed": false
+  },
+  {
+   "skill": "Linux",
+   "recent_count": 8,
+   "recent_rate": 0.013513513513513514,
+   "historical_count": 37,
+   "historical_rate": 0.022289156626506025,
+   "p_value": 0.19019652496220907,
+   "test": "z_test",
+   "q_value": 0.31699420827034847,
+   "difference": -0.00877564311299251,
+   "shift_confirmed": false
+  },
+  {
+   "skill": "Tableau",
+   "recent_count": 7,
+   "recent_rate": 0.011824324324324325,
+   "historical_count": 7,
+   "historical_rate": 0.004216867469879518,
+   "p_value": 0.0625760496678324,
+   "test": "fisher_exact",
+   "q_value": 0.1251520993356648,
+   "difference": 0.007607456854444807,
+   "shift_confirmed": false
+  },
+  {
+   "skill": "Physics",
+   "recent_count": 6,
+   "recent_rate": 0.010135135135135136,
+   "historical_count": 1,
+   "historical_rate": 0.0006024096385542169,
+   "p_value": 0.0017601119884613624,
+   "test": "fisher_exact",
+   "q_value": 0.017601119884613624,
+   "difference": 0.00953272549658092,
+   "shift_confirmed": true
+  },
+  {
+   "skill": "TypeScript",
+   "recent_count": 5,
+   "recent_rate": 0.008445945945945946,
+   "historical_count": 3,
+   "historical_rate": 0.0018072289156626507,
+   "p_value": 0.03345428932334067,
+   "test": "fisher_exact",
+   "q_value": 0.08363572330835167,
+   "difference": 0.0066387170302832955,
+   "shift_confirmed": false
+  },
+  {
+   "skill": "PySpark",
+   "recent_count": 5,
+   "recent_rate": 0.008445945945945946,
+   "historical_count": 11,
+   "historical_rate": 0.006626506024096385,
+   "p_value": 0.5823962065526469,
+   "test": "fisher_exact",
+   "q_value": 0.7279952581908087,
+   "difference": 0.001819439921849561,
+   "shift_confirmed": false
+  }
+ ]
+}

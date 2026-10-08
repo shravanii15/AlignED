@@ -4,6 +4,7 @@ Prefect flows that orchestrate AlignED's data pipeline.
     python scripts/orchestration/flows.py daily                 # fetch, validate, load, check, rebuild
     python scripts/orchestration/flows.py daily --from-file data/raw/adzuna/2026-10-07.json
     python scripts/orchestration/flows.py backfill              # replay every saved raw snapshot, oldest first
+    python scripts/orchestration/flows.py weekly                # weekly market pulse from saved snapshots
     python scripts/orchestration/flows.py serve                 # run the daily flow on a schedule (06:00 UTC)
 
 What the orchestration adds on top of the plain scripts:
@@ -32,6 +33,7 @@ BASE_DIR = os.path.dirname(SCRIPTS_DIR)
 sys.path.insert(0, SCRIPTS_DIR)
 
 import ingest_adzuna  # noqa: E402
+import market_pulse  # noqa: E402
 from rebuild_all import rebuild_derived  # noqa: E402
 from validate_database import validate_database  # noqa: E402
 
@@ -114,6 +116,16 @@ def rebuild_task(db_path):
     return True
 
 
+@task
+def market_pulse_task(db_path, snapshot_dir, out_path):
+    """Recompute the weekly market-pulse file from the saved snapshots. Raises if too little data."""
+    pulse = market_pulse.compute_market_pulse(db_path, snapshot_dir)
+    if pulse is None:
+        raise ValueError(f"Fewer than {market_pulse.MIN_POSTINGS_TO_PUBLISH} recent postings: nothing published")
+    market_pulse.write_market_pulse(pulse, out_path)
+    return pulse
+
+
 def _counts(db_path):
     conn = sqlite3.connect(db_path)
     try:
@@ -159,9 +171,21 @@ def backfill_flow(db_path=DB_PATH, snapshot_dir=RAW_DIR):
     return {"snapshots": len(files), "before": before, "after": after}
 
 
+@flow(name="aligned-weekly-refresh", on_failure=[notify_failure])
+def weekly_refresh_flow(db_path=DB_PATH, snapshot_dir=RAW_DIR, out_path=market_pulse.OUT_PATH):
+    """Weekly: compare recent postings with the fixed sample and publish the market-pulse file.
+
+    Gap scores, recommendations and trends are NOT touched: they stay tied to the fixed sample."""
+    pulse = market_pulse_task(db_path, snapshot_dir, out_path)
+    confirmed = sum(r["shift_confirmed"] for r in pulse["skills"])
+    _publish_report("AlignED weekly refresh", [f"Recent postings: {pulse['recent_postings']}", f"Snapshots used: {pulse['snapshots_used']}",
+                                               f"Skills compared: {len(pulse['skills'])}", f"Confirmed differences: {confirmed}"])
+    return {"recent_postings": pulse["recent_postings"], "skills": len(pulse["skills"]), "confirmed": confirmed}
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["daily", "backfill", "serve"])
+    parser.add_argument("command", choices=["daily", "backfill", "weekly", "serve"])
     parser.add_argument("--db", default=DB_PATH)
     parser.add_argument("--from-file")
     parser.add_argument("--pages", type=int, default=2)
@@ -173,6 +197,8 @@ def main(argv=None):
         daily_flow(db_path=args.db, from_file=args.from_file, pages=args.pages, rebuild=not args.no_rebuild)
     elif args.command == "backfill":
         backfill_flow(db_path=args.db)
+    elif args.command == "weekly":
+        weekly_refresh_flow(db_path=args.db)
     else:
         daily_flow.serve(name="aligned-daily-schedule", cron=args.cron, parameters={"db_path": args.db, "pages": args.pages})
 
