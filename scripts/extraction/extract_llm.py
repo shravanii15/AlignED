@@ -63,6 +63,7 @@ This script is meant to be run by the user on her own machine, where
 Ollama is actually reachable.
 """
 
+import argparse
 import json
 import os
 import re
@@ -234,12 +235,18 @@ def save_checkpoint(results_by_id):
     LLM runs on a laptop can degrade or get interrupted partway through a
     104-item run, losing an hour of progress to one bad request would
     be a real cost, not just an inconvenience."""
-    os.makedirs(DATA_DIR, exist_ok=True)
+    os.makedirs(os.path.dirname(os.path.abspath(OUTPUT_PATH)), exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(list(results_by_id.values()), f, indent=2)
 
 
-def main():
+def main(argv=None):
+    global GOLD_SET_PATH, OUTPUT_PATH
+    parser = argparse.ArgumentParser(description="LLM extraction through a local Ollama model.")
+    parser.add_argument("--items", default=GOLD_SET_PATH, help="JSON list of items with id and text (default: the dev gold set)")
+    parser.add_argument("--out", default=OUTPUT_PATH, help="where to write predictions (also the resume checkpoint)")
+    args = parser.parse_args(argv)
+    GOLD_SET_PATH, OUTPUT_PATH = args.items, args.out
     print("Loading O*NET vocabulary (skills, knowledge, technologies)...")
     vocabulary = load_vocabulary()
     normalized_lookup = build_normalized_lookup(vocabulary)

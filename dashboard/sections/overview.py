@@ -51,6 +51,7 @@ def _render_signal():
     r = sig.iloc[0]
     label = program_label(r["university"], r["program_name"])
     cov_n = int(round(r["cov"] * r["n_courses"]))
+    q_text = "q < 0.001" if r["q_value"] < 0.001 else f"q = {r['q_value']:.3f}"
     st.markdown('<p class="section-eyebrow">A Real Signal From The Data</p>', unsafe_allow_html=True)
     left, right = st.columns([3, 2], gap="large")
     with left:
@@ -62,7 +63,7 @@ def _render_signal():
                 <div class="vcard-row"><span class="vcard-name">Curriculum</span>{mini_bar(r["cov"], "#98A2B3")}<span class="vcard-val">{r["cov"]*100:.1f}%</span></div>
                 <div class="vcard-row"><span class="vcard-name">Job market</span>{mini_bar(r["dem"], "#D94A4A")}<span class="vcard-val">{r["dem"]*100:.1f}%</span></div>
                 <p class="vcard-sub" style="margin-top:0.6rem;">{cov_n} of {int(r["n_courses"])} course descriptions mention it, against {r["dem"]*100:.0f}% of sampled postings.
-                Statistically significant after correction (q = {r["q_value"]:.3g}). A text mention is a proxy for coverage, not proof of what is taught.</p>
+                Statistically significant after correction ({q_text}). A text mention is a proxy for coverage, not proof of what is taught.</p>
             </div>
             """,
             unsafe_allow_html=True,

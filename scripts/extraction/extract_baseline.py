@@ -44,6 +44,7 @@ What this baseline deliberately does NOT do:
   found."
 """
 
+import argparse
 import json
 import os
 import re
@@ -125,7 +126,14 @@ def extract_terms_from_text(text, vocabulary_with_patterns):
     return found
 
 
-def main():
+def main(argv=None):
+    global GOLD_SET_PATH, OUTPUT_PATH, DATA_DIR
+    parser = argparse.ArgumentParser(description="Keyword baseline extraction.")
+    parser.add_argument("--items", default=GOLD_SET_PATH, help="JSON list of items with id and text (default: the dev gold set)")
+    parser.add_argument("--out", default=OUTPUT_PATH, help="where to write predictions")
+    args = parser.parse_args(argv)
+    GOLD_SET_PATH, OUTPUT_PATH = args.items, args.out
+    DATA_DIR = os.path.dirname(os.path.abspath(OUTPUT_PATH))
     print("Loading O*NET vocabulary (skills, knowledge, technologies)...")
     vocabulary = load_vocabulary()
     print(f"  -> {len(vocabulary)} vocabulary terms loaded.")
