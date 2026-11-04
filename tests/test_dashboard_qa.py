@@ -14,7 +14,7 @@ AppTest = streamlit_testing.AppTest
 DASH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "dashboard")
 
 PAGES = [
-    ("overview", "render_overview"), ("program_explorer", "render_program_explorer"), ("compare", "render_compare"),
+    ("overview", "render_overview"), ("findings", "render_findings"), ("program_explorer", "render_program_explorer"), ("compare", "render_compare"),
     ("heatmap", "render_heatmap"), ("trends", "render_trends"), ("clusters", "render_clusters"),
     ("course_finder", "render_course_finder"), ("match_job", "render_match_job"),
     ("profile", "render_profile_builder"), ("methodology", "render_methodology"),
@@ -67,3 +67,11 @@ def test_home_signal_is_drawn_from_the_database():
     html = " ".join(m.value for m in at.markdown)
     assert "A Real Signal From The Data" in html
     assert "point gap" in html and "Curriculum" in html and "Job market" in html
+
+
+def test_key_findings_uses_existing_numbers():
+    at = _page("findings", "render_findings").run()
+    assert not at.exception
+    text = " ".join(m.value for m in at.markdown)
+    assert "Finding 1" in text and "Finding 2" in text and "Finding 3" in text
+    assert "170" in text  # the same 170 significant gaps reported everywhere else

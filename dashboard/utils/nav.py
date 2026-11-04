@@ -28,6 +28,7 @@ GROUP_METHODOLOGY = "Methodology"
 # action cards need to jump directly to them). No emojis at this level --
 # the group-level icon above is enough context, and a flat list of
 # emoji-prefixed pages under an already-iconed group read as cluttered.
+PAGE_FINDINGS = "Key Findings"
 PAGE_PROGRAM_EXPLORER = "Skill Gaps"
 PAGE_COMPARE = "Compare Programs"
 PAGE_HEATMAP = "Skills by Program"

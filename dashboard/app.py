@@ -81,6 +81,7 @@ from services.market_pulse import load_market_pulse, refreshed_date
 from sections.clusters import render_clusters
 from sections.compare import render_compare
 from sections.course_finder import render_course_finder
+from sections.findings import render_findings
 from sections.heatmap import render_heatmap
 from sections.methodology import render_methodology
 from sections.match_job import render_match_job
@@ -92,7 +93,7 @@ from utils.nav import (
     GROUP_ANALYZE, GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_OVERVIEW, GROUP_PERSONALIZE,
     NAV_GROUP_KEY, NAV_PAGE_KEY,
     PAGE_BUILD_PROFILE, PAGE_COMPARE, PAGE_MATCH_JOB, PAGE_COURSE_FINDER, PAGE_HEATMAP,
-    PAGE_METHODOLOGY, PAGE_PROGRAM_EXPLORER, PAGE_ROLE_GROUPS, PAGE_TRENDS,
+    PAGE_FINDINGS, PAGE_METHODOLOGY, PAGE_PROGRAM_EXPLORER, PAGE_ROLE_GROUPS, PAGE_TRENDS,
 )
 
 st.set_page_config(page_title="AlignED: Curriculum vs. Job Market Gap Analysis", page_icon="📊", layout="wide")
@@ -568,7 +569,7 @@ st.markdown(
 # can jump straight to a specific group+page via the same session-state
 # keys these radios are bound to (key=NAV_GROUP_KEY / key=NAV_PAGE_KEY).
 NAV_GROUPS = {
-    GROUP_OVERVIEW: {"Overview": render_overview},
+    GROUP_OVERVIEW: {"Overview": render_overview, PAGE_FINDINGS: render_findings},
     GROUP_ANALYZE: {
         PAGE_PROGRAM_EXPLORER: render_program_explorer,
         PAGE_COMPARE: render_compare,

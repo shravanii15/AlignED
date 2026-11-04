@@ -17,8 +17,8 @@ from sections.program_explorer import OVERALL_MARKET_LABEL
 from utils.formatting import evidence_strength, program_label
 from utils.visuals import bridge_svg, mini_bar, stat_tiles
 from utils.nav import (
-    GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_PERSONALIZE,
-    PAGE_BUILD_PROFILE, PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_ROLE_GROUPS, PAGE_TRENDS,
+    GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_OVERVIEW, GROUP_PERSONALIZE,
+    PAGE_BUILD_PROFILE, PAGE_FINDINGS, PAGE_HEATMAP, PAGE_METHODOLOGY, PAGE_ROLE_GROUPS, PAGE_TRENDS,
     jump_to, jump_to_program_explorer, start_job_match,
 )
 
@@ -78,6 +78,8 @@ def _render_signal():
             "Explore this analysis →", key="home_signal_btn", type="primary", use_container_width=True,
             on_click=jump_to_program_explorer, args=(label, OVERALL_MARKET_LABEL),
         )
+        st.button("See all key findings", key="home_findings_btn", use_container_width=True,
+                  on_click=jump_to, args=(GROUP_OVERVIEW, PAGE_FINDINGS))
         st.button("Why trust it? See the method", key="home_signal_method_btn", use_container_width=True,
                   on_click=jump_to, args=(GROUP_METHODOLOGY, PAGE_METHODOLOGY))
 
