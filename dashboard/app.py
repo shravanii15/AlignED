@@ -300,10 +300,12 @@ st.markdown(
     .sidebar-tagline { font-size: 0.76rem !important; color: #7B87A3 !important; margin-bottom: 1.4rem; }
 
     /* Hide the circle/dot indicator Streamlit renders for each radio
-       option, it's the first child div inside the option's content
-       wrapper. Text weight + a left accent bar (below) communicate
+       option. It is an empty div inside a container that holds no text,
+       so match it by that shape instead of by position: a positional
+       rule (first child) hid the label text itself when Streamlit
+       changed its markup (verified against the live DOM, 1.61.1). Text weight + a left accent bar (below) communicate
        selection instead. */
-    section[data-testid="stSidebar"] label[data-testid="stRadioOption"] > div > div:first-child {
+    section[data-testid="stSidebar"] label[data-testid="stRadioOption"] div:has(> div:empty):not(:has(p)) {
         display: none;
     }
     section[data-testid="stSidebar"] label[data-testid="stRadioOption"] {
@@ -466,7 +468,7 @@ st.markdown(
         background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
         padding: 0.3rem 0.95rem; margin-right: 0;
     }
-    div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"] > div > div:first-child { display: none; }
+    div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"] div:has(> div:empty):not(:has(p)) { display: none; }
     div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"][data-selected="true"] { background: var(--navy); border-color: var(--navy); }
     div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"][data-selected="true"] p { color: #FFFFFF !important; font-weight: 700 !important; }
     div[data-testid="stMainBlockContainer"] label[data-testid="stRadioOption"] p { font-size: 0.88rem !important; font-weight: 600 !important; }
