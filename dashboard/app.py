@@ -436,7 +436,12 @@ st.markdown(
     .bridge-caption { font-size: 0.85rem !important; color: #C7D2FE !important; text-align: center; margin: 0.7rem auto 0 auto !important; max-width: 520px; line-height: 1.5 !important; }
     .bridge-caption b { color: #FFFFFF; }
 
-    /* ---- Page banner (every inner page) ---- */
+    /* ---- Compact page header (every inner page) ---- */
+    .page-head { margin: 0.2rem 0 1.4rem 0; padding-bottom: 1rem; border-bottom: 1px solid #E4E7EC; }
+    .page-head-title { font-size: 1.9rem !important; font-weight: 800 !important; color: #101828 !important; line-height: 1.15 !important; margin: 0 !important; letter-spacing: -0.01em; }
+    .page-head-desc { font-size: 1rem !important; color: #667085 !important; line-height: 1.55 !important; margin: 0.45rem 0 0 0 !important; max-width: 720px; }
+
+    /* ---- Page banner (legacy, no longer used) ---- */
     .page-banner {
         display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
         border-radius: 18px; padding: 1.6rem 2rem; margin-bottom: 1.4rem;

@@ -76,24 +76,15 @@ _GRADIENT = {
 
 
 def page_header(icon, title, description=None, art=None, pills=()):
-    """Render a page banner. `icon` is kept for backward compatibility and
-    ignored; `art` is a key of _ART; `pills` is a short list of strings."""
-    start, end = _GRADIENT.get(art, ("#0B1220", "#16213A"))
-    svg = (
-        f'<svg class="page-banner-art" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">{_ART[art]}</svg>'
-        if art in _ART else ""
-    )
-    pill_html = "".join(f"<span>{p}</span>" for p in pills)
-    desc_html = f'<p class="page-banner-desc">{description}</p>' if description else ""
+    """Compact page header: a title and one line of description, no banner.
+    `icon`, `art` and `pills` are accepted for backward compatibility and ignored: the big dark
+    banner repeated the title on every page and made the app feel crowded."""
+    desc_html = f'<p class="page-head-desc">{description}</p>' if description else ""
     st.markdown(
         f"""
-        <div class="page-banner" style="background: linear-gradient(135deg, {start} 0%, {end} 100%);">
-            <div class="page-banner-text">
-                <p class="page-banner-title">{title}</p>
-                {desc_html}
-                <div class="page-banner-pills">{pill_html}</div>
-            </div>
-            {svg}
+        <div class="page-head">
+            <p class="page-head-title">{title}</p>
+            {desc_html}
         </div>
         """,
         unsafe_allow_html=True,

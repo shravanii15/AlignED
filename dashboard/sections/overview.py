@@ -71,17 +71,15 @@ def _render_signal():
     with right:
         st.markdown("**How to read this**")
         st.caption(
-            "Each bar is the share of texts that name the skill: course descriptions on one side, job postings on the other. "
-            "The gap is the difference. AlignED tests every gap and corrects for running many tests before it shows one."
+            "Each bar is the share of texts that name the skill, in course descriptions and in job postings. "
+            "The gap is the difference, and it is shown only after a significance test."
         )
         st.button(
             "Explore this analysis →", key="home_signal_btn", type="primary", use_container_width=True,
             on_click=jump_to_program_explorer, args=(label, OVERALL_MARKET_LABEL),
         )
-        st.button("See all key findings", key="home_findings_btn", use_container_width=True,
+        st.button("Key findings across all programs", key="home_findings_btn", use_container_width=True,
                   on_click=jump_to, args=(GROUP_OVERVIEW, PAGE_FINDINGS))
-        st.button("Why trust it? See the method", key="home_signal_method_btn", use_container_width=True,
-                  on_click=jump_to, args=(GROUP_METHODOLOGY, PAGE_METHODOLOGY))
 
 
 def render_overview():
@@ -103,11 +101,8 @@ def render_overview():
     )
     card = ""
     if not example.empty:
-        best_pid, best_total = None, -1.0
-        for pid, grp in example.groupby("program_id"):
-            total = grp.head(5)["cov"].sum()
-            if total > best_total:
-                best_pid, best_total = pid, total
+        # Same program as the signal card below (most recommendations), so the page tells one story.
+        best_pid = example.groupby("program_id")["n_gaps"].first().sort_values(ascending=False).index[0]
         ex = example[example["program_id"] == best_pid].head(5)
         MENTIONED_AT = 0.05  # a skill counts as "taught" when 5%+ of courses name it
         items = []
@@ -132,9 +127,8 @@ def render_overview():
         <div class="hero-panel">
             <div class="hero-left">
                 <p class="hero-wordmark">Align<span class="wm-ed">ED</span></p>
-                <p class="hero-motto">Align your education with the job market.</p>
                 <p class="hero-headline">Where does graduate education diverge from the job market?</p>
-                <p class="hero-tagline">Paste a job or pick a program. We show the missing skills, ranked, and courses that teach them.</p>
+                <p class="hero-tagline">Compare what graduate programs teach with what job postings ask for, with every gap statistically tested.</p>
             </div>
             {card}
         </div>
@@ -192,27 +186,11 @@ def render_overview():
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # ---- Under the hood ----
-    st.markdown('<p class="section-eyebrow">Under The Hood</p>', unsafe_allow_html=True)
-    stat_tiles([
-        ("13", "programs"), ("1,378", "course descriptions"), ("1,660", "job postings"),
-        ("1,597", "O*NET skills"), ("104 + 50", "development + held-out test items"),
-    ])
-    st.caption(
-        "Gaps use two-proportion and Fisher's exact tests with false-discovery correction. Skills are found with a keyword "
-        "baseline that beat a local LLM on held-out data. Data comes from a validated daily pipeline."
+    st.markdown(
+        '<p class="site-footer" style="margin-top:1.2rem;">13 programs &middot; 1,378 course descriptions &middot; 1,660 job postings &middot; '
+        'gaps tested with z-test or Fisher\'s exact test and false-discovery correction &middot; skills found with a keyword method that beat an LLM on held-out data</p>',
+        unsafe_allow_html=True,
     )
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # ---- Deeper pages, one quiet row ----
-    st.markdown('<p class="section-eyebrow">Dig Deeper</p>', unsafe_allow_html=True)
-    more0, more1, more2, more3, more4 = st.columns(5)
-    more0.button("Which jobs fit me", key="more_fit_btn", use_container_width=True, on_click=jump_to, args=(GROUP_PERSONALIZE, PAGE_BUILD_PROFILE))
-    more1.button("Skills by program", key="more_heatmap_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_HEATMAP))
-    more2.button("Rising and falling skills", key="more_trends_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_TRENDS))
-    more3.button("Job families", key="more_families_btn", use_container_width=True, on_click=jump_to, args=(GROUP_EXPLORE, PAGE_ROLE_GROUPS))
-    more4.button("How it works", key="more_method_btn", use_container_width=True, on_click=jump_to, args=(GROUP_METHODOLOGY, PAGE_METHODOLOGY))
-
     st.markdown("---")
     st.markdown(
         '<p class="site-footer"><b>Built by Shravani Kulkarni</b> &middot; MS Data Science &middot; '

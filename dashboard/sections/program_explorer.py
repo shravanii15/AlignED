@@ -22,7 +22,6 @@ from utils.formatting import evidence_strength, program_label, safe_filename
 from utils.layout import page_header
 from services.skill_picture import market_picture, program_matrix
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
-from utils.visuals import stat_tiles
 from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY, jump_to_course_finder
 
 OVERALL_MARKET_LABEL = "Overall market (all sampled postings)"
@@ -148,13 +147,6 @@ def _render_strengths(program_id, course_count):
 def _render_gap_list(recs_df, course_count, scope_display_name, scope_total_postings, true_gap_count, program_id):
     """The answer banner, strengths and ranked gap cards."""
     # ---- The answer, first ----
-    biggest = recs_df.iloc[0]
-    stat_tiles([
-        (f"{course_count}", "courses analyzed"),
-        (f"{true_gap_count}", "skills missing"),
-        (f"{biggest['canonical_name']}", "top priority skill"),
-        (f"{biggest['gap_value']*100:.0f} pts", "its gap size"),
-    ])
     top = recs_df.head(TOP_SKILLS_SHOWN)
     chips = "".join(f'<span class="skill-chip skill-chip-missing">{name}</span>' for name in top["canonical_name"])
     st.markdown(
