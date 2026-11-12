@@ -84,6 +84,7 @@ def resume_uploader(label, text_key, uploader_key):
 
     st.file_uploader(label, type=ALLOWED_TYPES, key=uploader_key, on_change=_on_upload,
                      help="PDF, DOCX or TXT, up to 5 MB. Read in your browser session only and never stored.")
+    st.caption("Privacy: your text is processed on the app server for this session only. AlignED does not save it and sends it to no outside service.")
     err = st.session_state.get(uploader_key + "_error")
     if err:
         st.warning(err)

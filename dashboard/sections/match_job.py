@@ -56,7 +56,7 @@ def _market_demand():
 def render_match_job():
     page_header(
         "", "Match a Job",
-        "Paste a job posting you like and your own skills. See what you already have, what is missing, and what to learn first.",
+        "Paste a job posting you like and your own skills. See which skills we find in your text, which we do not, and what to learn first. A skill we do not find may still be one you have, so add anything we missed.",
         art="match", pills=("Paste a posting", "Get a learning order"),
     )
 
@@ -110,8 +110,8 @@ def render_match_job():
     # ---- Headline ----
     if my_text.strip():
         frac = len(have) / n_total
-        headline = f"You have {len(have)} of the {n_total} skills this job asks for."
-        sub = "Learn the missing ones below, starting with the most common." if missing else "You cover every skill we could detect in this posting."
+        headline = f"We found {len(have)} of the {n_total} skills this job asks for in your text."
+        sub = "The rest are not in the text you gave us. If you do have them, add them above; otherwise start with the most common." if missing else "Your text covers every skill we could detect in this posting."
         color = "#1F9D68" if frac >= 0.67 else ("#F5A524" if frac >= 0.34 else "#D94A4A")
         ring = ring_svg(frac, f"{len(have)}/{n_total}", "skills matched", color)
     else:
@@ -136,12 +136,12 @@ def render_match_job():
     if my_text.strip():
         c1, c2 = st.columns(2)
         with c1:
-            st.markdown(f"**You already have ({len(have)})**")
+            st.markdown(f"**Found in your text ({len(have)})**")
             chips = "".join(f'<span class="skill-chip skill-chip-have">{names[i]}</span>' for i in have) or "None yet."
             st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
         with c2:
-            st.markdown(f"**Missing ({len(missing)})**")
-            chips = "".join(f'<span class="skill-chip skill-chip-missing">{names[i]}</span>' for i in missing) or "Nothing missing."
+            st.markdown(f"**Not found in your text ({len(missing)})**")
+            chips = "".join(f'<span class="skill-chip skill-chip-missing">{names[i]}</span>' for i in missing) or "All found."
             st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
     else:
         chips = "".join(f'<span class="skill-chip skill-chip-have">{names[i]}</span>' for i in sorted(job_ids, key=lambda i: -demand.get(i, 0)))

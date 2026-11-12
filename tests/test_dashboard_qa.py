@@ -18,6 +18,7 @@ PAGES = [
     ("heatmap", "render_heatmap"), ("trends", "render_trends"), ("clusters", "render_clusters"),
     ("course_finder", "render_course_finder"), ("match_job", "render_match_job"),
     ("profile", "render_profile_builder"), ("methodology", "render_methodology"),
+    ("model_eval", "render_model_eval"), ("data_health", "render_data_health"), ("about", "render_about"), ("own_program", "render_own_program"),
 ]
 
 
@@ -75,3 +76,26 @@ def test_key_findings_uses_existing_numbers():
     text = " ".join(m.value for m in at.markdown)
     assert "Finding 1" in text and "Finding 2" in text and "Finding 3" in text
     assert "170" in text  # the same 170 significant gaps reported everywhere else
+
+
+def test_own_program_example_flow_shows_results():
+    at = _page("own_program", "render_own_program").run()
+    assert not at.exception
+    next(b for b in at.button if b.label == "Try with an example").click()
+    at.run()
+    assert not at.exception
+    assert any("courses read" in m.value for m in at.markdown)
+
+
+def test_own_program_bad_input_shows_warning_not_error():
+    at = _page("own_program", "render_own_program").run()
+    at.session_state["own_program_run"] = True
+    at.run()
+    assert not at.exception
+    assert len(at.warning) == 1
+
+
+def test_model_eval_try_box_finds_skills():
+    at = _page("model_eval", "render_model_eval").run()
+    at.text_area(key="eval_try_text").set_value("We use Python and SQL daily.").run()
+    assert not at.exception

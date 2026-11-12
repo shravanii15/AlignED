@@ -16,6 +16,10 @@ COPY dashboard/requirements.txt dashboard/requirements.txt
 RUN pip install -r dashboard/requirements.txt
 COPY dashboard/ dashboard/
 COPY data/market_pulse/ data/market_pulse/
+COPY data/robustness/ data/robustness/
+COPY data/health/ data/health/
+COPY data/heldout/heldout_results.json data/heldout/heldout_results.json
+COPY data/heldout/error_analysis.json data/heldout/error_analysis.json
 COPY database/aligned.db database/aligned.db
 USER aligned
 EXPOSE 8501

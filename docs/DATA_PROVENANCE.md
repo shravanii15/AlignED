@@ -60,3 +60,12 @@ The database snapshot is committed. `python scripts/rebuild_all.py` recomputes t
 and validates them before replacing anything. Raw daily Adzuna snapshots are committed under
 `data/raw/adzuna/`. The Kaggle CSV (530 MB) is not committed; see the README for what can be rebuilt
 from the repository alone.
+
+## Deduplication and salary notes
+
+- Postings are de-duplicated first by source id, then by a content fingerprint (title, company and the first 500
+  characters of the description). The fingerprint is a heuristic: it can merge two different postings that share an
+  opening, and it treats one posting listed in several cities as one. It is right for measuring skill demand and
+  wrong for counting openings.
+- Salary fields are stored when present but are not used in any statistic, and no currency or pay-period
+  normalization is applied. Do not read them as comparable.

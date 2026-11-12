@@ -8,6 +8,7 @@ the settings frozen. See data/heldout/PROTOCOL.md.
 """
 
 import hashlib
+import re
 import json
 import os
 import random
@@ -26,6 +27,26 @@ MAX_POSTING_CHARS_BEFORE_CAP = 6000
 def text_fingerprint(text):
     """Stable fingerprint of the first 200 normalised characters, used to keep dev items out of the held-out set."""
     return hashlib.sha256(" ".join((text or "").lower().split())[:200].encode("utf-8")).hexdigest()
+
+
+def _shingles(text, k=8):
+    words = re.findall(r"\w+", " ".join((text or "").lower().split()))
+    return {" ".join(words[i:i + k]) for i in range(max(1, len(words) - k + 1))}
+
+
+def shingle_overlap(a, b, k=8):
+    """Share of the smaller text's 8-word shingles that also occur in the other text (0 to 1).
+    Catches near-duplicates that the 200-character fingerprint misses (different openings, same body)."""
+    sa, sb = _shingles(a, k), _shingles(b, k)
+    return len(sa & sb) / max(1, min(len(sa), len(sb)))
+
+
+def dev_overlaps(items, dev_path=DEV_ITEMS_PATH, threshold=0.3):
+    """(held-out id, dev id, overlap) for every pair at or above the threshold. Empty means no leakage found."""
+    with open(dev_path, encoding="utf-8") as f:
+        dev = json.load(f)
+    return [(h["id"], d.get("id"), round(o, 3)) for h in items for d in dev
+            if (o := shingle_overlap(h["text"], d["text"])) >= threshold]
 
 
 def dev_fingerprints(path=DEV_ITEMS_PATH):

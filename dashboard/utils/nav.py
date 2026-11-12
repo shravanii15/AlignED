@@ -18,16 +18,18 @@ same literal strings in two different files.
 # CSS), not icons, to read as a serious analytics product rather than a
 # student Streamlit app. "Explore" was renamed to "Market Intelligence"
 # since it names WHAT you'll find there, not just an action.
-GROUP_OVERVIEW = "Home"
-GROUP_ANALYZE = "Check a Program"
-GROUP_EXPLORE = "Explore the Data"
-GROUP_PERSONALIZE = "Plan My Skills"
-GROUP_METHODOLOGY = "Methodology"
+GROUP_OVERVIEW = "Overview"
+GROUP_EXPLORE = "Explore"
+GROUP_ANALYZE = GROUP_EXPLORE  # kept as an alias: Skill Gaps and Compare Programs now live under Explore
+GROUP_PERSONALIZE = "Match"
+GROUP_METHODOLOGY = "Evidence"
+GROUP_ABOUT = "About"
 
 # Page labels within a group (only listed here where the Overview page's
 # action cards need to jump directly to them). No emojis at this level --
 # the group-level icon above is enough context, and a flat list of
 # emoji-prefixed pages under an already-iconed group read as cluttered.
+PAGE_OVERVIEW = "Overview"
 PAGE_FINDINGS = "Key Findings"
 PAGE_PROGRAM_EXPLORER = "Skill Gaps"
 PAGE_COMPARE = "Compare Programs"
@@ -38,6 +40,10 @@ PAGE_COURSE_FINDER = "Course Finder"
 PAGE_MATCH_JOB = "Match a Job"
 PAGE_BUILD_PROFILE = "Which Jobs Fit Me"
 PAGE_METHODOLOGY = "Methodology & Limitations"
+PAGE_MODEL_EVAL = "Model Evaluation"
+PAGE_DATA_HEALTH = "Data Health"
+PAGE_BYO = "Analyze Your Program"
+PAGE_ABOUT = "About & Product Brief"
 
 # The st.session_state keys the sidebar's two radio widgets are bound to
 # (via key=...). Setting these directly, then letting Streamlit's normal

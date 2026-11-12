@@ -1,5 +1,6 @@
 """API-key authentication and a per-key rate limiter."""
 
+import hashlib
 import hmac
 import time
 from collections import defaultdict, deque
@@ -13,7 +14,8 @@ api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
 class RateLimiter:
     """Sliding-window limiter held in memory.
 
-    Fine for one process. With several workers or servers each would keep its own counts,
+    Entries are created only for keys that already passed validation, so memory is bounded by the
+    number of configured keys. Fine for one process. With several workers or servers each would keep its own counts,
     so a shared store such as Redis would replace this class (same interface).
     """
 
@@ -43,6 +45,11 @@ def key_is_valid(candidate, valid_keys):
     return ok
 
 
+def key_id(key):
+    """Short, non-reversible identifier for logs. Never derived from the secret's own characters."""
+    return "key-" + hashlib.sha256(key.encode()).hexdigest()[:8]
+
+
 def require_api_key(request: Request, provided: str = Security(api_key_header)):
     """Dependency: authenticate, then rate-limit by key. Returns the key's short id for logging.
     Declaring the header through Security() is what adds the Authorize button to /docs."""
@@ -54,4 +61,4 @@ def require_api_key(request: Request, provided: str = Security(api_key_header)):
     allowed, retry_after = request.app.state.limiter.check(provided)
     if not allowed:
         raise HTTPException(status_code=429, detail="Rate limit exceeded.", headers={"Retry-After": str(int(retry_after) + 1)})
-    return provided[:4] + "..."
+    return key_id(provided)

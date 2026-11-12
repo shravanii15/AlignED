@@ -22,7 +22,7 @@ are strong enough to take seriously?
 - A Streamlit app to explore gaps by program and job type, compare programs, and match a job posting or resume
   to missing skills.
 - Engineering around it: validated daily ingestion, Prefect orchestration, dbt tests, a FastAPI service,
-  Docker, CI and 251 automated tests.
+  Docker, CI and 272 automated tests.
 
 ## What surprised me
 

@@ -95,18 +95,33 @@ def rebuild_derived(db_path=DB_PATH):
         shutil.rmtree(tmp_dir, ignore_errors=True)
 
 
-def rebuild_full():
-    for stage_name, script, required in FULL_STAGES:
+def rebuild_full(db_path=None, stages=None):
+    """Rebuild everything from raw sources on a TEMPORARY database, validate it, and only then replace
+    db_path atomically. If any stage or validation fails, the existing database is left untouched.
+    Returns the list of validation problems (empty on success, in which case the replacement happened)."""
+    db_path = db_path or DB_PATH
+    stages = FULL_STAGES if stages is None else stages
+    for stage_name, script, required in stages:
         check_inputs(stage_name, required)
-    env = {**os.environ, "ALIGNED_DB_PATH": DB_PATH}
-    for stage_name, script, _ in FULL_STAGES:
-        print(f"\n--- {stage_name} ---")
-        run_script(script, env)
-    conn = sqlite3.connect(DB_PATH)
-    conn.execute("PRAGMA foreign_keys = ON")
-    problems = validate_database(conn)
-    conn.close()
-    return problems
+    tmp_dir = tempfile.mkdtemp(prefix="aligned_full_rebuild_")
+    work_path = os.path.join(tmp_dir, "aligned.db")
+    try:
+        env = {**os.environ, "ALIGNED_DB_PATH": work_path}
+        for stage_name, script, _ in stages:
+            print(f"\n--- {stage_name} ---")
+            run_script(script, env)
+        conn = sqlite3.connect(work_path)
+        conn.execute("PRAGMA foreign_keys = ON")
+        problems = validate_database(conn)
+        conn.close()
+        if problems:
+            return problems
+        staged = db_path + ".rebuilt"
+        shutil.copyfile(work_path, staged)
+        atomic_replace(staged, db_path)
+        return []
+    finally:
+        shutil.rmtree(tmp_dir, ignore_errors=True)
 
 
 def main():

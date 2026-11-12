@@ -36,13 +36,15 @@ jobs:
         run: pip install scipy pandas
 
       - name: Recompute the market pulse
-        run: python scripts/market_pulse.py
+        run: |
+          python scripts/market_pulse.py
+          python scripts/health_report.py
 
       - name: Commit the refreshed file
         run: |
           git config user.name "AlignED Bot"
           git config user.email "actions@github.com"
-          git add data/market_pulse/latest.json
+          git add data/market_pulse/latest.json data/health/ingestion_report.json
           git commit -m "Weekly market pulse refresh" || echo "No change"
           git pull --rebase origin main
           git push

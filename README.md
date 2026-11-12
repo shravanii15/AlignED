@@ -8,7 +8,7 @@
 
 **Curriculum x labor-market analysis: do graduate computing programs teach what the job market asks for?**
 
-**[Live app](https://aligned-shravanikulkarni.streamlit.app)** · **[Case study](docs/CASE_STUDY.md)** · **[Data provenance](docs/DATA_PROVENANCE.md)** · **[API demo](#rest-api)**
+**[Live app](https://aligned-shravanikulkarni.streamlit.app)** · **[Case study](docs/CASE_STUDY.md)** · **[Evaluation](docs/EVALUATION.md)** · **[Data provenance](docs/DATA_PROVENANCE.md)** · **[API demo](#rest-api)**
 
 AlignED compares 1,378 course descriptions from 13 graduate programs against 1,660 sampled job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested for statistical significance.
 
@@ -59,7 +59,13 @@ Built around two questions: "does this program teach what employers want?" and "
 - **Which Jobs Fit Me:** paste your skills to see which job families fit you, what to learn next and example postings, with a PDF.
 - **Compare Programs:** top gaps for 2 to 3 programs side by side.
 - **Explore the Data:** skills by program, rising and falling skills, job families from embedding-based clustering, and a course search.
+- **Analyze Your Program:** paste or upload any course list and get the same tested gap analysis (z-test or Fisher's exact, Benjamini-Hochberg corrected), in session only, with a CSV download.
+- **Model Evaluation:** the held-out test of keyword vs LLM extraction with confidence intervals, error analysis, and a try-it box.
+- **Data Health:** how the daily job feed has behaved (fetched, rejected, repeats, new per day) and what is checked.
+- **About & Product Brief:** a "read this as a data scientist / data engineer / ML engineer / PM / forward-deployed engineer" guide, plus the product framing.
 - **Methodology:** how the numbers are produced, and their limits.
+
+The app has five areas in a top bar: Overview, Explore, Match, Evidence, About.
 
 ## Data engineering
 
@@ -73,7 +79,8 @@ Built around two questions: "does this program teach what employers want?" and "
 - **Weekly market refresh** (`scripts/market_pulse.py`, run every Monday by `.github/workflows/weekly_refresh.yml`, or `python scripts/orchestration/flows.py weekly`). Replays the saved daily snapshots, de-duplicates them, finds skills with the keyword method, and compares each skill's share of recent postings with the fixed 1,660-posting sample (same significance test and Benjamini-Hochberg correction as the gaps). The result is one small JSON file, `data/market_pulse/latest.json`, shown on the Rising and Falling Skills page with a "last updated" date. It deliberately does not change gap scores, recommendations or trends, so published numbers never move silently. The feed returns only the first 500 characters of each description, so the fixed sample is re-measured on the same 500-character window to keep the comparison like-for-like.
 - **dbt models with data tests** (`dbt/`). The analytics layer is modelled in dbt (DuckDB): staging views over the exported tables, then three marts (`fct_program_skill_gaps`, `dim_program_summary`, `fct_skill_market_coverage`). 50 checks run on every build: keys unique and not null, foreign keys resolve, accepted values, plus rules written for this project (every gap has q < 0.05, gap equals demand minus coverage, rates are proportions, no program or scope with gaps is left without recommendations). Run it with `python dbt/export_sources.py && dbt build --project-dir dbt --profiles-dir dbt`; CI runs it too.
 - **Held-out evaluation** (`data/heldout/`, protocol in `PROTOCOL.md`). A fresh sample of 50 items (30 courses, 20 postings), none from the development set, labeled before the methods ran (AI-drafted, then checked by a human, enforced by the importer) and scored once with settings frozen. Paired-bootstrap 95% intervals are reported for each F1 and for the difference, and hashes of the extractor code and labels are stored in `heldout_results.json`. Result: keyword baseline 0.311 vs. LLM 0.198 (see Key results). By source: on postings the LLM was more precise (0.78 vs. 0.66) but found fewer skills (recall 0.16 vs. 0.24); on courses it found almost none (recall 0.03).
-- **Rebuild and validation.** `scripts/rebuild_all.py` recomputes the derived tables on a temporary copy, runs `scripts/validate_database.py` (foreign keys, duplicates, gap and recommendation invariants, trend consistency, ingestion audit) and swaps the result in atomically.
+- **Robustness checks** (`scripts/gap_analysis/robustness_check.py`, report in `docs/EVALUATION.md`). Postings from one employer are not independent, so two sensitivity analyses are run: an approximate design-effect adjustment (company clusters; 166 of the 170 gaps stay significant, the 4 that drop are small, 1.5 to 3.8 points) and a company-cluster bootstrap (all 170 intervals above zero, not adjusted for multiple testing). Published numbers are unchanged. `python scripts/verify_claims.py` regenerates every headline number from stored artifacts.
+- **Rebuild and validation.** `scripts/rebuild_all.py` recomputes the derived tables (and, with `--full`, everything) on a temporary database, runs `scripts/validate_database.py` (foreign keys, duplicates, gap and recommendation invariants, trend consistency, ingestion audit) and swaps the result in atomically only if every check passes. It assumes no other process writes to the database during the swap.
 - **Fail-closed evaluation.** The extraction benchmark refuses to publish metrics unless predictions cover exactly the gold-set items.
 - **Schema.** `database/schema.sql` is the source of truth, with enforced foreign keys and additive migrations.
 - **Docker.** One Dockerfile with two targets (dashboard and pipeline) and a compose file. Pipeline jobs are opt-in.

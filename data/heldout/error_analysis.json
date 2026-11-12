@@ -1,0 +1,2184 @@
+{
+ "num_items": 50,
+ "per_source": {
+  "course": {
+   "items": 30,
+   "baseline": {
+    "true_positives": 13,
+    "false_positives": 9,
+    "false_negatives": 82,
+    "precision": 0.5909090909090909,
+    "recall": 0.1368421052631579,
+    "f1": 0.22222222222222224
+   },
+   "llm": {
+    "true_positives": 3,
+    "false_positives": 10,
+    "false_negatives": 92,
+    "precision": 0.23076923076923078,
+    "recall": 0.031578947368421054,
+    "f1": 0.05555555555555556
+   }
+  },
+  "posting": {
+   "items": 20,
+   "baseline": {
+    "true_positives": 43,
+    "false_positives": 22,
+    "false_negatives": 135,
+    "precision": 0.6615384615384615,
+    "recall": 0.24157303370786518,
+    "f1": 0.3539094650205761
+   },
+   "llm": {
+    "true_positives": 29,
+    "false_positives": 8,
+    "false_negatives": 149,
+    "precision": 0.7837837837837838,
+    "recall": 0.16292134831460675,
+    "f1": 0.26976744186046514
+   }
+  }
+ },
+ "recall_by_kind": {
+  "broad skill or knowledge area": {
+   "gold_skills": 168,
+   "baseline": 27,
+   "llm": 3
+  },
+  "named tool or technology": {
+   "gold_skills": 105,
+   "baseline": 29,
+   "llm": 29
+  }
+ },
+ "themes": {
+  "baseline": {
+   "most_common_false_positives": [
+    [
+     "science",
+     9
+    ],
+    [
+     "design",
+     6
+    ],
+    [
+     "monitoring",
+     4
+    ],
+    [
+     "c",
+     3
+    ],
+    [
+     "pytorch",
+     1
+    ],
+    [
+     "database management systems",
+     1
+    ],
+    [
+     "programming",
+     1
+    ],
+    [
+     "r",
+     1
+    ]
+   ],
+   "most_common_misses": [
+    [
+     "computers and electronics",
+     30
+    ],
+    [
+     "mathematics",
+     12
+    ],
+    [
+     "public safety and security",
+     10
+    ],
+    [
+     "engineering and technology",
+     10
+    ],
+    [
+     "systems analysis",
+     9
+    ],
+    [
+     "complex problem solving",
+     7
+    ],
+    [
+     "troubleshooting",
+     6
+    ],
+    [
+     "systems evaluation",
+     5
+    ]
+   ]
+  },
+  "llm": {
+   "most_common_false_positives": [
+    [
+     "python",
+     8
+    ],
+    [
+     "structured query language sql",
+     5
+    ],
+    [
+     "pytorch",
+     1
+    ],
+    [
+     "amazon web services aws software",
+     1
+    ],
+    [
+     "linux",
+     1
+    ],
+    [
+     "bash",
+     1
+    ],
+    [
+     "microsoft transact-structural query language t-sql",
+     1
+    ]
+   ],
+   "most_common_misses": [
+    [
+     "computers and electronics",
+     30
+    ],
+    [
+     "design",
+     13
+    ],
+    [
+     "mathematics",
+     12
+    ],
+    [
+     "programming",
+     11
+    ],
+    [
+     "public safety and security",
+     10
+    ],
+    [
+     "engineering and technology",
+     10
+    ],
+    [
+     "systems analysis",
+     9
+    ],
+    [
+     "complex problem solving",
+     7
+    ]
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "HC001",
+   "source_type": "course",
+   "title": "MGT 6203 Data Analytics in Business",
+   "context": "Georgia Tech: MS Analytics (OMS Analytics)",
+   "text": "Teaches the scientific process of transforming data into insights for making better business decisions. It covers methodologies, algorithms, and challenges related to analyzing business data. Completion of MGT 6203 is required before starting the practicum. Suggested prerequisite: ISYE 6501 Statistics Electives (6 hours) Special Note Select at least two courses from the list.\u00a0All C-track students must take ISYE 6740 as either a Statistics elective or a C-track elective.",
+   "gold": [
+    "judgment and decision making",
+    "systems analysis"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "c"
+    ],
+    "misses": [
+     "judgment and decision making",
+     "systems analysis"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "structured query language sql"
+    ],
+    "misses": [
+     "judgment and decision making",
+     "systems analysis"
+    ]
+   }
+  },
+  {
+   "id": "HC002",
+   "source_type": "course",
+   "title": "ISYE 8803 Topics on High-dimensional Data Analytics",
+   "context": "Georgia Tech: MS Analytics (OMS Analytics)",
+   "text": "This course focuses on analysis of highdimensional structured data including profiles, images, and other types of functional data using statistical machine learning. A variety of topics such as functional data analysis, image processing, multilinear algebra and tensor analysis, and regularization in high-dimensional regression and its applications including low rank and sparse learning is covered. Optimization methods commonly used in statistical modeling and machine learning and their computational aspects are also discussed - convex conic optimization, which is a significant generalization of linear optimization. The fourth and final module is on integer optimization, which augments the pr",
+   "gold": [
+    "computational statistics software",
+    "mathematics",
+    "optimization software"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computational statistics software",
+     "mathematics",
+     "optimization software"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "structured query language sql"
+    ],
+    "misses": [
+     "computational statistics software",
+     "mathematics",
+     "optimization software"
+    ]
+   }
+  },
+  {
+   "id": "HC003",
+   "source_type": "course",
+   "title": "CS 7643 Deep Learning",
+   "context": "Georgia Tech: MS Analytics (OMS Analytics)",
+   "text": "Deep learning is a sub-field of machine learning that focuses on learning complex, hierarchical feature representations from raw data. The dominant method for achieving this, artificial neural networks, has revolutionized the processing of data (e.g. images, videos, text, and audio) as well as decision-making tasks (e.g. game-playing). Its success has enabled a tremendous amount of practical commercial applications and has had significant impact on society. In this course, students will learn the fundamental principles, underlying mathematics, and implementation details of deep learning. This includes the concepts and methods used to optimize these highly parameterized models (gradient desce",
+   "gold": [
+    "computers and electronics",
+    "mathematics",
+    "programming"
+   ],
+   "baseline": {
+    "true_positives": [
+     "mathematics",
+     "programming"
+    ],
+    "false_positives": [
+     "pytorch"
+    ],
+    "misses": [
+     "computers and electronics"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "python",
+     "pytorch"
+    ],
+    "misses": [
+     "computers and electronics",
+     "mathematics",
+     "programming"
+    ]
+   }
+  },
+  {
+   "id": "HC004",
+   "source_type": "course",
+   "title": "CS 6260 Applied Cryptography",
+   "context": "Georgia Tech: MS Cybersecurity (OMS Cybersecurity)",
+   "text": "Classical goals of cryptography such as data privacy, authenticity and integrity. Design principles of cryptographic primitives such as pseudorandom functions, block ciphers, symmetric encryption schemes, hash functions, message authentication codes (MACs), authenticated encryption, PKI, public-key (asymmetric) encryption, digital signatures, signcryption, secret sharing, key exchange.",
+   "gold": [
+    "computers and electronics",
+    "encryption software",
+    "public safety and security"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "design"
+    ],
+    "misses": [
+     "computers and electronics",
+     "encryption software",
+     "public safety and security"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "encryption software",
+     "public safety and security"
+    ]
+   }
+  },
+  {
+   "id": "HC005",
+   "source_type": "course",
+   "title": "CS 6238 Secure Computer Systems",
+   "context": "Georgia Tech: MS Cybersecurity (OMS Cybersecurity)",
+   "text": "Design principles of secure systems, authentication, access control and authorization, discretionary and mandatory security policies, secure kernel design, and secure databases.",
+   "gold": [
+    "computers and electronics",
+    "database security software",
+    "design",
+    "public safety and security"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "database security software",
+     "public safety and security"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "amazon web services aws software",
+     "structured query language sql"
+    ],
+    "misses": [
+     "computers and electronics",
+     "database security software",
+     "design",
+     "public safety and security"
+    ]
+   }
+  },
+  {
+   "id": "HC006",
+   "source_type": "course",
+   "title": "CS\u00a03751 Introduction to User Interface Design",
+   "context": "Georgia Tech: MS Computer Science (main CS catalog)",
+   "text": "Describes the characteristics of interaction between humans and computers and demonstrates techniques for the design and evaluation of user interfaces and computational systems.",
+   "gold": [
+    "design",
+    "systems evaluation",
+    "technology design",
+    "user interface design software"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design"
+    ],
+    "false_positives": [],
+    "misses": [
+     "systems evaluation",
+     "technology design",
+     "user interface design software"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "design",
+     "systems evaluation",
+     "technology design",
+     "user interface design software"
+    ]
+   }
+  },
+  {
+   "id": "HC007",
+   "source_type": "course",
+   "title": "CS\u00a07240 Modern Internet Research Methods",
+   "context": "Georgia Tech: MS Computer Science (main CS catalog)",
+   "text": "A research course on techniques, platforms and datasets related to Internet freedom and security, familiarizing the students with the research cycle and delivering their results through an academic paper and presentation.",
+   "gold": [
+    "public safety and security",
+    "science",
+    "speaking",
+    "writing"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "public safety and security",
+     "science",
+     "speaking",
+     "writing"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "public safety and security",
+     "science",
+     "speaking",
+     "writing"
+    ]
+   }
+  },
+  {
+   "id": "HC008",
+   "source_type": "course",
+   "title": "CSE 355 Introduction to Theoretical Computer Science",
+   "context": "Arizona State University: Online Master of Computer Science (MCS)",
+   "text": "Introduces formal language theory and automata, Turing machines, decidability/undecidability, recursive function theory and complexity theory.",
+   "gold": [
+    "computers and electronics",
+    "mathematics"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "mathematics"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "mathematics"
+    ]
+   }
+  },
+  {
+   "id": "HC009",
+   "source_type": "course",
+   "title": "CS\u00a0101 Intro Computing: Engrg & Sci",
+   "context": "University of Illinois Urbana-Champaign: MS Computer Science / MCS-DS (CS course catalog)",
+   "text": "Fundamental principles, concepts, and methods of computing, with emphasis on applications in the physical sciences and engineering. Basic problem solving and programming techniques; fundamental algorithms and data structures; use of computers in solving engineering and scientific problems. Intended for engineering and science majors. Prerequisite: One of MATH\u00a0220 or MATH\u00a0221 or MATH\u00a0231 or MATH\u00a0241 . This course satisfies the General Education Criteria for: Quantitative Reasoning II",
+   "gold": [
+    "complex problem solving",
+    "engineering and technology",
+    "mathematics",
+    "programming",
+    "science"
+   ],
+   "baseline": {
+    "true_positives": [
+     "programming",
+     "science"
+    ],
+    "false_positives": [],
+    "misses": [
+     "complex problem solving",
+     "engineering and technology",
+     "mathematics"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "mathematics"
+    ],
+    "false_positives": [],
+    "misses": [
+     "complex problem solving",
+     "engineering and technology",
+     "programming",
+     "science"
+    ]
+   }
+  },
+  {
+   "id": "HC010",
+   "source_type": "course",
+   "title": "CS\u00a0447 Natural Language Processing",
+   "context": "University of Illinois Urbana-Champaign: MS Computer Science / MCS-DS (CS course catalog)",
+   "text": "Part-of-speech tagging, parsing, semantic analysis and machine translation. Relevant linguistics concepts from morphology (word formation) and lexical semantics (the meaning of words) to syntax (sentence structure) and compositional semantics (the meaning of sentences). 3 undergraduate hours. 3 or 4 graduate hours. Prerequisite: One of CS\u00a0173 or MATH\u00a0213 ; CS\u00a0225 ; CS\u00a0374 or ECE\u00a0374 ; one of CS\u00a0361 , STAT\u00a0361 , ECE\u00a0313 , MATH\u00a0362 , MATH\u00a0461 , MATH\u00a0463 , STAT\u00a0400 or BIOE\u00a0310 ; one of MATH\u00a0225 , MATH\u00a0257 , MATH\u00a0415 , MATH\u00a0416 , ASRM\u00a0406 or BIOE\u00a0210 .",
+   "gold": [
+    "computers and electronics",
+    "english language"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "english language"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "english language"
+    ]
+   }
+  },
+  {
+   "id": "HC011",
+   "source_type": "course",
+   "title": "CS\u00a02000 Introduction to Program Design and Implementation",
+   "context": "Northeastern University: MS Computer Science (Align / CS catalog)",
+   "text": "Introduces computer science and data science to students with no prior programming experience. Starts by building programs with numbers, text, and images. Explores real, complex datasets both interactively and through coding by doing data analysis, constructing graphs, and computing interesting results. Offers students an opportunity to build a solid foundation and practice coding with a popular industrial coding language with a professional programmer\u2019s interface to the code. Covers skills needed to identify and respond to ethical challenges that arise in the program design process.",
+   "gold": [
+    "data visualization software",
+    "programming"
+   ],
+   "baseline": {
+    "true_positives": [
+     "programming"
+    ],
+    "false_positives": [
+     "design",
+     "science"
+    ],
+    "misses": [
+     "data visualization software"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "python"
+    ],
+    "misses": [
+     "data visualization software",
+     "programming"
+    ]
+   }
+  },
+  {
+   "id": "HC012",
+   "source_type": "course",
+   "title": "CS\u00a06510 Advanced Software Development",
+   "context": "Northeastern University: MS Computer Science (Align / CS catalog)",
+   "text": "Designed to integrate academic concepts and practical experience of software design by having students work as part of a programming team, with an option to lead a subteam. Offers students an opportunity to study, in-depth, some aspects of the development process. The goal is to have students participate in a large-scale project, taking time to reflect and analyze the work and the process, rather than concentrating exclusively on the final product. Students who do not meet course prerequisites may seek permission of instructor.",
+   "gold": [
+    "coordination",
+    "design",
+    "management of personnel resources",
+    "programming",
+    "systems analysis"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design",
+     "programming"
+    ],
+    "false_positives": [],
+    "misses": [
+     "coordination",
+     "management of personnel resources",
+     "systems analysis"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "coordination",
+     "design",
+     "management of personnel resources",
+     "programming",
+     "systems analysis"
+    ]
+   }
+  },
+  {
+   "id": "HC013",
+   "source_type": "course",
+   "title": "CS\u00a07870 Seminar in Theoretical Computer Science",
+   "context": "Northeastern University: MS Computer Science (Align / CS catalog)",
+   "text": "Gives students the opportunity to read and present various survey and research papers in theoretical computer science. Faculty supervisor and topics vary from semester to semester. May be repeated three times for a maximum of 16 total semester hours.",
+   "gold": [
+    "computers and electronics",
+    "mathematics",
+    "reading comprehension",
+    "speaking"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "science"
+    ],
+    "misses": [
+     "computers and electronics",
+     "mathematics",
+     "reading comprehension",
+     "speaking"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "mathematics",
+     "reading comprehension",
+     "speaking"
+    ]
+   }
+  },
+  {
+   "id": "HC014",
+   "source_type": "course",
+   "title": "CAS CS 525 Compiler Design Theory",
+   "context": "Boston University: MS Computer Science (graduate CS courses)",
+   "text": "Undergraduate Prerequisites: (CASCS 320) or consent of instructor. - Graduate Prerequisites: (CASCS 320 OR CASCS 332) - Covers the basic mathematical theory underlying the design of compilers and other language processors and shows how to use that theory in practical design situations. Topics may include lexical analysis, parsing, syntax-directed translation, code optimization, and code generation.",
+   "gold": [
+    "compilers",
+    "computers and electronics",
+    "design",
+    "mathematics",
+    "programming"
+   ],
+   "baseline": {
+    "true_positives": [
+     "compilers",
+     "design"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "mathematics",
+     "programming"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "mathematics"
+    ],
+    "false_positives": [],
+    "misses": [
+     "compilers",
+     "computers and electronics",
+     "design",
+     "programming"
+    ]
+   }
+  },
+  {
+   "id": "HC015",
+   "source_type": "course",
+   "title": "CAS CS 565 Algorithmic Data Mining",
+   "context": "Boston University: MS Computer Science (graduate CS courses)",
+   "text": "Undergraduate Prerequisites: (CASCS 112 & CASCS 330 & CASCS 365). - Introduction to data mining concepts and techniques. Topics include association and correlation discovery, classification and clustering of large datasets, outlier detection. Emphasis on the algorithmic aspects as well as the application of mining in real-world problems.",
+   "gold": [
+    "computers and electronics",
+    "mathematics",
+    "systems analysis"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "mathematics",
+     "systems analysis"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "python",
+     "structured query language sql"
+    ],
+    "misses": [
+     "computers and electronics",
+     "mathematics",
+     "systems analysis"
+    ]
+   }
+  },
+  {
+   "id": "HC016",
+   "source_type": "course",
+   "title": "CAS CS 660 Graduate Introduction to Database Systems",
+   "context": "Boston University: MS Computer Science (graduate CS courses)",
+   "text": "Undergraduate Prerequisites: (CASCS112) CASCS350 recommended. - Graduate introduction to database management systems. Examines entity-relationship, relational, and object-oriented data models; commercial query languages: SQL, relational algebra, relational calculus, and QBE; file organization, indexing and hashing, query optimization, transaction processing, concurrency control and recovery, integrity, and security.",
+   "gold": [
+    "computers and electronics",
+    "database management software",
+    "design",
+    "relational database management software",
+    "structured query language sql"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "database management systems"
+    ],
+    "misses": [
+     "computers and electronics",
+     "database management software",
+     "design",
+     "relational database management software",
+     "structured query language sql"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "structured query language sql"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "database management software",
+     "design",
+     "relational database management software"
+    ]
+   }
+  },
+  {
+   "id": "HC017",
+   "source_type": "course",
+   "title": "COMP SCI 471 Introduction To Computational Statistics",
+   "context": "University of Wisconsin-Madison: MS Computer Sciences / MS Data Science (elective pool)",
+   "text": "Classical statistical procedures arise where closed-form mathematical expressions are available for various inference summaries (e.g. linear regression; analysis of variance). A major emphasis of modern statistics is the development of inference principles in cases where both more complex data structures are involved and where more elaborate computations are required. Topics from numerical linear algebra, optimization, Monte Carlo (including Markov chain Monte Carlo), and graph theory are developed, especially as they relate to statistical inference (e.g., bootstrapping, permutation, Bayesian inference, EM algorithm, multivariate analysis).",
+   "gold": [
+    "computational statistics software",
+    "mathematics"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computational statistics software",
+     "mathematics"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computational statistics software",
+     "mathematics"
+    ]
+   }
+  },
+  {
+   "id": "HC018",
+   "source_type": "course",
+   "title": "COMP SCI 762 Advanced Deep Learning",
+   "context": "University of Wisconsin-Madison: MS Computer Sciences / MS Data Science (elective pool)",
+   "text": "Explore methods and applications of deep learning. Covers cutting-edge topics, including neural architecture design, robustness and reliability of deep learning, learning with less supervision, lifelong machine learning, deep generative modeling, theoretical understanding of deep learning, and interpretable deep learning.",
+   "gold": [
+    "computers and electronics",
+    "design"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "design"
+    ]
+   }
+  },
+  {
+   "id": "HC019",
+   "source_type": "course",
+   "title": "CMSC477 Robotics Perception and Planning",
+   "context": "University of Maryland: MS Computer Science (CMSC catalog)",
+   "text": "A hands-on introduction to perception and planning for robotics, including rigid body transformations and rotations, dynamics and control of mobile robots/drones, graph based and sampling based planning algorithms, Bayseian and Kalman filtering, camera models and calibration, projective geometry, visual features, optical flow, pose estimation, RANSAC and Hough transform, structure from motion, visual odometry, machine learning basics, visual recognition and learning.",
+   "gold": [
+    "computers and electronics",
+    "engineering and technology",
+    "mathematics",
+    "physics"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "mathematics",
+     "physics"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "python"
+    ],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "mathematics",
+     "physics"
+    ]
+   }
+  },
+  {
+   "id": "HC020",
+   "source_type": "course",
+   "title": "CMSC724 Database Management Systems",
+   "context": "University of Maryland: MS Computer Science (CMSC catalog)",
+   "text": "Theoretical and implementation issues in advanced database systems. Topics include distributed databases, parallel databases, database client-server architectures, multimedia access methods, advanced query optimization techniques, data semantics and models, object-oriented databases, and deductive and expert database systems.",
+   "gold": [
+    "computers and electronics",
+    "database management software",
+    "distributed database management software",
+    "parallel systems software"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "database management software",
+     "distributed database management software",
+     "parallel systems software"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "database management software",
+     "distributed database management software",
+     "parallel systems software"
+    ]
+   }
+  },
+  {
+   "id": "HC021",
+   "source_type": "course",
+   "title": "CMSC801 Department Internal Research Seminar",
+   "context": "University of Maryland: MS Computer Science (CMSC catalog)",
+   "text": "Research overviews from faculty to help introduce departmental research to graduate students.",
+   "gold": [],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": []
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": []
+   }
+  },
+  {
+   "id": "HC022",
+   "source_type": "course",
+   "title": "ENPM637 Managing Software Engineering Projects",
+   "context": "University of Maryland: Cybersecurity (ENPM catalog)",
+   "text": "Addresses the breadth of managing software engineering projects. It will help in transforming inspiring software engineers to software project leaders. The course will impart advanced principles, methods and tools for management of software projects in a realistic software engineering context. A hybrid project management will be taught with more focused on Agile Project Management paradigms. The course will also impart a cutting-edge scalable, modular, and integrated patterns of the Scaled Agile Framework (SAFe) 4.0 for the software engineering program and portfolios management. In addition, the course will also instill DevOps best practices to build much more responsible organizations that ",
+   "gold": [
+    "administration and management",
+    "computers and electronics",
+    "coordination",
+    "engineering and technology",
+    "management of personnel resources"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "administration and management",
+     "computers and electronics",
+     "coordination",
+     "engineering and technology",
+     "management of personnel resources"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "administration and management",
+     "computers and electronics",
+     "coordination",
+     "engineering and technology",
+     "management of personnel resources"
+    ]
+   }
+  },
+  {
+   "id": "HC023",
+   "source_type": "course",
+   "title": "ENPM645 Human-Robot Interaction",
+   "context": "University of Maryland: Cybersecurity (ENPM catalog)",
+   "text": "To define the intersection of human-robot interactions to include human-computer interfaces, as well as robotic emotions and facial expressions emulations. The result will provide a basis for students to assess the best approaches for interacting effectively with robots. Areas to be covered include biologically-inspired robotics, cognitive robotics, cultural and social aspects of robotics, data mining, examples of human systems interfaces, and machine learning with respect to A.I. principles and limitations.",
+   "gold": [
+    "computers and electronics",
+    "engineering and technology",
+    "psychology",
+    "sociology and anthropology"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "psychology",
+     "sociology and anthropology"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "psychology",
+     "sociology and anthropology"
+    ]
+   }
+  },
+  {
+   "id": "HC024",
+   "source_type": "course",
+   "title": "ENPM703 Fundamentals of AI and Deep Learning",
+   "context": "University of Maryland: Cybersecurity (ENPM catalog)",
+   "text": "Fundamentals of machine learning techniques with a deep dive into cutting edge concepts that enabled neural networks to achieve state of the art performance in many visual, textual, and biomedical problems. Fundamental concepts like forward networks, convolution networks, recurrent neural networks, back propagation, loss functions, batch gradient descent, and stochastic optimization will be studied.",
+   "gold": [
+    "computers and electronics",
+    "engineering and technology",
+    "mathematics"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "mathematics"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "mathematics"
+    ]
+   }
+  },
+  {
+   "id": "HC025",
+   "source_type": "course",
+   "title": "DAAN 810 Artificial Intelligence in Practice",
+   "context": "Penn State World Campus: MS Data Analytics (DAAN)",
+   "text": "This course offers a comprehensive exploration of the foundational concepts, techniques, and applications of Artificial Intelligence (AI). Designed to cater to a wide range of learners, including those with limited programming experience, this course emphasizes practical hands-on learning.  Students will delve into key AI topics such as search algorithms, multi-agent systems, data processing, machine learning, deep learning, natural language processing, computer vision, and reinforcement learning. The course also features a group project, enabling participants to collaborate on solving real-world problems using AI.  The course is structured to be accessible for those without extensive progra",
+   "gold": [
+    "complex problem solving",
+    "computers and electronics",
+    "programming"
+   ],
+   "baseline": {
+    "true_positives": [
+     "programming"
+    ],
+    "false_positives": [],
+    "misses": [
+     "complex problem solving",
+     "computers and electronics"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "complex problem solving",
+     "computers and electronics",
+     "programming"
+    ]
+   }
+  },
+  {
+   "id": "HC026",
+   "source_type": "course",
+   "title": "DAAN 820 Generative Artificial Intelligence",
+   "context": "Penn State World Campus: MS Data Analytics (DAAN)",
+   "text": "Generative AI is a transformative technology that is reshaping industries such as healthcare, finance, education, and entertainment. Understanding its technical fundamentals and ethical implications is essential for any AI practitioner or leader. This comprehensive course is designed to provide students with in-depth knowledge of generative AI, from foundational models to advanced techniques, while emphasizing the importance of ethical considerations.  Students will gain hands-on insights into the intricacies of building, training, and optimizing foundation models, exploring the diverse applications of generative AI, and understanding its broader impact on society. The course emphasizes a hu",
+   "gold": [
+    "computers and electronics",
+    "engineering and technology"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "programming"
+    ],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology"
+    ]
+   }
+  },
+  {
+   "id": "HC027",
+   "source_type": "course",
+   "title": "CSE 452 Introduction to Distributed Systems",
+   "context": "University of Washington: MSCS / MS Data Science (CSE catalog)",
+   "text": "Covers abstractions and implementation techniques in the construction of distributed systems, including cloud computing, distributed storage systems, and distributed caches. Prerequisite: CSE 332 and CSE 333. ; recommended: CSE 451",
+   "gold": [
+    "computers and electronics",
+    "design"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "design"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "design"
+    ]
+   }
+  },
+  {
+   "id": "HC028",
+   "source_type": "course",
+   "title": "CSE 582 Ethics in Artificial Intelligence",
+   "context": "University of Washington: MSCS / MS Data Science (CSE catalog)",
+   "text": "Real-world people-facing artificial intelligence (AI) applications, ethical implications in their design, and technical solutions to mitigate ethical risks. Topics in the intersection of AI, ethics, and computing for social good, centered around foundational and recent research. Foundations of research ethics, case studies in ethical AI, ethical challenges in developing intelligent systems, and machine learning approaches to address these issues. Prerequisite: CSE 446 or CSE 546.",
+   "gold": [
+    "computers and electronics",
+    "critical thinking",
+    "sociology and anthropology"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "design"
+    ],
+    "misses": [
+     "computers and electronics",
+     "critical thinking",
+     "sociology and anthropology"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "critical thinking",
+     "sociology and anthropology"
+    ]
+   }
+  },
+  {
+   "id": "HC029",
+   "source_type": "course",
+   "title": "ECE 544 Analysis of Societal Networks",
+   "context": "University of Michigan: MS Computer Science and Engineering (EECS catalog)",
+   "text": "In the modern world we depend on the efficiency of a myriad of societal networks to transact many activities. This course analyzes them (how they are connected, how they form, and how processes and transactions occur on them) using mathematical tools from graph theory, linear algebra, probability and game theory.",
+   "gold": [
+    "mathematics",
+    "systems analysis"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "mathematics",
+     "systems analysis"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "mathematics",
+     "systems analysis"
+    ]
+   }
+  },
+  {
+   "id": "HC030",
+   "source_type": "course",
+   "title": "ECE 564 Estimation, Filtering, and Detection",
+   "context": "University of Michigan: MS Computer Science and Engineering (EECS catalog)",
+   "text": "Principles of estimation, linear filtering and detection. Estimation: linear and nonlinear minimum mean squared error estimation, and other strategies. Linear filtering: Wiener and Kalman filtering. Detection: simple, composite, binary and multiple hypotheses. Neyman-Pearson and Bayesian approaches.",
+   "gold": [
+    "engineering and technology",
+    "mathematics",
+    "telecommunications"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "engineering and technology",
+     "mathematics",
+     "telecommunications"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "engineering and technology",
+     "mathematics",
+     "telecommunications"
+    ]
+   }
+  },
+  {
+   "id": "HP001",
+   "source_type": "posting",
+   "title": "Network Engineer",
+   "context": "Network Engineering | ",
+   "text": "Secunetics provides network infrastructure intelligence services to government agencies and commercial clients. We work with our clients to fully profile network structures, behaviors, and security. We are a focused team of enthusiastic colleagues working together on a diverse and challenging set of projects.We are looking for Network Engineers to interface with our team and our clients to help assess the performance of IT infrastructures, establish baselines, and identify opportunities for optimization/improvement. This is a highly visible, client-facing role. We value creative, strategic thinkers with demonstrated interest and skills in optimizing network performance.\nWho you are:You are a",
+   "gold": [
+    "computers and electronics",
+    "programming",
+    "public safety and security",
+    "python",
+    "systems analysis",
+    "telecommunications",
+    "wireshark",
+    "writing"
+   ],
+   "baseline": {
+    "true_positives": [
+     "wireshark",
+     "writing"
+    ],
+    "false_positives": [
+     "monitoring",
+     "science"
+    ],
+    "misses": [
+     "computers and electronics",
+     "programming",
+     "public safety and security",
+     "python",
+     "systems analysis",
+     "telecommunications"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "python",
+     "wireshark"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "programming",
+     "public safety and security",
+     "systems analysis",
+     "telecommunications",
+     "writing"
+    ]
+   }
+  },
+  {
+   "id": "HP002",
+   "source_type": "posting",
+   "title": "Sr. Software Engineer- Warehousing Modernization",
+   "context": "Software / Web Development | Publix Super Markets",
+   "text": "DescriptionThe Warehousing Modernization team is currently seeking a Sr. Software Engineer to lead the development efforts for modernizing our legacy warehousing systems. This key role involves leading initiatives to modernize and warehousing processes like Invoicing, Store Order Processing, integrating with other Warehousing Systems, and Reporting that currently supports our expanding distribution network, encompassing 10 Distribution Centers and 33 warehouses dedicated to servicing over 1360 retail stores.\nFurther details will include:Leading initiatives to develop and implement systems using various coding languages, methods, tools, and utilities.Overseeing full systems development life c",
+   "gold": [
+    "administration and management",
+    "complex problem solving",
+    "database management software",
+    "microsoft excel",
+    "microsoft powerpoint",
+    "microsoft project",
+    "microsoft visio",
+    "microsoft word",
+    "programming",
+    "systems analysis",
+    "troubleshooting",
+    "writing"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "design",
+     "science"
+    ],
+    "misses": [
+     "administration and management",
+     "complex problem solving",
+     "database management software",
+     "microsoft excel",
+     "microsoft powerpoint",
+     "microsoft project",
+     "microsoft visio",
+     "microsoft word",
+     "programming",
+     "systems analysis",
+     "troubleshooting",
+     "writing"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "python"
+    ],
+    "misses": [
+     "administration and management",
+     "complex problem solving",
+     "database management software",
+     "microsoft excel",
+     "microsoft powerpoint",
+     "microsoft project",
+     "microsoft visio",
+     "microsoft word",
+     "programming",
+     "systems analysis",
+     "troubleshooting",
+     "writing"
+    ]
+   }
+  },
+  {
+   "id": "HP003",
+   "source_type": "posting",
+   "title": "Communications and Network Engineer - Early Career",
+   "context": "Mixed (weak cluster -- multiple roles blended together) | MITRE",
+   "text": "Why choose between doing meaningful work and having a fulfilling life? At MITRE, you can have both. That's because MITRE people are committed to tackling our nation's toughest challenges\u2014and we're committed to the long-term well-being of our employees. MITRE is different from most technology companies. We are a not-for-profit corporation chartered to work for the public interest, with no commercial conflicts to influence what we do. The R&D centers we operate for the government create lasting impact in fields as diverse as cybersecurity, healthcare, aviation, defense, and enterprise transformation. We're making a difference every day\u2014working for a safer, healthier, and more secure nation and",
+   "gold": [
+    "computers and electronics",
+    "engineering and technology",
+    "simulation software",
+    "systems analysis",
+    "telecommunications"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "design",
+     "r"
+    ],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "simulation software",
+     "systems analysis",
+     "telecommunications"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "python"
+    ],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "simulation software",
+     "systems analysis",
+     "telecommunications"
+    ]
+   }
+  },
+  {
+   "id": "HP004",
+   "source_type": "posting",
+   "title": "Radio Access Network Engineer",
+   "context": "Network Engineering | Avacend Inc",
+   "text": "Job Title:- RAN Engineer/ RAN Support Engineer \u2013 Tier 1Location: Plano, TX, USA,\nMust have depth knowledge in RAN & Scripting\nRequirements:\u2022 Knowledgeable on 4G and 5G technologies would be a plus\u2022 At least 2 years in a TAC/ Tier2 support organization or equivalent experience supporting a telecommunications vendor\u2022 User-level experience using UNIX/ LINUX commands is must (Advanced Unix skills is a plus)\u2022 Excellent Microsoft Office Skills required - Advanced Excel Skills with macro/VB is a plus\u2022 Shell scripting or any scripting knowledge is a plus\n",
+   "gold": [
+    "linux",
+    "microsoft excel",
+    "microsoft visual basic for applications vba",
+    "operating system shells",
+    "telecommunications",
+    "troubleshooting",
+    "unix"
+   ],
+   "baseline": {
+    "true_positives": [
+     "linux",
+     "telecommunications",
+     "unix"
+    ],
+    "false_positives": [],
+    "misses": [
+     "microsoft excel",
+     "microsoft visual basic for applications vba",
+     "operating system shells",
+     "troubleshooting"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "linux",
+     "unix"
+    ],
+    "false_positives": [],
+    "misses": [
+     "microsoft excel",
+     "microsoft visual basic for applications vba",
+     "operating system shells",
+     "telecommunications",
+     "troubleshooting"
+    ]
+   }
+  },
+  {
+   "id": "HP005",
+   "source_type": "posting",
+   "title": "Information Security Consultant",
+   "context": "Cybersecurity / Information Security | Centraprise",
+   "text": "Job Description :6+ years of information security & audit experience with increased responsibilities\u00b7 In-depth knowledge of security assessment/audit principles\u00b7 Understanding of networking principles and data protection\u00b7 Ability to identify problems, analyze data and present conclusions.\u00b7 Strong verbal, written and presentations skills\u00b7 Knowledge of information security frameworks such as ISO 27001 /NIST CSF ispreferred.\u00b7 CISA, CISSP, CISM, certifications are preferred.\u00b7 Excellent English communication skills.\u00b7 Able to work as part of a virtual global team with cultural, language, and time zonedifferences.\u00b7 Able to deal with ambiguity and work independently with minimal supervision/guidance",
+   "gold": [
+    "computers and electronics",
+    "critical thinking",
+    "judgment and decision making",
+    "public safety and security",
+    "speaking",
+    "systems evaluation",
+    "writing"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "critical thinking",
+     "judgment and decision making",
+     "public safety and security",
+     "speaking",
+     "systems evaluation",
+     "writing"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "critical thinking",
+     "judgment and decision making",
+     "public safety and security",
+     "speaking",
+     "systems evaluation",
+     "writing"
+    ]
+   }
+  },
+  {
+   "id": "HP006",
+   "source_type": "posting",
+   "title": "Business Intelligence Consultant",
+   "context": "Business Intelligence | Quantum World Technologies Inc.",
+   "text": "Role :- Power BI DeveloperLocation - Hybrid Troy MIDuration - 1 year+ \n*** We need: Two mid-level (7+ years) to senior Power BI developer with excellent experience working with SQL and Design, develop, and build mockups, reports, and dashboards using business intelligence and data visualization tools, such as Microsoft Power BI **Candidates must have Long Projects/Good Tenure, Excellent communication skills\nRequired Location: Hybrid/ TROY, MI / 3 days a week.Interview Required: Video\n*** PLEASE Only send me candidates in TROY, MI area Open to Hybrid.",
+   "gold": [
+    "data visualization software",
+    "design",
+    "microsoft power bi",
+    "structured query language sql"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design",
+     "microsoft power bi"
+    ],
+    "false_positives": [],
+    "misses": [
+     "data visualization software",
+     "structured query language sql"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "microsoft power bi",
+     "structured query language sql"
+    ],
+    "false_positives": [],
+    "misses": [
+     "data visualization software",
+     "design"
+    ]
+   }
+  },
+  {
+   "id": "HP007",
+   "source_type": "posting",
+   "title": "Associate Cybersecurity Engineer",
+   "context": "Mixed (weak cluster -- multiple roles blended together) | GM Financial",
+   "text": "Overview\n\nOpportunity to work in a hybrid model: Potential to work 4 days onsite and 1 day remote \n\nWhy GM Financial?\n\nGM Financial is the wholly owned captive finance subsidiary of General Motors and is headquartered in Fort Worth, U.S. We are a global provider of auto finance solutions, with operations in North America, South America and the Asia Pacific region. Through our long-standing relationships with auto dealers, we offer attractive retail financing and lease programs to meet the needs of each customer. We also offer commercial lending products to dealers to help them finance and grow their businesses.\n\nAt GM Financial, our team members define and shape our culture \u2014 an environment ",
+   "gold": [
+    "computers and electronics",
+    "judgment and decision making",
+    "mitre att&ck software",
+    "monitoring",
+    "public safety and security",
+    "security incident management software"
+   ],
+   "baseline": {
+    "true_positives": [
+     "monitoring"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "judgment and decision making",
+     "mitre att&ck software",
+     "public safety and security",
+     "security incident management software"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "judgment and decision making",
+     "mitre att&ck software",
+     "monitoring",
+     "public safety and security",
+     "security incident management software"
+    ]
+   }
+  },
+  {
+   "id": "HP008",
+   "source_type": "posting",
+   "title": "Systems Administrator",
+   "context": "Systems Administration | Intone",
+   "text": "Role - PRISM Systems AdministratorJob Title: PRISM Systems Administrator\nLength: (C/CTH/DH): 1440 hour contract to hireCitizenship Status: USC*MUST BE VACCINATED*The PRISM System Administrator duties will include:Configuring transport domains, transport groups, transport layer and transport paths.Create accountsAnswer customer questionsExecute and monitor transports.Analyze and delete errors during transports.Install SAP or other IT systems support packages changes and SAP notes.Planning and executing client copies and transports.",
+   "gold": [
+    "computers and electronics",
+    "customer and personal service",
+    "monitoring",
+    "sap software",
+    "troubleshooting"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "c"
+    ],
+    "misses": [
+     "computers and electronics",
+     "customer and personal service",
+     "monitoring",
+     "sap software",
+     "troubleshooting"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "linux"
+    ],
+    "misses": [
+     "computers and electronics",
+     "customer and personal service",
+     "monitoring",
+     "sap software",
+     "troubleshooting"
+    ]
+   }
+  },
+  {
+   "id": "HP009",
+   "source_type": "posting",
+   "title": "Web Developer",
+   "context": "Software / Web Development | Ascendion",
+   "text": "About Ascendion:Ascendion is a full-service digital engineering solutions company. We make and manage software platforms and products that power growth and deliver captivating experiences to consumers and employees. Our engineering, cloud, data, experience design, and talent solution capabilities accelerate transformation and impact for enterprise clients. Headquartered in New Jersey, our workforce of 6,000+ Ascenders delivers solutions from around the globe. Ascendion is built differently to engineer the next.\nAscendion | Engineering to elevate life\nWe have a culture built on opportunity, inclusion, and a spirit of partnership. Come, change the world with us:Build the coolest tech for world",
+   "gold": [
+    "c#",
+    "complex problem solving",
+    "design",
+    "go",
+    "javascript",
+    "node.js",
+    "oracle java",
+    "programming",
+    "react",
+    "react redux",
+    "source code management scm software",
+    "systems evaluation",
+    "writing"
+   ],
+   "baseline": {
+    "true_positives": [
+     "c#",
+     "design",
+     "go",
+     "javascript",
+     "react"
+    ],
+    "false_positives": [
+     "c",
+     "geography"
+    ],
+    "misses": [
+     "complex problem solving",
+     "node.js",
+     "oracle java",
+     "programming",
+     "react redux",
+     "source code management scm software",
+     "systems evaluation",
+     "writing"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "c#",
+     "go",
+     "javascript",
+     "react"
+    ],
+    "false_positives": [],
+    "misses": [
+     "complex problem solving",
+     "design",
+     "node.js",
+     "oracle java",
+     "programming",
+     "react redux",
+     "source code management scm software",
+     "systems evaluation",
+     "writing"
+    ]
+   }
+  },
+  {
+   "id": "HP010",
+   "source_type": "posting",
+   "title": "Middleware Systems Administrator",
+   "context": "Systems Administration | TechTriad",
+   "text": "Middleware Systems AdministratorNYC, NY/Dallas, TX/Winston Salem, NC (Hybrid)Full TimePosition summary:The Middleware Systems Administrator role will be responsible for architecting, implementing, and the day-to-day activities related to the Technology Infrastructure and Platform Systems portfolio within TCH Operations and Technology with oversight and governance for key systems administration initiatives ensuring the integrity of the distributed and mainframe platform services for our customer facing applications and corporate systems portfolio. The Middleware Systems Admin role is specific to Middleware Technologies such as Sterling Connect Direct, IBM MQ, IBM WebSphere Application Server,",
+   "gold": [
+    "administration and management",
+    "amazon web services aws software",
+    "apache kafka",
+    "bmc software control-m",
+    "coordination",
+    "design",
+    "ibm websphere",
+    "ibm websphere mq",
+    "linux",
+    "microsoft powerpoint",
+    "microsoft powershell",
+    "microsoft windows",
+    "node.js",
+    "oracle java",
+    "persuasion",
+    "puppet",
+    "python",
+    "speaking"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design",
+     "ibm websphere",
+     "node.js",
+     "puppet",
+     "python"
+    ],
+    "false_positives": [
+     "science"
+    ],
+    "misses": [
+     "administration and management",
+     "amazon web services aws software",
+     "apache kafka",
+     "bmc software control-m",
+     "coordination",
+     "ibm websphere mq",
+     "linux",
+     "microsoft powerpoint",
+     "microsoft powershell",
+     "microsoft windows",
+     "oracle java",
+     "persuasion",
+     "speaking"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "node.js",
+     "python"
+    ],
+    "false_positives": [],
+    "misses": [
+     "administration and management",
+     "amazon web services aws software",
+     "apache kafka",
+     "bmc software control-m",
+     "coordination",
+     "design",
+     "ibm websphere",
+     "ibm websphere mq",
+     "linux",
+     "microsoft powerpoint",
+     "microsoft powershell",
+     "microsoft windows",
+     "oracle java",
+     "persuasion",
+     "puppet",
+     "speaking"
+    ]
+   }
+  },
+  {
+   "id": "HP011",
+   "source_type": "posting",
+   "title": "Business Intelligence Consultant",
+   "context": "Business Intelligence | Indotronix Avani Group",
+   "text": "Job #: 98718042024Job Title: Power BI Developer - Supply Chain & LogisticsContract Duration: 6 months (Potential for Conversion)Location: Remote or Hybrid (Parsippany, NJ) - Needs to respond to emails promptly (*within 1-2 hours)Schedule & Hours Per Week: 40 hours per week, M-F First Shift\nHM's Tips and what he needs - 5 years min experience. Medical Device Industry is NOT required. No job hopping - well-presented job history. Someone who can understand and has had experience interpreting the language of Suppy Chain KPIs specifically and can translate them to Power BI. HM will need to hear or see examples of this experience that has been done before. The important part is to translate the Su",
+   "gold": [
+    "complex problem solving",
+    "data visualization software",
+    "microsoft azure software",
+    "microsoft power bi",
+    "structured query language sql",
+    "time management"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "design",
+     "science"
+    ],
+    "misses": [
+     "complex problem solving",
+     "data visualization software",
+     "microsoft azure software",
+     "microsoft power bi",
+     "structured query language sql",
+     "time management"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "structured query language sql"
+    ],
+    "false_positives": [],
+    "misses": [
+     "complex problem solving",
+     "data visualization software",
+     "microsoft azure software",
+     "microsoft power bi",
+     "time management"
+    ]
+   }
+  },
+  {
+   "id": "HP012",
+   "source_type": "posting",
+   "title": "DevOps Consultant",
+   "context": "DevOps / Cloud Engineering | Nityo Infotech",
+   "text": "Job title: : DevOps ConsultantLocation: \u2013 San Jose CA (Remote is fine)Hire Type: Fulltime Job Description:5-7 years of experience in Python, Python REST API, Python FLASKStrong knowledge of GCP services like GKE, Big Query, Big Table, Pub/Sub, Networking services, Looker StudioExperience in setting up Jenkins Pipelines, Kubernetes, Helm, Docker, Shell Scripts, GitExperience in Elastic Search, Logstash, Istio/Anthos Service Mesh is a Plus",
+   "gold": [
+    "bigquery",
+    "docker",
+    "elasticsearch",
+    "flask",
+    "git",
+    "google cloud software",
+    "jenkins ci",
+    "kubernetes",
+    "python",
+    "restful api"
+   ],
+   "baseline": {
+    "true_positives": [
+     "docker",
+     "kubernetes",
+     "python"
+    ],
+    "false_positives": [],
+    "misses": [
+     "bigquery",
+     "elasticsearch",
+     "flask",
+     "git",
+     "google cloud software",
+     "jenkins ci",
+     "restful api"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "docker",
+     "flask",
+     "git",
+     "kubernetes",
+     "python"
+    ],
+    "false_positives": [],
+    "misses": [
+     "bigquery",
+     "elasticsearch",
+     "google cloud software",
+     "jenkins ci",
+     "restful api"
+    ]
+   }
+  },
+  {
+   "id": "HP013",
+   "source_type": "posting",
+   "title": "System And Database Administrator",
+   "context": "Database Administration | Amtex Systems Inc.",
+   "text": "Database Administrators with Applications experience are responsible for data migration, data cleanup, data reporting, as well as managing and maintaining the hardwired lines and wireless connections in a system and the hardware that hooks up to that system. Applicants are expected to have at least ten years of relevant work experience, ideally in a school or educational agency, managing school nutrition data applications, and automated processes. Job duties specific to the applicant may include:Proficient in Microsoft AccessFixed Asset System IntegrationsTesting/Piloting operationsSchool rolloutGrading user interface reportsAPI connectionsCreating QR codesData migration and data cleanupAnal",
+   "gold": [
+    "computers and electronics",
+    "education and training",
+    "microsoft access",
+    "public safety and security",
+    "repairing",
+    "systems analysis",
+    "systems evaluation",
+    "telecommunications",
+    "troubleshooting"
+   ],
+   "baseline": {
+    "true_positives": [],
+    "false_positives": [
+     "monitoring"
+    ],
+    "misses": [
+     "computers and electronics",
+     "education and training",
+     "microsoft access",
+     "public safety and security",
+     "repairing",
+     "systems analysis",
+     "systems evaluation",
+     "telecommunications",
+     "troubleshooting"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "microsoft access"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "education and training",
+     "public safety and security",
+     "repairing",
+     "systems analysis",
+     "systems evaluation",
+     "telecommunications",
+     "troubleshooting"
+    ]
+   }
+  },
+  {
+   "id": "HP014",
+   "source_type": "posting",
+   "title": "Systems Administrator/DBA",
+   "context": "Database Administration | INSPYR Solutions",
+   "text": "Title: Systems Administrator/DBA\n\nLocation: Carson City, NV (100% Onsite)\n\nDuration: 25+ months\n\nCompensation: $40-50/hr.\n\nWork Requirements: US Citizen, GC Holders or Authorized to Work in the U.S.\n\nProject Overview\n\nOur Government client seeks a System Administrator and DBA contractor. We are looking for an individual skilled in multiple areas of IT to assist the Operations Center with tasks, in support of ongoing projects and development efforts. The chosen candidate will be required to work a standard 8:00 am to 5:00 pm shift as well as support additional activities both after hours and on weekends, as necessary to achieve project deadlines.\n\nSCOPE OF WORK - The chosen contractor will be",
+   "gold": [
+    "computers and electronics",
+    "ibm db2",
+    "ibm filenet content manager",
+    "ibm websphere",
+    "ibm websphere mq",
+    "perforce software",
+    "public safety and security",
+    "troubleshooting",
+    "writing"
+   ],
+   "baseline": {
+    "true_positives": [
+     "ibm db2",
+     "ibm websphere",
+     "troubleshooting"
+    ],
+    "false_positives": [
+     "bash"
+    ],
+    "misses": [
+     "computers and electronics",
+     "ibm filenet content manager",
+     "ibm websphere mq",
+     "perforce software",
+     "public safety and security",
+     "writing"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "bash"
+    ],
+    "misses": [
+     "computers and electronics",
+     "ibm db2",
+     "ibm filenet content manager",
+     "ibm websphere",
+     "ibm websphere mq",
+     "perforce software",
+     "public safety and security",
+     "troubleshooting",
+     "writing"
+    ]
+   }
+  },
+  {
+   "id": "HP015",
+   "source_type": "posting",
+   "title": "Staff Data Scientist",
+   "context": "Data Science / Data Engineering | Jobot Consulting",
+   "text": "Want to learn more about this role and Jobot Consulting? Click our Jobot Consulting logo and follow our LinkedIn page!\n\nJob details\n\nGlobally Recognized Brand, 100% Remote Position\n\nThis Jobot Consulting Job is hosted by Duran Workman\n\nAre you a fit? Easy Apply now by clicking the \"Easy Apply\" button and sending us your resume.\n\nSalary $90 - $110 per hour\n\nA Bit About Us\n\nWe are seeking a dynamic and innovative Consulting Staff Data Scientist to join our leading technology company. The ideal candidate will be responsible for leveraging their advanced data science skills to provide strategic insights and solutions to complex business problems. This role is crucial to our organization as it pl",
+   "gold": [
+    "administration and management",
+    "apache hadoop",
+    "apache spark",
+    "complex problem solving",
+    "critical thinking",
+    "education and training",
+    "mathematics",
+    "oracle java",
+    "programming",
+    "python",
+    "r",
+    "speaking"
+   ],
+   "baseline": {
+    "true_positives": [
+     "critical thinking",
+     "programming",
+     "python",
+     "r"
+    ],
+    "false_positives": [
+     "linkedin",
+     "science"
+    ],
+    "misses": [
+     "administration and management",
+     "apache hadoop",
+     "apache spark",
+     "complex problem solving",
+     "education and training",
+     "mathematics",
+     "oracle java",
+     "speaking"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "python",
+     "r"
+    ],
+    "false_positives": [],
+    "misses": [
+     "administration and management",
+     "apache hadoop",
+     "apache spark",
+     "complex problem solving",
+     "critical thinking",
+     "education and training",
+     "mathematics",
+     "oracle java",
+     "programming",
+     "speaking"
+    ]
+   }
+  },
+  {
+   "id": "HP016",
+   "source_type": "posting",
+   "title": "Language Data Scientist, Artificial General Intelligence (AGI)",
+   "context": "Machine Learning / AI | Amazon",
+   "text": "Description\n\nAmazon is seeking a Language Data Scientist to join the Alexa Artificial Intelligence (AI) team as domain expert. This role focuses on expanding analysis and evaluation of speech and interaction data deliverables. The Language Data Scientist is an expert in dialog evaluation processes, working closely with a team of skilled analysts and machine learning scientists and engineers, and is a key member in developing new conventions for relevant annotation workflows. The Language Data Scientist will be asked to handle unique data analysis and research requests that support the training and evaluation of machine learning models and the overall processing of a data collection.\n\nKey job",
+   "gold": [
+    "computers and electronics",
+    "mathematics",
+    "perl",
+    "python",
+    "r",
+    "sas",
+    "statistical software",
+    "structured query language sql",
+    "the mathworks matlab"
+   ],
+   "baseline": {
+    "true_positives": [
+     "mathematics",
+     "perl",
+     "python",
+     "r",
+     "sas"
+    ],
+    "false_positives": [
+     "go",
+     "mathematical software",
+     "science"
+    ],
+    "misses": [
+     "computers and electronics",
+     "statistical software",
+     "structured query language sql",
+     "the mathworks matlab"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "python",
+     "structured query language sql"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "mathematics",
+     "perl",
+     "r",
+     "sas",
+     "statistical software",
+     "the mathworks matlab"
+    ]
+   }
+  },
+  {
+   "id": "HP017",
+   "source_type": "posting",
+   "title": "Machine Learning Engineer",
+   "context": "Machine Learning / AI | eTeam",
+   "text": "Job Title: Machine Learning EngineerLocation: San Jose, CA 95134(Onsite)Duration: 6 Months(Contract), possible extensionPay: $85.00/hr on W2\nIn new product design roles: Develops and Analyzes the AI models that can be run on the mobile systems. Analyze the open-source Large Language, Vision and Multi-modal etc., Models developed for Edge AI and look at the customizations possible for deploying them into the Mobile devices for performance and power analysis. Deploy the Models developed internally and also the open-source models on different accelerators to analyze the performance. Work with the Third-party AI application developers to get custom models with the needed hooks for analyzing Memo",
+   "gold": [
+    "computers and electronics",
+    "design",
+    "engineering and technology",
+    "systems evaluation"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "engineering and technology",
+     "systems evaluation"
+    ]
+   },
+   "llm": {
+    "true_positives": [],
+    "false_positives": [
+     "python",
+     "structured query language sql"
+    ],
+    "misses": [
+     "computers and electronics",
+     "design",
+     "engineering and technology",
+     "systems evaluation"
+    ]
+   }
+  },
+  {
+   "id": "HP018",
+   "source_type": "posting",
+   "title": "Senior Cloud Engineer - GCP",
+   "context": "DevOps / Cloud Engineering | Kroger",
+   "text": "The Kroger Company is currently looking to hire a Senior Cloud Engineer \u2013 GCP on a full time, permanent basis. This opportunity offers a flexible hybrid remote/onsite work schedule and will be based out of any of the following locations within the United States: Cincinnati, OH (preferred), Charlotte, NC, Chicago, IL, Boca Raton, FL, Portland, OR, or San Jose, CA. This role must be worked in accordance with Eastern Standard Time Zone.\nTitle: Senior Cloud Engineer \u2013 GCPLocation: Hybrid, based out of either Cincinnati, OH (preferred), Charlotte, NC, Chicago, IL, Boca Raton, FL, Portland, OR, or San Jose, CA\nSummary:Provide advanced and/or cross-technology engineering through all phases of the T",
+   "gold": [
+    "complex problem solving",
+    "computers and electronics",
+    "design",
+    "docker",
+    "education and training",
+    "engineering and technology",
+    "google cloud software",
+    "kubernetes",
+    "monitoring",
+    "public safety and security",
+    "systems analysis",
+    "troubleshooting"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design",
+     "monitoring"
+    ],
+    "false_positives": [],
+    "misses": [
+     "complex problem solving",
+     "computers and electronics",
+     "docker",
+     "education and training",
+     "engineering and technology",
+     "google cloud software",
+     "kubernetes",
+     "public safety and security",
+     "systems analysis",
+     "troubleshooting"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "monitoring"
+    ],
+    "false_positives": [
+     "python"
+    ],
+    "misses": [
+     "complex problem solving",
+     "computers and electronics",
+     "design",
+     "docker",
+     "education and training",
+     "engineering and technology",
+     "google cloud software",
+     "kubernetes",
+     "public safety and security",
+     "systems analysis",
+     "troubleshooting"
+    ]
+   }
+  },
+  {
+   "id": "HP019",
+   "source_type": "posting",
+   "title": "Data Engineer",
+   "context": "Data Science / Data Engineering | CNA Search",
+   "text": "CNA Search is looking for a Data Engineer for a Direct Hire position. This role is in Atlanta and will be Hybrid Work Schedule. The ideal candidate should have a strong background in SQL Server. Must be US/GreenCard. \nManage multiple enterprise databases across cloud and on-prem environments.Design and develop solutions to support multiple data-related functions.Assist development teams with database architecture to ensure models are following best practices.Work with stakeholders to develop a database migration strategy in-line with company\u2019s long-term storage goals.Ensure data integrity and quality in database systems.Maintain standard policies for database development activities.Prepare d",
+   "gold": [
+    "database management software",
+    "design",
+    "economics and accounting",
+    "education and training",
+    "microsoft .net framework",
+    "microsoft powershell",
+    "microsoft sql server",
+    "microsoft sql server reporting services ssrs",
+    "microsoft visual studio",
+    "perl",
+    "programming",
+    "python",
+    "restful api",
+    "structured query language sql",
+    "transact-sql",
+    "troubleshooting"
+   ],
+   "baseline": {
+    "true_positives": [
+     "design",
+     "microsoft .net framework",
+     "perl",
+     "programming",
+     "python"
+    ],
+    "false_positives": [
+     "monitoring",
+     "science"
+    ],
+    "misses": [
+     "database management software",
+     "economics and accounting",
+     "education and training",
+     "microsoft powershell",
+     "microsoft sql server",
+     "microsoft sql server reporting services ssrs",
+     "microsoft visual studio",
+     "restful api",
+     "structured query language sql",
+     "transact-sql",
+     "troubleshooting"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "perl",
+     "python",
+     "structured query language sql"
+    ],
+    "false_positives": [
+     "microsoft transact-structural query language t-sql"
+    ],
+    "misses": [
+     "database management software",
+     "design",
+     "economics and accounting",
+     "education and training",
+     "microsoft .net framework",
+     "microsoft powershell",
+     "microsoft sql server",
+     "microsoft sql server reporting services ssrs",
+     "microsoft visual studio",
+     "programming",
+     "restful api",
+     "transact-sql",
+     "troubleshooting"
+    ]
+   }
+  },
+  {
+   "id": "HP020",
+   "source_type": "posting",
+   "title": "Information Security Engineer",
+   "context": "Cybersecurity / Information Security | Dice",
+   "text": "Dice is the leading career destination for tech experts at every stage of their careers. Our client, Collabera LLC, is seeking the following. Apply via Dice today!\n\nMust Have:\n\n 5+ years of information security experience  1+ year of deep Prisma Cloud Enterprise experience, or experience with a similar Cloud Security Posture Management tool  Proven experience creating Prisma Cloud Enterprise custom policies via RQL, or experience with policy development for a similar Cloud Security Posture Management tool  Extensive cloud Security knowledge of services, workloads and hardening practices  Experience with Agile Scrum or Kanban methodologies  Knowledge/experience with scripting/automation langu",
+   "gold": [
+    "computers and electronics",
+    "kubernetes",
+    "microsoft powershell",
+    "public safety and security",
+    "python",
+    "splunk enterprise"
+   ],
+   "baseline": {
+    "true_positives": [
+     "kubernetes",
+     "python"
+    ],
+    "false_positives": [
+     "monitoring"
+    ],
+    "misses": [
+     "computers and electronics",
+     "microsoft powershell",
+     "public safety and security",
+     "splunk enterprise"
+    ]
+   },
+   "llm": {
+    "true_positives": [
+     "kubernetes",
+     "python"
+    ],
+    "false_positives": [],
+    "misses": [
+     "computers and electronics",
+     "microsoft powershell",
+     "public safety and security",
+     "splunk enterprise"
+    ]
+   }
+  }
+ ]
+}

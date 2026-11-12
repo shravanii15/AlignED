@@ -130,6 +130,12 @@ def render_methodology():
                     course descriptions). The correction reduced the
                     significant-gap count from 236 to 170 across the 13 programs.
 
+                    **Sensitivity check for non-independent postings.** Postings from one employer tend to
+                    repeat the same requirements, so 1,660 postings carry less information than 1,660
+                    independent ones. Rerunning every test with the posting side shrunk to its effective size
+                    (grouped by company) kept 166 of the 170 gaps significant. The 4 that dropped were small
+                    (1.5 to 3.8 points). Method and results: docs/EVALUATION.md.
+
                     **Trend detection uses the same correction.** The demand trends page tests about 67
                     skills at once. Applying FDR correction cut the count of significant trends from 9
                     (raw p-value) to 0 at q < 0.05, so the page presents them as exploratory signals.
@@ -167,6 +173,11 @@ def render_methodology():
             "so that result (LLM 0.426, keyword 0.364) is optimistic. A fresh 50-item test, labeled before "
             "either method ran, reversed it (keyword 0.311, LLM 0.198). Treat the fresh test as the "
             "more trustworthy result."
+        )
+    with st.expander("Privacy: pasted text and resumes"):
+        st.markdown(
+            "Text you paste or upload is processed on the app server for your session only. AlignED does not "
+            "save it and sends it to no outside service."
         )
     with st.expander("The analysis is a snapshot"):
         st.markdown(
