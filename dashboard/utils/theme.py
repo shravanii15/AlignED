@@ -253,6 +253,10 @@ div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] { color: var(
 .hero-name span { color: #8EA8FF; }
 .hero-band h1 { font-size: 2.3rem !important; max-width: 820px; }
 @media (max-width: 800px) { .hero-name { font-size: 3.4rem !important; } .hero-band h1 { font-size: 1.7rem !important; } }
+/* final title sizing: one AlignED name (top bar), the headline is the hero */
+.topbar-brand { font-size: 2rem !important; }
+.hero-band h1 { font-size: 3.1rem !important; max-width: 860px; }
+@media (max-width: 800px) { .hero-band h1 { font-size: 2rem !important; } .topbar-brand { font-size: 1.6rem !important; } }
 </style>
 """
 
