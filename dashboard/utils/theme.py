@@ -257,6 +257,12 @@ div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] { color: var(
 .topbar-brand { font-size: 2rem !important; }
 .hero-band h1 { font-size: 3.1rem !important; max-width: 860px; }
 @media (max-width: 800px) { .hero-band h1 { font-size: 2rem !important; } .topbar-brand { font-size: 1.6rem !important; } }
+/* top bar: vertically centre the brand, GitHub link and tabs on one line */
+.st-key-topnav div[data-testid="stHorizontalBlock"] { align-items: center !important; }
+.st-key-topnav div[data-testid="stColumn"], .st-key-topnav div[data-testid="stColumn"] > div, .st-key-topnav div[data-testid="stMarkdownContainer"] { display: flex; align-items: center; margin: 0 !important; padding-top: 0; padding-bottom: 0; }
+.topbar-brand { font-size: 2.3rem !important; line-height: 1 !important; margin: 0 !important; padding: 0 !important; display: block; }
+.topbar-link { line-height: 1 !important; margin: 0 !important; }
+.st-key-topnav div[data-testid="stElementContainer"] { margin: 0 !important; }
 </style>
 """
 
