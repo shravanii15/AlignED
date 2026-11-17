@@ -1,11 +1,14 @@
 """sections/about.py: About and Product Brief. A role lens for different readers, the product thinking behind the
 project, and an honest list of what is measured and what is only proposed."""
 
+import os
+
 import streamlit as st
 
 from utils.layout import page_header
 
 GITHUB = "https://github.com/shravanii15/AlignED"
+ARCHITECTURE_SVG = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "docs", "architecture.svg")
 
 LENSES = {
     "Data Scientist": {
@@ -88,6 +91,10 @@ def render_about():
             st.markdown(f"**Start with:** {lens['look']}")
             for point in lens["points"]:
                 st.markdown(f"- {point}")
+
+    if os.path.exists(ARCHITECTURE_SVG):
+        st.markdown('<p class="section-eyebrow">How it is built</p>', unsafe_allow_html=True)
+        st.image(ARCHITECTURE_SVG, use_container_width=True)
 
     st.markdown('<p class="section-eyebrow">Product brief</p>', unsafe_allow_html=True)
     cols = st.columns(2, gap="large")

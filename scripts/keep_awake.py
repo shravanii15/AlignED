@@ -19,22 +19,41 @@ WAKE_BUTTON_TEXT = "get this app back up"
 TIMEOUT_SECONDS = 240
 
 
+def _frames_text(page):
+    """Visible text of the page and of every iframe in it. Streamlit Community Cloud serves the app inside an iframe,
+    so the main document's text alone never contains the app."""
+    out = []
+    for frame in page.frames:
+        try:
+            out.append((frame, frame.inner_text("body")))
+        except Exception:  # a frame can navigate or detach while we read it
+            continue
+    return out
+
+
 def visit(url=APP_URL, timeout=TIMEOUT_SECONDS):
     from playwright.sync_api import sync_playwright
 
     deadline = time.time() + timeout
     with sync_playwright() as p:
         browser = p.chromium.launch()
-        page = browser.new_page()
+        page = browser.new_page(viewport={"width": 1400, "height": 900})
         page.goto(url, wait_until="domcontentloaded", timeout=60_000)
         while time.time() < deadline:
-            body = page.inner_text("body")
-            if READY_TEXT in body:
-                browser.close()
-                return True
-            if WAKE_BUTTON_TEXT in body.lower():
-                page.get_by_role("button", name=re.compile(WAKE_BUTTON_TEXT, re.IGNORECASE)).click()
+            for frame, text in _frames_text(page):
+                if READY_TEXT in text:
+                    browser.close()
+                    return True
+                if WAKE_BUTTON_TEXT in text.lower():
+                    try:
+                        frame.get_by_role("button", name=re.compile(WAKE_BUTTON_TEXT, re.IGNORECASE)).click(timeout=5_000)
+                    except Exception:
+                        pass
             time.sleep(5)
+        page.screenshot(path="keep_awake_failure.png")
+        for _, text in _frames_text(page):
+            print("--- visible text at timeout ---")
+            print(text[:500])
         browser.close()
     return False
 

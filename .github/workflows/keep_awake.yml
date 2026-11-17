@@ -23,3 +23,10 @@ jobs:
           playwright install --with-deps chromium
       - name: Visit the app
         run: python scripts/keep_awake.py
+      - name: Keep a screenshot if the visit failed
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: keep-awake-failure
+          path: keep_awake_failure.png
+          if-no-files-found: ignore
