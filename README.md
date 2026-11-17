@@ -12,7 +12,7 @@
 
 > The live app runs on Streamlit's free tier. A scheduled job visits it every 8 hours to keep it awake; if it has still gone to sleep, the first load can take about 30 seconds. The screenshots and demo below show it without waiting.
 
-![AlignED home](docs/screenshots/home.png)
+![AlignED demo: overview, match a job, skill gaps, model evaluation](docs/demo.gif)
 
 **In one paragraph.** I compared 1,378 course descriptions from 13 graduate programs with 1,660 job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested (z-test or Fisher's exact test, Benjamini-Hochberg corrected). 170 gaps are statistically real. Python, for example, appears in 40% of sampled postings and in none of 295 course descriptions in one department catalog. A daily pipeline keeps a live job feed validated and deduplicated, and a held-out evaluation shows that a simple keyword method beat an LLM on data neither had seen.
 
@@ -40,8 +40,8 @@
 | Home | Skill Gaps |
 |---|---|
 | ![Home](docs/screenshots/home.png) | ![Skill Gaps](docs/screenshots/skill-gaps.png) |
-| **Match a Job** | **Which Jobs Fit Me** |
-| ![Match a Job](docs/screenshots/match-job.png) | ![Which Jobs Fit Me](docs/screenshots/fit-me.png) |
+| **Match a Job** | **Model Evaluation** |
+| ![Match a Job](docs/screenshots/match-job.png) | ![Model Evaluation](docs/screenshots/model-eval.png) |
 
 ## Key results
 
