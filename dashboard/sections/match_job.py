@@ -15,7 +15,6 @@ from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.layout import page_header
 from utils.nav import MATCH_RUN_KEY, jump_to_course_finder
 from utils.text import extract_user_skills
-from services.reports_pdf import build_match_pdf_report
 from utils.resume import resume_uploader
 from utils.visuals import ring_svg
 
@@ -178,11 +177,13 @@ def render_match_job():
             lines.append("To learn: " + ", ".join(names[i] for i in missing))
         st.markdown('<p class="section-eyebrow">Copy Your Results</p>', unsafe_allow_html=True)
         st.code("\n".join(lines), language=None)
-        pdf_bytes = build_match_pdf_report(
-            [names[i] for i in have], [(names[i], demand.get(i, 0)) for i in missing], n_total,
-        )
+        def _pdf():
+            from services.reports_pdf import build_match_pdf_report  # imported on click
+            return build_match_pdf_report(
+                [names[i] for i in have], [(names[i], demand.get(i, 0)) for i in missing], n_total,
+            )
         st.download_button(
-            "Download my plan (PDF)", data=pdf_bytes, file_name="AlignED_Job_Match_Plan.pdf",
+            "Download my plan (PDF)", data=_pdf, on_click="ignore", file_name="AlignED_Job_Match_Plan.pdf",
             mime="application/pdf", type="primary",
         )
 

@@ -15,17 +15,14 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from services.database import run_query
-from services.reports_excel import build_excel_report
-from services.reports_pdf import build_pdf_report
 from utils.charts import TIER_COLOR_MAP, apply_chart_theme
 from utils.formatting import evidence_strength, program_label, safe_filename
 from utils.layout import page_header
 from utils.visuals import stat_tiles
 from services.skill_picture import market_picture, program_matrix
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
-from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY, jump_to_course_finder
+from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY, OVERALL_MARKET_LABEL, jump_to_course_finder
 
-OVERALL_MARKET_LABEL = "Overall market (all sampled postings)"
 RISING_BOOST = 1.5     # kept in sync with scripts/gap_analysis/generate_recommendations.py
 FALLING_PENALTY = 0.7  # kept in sync with scripts/gap_analysis/generate_recommendations.py
 TOP_SKILLS_SHOWN = 5
@@ -301,24 +298,30 @@ def render_program_explorer():
     report_title_suffix = "" if cluster_id is None else f" (target role: {scope_display_name})"
     dl_col1, dl_col2, _ = st.columns([1, 1, 2])
     base_name = safe_filename(f"{selected['university']}_{selected['program_name']}_{scope_display_name}_recommendations")
-    with dl_col1:
+    def _excel():
+        from services.reports_excel import build_excel_report  # imported on click, not on every page view
         matrix, courses = program_matrix(picture["skill_id"].tolist())
-        excel_bytes = build_excel_report(
+        return build_excel_report(
             selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
             picture=picture, strengths=_strengths(program_id), scope_name=scope_display_name,
             matrix=matrix, courses=courses, selected_label=program_label(selected["university"], selected["program_name"]),
         )
-        st.download_button(
-            "Download Excel", data=excel_bytes, file_name=base_name + ".xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", use_container_width=True,
-        )
-    with dl_col2:
-        pdf_bytes = build_pdf_report(
+
+    def _pdf():
+        from services.reports_pdf import build_pdf_report
+        return build_pdf_report(
             selected["university"], selected["program_name"] + report_title_suffix, course_count, recs_df,
             scope_display_name=scope_display_name, scope_total_postings=scope_total_postings,
             true_gap_count=true_gap_count, strengths=_strengths(program_id), picture=picture,
         )
+
+    with dl_col1:
         st.download_button(
-            "Download PDF", data=pdf_bytes, file_name=base_name + ".pdf",
+            "Download Excel", data=_excel, file_name=base_name + ".xlsx", on_click="ignore",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", use_container_width=True,
+        )
+    with dl_col2:
+        st.download_button(
+            "Download PDF", data=_pdf, file_name=base_name + ".pdf", on_click="ignore",
             mime="application/pdf", use_container_width=True,
         )

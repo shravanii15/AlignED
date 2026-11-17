@@ -6,7 +6,6 @@ import pandas as pd
 import streamlit as st
 
 from services.database import run_query
-from services.reports_pdf import build_profile_pdf_report
 from utils.constants import AMBIGUOUS_GENERIC_TERMS, TOP_SKILLS_PER_CLUSTER
 from utils.formatting import format_posting_details
 from utils.layout import page_header
@@ -182,9 +181,12 @@ def render_profile_builder():
             st.markdown(f"**{row['title']}**, {row['company']}")
 
     st.markdown("---")
-    pdf_bytes = build_profile_pdf_report(role_matches_df, top_role["role_label"], have_df, missing_df, sample_postings_df)
+    def _pdf():
+        from services.reports_pdf import build_profile_pdf_report  # imported on click
+        return build_profile_pdf_report(role_matches_df, top_role["role_label"], have_df, missing_df, sample_postings_df)
+
     st.download_button(
-        "Download my skill plan (PDF)", data=pdf_bytes,
+        "Download my skill plan (PDF)", data=_pdf, on_click="ignore",
         file_name="AlignED_My_Career_Report.pdf", mime="application/pdf",
     )
 

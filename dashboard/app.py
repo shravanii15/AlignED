@@ -74,26 +74,13 @@ flat list, so a visitor knows where to start):
   directly, answered up front instead of hidden.
 """
 
+import importlib
+
 import streamlit as st
 
 from services.database import run_query
 from services.market_pulse import load_market_pulse, refreshed_date
 from utils.theme import inject_theme
-from sections.clusters import render_clusters
-from sections.compare import render_compare
-from sections.course_finder import render_course_finder
-from sections.findings import render_findings
-from sections.heatmap import render_heatmap
-from sections.methodology import render_methodology
-from sections.match_job import render_match_job
-from sections.overview import render_overview
-from sections.about import render_about
-from sections.data_health import render_data_health
-from sections.model_eval import render_model_eval
-from sections.own_program import render_own_program
-from sections.profile import render_profile_builder
-from sections.program_explorer import render_program_explorer
-from sections.trends import render_trends
 from utils.nav import (
     GROUP_ABOUT, GROUP_ANALYZE, GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_OVERVIEW, GROUP_PERSONALIZE,
     NAV_GROUP_KEY, NAV_PAGE_KEY,
@@ -121,23 +108,31 @@ inject_theme()
 #   About     who built it, why, and what would I do next?
 # Label strings come from utils.nav so in-page buttons can jump to a specific page through the same
 # session-state keys the two nav radios are bound to.
+def _page(module, func):
+    """Import a page's module only when that page is opened. Each page pulls in heavy libraries (plotly, PDF and Excel
+    writers), so importing all 15 up front made the first load several seconds slower for every visitor."""
+    def run():
+        getattr(importlib.import_module(f"sections.{module}"), func)()
+    return run
+
+
 NAV_GROUPS = {
-    GROUP_OVERVIEW: {PAGE_OVERVIEW: render_overview, PAGE_FINDINGS: render_findings},
+    GROUP_OVERVIEW: {PAGE_OVERVIEW: _page("overview", "render_overview"), PAGE_FINDINGS: _page("findings", "render_findings")},
     GROUP_EXPLORE: {
-        PAGE_PROGRAM_EXPLORER: render_program_explorer,
-        PAGE_COMPARE: render_compare,
-        PAGE_HEATMAP: render_heatmap,
-        PAGE_TRENDS: render_trends,
-        PAGE_ROLE_GROUPS: render_clusters,
-        PAGE_COURSE_FINDER: render_course_finder,
+        PAGE_PROGRAM_EXPLORER: _page("program_explorer", "render_program_explorer"),
+        PAGE_COMPARE: _page("compare", "render_compare"),
+        PAGE_HEATMAP: _page("heatmap", "render_heatmap"),
+        PAGE_TRENDS: _page("trends", "render_trends"),
+        PAGE_ROLE_GROUPS: _page("clusters", "render_clusters"),
+        PAGE_COURSE_FINDER: _page("course_finder", "render_course_finder"),
     },
     GROUP_PERSONALIZE: {
-        PAGE_MATCH_JOB: render_match_job,
-        PAGE_BUILD_PROFILE: render_profile_builder,
-        PAGE_BYO: render_own_program,
+        PAGE_MATCH_JOB: _page("match_job", "render_match_job"),
+        PAGE_BUILD_PROFILE: _page("profile", "render_profile_builder"),
+        PAGE_BYO: _page("own_program", "render_own_program"),
     },
-    GROUP_METHODOLOGY: {PAGE_METHODOLOGY: render_methodology, PAGE_MODEL_EVAL: render_model_eval, PAGE_DATA_HEALTH: render_data_health},
-    GROUP_ABOUT: {PAGE_ABOUT: render_about},
+    GROUP_METHODOLOGY: {PAGE_METHODOLOGY: _page("methodology", "render_methodology"), PAGE_MODEL_EVAL: _page("model_eval", "render_model_eval"), PAGE_DATA_HEALTH: _page("data_health", "render_data_health")},
+    GROUP_ABOUT: {PAGE_ABOUT: _page("about", "render_about")},
 }
 
 with st.container(key="topnav"):

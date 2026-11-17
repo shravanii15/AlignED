@@ -15,7 +15,6 @@ import streamlit as st
 
 from services.database import run_query
 from services.robustness import gap_interval, load_robustness
-from sections.program_explorer import OVERALL_MARKET_LABEL
 from utils.charts import apply_chart_theme
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.formatting import program_label
@@ -23,7 +22,7 @@ from utils.visuals import mini_bar
 from utils.nav import (
     GROUP_ABOUT, GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_OVERVIEW, GROUP_PERSONALIZE,
     PAGE_ABOUT, PAGE_BYO, PAGE_DATA_HEALTH, PAGE_FINDINGS, PAGE_MODEL_EVAL, PAGE_PROGRAM_EXPLORER,
-    jump_to, jump_to_program_explorer, start_job_match,
+    OVERALL_MARKET_LABEL, jump_to, jump_to_program_explorer, start_job_match,
 )
 
 # Skill-gap example is only drawn from programs with enough courses that

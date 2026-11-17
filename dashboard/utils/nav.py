@@ -59,6 +59,7 @@ NAV_PAGE_KEY = "nav_page_selection"
 # analysis" form can pre-fill them before jumping there, same pattern as
 # the nav keys above: set the state, let Streamlit's normal
 # rerun-after-interaction cycle carry it into the widget on the next render.
+OVERALL_MARKET_LABEL = "Overall market (all sampled postings)"
 EXPLORER_PROGRAM_KEY = "explorer_program_label"
 EXPLORER_ROLE_KEY = "explorer_role_label"
 
