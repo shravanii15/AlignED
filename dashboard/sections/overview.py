@@ -110,6 +110,7 @@ def _hero():
     st.markdown(
         f"""
         <div class="hero-band">
+            <p class="hero-name">Align<span>ED</span></p>
             <p class="hero-kicker">Curriculum vs. job-market skill-gap analysis</p>
             <h1>Where does graduate education diverge from <em>the job market</em>?</h1>
             <p class="hero-sub">AlignED compares what graduate computing programs teach with what employers ask for,

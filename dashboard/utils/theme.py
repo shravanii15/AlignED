@@ -241,6 +241,18 @@ div[data-testid="stColumn"]:has([class*="st-key-role_"]) > div, div[data-testid=
 .result-hero { border-left: 6px solid #2F5BEA !important; background: linear-gradient(90deg, #EEF2FF 0%, #FFFFFF 60%) !important; }
 .answer-banner { background: linear-gradient(120deg, #EEF2FF, #F8FAFF); border: 1px solid #DDE5FF; }
 div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] { color: var(--accent) !important; }
+/* larger titles */
+.topbar-brand { font-size: 2.3rem !important; font-weight: 800 !important; line-height: 1.1 !important; }
+.page-head-title { font-size: 2.4rem !important; letter-spacing: -0.03em; line-height: 1.15 !important; }
+.page-head-desc { font-size: 1.08rem !important; }
+.hero-band h1 { font-size: 3.4rem !important; }
+.section-eyebrow { font-size: 0.9rem !important; }
+.vcard-title, .path-title { font-size: 1.2rem !important; }
+@media (max-width: 800px) { .hero-band h1 { font-size: 2.3rem !important; } .page-head-title { font-size: 1.8rem !important; } .topbar-brand { font-size: 1.7rem !important; } }
+.hero-name { font-size: 5.2rem !important; font-weight: 800 !important; letter-spacing: -0.045em; line-height: 1 !important; color: #FFFFFF !important; margin: 0 0 0.9rem 0 !important; }
+.hero-name span { color: #8EA8FF; }
+.hero-band h1 { font-size: 2.3rem !important; max-width: 820px; }
+@media (max-width: 800px) { .hero-name { font-size: 3.4rem !important; } .hero-band h1 { font-size: 1.7rem !important; } }
 </style>
 """
 
