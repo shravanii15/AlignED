@@ -10,6 +10,8 @@
 
 **[Live app](https://aligned-shravanikulkarni.streamlit.app)** · **[Case study](docs/CASE_STUDY.md)** · **[Evaluation](docs/EVALUATION.md)** · **[Database design](docs/DATABASE.md)** · **[Data provenance](docs/DATA_PROVENANCE.md)** · **[API demo](#rest-api)**
 
+> The live app runs on Streamlit's free tier. A scheduled job visits it every 8 hours to keep it awake; if it has still gone to sleep, the first load can take about 30 seconds. The screenshots and demo below show it without waiting.
+
 ![AlignED home](docs/screenshots/home.png)
 
 **In one paragraph.** I compared 1,378 course descriptions from 13 graduate programs with 1,660 job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested (z-test or Fisher's exact test, Benjamini-Hochberg corrected). 170 gaps are statistically real. Python, for example, appears in 40% of sampled postings and in none of 295 course descriptions in one department catalog. A daily pipeline keeps a live job feed validated and deduplicated, and a held-out evaluation shows that a simple keyword method beat an LLM on data neither had seen.

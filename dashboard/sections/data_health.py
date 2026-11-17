@@ -20,7 +20,8 @@ CHECKS = (
 
 def render_data_health():
     page_header("", "Data Health",
-                "A daily job-posting feed is collected and validated. This page shows how it has behaved, from the stored daily snapshots.")
+                "A daily job-posting feed is collected and validated. This page shows how it has behaved, from the stored daily snapshots.",
+                pills=("Daily ingestion", "Validated and deduplicated", "dbt-tested"))
     rep = load_json(HEALTH_REPORT)
     if not rep:
         st.warning("The ingestion report is not available in this deployment.")
@@ -53,5 +54,7 @@ def render_data_health():
         st.success("No records have been rejected. That says the feed has been clean so far, not that the checks are untested: they are covered by automated tests.")
 
     st.markdown('<p class="section-eyebrow">What is checked</p>', unsafe_allow_html=True)
-    for c in CHECKS:
-        st.markdown(f"- {c}")
+    for start in range(0, len(CHECKS), 3):
+        for col, check in zip(st.columns(3, gap="medium"), CHECKS[start:start + 3]):
+            col.markdown(f'<div class="step-card"><span class="step-num">&#10003;</span><p class="step-desc">{check}</p></div>', unsafe_allow_html=True)
+        st.markdown("<div style='height:0.6rem'></div>", unsafe_allow_html=True)

@@ -1,0 +1,25 @@
+# Opens the live app in a headless browser every 8 hours so Streamlit Community Cloud
+# (which sleeps apps after about 12 hours without a visitor) keeps it awake for recruiters.
+# This is a mitigation, not a guarantee. See README "Live app" note.
+name: Keep App Awake
+
+on:
+  schedule:
+    - cron: "17 */8 * * *"
+  workflow_dispatch:
+
+jobs:
+  visit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Playwright and Chromium
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Visit the app
+        run: python scripts/keep_awake.py

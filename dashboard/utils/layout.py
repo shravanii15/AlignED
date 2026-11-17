@@ -76,15 +76,17 @@ _GRADIENT = {
 
 
 def page_header(icon, title, description=None, art=None, pills=()):
-    """Compact page header: a title and one line of description, no banner.
-    `icon`, `art` and `pills` are accepted for backward compatibility and ignored: the big dark
-    banner repeated the title on every page and made the app feel crowded."""
+    """Gradient banner with a title, one line of description and optional small chips.
+    `icon` and `art` are accepted for backward compatibility and ignored."""
     desc_html = f'<p class="page-head-desc">{description}</p>' if description else ""
+    pill_html = "".join(f'<span class="page-pill">{p}</span>' for p in pills)
+    pills_row = f'<div class="page-pills">{pill_html}</div>' if pill_html else ""
     st.markdown(
         f"""
         <div class="page-head">
             <p class="page-head-title">{title}</p>
             {desc_html}
+            {pills_row}
         </div>
         """,
         unsafe_allow_html=True,

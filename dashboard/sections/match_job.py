@@ -65,12 +65,14 @@ def render_match_job():
         st.button("Try an example", on_click=_load_example, use_container_width=True)
 
     col_job, col_me = st.columns(2, gap="large")
-    with col_job:
+    with col_job, st.container(border=True):
+        st.markdown('<p class="role-tag">Step 1</p><p class="path-title">The job</p>', unsafe_allow_html=True)
         job_text = st.text_area(
             "The job posting", key=JOB_TEXT_KEY, height=290,
             placeholder="Paste the full job description here",
         )
-    with col_me:
+    with col_me, st.container(border=True):
+        st.markdown('<p class="role-tag">Step 2</p><p class="path-title">You</p>', unsafe_allow_html=True)
         resume_uploader("Upload your resume (optional)", MY_SKILLS_KEY, "match_resume_upload")
         my_text = st.text_area(
             "Your skills", key=MY_SKILLS_KEY, height=170,

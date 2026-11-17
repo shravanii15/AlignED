@@ -20,6 +20,7 @@ from services.reports_pdf import build_pdf_report
 from utils.charts import TIER_COLOR_MAP, apply_chart_theme
 from utils.formatting import evidence_strength, program_label, safe_filename
 from utils.layout import page_header
+from utils.visuals import stat_tiles
 from services.skill_picture import market_picture, program_matrix
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.nav import EXPLORER_PROGRAM_KEY, EXPLORER_ROLE_KEY, jump_to_course_finder
@@ -177,6 +178,19 @@ def _render_gap_list(recs_df, course_count, scope_display_name, scope_total_post
         st.caption(f"The list shows the {len(recs_df)} biggest of {true_gap_count} gaps found.")
 
 
+def _render_picture_chart(picture):
+    """The full picture, not only the tested gaps: what employers ask for vs what the courses name."""
+    st.markdown('<p class="section-eyebrow">What Employers Ask For vs What Courses Name</p>', unsafe_allow_html=True)
+    chart_df = picture.head(10).iloc[::-1]
+    fig = go.Figure()
+    fig.add_bar(y=chart_df["canonical_name"], x=chart_df["coverage"], name="Named in courses", orientation="h", marker_color="#1F9D68")
+    fig.add_bar(y=chart_df["canonical_name"], x=chart_df["demand"], name="Asked for in jobs", orientation="h", marker_color="#315CF5")
+    fig.update_layout(barmode="group", xaxis_tickformat=".0%")
+    apply_chart_theme(fig, height=max(340, len(chart_df) * 44))
+    st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
+    st.caption("The 10 skills most requested in job postings, and how often this program's course descriptions name each one.")
+
+
 def render_program_explorer():
     page_header("", "Skill Gaps", "Choose a program and a type of job to see which skills employers ask for that the program's courses do not mention.", art="gaps", pills=("Ranked by gap size", "Courses vs jobs"))
 
@@ -273,20 +287,14 @@ def render_program_explorer():
             "The chart below still shows what employers ask for and what the courses name."
         )
 
+    picture = market_picture(program_id, cluster_id, course_count, scope_total_postings, top_n=25)
+    biggest = f"{recs_df['gap_value'].max() * 100:.0f} pts" if not recs_df.empty else "none"
+    stat_tiles([(str(true_gap_count), "significant gaps"), (biggest, "biggest gap"),
+                (f"{int(course_count):,}", "courses compared"), (f"{int(scope_total_postings):,}", "job postings")])
+    _render_picture_chart(picture)
+
     if not recs_df.empty:
         _render_gap_list(recs_df, course_count, scope_display_name, scope_total_postings, true_gap_count, program_id)
-
-    # ---- Chart: the full picture, not only the tested gaps ----
-    picture = market_picture(program_id, cluster_id, course_count, scope_total_postings, top_n=25)
-    st.markdown('<p class="section-eyebrow">What Employers Ask For vs What Courses Name</p>', unsafe_allow_html=True)
-    st.caption("The 10 skills most requested in job postings, and how often this program's course descriptions name each one.")
-    chart_df = picture.head(10).iloc[::-1]
-    fig = go.Figure()
-    fig.add_bar(y=chart_df["canonical_name"], x=chart_df["coverage"], name="Named in courses", orientation="h", marker_color="#1F9D68")
-    fig.add_bar(y=chart_df["canonical_name"], x=chart_df["demand"], name="Asked for in jobs", orientation="h", marker_color="#315CF5")
-    fig.update_layout(barmode="group", xaxis_tickformat=".0%")
-    apply_chart_theme(fig, height=max(340, len(chart_df) * 44))
-    st.plotly_chart(fig, use_container_width=True)
 
     # ---- Downloads ----
     st.markdown('<p class="section-eyebrow">Take It With You</p>', unsafe_allow_html=True)
