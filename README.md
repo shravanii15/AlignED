@@ -6,15 +6,25 @@
 [![Daily Ingestion](https://github.com/shravanii15/AlignED/actions/workflows/fetch_adzuna.yml/badge.svg)](https://github.com/shravanii15/AlignED/actions/workflows/fetch_adzuna.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Curriculum x labor-market analysis: do graduate computing programs teach what the job market asks for?**
+**Do graduate computing programs teach what employers ask for? AlignED measures it, tests every gap, and shows its own limits.**
 
-**[Live app](https://aligned-shravanikulkarni.streamlit.app)** · **[Case study](docs/CASE_STUDY.md)** · **[Evaluation](docs/EVALUATION.md)** · **[Data provenance](docs/DATA_PROVENANCE.md)** · **[API demo](#rest-api)**
-
-AlignED compares 1,378 course descriptions from 13 graduate programs against 1,660 sampled job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested for statistical significance.
+**[Live app](https://aligned-shravanikulkarni.streamlit.app)** · **[Case study](docs/CASE_STUDY.md)** · **[Evaluation](docs/EVALUATION.md)** · **[Database design](docs/DATABASE.md)** · **[Data provenance](docs/DATA_PROVENANCE.md)** · **[API demo](#rest-api)**
 
 ![AlignED home](docs/screenshots/home.png)
 
+**In one paragraph.** I compared 1,378 course descriptions from 13 graduate programs with 1,660 job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested (z-test or Fisher's exact test, Benjamini-Hochberg corrected). 170 gaps are statistically real. Python, for example, appears in 40% of sampled postings and in none of 295 course descriptions in one department catalog. A daily pipeline keeps a live job feed validated and deduplicated, and a held-out evaluation shows that a simple keyword method beat an LLM on data neither had seen.
+
 **Why I built it:** "industry-ready" is usually claimed, not measured. I wanted to measure where curricula and job postings diverge, and to be honest about how far the measurement can be trusted.
+
+### What this project shows
+
+| If you are hiring for | Look at | What it shows |
+|---|---|---|
+| Data science | [Key findings](https://aligned-shravanikulkarni.streamlit.app), [robustness checks](#data-engineering) | Hypothesis tests, small-sample exact tests, multiple-comparison correction, employer-cluster bootstrap |
+| Data / analytics engineering | [Database design](docs/DATABASE.md), [Data engineering](#data-engineering) | Daily validated ingestion, deduplication, dbt tests, constrained schema, atomic rebuilds, CI/CD |
+| Machine learning | [Evaluation](docs/EVALUATION.md) | A held-out test where an LLM lost to a keyword baseline, with error analysis and confidence intervals |
+| Product | About page in the app | User paths, trade-offs, a product brief, honest limits |
+| Forward-deployed | "Analyze Your Program" page, [REST API](#rest-api) | Bring-your-own-data analysis, input validation, a versioned API and Docker images |
 
 ## What I found
 
@@ -82,7 +92,7 @@ The app has five areas in a top bar: Overview, Explore, Match, Evidence, About.
 - **Robustness checks** (`scripts/gap_analysis/robustness_check.py`, report in `docs/EVALUATION.md`). Postings from one employer are not independent, so two sensitivity analyses are run: an approximate design-effect adjustment (company clusters; 166 of the 170 gaps stay significant, the 4 that drop are small, 1.5 to 3.8 points) and a company-cluster bootstrap (all 170 intervals above zero, not adjusted for multiple testing). Published numbers are unchanged. `python scripts/verify_claims.py` regenerates every headline number from stored artifacts.
 - **Rebuild and validation.** `scripts/rebuild_all.py` recomputes the derived tables (and, with `--full`, everything) on a temporary database, runs `scripts/validate_database.py` (foreign keys, duplicates, gap and recommendation invariants, trend consistency, ingestion audit) and swaps the result in atomically only if every check passes. It assumes no other process writes to the database during the swap.
 - **Fail-closed evaluation.** The extraction benchmark refuses to publish metrics unless predictions cover exactly the gold-set items.
-- **Schema.** `database/schema.sql` is the source of truth, with enforced foreign keys and additive migrations.
+- **Schema.** `database/schema.sql` is the source of truth (version 2): enforced foreign keys, unique natural keys, CHECK constraints on rates and labels, and indexes for the app's queries. `scripts/migrate_schema.py` upgrades an older file safely. See [docs/DATABASE.md](docs/DATABASE.md) for the ER diagram and design trade-offs.
 - **Docker.** One Dockerfile with two targets (dashboard and pipeline) and a compose file. Pipeline jobs are opt-in.
 - **CI.** On every push: lint (ruff), the full pytest suite on lightweight requirements, then both Docker images build and the dashboard container must report healthy.
 

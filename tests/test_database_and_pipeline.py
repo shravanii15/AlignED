@@ -88,7 +88,10 @@ def test_overall_market_gap_count_matches_the_documented_number(db_copy):
 # ---------- validator catches problems ----------
 
 def test_validator_detects_a_duplicate_gap_row(db_copy):
+    """The version-2 schema rejects duplicates outright; the validator is the second line of defence for a
+    database built before the unique index existed, so drop the index to simulate one."""
     conn, _ = db_copy
+    conn.execute("DROP INDEX IF EXISTS uq_gap_scores_key")
     conn.execute("INSERT INTO gap_scores (program_id, skill_id, cluster_id, period, program_coverage_rate, market_demand_rate, gap_value, p_value, q_value, test_method) "
                  "SELECT program_id, skill_id, cluster_id, period, program_coverage_rate, market_demand_rate, gap_value, p_value, q_value, test_method FROM gap_scores LIMIT 1")
     assert any("gap_scores" in p and "duplicate" in p for p in validate_database(conn))

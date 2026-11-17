@@ -86,7 +86,7 @@ def _skill_card(row, rank, course_count, scope_total_postings, key_prefix):
                 | | |
                 |---|---|
                 | In course descriptions | **{x_courses} of {course_count}** courses ({cov_pct:.1f}%). A skill missing here may still be taught |
-                | In job postings | **{x_postings} of {scope_total_postings}** postings ({dem_pct:.1f}%) |
+                | In job postings | **{x_postings:,} of {scope_total_postings:,}** postings ({dem_pct:.1f}%) |
                 | Gap | **{row['gap_value']*100:.1f} percentage points** |
                 | Strength of evidence | **{evidence_strength(row['q_value'])}** (the gap is unlikely to be due to chance) |
                 | Technical detail | p = {row['p_value']:.4f}, FDR-adjusted q = {row['q_value']:.4f} ({test_name}, Benjamini-Hochberg correction) |
@@ -182,7 +182,8 @@ def render_program_explorer():
 
     programs_df = run_query(
         "SELECT p.program_id, p.university, p.program_name, p.tier, "
-        "(SELECT COUNT(*) FROM courses c WHERE c.program_id = p.program_id) AS n_courses "
+        "(SELECT COUNT(*) FROM courses c WHERE c.program_id = p.program_id) AS n_courses, "
+        "(SELECT COUNT(*) FROM recommendations r WHERE r.program_id = p.program_id AND r.cluster_id IS NULL) AS n_gaps "
         "FROM programs p ORDER BY p.university"
     )
     programs_df["label"] = [program_label(u, p) for u, p in zip(programs_df["university"], programs_df["program_name"])]
@@ -190,8 +191,9 @@ def render_program_explorer():
     # Bound to session-state keys so the Home page can pre-select a program
     # and job type before jumping here (see utils/nav.py).
     if EXPLORER_PROGRAM_KEY not in st.session_state or st.session_state[EXPLORER_PROGRAM_KEY] not in list(programs_df["label"]):
-        # First program with a full course set, so the default view has real results.
-        st.session_state[EXPLORER_PROGRAM_KEY] = programs_df["label"].iloc[int((programs_df["n_courses"] >= 30).idxmax())]
+        # The full-size program with the most gaps, so the first view shows a real result (same rule as the Home page).
+        full_size = programs_df[programs_df["n_courses"] >= 30]
+        st.session_state[EXPLORER_PROGRAM_KEY] = programs_df["label"].loc[full_size["n_gaps"].idxmax()]
 
     clusters_df = run_query(
         """
@@ -230,7 +232,7 @@ def render_program_explorer():
     # Delivery mode is a verifiable fact; the "top-ranked"/"mid-tier" part of
     # the tier field is an unsourced prestige label and is never shown.
     delivery_note = "Online  ·  " if "online" in str(selected["tier"]).lower() else ""
-    st.caption(f"{delivery_note}{course_count} courses compared with {scope_total_postings} job postings ({scope_display_name})")
+    st.caption(f"{delivery_note}{course_count} courses compared with {scope_total_postings:,} job postings ({scope_display_name})")
 
     if course_count < 30:
         st.info(

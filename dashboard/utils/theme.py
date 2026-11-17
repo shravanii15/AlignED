@@ -229,6 +229,10 @@ button[kind="primary"] { background: linear-gradient(135deg, #2F5BEA, #4F46E5) !
 .about-role { color: var(--accent) !important; font-weight: 600 !important; margin: 0.3rem 0 1rem 0 !important; }
 .about-story { font-size: 1.05rem !important; line-height: 1.7 !important; color: #334155 !important; max-width: 640px; }
 button[role="tab"] { font-weight: 600 !important; }
+[class*="st-key-role_"], [class*="st-key-feat_"] { height: 100%; }
+div[data-testid="stColumn"]:has([class*="st-key-role_"]) > div, div[data-testid="stColumn"]:has([class*="st-key-feat_"]) > div { height: 100%; }
+[class*="st-key-role_"] > div, [class*="st-key-feat_"] > div { height: 100%; }
+[class*="st-key-role_"] .path-desc, [class*="st-key-feat_"] .path-desc { min-height: 5.6rem; }
 </style>
 """
 
