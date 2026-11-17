@@ -263,6 +263,9 @@ div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] { color: var(
 .topbar-brand { font-size: 2.3rem !important; line-height: 1 !important; margin: 0 !important; padding: 0 !important; display: block; }
 .topbar-link { line-height: 1 !important; margin: 0 !important; }
 .st-key-topnav div[data-testid="stElementContainer"] { margin: 0 !important; }
+/* no sideways scrollbar from the full-width bars */
+html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] { overflow-x: hidden !important; }
+.st-key-topnav, .st-key-subnav, .hero-band { width: 100vw !important; max-width: 100vw !important; }
 </style>
 """
 
