@@ -66,7 +66,7 @@ def test_profile_builder_survives_edge_inputs(name):
 def test_home_signal_is_drawn_from_the_database():
     at = _page("overview", "render_overview").run()
     html = " ".join(m.value for m in at.markdown)
-    assert "A Real Signal From The Data" in html
+    assert "What the data says" in html
     assert "point gap" in html and "Curriculum" in html and "Job market" in html
 
 
