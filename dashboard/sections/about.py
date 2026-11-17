@@ -61,21 +61,37 @@ BRIEF = {
 
 
 def render_about():
-    page_header("", "About & Product Brief", "Who built this, how to read it for your role, and the product thinking behind it.")
-    st.markdown(
-        "AlignED was built by **Shravani Kulkarni** (MS Data Science, Arizona State University) as an end-to-end project: data collection, "
-        "statistics, evaluation, a pipeline, an API and this app. "
-        f"Code, tests and write-ups are on [GitHub]({GITHUB}), including a [case study]({GITHUB}/blob/main/docs/CASE_STUDY.md) and an "
-        f"[evaluation report]({GITHUB}/blob/main/docs/EVALUATION.md)."
-    )
-    st.markdown('<p class="section-eyebrow">Read this project as a...</p>', unsafe_allow_html=True)
-    role = st.radio("Role", list(LENSES), horizontal=True, label_visibility="collapsed", key="about_lens")
-    lens = LENSES[role]
-    st.markdown(f"**Where to look:** {lens['look']}")
-    for point in lens["points"]:
-        st.markdown(f"- {point}")
+    page_header("", "About", "The person behind the project, how to read it for a given role, and the product thinking.")
+    left, right = st.columns([3, 2], gap="large")
+    with left:
+        st.markdown(
+            '<p class="about-name">Shravani Kulkarni</p>'
+            '<p class="about-role">MS Data Science, Arizona State University &middot; graduating May 2027</p>'
+            "<p class=\"about-story\">Students pick a graduate program without knowing whether it teaches what employers ask for. "
+            "I built AlignED to answer that with evidence: I compared 1,378 course descriptions from 13 programs with 1,660 job postings, "
+            "tested which skills are really missing, and then tested my own method on data it had never seen. "
+            "The part I am proudest of is that the LLM approach I expected to win lost, so I shipped the simpler one and said so.</p>",
+            unsafe_allow_html=True,
+        )
+    with right:
+        with st.container(border=True):
+            st.markdown('<p class="role-tag">Find the work</p>', unsafe_allow_html=True)
+            st.link_button("GitHub repository", GITHUB, use_container_width=True)
+            st.link_button("Case study", f"{GITHUB}/blob/main/docs/CASE_STUDY.md", use_container_width=True)
+            st.link_button("Evaluation report", f"{GITHUB}/blob/main/docs/EVALUATION.md", use_container_width=True)
+
+    st.markdown('<p class="section-eyebrow">If you are hiring for...</p>', unsafe_allow_html=True)
+    tabs = st.tabs(list(LENSES))
+    for tab, role in zip(tabs, LENSES):
+        with tab:
+            lens = LENSES[role]
+            st.markdown(f"**Start with:** {lens['look']}")
+            for point in lens["points"]:
+                st.markdown(f"- {point}")
 
     st.markdown('<p class="section-eyebrow">Product brief</p>', unsafe_allow_html=True)
-    for k, v in BRIEF.items():
-        st.markdown(f"**{k}.** {v}")
+    cols = st.columns(2, gap="large")
+    for i, (k, v) in enumerate(BRIEF.items()):
+        with cols[i % 2], st.container(border=True):
+            st.markdown(f'<p class="role-tag">{k}</p><p class="path-desc" style="margin:0;">{v}</p>', unsafe_allow_html=True)
     st.caption("Success metrics are proposals. The app has no analytics, so no usage numbers are claimed.")

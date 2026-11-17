@@ -224,6 +224,11 @@ button[kind="primary"] { background: linear-gradient(135deg, #2F5BEA, #4F46E5) !
 [class*="st-key-role_"] { border-top: 4px solid var(--accent); border-radius: 14px; }
 .st-key-role_1 { border-top-color: var(--teal); } .st-key-role_2 { border-top-color: #7C3AED; } .st-key-role_3 { border-top-color: var(--amber); } .st-key-role_4 { border-top-color: #E11D48; }
 .role-tag { font-size: 0.72rem !important; font-weight: 700 !important; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted) !important; margin: 0 0 0.2rem 0 !important; }
+.topbar-brand { font-size: 1.9rem !important; letter-spacing: -0.03em; }
+.about-name { font-size: 2.2rem !important; font-weight: 800 !important; color: var(--navy) !important; letter-spacing: -0.03em; margin: 0.4rem 0 0 0 !important; line-height: 1.1 !important; }
+.about-role { color: var(--accent) !important; font-weight: 600 !important; margin: 0.3rem 0 1rem 0 !important; }
+.about-story { font-size: 1.05rem !important; line-height: 1.7 !important; color: #334155 !important; max-width: 640px; }
+button[role="tab"] { font-weight: 600 !important; }
 </style>
 """
 
