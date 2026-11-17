@@ -210,6 +210,20 @@ div[data-testid="stVerticalBlockBorderWrapper"], .vcard, .stat-tile, .result-her
 .step-desc { color: var(--muted) !important; font-size: 0.85rem !important; line-height: 1.5 !important; margin: 0 !important; }
 button[kind="primary"] { background: linear-gradient(135deg, #2F5BEA, #4F46E5) !important; border: none !important; box-shadow: 0 2px 8px rgba(47,91,234,0.3) !important; }
 .site-footer { margin-top: 0.5rem; }
+
+/* full-bleed fix: Streamlit sets widths on containers, so force them */
+.st-key-topnav, .st-key-subnav { width: 100vw !important; max-width: 100vw !important; box-sizing: border-box; }
+.topbar-link { color: #B8C4E0 !important; font-size: 0.88rem !important; font-weight: 600 !important; text-align: right; margin: 0 !important; white-space: nowrap; }
+.topbar-link a { color: #FFFFFF !important; text-decoration: none; border: 1px solid rgba(255,255,255,0.3); border-radius: 999px; padding: 0.3rem 0.8rem; }
+.topbar-link a:hover { background: rgba(255,255,255,0.12); }
+.hero-finding { color: #FFFFFF !important; font-size: 1.02rem !important; background: rgba(255,255,255,0.08); border-left: 3px solid #8EA8FF; padding: 0.6rem 0.9rem; border-radius: 0 8px 8px 0; max-width: 680px; margin: 0 0 1.6rem 0 !important; line-height: 1.5 !important; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
+.hero-badges a, .hero-badges span { font-size: 0.8rem !important; font-weight: 600 !important; color: #DCE5FF !important; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px; padding: 0.22rem 0.75rem; text-decoration: none; background: rgba(255,255,255,0.05); }
+.hero-badges a:hover { background: rgba(255,255,255,0.16); color: #FFFFFF !important; }
+.hero-badges .hb-label { border: none; background: none; color: #8EA8FF !important; padding-left: 0; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem !important; }
+[class*="st-key-role_"] { border-top: 4px solid var(--accent); border-radius: 14px; }
+.st-key-role_1 { border-top-color: var(--teal); } .st-key-role_2 { border-top-color: #7C3AED; } .st-key-role_3 { border-top-color: var(--amber); } .st-key-role_4 { border-top-color: #E11D48; }
+.role-tag { font-size: 0.72rem !important; font-weight: 700 !important; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted) !important; margin: 0 0 0.2rem 0 !important; }
 </style>
 """
 

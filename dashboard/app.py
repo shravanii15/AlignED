@@ -141,8 +141,9 @@ NAV_GROUPS = {
 }
 
 with st.container(key="topnav"):
-    brand_col, nav_col = st.columns([1, 5], vertical_alignment="center")
+    brand_col, nav_col, link_col = st.columns([1.1, 4.6, 1], vertical_alignment="center")
     brand_col.markdown('<p class="topbar-brand">Align<span>ED</span></p>', unsafe_allow_html=True)
+    link_col.markdown('<p class="topbar-link"><a href="https://github.com/shravanii15/AlignED" target="_blank">GitHub ↗</a></p>', unsafe_allow_html=True)
     with nav_col:
         group_selection = st.radio("Section", list(NAV_GROUPS.keys()), key=NAV_GROUP_KEY, horizontal=True, label_visibility="collapsed")
 pages_in_group = NAV_GROUPS[group_selection]

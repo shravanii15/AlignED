@@ -21,8 +21,8 @@ from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.formatting import program_label
 from utils.visuals import mini_bar
 from utils.nav import (
-    GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_OVERVIEW, GROUP_PERSONALIZE,
-    PAGE_BYO, PAGE_DATA_HEALTH, PAGE_FINDINGS, PAGE_MODEL_EVAL, PAGE_PROGRAM_EXPLORER,
+    GROUP_ABOUT, GROUP_EXPLORE, GROUP_METHODOLOGY, GROUP_OVERVIEW, GROUP_PERSONALIZE,
+    PAGE_ABOUT, PAGE_BYO, PAGE_DATA_HEALTH, PAGE_FINDINGS, PAGE_MODEL_EVAL, PAGE_PROGRAM_EXPLORER,
     jump_to, jump_to_program_explorer, start_job_match,
 )
 
@@ -31,9 +31,8 @@ from utils.nav import (
 EXAMPLE_MIN_COURSES = 30
 
 
-def _render_signal(embedded=False):
-    """One real finding, pulled from the data: the top recommended gap for the program with the most gaps.
-    It is the centerpiece of the page, with the numbers and the evidence one click away."""
+def _signal_row():
+    """The top recommended gap for the program with the most gaps (among programs with enough courses)."""
     sig = run_query(
         f"""
         SELECT p.program_id, r.skill_id, p.university, p.program_name, s.canonical_name AS skill_name,
@@ -50,9 +49,14 @@ def _render_signal(embedded=False):
         LIMIT 1
         """
     )
-    if sig.empty:
+    return None if sig.empty else sig.iloc[0]
+
+
+def _render_signal():
+    """One real finding with its numbers and the evidence one click away."""
+    r = _signal_row()
+    if r is None:
         return
-    r = sig.iloc[0]
     label = program_label(r["university"], r["program_name"])
     cov_n = int(round(r["cov"] * r["n_courses"]))
     interval = gap_interval(load_robustness(), int(r["program_id"]), int(r["skill_id"]))
@@ -76,6 +80,20 @@ def _render_signal(embedded=False):
               on_click=jump_to_program_explorer, args=(label, OVERALL_MARKET_LABEL))
 
 
+GITHUB = "https://github.com/shravanii15/AlignED"
+STACK = ("Python", "SQL / SQLite", "Streamlit", "FastAPI", "dbt", "Prefect", "Docker", "GitHub Actions", "pytest")
+
+
+def _finding_sentence():
+    """One concrete result for the hero, from the same query as the signal card; empty if unavailable."""
+    row = _signal_row()
+    if row is None:
+        return ""
+    return (f"{row['skill_name']} appears in {row['dem']*100:.0f}% of sampled job postings but in "
+            f"{int(round(row['cov'] * row['n_courses']))} of {int(row['n_courses'])} course descriptions at "
+            f"{program_label(row['university'], row['program_name'])}.")
+
+
 def _hero():
     """Full-width gradient masthead with the four headline numbers, all read from the database."""
     n_prog = int(run_query("SELECT COUNT(*) AS n FROM programs").iloc[0]["n"])
@@ -86,6 +104,9 @@ def _hero():
         f'<div class="hero-kpi"><div class="hero-kpi-value">{v:,}</div><div class="hero-kpi-label">{lbl}</div></div>'
         for v, lbl in ((n_prog, "graduate programs"), (n_courses, "courses analysed"), (n_posts, "job postings"), (n_gaps, "statistically tested skill gaps"))
     )
+    finding = _finding_sentence()
+    finding_html = f'<p class="hero-finding"><b>Example finding.</b> {finding}</p>' if finding else ""
+    stack = "".join(f"<span>{t}</span>" for t in STACK)
     st.markdown(
         f"""
         <div class="hero-band">
@@ -93,7 +114,15 @@ def _hero():
             <h1>Where does graduate education diverge from <em>the job market</em>?</h1>
             <p class="hero-sub">AlignED compares what graduate computing programs teach with what employers ask for,
             and tests every difference before it shows you one.</p>
+            {finding_html}
             <div class="hero-kpis">{kpis}</div>
+            <div class="hero-badges">
+                <span class="hb-label">Open project</span>
+                <a href="{GITHUB}" target="_blank">GitHub repository</a>
+                <a href="{GITHUB}/blob/main/docs/CASE_STUDY.md" target="_blank">Case study</a>
+                <a href="{GITHUB}/blob/main/docs/EVALUATION.md" target="_blank">Evaluation report</a>
+                <span class="hb-label" style="margin-left:0.8rem;">Built with</span>{stack}
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -143,13 +172,30 @@ def _steps():
         col.markdown(f'<div class="step-card"><span class="step-num">{i}</span><p class="step-title">{title}</p><p class="step-desc">{desc}</p></div>', unsafe_allow_html=True)
 
 
+def _role_strip():
+    roles = [
+        ("Data science", "Hypothesis tests, small-sample (Fisher) tests, multiple-comparison correction, bootstrap intervals.", "Key findings", (GROUP_OVERVIEW, PAGE_FINDINGS)),
+        ("Data engineering", "Daily validated ingestion, deduplication, dbt tests, atomic rebuilds, CI/CD.", "Data health", (GROUP_METHODOLOGY, PAGE_DATA_HEALTH)),
+        ("Machine learning", "Held-out evaluation where an LLM lost to a keyword baseline, with error analysis.", "Model evaluation", (GROUP_METHODOLOGY, PAGE_MODEL_EVAL)),
+        ("Product", "User paths, trade-offs and a product brief, with honest limits.", "Product brief", (GROUP_ABOUT, PAGE_ABOUT)),
+        ("Forward-deployed", "Bring your own course list and get a tested analysis in seconds.", "Analyze a program", (GROUP_PERSONALIZE, PAGE_BYO)),
+    ]
+    st.markdown('<p class="section-eyebrow">What this project demonstrates</p>', unsafe_allow_html=True)
+    for i, (col, (tag, desc, cta, dest)) in enumerate(zip(st.columns(5, gap="small"), roles)):
+        with col, st.container(border=True, key=f"role_{i}"):
+            st.markdown(f'<p class="role-tag">{tag}</p><p class="path-desc">{desc}</p>', unsafe_allow_html=True)
+            st.button(cta + " \u2192", key=f"role_btn_{i}", use_container_width=True, on_click=jump_to, args=dest)
+
+
 def render_overview():
     _hero()
+    _role_strip()
+    st.markdown('<p class="section-eyebrow">Try it yourself</p>', unsafe_allow_html=True)
     _render_paths()
     st.markdown('<p class="section-eyebrow">What the data says</p>', unsafe_allow_html=True)
     left, right = st.columns([3, 2], gap="large")
     with left:
-        _render_signal(embedded=True)
+        _render_signal()
     with right:
         st.markdown("**Skills missing from the most programs**")
         _widespread_chart()
