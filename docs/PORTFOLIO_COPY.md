@@ -26,7 +26,7 @@ AlignED measures whether graduate computing programs teach what employers ask fo
 
 **Data / analytics engineer.** A daily job validates and deduplicates a live feed by id and content hash, records every rejection, and rebuilds the database atomically only after validation. The schema enforces its own rules, and dbt tests check the result tables on every rebuild.
 
-**ML engineer.** I held out 50 items before running either extractor and froze the code with hashes. The LLM lost, so I shipped the keyword method. Error analysis shows recall, not precision, is the limit: both methods miss most broad skill areas and tie on named tools.
+**ML engineer.** I held out 50 items before running either extractor and froze the code with hashes. The LLM scored lower, so I chose the keyword method (50 items is small; a larger test set is the next step). Error analysis shows recall, not precision, is the limit: both methods miss most broad skill areas and tie on named tools.
 
 **Product manager.** The app has three entry points by user need: check a job posting, see a program's gaps, or analyze your own courses. I traded a live feed for a fixed sample so published numbers do not drift, and listed the limits on the page instead of hiding them. The product brief proposes success metrics but claims no usage numbers.
 
@@ -53,7 +53,7 @@ AlignED measures whether graduate computing programs teach what employers ask fo
 >
 > A few things I'm proud of:
 > - 170 gaps survived multiple-comparison correction (236 looked significant before it).
-> - I tested my own method on 50 new items. The LLM I expected to win lost to a simple keyword baseline, so I shipped the simpler one and published the result.
+> - I tested my own method on 50 new items. The LLM I expected to win scored lower than a simple keyword baseline (the gap held up statistically), so I chose the simpler one and published the result. It's a small sample, so a larger test is next.
 > - A daily pipeline validates a live job feed. It also caught a bug that made Python demand look like it collapsed from 40% to 7%. It was a 500-character truncation in the feed.
 > - You can paste any job posting, or upload your own course list, and get the same tested analysis.
 >

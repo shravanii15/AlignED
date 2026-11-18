@@ -97,8 +97,9 @@ def render_methodology():
                     | Keyword baseline | 0.644 | 0.205 | **0.311** | 0.234 to 0.377 |
                     | LLM + embeddings | 0.640 | 0.117 | 0.198 | 0.125 to 0.270 |
 
-                    The keyword method was better, and the 95% interval for the difference (-0.177 to
-                    -0.046) does not include zero.
+                    The keyword method scored higher, and the 95% interval for the difference (-0.177 to
+                    -0.046) does not include zero. Fifty items is a small sample, so the intervals are wide;
+                    validating on a larger labeled set is the next step.
 
                     **Development set (104 items the methods were built on):** LLM F1 0.426, keyword 0.364.
                     That result is optimistic, because the similarity cutoff was tuned on those same items.

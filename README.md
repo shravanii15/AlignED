@@ -33,7 +33,7 @@
 - **170 significant skill gaps** across the 13 programs (two-proportion z-test, or Fisher's exact test for small counts, with Benjamini-Hochberg FDR correction).
 - **Hands-on tools are the consistent gap.** Python, Docker, Kubernetes, Linux, Git and Tableau are under-covered in most programs, often by 10 to 40 percentage points.
 - **No demand trend survived correction.** 9 of 67 skills looked significant on a raw p-value and 0 held up after FDR correction, so the trends page labels them early hints.
-- **The keyword baseline beat the LLM on a fresh test.** On the 104 items used while the methods were built, the LLM scored higher (F1 0.426 vs. 0.364). On 50 new items labeled before either method ran, the order reversed: keyword baseline F1 0.311 (95% interval 0.234 to 0.377) against LLM 0.198 (0.125 to 0.270). The 95% interval for the difference, -0.177 to -0.046, excludes zero. The full-scale pipeline uses the keyword method, which this result supports. See Limitations for the caveats.
+- **The keyword baseline scored higher than the LLM on a fresh test.** On the 104 items used while the methods were built, the LLM scored higher (F1 0.426 vs. 0.364). On 50 new items labeled before either method ran, the order reversed: keyword baseline F1 0.311 (95% interval 0.234 to 0.377) against LLM 0.198 (0.125 to 0.270). The 95% interval for the difference, -0.177 to -0.046, excludes zero. I chose the keyword method for the full-scale pipeline because of this result, and because it is far faster and cheaper to run. Fifty items is a small sample, so validating on a larger labeled set is the next step. See Limitations for the caveats.
 
 ## Screenshots
 

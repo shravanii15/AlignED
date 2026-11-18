@@ -73,7 +73,8 @@ def render_about():
             "<p class=\"about-story\">Students pick a graduate program without knowing whether it teaches what employers ask for. "
             "I built AlignED to answer that with evidence: I compared 1,378 course descriptions from 13 programs with 1,660 job postings, "
             "tested which skills are really missing, and then tested my own method on data it had never seen. "
-            "The part I am proudest of is that the LLM approach I expected to win lost, so I shipped the simpler one and said so.</p>",
+            "The part I am proudest of is that the LLM approach I expected to win scored lower on new data, so I chose the simpler method "
+            "and published the result with its limits. Fifty test items is a small sample, so a larger test set is my next step.</p>",
             unsafe_allow_html=True,
         )
     with right:
