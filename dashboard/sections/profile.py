@@ -7,7 +7,7 @@ import streamlit as st
 
 from services.database import run_query
 from utils.constants import AMBIGUOUS_GENERIC_TERMS, TOP_SKILLS_PER_CLUSTER
-from utils.formatting import format_posting_details
+from utils.formatting import format_posting_details, posting_headline
 from utils.layout import page_header
 from utils.nav import PROFILE_RUN_KEY, PROFILE_TEXT_KEY
 from utils.text import extract_user_skills
@@ -175,10 +175,11 @@ def render_profile_builder():
     # salary or date; extra detail is shown only when a posting has it.
     for _, row in sample_postings_df.iterrows():
         details = format_posting_details(row)
+        headline = posting_headline(row)
         if details:
-            st.markdown(f"**{row['title']}**, {row['company']}  \n{details}")
+            st.markdown(f"**{headline}**  \n{details}")
         else:
-            st.markdown(f"**{row['title']}**, {row['company']}")
+            st.markdown(f"**{headline}**")
 
     st.markdown("---")
     def _pdf():

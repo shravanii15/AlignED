@@ -313,7 +313,8 @@ def build_profile_pdf_report(role_matches_df, top_role_label, have_df, missing_d
         pdf.set_x(pdf.l_margin)
         write_line("Example real job openings matching this role", size=13, bold=True, color=(30, 58, 138))
         for _, row in sample_postings_df.head(6).iterrows():
-            write_line(clean(f"-  {row['title']} ({row['company']})"), size=9.5, color=(60, 60, 60))
+            from utils.formatting import posting_headline
+            write_line(clean(f"-  {posting_headline(row)}"), size=9.5, color=(60, 60, 60))
 
     pdf.ln(4)
     pdf.set_x(pdf.l_margin)

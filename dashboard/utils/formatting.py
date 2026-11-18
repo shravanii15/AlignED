@@ -36,14 +36,49 @@ def format_posting_details(row):
     """Plain-text detail line for a job posting (location, salary,
     posted date), or None when the posting has none of them."""
     details = []
-    if row.get("location"):
-        details.append(str(row["location"]))
-    lo, hi = row.get("salary_min"), row.get("salary_max")
-    if lo or hi:
-        details.append(f"${lo:,.0f} to ${hi:,.0f}" if lo and hi else f"${(lo or hi):,.0f}")
-    if row.get("posted_date"):
-        details.append(str(row["posted_date"]))
+    location = clean_text(row.get("location"))
+    if location:
+        details.append(location)
+    lo, hi = _number_or_none(row.get("salary_min")), _number_or_none(row.get("salary_max"))
+    if lo and hi and round(lo) != round(hi):
+        details.append(f"${lo:,.0f} to ${hi:,.0f}")
+    elif lo or hi:
+        details.append(f"${(lo or hi):,.0f}")
+    posted = clean_text(row.get("posted_date"))
+    if posted:
+        details.append(posted[:10])
     return "  ·  ".join(details) if details else None
+
+
+_MISSING_TEXT = {"", "nan", "none", "null", "nat", "n/a"}
+
+
+def clean_text(value):
+    """Return a display string, or None when the value is missing.
+
+    Database NULLs become None or NaN once they pass through pandas, and
+    NaN is truthy, so a plain `if value:` check lets "nan" reach the
+    screen. This is the one place that decides what counts as missing."""
+    if value is None:
+        return None
+    text = str(value).strip()
+    return None if text.lower() in _MISSING_TEXT else text
+
+
+def _number_or_none(value):
+    """A positive float, or None for NULL, NaN, text or zero."""
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    return number if number == number and number > 0 else None
+
+
+def posting_headline(row):
+    """'Title, Company' with missing parts left out (never 'nan'/'None')."""
+    title = clean_text(row.get("title")) or "Untitled posting"
+    company = clean_text(row.get("company"))
+    return f"{title}, {company}" if company else title
 
 
 def safe_filename(text):
