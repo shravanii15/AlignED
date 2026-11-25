@@ -14,7 +14,7 @@ from services.database import run_query
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.layout import page_header
 from utils.nav import MATCH_RUN_KEY, jump_to_course_finder
-from utils.text import extract_user_skills
+from utils.text import extract_user_skills, unrecognized_items
 from utils.resume import resume_uploader
 from utils.visuals import ring_svg
 
@@ -99,7 +99,11 @@ def render_match_job():
 
     job_ids = extract_user_skills(job_text, tracked_df)
     if not job_ids:
-        st.warning("No known skills found in that posting. Try pasting the full description, including the requirements section.")
+        st.warning(
+            "We did not find any tracked skills in that posting. AlignED tracks specific tools and languages "
+            "(for example Python, Docker, Tableau, Kubernetes), so a posting that names only general skills "
+            "will show nothing. Try pasting the full description, including the requirements section."
+        )
         return
     my_ids = extract_user_skills(my_text, tracked_df) if my_text.strip() else set()
 
@@ -144,6 +148,12 @@ def render_match_job():
             st.markdown(f"**Not found in your text ({len(missing)})**")
             chips = "".join(f'<span class="skill-chip skill-chip-missing">{names[i]}</span>' for i in missing) or "All found."
             st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
+        unknown = unrecognized_items(my_text, tracked_df)
+        if unknown:
+            st.caption(
+                f"Not recognized (AlignED may not track these, or they are general topics): {', '.join(unknown)}. "
+                "A skill we do not recognize may still be one you have."
+            )
     else:
         chips = "".join(f'<span class="skill-chip skill-chip-have">{names[i]}</span>' for i in sorted(job_ids, key=lambda i: -demand.get(i, 0)))
         st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
