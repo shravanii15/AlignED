@@ -11,7 +11,15 @@ import sys
 
 import pandas as pd
 import pytest
-from streamlit.testing.v1 import AppTest
+
+
+
+def _apptest():
+    """CI installs only the light test requirements (no Streamlit), so the
+    page-level tests skip there and run wherever Streamlit is installed.
+    The plain matching tests below still run everywhere."""
+    return pytest.importorskip("streamlit.testing.v1").AppTest
+
 
 DASH = os.path.join(os.path.dirname(__file__), "..", "dashboard")
 sys.path.insert(0, DASH)
@@ -86,7 +94,7 @@ def _run_profile(text):
         "from sections.profile import render_profile_builder\n"
         "render_profile_builder()\n" % os.path.abspath(DASH)
     )
-    at = AppTest.from_string(script, default_timeout=60).run()
+    at = _apptest().from_string(script, default_timeout=60).run()
     at.text_area[0].set_value(text)
     at.button[0].click()
     at.run()
@@ -107,7 +115,7 @@ def test_match_page_always_responds(job, me):
         "from sections.match_job import render_match_job\n"
         "render_match_job()\n" % os.path.abspath(DASH)
     )
-    at = AppTest.from_string(script, default_timeout=60).run()
+    at = _apptest().from_string(script, default_timeout=60).run()
     at.text_area[0].set_value(job)
     at.text_area[1].set_value(me)
     [b for b in at.button if b.label == "Check my match"][0].click()
@@ -123,7 +131,7 @@ def test_unrecognized_feedback_is_visible_on_match_page():
         "from sections.match_job import render_match_job\n"
         "render_match_job()\n" % os.path.abspath(DASH)
     )
-    at = AppTest.from_string(script, default_timeout=60).run()
+    at = _apptest().from_string(script, default_timeout=60).run()
     at.text_area[0].set_value("Python Docker Tableau")
     at.text_area[1].set_value("Python, basket weaving")
     [b for b in at.button if b.label == "Check my match"][0].click()
