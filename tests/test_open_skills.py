@@ -64,7 +64,7 @@ def test_prose_still_finds_skills_with_everyday_names():
     prose = ("Over several years I built reporting for finance and operations teams, moved "
              "data between systems, wrote queries in SQL every day and later ran jobs on AWS, "
              "which gave me a good base for the work ahead of me in analytics roles overall")
-    assert "sql" in parse_items(prose) and "aws" in parse_items(prose)
+    assert {"SQL", "AWS"} <= set(parse_items(prose))
 
 
 # ---- matching ------------------------------------------------------------
@@ -124,3 +124,14 @@ def test_hostile_input_is_safe(corpora):
 def test_empty_corpus_does_not_divide_by_zero():
     s = SkillSignal("x", 0, 0, 0, 0)
     assert s.posting_share == 0 and s.course_share == 0
+
+
+def test_job_terms_reads_short_entry_as_list_and_prose_by_known_terms():
+    from services.open_skills import job_terms
+    assert job_terms("SQL, AWS") == ["SQL", "AWS"]
+    prose = ("We are hiring a data engineer to build reliable pipelines. You will write SQL daily, "
+             "run workloads on AWS, and partner with analysts across the business. Bachelor's degree, "
+             "five plus years, strong communication, and a love of clean data are all expected here.")
+    terms = job_terms(prose)
+    assert {"SQL", "AWS"} <= set(terms)
+    assert not any("bachelor" in t.lower() for t in terms)   # no junk fragments from prose

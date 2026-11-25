@@ -89,9 +89,11 @@ def _looks_like_a_list(text):
 def _known_terms_in(text):
     """For prose: pick out the skills we have everyday names for."""
     found = []
-    for key in ALIASES:
+    for key, spellings in ALIASES.items():
         if re.search(r"(?<![A-Za-z0-9_])" + re.escape(key) + r"(?![A-Za-z0-9_])", text, re.IGNORECASE):
-            found.append(key)
+            display = spellings[0]          # proper capitalization: SQL, AWS, machine learning
+            if display not in found:        # "aws" and "amazon web services" are one skill
+                found.append(display)
     return found
 
 
@@ -123,6 +125,19 @@ def parse_items(text, max_items=MAX_ITEMS):
         if len(items) >= max_items:
             break
     return items
+
+
+def job_terms(text):
+    """Skills a job posting asks for, beyond the tracked tools.
+
+    A short entry ("SQL, AWS") is read as a list. A real posting is long
+    prose, so only skills with everyday names (SQL, AWS, machine learning,
+    ...) are picked out of it; guessing at arbitrary phrases from prose
+    would produce noise."""
+    text = text or ""
+    if len(text.split()) <= 40:
+        return parse_items(text)
+    return _known_terms_in(text)
 
 
 def variants_for(term):

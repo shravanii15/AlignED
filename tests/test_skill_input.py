@@ -125,6 +125,38 @@ def test_match_page_always_responds(job, me):
     assert shown
 
 
+def _run_match(job, me):
+    script = (
+        "import sys; sys.path.insert(0, r'%s')\n"
+        "from sections.match_job import render_match_job\n"
+        "render_match_job()\n" % os.path.abspath(DASH)
+    )
+    at = _apptest().from_string(script, default_timeout=60).run()
+    at.text_area[0].set_value(job)
+    at.text_area[1].set_value(me)
+    [b for b in at.button if b.label == "Check my match"][0].click()
+    at.run()
+    return at
+
+
+def test_posting_with_only_untracked_skills_still_gets_a_result():
+    """Regression: a posting of 'SQL, AWS' showed 'no tracked skills' and nothing else."""
+    at = _run_match("SQL, AWS", "")
+    assert not at.exception, at.exception
+    assert not at.warning
+    assert {"SQL", "AWS"} <= set(at.dataframe[0].value["Skill"])
+
+
+def test_real_posting_surfaces_sql_and_aws_alongside_tracked_tools():
+    job = ("Data Engineer. You will build pipelines in Python and Airflow, write complex SQL, "
+           "and deploy on AWS using Docker. Experience with machine learning is a plus. " * 3)
+    at = _run_match(job, "SQL, Python")
+    assert not at.exception, at.exception
+    extras = [d.value for d in at.dataframe if "You listed it" in d.value.columns][0].set_index("Skill")
+    assert extras.loc["SQL", "You listed it"] == "Yes"
+    assert extras.loc["AWS", "You listed it"] == "No"
+
+
 def test_unrecognized_feedback_is_visible_on_match_page():
     script = (
         "import sys; sys.path.insert(0, r'%s')\n"
