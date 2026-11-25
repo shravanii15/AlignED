@@ -8,7 +8,7 @@ import streamlit as st
 from services.database import run_query
 from utils.constants import AMBIGUOUS_GENERIC_TERMS, TOP_SKILLS_PER_CLUSTER
 from utils.formatting import format_posting_details, posting_headline
-from utils.text import unrecognized_items
+from utils.skill_table import render_skill_signals
 from utils.layout import page_header
 from utils.nav import PROFILE_RUN_KEY, PROFILE_TEXT_KEY
 from utils.text import extract_user_skills
@@ -55,24 +55,29 @@ def render_profile_builder():
     tracked_df = tracked_df[~tracked_df["canonical_name"].str.strip().str.lower().isin(AMBIGUOUS_GENERIC_TERMS)]
     matched_skill_ids = extract_user_skills(user_text, tracked_df)
 
-    unknown = unrecognized_items(user_text, tracked_df)
+    # Anything typed is measured against the raw postings and course text,
+    # so no skill is rejected for being outside the tracked list.
+    measured = render_skill_signals(user_text)
+
     if not matched_skill_ids:
-        st.warning(
-            "We did not recognize any skills in that text. AlignED tracks specific tools and languages "
-            "(for example Python, Docker, Tableau, Microsoft Excel, Kubernetes, PyTorch), not general topics "
-            "like \"machine learning\" or \"communication\". Try naming the tools you have used."
-            + (f" Not recognized: {', '.join(unknown)}." if unknown else "")
-        )
+        if measured:
+            st.info(
+                "Job-family matching needs at least one specific tool AlignED tracks (for example Python, "
+                "Docker, Tableau, Kubernetes, PyTorch). Your skills are measured above; add a tool or two "
+                "to also see which job families fit."
+            )
+        else:
+            st.warning(
+                "We could not pick any skills out of that text. List your skills separated by commas or "
+                "new lines (for example: SQL, AWS, machine learning, Tableau), or paste a resume that names "
+                "specific tools."
+            )
         return
 
     detected_names = tracked_df[tracked_df["skill_id"].isin(matched_skill_ids)]["canonical_name"].sort_values()
     st.markdown('<p class="section-eyebrow">Skills Detected in Your Text</p>', unsafe_allow_html=True)
     chips_html = "".join(f'<span class="skill-chip skill-chip-have">{name}</span>' for name in detected_names)
     st.markdown(f'<div class="skill-chip-row">{chips_html}</div>', unsafe_allow_html=True)
-    if unknown:
-        st.caption(
-            f"Not recognized (AlignED may not track these, or they are general topics): {', '.join(unknown)}."
-        )
 
     # How well the user's skills overlap each role group's most in-demand
     # skills. This picks the best-fit role instead of asking the user to

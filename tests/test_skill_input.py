@@ -136,4 +136,15 @@ def test_unrecognized_feedback_is_visible_on_match_page():
     at.text_area[1].set_value("Python, basket weaving")
     [b for b in at.button if b.label == "Check my match"][0].click()
     at.run()
-    assert any("basket weaving" in c.value for c in at.caption)
+    assert not at.exception, at.exception
+    table = at.dataframe[0].value
+    assert "basket weaving" in set(table["Skill"])        # every typed skill gets a row
+    assert "In this posting" in table.columns
+
+
+def test_sql_and_aws_get_results_on_fit_page():
+    at = _run_profile("SQL, AWS, machine learning")
+    assert not at.exception, at.exception
+    table = at.dataframe[0].value
+    assert {"SQL", "AWS", "machine learning"} <= set(table["Skill"])
+    assert table.set_index("Skill").loc["SQL", "Job postings"] > 25

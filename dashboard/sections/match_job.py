@@ -14,7 +14,8 @@ from services.database import run_query
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.layout import page_header
 from utils.nav import MATCH_RUN_KEY, jump_to_course_finder
-from utils.text import extract_user_skills, unrecognized_items
+from utils.skill_table import render_skill_signals
+from utils.text import extract_user_skills
 from utils.resume import resume_uploader
 from utils.visuals import ring_svg
 
@@ -148,12 +149,9 @@ def render_match_job():
             st.markdown(f"**Not found in your text ({len(missing)})**")
             chips = "".join(f'<span class="skill-chip skill-chip-missing">{names[i]}</span>' for i in missing) or "All found."
             st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
-        unknown = unrecognized_items(my_text, tracked_df)
-        if unknown:
-            st.caption(
-                f"Not recognized (AlignED may not track these, or they are general topics): {', '.join(unknown)}. "
-                "A skill we do not recognize may still be one you have."
-            )
+        # Every skill typed is checked against this posting and the market,
+        # including ones outside the tracked list (SQL, AWS, and so on).
+        render_skill_signals(my_text, job_text=job_text, title="Everything you listed, checked against this job")
     else:
         chips = "".join(f'<span class="skill-chip skill-chip-have">{names[i]}</span>' for i in sorted(job_ids, key=lambda i: -demand.get(i, 0)))
         st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
