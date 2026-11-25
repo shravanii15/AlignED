@@ -135,3 +135,50 @@ def test_job_terms_reads_short_entry_as_list_and_prose_by_known_terms():
     terms = job_terms(prose)
     assert {"SQL", "AWS"} <= set(terms)
     assert not any("bachelor" in t.lower() for t in terms)   # no junk fragments from prose
+
+
+# ---- typos ---------------------------------------------------------------
+
+@pytest.fixture(scope="module")
+def vocabulary():
+    from services.open_skills import ALIASES
+    con = sqlite3.connect(DB)
+    names = {r[0] for r in con.execute(
+        "SELECT DISTINCT s.canonical_name FROM extractions e JOIN skills s ON s.skill_id=e.skill_id "
+        "WHERE e.source_type='posting' AND e.method='baseline_keyword'")}
+    con.close()
+    return names | {s[0] for s in ALIASES.values()}
+
+
+@pytest.mark.parametrize("typo,expected", [
+    ("kubernets", "Kubernetes"), ("kuberentes", "Kubernetes"), ("pyhton", "Python"),
+    ("tableu", "Tableau"), ("dockr", None), ("postgress", "PostgreSQL"),
+    ("tensorflo", "TensorFlow"), ("javascipt", "JavaScript"),
+])
+def test_common_typos_are_recognized(vocabulary, typo, expected):
+    from services.open_skills import suggest
+    got = suggest(typo, vocabulary)
+    if expected is not None:
+        assert got == expected
+    # "dockr" is too short to guess safely; it must not be "corrected" to something wrong
+    else:
+        assert got in (None, "Docker")
+
+
+@pytest.mark.parametrize("word", ["basket weaving", "Figma", "SQL", "python", "Kubernetes", "rust", "ruby", "stakeholder management"])
+def test_real_or_unrelated_words_are_left_alone(vocabulary, word):
+    from services.open_skills import suggest
+    assert suggest(word, vocabulary) is None
+
+
+def test_correct_typos_rewrites_only_the_misspelled_item(corpora, vocabulary):
+    from services.open_skills import correct_typos
+    text, fixes = correct_typos("Python, kubernets, basket weaving, SQL", vocabulary, *corpora)
+    assert fixes == {"kubernets": "Kubernetes"}
+    assert text == "Python, Kubernetes, basket weaving, SQL"
+
+
+def test_a_skill_with_data_is_never_corrected(corpora, vocabulary):
+    from services.open_skills import correct_typos
+    _, fixes = correct_typos("Salesforce, Terraform, Figma", vocabulary, *corpora)
+    assert fixes == {}

@@ -11,7 +11,9 @@ import pandas as pd
 import streamlit as st
 
 from services.database import _db_version, get_connection
-from services.open_skills import Corpus, job_terms, measure, measure_items, mentions, parse_items
+from services.open_skills import (
+    ALIASES, Corpus, correct_typos, job_terms, measure, measure_items, mentions, parse_items,
+)
 from utils.text import SKILL_ALIASES, normalize_term
 
 
@@ -21,6 +23,21 @@ def _corpora(version):
     postings = Corpus([r[0] for r in con.execute("SELECT description FROM postings")])
     courses = Corpus([r[0] for r in con.execute("SELECT description FROM courses")])
     return postings, courses
+
+
+def fix_typos(user_text, tracked_df):
+    """Correct obvious misspellings ("kubernets" -> "Kubernetes") and say so.
+
+    Returns the corrected text, which the page then uses everywhere."""
+    if not parse_items(user_text):
+        return user_text
+    postings, courses = _corpora(_db_version())
+    vocabulary = set(tracked_df["canonical_name"]) | {s[0] for s in ALIASES.values()}
+    corrected, fixes = correct_typos(user_text, vocabulary, postings, courses)
+    if fixes:
+        notes = ", ".join(f"“{typed}” as “{right}”" for typed, right in fixes.items())
+        st.caption(f"Read {notes}. Check the spelling if that is not what you meant.")
+    return corrected
 
 
 def untracked_job_terms(job_text, tracked_df):

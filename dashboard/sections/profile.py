@@ -8,7 +8,7 @@ import streamlit as st
 from services.database import run_query
 from utils.constants import AMBIGUOUS_GENERIC_TERMS, TOP_SKILLS_PER_CLUSTER
 from utils.formatting import format_posting_details, posting_headline
-from utils.skill_table import render_skill_signals
+from utils.skill_table import fix_typos, render_skill_signals
 from utils.layout import page_header
 from utils.nav import PROFILE_RUN_KEY, PROFILE_TEXT_KEY
 from utils.text import extract_user_skills
@@ -53,6 +53,7 @@ def render_profile_builder():
         """
     )
     tracked_df = tracked_df[~tracked_df["canonical_name"].str.strip().str.lower().isin(AMBIGUOUS_GENERIC_TERMS)]
+    user_text = fix_typos(user_text, tracked_df)
     matched_skill_ids = extract_user_skills(user_text, tracked_df)
 
     # Anything typed is measured against the raw postings and course text,

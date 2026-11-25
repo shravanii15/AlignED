@@ -11,6 +11,7 @@ descriptions name it.
 Pure Python (no Streamlit) so it is easy to test and runs in CI.
 """
 
+import difflib
 import re
 from dataclasses import dataclass
 
@@ -125,6 +126,45 @@ def parse_items(text, max_items=MAX_ITEMS):
         if len(items) >= max_items:
             break
     return items
+
+
+TYPO_CUTOFF = 0.82     # how similar two spellings must be to treat one as a typo of the other
+MIN_TYPO_LENGTH = 5    # short words are too easy to confuse ("rust" vs "ruby")
+
+
+def suggest(term, vocabulary, cutoff=TYPO_CUTOFF):
+    """The skill a misspelled term most likely means, or None.
+
+    "kubernets" -> "Kubernetes", "pyhton" -> "Python". Terms that are
+    already spelled correctly, or have no close match, return None."""
+    lowered = " ".join(str(term).lower().split())
+    if len(lowered) < MIN_TYPO_LENGTH:
+        return None
+    by_lower = {v.lower(): v for v in vocabulary}
+    if lowered in by_lower:
+        return None
+    match = difflib.get_close_matches(lowered, list(by_lower), n=1, cutoff=cutoff)
+    return by_lower[match[0]] if match else None
+
+
+def correct_typos(text, vocabulary, postings, courses):
+    """Fix misspelled skills in a typed list. Only an item that matches
+    nothing in the data is touched, so a real skill is never "corrected".
+    Returns (corrected_text, {typed: corrected})."""
+    fixes = {}
+    for item in parse_items(text):
+        signal = measure(item, postings, courses)
+        if signal.posting_n == 0 and signal.course_n == 0:
+            guess = suggest(item, vocabulary)
+            if guess:
+                fixes[item] = guess
+    corrected = text or ""
+    for typed, right in fixes.items():
+        corrected = re.sub(
+            r"(?<![A-Za-z0-9_])" + re.escape(typed) + r"(?![A-Za-z0-9_])", lambda _m, r=right: r,
+            corrected, flags=re.IGNORECASE,
+        )
+    return corrected, fixes
 
 
 def job_terms(text):

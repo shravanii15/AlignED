@@ -14,7 +14,7 @@ from services.database import run_query
 from utils.constants import AMBIGUOUS_GENERIC_TERMS
 from utils.layout import page_header
 from utils.nav import MATCH_RUN_KEY, jump_to_course_finder
-from utils.skill_table import render_job_extras, render_skill_signals, untracked_job_terms
+from utils.skill_table import fix_typos, render_job_extras, render_skill_signals, untracked_job_terms
 from utils.text import extract_user_skills
 from utils.resume import resume_uploader
 from utils.visuals import ring_svg
@@ -114,6 +114,7 @@ def render_match_job():
                 "including the requirements section, or a comma-separated list of the skills it asks for."
             )
         return
+    my_text = fix_typos(my_text, tracked_df)
     my_ids = extract_user_skills(my_text, tracked_df) if my_text.strip() else set()
 
     demand = _market_demand()

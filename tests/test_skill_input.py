@@ -196,3 +196,19 @@ def test_sql_and_aws_get_results_on_fit_page():
     table = at.dataframe[0].value
     assert {"SQL", "AWS", "machine learning"} <= set(table["Skill"])
     assert table.set_index("Skill").loc["SQL", "Job postings"] > 25
+
+
+def test_misspelled_skill_is_read_correctly_on_fit_page():
+    """Regression: 'kubernets' matched nothing."""
+    at = _run_profile("Python, kubernets")
+    assert not at.exception, at.exception
+    assert any("Kubernetes" in c.value and "kubernets" in c.value for c in at.caption)
+    skills = set(at.dataframe[0].value["Skill"])
+    assert "Kubernetes" in skills and "kubernets" not in skills
+    assert at.dataframe[0].value.set_index("Skill").loc["Kubernetes", "Job postings"] > 5
+
+
+def test_misspelled_skill_is_read_correctly_on_match_page():
+    at = _run_match("Python Docker Kubernetes Tableau", "kubernets, Pyhton")
+    assert not at.exception, at.exception
+    assert any("Kubernetes" in c.value for c in at.caption)
