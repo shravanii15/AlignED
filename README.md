@@ -14,7 +14,7 @@
 
 ![AlignED demo: overview, match a job, skill gaps, model evaluation](docs/demo.gif)
 
-**In one paragraph.** I compared 1,378 course descriptions from 13 graduate programs with 1,660 job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested (z-test or Fisher's exact test, Benjamini-Hochberg corrected). 170 gaps are statistically real. Python, for example, appears in 40% of sampled postings and in none of 295 course descriptions in one department catalog. A daily pipeline keeps a live job feed validated and deduplicated, and a held-out evaluation shows that a simple keyword method beat an LLM on data neither had seen.
+**In one paragraph.** I compared 1,378 course descriptions from 13 graduate programs with 1,660 job postings. Skills are mapped to the O\*NET taxonomy, and each gap is tested (z-test or Fisher's exact test, Benjamini-Hochberg corrected). 170 skills differ significantly in how often postings and course descriptions mention them (a statement about mention rates, not proof of what any program teaches). Python, for example, appears in 40% of sampled postings and in none of 295 course descriptions in one department catalog. A daily pipeline keeps a live job feed validated and deduplicated, and a held-out evaluation on 50 unseen items found that a simple keyword method scored higher than an LLM (a small sample, so a larger test is the next step).
 
 **Why I built it:** "industry-ready" is usually claimed, not measured. I wanted to measure where curricula and job postings diverge, and to be honest about how far the measurement can be trusted.
 
@@ -48,7 +48,7 @@
 | Metric | Result |
 |---|---|
 | Programs / courses | 13 programs, 1,378 courses |
-| Job postings used for gap scoring | 1,660 (category-balanced sample) |
+| Job postings used for gap scoring | 1,660 (category-balanced sample). The database also holds 5 newer live-feed postings (1,665 rows) that are not used in any statistic |
 | Significant skill gaps | 170 in the overall-market scope |
 | Recommendations | 69 overall-market, 724 across all program and job-family scopes |
 | Skill extraction benchmark | Held-out, 50 new items: keyword F1 0.311 vs. LLM 0.198. Development set, 104 items: LLM 0.426 vs. keyword 0.364 |
