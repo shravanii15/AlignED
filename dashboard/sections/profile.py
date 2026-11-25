@@ -117,6 +117,25 @@ def render_profile_builder():
     role_matches_df = pd.DataFrame(match_rows).sort_values("match_score", ascending=False).reset_index(drop=True)
 
     best = role_matches_df.iloc[0]
+    if int(best["skills_covered"]) == 0:
+        # Naming a "best fit" at 0/15 would be misleading, so say what the result means instead.
+        top_overall = (
+            top_per_cluster.groupby("canonical_name")["demand_rate"].max().sort_values(ascending=False).head(8)
+        )
+        chips = "".join(
+            f'<span class="skill-chip skill-chip-missing">{name} &middot; {rate * 100:.0f}%</span>'
+            for name, rate in top_overall.items()
+        )
+        st.info(
+            "None of the tools AlignED tracks in your text overlap with the most requested skills of any job "
+            "family, so there is no best fit to show. That does not mean you would not fit these jobs: "
+            "AlignED only scores overlap on specific tools and languages, and your other skills are measured above. "
+            "Here are the tools that come up most across job families:"
+        )
+        st.markdown(f'<div class="skill-chip-row">{chips}</div>', unsafe_allow_html=True)
+        return
+
+    n_found = len(matched_skill_ids)
     st.markdown(
         f"""
         <div class="result-hero">
@@ -124,7 +143,7 @@ def render_profile_builder():
             <div class="result-hero-text">
                 <p class="result-hero-label">Your best fit</p>
                 <p class="result-hero-title">{best["role_label"]}</p>
-                <p class="result-hero-sub">You already mention {int(best["skills_covered"])} of the {int(best["n_core_skills"])} most requested skills for this kind of job. {len(matched_skill_ids)} skills were detected in your text.</p>
+                <p class="result-hero-sub">You already mention {int(best["skills_covered"])} of the {int(best["n_core_skills"])} most requested skills for this kind of job. {n_found} {"skill was" if n_found == 1 else "skills were"} detected in your text.</p>
             </div>
         </div>
         """,

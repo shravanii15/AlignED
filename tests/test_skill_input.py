@@ -142,6 +142,22 @@ def test_unrecognized_feedback_is_visible_on_match_page():
     assert "In this posting" in table.columns
 
 
+def test_no_best_fit_is_claimed_when_nothing_overlaps():
+    """Regression: typing only 'Figma' showed 'Your best fit ... 0/15'."""
+    at = _run_profile("SQL, AWS, machine learning, Figma, basket weaving")
+    assert not at.exception, at.exception
+    page = " ".join(m.value for m in at.markdown)
+    assert "Your best fit" not in page
+    assert any("no best fit" in i.value for i in at.info)
+    assert {"SQL", "Figma", "basket weaving"} <= set(at.dataframe[0].value["Skill"])
+
+
+def test_best_fit_still_shown_when_there_is_overlap():
+    at = _run_profile("Python, Docker, Linux")
+    assert not at.exception, at.exception
+    assert "Your best fit" in " ".join(m.value for m in at.markdown)
+
+
 def test_sql_and_aws_get_results_on_fit_page():
     at = _run_profile("SQL, AWS, machine learning")
     assert not at.exception, at.exception
